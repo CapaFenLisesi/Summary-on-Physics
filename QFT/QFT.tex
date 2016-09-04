@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage[left=1.5cm, right=1.5cm, top=3cm, bottom = 3cm]{geometry}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{latexsym}
+\usepackage{hyperref}
+\usepackage{feynmf}
+\usepackage{exscale}
+\usepackage{relsize}
+\usepackage{bm}%bold math, for vector
+\linespread{1.1}
+
+
+\author{Yuyang Songsheng}
+\title{Summary on QFT}
+
+\begin{document}
+\maketitle
+\section{Canonical quantization for particles}
+\subsection{Classical Field Theory}
+Field:
+\[\phi_{a}(\vec{x},t)\]
+Lagrangian density:
+\[\mathcal{L}(\phi_a,\dot{\phi_a},\nabla\phi_a)\]
+Action:
+\[ S=\int d^4x\mathcal{L} \]
+Hamilton principle:
+\begin{equation}
+\delta S=0
+\end{equation}
+Euler-Lagrange equation:
+\begin{equation}
+\partial_{\mu}( \frac{\partial \mathcal{L}}{\partial(\partial_{\mu}\phi_{a})})-\frac{\partial \mathcal{L}}{\partial \phi_a}=0
+\end{equation}
+
+\subsubsection{Locality}
+There are many terms in the Lagrangian coupling $\phi(\vec{x},t)$ directly to $\phi(\vec{y},t)$ with$\vec{x} \neq \vec{y}$.The closet we got for $\vec{x}$ label is coupling between $\phi(\vec{x})$ and $\phi(\vec{x}+\delta \vec{x})$ through the gradient term $(\nabla \phi)^2$.
+
+\subsubsection{Lorentz Invariance}
+Lorentz transformation of fields:
+\begin{equation}
+\phi_{a} '(x)=S_{ab}(\Lambda)\phi(\Lambda^{-1}x)
+\end{equation}
+Examples:
+\begin{equation}
+\partial_{\mu}\phi'(x)=(\Lambda^{-1})^{\nu}_{\ \mu}(\partial_{\nu}\phi)(\Lambda^{-1}x)
+\end{equation}
+Lagrangian density is a scalar, or more loosely, action is invariant under Lorentz transformation.
+
+\subsubsection{Symmetries}
+\paragraph{Nother's Theorem} Every continuous symmetry of the Lagrangian gives rise to a conserved current $j^{\mu}(x)$ such that the equation of motion imply $\partial_{\mu}j^{\mu}=0$.For $\phi_{a} \to \phi_{a}+\delta \phi_{a},\mathcal{L} \to \mathcal{L}+\delta \mathcal{L}$,if $\delta \mathcal{L}=\partial_{\mu}K^{\mu}$,then
+\begin{equation}
+j^{\mu}=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_{a})}\delta\phi_{a}-K^{\mu}
+\end{equation}
+\paragraph{infinitesimal translation}
+$A^{\mu} \to A^{\mu}+\epsilon^{\mu}$
+\begin{equation}
+j^{\mu}=\epsilon_{\nu}T^{\mu \nu}
+\end{equation}
+\begin{equation}
+T^{\mu \nu}=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_{a})}\partial^{\nu}\phi_{a}-g^{\mu\nu}\mathcal{L}
+\end{equation}
+\begin{equation}
+\partial_{\mu} T^{\mu\nu}=0
+\end{equation}
+\begin{equation}
+P^{\mu}=\int d^3x T^{0\mu}
+\end{equation}
+\end{document}
