@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage[left=1.5cm, right=1.5cm, top=3cm, bottom = 3cm]{geometry}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{latexsym}
+\usepackage{hyperref}
+\usepackage{feynmf}
+\usepackage{exscale}
+\usepackage{relsize}
+\usepackage{bm}%bold math, for vector
+\linespread{1.1}
+
+
+\author{Yuyang Songsheng}
+\title{Summary on Classical Mechanics}
+
+\begin{document}
+\maketitle
+\section{Lagrangian Mechanics}
+Lagrangian and Action:
+\begin{equation}
+S=\int_{t_1}^{t_2}L(q,\dot{q},t)dt
+\end{equation}
+Hamilton Principle:
+\begin{equation}
+\delta S=0
+\end{equation}
+Euler-Lagrangian equation:
+\begin{equation}
+\frac{d}{dt}(\frac{\partial L}{\partial \dot{q_i}}) - \frac{\partial L}{\partial q_i}=0
+\end{equation}
+The form of Lagrangian for a system of particles in inertial frame:
+\begin{equation}
+L=\sum_a \frac{1}{2}m_a v_a^2 -U(\vec{r_1},\vec{r_2},\cdots,)
+\end{equation}
+Notes: To get the form of Lagrangian for a system of interacting particles, we must assume:\\
+(1) Space and time are homogeneous and isotropic in inertial frame;\\
+(2) Galileo's relativity principle and Galilean transformation;\\
+(3) Spontaneous interaction between particles;\\
+
+\section{Symmetry and Conservation Laws}
+\paragraph{Nother's theorem}
+For $q_i \to q_i+\delta q_i$ and $L \to L+\delta L$, if $\delta L= \frac{d f(q,\dot{q},t)}{dt}$,then we get
+\begin{equation}
+\frac{d}{dt}(p_i \delta q_i-f)=0 \ \ \ (p_i=\frac{\partial L}{\partial \dot{q_i}})
+\end{equation}
+This can imply the conservation laws of momentum and angular momentum.
+\paragraph{Homogeneity of time}
+If $\frac{\partial L}{\partial t}=0$,then we get
+\begin{equation}
+\frac{dE}{dt}=0 \ \ \ (E=\sum_i \dot{q_i}p_i-L)
+\end{equation}
+
+\section{Hamilton Mechanics}
+\subsection{Hamilton equation}
+\begin{equation}
+H(q,p,t)=\sum_i p_i \dot{q_i}-L
+\end{equation}
+\begin{equation}
+\dot{p_i}=-\frac{\partial H}{\partial q_i} \ \ \ \ \ \ \dot{q_i}=\frac{\partial H}{\partial p_i}
+\end{equation}
+ 
+\subsection{Poisson Brackets}
+Operation properties:
+\[ \left\{f,g\right\}=-\left\{g,f\right\} \]
+\[\left\{\alpha_1 f_1+\alpha_2 f_2,\beta_1 g_1+\beta_2 g_2\right\}=\alpha_1 \beta_1\left\{f_1,g_1\right\}
++\alpha_1 \beta_2\left\{f_1,g_2\right\}+\alpha_2 \beta_1\left\{f_2,g_1\right\}+\alpha_2 \beta_2\left\{f_2,g_2\right\}\]
+\[\left\{f_1 f_2,g_1 g_2\right\}=f_1\left\{f_2,g_1\right\}g_2+f_1 g_1\left\{f_2,g_2\right\}+g_1\left\{f_1,g_2\right\}f_2 +\left\{f_1,f_2\right\}g_2 f_2 \]
+\[\left\{f,\left\{g,h\right\}\right\}+\left\{g,\left\{h,f\right\}\right\}+\left\{h,\left\{f,g\right\}\right\}=0\]
+Here, $f,g,h$ are functions of $p_i,q_i,t$.
+If we assume that
+\[ \left \{q_i,q_k\right \}=0,\left \{p_i,p_k\right \}=0,\left \{q_i,p_k\right \}=\delta_{ik}\]
+we can deduce that 
+\[ \left\{f,g\right\}=\sum_k(\frac{\partial f}{\partial q_k} \frac{\partial g}{\partial p_k} - \frac{\partial f}{\partial p_k} \frac{\partial g}{\partial q_k}  )\]
+The Hamilton equation can be written as
+\begin{equation}
+\dot{p_i}=\left\{ p_i,H \right\} \ \ \ \ \dot{q_i}=\left\{ q_i,H \right\}
+\end{equation}
+\end{document}
