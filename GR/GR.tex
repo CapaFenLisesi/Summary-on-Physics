@@ -82,7 +82,7 @@ x^{i_1 \cdots i_{r_1}}_{\phantom{i_1 \cdots i_{r_1}}k_1 \cdots k_{s_1}} \cdot y^
 \[\xi \wedge \eta = (-1)^{kl} \eta \wedge \xi\]
 \[(\xi \wedge \eta) \wedge \zeta = \xi \wedge (\eta \wedge \zeta) = \frac{(k+l+h)!}{k!l!h!}A_{k+l+h}(\xi \otimes \eta \otimes \zeta)\]
 \[e_{i_1} \wedge \cdots \wedge e_{i_r}(v^{*1},\cdots,v^{*r}) = \mbox{ det } \langle e_{i_{\alpha}},v^{*\beta} \rangle\]
-\[e_{i_1} \wedge \cdots \wedge e_{i_r}(e^{*j_1},\cdots,e^{*j_r}) = \mbox{ det } \langle e_{i_{\alpha}},v^{*j_{\beta}} \rangle = \delta^{j_1 \cdots j_r}_{i_1 \cdots i_r}\]
+\[e_{i_1} \wedge \cdots \wedge e_{i_r}(e^{*j_1},\cdots,e^{*j_r}) = \mbox{ det } \langle e_{i_{\alpha}},e^{*j_{\beta}} \rangle = \delta^{j_1 \cdots j_r}_{i_1 \cdots i_r}\]
 \[\Lambda^r(V) = \mbox{ Span }\{e_{i_1} \wedge \cdots \wedge e_{i_r},1\leq i_1 < \cdots < i_r \leq n  \}\]
 \[(\Lambda^r(V))^* = \Lambda^r(V^*)\]
 \textbf{Pull-back mapping}
@@ -121,7 +121,7 @@ If $\alpha:C^{\infty}(M) \to C^{\infty}(M)$ satisfy the three conditions above, 
 \textbf{Useful formulas 1}\\
 (1) $[aX+bY,Z]=a[X,Z]+b[Y,Z]$;$[Z,aX+bY]=a[Z,X]+b[Z,Y]$;\\
 (2) $[X,Y]=-[Y,X]$;\\
-(3) $[X,[Y,Z]] + [Y,[Z,Z]] +[Z,[X,Y]]=0$;\\
+(3) $[X,[Y,Z]] + [Y,[Z,X]] +[Z,[X,Y]]=0$;\\
 (4) $[X,Y]|_{U} = [X|_{U},Y|_{U}] = (X_i \frac{\partial Y^j}{\partial u^i} - Y^i \frac{\partial X^j}{\partial u^i}) \frac{\partial}{\partial u^j}$;\\
 (5) $f_{*}[X,Y] = [f_{*}X,f_{*}Y]$;\\ \\
 \textbf{definition 1} Let $M$ be a smooth manifold and $\phi:\mathbf{R} \times M \to M$ a smooth mapping, and $\forall (t,p) \in \mathbf{R} \times M$,denote $\phi_{t}(p) = \phi(t,p)$. If $\phi$ satisfy that\\
@@ -253,7 +253,7 @@ assign a local coordinate system $((-1)^m \cdot x^1,x^2,\ldots,x^{m-1})$ on $\ti
 \[Supp \ \omega = \overline {\{ p \in M :\omega(p) \neq 0\}}\]\\
 All the $r$-form with compact support set is denoted as $A^r_0(M)$.\\ \\
 \textbf{Partition of unity} Let $\Sigma$ be an open cover of $M$. Then there is a family of smooth function $g_{\alpha}$ on $M$ that\\
-(1) $\forall \alpha$,$0 \leq g_{\alpha} \leq 1$,$\mathrm{supp} \ g_{\alpha}$ is compact and there is an open set $W_i in \Sigma$ that $\mathrm{supp} \  g_{\alpha} \subset W_i$.\\
+(1) $\forall \alpha$,$0 \leq g_{\alpha} \leq 1$,$\mathrm{supp} \ g_{\alpha}$ is compact and there is an open set $W_i \in  \Sigma$ that $\mathrm{supp} \  g_{\alpha} \subset W_i$.\\
 (2) $\forall p \in M$, it has a neighbourhood $U$ which intersect finite $\mathrm{supp} \ g_{\alpha}$.\\
 (3) $\sum_{\alpha} g_{\alpha} = 1$\\ \\
 \textbf{Integral of differential form with compact support on orientable manifold}\\
@@ -347,7 +347,7 @@ Let $V$ be some vector from $T_pM$ with components $V^i$ in local coordinates, a
 \textbf{Theorem 2} Let $M$ be a differentiable manifold equipped with a symmetric affine connection. $\forall x_0 \in M$, there is a neighbourhood $W$ that for every point in $W$, there is a neighbourhood equipped with a normal coordinate system which contains $W$. \\ \\
 \textbf{Theorem 3} Let $M$ be a Riemann manifold. $\forall O \in M$,there is a neighbourhood with normal coordinates $W$ that:\\
 (1) For every point in $W$, there is a neighbourhood equipped with a normal coordinates which contains $W$.\\
-(2) The geodesic connecting $O$ and $p in W$ is the only shortest path connecting these two points in $W$.\\ \\
+(2) The geodesic connecting $O$ and $p \in W$ is the only shortest path connecting these two points in $W$.\\ \\
 \textbf{Theorem 4} Let $U$ be the neighbourhood with normal coordinates of $O$. $\exists \epsilon >0, \forall \delta \in (0,\epsilon)$,the surface
 \[\Sigma_{\delta} = {p \in U | \sum_{i=1}^{m}} (u^i(p))^2 = \delta^2\]
 has following properties:\\
