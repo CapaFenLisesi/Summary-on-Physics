@@ -313,8 +313,10 @@ DS' &=& dA \otimes S + A \cdot DS \nonumber \\
 \[\frac{d^2 u^i}{dt^2} + \Gamma^i_{jk} \frac{du^j}{dt} \frac{du^k}{dt} = 0\]\\
 \textbf{Curvature Tensor}\\
 \[\Omega^j_i = \frac{1}{2}R^j_{ikl} du^k \wedge du^l \]
-\[R^j_{ikl} = \frac{\partial \Gamma^j_{il}}{\partial u^k} - \frac{\partial \Gamma^j_{ik}}{\partial u^l} + \Gamma^h_{il} \Gamma^j_{hk} - \Gamma^h_{ik} \Gamma^j_{hl}\] 
+\[R^j_{ikl} = \frac{\partial \Gamma^j_{il}}{\partial u^k} - \frac{\partial \Gamma^j_{ik}}{\partial u^l} + \Gamma^h_{il} \Gamma^j_{hk} - \Gamma^h_{ik} \Gamma^j_{hl}\]
 \[R'^j_{ikl} = R^q_{prs} \frac{\partial w^j}{\partial u^q} \frac{\partial u^p}{\partial w^i} \frac{\partial u^r}{\partial w^k}\frac{\partial u^s}{\partial w^l}\]
+\[R = R^{j}_{ikl} du^{i} \otimes \frac{\partial}{\partial u^j} \otimes du^{k} \otimes du^{l}\]
+\[R(X,\alpha_Y,Z,W)= \langle \alpha_Y,R(Z,W)X \rangle\]
 \[R^{j}_{ikl} = \langle R(\frac{\partial}{\partial u^k} \frac{\partial}{\partial u^l})\frac{\partial}{\partial u^i},du^j \rangle\]\\
 \textbf{Torsion tensor}
 \[T^j_{ik} = \Gamma^j_{ki} - \Gamma^j_{ik}\]
@@ -332,9 +334,14 @@ If $G$ is positive definite, then $M$ is called Riemann manifold.\\ \\
 \textbf{Index lifting}\\
 \[f:T_p(M) \to T^*_p(M) \ \ \alpha_X(Y) = G(X,Y)\]\\
 \textbf{Adapted connection} Let $(M,G)$ be a general Riemann manifold and $D$ a connection on $M$. If $DG=0$,then $D$ is called adapted connection on $M$. \\ \\
-\textbf{Christoffel-Levi-Civita connection} Let $M$ be a general Riemann manifold, then there is a unique adapted connection without torsion on $M$, called Christoffel-Levi-Civita connection.
+\textbf{Christoffel-Levi-Civita connection} Let $M$ be a general Riemann manifold, then there is a unique adapted connection without torsion on $M$, called Christoffel-Levi-Civita connection As $\omega^{j}_{i} = \Gamma^{j}_{ik}du^k$, $dg_{ij} = g_{ik}\omega^{k}_{j} + g_{kj}\omega^{k}_{i}$.
+If we denote that $\omega_{ij} = \omega_{i}^{j}g_{jk}$ and $\Gamma_{ijk} = \Gamma_{ik}^{l}g_{lj}$, we have $\omega_{ij}=\Gamma_{ijk}du^k$ and $dg_{ij} = \omega_{ji}+ \omega_{ij}$.
+At last, we have
 \[\Gamma^{k}_{ij} = \frac{1}{2} g^{kl}(\frac{\partial g_{il}}{\partial u^j} + \frac{\partial g_{jl}}{\partial u^i} - \frac{\partial g_{ij}}{\partial u^l})\]\\
 \textbf{Curvature tensor}\\
+If we denote that $\Omega_{ij} = \Omega_{i}^{k}g_{kj}$ and $R_{ijkl} = R^{h}_{ikl}g_{hj}$, we will have that
+\[\Omega_{ij} + \Omega_{ji} = 0,\ \ \Omega_{ij} = d\omega_{ij} + \omega_{i}^{l} \wedge \omega_{jl},\ \ \Omega_{ij} = \frac{1}{2}R_{ijkl}du^k \wedge du^l\]
+At last,
 \[R_{ijkl} = -R_{jikl} = -R_{ijlk}\]
 \[R_{ijkl}+R_{iklj}+R_{iljk}=0\]
 \[R_{ijkl} = R_{klij}\]\\
@@ -544,6 +551,12 @@ Along the world line of observer:
 (2) The metric of the manifold is governed by the Einstein field equation
 \[\mathbf{G} = 8\pi\mathbf{T}.\]
 (3) All special relativistic laws of physics are valid in local Lorentz frames of metric.\\
+
+\section{Geometrodynamics}
+\paragraph*{Give the fields that generate mass-energy, and their time-rates of change, and give 3-geometry of space and its time-rate of change, all at one time, and solve for the 4-geometry of spacetime at that one time. Four of the ten components of Einstein's law connect the curvature of space here and now with the distribution of mass-energy here and now, and the other six equations tell how the geometry as thus determined then proceeds to evolve.}
+\subsection{variational principle}
+\[\mathcal{L} = \mathcal{L}_{geom}+\mathcal{L}_{field} = (-g)^{\frac{1}{2}} L\]
 \end{document}
+
 
 
