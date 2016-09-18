@@ -207,7 +207,7 @@ $\forall \omega \in A^1(M),X,Y \in \mathcal{H}(M)$,
 $\forall \omega \in A^r(M)$, $X_1,\cdots,X_{r+1} \in \mathcal{H}(M)$,
 \begin{eqnarray}
 d\omega(X_1,\cdots,X_{r+1}) &=& \sum_{i=1}^{r+1}(-1)^{i+1} X_{i}(\langle X_1 \wedge \cdots \wedge \hat{X_i} \wedge \cdots \wedge X_{r+1},\omega \rangle) \nonumber \\
-&+& \sum_{1 \leq i < j \leq r+1}(-1)^{i+j} \langle [X_i,X_j] \wedge \cdots \wedge \hat{X_i} \wedge \cdots \wedge \hat{X_j} \wedge \cdots X_{r+1},\omega \rangle
+&+& \sum_{1 \leq i < j \leq r+1}(-1)^{i+j} \langle [X_i,X_j] \wedge \cdots \wedge \hat{X_i} \wedge \cdots \wedge \hat{X_j} \wedge \cdots X_{r+1},\omega \rangle \nonumber
 \end{eqnarray}\\
 \textbf{Theorem 2} $f^{*}(d\omega) = d(f^* \omega)$\\ \\
 \textbf{Poincare Lemma(1)} $d^2=0$ \\
@@ -462,9 +462,9 @@ and
 \[\bar{\Gamma}^{i'}_{00} = \bar{g}^{i'j'}\partial_{j'}\Phi\]
 Here,$\bar{g}$ is the metric of the space in new coordinate system.
 
-\section{The Formulation of General Relativity}
+\section{Mathematical preliminaries}
 \subsection{More on the manifold of space-time}
-\textbf{Hodge dual}\\
+\subsubsection{Hodge dual}
 The Hodge star operator on a vector space $V$ with a non-degenerate symmetric bilinear form (herein referred to as the inner product) is a linear operator on the exterior algebra of $V$, mapping $k$-vectors to ($n-k$)-vectors where $n = \text{dim} \ V$, for $ 0 \leq k \leq n$. It has the following property, which defines it completely: given two $k$-vectors $\alpha,\beta$,
 \[\alpha \wedge (\star \beta )=\langle \alpha ,\beta \rangle \omega\]
 where $\langle \cdot ,\cdot \rangle$ denotes the inner product on $k$-vectors and $\omega$ is the preferred unit n-vector.
@@ -474,15 +474,17 @@ for any decomposable $k$-vectors $\alpha =\alpha _{1}\wedge \dots \wedge \alpha 
 Given an orthonormal basis $(e_{1},\cdots ,e_{n})$ ordered such that $\omega =e_{1}\wedge \cdots \wedge e_{n}$, we see that
 \[\star (e_{i_{1}}\wedge e_{i_{2}}\wedge \cdots \wedge e_{i_{k}})=e_{i_{k+1}}\wedge e_{i_{k+2}}\wedge \cdots \wedge e_{i_{n}}\]
 where $(i_{1},i_{2},\cdots ,i_{n})$ is an even permutation of $\{1,2,\cdots,n\}$.Of these $\frac{n!}{2}$, only $n \choose k$ are independent. The first one in the usual lexicographical order reads
-\[\star (e_{1}\wedge e_{2}\wedge \cdots \wedge e_{k})=e_{k+1}\wedge e_{k+2}\wedge \cdots \wedge e_{n}\]\\ \\
-\textbf{Levi-Civita tensor}\\
+\[\star (e_{1}\wedge e_{2}\wedge \cdots \wedge e_{k})=e_{k+1}\wedge e_{k+2}\wedge \cdots \wedge e_{n}\]
+
+\subsubsection{Levi-Civita tensor}
 Let $\epsilon$ be a Levi-Civita symbol. We can define Levi-Civita tensor as 
-\[\tilde{\epsilon}_{i_1,\cdots,i_n} = |g|^{\frac{1}{2}} \epsilon_{i_1,\cdots,i_n}\]
-\[\tilde{\epsilon}^{i_1,\cdots,i_n} = g^{i_1j_1} \cdots g^{i_nj_n} \tilde{\epsilon}_{j_1,\cdots,j_n} = \frac{|g|^{\frac{1}{2}}}{g} \epsilon^{i_1,\cdots,i_n} = sgn(g) \frac{1}{|g|^{\frac{1}{2}}} \epsilon^{i_1,\cdots,i_n}\]\\
+\[\epsilon_{i_1,\cdots,i_n} = |g|^{\frac{1}{2}} \tilde{\epsilon}_{i_1,\cdots,i_n}\]
+\[\epsilon^{i_1,\cdots,i_n} = g^{i_1j_1} \cdots g^{i_nj_n} \epsilon_{j_1,\cdots,j_n} = \frac{|g|^{\frac{1}{2}}}{g} \tilde{\epsilon}^{i_1,\cdots,i_n} = sgn(g) \frac{1}{|g|^{\frac{1}{2}}} \tilde{\epsilon}^{i_1,\cdots,i_n}\]\\
 Using tensor index notation, the Hodge dual is obtained by contracting the indices of a k-form with the n-dimensional completely antisymmetric Levi-Civita tensor.Thus one writes
-\[(\star \eta )_{i_{1},i_{2},\ldots ,i_{n-k}}={\frac {1}{(n-k)!}}\eta ^{j_{1},\ldots ,j_{k}} \tilde{\epsilon} _{j_{1},\ldots ,j_{k},i_{1},\ldots ,i_{n-k}}\]
-where $\eta$ is an arbitrary antisymmetric tensor in $k$ indices. It is understood that indices are raised and lowered using the same inner product g as in the definition of the Levi-Civita tensor. Although one can apply this expression to any tensor, the result is antisymmetric, since the symmetric components of the tensor completely cancel out when contracted with the completely anti-symmetric Levi-Civita symbol.\\ \\
-\textbf{Metric-induced properties of Riemann curvature tensor}\\
+\[(\star \eta )_{i_{1},i_{2},\ldots ,i_{n-k}}={\frac {1}{(n-k)!}}\eta ^{j_{1},\ldots ,j_{k}} \epsilon _{j_{1},\ldots ,j_{k},i_{1},\ldots ,i_{n-k}}\]
+where $\eta$ is an arbitrary antisymmetric tensor in $k$ indices. It is understood that indices are raised and lowered using the same inner product g as in the definition of the Levi-Civita tensor. Although one can apply this expression to any tensor, the result is antisymmetric, since the symmetric components of the tensor completely cancel out when contracted with the completely anti-symmetric Levi-Civita symbol.
+
+\subsubsection{Metric-induced properties of Riemann curvature tensor}
 (1) In a $n$ dimensional manifold with torsion-free affine connection, the number of independent components of Riemann tensor is \[\frac{n^3(n-1)}{2} - \frac{n^2(n-1)(n-2)}{6} = \frac{(n^2-1)n^2}{3}\]
 In a $n$ dimensional Riemann manifold,  the number of independent components of Riemann tensor is \[(\frac{n(n-1)}{2})^2 -\frac{n^2(n-1)(n-2)}{6} = \frac{(n^2-1)n^2}{12} \]
 (2) The double dual of Riemann tensor
@@ -504,15 +506,18 @@ which are related to the Einstein tensor by
 possesses the same symmetries as the Riemann tensor. 
 Weyl tensor is completely "trace-free"; i.e., that
 contraction of $C_{\alpha \beta \gamma \delta}$ on any pair of slots vanishes. Thus, $C_{\alpha \beta \gamma \delta}$ can be regarded as the trace-free part of Riemann, and $R_{\alpha \beta}$ can be regarded as the trace of Riemann. Riemann is determined entirely by its trace-free part $C_{\alpha \beta \gamma \delta}$ and
-its trace $R_{\alpha \beta}$.\\ \\
-\textbf{Riemann normal coordinates}
+its trace $R_{\alpha \beta}$.
+
+\subsection{The coordinates of observer}
+\subsubsection{Riemann normal coordinates}
 \[\Gamma^{\alpha}_{\phantom{\alpha} \beta \gamma}(\mathcal{P}_0) = 0\]
 \[\Gamma^{\alpha}_{\phantom{\alpha} \beta \gamma,\mu}(\mathcal{P}_0) = -\frac{1}{3} (R^{\alpha}_{\phantom{\alpha} \beta \gamma \mu} + R^{\alpha}_{\phantom{\alpha} \gamma \beta \mu})\]
 \[g_{\alpha \beta}(\mathcal{P}_0) = \eta_{\alpha \beta}\]
 \[g_{\alpha \beta,\gamma}(\mathcal{P}_0) = 0\]
 \[g_{\alpha \beta,\mu \nu}(\mathcal{P}_0) = -\frac{1}{3} (R_{\alpha \mu \beta \nu} +R_{\alpha \nu \beta \mu})\]
-\[R_{\alpha \beta \gamma \delta}(\mathcal{P}_0) = g_{\alpha \delta, \beta \gamma} - g_{\alpha \gamma , \beta \mu}\]\\
-\textbf{The proper reference frame of an accelerated observer}\\
+\[R_{\alpha \beta \gamma \delta}(\mathcal{P}_0) = g_{\alpha \delta, \beta \gamma} - g_{\alpha \gamma , \beta \mu}\]
+
+\subsubsection{The proper reference frame of an accelerated observer}
 (1) Let $\tau$ be proper time as measured by the accelerated observer's clock .Let $\mathcal{P} = \mathcal{P}_0(\tau)$ be the observer's world line.\\
 (2) The observer carries with himself an orthonormal tetrad $\{\mathbf{e}_{\hat{\alpha}}\}$
 with
@@ -521,7 +526,7 @@ and with
 \[\mathbf{e}_{\hat{\alpha}} \cdot \mathbf{e}_{\hat{\beta}} = \eta_{\alpha \beta}\]
 (3) The tetrad changes from point to point along the observer's world line, relative to parallel transport:
 \[\nabla_{\mathbf{u}} \mathbf{e}_{\hat{\alpha}} = - \mathbf{\Omega} \cdot \mathbf{e}_{\hat{\alpha}} \]
-\[\Omega^{\mu \nu} = a^{\mu} u^{\nu} - u^{\mu} a^{\nu} + u_{\alpha} a_{\beta}\epsilon^{\alpha \beta \mu \nu}\]
+\[\Omega^{\mu \nu} = a^{\mu} u^{\nu} - u^{\mu} a^{\nu} + u_{\alpha} \omega_{\beta}\epsilon^{\alpha \beta \mu \nu}\]
 This transport law has the same form in curved space-time as in flat because curvature can only be felt over finite distances, not over
 the infinitesimal distance involved in the "first time-rate of change of a vector" (equivalence principle).
 \[\mathbf{a} = \nabla_{\mathbf{u}} \mathbf{u}\]
@@ -535,28 +540,253 @@ because of the observer's acceleration].\\
 \[(x^{\hat{0}},x^{\hat{1}},x^{\hat{2}},x^{\hat{3}}) \equiv (\tau,s n^{\hat{1}},s n^{\hat{2}},s n^{\hat{3}})\]
 are a natural way of identifying the event $\mathcal{P}$. These are the coordinates of $\mathcal{P}$ in the observer's proper reference frame.\\ \\
 Along the world line of observer:
-\[\frac{\partial}{\partial x^{\hat{\alpha}}} = \mathbf{e}_{\hat{\alpha}}\]
-\[g_{\hat{\alpha} \hat{\beta}} = \mathbf{e}_{\hat{\alpha}} \cdot \mathbf{e}_{\hat{\beta}} = \eta_{\hat{\alpha}\hat{\beta}}\]
-\[\Gamma^{\hat{\beta}}_{\hat{\alpha} \hat{0}} = - \Omega^{\hat{\beta}}_{\hat{\alpha}} \]
-\[\Gamma^{\hat{0}}_{\hat{0} \hat{0}} =0\]
-\[\Gamma^{\hat{0}}_{\hat{j} \hat{0}} = \Gamma^{\hat{j}}_{\hat{0} \hat{0}} = a^{\hat{j}} \]
-\[\Gamma^{\hat{j}}_{\hat{k} \hat{0}} = -\omega^{\hat{i}} \epsilon_{0 \hat{i} \hat{j} \hat{k}}\]
+\[\frac{\partial}{\partial x^{\hat{\alpha}}} = \mathbf{e}_{\hat{\alpha}}, \ \ g_{\hat{\alpha} \hat{\beta}} = \mathbf{e}_{\hat{\alpha}} \cdot \mathbf{e}_{\hat{\beta}} = \eta_{\hat{\alpha}\hat{\beta}}\]
+\[\Gamma^{\hat{\beta}}_{\hat{\alpha} \hat{0}} = - \Omega^{\hat{\beta}}_{\hat{\alpha}}, \ \ \Gamma^{\hat{0}}_{\hat{0} \hat{0}} =0\]
+\[\Gamma^{\hat{0}}_{\hat{j} \hat{0}} = \Gamma^{\hat{j}}_{\hat{0} \hat{0}} = a^{\hat{j}}, \ \ \Gamma^{\hat{j}}_{\hat{k} \hat{0}} = -\omega^{\hat{i}} \epsilon_{0 \hat{i} \hat{j} \hat{k}} \]
 \[\Gamma^{\hat{\alpha}}_{\hat{j} \hat{k}} = 0 \]
-\[g_{\hat{\alpha} \hat{\beta},\hat{0}} = 0\]
-\[g_{\hat{j} \hat{k},\hat{l}} = 0\]
-\[g_{\hat{0} \hat{0},\hat{j}} = -2 a^{\hat{j}}\]
-\[g_{\hat{0} \hat{j},\hat{k}} = -\epsilon_{0 \hat{j} \hat{k} \hat{l}} \omega^{\hat{l}}\]
+\[g_{\hat{\alpha} \hat{\beta},\hat{0}} = 0, \ \ g_{\hat{j} \hat{k},\hat{l}} = 0\]
+\[g_{\hat{0} \hat{0},\hat{j}} = -2 a^{\hat{j}}, \ \ g_{\hat{0} \hat{j},\hat{k}} = -\epsilon_{0 \hat{j} \hat{k} \hat{l}} \omega^{\hat{l}}\]
+
+\subsection{Hypersurfaces}
+(In this subsection, we only discuss timelike and spacelile hypersurfaces)
+\subsubsection{Description of hypersurfaces}
+\textbf{Normal vector}\\
+\[n^{\alpha}n_{\alpha} = \epsilon \equiv \begin{cases} -1 \mbox{ if  } \Sigma \mbox{ is spacelike}\\ +1 \mbox{ if  } \Sigma \mbox{ is timelike}\end{cases} \]
+\textbf{Induced metric}\\
+Suppose that the hypersurface is parametrized with equation $x^{\alpha} = x^{\alpha}(y^a)$, Then
+\[e_{a}^{\alpha} = \frac{\partial x^{\alpha}}{\partial y^a}.\]
+For displacements within $\Sigma$, we have
+\begin{eqnarray}
+ds_{\Sigma}^{2} &=& g_{\alpha \beta} dx^{\alpha} dx^{\beta} \nonumber \\
+&=& g_{\alpha \beta} (\frac{\partial x^{\alpha}}{\partial y^a} dy^a) (\frac{\partial x^{\beta}}{\partial y^b} dy^b) \nonumber \\
+&=& h_{ab} dy^a dy^b \nonumber
+\end{eqnarray}
+where $h_{ab} = g_{\alpha \beta} e_{a}^{\alpha} e_{b}^{\beta}$.
+The completeness relation can be written as
+\[g^{\alpha \beta} = \epsilon n^{\alpha} n^{\beta} + h^{ab}e_{a}^{\alpha} e_{b}^{\beta} \]
+
+\subsubsection{Integration on hypersurfaces}
+The positive volume element of the whole space time is $dx^{0} \wedge \cdots \wedge dx^{m-1}$, the positive volume element of the hypersurfaces is $dy^{1} \wedge \cdots \wedge dy^{m-1}$.
+Suppose that the coordinate in hypersurfaces is compatible with the  coordinate of the whole space-time, which means that $-dy^{m} \wedge dy^1 \wedge \cdots \wedge dy^{m-1} $ has the same orientation as $dx^0 \wedge \cdots \wedge dx^{m-1}$. Then we have that
+\[\tilde{\epsilon}_{\alpha_{m} \alpha_{1} \cdots \alpha_{m-1}} \frac{\partial x^{\alpha_m}}{\partial y^m} e_1^{\alpha_1} \cdots e_{m-1}^{\alpha_{m-1}} < 0\]
+If we demand that the direction of $n^{\alpha}$ is the opposite of $\frac{\partial x^{\alpha}}{\partial y^m}$, then we have
+\[\tilde{\epsilon}_{\alpha_{m} \alpha_{1} \cdots \alpha_{m-1}} n^{\alpha_m} e_1^{\alpha_1} \cdots e_{m-1}^{\alpha_{m-1}} > 0.\]
+\textbf{Surface element}\\
+We define the surface element of a hypersurface as
+\[d\Sigma_{\mu} = \epsilon_{\mu \alpha \beta \gamma} e_{1}^{\alpha} e_{2}^{\beta} e_{3}^{\gamma} dy^1 \wedge dy^2 \wedge dy^3\]
+It is easy to verify that
+\[f^*(\sqrt{-g} dx^1 \wedge dx^2 \wedge dx^3) = d\Sigma_0\]
+\[f^*(-\sqrt{-g} dx^0 \wedge dx^2 \wedge dx^3) = d\Sigma_1\]
+and so on.
+We can demonstrate that
+\[d\Sigma_{\mu} = \epsilon n_{\mu} |h|^{\frac{1}{2}} dy^1 \wedge dy^2 \wedge dy^3\]\\ \\
+\textbf{Element of two-surface}\\
+Within the hypersurface $\Sigma$, we can define a two-surface $S$, which is parametrized with $y^a = y^a(\theta_A)$, then
+\[e_A^a = \frac{\partial y^a}{\partial \theta^A}, \ \ e_A^{\alpha} = \frac{\partial x^{\alpha}}{\partial \theta^{A}} = e_a^{\alpha} e_A^a \]
+\[\sigma_{AB} = h_{AB}e_A^a e_B^b = g_{\alpha \beta} e_A^{\alpha} e_B^{\beta}\]
+\[h^{ab} = \epsilon_r r^a r^b + \sigma^{AB} e_A^a e_B^b\]
+\[g^{\alpha \beta} = \epsilon_n n^{\alpha} n^{\beta} + \epsilon_r r^{\alpha} r^{\beta} + \sigma^{AB} e_A^{\alpha} e_B^{\beta}\]
+If we demand that the direction $r^a$ is the opposite of that of $\frac{\partial y^a}{\partial \theta^{1}}$, then the condition of compatibility can be written as
+\[\epsilon_{\mu \nu \beta \gamma}n^{\mu} r^{\nu} e_2^{\beta} e_3^{\gamma} > 0\]
+We define the surface element of a two-surface as
+\[dS_{\mu \nu} = \epsilon_{\mu \nu \beta \gamma} e_2^{\beta} e_3^{\gamma} d\theta^2 \wedge d\theta^3\]
+It is easy to verify that
+\[f^*(\sqrt{-g} dx^2 \wedge dx^3) = dS_{01}\]
+and so on. We can demonstrate that
+\[dS_{\alpha \beta} = \epsilon_n \epsilon_r (n_{\alpha}r_{\beta} - n_{\beta}r_{\alpha}) \sqrt{\sigma} d\theta^2 \wedge d\theta^3\]
+
+\subsubsection{Gauss-Stokes theorem}
+\textbf{Prototype}
+\[\int_{M} d\omega = \int_{\partial M} i^* \omega\]
+\textbf{First version}
+\[\int_{\mathcal{V}} A^{\alpha}_{;\alpha} \sqrt{-g} dx^4 = \oint_{\partial \mathcal{V}} A^{\alpha} d\Sigma_{\alpha}\]
+\textbf{Second version}\\
+Suppose that $B_{\alpha \beta}$ is an antisymmetric tensor, then
+\[\int_{\Sigma} B^{\alpha \beta}_{\phantom{\alpha \beta};\beta} d\Sigma_{\alpha} = \frac{1}{2}\oint_{\partial \Sigma} B^{\alpha \beta} d\Sigma_{\alpha \beta}\]
+
+\subsubsection{Differentiation of tangent vector fields}
+\textbf{Tangent tensor field}
+\[A^{\alpha \beta \cdots} = A^{ab\cdots} e_a^{\alpha} e_b^{\beta} \cdots\]
+\[A_{\alpha \beta \cdots} e_a^{\alpha} e_b^{\beta} \cdots = A_{ab\cdots} = h_{am} h_{bn} \cdots A^{mn\cdots}\]
+\textbf{Projection tensor}
+\[h^{\alpha \beta} \equiv h^{ab}e_a^{\alpha} e_b^{\beta} = g^{\alpha \beta} - \epsilon n^{\alpha} n^{\beta}\]
+\textbf{Intrinsic covariant derivative}
+\[A_{a|b} \equiv A_{\alpha;\beta} e_a^{\alpha} e_b^{\beta} = A_{a,b} - \Gamma^c_{ab}A_c\]
+Here, the connection $\Gamma^c_{ab}$ is compatible with $h_{ab}$.\\
+\textbf{Extrinsic curvature}
+\[K_{ab} \equiv n_{\alpha;\beta}e_a^{\alpha} e_b^{\beta}\]
+\[A^{\alpha}_{;\beta} e_b^{\beta} = A^a_{|b} e_a^{\alpha} - \epsilon A^a K_{ab}n^{\alpha}\]
+\[e^{\alpha}_{a;\beta} e_b^{\beta} = \Gamma^c_{ab}e_c^{\alpha} - \epsilon K_{ab}n^{\alpha}\]
+\[K_{ab} = \frac{1}{2}(\mathcal{L}_n g_{\alpha \beta})e_a^{\alpha} e_b^{\beta}\]
+\[K \equiv h^{ab}K_{ab} = n^{\alpha}_{;\alpha}\]
+
+\subsubsection{Gauss-Codazzi equations}
+\textbf{General Form}
+\[R^{\mu}_{\alpha \beta \gamma} e_a^{\alpha} e_b^{\beta} e_c^{\gamma} = R^m_{abc} e_m^{\mu} + \epsilon (K_{ab|c} - K_{ac|b})n^{\mu} + \epsilon K_{ab} n^{\mu}_{;\gamma}e_c^{\gamma} - \epsilon K_{ac} n^{\mu}_{;\beta}e_b^{\beta}\]
+\textbf{Contracted form}
+\[-2\epsilon G_{\alpha \beta} n^{\alpha} n^{\beta} = \phantom{R}^3R + \epsilon(K^{ab}K_{ab}-K^2)\]
+\[G_{\alpha \beta} e_a^{\alpha}n^{\beta} = K^b_{a|b} - K_{,a}\]
+\textbf{Ricci scalar}
+\[R = \phantom{R}^3R + \epsilon(K^2-K^{ab}K_{ab}) + 2\epsilon(n^{\alpha}_{;\beta}n^{\beta}-n^{\alpha}n^{\beta}_{;\beta})_{;\alpha}\]
+
+
+\section{Geometrodynamics}
+\paragraph*{Give the fields that generate mass-energy, and their time-rates of change, and give 3-geometry of space and its time-rate of change, all at one time, and solve for the 4-geometry of spacetime at that one time. Four of the ten components of Einstein's law connect the curvature of space here and now with the distribution of mass-energy here and now, and the other six equations tell how the geometry as thus determined then proceeds to evolve.}
+
 \subsection{Basic assumptions of general relativity}
 (1) Space-time is a four dimensional pseudo-Riemann manifold.\\
 (2) The metric of the manifold is governed by the Einstein field equation
 \[\mathbf{G} = 8\pi\mathbf{T}.\]
-(3) All special relativistic laws of physics are valid in local Lorentz frames of metric.\\
+(3) All special relativistic laws of physics are valid in local Lorentz frames of metric.
 
-\section{Geometrodynamics}
-\paragraph*{Give the fields that generate mass-energy, and their time-rates of change, and give 3-geometry of space and its time-rate of change, all at one time, and solve for the 4-geometry of spacetime at that one time. Four of the ten components of Einstein's law connect the curvature of space here and now with the distribution of mass-energy here and now, and the other six equations tell how the geometry as thus determined then proceeds to evolve.}
-\subsection{variational principle}
-\[\mathcal{L} = \mathcal{L}_{geom}+\mathcal{L}_{field} = (-g)^{\frac{1}{2}} L\]
+\subsection{Lagrangian formulation}
+\subsubsection{Mechanics}
+\[S[q] = \int_{\tau_1}^{\tau_2} L(x^{\alpha},\frac{dx^{\alpha}}{d\tau}) d\tau\]
+\[\delta x^{\alpha}(\tau_1)=0, \delta x^{\alpha}(\tau_2)=0\]
+\[\delta S = 0 \Rightarrow \frac{d}{d\tau} \frac{\partial L}{\partial u^{\alpha}} - \frac{\partial L}{\partial x^{\alpha}}=0\]
+\textbf{Example}
+\[L = -m(-g_{\mu\nu} u^{\mu} u^{\nu})^{-1/2} + e A_{\mu} u^{\mu}\]
+\[\Downarrow\]
+\[m(\frac{du_{\alpha}}{d\tau} - \frac{1}{2} \frac{\partial g_{uv}}{\partial x^{\alpha}} u^{\mu} u^{\nu}) = e(A_{\mu,\alpha}-A_{\alpha,\mu})u^{\mu} \Rightarrow ma_{\alpha} = eF_{\alpha\mu} u^{\mu} \]
+
+\subsubsection{Field Theory}
+\[S[q] = \int_{\mathcal{V}} \mathcal{L}(q,q_{\alpha})\sqrt{-g} d^4x\]
+\[\delta q|_{\partial \mathcal{V}} = 0\]
+\[\delta S = 0 \Rightarrow \nabla_{\alpha} (\frac{\partial \mathcal{L}}{\partial q_{,\alpha}}) - \frac{\partial \mathcal{L}}{\partial q} = 0\]
+\textbf{Example}
+\[\mathcal{L} = -\frac{1}{4} F^{\mu \nu} F_{\mu \nu} + A_{\mu} j^{\mu}\]
+\[\Downarrow\]
+\[F^{\mu \nu}_{\phantom{\mu \nu} ;\nu} = j^{\mu}\]
+
+\subsubsection{General relativity}
+\[S_{H}[g] = \frac{1}{16\pi} \int_{\mathcal{V}} R \sqrt{-g} d^4 x\]
+\[S_{B}[g] = \frac{1}{8 \pi} \oint_{\partial \mathcal{V}} \epsilon K |h|^{\frac{1}{2}} d^3 y\]
+\[S_0 = \frac{1}{8\pi} \oint_{\partial \mathcal{V}} \epsilon K_0 |h|^{\frac{1}{2}} d^3 y\]
+\[S_M[\phi;g] = \int_{\partial \mathcal{V}} \mathcal{L}(\phi,\phi_{,\alpha};g_{\alpha \beta}) \sqrt{-g} d^4 x\]
+
+\subsubsection{Variation of Hilbert term}
+\[(16 \pi) \delta S_H = \int_{\mathcal{V}} G_{\alpha \beta} \delta g^{\alpha \beta} \sqrt{-g} d^4 x - \oint_{\partial \mathcal{V}} \epsilon h^{\alpha \beta} \delta g_{\alpha \beta, \mu} n^{\mu} |h|^{\frac{1}{2}} d^3 y\]
+
+\subsubsection{Variation of boundary term}
+\[16\pi \delta S_B = \oint_{\partial \mathcal{V}} \epsilon h^{\alpha \beta} \delta g_{\alpha \beta, \mu} n^{\mu} |h|^{\frac{1}{2}} d^3 y \]
+
+\subsubsection{Variation of matter action}
+\[\delta S_M = \int_{\mathcal{V}} \left( \frac{\partial \mathcal{L}}{\partial g^{\alpha \beta}} - \frac{1}{2} \mathcal{L} g_{\alpha \beta} \right) \delta g^{\alpha \beta} \sqrt{-g} d^4 x\]
+Define
+\[T_{\alpha \beta} \equiv -2 \frac{\partial \mathcal{L}}{\partial g^{\alpha \beta}} + \mathcal{L} g_{\alpha \beta}\]
+\textbf{Example}
+\[\mathcal{L} = -\frac{1}{4} F^{\mu \nu}F_{\mu \nu}\]
+\[\Downarrow\]
+\[T_{\alpha \beta} = F_{\mu \alpha} F^{\mu}_{\phantom{\mu} \beta} - \frac{1}{4} F^{\mu \nu} F_{\mu \nu} g_{\alpha \beta}\]
+
+\subsubsection{Nondynamical term}
+$K_0 = $ extrinsic curvature of $\partial \mathcal{L}$ embedded in flat space-time.
+
+\subsection{Hamiltonian formulation}
+\subsubsection{3+1 decomposition}
+\begin{figure}
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[width=3.5in]{./pic/Foliation1.png}
+\caption{Foliation of space-time by spacelike hypersurfaces}
+\label{fig:side:a}
+\end{minipage}%
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[width=3.5in]{./pic/Foliation2.png}
+\caption{Decomposition of $t^{\alpha}$ into lapse and shift}
+\label{fig:side:b}
+\end{minipage}
+\end{figure}
+The space-time is foliated by spacelike hypersurfaces $\Sigma_t$ that is described by scalar function $t(x^{\alpha})$. $t$ is a single valued function and the unit normal to the hypersurfaces $n_{\alpha} \propto \partial_{\alpha} t$ is a future directed timelike vector field.\\
+Consider a congruence of curves $\gamma$ intersecting $\Sigma_t$. We use $t$ as a parameter on the curves and the vector $t^{\alpha}$ is tangent to the congruence (so, $t^{\alpha} \partial_{\alpha}t = 1$).Install coordinates $y^a$ on $\Sigma_t$ and impose $y^a(P'') = y^a(P') = y^a(P)$, so $y^a$ is held constant on each member of the congruence. This construction defines a coordinate system $(t,y^a)$ in $\mathcal{V}$.\\
+\textbf{base vector}
+\[t^{\alpha} = \left( \frac{\partial x^{\alpha}}{\partial t}\right)_{y^a}, \ \ \ \ e_a^{\alpha} = \left(\frac{\partial x^{\alpha}}{\partial y^a} \right)_t, \ \ \ \ \mathcal{L}_t e_a^{\alpha} = 0\]
+\textbf{Normal vector}
+\[n_{\alpha} = -N \partial_{\alpha}t, \ \ \ \ n_{\alpha} e_a^{\alpha} = 0\]
+\textbf{Decomposition of $t^{\alpha}$}
+\[t^{\alpha} = N n^{\alpha} + N^a e_a^{\alpha}\]
+\textbf{Metric}
+\begin{eqnarray}
+ds^2 &=& g_{\alpha \beta} dx^{\alpha} dx^{\beta} \nonumber \\
+&=& g_{\alpha \beta} (t^{\alpha} dt + e_a^{\alpha}dy^a) (t^{\beta} dt + e_b^{\beta}dy^{b}) \nonumber \\
+&=& -N^2 dt^2 + h_{ab}(dy^a+N^a dt)(dy^b + N^b dt) \nonumber \\
+\sqrt{-g} &=& N \sqrt{h} \nonumber
+\end{eqnarray}
+
+\subsubsection{Field theory}
+\[\dot{q} = \frac{\partial q}{\partial t}, \ \ \ \ p=\frac{\partial}{\partial \dot{q}}(\sqrt{-g} \mathcal{L})\]
+\[\mathcal{H}(p,q,q_a) = p\dot{q} - \sqrt{-g} \mathcal{L}\]
+\[H = \int_{\Sigma_t} \mathcal{H}(p,q,q_a)d^3y\]
+\[S = \int_{t_1}^{t_2} dt \int_{\Sigma_t} (p \dot{q} - \mathcal{H} ) d^3 y\]
+\[\delta S = 0 \Rightarrow \dot{p} = -\frac{\partial \mathcal{H}}{\partial q} + \left(\frac{\partial \mathcal{H}}{\partial q_{,a}}\right)_{,a}, \ \ \ \ \dot{q} = \frac{\partial \mathcal{H}}{\partial p}\]
+\textbf{Example}\\
+For electromagnetic field in 3+1 decomposition form, we define the electrical field as $E_a = F_{\alpha \beta} n^{\beta} e_a^{\alpha}$, the magnetic field as $\epsilon_{abc} B^c = F_{\alpha \beta} e_a^{\alpha} e_b^{\beta}$. In this definition, the equation of motion of particles in electromagnetic field can be written as
+\[m A_a = \gamma e (E_a + \epsilon_{abc} v^b B^c)\]
+Here, $A_a = u_{\alpha;\beta} u^{\beta} e_a^{\alpha}$, $\gamma = \frac{1}{\sqrt{1-v^2}}$. So, the three force
+\[\overrightarrow {f}=\frac{d\overrightarrow {p}}{dt} = e(\overrightarrow {E} + \overrightarrow {v} \times \overrightarrow {B})\]
+If we adopt the coordinates $(t,y^a)$, it is easy to verify that
+\[E^a = N F^{0a}, \ \ \ \ B^a = \frac{1}{2} \epsilon^{abc} F_{bc}\]
+We further define
+\[\mathcal{E}^a = \sqrt{h} E^a, \ \ \ \ \mathcal{B}^a = \sqrt{h} B^a, \ \ \ \ \phi = - A_0, \ \ \ \ \rho_{e} = -j^{\alpha} n_{\alpha} = N j^0\]
+If we notice that
+\[F_{0a} = -h_{ab}N^2F^{0b} - F_{ab}N^b, \ \ \ \ \tilde{\epsilon}_{abc} \tilde{\epsilon}_{ijk} h^{ai} h^{bj} = \frac{2h_{ck}}{h}\]
+It is easy to verify that
+\[ \sqrt{-g} \mathcal{L} = - \mathcal{E}^a \dot{A_a} + \phi \mathcal{E}^a_{,a} - \frac{1}{2} N h^{-\frac{1}{2}} h_{ab} (\mathcal{E}^a \mathcal{E}^b + \mathcal{B}^a \mathcal{B}^b) + \tilde{\epsilon}_{abc}N^a \mathcal{E}^b \mathcal{B}^c -\sqrt{h} \phi \rho_e + N \sqrt{h} A_a j^a\]
+So,$\pi^a = -\mathcal{E}^a$, and we can get the Hamilton density
+\[\mathcal{H} = \phi \pi^a_{,a} + \frac{1}{2} N h^{-\frac{1}{2}} h_{ab} (\pi^a \pi^b + \mathcal{B}^a \mathcal{B}^b) + \tilde{\epsilon}_{abc}N^a \pi^b \mathcal{B}^c +\sqrt{h} \phi \rho_e - N \sqrt{h} A_a j^a\]
+Then, the Hamilton equation can be written as
+\[\dot{A}_a = -\phi_a + N h^{-\frac{1}{2}} h_{ab}\pi^b + \tilde{\epsilon}_{abc}N^a \mathcal{B}^c\]
+\[\dot{\pi}^a = - \tilde{\epsilon}^{jab}(Nh^{-\frac{1}{2}}h_{ij}\mathcal{B}^i)_{,b} - \tilde{\epsilon}^{cab}(\tilde{\epsilon}_{ijc}N^i \pi^j)_{,b} + N\sqrt{h}j^a \]
+and also the constraint equation $\pi^a_{,a} + \sqrt{h}\rho_e = 0$.
+After simplification, the Maxwell equations are
+\begin{eqnarray}
+\frac{1}{\sqrt{h}}\frac{\partial}{\partial t}(\sqrt{h} \overrightarrow{E}) &=& \nabla \times (N \overrightarrow{B} - \overrightarrow{N} \times \overrightarrow{E}) - N \overrightarrow{J} \nonumber \\
+\frac{1}{\sqrt{h}}\frac{\partial}{\partial t}(\sqrt{h} \overrightarrow{B}) &=& -\nabla \times (N \overrightarrow{E} + \overrightarrow{N} \times \overrightarrow{B}) \nonumber \\
+\nabla \cdot \overrightarrow{E} &=& \rho_e \nonumber \\
+\nabla \cdot \overrightarrow{B} &=& 0 \nonumber
+\end{eqnarray}
+
+\subsubsection{Gravitational action}
+\[S_G = \frac{1}{16 \pi} \int_{t_1}^{t_2} dt \left\{ \int_{\Sigma_t} \left(\phantom{R}^3R + K^{ab}K_{ab} -K^2 \right) N \sqrt{h} d^3 y + 2\oint_{\Sigma_t}(k-k_0)N \sqrt{\sigma}d^2 \theta \right\} \]
+$k_0 =$ extrinsic curvature of $S_t$ embedded in flat space. 
+
+\subsubsection{Gravitational Hamiltonian}
+\[\dot{h}_{ab} \equiv \mathcal{L}_t h_{ab} = \mathcal{L}_t (g_{\alpha \beta} e_a^{\alpha} e_b^{\beta}) =   \mathcal{L}_t (g_{\alpha \beta}e_a^{\alpha} e_b^{\beta} = 2NK_{ab} + N_{a|b} + N_{b|a})\]
+\[K_{ab} = \frac{1}{2N} (\dot{h}_{ab} - N_{a|b} - N_{b|a})\]
+\[p^{ab} = \frac{\partial}{\partial \dot{h}_{ab}} (\sqrt{-g} \mathcal{L}_G) = \frac{\sqrt{h}}{16\pi} (K^{ab} - K h^{ab})\]
+\[\sqrt{h}K^{ab} = 16\pi (p^{ab} - \frac{1}{2}ph^{ab})\]
+\[\mathcal{H}_G = p^{ab}\dot{h}_{ab} - \sqrt{-g} \mathcal{L}_G\]
+\begin{eqnarray}
+16\pi H_G &=& \int_{\Sigma_t} \left[ N(K^{ab}K_{ab} - K^2 - \phantom{R}^3R) - 2N_a(K^{ab} - Kh^{ab})_{|b} \right] \sqrt{h} d^3 y 
+\nonumber \\
+&\phantom{=}& -2\oint_{S_t} \left[ N(k-k_0) - N_a(K^{ab}-Kh^{ab})r_b \right] \sqrt{\sigma} d^2 \theta \nonumber
+\end{eqnarray}
+
+\subsubsection{Variation of gravitational Hamiltonian}
+\[\delta N = \delta N^a = \delta h_{ab} = 0 \mbox{ on } S_t\]
+\[\delta H_G = \int_{\Sigma_t} (\mathcal{P}^{ab} \delta h_{ab} + \mathcal{H}_{ab} \delta p^{ab} - \mathcal{C}\delta N - 2\mathcal{C}_a \delta N^a) d^3 y\]
+\begin{eqnarray}
+(16\pi)\mathcal{P}^{ab} &=&  N\sqrt{h}G^{ab} - \sqrt{h}(N^{|ab} - h^{ab} N^{|c}_{\phantom{|c}c}) \nonumber \\
+&\phantom{=}& +(16\pi)[2p^{c(a}N^{b)}_{\phantom{b)}|c} - \sqrt{h}(\frac{1}{\sqrt{h}}p^{ab}N^c)_{|c}] \nonumber \\
+&\phantom{=}& + (16\pi)^2 [\frac{2N}{\sqrt{h}} (p^a_c p^{bc} - \frac{1}{2} p p^{ab}) - \frac{N}{2\sqrt{h}}(p^{cd}p_{cd} - \frac{1}{2} p^2)h^{ab}] \nonumber \\
+\mathcal{H}_{ab} &=& (16\pi) \frac{2N}{\sqrt{h}} (p_{ab} - \frac{1}{2}p h_{ab}) + 2N_{(a|b)} \nonumber \\
+\mathcal{C} &=& \frac{\sqrt{h}}{16\pi} (\phantom{R}^3R + K^2 - K^{ab}K_{ab}) \nonumber \\
+\mathcal{C}^a &=& \frac{\sqrt{h}}{16\pi} (K_a^{\phantom{a}b} - K \delta_a^{\phantom{a}b})_{|b} \nonumber 
+\end{eqnarray}
+
+\subsubsection{Variation of electromagnetic Hamiltonian}
+\[\delta H_E = \int_{\Sigma_t}(-\frac{1}{2}N\sqrt{h}\mathcal{I}^{ab} \delta h_{ab} + \sqrt{h} \rho \delta N - \sqrt{h} s_a \delta N^a)\]
+\begin{eqnarray}
+\mathcal{I}^{ab} &=& \frac{1}{2}(E^c E_c + B^c B_c)h^{ab} - E^a E^b - B^a B^b \nonumber \\
+\rho &=& \frac{1}{2}(E^c E_c + B^c B_c) \nonumber \\
+s_a &=& \epsilon_{abc} E^b B^c \nonumber
+\end{eqnarray}
+
+\subsubsection{Hamilton's equations}
+\[\dot{h}_{ab} = \mathcal{H}_{ab}, \ \ \ \ \dot{p}^{ab} = -\mathcal{P}^{ab}+\frac{1}{2}N\sqrt{h}\mathcal{I}^{ab}\]
+\[\phantom{R}^3R + K^2 - K^{ab}K_{ab} = 16 \pi \rho\]
+\[(K_a^{\phantom{a}b} - K \delta_a^{\phantom{a}b})_{|b} = -8\pi s_a\]
 \end{document}
-
 
 
