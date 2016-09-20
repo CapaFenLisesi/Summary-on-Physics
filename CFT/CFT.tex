@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage[left=1.5cm, right=1.5cm, top=3cm, bottom = 3cm]{geometry}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{latexsym}
+\usepackage{hyperref}
+\usepackage{feynmf}
+\usepackage{exscale}
+\usepackage{relsize}
+\usepackage{bm}%bold math, for vector
+\linespread{1.1}
+
+\usepackage{hyperref}
+\hypersetup{
+  pdfauthor={Yuyang Songsheng},
+  pdftitle={Summary on General Relativity},
+  pdfsubject={Summary on General Relativity},
+  urlcolor=blue,
+}
+
+
+
+
+\author{Yuyang Songsheng}
+\title{Summary on Classical Field Theory}
+
+\begin{document}
+\maketitle
+\section{Mechanics within special relativity}
+\subsection{Basic Assumption}
+First, we assume there is an upper limit of velocity of propagation of interaction $c$. Second, we assume that inertial reference frame are all the same in describing the law of physics. Then, we can find the invariant intervals when transforming from one inertial reference frame to another, $ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2$. 
+(In the following, we assume that $c=1$.)This transformation is called Lorentz transformation, which can be written as
+\[\bar{x}^{\mu} = \Lambda^{\mu}_{\phantom{\mu}\nu} x^{\nu}\]
+and it is easy to verify that
+\[\eta_{\mu \nu} \Lambda^{\mu}_{\phantom{\mu}\rho} \Lambda^{\nu}_{\phantom{\nu}\sigma} = \eta_{\rho \sigma},\]
+where,
+\[\eta_{\mu \nu} = \left[ 
+\begin{matrix} 
+-1& & & \\ 
+& +1 & & \\
+& & +1 & \\
+& & & +1
+\end{matrix} 
+\right]\]
+and
+\[(\Lambda^{-1})^{\rho}_{\phantom{\rho}\nu} = \Lambda_{\nu}^{\phantom{\mu}\nu}\]
+In a special case when we boost along $\hat{1}$ direction, we have
+\[\bar{x}^{0} = \gamma x^0 - \gamma \beta x^1\]
+\[\bar{x}^{1} = -\gamma \beta x^0 + \gamma x^1\]
+Some physical quantity will behave like a tensor (vector,scalar) when transforming form one inertial frame to another. For example,
+\paragraph{scalar} proper time: $d \tau$, mass: $m$, electrical charge $e$
+\paragraph{vector} four velocity: $v^{\mu} = \frac{dx^{\mu}}{d \tau}$, four momentum: $p^{\mu} = m v^{\mu}$, four acceleration: $a^{\mu} = \frac{du^{\mu}}{d \tau}$, four force: $f^{\mu} = m a^{\mu}$
+
+\subsection{"Three vector"}
+three velocity: $\hat{u}^{i} = \frac{dx^i}{dt}$
+\[u^0 = \gamma_v, u^i = \gamma \hat{u}^i\]
+Transformation of three velocity when we boost along $\hat{1}$ direction:
+\[\bar{\hat{v}}^1 = \frac{\hat{v}^1 - \beta}{1-\hat{v}^1 \beta}\]
+\[\bar{\hat{v}}^2 = \frac{\hat{v}^2}{\gamma(1-\hat{v}^2 \beta})\]
+\[\bar{\hat{v}}^3 = \frac{\hat{v}^3}{\gamma(1-\hat{v}^3 \beta})\]
+three momentum: $\hat{p}^{i} = p^i$
+\[\hat{p}^{i} \gamma_v \hat{v}^i\]
+three acceleration: $\hat{a}^{i} = \frac{dv^i}{dt}$\\
+three force: $\hat{f}^i = \frac{d\hat{p}^i}{dt}$
+\[f^i = \gamma_v \hat{f}^i\]
+Energy: $E = p^0 = m u^0 = \gamma_v m$
+
+
+\subsection{Mechanics}
+Revised newton's second law:
+\[f^{\mu} = \frac{dp^{\mu}}{d\tau}\]
+It can be written in three vector language as
+\[\hat{f}^i = \gamma_v m \hat{a}^i + \gamma_v^3 (\hat{a}^j \hat{v}_j) m \hat{v}^i\]
+
+\subsection{Lagrangian formulation}
+\[S=-m\int_{a}^{b} d\tau, \ \ \ \ \delta x^{\mu}(a) = \delta x^{\mu}(b) = 0\]
+\[\delta S = 0 \Rightarrow m\frac{du^{\mu}}{d\tau} = 0\]
+
+\subsection{Hamiltonian formulation}
+\[S = -m \int_{t_1}^{t_2} \sqrt{1-\dot{x}_i\dot{x}^i} dt\]
+\[L = - m \sqrt{1-\dot{x}_i\dot{x}^i}\]
+\[\pi^i = \frac{\partial L}{\partial \dot{x}_i} = \gamma m \eta^{ij}\dot{x}_j\]
+\[H = \pi^i \dot{x}_i - L = \gamma m = \sqrt{m^2 + \pi^i \pi_i}\]
+\subsubsection{Hamilton equation}
+\[\dot{\pi}^i = 0, \ \ \ \ \dot{x_i} = \eta_{ij}\frac{\pi^j}{\sqrt{m^2 + \pi^k \pi_k}}\]
+
+\subsubsection{Jacobian equation}
+\[(\frac{\partial S}{\partial t})^2 = m^2 + (\frac{\partial S}{\partial x})^2 + (\frac{\partial S}{\partial y})^2 + (\frac{\partial S}{\partial z})^2\]
+
+\subsection{Symmetry and conservation law}
+\subsubsection{Translational symmetry and conservation of momentum}
+\[\bar{x}^{\mu} = x^{\mu} + \delta x^{\mu}\]
+\[\delta S = \sum mu_{\mu} \delta x^{\mu}|_a^b = 0 \]
+$\sum p^{\mu}$ is conserved.
+\subsubsection{Rotational symmetry and conservation of angular momentum}
+\[\bar{x}^{\mu} = x^{\mu} + x_{\nu}\delta \Omega^{\mu \nu}\]
+\[\delta S = \sum mu^{\mu} x^{\nu} \delta \Omega_{\mu \nu}|_a^b = 0 \]
+$\sum M^{\mu \nu} $ is conserved, where $M^{\mu \nu} = x^{\mu}p^{\nu} - x^{\nu}p^{\mu}$.
+\end{document}
