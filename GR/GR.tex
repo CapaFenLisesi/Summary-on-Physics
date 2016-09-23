@@ -717,14 +717,14 @@ ds^2 &=& g_{\alpha \beta} dx^{\alpha} dx^{\beta} \nonumber \\
 \subsubsection{Field theory}
 \[\dot{q} = \frac{\partial q}{\partial t}, \ \ \ \ p=\frac{\partial}{\partial \dot{q}}(\sqrt{-g} \mathcal{L})\]
 \[\mathcal{H}(p,q,q_a) = p\dot{q} - \sqrt{-g} \mathcal{L}\]
-\[H = \int_{\Sigma_t} \mathcal{H}(p,q,q_a)d^3y\]
+\[H = \int_{\Sigma_t} \mathcal{H}(p,q,q_{,a})d^3y\]
 \[S = \int_{t_1}^{t_2} dt \int_{\Sigma_t} (p \dot{q} - \mathcal{H} ) d^3 y\]
 \[\delta S = 0 \Rightarrow \dot{p} = -\frac{\partial \mathcal{H}}{\partial q} + \left(\frac{\partial \mathcal{H}}{\partial q_{,a}}\right)_{,a}, \ \ \ \ \dot{q} = \frac{\partial \mathcal{H}}{\partial p}\]
 \textbf{Example}\\
 For electromagnetic field in 3+1 decomposition form, we define the electrical field as $E_a = F_{\alpha \beta} n^{\beta} e_a^{\alpha}$, the magnetic field as $\epsilon_{abc} B^c = F_{\alpha \beta} e_a^{\alpha} e_b^{\beta}$. In this definition, the equation of motion of particles in electromagnetic field can be written as
 \[m A_a = \gamma e (E_a + \epsilon_{abc} v^b B^c)\]
 Here, $A_a = u_{\alpha;\beta} u^{\beta} e_a^{\alpha}$, $\gamma = \frac{1}{\sqrt{1-v^2}}$. So, the three force
-\[\overrightarrow {f}=\frac{d\overrightarrow {p}}{dt} = e(\overrightarrow {E} + \overrightarrow {v} \times \overrightarrow {B})\]
+\[\vec {f}=\frac{d\vec {p}}{dt} = e(\vec {E} + \vec {v} \times \vec {B})\]
 If we adopt the coordinates $(t,y^a)$, it is easy to verify that
 \[E^a = N F^{0a}, \ \ \ \ B^a = \frac{1}{2} \epsilon^{abc} F_{bc}\]
 We further define
@@ -741,10 +741,10 @@ Then, the Hamilton equation can be written as
 and also the constraint equation $\pi^a_{,a} + \sqrt{h}\rho_e = 0$.
 After simplification, the Maxwell equations are
 \begin{eqnarray}
-\frac{1}{\sqrt{h}}\frac{\partial}{\partial t}(\sqrt{h} \overrightarrow{E}) &=& \nabla \times (N \overrightarrow{B} - \overrightarrow{N} \times \overrightarrow{E}) - N \overrightarrow{J} \nonumber \\
-\frac{1}{\sqrt{h}}\frac{\partial}{\partial t}(\sqrt{h} \overrightarrow{B}) &=& -\nabla \times (N \overrightarrow{E} + \overrightarrow{N} \times \overrightarrow{B}) \nonumber \\
-\nabla \cdot \overrightarrow{E} &=& \rho_e \nonumber \\
-\nabla \cdot \overrightarrow{B} &=& 0 \nonumber
+\frac{1}{\sqrt{h}}\frac{\partial}{\partial t}(\sqrt{h} \vec{E}) &=& \nabla \times (N \vec{B} - \vec{N} \times \vec{E}) - N \vec{J} \nonumber \\
+\frac{1}{\sqrt{h}}\frac{\partial}{\partial t}(\sqrt{h} \vec{B}) &=& -\nabla \times (N \vec{E} + \vec{N} \times \vec{B}) \nonumber \\
+\nabla \cdot \vec{E} &=& \rho_e \nonumber \\
+\nabla \cdot \vec{B} &=& 0 \nonumber
 \end{eqnarray}
 
 \subsubsection{Gravitational action}

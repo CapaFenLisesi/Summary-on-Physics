@@ -21,64 +21,74 @@
 
 \begin{document}
 \maketitle
-\section{Lagrangian Mechanics}
-Lagrangian and Action:
-\begin{equation}
-S=\int_{t_1}^{t_2}L(q,\dot{q},t)dt
-\end{equation}
-Hamilton Principle:
-\begin{equation}
-\delta S=0
-\end{equation}
-Euler-Lagrangian equation:
-\begin{equation}
-\frac{d}{dt}(\frac{\partial L}{\partial \dot{q_i}}) - \frac{\partial L}{\partial q_i}=0
-\end{equation}
+\section{Lagrangian Formulation}
+\[S=\int_{t_1}^{t_2}L(q_i,\dot{q_i},t)dt, \ \ \ \ \delta q_i(t_1) = \delta q_i(t_2) = 0\]
+\[\delta S=0 \rightarrow \frac{d}{dt}(\frac{\partial L}{\partial \dot{q_i}}) - \frac{\partial L}{\partial q_i}=0\]
+\subsection{Example}
 The form of Lagrangian for a system of particles in inertial frame:
-\begin{equation}
-L=\sum_a \frac{1}{2}m_a v_a^2 -U(\vec{r_1},\vec{r_2},\cdots,)
-\end{equation}
-Notes: To get the form of Lagrangian for a system of interacting particles, we must assume:\\
+\[L=\sum_a \frac{1}{2}m_a v_a^2 -U(\vec{r_1},\vec{r_2},\cdots,)\]
+To get the form of Lagrangian for a system of interacting particles, we must assume:\\
 (1) Space and time are homogeneous and isotropic in inertial frame;\\
 (2) Galileo's relativity principle and Galilean transformation;\\
 (3) Spontaneous interaction between particles;\\
 
-\section{Symmetry and Conservation Laws}
-\paragraph{Nother's theorem}
+\section{Symmetry and Conservation Laws(1)}
+\subsection{Nother's theorem}
 For $q_i \to q_i+\delta q_i$ and $L \to L+\delta L$, if $\delta L= \frac{d f(q,\dot{q},t)}{dt}$,then we get
-\begin{equation}
-\frac{d}{dt}(p_i \delta q_i-f)=0 \ \ \ (p_i=\frac{\partial L}{\partial \dot{q_i}})
-\end{equation}
-This can imply the conservation laws of momentum and angular momentum.
-\paragraph{Homogeneity of time}
-If $\frac{\partial L}{\partial t}=0$,then we get
-\begin{equation}
-\frac{dE}{dt}=0 \ \ \ (E=\sum_i \dot{q_i}p_i-L)
-\end{equation}
+\[\frac{d}{dt}(p^i \delta q_i-f)=0 \ \ \ (p^i=\frac{\partial L}{\partial \dot{q_i}})\]
 
-\section{Hamilton Mechanics}
-\subsection{Hamilton equation}
-\begin{equation}
-H(q,p,t)=\sum_i p_i \dot{q_i}-L
-\end{equation}
-\begin{equation}
-\dot{p_i}=-\frac{\partial H}{\partial q_i} \ \ \ \ \ \ \dot{q_i}=\frac{\partial H}{\partial p_i}
-\end{equation}
+\subsection{Homogeneity of time}
+If $\frac{\partial L}{\partial t}=0$,then we get
+\[\frac{dH}{dt}=0 \ \ \ (H=\sum_i \dot{q_i}p^i-L)\]
+
+\section{Hamilton formulation}
+\[p^i = \frac{\partial L}{\partial \dot{q_i}}\]
+\[H(q,p,t)=\sum_i p^i \dot{q_i}-L\]
+\[\dot{p^i}=-\frac{\partial H}{\partial q_i} \ \ \ \ \ \ \dot{q_i}=\frac{\partial H}{\partial p^i}\]
  
 \subsection{Poisson Brackets}
-Operation properties:
-\[ \left\{f,g\right\}=-\left\{g,f\right\} \]
-\[\left\{\alpha_1 f_1+\alpha_2 f_2,\beta_1 g_1+\beta_2 g_2\right\}=\alpha_1 \beta_1\left\{f_1,g_1\right\}
-+\alpha_1 \beta_2\left\{f_1,g_2\right\}+\alpha_2 \beta_1\left\{f_2,g_1\right\}+\alpha_2 \beta_2\left\{f_2,g_2\right\}\]
-\[\left\{f_1 f_2,g_1 g_2\right\}=f_1\left\{f_2,g_1\right\}g_2+f_1 g_1\left\{f_2,g_2\right\}+g_1\left\{f_1,g_2\right\}f_2 +\left\{f_1,f_2\right\}g_2 f_2 \]
-\[\left\{f,\left\{g,h\right\}\right\}+\left\{g,\left\{h,f\right\}\right\}+\left\{h,\left\{f,g\right\}\right\}=0\]
-Here, $f,g,h$ are functions of $p_i,q_i,t$.
-If we assume that
-\[ \left \{q_i,q_k\right \}=0,\left \{p_i,p_k\right \}=0,\left \{q_i,p_k\right \}=\delta_{ik}\]
+First, we assume the bracket operation has the following properties:
+\[ \left[f,g\right]=-\left[g,f\right] \]
+\[\left[\alpha_1 f_1+\alpha_2 f_2,\beta_1 g_1+\beta_2 g_2\right]=\alpha_1 \beta_1\left[f_1,g_1\right]
++\alpha_1 \beta_2\left[f_1,g_2\right]+\alpha_2 \beta_1\left[f_2,g_1\right]+\alpha_2 \beta_2\left[f_2,g_2\right]\]
+\[\left[f_1 f_2,g_1 g_2\right]=f_1\left[f_2,g_1\right]g_2+f_1 g_1\left[f_2,g_2\right]+g_1\left[f_1,g_2\right]f_2 +\left[f_1,f_2\right]g_2 f_2 \]
+\[\left[f,\left[g,h\right]\right]+\left[g,\left[h,f\right]\right]+\left[h,\left[f,g\right]\right]=0\]
+Here, $f,g,h$ are functions of $p^i,q_i,t$.
+Then, if we assume that
+\[\left [q_i,p^k\right ]=\delta^{k}_{i}\]
 we can deduce that 
-\[ \left\{f,g\right\}=\sum_k(\frac{\partial f}{\partial q_k} \frac{\partial g}{\partial p_k} - \frac{\partial f}{\partial p_k} \frac{\partial g}{\partial q_k}  )\]
+\[ \left[f,g\right]=\sum_k(\frac{\partial f}{\partial q_k} \frac{\partial g}{\partial p^k} - \frac{\partial f}{\partial p^k} \frac{\partial g}{\partial q_k}  )\]
 The Hamilton equation can be written as
 \begin{equation}
-\dot{p_i}=\left\{ p_i,H \right\} \ \ \ \ \dot{q_i}=\left\{ q_i,H \right\}
+\dot{p^i}=\left[ p^i,H \right] \ \ \ \ \dot{q_i}=\left[ q_i,H \right]
 \end{equation}
+And we can also derive that $\frac{df}{dt} = [f,H]$.
+
+\section{Symmetry and Conservation Laws(2)}
+Suppose $g$ is a function of $p$ and $q$. If the transformation of $q$ and $p$ can be described as
+\[q \rightarrow q + \epsilon [q,g]\]
+\[p \rightarrow p + \epsilon [p,g]\]
+We can prove that 
+\[H \rightarrow H + \epsilon[H,g]\]
+So if $H$ is invariant under the transformation, then $[H,g] = 0$, that means $\frac{dg}{dt} = 0$, i.e. $g$ is a conserved quantity of the motion.
+
+\section{Hamilton-Jacobi equation}
+We define
+\[S(q,t)=\left(\int_{q_0,t_0}^{q,t} L dt\right)|_{extremum}\]
+We can prove that
+\[p = \frac{\partial S}{\partial q}, \ \ \ \ H = -\frac{\partial S}{\partial t}\]
+So, we have
+\[-\frac{\partial S}{\partial t} = H (q,\frac{\partial S}{\partial q})\]
+This is called Hamiltonian-Jacobi equation.
+
+\section{Symmetry and Conservation Laws(3)}
+If $S$ is invariant under transformation
+$q_i \rightarrow q_i + \delta q_i$, then 
+\[\delta S = (\sum_i p^i \delta q_i) |_{q_0,t_0}^{q,t} = 0\]
+So, we have
+\[\frac{d}{dt} (p^i \delta q_i) = 0\]
+Further more, if
+\[\delta S = (\sum_i p^i \delta q_i) |_{q_0,t_0}^{q,t} =  f(q_i,\dot{q}_i,t)|_{q_0,t_0}^{q,t}\]
+we will have conserved quantity
+\[\frac{d}{dt} (p^i \delta q_i -f) = 0\]
 \end{document}
