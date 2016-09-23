@@ -21,54 +21,84 @@
 
 \begin{document}
 \maketitle
-\section{Canonical quantization for particles}
-\subsection{Classical Field Theory}
-Field:
-\[\phi_{a}(\vec{x},t)\]
-Lagrangian density:
-\[\mathcal{L}(\phi_a,\dot{\phi_a},\nabla\phi_a)\]
-Action:
-\[ S=\int d^4x\mathcal{L} \]
-Hamilton principle:
-\begin{equation}
-\delta S=0
-\end{equation}
-Euler-Lagrange equation:
-\begin{equation}
-\partial_{\mu}( \frac{\partial \mathcal{L}}{\partial(\partial_{\mu}\phi_{a})})-\frac{\partial \mathcal{L}}{\partial \phi_a}=0
-\end{equation}
+\section{From classical field to quantum field}
+\subsection{Heisenberg picture of fields}
+The state of the field is described by an element $|\psi\rangle$ in Hilbert space. The measurement of the field is described by an operator field $\phi_a(\vec{x},t)$. In Heisenberg picture, the dynamic of the field satisfy the equation
+\[\frac{d\phi_a(x)}{dt} = -i[\phi_a(x),H]\]
+So, the mean value of the measurement of the field is described by Erenfest theorem
+\[\frac{d\langle \psi| \phi_a | \psi \rangle}{dt} = -i \langle \psi | [\phi_a,H] | \psi>\]
+If $[\phi_a,H]_Q = i[\phi_a,H]_C$, we can reproduce the classical field equation. We also note that the bracket operation here $[A,B] = AB - BA$ has the same properties as the poission bracket in classical mechanics. So, what we need here is the canonical quantization
+\[[\phi_a(\vec{x},t),\phi_b(\vec{y},t)] = 0 \quad [\pi^a(\vec{x},t),\pi^b(\vec{y},t)] = 0 \quad [\phi_a(\vec{x},t),\pi^b(\vec{y},t)] = i \delta_a^b \delta(\vec{x}-\vec{y}) \]
+and the definition of $\mathcal{L}$,$\pi^a$ and $H$ is the same as those in corresponding classical theory. Then we can recover the classical field theory.
 
-\subsubsection{Locality}
-There are many terms in the Lagrangian coupling $\phi(\vec{x},t)$ directly to $\phi(\vec{y},t)$ with$\vec{x} \neq \vec{y}$.The closet we got for $\vec{x}$ label is coupling between $\phi(\vec{x})$ and $\phi(\vec{x}+\delta \vec{x})$ through the gradient term $(\nabla \phi)^2$.
+\subsection{Lorentz invariance in quantum field theory}
+\[| \bar{\psi}\rangle = U(\Lambda)| \psi\rangle\]
+Scalar fields:
+\[\langle \bar{\psi} | \phi(x) | \bar{\psi}\rangle = \langle \psi | \phi(\Lambda^{-1}x) | \psi\rangle\]
+\[U^{-1}(\Lambda) \phi(x) U(\Lambda) = \phi(\Lambda^{-1}x)\]
+Vector fields:
+\[\langle \bar{\psi} | A^{\mu}(x) | \bar{\psi}\rangle = \langle \psi | \Lambda^{\mu}_{\phantom{\mu}\nu} A^{\nu}(\Lambda^{-1}x) | \psi\rangle\]
+\[U^{-1}(\Lambda) A^{\mu}(x) U(\Lambda) = \Lambda^{\mu}_{\phantom{\mu}\nu} A^{\nu}(\Lambda^{-1}x)\]
+\paragraph{Lorentz invariance} Lagrangian is a scalar, or more loosely, action is invariant under Lorentz transformation.
 
-\subsubsection{Lorentz Invariance}
-Lorentz transformation of fields:
-\begin{equation}
-\phi_{a} '(x)=S_{ab}(\Lambda)\phi(\Lambda^{-1}x)
-\end{equation}
-Examples:
-\begin{equation}
-\partial_{\mu}\phi'(x)=(\Lambda^{-1})^{\nu}_{\ \mu}(\partial_{\nu}\phi)(\Lambda^{-1}x)
-\end{equation}
-Lagrangian density is a scalar, or more loosely, action is invariant under Lorentz transformation.
+\subsection{Momentum}
+The definition of momentum is the same as that in classical theory.
+\[T^{\mu \nu} \equiv -\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}\phi_a)} \partial^{\nu} \phi_a + \eta^{\mu \nu} \mathcal{L} \quad \partial_{\mu} T^{\mu \nu} = 0\]
+and
+\[P^{\mu} = \int T^{0 \mu} d^3 x \quad \frac{d P^{\mu}}{dt} = 0\]
+\[P^{0} = H, \quad P^{i} = \int -\pi^a \partial^i \phi_a d^3 x\]
+And we can get the commutation relationship that
+\begin{eqnarray}
+\left[\phi_a,P^{\mu}\right] &=& -i\partial^{\mu} \phi_a \nonumber \\
+\left[\pi^a,P^{\mu}\right] &=& -i\partial^{\mu} \pi^a \nonumber \\
+\left[P^{\mu},P^{\nu}\right] &=& 0 \nonumber 
+\end{eqnarray}
+We denote the translation operator as $T(s)$, so
+\[T^{-1}(s) \phi_a(x) T(s) = \phi_a(x-s)\]
+we can deduce that
+\[T(\epsilon) = 1 - i\epsilon_{\mu} P^{\mu} \quad T(s) = e^{-iP^{\mu}s_{\mu}}\]
 
-\subsubsection{Symmetries}
-\paragraph{Nother's Theorem} Every continuous symmetry of the Lagrangian gives rise to a conserved current $j^{\mu}(x)$ such that the equation of motion imply $\partial_{\mu}j^{\mu}=0$.For $\phi_{a} \to \phi_{a}+\delta \phi_{a},\mathcal{L} \to \mathcal{L}+\delta \mathcal{L}$,if $\delta \mathcal{L}=\partial_{\mu}K^{\mu}$,then
-\begin{equation}
-j^{\mu}=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_{a})}\delta\phi_{a}-K^{\mu}
-\end{equation}
-\paragraph{infinitesimal translation}
-$A^{\mu} \to A^{\mu}+\epsilon^{\mu}$
-\begin{equation}
-j^{\mu}=\epsilon_{\nu}T^{\mu \nu}
-\end{equation}
-\begin{equation}
-T^{\mu \nu}=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_{a})}\partial^{\nu}\phi_{a}-g^{\mu\nu}\mathcal{L}
-\end{equation}
-\begin{equation}
-\partial_{\mu} T^{\mu\nu}=0
-\end{equation}
-\begin{equation}
-P^{\mu}=\int d^3x T^{0\mu}
-\end{equation}
+
+\subsection{Angular Momentum}
+The definition of Angular momentum is the same as that in classical theory.
+\[M^{\mu \nu \rho} \equiv x^{\nu}T^{\mu \rho} - x^{\rho} T^{\mu \nu} - \frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi_a)}(\Sigma^{\nu \rho})_{a}^{\phantom{a}b}\phi_b\]
+and 
+\[M^{\nu \rho} = \int M^{0 \nu \rho} d^3 x \quad \frac{dM^{\nu \rho}}{dt} = 0\]
+\[M^{\mu \nu} = \int (x^{\mu}T^{0\nu}-x^{\nu}T^{0\mu}-\pi^a(\Sigma^{\mu \nu})_{a}^{\phantom{a}b}\phi_b) d^3 x\]
+We denote that
+\[M_{L}^{\mu \nu} = \int (x^{\mu}T^{0\nu}-x^{\nu}T^{0\mu}) d^3 x \quad M_S^{\mu \nu} = \int (-\pi^a(\Sigma^{\mu \nu})_{a}^{\phantom{a}b}\phi_b) d^3 x\]
+\[(L^{\mu \nu})_a^{\phantom{a}b} = -i(x^{\mu}\partial^{\nu}-x^{\nu}\partial^{\mu})\delta_a^{\phantom{a}b} \quad (S^{\mu \nu})_a^{\phantom{a}b} = -i(\Sigma^{\mu \nu})_a^{\phantom{a}b}\]
+And we have the commutation relationship that
+\[M^{\mu \nu} = M_L^{\mu \nu} + M_S^{\mu \nu}\]
+\[[\phi_a,M_L^{\mu \nu}] = (L^{\mu \nu})_a^{\phantom{a}b} \phi_b \quad [\phi_a,M_S^{\mu \nu}] = (S^{\mu \nu})_a^{\phantom{a}b} \phi_b\]
+\[[\pi^a,M_L^{\mu \nu}] = (L^{\mu \nu})_b^{\phantom{b}a}\pi^{b}  \quad [\pi^a,M_S^{\mu \nu}] = - (S^{\mu \nu})_b^{\phantom{b}a} \pi^b \]
+\[[M^{\mu \nu},M^{\rho \sigma}] = i(-g^{\nu \rho}M^{\mu \sigma} + g^{\sigma \mu}M^{\rho \nu} + g^{\mu \rho}M^{\nu \sigma} - g^{\sigma \nu}M^{\rho \mu})\]
+We again define $J_i \equiv \frac{1}{2} \epsilon_{ijk} M^{jk}$ and $K_i \equiv M^{i0}$, the communication relationship can be written as
+\begin{eqnarray}
+\left[J_i,J_j\right] &=& i\epsilon_{ijk}J_k \nonumber \\
+\left[J_i,K_j\right] &=& i\epsilon_{ijk}K_k \nonumber \\
+\left[K_i,K_j\right] &=& -i\epsilon_{ijk}J_k \nonumber
+\end{eqnarray}
+Further more, 
+\[[P^{\mu},M^{\rho \sigma}] = i(g^{\mu \sigma}P^{\mu} - g^{\mu \rho}P^{\sigma})\]
+\begin{eqnarray}
+\left[J_i,H\right] &=& 0 \nonumber \\
+\left[J_i,P_j\right] &=& i\epsilon_{ijk}P_k \nonumber \\
+\left[K_i,H\right] &=& iP_i \nonumber \\
+\left[K_i,P_j\right] &=& i\delta_{ij}H \nonumber
+\end{eqnarray}
+At last, we define $L_i \equiv \frac{1}{2} \epsilon_{ijk} M_L^{jk}$ and $S_i \equiv \frac{1}{2} \epsilon_{ijk} M_S^{jk}$. So
+\begin{eqnarray}
+\left[L_i,S_j\right] &=& 0 \nonumber \\
+\left[S_i,P_j\right] &=& 0 \nonumber \\
+\left[L_i,P_j\right] &=& i\epsilon_{ijk}P_k \nonumber
+\end{eqnarray}
+We denote the rotation operator as $U(\Lambda)$, so
+\[U^{-1}(\Lambda) \phi_a(x) U(\Lambda) = S_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
+and 
+\[S_{a}^{\phantom{a}b} = \delta_{a}^{\phantom{a}b}+\frac{i}{2} \delta \omega_{\alpha \beta} (S^{\alpha \beta})_{a}^{\phantom{a}b} \]
+we can deduce that
+\[U(1+\delta \omega) = 1 + \frac{i}{2} \delta \omega_{\mu \nu} M^{\mu \nu} \quad U(\Lambda) = e^{\frac{i}{2} \theta_{\mu \nu} M^{\mu \nu}}\]
+\[U^{-1}(\Lambda) P^{\mu} U(\Lambda) = \Lambda^{\mu}_{\phantom{\mu}\nu} P^{\nu}\]
+\[U^{-1}(\Lambda) M^{\mu \nu} U(\Lambda) = \Lambda^{\mu}_{\phantom{\mu}\rho} \Lambda^{\nu}_{\phantom{\nu}\sigma}M^{\rho \sigma}\]
 \end{document}

@@ -49,7 +49,7 @@ where,
 \right]\]
 and
 \[(\Lambda^{-1})^{\rho}_{\phantom{\rho}\nu} = \Lambda_{\nu}^{\phantom{\mu}\rho}\]
-In a special case when we boost along $\hat{1}$ direction, we have
+In a special case when the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
 \[\bar{x}^{0} = \gamma x^0 - \gamma \beta x^1\]
 \[\bar{x}^{1} = -\gamma \beta x^0 + \gamma x^1\]
 Some physical quantity will behave like a tensor (vector,scalar) when transforming form one inertial frame to another. For example,
@@ -135,6 +135,15 @@ If we define $P^{\mu} = \int T^{0 \mu} d^3 x$,then we have
 \[\frac{d P^{\mu}}{dt} = 0\]
 
 \paragraph{Lorentz Transformation} $\bar{x}^{\mu} = x^{\mu} + \delta \omega^{\mu}_{\phantom{\mu}\nu} x^{\nu}$.\\
+The infinitesimal Lorentz transformation can be written as $I+\delta \omega^{\mu}_{\phantom{\mu}\nu}$
+\[\delta \omega^{\mu}_{\phantom{\mu}\nu} = \left[ 
+\begin{matrix} 
+0       & \beta_1   & \beta_2   & \beta_3   \\ 
+\beta_1 & 0         & -\theta_3 & \theta_2  \\
+\beta_2 & \theta_3  & 0         & -\theta_1 \\
+\beta_3 & -\theta_2 & \theta_1  & 0
+\end{matrix} 
+\right]\]
 This time, we assume that
 \[\bar{\phi}_a(x) = S_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
 In the limit of infinitesimal Lorentz transformation, we have
@@ -201,7 +210,16 @@ If we demand that
 We can get get the communication relationship of the $M^{\mu \nu}$,
 \[[M^{\mu \nu},M^{\rho \sigma}] = -g^{\nu \rho}M^{\mu \sigma} + g^{\sigma \mu}M^{\rho \nu} + g^{\mu \rho}M^{\nu \sigma} - g^{\sigma \nu}M^{\rho \mu}\]
 up to the possibility of a term on the right-hand side that commutes with $\phi(x)$ and its derivatives.\\
-We now define $J_i \equiv \frac{1}{2} \epsilon_{ijk} M^{jk}$ and $K_i \equiv M^{i0}$, the communication relationship can be written as
+We now define $J_i \equiv \frac{1}{2} \epsilon_{ijk} M^{jk}$ and $K_i \equiv M^{i0}$,so
+\[M^{\mu \nu} = \left[ 
+\begin{matrix} 
+0   & -K_1 & -K_2 & -K_3 \\ 
+K_1 & 0    & J_3  & -J_2 \\
+K_2 & -J_3 & 0    &  J_1 \\
+K_3 & J_2  & -J_1 &  0
+\end{matrix} 
+\right]\] 
+the communication relationship can be written as
 \begin{eqnarray}
 \left[J_i,J_j\right] &=& \epsilon_{ijk}J_k \nonumber \\
 \left[J_i,K_j\right] &=& \epsilon_{ijk}K_k \nonumber \\
