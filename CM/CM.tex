@@ -24,27 +24,50 @@
 \section{Lagrangian Formulation}
 \[S=\int_{t_1}^{t_2}L(q_i,\dot{q_i},t)dt, \ \ \ \ \delta q_i(t_1) = \delta q_i(t_2) = 0\]
 \[\delta S=0 \rightarrow \frac{d}{dt}(\frac{\partial L}{\partial \dot{q_i}}) - \frac{\partial L}{\partial q_i}=0\]
-\subsection{Example}
-The form of Lagrangian for a system of particles in inertial frame:
-\[L=\sum_a \frac{1}{2}m_a v_a^2 -U(\vec{r_1},\vec{r_2},\cdots,)\]
+\paragraph{Note}
+(1) If we transform the coordinates $q$ to the $Q$ as $q = q(Q,t)$, the new Lagrangian will be
+\[\bar{L}(Q,\dot{Q},t) \equiv L(q(Q,t),\dot{q}(Q,\dot{Q},t),t)\]
+We can verify that
+\[\frac{d}{dt}\frac{\partial \bar{L}}{\partial \dot{Q}} - \frac{\partial \bar{L}}{\partial Q} = 0\]
+(2) If $L_1 = L + \frac{d}{dt} f(q,t)$, then $L$ and $L_1$ is equivalent and will generate the same dynamical equation.\\
+\paragraph{Example 1} The form of Lagrangian for an isolated system of particles in inertial frame:
+\[L=\sum_a \frac{1}{2}m_a v_a^2 -U(\vec{r}_1,\vec{r}_2,\cdots,)\]
+The equation of motion is
+\[m_i \ddot{\vec{r}}_i = -\nabla_{\vec{r}_i} U\]
 To get the form of Lagrangian for a system of interacting particles, we must assume:\\
 (1) Space and time are homogeneous and isotropic in inertial frame;\\
 (2) Galileo's relativity principle and Galilean transformation;\\
 (3) Spontaneous interaction between particles;\\
+\paragraph{Example 2} Consider a reference frame $K$. Suppose the $K$ is moving with the velocity $\mathbf{V}(t)$ and  rotating with angular velocity $\mathbf{\Omega}$  relative to the inertial reference frame. We use the coordinates of the mass point in $K$ as general coordinates, i.e. $\mathbf{r} = (x_k,y_k,z_k)$. Then the Lagrangian of the mass point will be
+\[L = \frac{1}{2}m\mathbf{v}^2 + m\mathbf{v}\cdot(\mathbf{\Omega}\times\mathbf{r})+\frac{m}{2}(\mathbf{\Omega}\times\mathbf{r})^2 - m\dot{\mathbf{V}}\cdot\mathbf{r}-U\]
+The equation of motion will be
+\[m\frac{d\mathbf{v}}{dt} = -\frac{\partial U}{\partial \mathbf{r}} - m\dot{\mathbf{V}} + m(\mathbf{r} \times \dot{\mathbf{\Omega}}) + 2m(\mathbf{v} \times \mathbf{\Omega}) + m[\mathbf{\Omega}\times(\mathbf{r} \times \mathbf{\Omega})]\]
 
 \section{Symmetry and Conservation Laws(1)}
 \subsection{Nother's theorem}
 For $q_i \to q_i+\delta q_i$ and $L \to L+\delta L$, if $\delta L= \frac{d f(q,\dot{q},t)}{dt}$,then we get
-\[\frac{d}{dt}(p^i \delta q_i-f)=0 \ \ \ (p^i=\frac{\partial L}{\partial \dot{q_i}})\]
+\[\frac{d}{dt}(\sum_i p^i \delta q_i-f)=0 \ \ \ (p^i=\frac{\partial L}{\partial \dot{q_i}})\]
+\paragraph{Example} For an isolated system of particles in inertial frame,\\ 
+$\delta L = 0$ when $\delta \vec{r}_i \rightarrow \vec{r}_i + \delta \vec{a}$, so
+\[\frac{d}{dt} (\sum_i \vec{p}_i) = 0\]
+$\delta L = 0$ when $\delta \vec{r}_i \rightarrow \vec{r}_i + \vec{r}_i \times \delta \vec{\theta}$, so
+\[\frac{d}{dt} (\sum_i \vec{r}_i \times \vec{p}_i) = 0\]
 
 \subsection{Homogeneity of time}
 If $\frac{\partial L}{\partial t}=0$,then we get
-\[\frac{dH}{dt}=0 \ \ \ (H=\sum_i \dot{q_i}p^i-L)\]
+\[\frac{dE}{dt}=0 \ \ \ (E=\sum_i \dot{q_i}p^i-L)\]
+\paragraph{Example} For an isolated system of particles in inertial frame,$\frac{\partial L}{\partial t} = 0$,so
+\[\frac{dE}{dt} = 0 \quad E = \sum_i \frac{1}{2} m_i v_i^2 + U(\vec{r}_1,\vec{r}_2,\cdots)\]
+
 
 \section{Hamilton formulation}
 \[p^i = \frac{\partial L}{\partial \dot{q_i}}\]
 \[H(q,p,t)=\sum_i p^i \dot{q_i}-L\]
-\[\dot{p^i}=-\frac{\partial H}{\partial q_i} \ \ \ \ \ \ \dot{q_i}=\frac{\partial H}{\partial p^i}\]
+\[\dot{p^i}=-\frac{\partial H}{\partial q_i} \quad \dot{q_i}=\frac{\partial H}{\partial p^i}\]
+\paragraph{Example} For an isolated system of particles in inertial frame, 
+\[\vec{p}_i = m_i \vec{v}_i\]
+\[H(q,p,t)=\sum_i \frac{p_i^2}{2m} + U(\vec{r}_1,\vec{r}_2,\cdots)\]
+\[\dot{\vec{p}}_i =-\nabla_{\vec{r}_i} U \quad \dot{r}_i = \frac{\vec{p}_i}{m_i}\]
  
 \subsection{Poisson Brackets}
 First, we assume the bracket operation has the following properties:
@@ -54,15 +77,57 @@ First, we assume the bracket operation has the following properties:
 \[\left[f_1 f_2,g_1 g_2\right]=f_1\left[f_2,g_1\right]g_2+f_1 g_1\left[f_2,g_2\right]+g_1\left[f_1,g_2\right]f_2 +\left[f_1,f_2\right]g_2 f_2 \]
 \[\left[f,\left[g,h\right]\right]+\left[g,\left[h,f\right]\right]+\left[h,\left[f,g\right]\right]=0\]
 Here, $f,g,h$ are functions of $p^i,q_i,t$.
-Then, if we assume that
+Then, we assume that
 \[\left [q_i,p^k\right ]=\delta^{k}_{i}\]
-we can deduce that 
+we can derive that 
 \[ \left[f,g\right]=\sum_k(\frac{\partial f}{\partial q_k} \frac{\partial g}{\partial p^k} - \frac{\partial f}{\partial p^k} \frac{\partial g}{\partial q_k}  )\]
-The Hamilton equation can be written as
-\begin{equation}
-\dot{p^i}=\left[ p^i,H \right] \ \ \ \ \dot{q_i}=\left[ q_i,H \right]
-\end{equation}
-And we can also derive that $\frac{df}{dt} = [f,H]$.
+So the Hamilton equation can be written as
+\[\dot{p^i}=\left[ p^i,H \right] \ \ \ \ \dot{q_i}=\left[ q_i,H \right]\]
+And we can also get
+\[\frac{df}{dt} = [f,H] + \frac{\partial f}{\partial t} \quad \frac{d}{dt} [f,g] = [\frac{df}{dt},g] + [f,\frac{dg}{dt}]\]
+\paragraph{Example}  For an isolated system of particles in inertial frame, 
+\[[r_{ia},p_{jb}] = \delta_{ab} \delta_{ij}\]
+we define $l_a = \epsilon_{abc} r_{a} p_{b}$, then
+\[[l_a,r_b] = \epsilon_{abc}r_c \quad [l_a,p_b] = \epsilon_{abc}p_c \quad [l_a,l_b] = \epsilon_{abc}l_c\]
+
+\subsection{Canonical transformations}
+\paragraph{Definition} 
+\[Q_i = Q_i(p,q,t) \quad P_i=P_i(p,q,t)\]
+\[\dot{Q}_i = \frac{\partial H'}{\partial P_i} \quad \dot{P}_i = -\frac{\partial H'}{\partial Q_i}\]
+\paragraph{Canonical condition}
+\[\sum_i p^i\dot{q}_i-H(p^i,q_i) = \sum_i P^i\dot{Q_i} - H'(Q_i,P^i) + \frac{dF}{dt}\]
+If $F=F(q_i,Q_i,t)$,then we have
+\[p^i = \frac{\partial F}{\partial q_i} \quad P^i = -\frac{\partial F}{\partial Q_i} \quad H' = H + \frac{\partial F}{\partial t}\]
+\paragraph{Legendre's transformation(1)}
+\[\frac{d}{dt}(F+\sum_i P^i Q_i) = \sum_i p^i \dot{q}_i + \sum_i Q_i \dot{P}^i + (H-H')\]
+Assume $\Phi(q_i,P^i,t) = F + \sum_i P^i Q_i$, so
+\[p^i = \frac{\partial \Phi}{\partial q_i} \quad Q_i = \frac{\partial \Phi}{\partial P^i} \quad H' = H + \frac{\partial \Phi}{\partial t}\]
+\paragraph{Legendre's transformation(2)}
+\[\frac{d}{dt}(F-\sum_i p^i q_i) = -\sum_i q_i \dot{p}^i - \sum_i P^i \dot{Q}_i + (H-H')\]
+Assume $\Phi(p^i,Q_i,t) = F - \sum_i p^i q_i$, so
+\[q_i = -\frac{\partial \Phi}{\partial p^i} \quad P^i = -\frac{\partial \Phi}{\partial Q_i} \quad H' = H + \frac{\partial \Phi}{\partial t}\]
+\paragraph{Legendre's transformation(3)}
+\[\frac{d}{dt}(F+\sum_i P^i Q_i-\sum_i p^i q_i) = -\sum_i q_i \dot{p}^i + \sum_i Q_i \dot{P}^i + (H-H')\]
+Assume $\Phi(p^i,P^i,t) = F+\sum_i P^i Q_i-\sum_i p^i q_i$, so
+\[q_i = -\frac{\partial \Phi}{\partial p^i} \quad Q_i = \frac{\partial \Phi}{\partial P^i} \quad H' = H + \frac{\partial \Phi}{\partial t}\]
+\paragraph{The invariance of Poisson Bracket}
+\[\{f,g\}_{q,p} = \{f,g\}_{Q,P}\]
+As a result, the condition for canonical transformation can also be stated as
+\[[Q_i,Q_j]_{q,p} = 0 \quad [P^i,P^j]_{p,q} = 0 \quad [Q_i,P^j]_{q,p} = \delta_i^j\]
+\paragraph{Evolution as canonical transformations}
+Let $q_t$,$p_t$ be the values of the canonical variables at time $t$, and $q_{t+\tau}$,$p_{t+\tau}$ their values at another time $t+\tau$. The latter are some functions of the former:
+\[q_{t+\tau} = q(q_t,p_t,t,\tau) \quad p_{t+\tau} = p(q_t,p_t,t,\tau)\]
+If these formulae are regarded as a transformation from the variables $q_t$,$p_t$ to $q_{t+\tau}$, $p_{t+\tau}$, then this transformation is canonical. This is evident from the
+expression
+\[dS = p_t dq_t + p_{t+\tau} dq_{t+\tau} -(H_{t+\tau}-H_t)dt\]
+for the differential of the action $S(q_t,q_{t+\tau},t,\tau)$, taken along the true path, passing through the points $q$, and $q_{t+\tau}$ at times $t$ and $t+\tau$ for a given $\tau$. $-S$ is the generating function of the transformation. So we have the following communication relation
+\[[q_{i\,t+\tau},q_{j\,t+\tau}]_{q_t,p_t} = 0 \quad [p^i_{t+\tau},p^j_{t+\tau}]_{q_t,p_t} = 0 \quad [q_{i\,t+\tau},p^j_{t+\tau}]_{q_t,p_t} = \delta_i^j\]
+
+\subsection{Liouville's theorem}
+Let $D$ be the Jacobian of the canonical transformation 
+\[\frac{\partial(Q_1,\cdots,Q_s,P^1,\cdots,P^s)}{\partial(q_1,\cdots,q_s,p^1,\cdots,p^s)}\]
+We can show that $D=1$. So, the phase volume is invariant under canonical transformation. \\
+The change in $p$ and $q$ during the motion may be regarded as a canonical transformation. Suppose that each point in the region of phase space moves in the course of time in accordance with the equations of motion of the mechanical system. The region as a whole therefore moves also, but its volume remains unchanged.
 
 \section{Symmetry and Conservation Laws(2)}
 Suppose $g$ is a function of $p$ and $q$. If the transformation of $q$ and $p$ can be described as
@@ -79,8 +144,16 @@ We can prove that
 \[p = \frac{\partial S}{\partial q}, \ \ \ \ H = -\frac{\partial S}{\partial t}\]
 So, we have
 \[-\frac{\partial S}{\partial t} = H (q,\frac{\partial S}{\partial q})\]
-This is called Hamiltonian-Jacobi equation.
-
+This is called Hamiltonian-Jacobi equation.\\ \\
+Suppose the complete integral of the Hamilton-Jacobi equation is
+\[S=f(t,q_1,\cdots,q_s;\alpha^1,\cdots,\alpha^s)+A\]
+where $\alpha^1,\cdots,\alpha^s$ and $A$ are arbitrary constants. We effect a canonical transformation from the
+variables $q$, $p$ to new variables, taking the function $f(t,q,\alpha)$ as the generating function, and the quantities $\alpha^1,\cdots,\alpha^s$ as the new momenta.
+Let the new co-ordinates be $\beta_1,\cdots,\beta_2$.
+\[p^i = \frac{\partial f}{\partial q_i} \quad \beta_s = \frac{\partial f}{\partial \alpha_s} \quad H' = H + \frac{\partial f}{\partial t} =0\]
+So,
+\[\alpha^s = \mbox{ constant }, \beta_s = \mbox{ constant }\]
+By means of the $s$ equations $\beta_s = \frac{\partial f}{\partial \alpha^s}$, the $s$ coordinates $q$ can be expressed in terms of the time and the $2s$ constants. This gives the general integral of the equations of motion.
 \section{Symmetry and Conservation Laws(3)}
 If $S$ is invariant under transformation
 $q_i \rightarrow q_i + \delta q_i$, then 

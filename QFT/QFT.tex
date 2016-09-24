@@ -26,7 +26,7 @@
 The state of the field is described by an element $|\psi\rangle$ in Hilbert space. The measurement of the field is described by an operator field $\phi_a(\vec{x},t)$. In Heisenberg picture, the dynamic of the field satisfy the equation
 \[\frac{d\phi_a(x)}{dt} = -i[\phi_a(x),H]\]
 So, the mean value of the measurement of the field is described by Erenfest theorem
-\[\frac{d\langle \psi| \phi_a | \psi \rangle}{dt} = -i \langle \psi | [\phi_a,H] | \psi>\]
+\[\frac{d\langle \psi| \phi_a | \psi \rangle}{dt} = -i \langle \psi | [\phi_a,H] | \psi \rangle\]
 If $[\phi_a,H]_Q = i[\phi_a,H]_C$, we can reproduce the classical field equation. We also note that the bracket operation here $[A,B] = AB - BA$ has the same properties as the poission bracket in classical mechanics. So, what we need here is the canonical quantization
 \[[\phi_a(\vec{x},t),\phi_b(\vec{y},t)] = 0 \quad [\pi^a(\vec{x},t),\pi^b(\vec{y},t)] = 0 \quad [\phi_a(\vec{x},t),\pi^b(\vec{y},t)] = i \delta_a^b \delta(\vec{x}-\vec{y}) \]
 and the definition of $\mathcal{L}$,$\pi^a$ and $H$ is the same as those in corresponding classical theory. Then we can recover the classical field theory.
@@ -101,4 +101,48 @@ we can deduce that
 \[U(1+\delta \omega) = 1 + \frac{i}{2} \delta \omega_{\mu \nu} M^{\mu \nu} \quad U(\Lambda) = e^{\frac{i}{2} \theta_{\mu \nu} M^{\mu \nu}}\]
 \[U^{-1}(\Lambda) P^{\mu} U(\Lambda) = \Lambda^{\mu}_{\phantom{\mu}\nu} P^{\nu}\]
 \[U^{-1}(\Lambda) M^{\mu \nu} U(\Lambda) = \Lambda^{\mu}_{\phantom{\mu}\rho} \Lambda^{\nu}_{\phantom{\nu}\sigma}M^{\rho \sigma}\]
+
+\section{Spin 0 Fields}
+\subsection{Canonical quantization of Klein-Gordon fields}
+\paragraph{Lagrangian}
+\[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi \partial_{\mu} \phi -\frac{1}{2}m^2 \phi^2 + \Omega_0\]
+\paragraph{Field equation}
+\[(\partial^{\mu} \partial_{\mu} - m^2) \phi = 0\]
+\paragraph{Hamiltonian}
+\[\pi = \dot{\phi}\]
+\[\mathcal{H} = \frac{1}{2} \pi^2 + \frac{1}{2} (\nabla \phi)^2 + \frac{1}{2} m^2 \phi^2-\Omega_0\]
+\[H = \int \mathcal{H} d^3 x\]
+\paragraph{Momentum and angular momentum}
+\[T^{\mu \nu} = \partial^{\mu} \phi \partial^{\nu} \phi - \eta^{\mu \nu}(\frac{1}{2}\partial^{\mu}\phi \partial_{\mu} \phi + \frac{1}{2}m^2 \phi^2 -\Omega_0)\]
+\[P^0 = H \quad P^i = \int -\pi \nabla^i \phi d^3 x\]
+\[J_k = \int - \pi \epsilon_{ijk} x^{j} \nabla^{k} \phi d^3 x\]
+\paragraph{Canonical quantization}
+\begin{eqnarray}
+\left[\phi(\vec{x},t),\phi(\vec{y},t)\right] &=& 0 \nonumber \\
+\left[\pi(\vec{x},t),\pi(\vec{y},t)\right] &=& 0 \nonumber \\
+\left[\phi(\vec{x},t),\pi(\vec{y},t)\right] &=& i \delta(\vec{x}-\vec{y}) \nonumber
+\end{eqnarray}
+\paragraph{Fourier expansion}
+\[\phi(\vec{x},t) = \int \widetilde{dk} \left[ a(\vec{k})e^{ikx} + a^{\dagger}(\vec{k})e^{-ikx} \right]\]
+\[\pi(\vec{x},t) = -i \int  \widetilde{dk} \omega \left[ a(\vec{k})e^{ikx} - a^{\dagger}(\vec{k})e^{-ikx} \right]\]
+Here, $k^2 = \mathbf{k}^2 - \omega^2 = -m^2$, $kx = \mathbf{k}\cdot \mathbf{x} - \omega t$, $\widetilde{dk} = \frac{d^3}{(2\pi)^2 2\omega}$
+\[a(\vec{k}) = \int d^3 x e^{-ikx}(i\pi+\omega \phi)\]
+\[a^{\dagger}(\vec{k}) = \int d^3 x e^{ikx}(-i\pi+\omega \phi)\]
+\begin{eqnarray}
+\left[a(\vec{p}),a(\vec{q})\right] &=& 0 \nonumber \\
+\left[a^{\dagger}(\vec{p}),a^{\dagger}(\vec{q})\right] &=& 0 \nonumber \\
+\left[a(\vec{p}),a^{\dagger}(\vec{q})\right] &=& (2\pi)^3 2\omega \delta(\vec{p}-\vec{q}) \nonumber
+\end{eqnarray}
+\paragraph{Operator represented by $a$ and $a^{\dagger}$}
+\[H=\int \widetilde{dk}\, \omega\, a^{\dagger}(\vec{k})a(\vec{k}) + (\mathcal{E}_0 - \Omega_0)V \quad \mathcal{E}_0 = \frac{1}{2}(2\pi)^{-3}\int d^3 k \,\omega\]
+\[P^{i}=\int \widetilde{dk}\, k^{i}\, a^{\dagger}(\vec{k})a(\vec{k}) \]
+\paragraph{particles}
+\[[H,a(\vec{k})] = -\omega a(\vec{k}) \quad [H,a^{\dagger}(\vec{k})] = \omega a^{\dagger}(\vec{k})\]
+\[[P^i,a(\vec{k})] = -k^i a(\vec{k}) \quad [P^i,a^{\dagger}(\vec{k})] = k^i a^{\dagger}(\vec{k})\]
+Let $|p\rangle = a^{\dagger}(\vec{p})|0\rangle $,so
+\[H |p\rangle = \omega_p|p\rangle \quad P^i |p\rangle = p^i|p\rangle\]
+So, we interpret the state $|\vec{p}\rangle$ as the momentum eigenstate of a single particle of mass $m$. We can also show that 
+$J_i|\vec{p} = 0\rangle = 0$, so the particle carries no internal angular momentum.
 \end{document}
+
+
