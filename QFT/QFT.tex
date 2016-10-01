@@ -104,7 +104,7 @@ we can deduce that
 \[U^{-1}(\Lambda) M^{\mu \nu} U(\Lambda) = \Lambda^{\mu}_{\phantom{\mu}\rho} \Lambda^{\nu}_{\phantom{\nu}\sigma}M^{\rho \sigma}\]
 
 \section{Spin 0 Fields}
-\subsection{Canonical quantization of Klein-Gordon fields}
+\subsection{Klein-Gordon fields}
 \paragraph{Lagrangian}
 \[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi \partial_{\mu} \phi -\frac{1}{2}m^2 \phi^2 + \Omega_0\]
 \paragraph{Field equation}
@@ -117,6 +117,8 @@ we can deduce that
 \[T^{\mu \nu} = \partial^{\mu} \phi \partial^{\nu} \phi - \eta^{\mu \nu}(\frac{1}{2}\partial^{\mu}\phi \partial_{\mu} \phi + \frac{1}{2}m^2 \phi^2 -\Omega_0)\]
 \[P^0 = H \quad P^i = \int -\pi \nabla^i \phi d^3 x\]
 \[J_k = \int - \pi \epsilon_{ijk} x^{j} \nabla^{k} \phi d^3 x\]
+
+\subsection{Canonical quantization Formulation}
 \paragraph{Canonical quantization}
 \begin{eqnarray}
 \left[\phi(\vec{x},t),\phi(\vec{y},t)\right] &=& 0 \nonumber \\
@@ -158,17 +160,19 @@ If $x-y$ is space-like, a continuous Lorentz transformation can take $(x-y)$ to 
 \end{figure}
 \[(\partial^2-m^2) D_R(x-y) = i \delta(x-y)\]
 \[D_F(x-y) \equiv \langle 0 | T\phi(x) \phi(y) | 0 \rangle = \int \frac{d^4 p}{(2\pi)^4} \frac{-i}{p^2+m^2-i\epsilon} e^{ip(x-y)}\]
+Here, $T$ stands for time ordering, placing all operators evaluated at later times to the left.
 \begin{figure}[!h]
 \centering
 \includegraphics[height=3cm ,width=14cm]{./pic/F_Green.png}
 \caption{Feynman Green Function}
 \end{figure}
 
-\subsection{Perturbation theory}
+\subsection{Perturbation theory for canonical quantization}
 \[\mathcal{L} = -\frac{1}{2}\partial_{\mu} \phi \partial^{\mu} \phi -\frac{1}{2}m_0^2 \phi^2 -\frac{\lambda_0}{4!}\phi^4\]
 \[H = H_0 + H_{int} \quad H_{int} = \int d^3 x \frac{\lambda_0^4}{4!} \phi^4 (\vec{x})\]
 
 \subsubsection{Perturbation expansion of correlation functions}
+\paragraph{Note} The ground state of the interaction field theory is denoted by $| \Omega \rangle$, the ground state of the free field theory is denoted by $| 0 \rangle$. The zero of energy is defined by $H_0 | 0 \rangle =0$ and $E_0 = \langle \Omega | H | \Omega \rangle$.\\
 \[\phi(t_0,\vec{x}) = \int \frac{d^3p}{(2\pi)^3}( a(\vec{p})e^{i\vec{p}\cdot\vec{x}} + a^{\dagger}(\vec{p})e^{-i\vec{p}\cdot\vec{x}})\]
 \[\phi(t,\vec{x}) = e^{iH(t-t_0)} \phi(t_0,\vec{x}) e^{-iH(t-t_0)}\]
 \[\phi_I(t,\vec{x}) \equiv e^{iH_0(t-t_0)} \phi(t_0,\vec{x}) e^{-iH_0(t-t_0)}\]
@@ -182,22 +186,22 @@ The proof can be found in chapter 4.2 of \emph{An introduction to quantum field 
 Normal order : all the $a$'s are to the right of all the $a^{\dagger}$.
 \paragraph{Example} 
 \begin{eqnarray}
-\langle 0 | T \left\{ \phi(x_1) \phi(x_2) \phi(x_3) \phi(x_4)\right\}| 0 \rangle &=& D_F(x_1-x_2)D_F(x_3-x_4) \nonumber \\
+\langle 0 | T \left\{ \phi_I(x_1) \phi_I(x_2) \phi_I(x_3) \phi_I(x_4)\right\}| 0 \rangle &=& D_F(x_1-x_2)D_F(x_3-x_4) \nonumber \\
 &=& D_F(x_1-x_3)D_F(x_2-x_4) \nonumber \\
 &=& D_F(x_1-x_4)D_F(x_2-x_3) \nonumber
 \end{eqnarray}
 
 \subsubsection{Feynman diagram}
-Expand $\langle 0 | T \left\{ \phi(x) \phi(y) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle$ to the first order of $\lambda_0$
+Expand $\langle 0 | T \left\{ \phi_I(x) \phi_I(y) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle$ to the first order of $\lambda_0$
 \begin{eqnarray}
-& &\langle 0 | T \left\{ \phi(x) \phi(y) \frac{-i\lambda_0}{4!} \int dz^4 \phi(z) \phi(z) \phi(z) \phi(z) \right\} | 0 \rangle \nonumber \\
+& &\langle 0 | T \left\{ \phi_I(x) \phi_I(y) \frac{-i\lambda_0}{4!} \int dz^4 \phi_I(z) \phi_I(z) \phi_I(z) \phi_I(z) \right\} | 0 \rangle \nonumber \\
 &=& 3 \cdot (\frac{-i\lambda_0}{4!}) D_F(x-y) \int d^4 z D_F(z-z) D_F(z-z) \nonumber \\
 &+& 12 \cdot (\frac{-i\lambda_0}{4!}) \int d^4 z  D_F(x-z) D_F(y-z) D_F(z-z) \nonumber
 \end{eqnarray}
 It can be represented by the so called Feynman diagram.
 \begin{figure}[!h]
 \centering
-\includegraphics[height=2cm ,width=14cm]{./pic/FD1.png}
+\includegraphics[height=1.5cm ,width=10cm]{./pic/FD1.png}
 \caption*{}
 \end{figure}
 \\
@@ -209,8 +213,59 @@ The Feynman rules for $\phi^4$ theory are:\\
 (3) For each external point, $E=1$;\\
 (4) Divided by the symmetry factor.\\
 At last, we can prove that
-\[\langle \Omega | T \{ \phi(x_1) \phi(x_2) \cdots \phi(x_n) \} | \Omega \rangle = \mbox{ sum of all E-connected diagrams with n external points}\]
-Here, the "E-disconnected" means disconnected from all external points", being called "vacuum bubbles". They vacuum bubbles in $\langle 0 | T \left\{ \phi(x_1) \phi(x_2) \cdots \phi(x_n) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle$ are all cancelled by the $\langle 0 | T \left\{ \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle$.
+\[\langle \Omega | T \{ \phi_I(x_1) \phi_I(x_2) \cdots \phi_I(x_n) \} | \Omega \rangle = \mbox{ sum of all E-connected diagrams with n external points}\]
+Here, the "E-disconnected" means disconnected from all external points", being called "vacuum bubbles". They vacuum bubbles in $\langle 0 | T \left\{ \phi_I(x_1) \phi_I(x_2) \cdots \phi_I(x_n) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle$ are all cancelled by the $\langle 0 | T \left\{ \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle$.
+
+\subsection{Path integral formulation}
+\subsubsection{Basic equation}
+Recall the path integrals in quantum mechanics, we abandon the Hamiltonian formalism and define the Hamiltonian dynamics as
+\[\langle \phi_b(\vec{x}) | e^{-iHT} | \phi_a(\vec{x}) \rangle = \int \mathcal{D}\phi  \mathrm{exp} \left[ i\int_0^T d^4x \mathcal{L} \right]\]
+Here, $\langle \phi_b(\vec{x}) |$ is the eigenstate of $\phi_S(\vec{x})=\phi_H(\vec{x},0)$ with eigenvalue $\phi_b(\vec{x})$ at time $t=T$,$| \phi_a(\vec{x}) \rangle$ is the eigenstate of $\phi_S(\vec{x})$ with eigenvalue $\phi_a(\vec{x})$ at time $t=0$.\\
+We emphasize that in this subsection, $\phi_H$ denotes the Heisenberg picture of field whose value is operators,$\phi_S$ denotes the Schr\"{o}dinger picture of field, $\phi(x)$ is classical field whose value is ordinary number.
+
+\subsubsection{Correlation function}
+\[\langle \Omega | T \phi_H(x_1) \phi_H(x_2)| \Omega \rangle = \lim_{T \to \infty(1-i\epsilon)} \frac{\int \mathcal{D}\phi \phi(x_1)\phi(x_2) \mathrm{exp} \left[ i\int_T^T d^4x \mathcal{L} \right]}{\int \mathcal{D} \phi \mathrm{exp} \left[ i\int_T^T d^4x \mathcal{L} \right]}\]
+The proof can be found in chapter 9.2 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}.
+
+\subsubsection{Functional derivatives and the generating functional}
+We define the generating functional as
+\[Z[J] \equiv \int \mathcal{D} \phi \mathrm{exp} \left[ i\int d^4x \mathcal{L} + J(x)\phi(x) \right]\]
+We can prove that
+\[\langle \Omega | T \phi_H(x_1) \cdots \phi_H(x_n) | \Omega \rangle = \frac{1}{Z_0} \left( -i\frac{\delta}{\delta J(x_1)} \right)\cdots \left( -i\frac{\delta}{\delta J(x_n)} \right) Z[J]|_{J=0}\]
+Here, $Z_0 \equiv Z[J=0]$.
+
+\subsubsection{Free field theory}
+In Klein-Gordon field theory,
+\[\int d^4x [\mathcal{L}_0(\phi)+J\phi] = \int d^4x [\frac{1}{2}\phi (\partial^2 -m^2+i\epsilon)\phi + J\phi]\]
+Define
+\[\phi'(x) \equiv \phi(x) + \int d^4y (-iD_F(x-y)) J(y) \]
+Recall that $(\partial^2-m^2)D_F(x-y) = i\delta(x-y)$, we can derive that
+\[\int d^4x [\mathcal{L}_0+J\phi] = \int d^4x [\frac{1}{2}\phi' (\partial^2 -m^2+i\epsilon)\phi'] - \int d^4x d^4y \frac{1}{2} J(x)[-iD_F(x-y)]J(y)\]
+After integration, we can know that
+\[Z[J] = Z_0 \mathrm{exp} [-\frac{1}{2} \int d^4x d^4y J(x)D_F(x-y)J(y)]\]
+So,
+\[\langle 0 | T \phi_H(x_1) \phi_H(x_2) | 0 \rangle =  - \frac{\delta}{\delta J(x_1)} \frac{\delta}{\delta J(x_2)} \mathrm{exp} [-\frac{1}{2} \int d^4x d^4y J(x)D_F(x-y)J(y)]|_{J=0} = D_F(x_1-x_2)\]
+
+\subsection{Perturbation theory for path integral quantization}
+\begin{eqnarray}
+\mathcal{L} &=& -\frac{1}{2}\partial_{\mu} \phi \partial^{\mu} \phi -\frac{1}{2}m_0^2 \phi^2 -\frac{\lambda_0}{4!}\phi^4 \quad \mathcal{L} = \mathcal{L}_0 + \mathcal{L}_1 \quad \mathcal{L}_1 = \frac{\lambda_0^4}{4!} \phi^4 (\vec{x}) \nonumber \\
+Z[J] &=& \int \mathcal{D}\phi e^{i\int d^4x [\mathcal{L}_0 + \mathcal{L}_1 + J\phi]} \nonumber \\
+&=& e^{i\int d^4y \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(y)})} \int \mathcal{D}\phi e^{i\int d^4x [\mathcal{L}_0 + J\phi]} \nonumber \\
+&\propto & e^{i\int d^4x \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(x)})} \mathrm{exp} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)] \nonumber \\
+& =& \sum_{V=0}^{\infty} \frac{1}{V!} [ \frac{-i\lambda_0}{4!} \int d^4x (\frac{1}{i} \frac{\delta}{\delta J(y)})^4]^V \times \sum_{P=0}^{\infty} \frac{1}{P!} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)]^P
+\end{eqnarray}
+If we focus on a term with particular values of V and P, then
+the number of surviving sources (after we take all the functional derivatives) is $E = 2P-4V$. The $4V$ functional derivatives can act on the 2P sources in $\frac{(2P)!}{(2P-4V)!}$ different combinations. However, many of the resulting expressions are algebraically identical.\\
+To organize them, we introduce Feynman diagrams similar to that in perturbation theory of canonical quantization. In these diagrams, a line segment stands for a propagator $D_F(x-y)$, a filled circle at one end of a line segment for a source $i\int d^4x J(x)$, and a vertex joining four line segments for $-i\lambda_0 \int d^4 z$.\\
+For each diagram, we can assign a symmetry factor $S_P$ similar to that in perturbation theory for canonical quantization. Due to the fact that some external sources are identical here, usually $S_P \neq S_C$. But when calculating the correlation function, the exchange of the order of functional derivatives to identical sources can eliminate the difference.\\
+We can demonstrate that
+\[Z[J] \propto \mathrm{exp}(\sum_I C_I)\]
+Here, $C_I$ stands for a particular connected diagram, including its symmetry factor. We define $E[J]$ as
+\[Z[J] \equiv Z_0 \mathrm{exp}(-iE[J])\]
+As, $E[0]=0$, we know
+\[-iE[J] = \sum_{I \neq \{0\}} C_I\]
+The notation $I\neq \{0\}$ means that the vacuum diagrams are omitted from the sum.\\
+The detailed discussion can be found in chapter 9 of \emph{Quantum field theory (M. Srednicki)}.
 
 \subsection{LSZ reduction formula}
 \subsubsection{Field strength renormalization}
@@ -262,7 +317,8 @@ has the general form showed as below.
 \includegraphics[height=4cm ,width=5cm]{./pic/LSZ1.png}
 \caption*{}
 \end{figure}\\
-We can sum up the corrections to each external leg. Let $-iM^2(p^2)$ denote the sum of all one-particle-irreducible (1PI) insertions into the scalar propagator:
+\paragraph{Note} One-particle-irreducible, or 1PI for short, refers to diagrams that is still connected after one line is cut.\\ 
+We can sum up the corrections to each external leg. Let $-iM^2(p^2)$ denote the sum of all 1PI insertions into the scalar propagator:
 \begin{figure}[!h]
 \centering
 \includegraphics[height=2cm ,width=15cm]{./pic/LSZ2.png}
@@ -295,12 +351,13 @@ It is easy to be generalized to the more complicated scattering cases. After Fou
 We can write $\langle f | S | i \rangle = i \mathcal{M} (2\pi)^4 \delta(\sum p_f - \sum p_i)$ for convenience.
 
 \subsection{Renormalization}
+Renormalization, the procedure in quantum field theory by which divergent parts of a calculation, leading to nonsensical infinite results, are absorbed by redefinition into a few measurable quantities, so yielding finite answers.
 \subsubsection{Counting of ultraviolet divergence}
 Consider a pure scalar theory in $d$ dimensions with a $\phi^n$ interaction term
 \[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi \partial_{\mu} \phi -\frac{1}{2}m^2 \phi^2 - \frac{\lambda}{n!}\phi^n\]
 Let $N$ be the number of external lines in the diagram, $P$ the number of propagators, $V$ the number of vertices. The number of the loops in the diagram is $L=P-V+1$.  There are $n$ lines meeting at each vertex, so $nV = 2P+N$. Loosely speaking, each loop has an integral $d^d p$, each propagator has a factor $p^{-2}$, so the superficial degrees of divergence is
 \[D = dL - 2P = d + [n(\frac{d-2}{2})-d)]V - (\frac{d-2}{2})N\]
-According the superficial degrees of divergence of the diagram. These three possible types of ultraviolet behaviour of quantum field theories. We will refer to them as follows:
+According the superficial degrees of divergence of the diagram. These three possible types of ultraviolet behaviour of quantum field theories. We will refer to them as follows:\\
 (1) Super-Renormalizable theory: Only a finite number of Feynman diagrams superficially diverge.\\
 (2) Renormalizable theory: Only a finite number of amplitudes superficially diverge; however, divergences
 occur at all orders in perturbation theory. \\
@@ -315,14 +372,13 @@ Note that the quantity that multiplies $V$ in this expression is just the dimens
 (3) Non-Renormalizable: Coupling constant has negative mass dimension.
 
 \subsubsection{Renormalized Perturbation Theory}
-It is generally true that the divergences in a renormalizable quantum field theory never show up in observable quantities. 
 The Lagrangian of $\phi^4$ theory is 
 \[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi \partial_{\mu} \phi -\frac{1}{2}m_0^2 \phi^2 - \frac{\lambda_0}{4!}\phi^4\]
 We write $m_0$ and $\lambda_0$, to emphasize that these are the bare values of the mass and coupling constant, not the values measured in experiments.
 Since the theory is invariant under $\phi \to -\phi$, all amplitudes with an odd number of external legs vanish. The only divergent amplitudes are therefore
 \begin{figure}[!h]
 \centering
-\includegraphics[height=5cm ,width=11cm]{./pic/RG1.png}
+\includegraphics[height=4cm ,width=9cm]{./pic/RG1.png}
 \caption*{}
 \end{figure}\\
 Ignoring the vacuum diagram, these amplitudes contain three infinite constants. Our goal is to absorb these constants into the three unobservable parameters of the theory: the bare mass, the bare coupling constant, and the field strength. To accomplish this goal, it is convenient to reformulate the perturbation expansion so that these unobservable quantities do not appear
@@ -334,15 +390,15 @@ We also define
 \[\delta_Z = Z -1 \quad \delta_m = Zm_0^2 - m^2 \quad \delta_{\lambda} = \lambda_0 Z^2 - \lambda\]
 Then the Lagrangian becomes
 \[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi_r \partial_{\mu} \phi_r -\frac{1}{2}m^2 \phi_r^2 - \frac{\lambda}{4!}\phi_r^4 -\frac{1}{2} \delta_Z \partial^{\mu} \phi_r \partial_{\mu} \phi_r -\frac{1}{2}\delta_m m^2 \phi_r^2 - \frac{\delta \lambda}{4!}\phi_r^4\]
-The last three terms, known as counterterms, have absorbed the infinite but unobservable shifts between the bare parameters and the physical parameters.
-We give precise definitions of the physical mass and coupling constant as follows.
+The last three terms, known as counterterms, have absorbed the infinite but unobservable shifts between the bare parameters and the physical parameters.\\
+We give precise definitions of the physical mass and coupling constant as follows.\\
 \begin{figure}[!h]
 \centering
 \includegraphics[height=3cm ,width=11cm]{./pic/RG2.png}
 \caption*{}
 \end{figure}\\
 These equations are called renormalization conditions.
-Our new Lagrangian gives a new set of Feynman rules,
+Our new Lagrangian gives a new set of Feynman rules,\\
 \begin{figure}[!h]
 \centering
 \includegraphics[height=6cm ,width=9cm]{./pic/RG3.png}
@@ -351,7 +407,44 @@ Our new Lagrangian gives a new set of Feynman rules,
 We can use these new Feynman rules to compute any amplitude in $\phi^4$ theory. The procedure is as follows. Compute the desired amplitude as the sum of all possible diagrams created from the propagator and vertices shown above. The loop integrals in the diagrams will often diverge, so one must introduce a regulator. The result of this computation will be a function of the three unknown parameters $\delta_Z$, $\delta_m$, and $\delta_{\lambda}$. Adjust ( or "renormalize") these three parameters as necessary to maintain the renormalization conditions. After this adjustment, the expression for the amplitude should be finite and independent of the regulator. \\
 This procedure, using Feynman rules with counterterms, is known as renormalized perturbation theory. 
 
-\subsubsection{One loop structure of $\phi^4$ theory}
+\subsubsection{Mandelstam variable}
+In theoretical physics, the \href{https://en.wikipedia.org/wiki/Mandelstam_variables}{\textbf{Mandelstam variable}}  are numerical quantities that encode the energy, momentum, and angles of particles in a scattering process in a Lorentz-invariant fashion. They are used for scattering processes of two particles to two particles. 
+The Mandelstam variables $s$, $t$, $u$ are then defined by
+\begin{eqnarray}
+s=-(p_{1}+p_{2})^{2}=-(p_{3}+p_{4})^{2} \nonumber \\
+t=-(p_{1}-p_{3})^{2}=-(p_{2}-p_{4})^{2} \nonumber \\
+u=-(p_{1}-p_{4})^{2}=-(p_{2}-p_{3})^{2} \nonumber
+\end{eqnarray}
+Where $p_1$ and $p_2$ are the four-momenta of the incoming particles and $p_3$ and $p_4$ are the four-momenta of the outgoing particles.
+$s$ is also known as the square of the center-of-mass energy (invariant mass) and $t$ is also known as the square of the four-momentum transfer.\\
+We can verify that
+\[s+t+u = m_1^2 + m_3^2 + m_3^2 +m_4^2\]
 
+\subsubsection{One loop structure of $\phi^4$ theory}
+First consider the basic two-particle scattering amplitude,
+\begin{figure}[!h]
+\centering
+\includegraphics[height=3cm ,width=11cm]{./pic/RG4.png}
+\caption*{}
+\end{figure}\\
+If we define $p = p_1 + p_2$, then the second diagram is
+\[\frac{(-i\lambda)^2}{2} \int \frac{d^4k}{(2\pi)^4} \frac{-i}{k^2+m^2} \frac{-i}{(k+m)^2+m^2} \equiv (-i\lambda)^2 iV(-p^2)\]
+So the entire amplitude is therefore
+\[i\mathcal{M} = -i\lambda + (-i\lambda)^2 [iV(s) + iV(t) iV(u)] -i\delta_{\lambda}\]
+The renormalization condition implies that
+\[\delta_{\lambda} = -\lambda^2[V(4m^2)+2V(0)]\]
+To determine $\delta_Z$ and $\delta_m$ we must compute the two-point function. Define $-iM(p^2)$ as the sum of all one-particle-irreducible insertions into the propagator.The full two-point function is given by
+\[\frac{-i}{p^2 + m_0^2 + M^2}\]
+The renormalization conditions require that the pole in this full propagator occur at $p^2=-m^2$ and have residue $1$. These two conditions are equivalent, respectively, to
+\[M^2(p^2)|_{p^2=-m^2} = 0 \quad \frac{d}{dp^2} M^2(p^2)|_{p^2=-m^2} =0\]
+The detailed calculation can be found in chapter 10.2 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)} and will be eliminated here.
+
+\subsubsection{Perturbation theory to all orders}
+In order to get perturbation theory to all orders, We begin by summing all one-particle irreducible diagrams with two external lines; this gives us the self-energy $M^2(k^2)$. Since the theory is invariant under $\phi \to -\phi$, all amplitudes with an odd number of external legs vanish. So we next sum all 1PI diagrams with four external lines; this gives us the four-point vertex function $V_4(k_1, k_2, k_3,k_4)$. Order by order in $\lambda$, we must adjust the value of the lagrangian coefficients $\delta_Z$, $\delta_m$, and $\delta_{\lambda}$ to maintain the conditions $M^2(-m^2)=0$, $(\frac{d M^2}{d p^2})(-m^2)=0$, and $V_4(s=4m^2)=\lambda$.\\
+Next we will construct the $n$-point vertex functions $V_n(k_1,\cdots,k_n)$ with $4 < n < E+1$, where $E$ is the number of external lines in the process of interest. We compute these using a skeleton expansion. This means that we draw all
+the contributing 1PI diagrams, but omit diagrams that include either propagator or four-point vertex corrections. Then we take the propagators and vertices in these diagrams to be given by the exact propagator $\frac{-i}{p^2+m^2+M^2(p^2)}$ and vertex $V_4(k_1, k_2, k_3,k_4)$, rather than by the tree-level propagator $\frac{-i}{p^2+m^2}$ and vertex $\lambda$. We then sum these skeleton diagrams to get $V_n$ for $4 < n < E+1$. Order by order in $\lambda$, this procedure is equivalent to computing $V_n$ by summing the usual set of contributing 1PI diagrams.\\
+Next we draw all tree-level diagrams that contribute to the process of interest (which has $E$ external lines), including not only three-point vertices, but also n-point vertices for $n = 4,\cdots, E$. Then we evaluate these diagrams using the exact propagator for internal lines, and the exact 1PI vertices $V_n$; external lines are assigned a factor of one. We sum these tree diagrams to get the scattering amplitude. Order by order in $\lambda$, this procedure is equivalent to computing the scattering amplitude by summing the usual set of contributing diagrams.\\
+Thus we now know how to compute an arbitrary scattering amplitude
+to arbitrarily high order. The procedure is the same in any quantum field theory; only the form of the propagators and vertices change, depending on the spins of the fields.
 \end{document}
 
