@@ -153,26 +153,58 @@ In the limit of infinitesimal Lorentz transformation, we have
 If we define $M^{\nu \rho} = \int M^{0 \nu \rho} d^3 x$, then we have
 \[\frac{dM^{\nu \rho}}{dt} = 0\]
 
+\subsection{Functional derivatives}
+Given a manifold $M$ representing (continuous/smooth) functions $\rho$ (with certain boundary conditions etc.), and a functional $F$ defined as
+\[F\colon M\rightarrow \mathbb {R} \quad {\mbox{or}}\quad F\colon M\rightarrow \mathbb {C} \,,\]
+the functional derivative of $F[\rho]$, denoted $\frac{\delta F}{\delta \rho}$
+\[{\begin{aligned}\int {\frac {\delta F}{\delta \rho }}(x)\phi (x)\;dx&=\lim _{\varepsilon \to 0}{\frac {F[\rho +\varepsilon \phi ]-F[\rho ]}{\varepsilon }}\\&=\left[{\frac {d}{d\epsilon }}F[\rho +\epsilon \phi ]\right]_{\epsilon =0},\end{aligned}}\]
+where $\phi$ is an arbitrary function. The quantity $\epsilon \phi$ is called the variation of $\rho$. In other words,
+\[\phi \mapsto \left[{\frac {d}{d\epsilon }}F[\rho +\epsilon \phi ]\right]_{\epsilon =0}\]
+is a linear functional, so by the Riesz–Markov–Kakutani representation theorem, this functional is given by integration against some measure. Then$\frac{\delta F}{\delta \rho}$ is defined to be the Radon–Nikodym derivative of this measure.
+We think of the function $\frac{\delta F}{\delta \rho}$ as the gradient of $F$ at the point $\rho$ and
+\[\int {\frac {\delta F}{\delta \rho }}(x)\phi (x)\;dx\]
+as the directional derivative at point $rho$ in the direction of $\phi$. Then analogous to vector calculus, the inner product with the gradient gives the directional derivative.
+
+\subsubsection{Properties}
+Like the derivative of a function, the functional derivative satisfies the following properties, where $F[\rho]$ and $G[\rho]$ are functionals:
+Linearity:
+\[{\frac {\delta (\lambda F+\mu G)[\rho ]}{\delta \rho (x)}}=\lambda {\frac {\delta F[\rho ]}{\delta \rho (x)}}+\mu {\frac {\delta G[\rho ]}{\delta \rho (x)}},\]
+where $\lambda$, $\mu$ are constants.\\
+Product rule:
+\[{\frac {\delta (FG)[\rho ]}{\delta \rho (x)}}={\frac {\delta F[\rho ]}{\delta \rho (x)}}G[\rho ]+F[\rho ]{\frac {\delta G[\rho ]}{\delta \rho (x)}}\,,\]
+Chain rules:\\
+If $F$ is a functional and $G$ an operator, then
+\[{\displaystyle \displaystyle {\frac {\delta F[G[\rho ]]}{\delta \rho (y)}}=\int dx{\frac {\delta F[G]}{\delta G(x)}}_{G=G[\rho ]}\cdot {\frac {\delta G[\rho ](x)}{\delta \rho (y)}}\ .}\]
+If $G$ is an ordinary differentiable function $g$, then this reduces to
+\[{\displaystyle \displaystyle {\frac {\delta F[g(\rho )]}{\delta \rho (y)}}={\frac {\delta F[g(\rho )]}{\delta g[\rho (y)]}}\ {\frac {dg(\rho )}{d\rho (y)}}\ .} \]
+
+\subsubsection{Inference}
+\[\frac{\delta F}{\delta \rho} (y) = \lim_{\epsilon \to \infty} \frac{1}{\epsilon} \{ F[\rho(x) + \epsilon \delta(x-y)] - F[\rho(x)] \}\]
+\[\frac{\delta f(x)}{\delta f(y)} = \delta(x-y)\]
+\[\frac{\delta}{\delta f(y)} \int g\left( f(x)\right) dx =  g'(f(y))\]
+\[\frac{\delta f'(x)}{\delta f(y)} = \frac{d}{dx}\delta(x-y)\]
+\[\frac{\delta}{\delta f(y)} \int g\left( f'(x)\right) dx = -\frac{d}{dy} g'(f'(y))\]
 
 \subsection{Hamiltonian formulation}
 \[\pi^a(x) = \frac{\partial \mathcal{L}}{\partial \dot{\phi_a}}\]
 \[\mathcal{H}(\phi_a,\nabla \phi_a,\pi^a) = \pi^a \dot{\phi_a} - \mathcal{L}\]
 \[H = \int \mathcal{H} d^3 x\]
-Now, we define
-\[\frac{\delta}{\delta f(q_0)} F = \frac{\delta}{\delta f} (F \delta(q-q_0)) = \frac{\delta \mathcal{F}}{\delta f}(q_0),\]where $ F = \int \mathcal{F}(f(q)) dq$.
 Now, we can get the Hamilton equation form $\delta S =0$,
 \[\dot{\phi_a}(\vec{x},t) = \frac{\delta}{\delta \pi^a(\vec{x},t)} H = \frac{\partial \mathcal{H}}{\partial \pi^a}\]
-\[\dot{\pi^a}(\vec{x},t) = \frac{\delta}{\delta \phi_a(\vec{x},t)} H = - \frac{\partial \mathcal{H}}{\partial \phi_a} + \left(\frac{\partial \mathcal{H}}{\partial \phi_{a,b}}\right)_{,b}\]
+\[\dot{\pi^a}(\vec{x},t) = -\frac{\delta}{\delta \phi_a(\vec{x},t)} H = - \frac{\partial \mathcal{H}}{\partial \phi_a} + \left(\frac{\partial \mathcal{H}}{\partial \phi_{a,b}}\right)_{,b}\]
 
 \subsubsection{Poission bracket}
-First, we define that
+First, we demand that
+\[[\phi_a(\vec{x}),\phi_b(\vec{y})] = [\pi^a(\vec{x}),\phi_b(\vec{y})]= 0\]
 \[[\phi_a(\vec{x}),\pi^b(\vec{y})] = \delta^{b}_{a} \delta(\vec{x}-\vec{y})\]
 then, we assume the bracket operation has the same properties as the Poission bracket in classical mechanics. And we also assume that
 \[[\partial_x A(\vec{x}),B(\vec{y})] = \partial_x [A(\vec{x}),B(\vec{y})]\]
 and
 \[\left[\int d^3 x A(\vec{x}),B(\vec{y})\right] = \int d^3 x [A(\vec{x}),B(\vec{y})]\]
-It is easy to verify that
-\[[\phi_a(\vec{x}),H] = \frac{\delta }{\delta \pi^a(\vec{x})} H, \ \ \ \ [\pi^a(\vec{x}),H] = \frac{\delta }{\delta \phi_a(\vec{x})} H\]
+We can verify that
+\[[W[\phi(\vec{x}),\pi(\vec{x})],Z[\phi(\vec{x}),\pi(\vec{x})]] = \int d^3x \left\{ \frac{\delta W}{\delta \phi(\vec{x})} \frac{\delta Z}{\delta \pi(\vec{x})} - \frac{\delta W}{\delta \pi(\vec{x})} \frac{\delta Z}{\delta \phi(\vec{x})} \right\}\]
+Specially,
+\[[\phi_a(\vec{x}),H] = \frac{\delta }{\delta \pi^a(\vec{x})} H, \ \ \ \ [\pi^a(\vec{x}),H] = -\frac{\delta }{\delta \phi_a(\vec{x})} H\]
 So, the Hamilton equation can be written as
 \[\dot{\phi_a} = [\phi_a,H], \ \ \ \ \dot{\pi^a} = [\pi^a,H]\]
 Further more, we can prove

@@ -248,11 +248,11 @@ So,
 
 \subsection{Perturbation theory for path integral quantization}
 \begin{eqnarray}
-\mathcal{L} &=& -\frac{1}{2}\partial_{\mu} \phi \partial^{\mu} \phi -\frac{1}{2}m_0^2 \phi^2 -\frac{\lambda_0}{4!}\phi^4 \quad \mathcal{L} = \mathcal{L}_0 + \mathcal{L}_1 \quad \mathcal{L}_1 = \frac{\lambda_0^4}{4!} \phi^4 (\vec{x}) \nonumber \\
+\mathcal{L} &=& -\frac{1}{2}\partial_{\mu} \phi \partial^{\mu} \phi -\frac{1}{2}m_0^2 \phi^2 -\frac{\lambda_0}{4!}\phi^4 \quad \mathcal{L} = \mathcal{L}_0 + \mathcal{L}_1 \quad \mathcal{L}_1 =- \frac{\lambda_0}{4!} \phi^4 (\vec{x}) \nonumber \\
 Z[J] &=& \int \mathcal{D}\phi e^{i\int d^4x [\mathcal{L}_0 + \mathcal{L}_1 + J\phi]} \nonumber \\
 &=& e^{i\int d^4y \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(y)})} \int \mathcal{D}\phi e^{i\int d^4x [\mathcal{L}_0 + J\phi]} \nonumber \\
 &\propto & e^{i\int d^4x \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(x)})} \mathrm{exp} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)] \nonumber \\
-& =& \sum_{V=0}^{\infty} \frac{1}{V!} [ \frac{-i\lambda_0}{4!} \int d^4x (\frac{1}{i} \frac{\delta}{\delta J(y)})^4]^V \times \sum_{P=0}^{\infty} \frac{1}{P!} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)]^P
+& =& \sum_{V=0}^{\infty} \frac{1}{V!} [ \frac{-i\lambda_0}{4!} \int d^4x (\frac{1}{i} \frac{\delta}{\delta J(x)})^4]^V \times \sum_{P=0}^{\infty} \frac{1}{P!} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)]^P
 \end{eqnarray}
 If we focus on a term with particular values of V and P, then
 the number of surviving sources (after we take all the functional derivatives) is $E = 2P-4V$. The $4V$ functional derivatives can act on the 2P sources in $\frac{(2P)!}{(2P-4V)!}$ different combinations. However, many of the resulting expressions are algebraically identical.\\
@@ -260,10 +260,10 @@ To organize them, we introduce Feynman diagrams similar to that in perturbation 
 For each diagram, we can assign a symmetry factor $S_P$ similar to that in perturbation theory for canonical quantization. Due to the fact that some external sources are identical here, usually $S_P \neq S_C$. But when calculating the correlation function, the exchange of the order of functional derivatives to identical sources can eliminate the difference.\\
 We can demonstrate that
 \[Z[J] \propto \mathrm{exp}(\sum_I C_I)\]
-Here, $C_I$ stands for a particular connected diagram, including its symmetry factor. We define $E[J]$ as
-\[Z[J] \equiv Z_0 \mathrm{exp}(-iE[J])\]
-As, $E[0]=0$, we know
-\[-iE[J] = \sum_{I \neq \{0\}} C_I\]
+Here, $C_I$ stands for a particular connected diagram, including its symmetry factor. We define $W[J]$ as
+\[Z[J] \equiv Z_0 \mathrm{exp}(-iW[J])\]
+As, $W[0]=0$, we know
+\[-iW[J] = \sum_{I \neq \{0\}} C_I\]
 The notation $I\neq \{0\}$ means that the vacuum diagrams are omitted from the sum.\\
 The detailed discussion can be found in chapter 9 of \emph{Quantum field theory (M. Srednicki)}.
 
@@ -428,17 +428,18 @@ This measure is normalized so that
 \[\int dF_n = 1\]
 A generalization of Feynman's formula is
 \[ \frac{1}{A_1^{\alpha_1} \cdots A_n^{\alpha_n}} = \frac{\Gamma(\sum_i \alpha_i)}{\prod_i \Gamma(\alpha_i)} \frac{1}{(n-1)!}\int dF_n \frac{\prod_i x_i^{\alpha_i-1}}{(\sum_i x_i A_i)^{\sum_i \alpha_i}}\]
+
 \begin{figure}[!h]
 \centering
-\includegraphics[height=3cm ,width=9cm]{./pic/RG5.png}
+\includegraphics[height=3cm ,width=5cm]{./pic/RG5.png}
 \caption*{Wick rotation}
 \end{figure}
-
 \subsubsection{Wick rotation}
 For an integral $\int d^d q f(q^2-i\epsilon)$, if the integrand vanishes fast enough as $|q_0| \to \infty$, we can rotate this contour clockwise by $\frac{\pi}{2}$, so that it runs from $-i\infty$ to $i\infty$. In making this Wick rotation, the contour does not pass over any poles. (The $i\epsilon$ are needed to make this statement unambiguous.) Thus the value of the integral is unchanged. It is now convenient to define a Euclidean d-dimensional vector $\bar{q}$ via $q^0 = i \bar{q}_d$ and $q_j = \bar{q}_j$; then $q^2 = \bar{q}^2$, where
 \[\bar{q}^2 = \bar{q}_1^2 + \cdots + \bar{q}_d^2\]
 Also, $d^dq = id^d \bar{q}$.Therefore, in general,
 \[\int d^d q f(q^2-i\epsilon) = i \int d^d\bar{q} f(\bar{q}^2)\]
+
 
 \subsubsection{Dimensional regularization}
 Dimensional regularization is a method for regularizing integrals in the evaluation of Feynman diagrams. For example, if one wishes to evaluate a loop integral which is logarithmically divergent in four dimensions, like
@@ -548,5 +549,74 @@ In $\phi^4$ theory, we have $\gamma_m(\lambda) = \mathcal{O}(\lambda^2)$.
 \[G^{(n)}(x_1,\cdots,x_n) \equiv \langle \Omega | T \phi(x_1) \cdots \phi(x_n) | \Omega \rangle_C \]
 As $G^{(n)}_0 = Z_{\phi}^{n/2} G^{(n)}$, from the independence of bare Green's function, we have
 \[\left( \frac{\partial}{\partial \ln \mu} + \beta(\lambda)  \frac{\partial}{\partial \lambda} + \gamma_m(\lambda) m  \frac{\partial}{\partial m} + n \gamma_{\phi}(\lambda)\right)G^{n}(x_1,\cdots,x_n;\lambda,m,\mu) = 0\]
+
+\subsection{Spontaneous symmetry breaking}
+\subsubsection{Effective action}
+\[Z[J] = e^{-iE[J]} = \int \mathcal{D} \phi \exp\left[ i\int d^4x (\mathcal{L}[\phi] + J \phi) \right]\]
+Define 
+\[\phi_{cl} (x) \equiv \langle \Omega | \phi(x) | \Omega \rangle_{J}\]
+So, we can derive
+\[\frac{\delta}{\delta J(x)} E[J] = - \phi_{cl}(x)\]
+Define
+\[\Gamma[\phi_{cl}] \equiv -E[J] - \int d^4y J(y) \phi_{cl}(y)\]
+We can verify that
+\[\frac{\delta}{\delta \phi_{cl}(x)} = -J(x)\]
+If the external source is set to zero, the effective action satisfy the equation
+\[\frac{\delta}{\delta \phi_{cl}(x)} = 0\]
+The solution to this equation are the values of $\langle \phi(x) \rangle$ in the stable quantum states of the theory. For a translational-invariant vacuum state, we will find a solution in which $\phi_{cl}$ is independent of $x$. 
+For the field theory that the possible vacuum states are invariant under translations and Lorentz transformations, for each possible vacuum states, the corresponding solution $\phi_{cl}$ will be a constant, independent of $x$.
+If $T$ is the time extent of the region and $V$ is its three dimensional volume, we can write
+\[\Gamma[\phi_{cl}] = -(VT) \cdot V_{eff}(\phi_{cl})\]
+The coefficient $V_{eff}$ is called effective potential. The condition that $\Gamma[\phi_{cl}]$ has an extremum then reduces to the simple equation
+\[\frac{\partial}{\partial \phi_{cl}} V_{eff}(\phi_{cl}) = 0\] 
+A system with spontaneously broken symmetry will have several minimum of $V_{eff}$, all with the same energy by virtue of the symmetry. The choice of one among these vacuum is the spontaneous symmetry breaking.
+
+\subsubsection{Computation of the effective action}
+Decompose the Lagrangian into a piece depending on renormalized parameters and one containing the counterterms
+\[\mathcal{L} = \mathcal{L}_1 + \delta \mathcal{L}\]
+Define $J_1$ by
+\[\frac{\delta \mathcal{L}_1}{\delta \phi} |_{\phi = \phi_{cl}} + J_1(x) = 0\]
+Define $\delta J$ by
+\[J(x) = J_1(x) + \delta J(x)\]
+So, we have
+\[e^{-iE[J]} = \int \mathcal{D}\phi e^{i\int d^4x (\mathcal{L}_1 + J_1\phi)} e^{i\int d^4x (\delta \mathcal{L} + \delta J \phi)}\]
+Replace $\phi$ by $\phi_{cl}+\eta$,
+\begin{eqnarray}
+\int d^4x \, (\mathcal{L}_1 + J_1\phi) &=& \int d^4x \, (\mathcal{L}_1[\phi_{cl}] + J_1\phi_{cl}) + \int d^4x \, \eta(x) \left( \frac{\delta \mathcal{L}_1}{\delta \phi} + J_1 \right) \nonumber \\
+&+& \frac{1}{2} \int d^4x \, d^4y \, \eta(x) \eta(y) \frac{\delta^2 \mathcal{L}_1}{\delta \phi(x) \delta \phi(y)} \nonumber \\
+&+& \frac{1}{3!} \int d^4x \, d^4y \, d^4z \, \eta(x) \eta(y) \eta(z) \frac{\delta^3 \mathcal{L}_1}{\delta \phi(x) \delta \phi(y) \delta \phi(z)} + \cdots \nonumber
+\end{eqnarray}
+The term linear in $\eta$ vanishes by definition of $J_1$.  Keeping only the term up to quadratic order in $\eta$ and still neglecting the counterterms, we have a pure Gaussian integral, which can be evaluated in terms of a functional determinant:
+\begin{eqnarray}
+&&\int \mathcal{D}\eta \exp \left[ i \left( \int ( \mathcal{L}_1 [\phi_{cl}] + J_1\phi_{cl} ) +  \frac{1}{2} \int \eta \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \eta \right) \right] \nonumber \\
+&=& \exp \left[ i \int ( \mathcal{L}_1 [\phi_{cl}] + J_1\phi_{cl} )\right] \left( \det \left[  \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] \right) ^{-\frac{1}{2}} \nonumber
+\end{eqnarray}
+Finally, put back the effects of the counterterm Lagrangian,writing it as
+\[(\delta \mathcal{L}[\phi_{cl}] + \delta J \phi_{cl} ) + ( \delta \mathcal{L}[\phi_{cl} + \eta] - \delta\mathcal{L} [\phi_{cl}] + \delta J \eta)\]
+Define
+\[\mathcal{L}_2 = \left(\frac{1}{3!} \int d^4x \, d^4y \, d^4z \, \eta(x) \eta(y) \eta(z) \frac{\delta^3 \mathcal{L}_1}{\delta \phi(x) \delta \phi(y) \delta \phi(z)} + \cdots \right) + ( \delta \mathcal{L}[\phi_{cl} + \eta] - \delta\mathcal{L} [\phi_{cl}] + \delta J \eta)\]
+So
+\[e^{-iE[J]} = \exp \left[ i \int ( \mathcal{L}_1 [\phi_{cl}] + J_1\phi_{cl} + \delta \mathcal{L}[\phi_{cl}] + \delta J \phi_{cl} )\right] e^{i\int \mathcal{L}_2(\frac{1}{i} \frac{\delta}{\delta I})} \int \mathcal{D}\eta e^{i\int \left(\frac{1}{2} \eta \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \eta + I\eta \right)}\]
+Therefore, define propagator as
+\[D_F \equiv i \left( \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi}\right)^{-1}\]
+We have
+\[e^{-iE[J]} = \exp \left[ i \int ( \mathcal{L}_1 [\phi_{cl}] + J_1\phi_{cl} + \delta \mathcal{L}[\phi_{cl}] + \delta J \phi_{cl} )\right] \left( \det \left[  \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] \right) ^{-\frac{1}{2}} e^{i\int \mathcal{L}_2(\frac{1}{i} \frac{\delta}{\delta I})} \int \mathcal{D}\eta e^{i\int \left(-\frac{1}{2} I D_F I \right)} |_{I=0}\]
+Similar to the procedure in the perturbation theory for path integral quantization, we can get a perturbation expansion for $iE[J]$ using connected Feynman diagram,
+\[-iE[J] = i \int ( \mathcal{L}_1 [\phi_{cl}] + J_1\phi_{cl} + \delta \mathcal{L}[\phi_{cl}] + \delta J \phi_{cl} ) - \frac{1}{2} \log \det \left[  \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] + \mbox{ connected diagrams }\]
+From this equation, $\Gamma$ follows directly:
+\[\Gamma[\phi_{cl}] = \int d^4x \mathcal{L}_1[\phi_{cl}] + \frac{i}{2} \log \det \left[  \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] -i \mbox{ connected diagrams} + \int d^4x \delta\mathcal{L}[\phi_{cl}]\]
+\subsubsection{The effective action as a generating functional}
+
+\subsubsection{Renormalization and symmetry}
+
+\subsubsection{Goldstone's theorem}
+
+\subsection{Linear sigma model}
+\[\mathcal{L} = -\frac{1}{2} \partial_{\mu} \phi^i \partial^{\mu}\phi^i + \frac{1}{2} \mu^2 (\phi^i)^2 - \frac{\lambda}{4} [(\phi^i)]\]
+The Lagrangian is invariant under the symmetry
+\[\phi^i \to R^{ij} \phi^j\]
+for any $N \times N$ orthogonal group in $N$ dimensions, also called the N-dimensional orthogonal group or simply $O(N)$.
+
+\subsection{Cross section and the S-matrix}
 \end{document}
 
