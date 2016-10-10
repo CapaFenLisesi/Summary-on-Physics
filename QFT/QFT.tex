@@ -350,26 +350,26 @@ It is easy to be generalized to the more complicated scattering cases. After Fou
 (7) Multiply the total momentum conservation factor $(2\pi)^4 \delta(\sum p_f - \sum p_i)$ 
 We can write $\langle f | S | i \rangle = i \mathcal{M} (2\pi)^4 \delta(\sum p_f - \sum p_i)$ for convenience.
 
-\subsection{Renormalization}
-Renormalization, the procedure in quantum field theory by which divergent parts of a calculation, leading to nonsensical infinite results, are absorbed by redefinition into a few measurable quantities, so yielding finite answers.
+\subsection{Re-normalization}
+Re-normalization, the procedure in quantum field theory by which divergent parts of a calculation, leading to nonsensical infinite results, are absorbed by redefinition into a few measurable quantities, so yielding finite answers.
 \subsubsection{Counting of ultraviolet divergence}
 Consider a pure scalar theory in $d$ dimensions with a $\phi^n$ interaction term
 \[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi \partial_{\mu} \phi -\frac{1}{2}m^2 \phi^2 - \frac{\lambda}{n!}\phi^n\]
 Let $N$ be the number of external lines in the diagram, $P$ the number of propagators, $V$ the number of vertices. The number of the loops in the diagram is $L=P-V+1$.  There are $n$ lines meeting at each vertex, so $nV = 2P+N$. Loosely speaking, each loop has an integral $d^d p$, each propagator has a factor $p^{-2}$, so the superficial degrees of divergence is
 \[D = dL - 2P = d + [n(\frac{d-2}{2})-d)]V - (\frac{d-2}{2})N\]
 According the superficial degrees of divergence of the diagram. These three possible types of ultraviolet behaviour of quantum field theories. We will refer to them as follows:\\
-(1) Super-Renormalizable theory: Only a finite number of Feynman diagrams superficially diverge.\\
-(2) Renormalizable theory: Only a finite number of amplitudes superficially diverge; however, divergences
+(1) Super-Re-normalizable theory: Only a finite number of Feynman diagrams superficially diverge.\\
+(2) Re-normalizable theory: Only a finite number of amplitudes superficially diverge; however, divergences
 occur at all orders in perturbation theory. \\
-(3) Non-Renormalizable theory: All amplitudes are divergent at a sufficiently high order in perturbation
+(3) Non-Re-normalizable theory: All amplitudes are divergent at a sufficiently high order in perturbation
 theory.\\
-So, for $\phi^4$ theory in four dimension, $D = 4 - N$. It is a renormalizable theory. For $\phi^3$ theory in four dimension, $D = 4 - V -N$. It is a super-renormalizable theory. For $\phi^6$ theory in four dimension, $D = 4 + 2V -N$. It is a Non-renormalizable theory. \\
+So, for $\phi^4$ theory in four dimension, $D = 4 - N$. It is a re-normalizable theory. For $\phi^3$ theory in four dimension, $D = 4 - V -N$. It is a super-re-normalizable theory. For $\phi^6$ theory in four dimension, $D = 4 + 2V -N$. It is a Non-re-normalizable theory. \\
 The superficial degrees of freedom can also be derived from dimensional analysis. The dimension of $\lambda$ is $d - \frac{n(d-2)}{2}$. Now consider an arbitrary diagram with $N$ external lines. One way that such a diagram could arise is from an interaction term $\eta \phi^N$ in the Lagrangian. The dimension of $\eta$ would then be $d - \frac{N(d-2)}{2}$, and therefore we conclude that any (amputated) diagram with $N$ external lines has dimension $d - \frac{N(d-2)}{2}$. In our theory with only the $\lambda \phi^n$ vertex, if the diagram has $V$ vertices, its divergent part is proportional to $\lambda^V \Lambda^D$, where $\Lambda$ is a high momentum cut-off and $D$ is the superficial degree of divergence.  Applying dimensional analysis, we find
 \[d - \frac{N(d-2)}{2} = V[d - \frac{n(d-2)}{2}] + D\]
-Note that the quantity that multiplies $V$ in this expression is just the dimension of the coupling constant $\lambda$. Thus we can characterize the three degrees of renormalizability in a second way:\\
-(1) Super-Renormalizable: Coupling constant has positive mass dimension.\\
-(2) Renormalizable: Coupling constant is dimensionless.\\
-(3) Non-Renormalizable: Coupling constant has negative mass dimension.
+Note that the quantity that multiplies $V$ in this expression is just the dimension of the coupling constant $\lambda$. Thus we can characterize the three degrees of re-normalizability in a second way:\\
+(1) Super-Re-normalizable: Coupling constant has positive mass dimension.\\
+(2) Re-normalizable: Coupling constant is dimensionless.\\
+(3) Non-Re-normalizable: Coupling constant has negative mass dimension.
 
 \subsubsection{Renormalized Perturbation Theory}
 The Lagrangian of $\phi^4$ theory is 
@@ -390,22 +390,22 @@ We also define
 \[\delta_Z = Z -1 \quad \delta_m = Zm_0^2 - m^2 \quad \delta_{\lambda} = \lambda_0 Z^2 - \lambda\]
 Then the Lagrangian becomes
 \[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi_r \partial_{\mu} \phi_r -\frac{1}{2}m^2 \phi_r^2 - \frac{\lambda}{4!}\phi_r^4 -\frac{1}{2} \delta_Z \partial^{\mu} \phi_r \partial_{\mu} \phi_r -\frac{1}{2}\delta_m \phi_r^2 - \frac{\delta \lambda}{4!}\phi_r^4\]
-The last three terms, known as counterterms, have absorbed the infinite but unobservable shifts between the bare parameters and the physical parameters.\\
-We give precise definitions of the physical mass and coupling constant as follows. The renormalization scheme here is called on-shell (OS) scheme. Other renormalization scheme would be introduced later.\\
+The last three terms, known as counter-terms, have absorbed the infinite but unobservable shifts between the bare parameters and the physical parameters.\\
+We give precise definitions of the physical mass and coupling constant as follows. The re-normalization scheme here is called on-shell (OS) scheme. Other re-normalization scheme would be introduced later.\\
 \begin{figure}[!h]
 \centering
 \includegraphics[height=3cm ,width=11cm]{./pic/RG2.png}
 \caption*{}
 \end{figure}\\
-These equations are called renormalization conditions.
+These equations are called re-normalization conditions.
 Our new Lagrangian gives a new set of Feynman rules,\\
 \begin{figure}[!h]
 \centering
 \includegraphics[height=6cm ,width=9cm]{./pic/RG3.png}
 \caption*{}
 \end{figure}\\
-We can use these new Feynman rules to compute any amplitude in $\phi^4$ theory. The procedure is as follows. Compute the desired amplitude as the sum of all possible diagrams created from the propagator and vertices shown above. The loop integrals in the diagrams will often diverge, so one must introduce a regulator. The result of this computation will be a function of the three unknown parameters $\delta_Z$, $\delta_m$, and $\delta_{\lambda}$. Adjust ( or "renormalize") these three parameters as necessary to maintain the renormalization conditions. After this adjustment, the expression for the amplitude should be finite and independent of the regulator. \\
-This procedure, using Feynman rules with counterterms, is known as renormalized perturbation theory. 
+We can use these new Feynman rules to compute any amplitude in $\phi^4$ theory. The procedure is as follows. Compute the desired amplitude as the sum of all possible diagrams created from the propagator and vertices shown above. The loop integrals in the diagrams will often diverge, so one must introduce a regulator. The result of this computation will be a function of the three unknown parameters $\delta_Z$, $\delta_m$, and $\delta_{\lambda}$. Adjust ( or "renormalise") these three parameters as necessary to maintain the re-normalization conditions. After this adjustment, the expression for the amplitude should be finite and independent of the regulator. \\
+This procedure, using Feynman rules with counter-terms, is known as renormalized perturbation theory. 
 
 \subsubsection{Mandelstam variable}
 In theoretical physics, the \href{https://en.wikipedia.org/wiki/Mandelstam_variables}{\textbf{Mandelstam variable}}  are numerical quantities that encode the energy, momentum, and angles of particles in a scattering process in a Lorentz-invariant fashion. They are used for scattering processes of two particles to two particles. 
@@ -466,13 +466,13 @@ To keep $\lambda$ dimensionless in dimensional regularization, we can make the t
 We can calculate that
 \[V(-p^2) = -\frac{1}{32\pi^2} \int_0^1 (\frac{2}{\epsilon} + \ln(\frac{\mu^2}{D(-p^2)}))\]
 where $\mu \equiv  \sqrt{4\pi} e^{-\gamma/2} \tilde{\mu}$, $D(-p^2) = x(1-x)p^2+m^2$\\
-The renormalization condition implies that
+The re-normalization condition implies that
 \[\delta_{\lambda} = -\lambda^2[V(4m^2)+2V(0)] + \mathcal{O}(\lambda^3)\]
 So,
 \[i\mathcal{M} = -i\lambda -\frac{i\lambda^2}{32\pi^2} \int_0^1 dx \left[\ln(\frac{D(s)}{D(4m^2)}) +\ln(\frac{D(t)}{D(0)})+\ln(\frac{D(u)}{D(0)})\right] + \mathcal{O}(\lambda^3)\]
 To determine $\delta_Z$ and $\delta_m$ we must compute the two-point function. Define $-iM(p^2)$ as the sum of all one-particle-irreducible insertions into the propagator.The full two-point function is given by
 \[\frac{-i}{p^2 + m^2 + M^2}\]
-The renormalization conditions require that the pole in this full propagator occur at $p^2=-m^2$ and have residue $1$. These two conditions are equivalent, respectively, to
+The re-normalization conditions require that the pole in this full propagator occur at $p^2=-m^2$ and have residue $1$. These two conditions are equivalent, respectively, to
 \[M^2(p^2)|_{p^2=-m^2} = 0 \quad \frac{d}{dp^2} M^2(p^2)|_{p^2=-m^2} =0\]
 We can calculate that
 \[-iM^2(p^2) = \frac{i\lambda}{32\pi^2}(\frac{2}{\epsilon} + \ln(\frac{\mu^2}{m^2})+1)m^2 -i(p^2\delta_Z + \delta_m)\]
@@ -482,7 +482,7 @@ So, to the order of $\lambda$,
 The detailed calculation can be found in chapter 10.2 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)} and will be eliminated here.
 
 \subsubsection{Perturbation theory to all orders}
-In order to get perturbation theory to all orders, We begin by summing all one-particle irreducible diagrams with two external lines; this gives us the self-energy $M^2(k^2)$. Since the theory is invariant under $\phi \to -\phi$, all amplitudes with an odd number of external legs vanish. So we next sum all 1PI diagrams with four external lines; this gives us the four-point vertex function $V_4(k_1, k_2, k_3,k_4)$. Order by order in $\lambda$, we must adjust the value of the lagrangian coefficients $\delta_Z$, $\delta_m$, and $\delta_{\lambda}$ to maintain the conditions $M^2(-m^2)=0$, $(\frac{d M^2}{d p^2})(-m^2)=0$, and $V_4(s=4m^2)=\lambda$.\\
+In order to get perturbation theory to all orders, We begin by summing all one-particle irreducible diagrams with two external lines; this gives us the self-energy $M^2(k^2)$. Since the theory is invariant under $\phi \to -\phi$, all amplitudes with an odd number of external legs vanish. So we next sum all 1PI diagrams with four external lines; this gives us the four-point vertex function $V_4(k_1, k_2, k_3,k_4)$. Order by order in $\lambda$, we must adjust the value of the Lagrangian coefficients $\delta_Z$, $\delta_m$, and $\delta_{\lambda}$ to maintain the conditions $M^2(-m^2)=0$, $(\frac{d M^2}{d p^2})(-m^2)=0$, and $V_4(s=4m^2)=\lambda$.\\
 Next we will construct the $n$-point vertex functions $V_n(k_1,\cdots,k_n)$ with $4 < n < E+1$, where $E$ is the number of external lines in the process of interest. We compute these using a skeleton expansion. This means that we draw all
 the contributing 1PI diagrams, but omit diagrams that include either propagator or four-point vertex corrections. Then we take the propagators and vertices in these diagrams to be given by the exact propagator $\frac{-i}{p^2+m^2+M^2(p^2)}$ and vertex $V_4(k_1, k_2, k_3,k_4)$, rather than by the tree-level propagator $\frac{-i}{p^2+m^2}$ and vertex $\lambda$. We then sum these skeleton diagrams to get $V_n$ for $4 < n < E+1$. Order by order in $\lambda$, this procedure is equivalent to computing $V_n$ by summing the usual set of contributing 1PI diagrams.\\
 Next we draw all tree-level diagrams that contribute to the process of interest (which has $E$ external lines), including not only three-point vertices, but also n-point vertices for $n = 4,\cdots, E$. Then we evaluate these diagrams using the exact propagator for internal lines, and the exact 1PI vertices $V_n$; external lines are assigned a factor of one. We sum these tree diagrams to get the scattering amplitude. Order by order in $\lambda$, this procedure is equivalent to computing the scattering amplitude by summing the usual set of contributing diagrams.\\
@@ -493,10 +493,10 @@ to arbitrarily high order. The procedure is the same in any quantum field theory
 The Lagrangian of $\phi^4$ theory is
 \[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi \partial_{\mu} \phi -\frac{1}{2}m^2 \phi^2 - \frac{\lambda}{4!}\phi^4 -\frac{1}{2} \delta_Z \partial^{\mu} \phi \partial_{\mu} \phi -\frac{1}{2}\delta_m \phi_r - \frac{\delta \lambda}{4!}\phi^4\]
 For minimal-subtraction scheme, we do not demand that $m$ be the physics mass of the field and $\phi$  create a normalized one-particle state. The physical meaning of $\lambda$ is not expressed directly as well. Instead we choose $\delta_Z$, $\delta_m$ and $\delta_{\lambda}$ to cancel the infinities, and nothing more;
-we say that $\delta_Z$, $\delta_m$ and $\delta_{\lambda}$ have no finite parts. It is called the modified minimal-subtraction or $\mathrm{\overline{MS}}$ scheme. (“Modified” because we introduced $\mu$ via  $\lambda \to \lambda \tilde{\mu}^{\epsilon}$, with $\mu \equiv  \sqrt{4\pi} e^{-\gamma/2} \tilde{\mu}$; had we set $\mu = \tilde{\mu}$ instead, the scheme would be just plain minimal subtraction or MS.)\\
+we say that $\delta_Z$, $\delta_m$ and $\delta_{\lambda}$ have no finite parts. It is called the modified minimal-subtraction or $\mathrm{\overline{MS}}$ scheme. ("modified" because we introduced $\mu$ via  $\lambda \to \lambda \tilde{\mu}^{\epsilon}$, with $\mu \equiv  \sqrt{4\pi} e^{-\gamma/2} \tilde{\mu}$; had we set $\mu = \tilde{\mu}$ instead, the scheme would be just plain minimal subtraction or MS.)\\
 For loop corrections to propagator,
 \[\delta_Z=\mathcal{O}(\lambda^2) \quad \delta_m = \left[ \frac{\lambda}{16\pi^2} + \mathcal{O}(\lambda^2) \right]\frac{1}{\epsilon}m^2 \quad M^2(p^2) = \frac{\lambda}{32\pi^2}( \ln(\frac{m^2}{\mu^2})-1)m^2 + \mathcal{O}(\lambda^2)\]
-Firstly, in the $\mathrm{\overline{MS}}$ scheme, the propagator will no longer have a pole at $k^2=-m^2$. The pole will be somewhere else. However, by definition, the actual physical mass $m_{ph}$ of the particle is determined by the location of this pole: $k^2 = -m_{ph}^2$. Thus, the lagrangian parameter $m$ is no longer the same as $m_{ph}$. The relation of $m$ and $m_{ph}$ is 
+Firstly, in the $\mathrm{\overline{MS}}$ scheme, the propagator will no longer have a pole at $k^2=-m^2$. The pole will be somewhere else. However, by definition, the actual physical mass $m_{ph}$ of the particle is determined by the location of this pole: $k^2 = -m_{ph}^2$. Thus, the Lagrangian parameter $m$ is no longer the same as $m_{ph}$. The relation of $m$ and $m_{ph}$ is 
 \[m_{ph}^2 = M^2(-m_{ph}^2) + m^2\]
 To the lowest order, 
 \[m_{ph}^2 = \left[1+\frac{\lambda}{32\pi^2}( \ln(\frac{m^2}{\mu^2})-1)\right] m^2\]
@@ -508,14 +508,14 @@ For loop corrections to vertex,
 \[\delta_{\lambda} = \left[\frac{3\lambda^2}{16\pi^2} + \mathcal{O}(\lambda^3)\right]\frac{1}{\epsilon}\]
 \[i\mathcal{M} = -i\lambda -\frac{i\lambda^2}{32\pi^2} \int_0^1 dx \left[\ln(\frac{D(s)}{\mu^2}) +\ln(\frac{D(t)}{\mu^2})+\ln(\frac{D(u)}{\mu^2})\right] + \mathcal{O}(\lambda^3)\]
 
-\subsubsection{The renormalization group}
+\subsubsection{The re-normalization group}
 The Lagrangian of $\phi^4$ theory is 
 \[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi_0 \partial_{\mu} \phi_0 -\frac{1}{2}m_0^2 \phi_0^2 - \frac{\lambda_0}{4!}\phi_0^4\]
 It can be written as
 \[\mathcal{L} = -\frac{1}{2}Z_{\phi} \partial^{\mu} \phi \partial_{\mu} \phi -\frac{1}{2}Z_{m}m^2 \phi^2 - Z_{\lambda} \mu^{\epsilon}\frac{\lambda}{4!}\phi^4\]
 So, 
 \[\phi_0 = Z_{\phi}^{1/2}\phi \quad m_0 = Z_{\phi}^{-1/2} Z_{m}^{1/2}m \quad \lambda = Z_{\phi}^{-2} Z_{\lambda} \lambda \tilde{\mu}^{\epsilon}\]
-After using dimensional regularization, the infinities coming from loop integrals take the form of inverse powers of $\epsilon$. In the  $\mathrm{\overline{MS}}$ renormalization scheme, we choose the Zs to cancel off these powers of $1/\epsilon$, and nothing more. Therefore the Zs can be written as
+After using dimensional regularization, the infinities coming from loop integrals take the form of inverse powers of $\epsilon$. In the  $\mathrm{\overline{MS}}$ re-normalization scheme, we choose the Zs to cancel off these powers of $1/\epsilon$, and nothing more. Therefore the Zs can be written as
 \begin{eqnarray}
 Z_{\phi} = 1 + \sum_{n=1}^{\infty} \frac{a_n(\lambda)}{\epsilon^n} \nonumber \\
 Z_{m} = 1 + \sum_{n=1}^{\infty} \frac{b_n(\lambda)}{\epsilon^n} \nonumber \\
@@ -527,7 +527,7 @@ Remember that bare fields and parameters must be independent of $\mu$.Define
 We can calculate $G_1 = c_1 - 2a_1 = \frac{3\lambda}{16\pi^2} + \mathcal{O}(\lambda^2)$.
 As $\ln \lambda_0 = G + \ln \lambda + \epsilon \ln \tilde{\mu} $. From the independence of $\lambda_0$, we can derive
 \[\left ( 1 + \frac{\lambda G'_1}{\epsilon} + \cdots \right) \frac{d\lambda}{d\ln \mu} + \epsilon \lambda = 0\]
-In a renormalizable theory, we should have
+In a re-normalizable theory, we should have
 \[\frac{d\lambda}{d\ln\mu} = -\epsilon\lambda + \beta(\lambda)\]
 So
 \[\beta(\lambda) = \lambda^2 G'_1(\lambda)\]
@@ -554,62 +554,103 @@ As $G^{(n)}_0 = Z_{\phi}^{n/2} G^{(n)}$, from the independence of bare Green's f
 \subsubsection{Effective action}
 \[Z[J] = e^{-iE[J]} = \int \mathcal{D} \phi \exp\left[ i\int d^4x (\mathcal{L}[\phi] + J \phi) \right]\]
 Define 
-\[\phi_{cl} (x) \equiv \langle \Omega | \phi(x) | \Omega \rangle_{J}\]
+\[\phi_{\mathrm{cl}} (x) \equiv \langle \Omega | \phi(x) | \Omega \rangle_{J}\]
 So, we can derive
-\[\frac{\delta}{\delta J(x)} E[J] = - \phi_{cl}(x)\]
+\[\frac{\delta}{\delta J(x)} E[J] = - \phi_{\mathrm{cl}}(x)\]
 Define
-\[\Gamma[\phi_{cl}] \equiv -E[J] - \int d^4y J(y) \phi_{cl}(y)\]
+\[\Gamma[\phi_{\mathrm{cl}}] \equiv -E[J] - \int d^4y J(y) \phi_{\mathrm{cl}}(y)\]
 We can verify that
-\[\frac{\delta}{\delta \phi_{cl}(x)} = -J(x)\]
+\[\frac{\delta}{\delta \phi_{\mathrm{cl}}(x)} \Gamma[\phi_{\mathrm{cl}}] = -J(x)\]
 If the external source is set to zero, the effective action satisfy the equation
-\[\frac{\delta}{\delta \phi_{cl}(x)} = 0\]
-The solution to this equation are the values of $\langle \phi(x) \rangle$ in the stable quantum states of the theory. For a translational-invariant vacuum state, we will find a solution in which $\phi_{cl}$ is independent of $x$. 
-For the field theory that the possible vacuum states are invariant under translations and Lorentz transformations, for each possible vacuum states, the corresponding solution $\phi_{cl}$ will be a constant, independent of $x$.
+\[\frac{\delta}{\delta \phi_{\mathrm{cl}}(x)} \Gamma[\phi_{\mathrm{cl}}] = 0\]
+The solution to this equation are the values of $\langle \phi(x) \rangle$ in the stable quantum states of the theory. For a translational-invariant vacuum state, we will find a solution in which $\phi_{\mathrm{cl}}$ is independent of $x$. 
+For the field theory that the possible vacuum states are invariant under translations and Lorentz transformations, for each possible vacuum states, the corresponding solution $\phi_{\mathrm{cl}}$ will be a constant, independent of $x$.
 If $T$ is the time extent of the region and $V$ is its three dimensional volume, we can write
-\[\Gamma[\phi_{cl}] = -(VT) \cdot V_{eff}(\phi_{cl})\]
-The coefficient $V_{eff}$ is called effective potential. The condition that $\Gamma[\phi_{cl}]$ has an extremum then reduces to the simple equation
-\[\frac{\partial}{\partial \phi_{cl}} V_{eff}(\phi_{cl}) = 0\] 
-A system with spontaneously broken symmetry will have several minimum of $V_{eff}$, all with the same energy by virtue of the symmetry. The choice of one among these vacuum is the spontaneous symmetry breaking.
+\[\Gamma[\phi_{\mathrm{cl}}] = -(VT) \cdot V_{\mathrm{eff}}(\phi_{\mathrm{cl}})\]
+The coefficient $V_{\mathrm{eff}}$ is called effective potential. The condition that $\Gamma[\phi_{\mathrm{cl}}]$ has an extreme then reduces to the simple equation
+\[\frac{\partial}{\partial \phi_{\mathrm{cl}}} V_{\mathrm{eff}}(\phi_{\mathrm{cl}}) = 0\] 
+A system with spontaneously broken symmetry will have several minimum of $V_{\mathrm{eff}}$, all with the same energy by virtue of the symmetry. The choice of one among these vacuum is the spontaneous symmetry breaking.
 
 \subsubsection{Computation of the effective action}
-Decompose the Lagrangian into a piece depending on renormalized parameters and one containing the counterterms
+Decompose the Lagrangian into a piece depending on renormalized parameters and one containing the counter-terms
 \[\mathcal{L} = \mathcal{L}_1 + \delta \mathcal{L}\]
 Define $J_1$ by
-\[\frac{\delta \mathcal{L}_1}{\delta \phi} |_{\phi = \phi_{cl}} + J_1(x) = 0\]
+\[\frac{\delta \mathcal{L}_1}{\delta \phi} |_{\phi = \phi_{\mathrm{cl}}} + J_1(x) = 0\]
 Define $\delta J$ by
 \[J(x) = J_1(x) + \delta J(x)\]
 So, we have
 \[e^{-iE[J]} = \int \mathcal{D}\phi e^{i\int d^4x (\mathcal{L}_1 + J_1\phi)} e^{i\int d^4x (\delta \mathcal{L} + \delta J \phi)}\]
-Replace $\phi$ by $\phi_{cl}+\eta$,
+Replace $\phi$ by $\phi_{\mathrm{cl}}+\eta$,
 \begin{eqnarray}
-\int d^4x \, (\mathcal{L}_1 + J_1\phi) &=& \int d^4x \, (\mathcal{L}_1[\phi_{cl}] + J_1\phi_{cl}) + \int d^4x \, \eta(x) \left( \frac{\delta \mathcal{L}_1}{\delta \phi} + J_1 \right) \nonumber \\
+\int d^4x \, (\mathcal{L}_1 + J_1\phi) &=& \int d^4x \, (\mathcal{L}_1[\phi_{\mathrm{cl}}] + J_1\phi_{\mathrm{cl}}) + \int d^4x \, \eta(x) \left( \frac{\delta \mathcal{L}_1}{\delta \phi} + J_1 \right) \nonumber \\
 &+& \frac{1}{2} \int d^4x \, d^4y \, \eta(x) \eta(y) \frac{\delta^2 \mathcal{L}_1}{\delta \phi(x) \delta \phi(y)} \nonumber \\
 &+& \frac{1}{3!} \int d^4x \, d^4y \, d^4z \, \eta(x) \eta(y) \eta(z) \frac{\delta^3 \mathcal{L}_1}{\delta \phi(x) \delta \phi(y) \delta \phi(z)} + \cdots \nonumber
 \end{eqnarray}
-The term linear in $\eta$ vanishes by definition of $J_1$.  Keeping only the term up to quadratic order in $\eta$ and still neglecting the counterterms, we have a pure Gaussian integral, which can be evaluated in terms of a functional determinant:
+The term linear in $\eta$ vanishes by definition of $J_1$.  Keeping only the term up to quadratic order in $\eta$ and still neglecting the counter-terms, we have a pure Gaussian integral, which can be evaluated in terms of a functional determinant:
 \begin{eqnarray}
-&&\int \mathcal{D}\eta \exp \left[ i \left( \int ( \mathcal{L}_1 [\phi_{cl}] + J_1\phi_{cl} ) +  \frac{1}{2} \int \eta \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \eta \right) \right] \nonumber \\
-&=& \exp \left[ i \int ( \mathcal{L}_1 [\phi_{cl}] + J_1\phi_{cl} )\right] \left( \det \left[  \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] \right) ^{-\frac{1}{2}} \nonumber
+&&\int \mathcal{D}\eta \exp \left[ i \left( \int ( \mathcal{L}_1 [\phi_{\mathrm{cl}}] + J_1\phi_{\mathrm{cl}} ) +  \frac{1}{2} \int \eta \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \eta \right) \right] \nonumber \\
+&=& \exp \left[ i \int ( \mathcal{L}_1 [\phi_{\mathrm{cl}}] + J_1\phi_{\mathrm{cl}} )\right] \left( \det \left[  \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] \right) ^{-\frac{1}{2}} \nonumber
 \end{eqnarray}
-Finally, put back the effects of the counterterm Lagrangian,writing it as
-\[(\delta \mathcal{L}[\phi_{cl}] + \delta J \phi_{cl} ) + ( \delta \mathcal{L}[\phi_{cl} + \eta] - \delta\mathcal{L} [\phi_{cl}] + \delta J \eta)\]
+Finally, put back the effects of the counter-term Lagrangian,writing it as
+\[(\delta \mathcal{L}[\phi_{\mathrm{cl}}] + \delta J \phi_{\mathrm{cl}} ) + ( \delta \mathcal{L}[\phi_{\mathrm{cl}} + \eta] - \delta\mathcal{L} [\phi_{\mathrm{cl}}] + \delta J \eta)\]
 Define
-\[\mathcal{L}_2 = \left(\frac{1}{3!} \int d^4x \, d^4y \, d^4z \, \eta(x) \eta(y) \eta(z) \frac{\delta^3 \mathcal{L}_1}{\delta \phi(x) \delta \phi(y) \delta \phi(z)} + \cdots \right) + ( \delta \mathcal{L}[\phi_{cl} + \eta] - \delta\mathcal{L} [\phi_{cl}] + \delta J \eta)\]
+\[\mathcal{L}_2 = \left(\frac{1}{3!} \int d^4x \, d^4y \, d^4z \, \eta(x) \eta(y) \eta(z) \frac{\delta^3 \mathcal{L}_1}{\delta \phi(x) \delta \phi(y) \delta \phi(z)} + \cdots \right) + ( \delta \mathcal{L}[\phi_{\mathrm{cl}} + \eta] - \delta\mathcal{L} [\phi_{\mathrm{cl}}] + \delta J \eta)\]
 So
-\[e^{-iE[J]} = \exp \left[ i \int ( \mathcal{L}_1 [\phi_{cl}] + J_1\phi_{cl} + \delta \mathcal{L}[\phi_{cl}] + \delta J \phi_{cl} )\right] e^{i\int \mathcal{L}_2(\frac{1}{i} \frac{\delta}{\delta I})} \int \mathcal{D}\eta e^{i\int \left(\frac{1}{2} \eta \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \eta + I\eta \right)}\]
+\[e^{-iE[J]} = \exp \left[ i \int ( \mathcal{L}_1 [\phi_{\mathrm{cl}}] + J_1\phi_{\mathrm{cl}} + \delta \mathcal{L}[\phi_{\mathrm{cl}}] + \delta J \phi_{\mathrm{cl}} )\right] e^{i\int \mathcal{L}_2(\frac{1}{i} \frac{\delta}{\delta I})} \int \mathcal{D}\eta e^{i\int \left(\frac{1}{2} \eta \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \eta + I\eta \right)}\]
 Therefore, define propagator as
 \[D_F \equiv i \left( \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi}\right)^{-1}\]
 We have
-\[e^{-iE[J]} = \exp \left[ i \int ( \mathcal{L}_1 [\phi_{cl}] + J_1\phi_{cl} + \delta \mathcal{L}[\phi_{cl}] + \delta J \phi_{cl} )\right] \left( \det \left[  \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] \right) ^{-\frac{1}{2}} e^{i\int \mathcal{L}_2(\frac{1}{i} \frac{\delta}{\delta I})} \int \mathcal{D}\eta e^{i\int \left(-\frac{1}{2} I D_F I \right)} |_{I=0}\]
+\[e^{-iE[J]} = \exp \left[ i \int ( \mathcal{L}_1 [\phi_{\mathrm{cl}}] + J_1\phi_{\mathrm{cl}} + \delta \mathcal{L}[\phi_{\mathrm{cl}}] + \delta J \phi_{\mathrm{cl}} )\right] \left( \det \left[  \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] \right) ^{-\frac{1}{2}} e^{i\int \mathcal{L}_2(\frac{1}{i} \frac{\delta}{\delta I})} \int \mathcal{D}\eta e^{i\int \left(-\frac{1}{2} I D_F I \right)} |_{I=0}\]
 Similar to the procedure in the perturbation theory for path integral quantization, we can get a perturbation expansion for $iE[J]$ using connected Feynman diagram,
-\[-iE[J] = i \int ( \mathcal{L}_1 [\phi_{cl}] + J_1\phi_{cl} + \delta \mathcal{L}[\phi_{cl}] + \delta J \phi_{cl} ) - \frac{1}{2} \log \det \left[  \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] + \mbox{ connected diagrams }\]
+\[-iE[J] = i \int ( \mathcal{L}_1 [\phi_{\mathrm{cl}}] + J_1\phi_{\mathrm{cl}} + \delta \mathcal{L}[\phi_{\mathrm{cl}}] + \delta J \phi_{\mathrm{cl}} ) - \frac{1}{2} \log \det \left[  \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] + \mbox{ connected diagrams }\]
 From this equation, $\Gamma$ follows directly:
-\[\Gamma[\phi_{cl}] = \int d^4x \mathcal{L}_1[\phi_{cl}] + \frac{i}{2} \log \det \left[  \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] -i \mbox{ connected diagrams} + \int d^4x \delta\mathcal{L}[\phi_{cl}]\]
-\subsubsection{The effective action as a generating functional}
+\[\Gamma[\phi_{\mathrm{cl}}] = \int d^4x \mathcal{L}_1[\phi_{\mathrm{cl}}] + \frac{i}{2} \log \det \left[  \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] -i \mbox{ connected diagrams} + \int d^4x \delta\mathcal{L}[\phi_{\mathrm{cl}}]\]
+Notice that there are no terms remaining that depend explicitly on $J$; thus, $\Gamma$ is expressed as a function of $\phi_{\mathrm{cl}}$ , as it should be. The Feynman diagrams contributing to $\Gamma[\phi_{\mathrm{cl}}]$ have no external lines, and the simplest ones turn out to have two loops. The lowest-order quantum correction to $\Gamma$ is given by the
+functional determinant.\\
+The last term provides a set of counter-terms that can be used
+to satisfy the re-normalization conditions on $\Gamma$ and, in the process, to cancel divergences that appear in the evaluation of the functional determinant and the diagrams. The re-normalization conditions will determine all of the counter-terms in $\delta \mathcal{L}$. However, the formalism we have constructed contains a new counter-term $\delta J$. That coefficient is determined by  $\langle \eta \rangle = 0$. In practice, we will satisfy this condition by simply ignoring any one-particle-irreducible one-point diagram, since any such diagram will be cancelled by adjustment of $\delta J$. 
 
-\subsubsection{Renormalization and symmetry}
+\subsubsection{The effective action as a generating functional}
+$E[J]$ is called the generating of connected correlation functions,
+\[\frac{\delta^n E[J]}{\delta J(x_1) \cdots \delta J(x_n)} = i^{n+1} \langle \phi(x_1) \cdots \phi(x_n) \rangle_{\mbox{conn}}\]
+The effective action $\Gamma[\phi_{\mathrm{cl}}]$ is the generating functional of one-particle-irreducible correlation functional,
+\[\frac{\delta \Gamma[\phi_{\mathrm{cl}}]}{\delta \phi_{\mathrm{cl}}(x)}  = 0\]
+\[\frac{\delta^2 \Gamma[\phi_{\mathrm{cl}}]}{\delta \phi_{\mathrm{cl}}(x) \delta \phi_{\mathrm{cl}}(y)}  = iD^{-1}(x,y)\]
+Here, $D(x,y) = \langle \phi(x) \phi(y) \rangle_{\mbox{conn}}$. When $n \geq 3$,
+\[\frac{\delta^n \Gamma[\phi_{\mathrm{cl}}]}{\delta \phi_{\mathrm{cl}}(x_1) \cdots \delta \phi_{\mathrm{cl}}(x_n)} = -i \langle \phi(x_1) \cdots \phi(x_n) \rangle_{\mbox{1PI}}\]
+The proof of statements above can be found in chapter 10.2 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}\\ \\
+The chapter 21 of \emph{Quantum field theory (M. Srednicki)} gives an constructive way to define the effective action. 
+\[\Gamma[\phi] \equiv \frac{1}{2} \int \frac{d^d k}{(2\pi)^d} \tilde{\phi}(-k)(-k^2 - m^2 - M^2(k^2))\tilde{\phi}(k) + \frac{1}{n!} \int \frac{d^d k_1}{(2\pi)^d} \cdots \frac{d^d k_n}{(2\pi)^d} (2\pi)^d \delta(k_1+\cdots+k_n) V_n(k_1,\cdots,k_n) \tilde{\phi}(k_1) \cdots \tilde{\phi}(k_n)\]
+Here $\tilde{\phi}(k) = \int d^dx e^{-ikx} \phi(x)$, and $iV_n(k_1,\cdots,k_n)$ equals the value of 1PI Feynman diagram in momentum space. The effective action has the property that the tree-level Feynman diagrams it generates give the complete scattering amplitude of the original theory. The author also proved that this definition is equivalent to the definition from \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}.
+  
+\subsubsection{Re-normalization and symmetry}
+Consider first the computation of the effective potential for constant classical fields, in a field theory with an arbitrary number of fields $\phi^i$. The effective potential has mass dimension $4$, so we expect that $V_{\mathrm{eff}}(\phi_{\mathrm{cl}})$ will have divergent terms up to $\Lambda^4$. To understand these divergences,
+expand $V_{\mathrm{eff}}(\phi_{\mathrm{cl}})$ in a Taylor series:
+\[V_{\mathrm{eff}}(\phi_{\mathrm{cl}}) = A_0 + A_2^{ij}\phi_{\mathrm{cl}}^i \phi_{\mathrm{cl}}^j + A_4^{ijkl} \phi_{\mathrm{cl}}^i \phi_{\mathrm{cl}}^j \phi_{\mathrm{cl}}^k \phi_{\mathrm{cl}}^l + \cdots\]
+In theories without a symmetry of $\phi \to \phi$, there might also be terms linear and cubic in $\phi^i$; we omit these for simplicity. The coefficients $A_0$, $A_2$, $A_4$ have mass dimension, respectively, $4$, $2$, and $0$; thus we expect them to contain $\Lambda^4$, $\Lambda^2$, and $\log \Lambda$ divergences, respectively. The power-counting analysis predicts that all higher terms in the Taylor series expansion should be finite.
+The constant term $A_0$ is independent of $\phi_{\mathrm{cl}}$; it has no physical significance. However, the divergences in $A_2$ and $A_4$ appear in physical quantities, since these coefficients enter the inverse propagator and the irreducible four-point function and therefore appear in the computation of S-matrix elements. There is one further coefficient in the effective action that has non-negative mass dimension by power counting; this is the coefficient of the term quadratic in $\partial_{\mu} \phi_{\mathrm{cl}}$, which appears when the effective action is evaluated for a non-constant background field:
+\[\Delta \Gamma [\phi_{\mathrm{cl}}] = \int d^4x B_2^{ij} \partial_{\mu} \phi_{\mathrm{cl}}^i \partial^{\mu} \phi_{\mathrm{cl}}^j\]
+All other coefficients in the Taylor expansion of the effective action in powers of $\phi_{\mathrm{cl}}$ are finite by power counting.\\
+We can now argue that the counter-terms of the original Lagrangian suffice to remove the divergences that might appear in the computation of $\Gamma[\phi_{\mathrm{cl}}]$. The argument proceeds in two steps. We first use the BPHZ theorem to argue that the divergences of Green's functions can be removed by adjusting a set of counter-terms corresponding to the possible operators that can be added to the Lagrangian with coefficients of mass dimension greater than or equal to zero. The coefficients of these counter-terms are in 1-to-1 correspondence with the coefficients $A_2$, $A_4$, and $B_2$ of the effective action. Next, we use the fact that the effective action is manifestly invariant to the original Symmetry group of the model. This is true even if the vacuum state of the model has spontaneous symmetry breaking, since the method we presented for computing the effective action is manifestly invariant to the original symmetry of the Lagrangian. Combining these two results, we conclude that the effective action can always be made finite by adjusting the set of counter-terms that are invariant to the original symmetry of the theory, even if this symmetry is spontaneously broken.
 
 \subsubsection{Goldstone's theorem}
+Goldstone's theorem examines a generic continuous symmetry which is spontaneously broken; i.e., its currents are conserved, but the ground state is not invariant under the action of the corresponding charges. Then, necessarily, new massless (or light, if the symmetry is not exact) scalar particles appear in the spectrum of possible excitations. There is one scalar particle - called a Nambu-Goldstone boson — for each generator of the symmetry that is broken, i.e., that does not preserve the ground state. \\ \\
+A general continuous symmetry transformation has the form
+\[\phi^a \to \phi^a + \alpha \Delta^a (\phi)\]
+where $\alpha$ is an infinitesimal parameter and $\Delta^a$ is some function of all the $\phi$'s. Specialize to constant fields; then the derivative terms in $\mathcal{L}$ vanish and the potential alone must be invariant. This condition can be written
+\[V(\phi^a) = V(\phi^a + \alpha \Delta^a (\phi)) \quad \mbox{or} \quad \Delta^a(\phi) \frac{\partial}{\partial \phi^a} V(\phi) = 0\]\\
+The effective potential $V_{\mathrm{eff}}$ encapsulates the full solution to the theory, including all orders of quantum corrections. At the same time, it satisfies the general properties of the classical potential: It is invariant to the symmetries of the theory, and its minimum gives the vacuum expectation value of $\phi_{\mathrm{cl}}$. So
+\[\Delta^a(\phi) \frac{\partial}{\partial \phi^a} V_{\mathrm{eff}}(\phi) = 0\]
+Now differentiate with respect to $\phi^b$, and set $\phi = \phi_{\mathrm{cl}}$
+\[0 = \left( \frac{\partial \Delta^a}{\partial \phi^b} \right)_{\phi_{\mathrm{cl}}} \left( \frac{\partial V_{\mathrm{eff}}}{\partial \phi^a}\right)_{\phi_{\mathrm{cl}}} + \Delta^a(\phi_{\mathrm{cl}}) \left( \frac{\partial^2}{\partial \phi^a \partial \phi^b}V_{\mathrm{eff}}\right)_{\phi_{\mathrm{cl}}}\]
+The first term vanishes since $\phi_{\mathrm{cl}}$ is a minimum of $V_{\mathrm{eff}}$, so the second term must also vanish. If the transformation leaves $\phi_{\mathrm{cl}}$ unchanged (i.e., if the symmetry is respected by the ground state), then $\Delta^a(\phi_{\mathrm{cl}})=0$ and this relation is trivial. A spontaneously broken symmetry is precisely one for which $\Delta^a(\phi_{\mathrm{cl}}) \neq 0$; in this
+case $\Delta^a(\phi_{\mathrm{cl}})$ is the vector with eigenvalue zero.\\ \\
+We now argue that the presence of such a zero eigenvalue implies the existence of a massless scalar particle. Effective action's second functional derivative is the inverse propagator
+\[i\tilde{D}_{ij}^{-1}(p^2) = \int d^4x e^{-ip(x-y)} \frac{\delta \Gamma}{\delta \phi^i \delta \phi^j}(x,y)\]
+A particle of mass $m$ corresponds to a zero eigenvalue of this matrix equation at $p^2 = - m^2$. Now set $p=0$. This implies that we differentiate $\Gamma[\phi_{\mathrm{cl}}]$ with respect to constant fields. Thus, we can replace $\Gamma[\phi_{\mathrm{cl}}]$ by its value with constant
+classical fields, which is just the effective potential. We find that the quantum field theory contains a scalar particle of zero mass when the matrix of second derivatives,
+\[\frac{\partial^2}{\partial \phi^i_{\mathrm{cl}} \partial \phi^j_{\mathrm{cl}}}V_{\mathrm{eff}}\]
+has a zero eigenvalue. This completes the proof of Goldstone's theorem. 
 
 \subsection{Linear sigma model}
 \[\mathcal{L} = -\frac{1}{2} \partial_{\mu} \phi^i \partial^{\mu}\phi^i + \frac{1}{2} \mu^2 (\phi^i)^2 - \frac{\lambda}{4} [(\phi^i)]\]
