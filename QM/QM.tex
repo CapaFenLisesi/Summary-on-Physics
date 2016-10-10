@@ -20,4 +20,302 @@
 \title{Summary on Quantum Mechanics}
 \begin{document}
 \maketitle
+\section{Linear Algebra}
+\subsection{Linear Vector Space}
+\subsubsection{Definition}
+A linear vector space is a set of elements, called vectors, which is closed under addition and multiplication by scalars. That is to say, if $\phi$ and $\psi$ are vectors then so is $a\phi+b\psi$, where $a$ and $b$ are arbitrary scalars. If the scalars belong to the field of complex (real) numbers, we speak of a complex (real) linear vector space. Henceforth the scalars will be complex numbers unless otherwise stated.
+\paragraph{Examples}
+(1) Discrete vectors, which may be represented as columns of complex
+numbers\\
+(2) Spaces of functions of some type, for example the space of all differentiable functions
+
+\subsubsection{Linear independence}
+A set of vectors $\{\phi_n\}$ is said to be linearly independent if no non-trivial linear combination of them sums to zero; that is to say, if the equation $\sum_{n} c_n \phi_n$ can hold only when $c_n=0$ for all $n$. If this condition does not hold, the set of
+vectors is said to be linearly dependent, in which case it is possible to express a member of the set as a linear combination of the others.\\
+The maximum number of linearly independent vectors in a space is called the dimension of the space. \\
+A maximal set of linearly independent vectors is called a basis for the space. Any vector in the space can be expressed as a linear combination of the basis vectors.
+
+\subsubsection{Inner product}
+An inner product (or scalar product) for a linear vector space associates a scalar $(\phi,\psi)$ with every ordered pair of vectors. 
+It must satisfy the following properties:\\
+(a) $(\phi,\psi) = $ a complex number, \\
+(b) $(\phi,\psi) = (\psi,\phi)^*$,\\
+(c) $(\phi,c_1\phi_1 + c_2\psi_2) = c_1(\phi,\psi_1) + c_2(\phi,\psi_2)$\\
+(d) $(\phi,\phi)>0$,with equality holding if and only if $\phi=0$.\\
+\paragraph{Examples}
+(1) If $\psi$ is the column vector with elements $a_1$, $a_2$, $\cdots$, and $\phi$ is the column vector with elements $b_1$, $b_2$, $\cdots$, then
+\[(\psi,\phi) = a_1^*b_1 + a_2^*b_2 + \cdots\]
+(2) If $\psi$ and $\phi$ are functions of $x$, then
+\[(\phi,\psi) = \int \psi^*(x) \phi(x) w(x) dx\]
+where $w(x)$ is some non-negative weight function.
+\paragraph{Norm}
+\[|| \phi || = (\phi,\phi)^{\frac{1}{2}}\]
+\paragraph{Schwarz's inequality}
+\[|(\psi,\phi)|^2 \leq (\psi,\psi)(\phi,\phi)\]
+\paragraph{triangle inequality}
+\[||(\psi+\phi)|| \leq ||\phi|| + ||\psi||\]
+\paragraph{Orthonormal}
+A set of vectors $\{\phi_n\}$ is said to be orthonormal if the vectors are pairwise orthogonal and of unit norm; that is to say, their inner products satisfy $(\psi_m,\phi_n) = \delta_{mn}$.
+
+\subsubsection{Dual space}
+Corresponding to any linear vector space $V$ there exists the dual space of linear functionals on $V$ . A linear functional $F$ assigns a scalar $F(\phi)$ to each vector $\phi$, such that
+\[F(a\phi+b\psi) = aF(\phi) + bF(\psi)\]
+for any vectors for $\phi$ and $\psi$, and any scalars $a$ and $b$. The set of linear functionals may itself be regarded as forming a linear space $V'$ if we define the sum of two functionals as
+\[(F_1+F_2)(\phi) = F_1(\phi) + F_2(\phi)\]
+\paragraph{Riesz theorem} There is a one-to-one correspondence between linear functionals $F$ in $V'$ and vectors $f$ in $V$, such that all linear functionals have the form
+\[F(\phi) = (f,\phi)\]
+$f$ being a fixed vector, and $\phi$ being an arbitrary vector. Thus the spaces $V$ and $V'$ are essentially isomorphic.
+
+\subsubsection{Dirac's bra and ket notation}
+In Dirac’s notation, which is very popular in quantum mechanics, the
+vectors in $V$ are called ket vectors, and are denoted as $|\phi \rangle$. The linear functionals in the dual space $V'$ are called bra vectors, and are denoted as $\langle F |$. The numerical value of the functional is denoted as
+\[F(\phi) = \langle F | \phi \rangle\]
+According to the Riesz theorem, there is a one-to-one correspondence between bras and kets. Therefore we can use the same alphabetic character for the functional (a member of $V'$) and the vector (in $V$ ) to which it corresponds, relying on the bra, $\langle F |$, or ket, $|F\rangle$, notation to determine which space is
+referred to.So
+\[\langle F | \phi \rangle = (F,\phi)\]
+Note that the Riesz theorem establishes, by construction, an antilinear correspondence between bras and kets. If $\langle F | \leftrightarrow  |F\rangle$, then
+\[c_1^* \langle F_1 | + c_2^* \langle F_2 | \leftrightarrow  c_1 |F_1\rangle + c_2|F_2\rangle\]
+
+\subsection{Linear Operators}
+An operator on a vector space maps vectors onto vectors.
+A linear operator satisfies
+\[A (c_1 \psi_1 + c_2 \psi_2) = c_1 A(\psi_1) + c_2 A(\psi_2)\]
+Define the sum and product of operators,
+\begin{eqnarray}
+(A+B)\psi &=& A\psi + B\psi \nonumber \\
+A B \psi &=& A (B\psi) \nonumber
+\end{eqnarray}
+Define their action to the left on bra vectors as
+\[(\langle \phi | A ) \psi \rangle = \langle \phi | ( A | \psi \rangle )\]
+So we may define the operation of $A$ on the bra space of functionals as
+\[A F_{\phi} (\psi) = F_{\phi}(A\psi)\]
+According to the Riesz theorem there must exist a ket vector $\chi$ such that
+\[AF_{\phi}(\psi) = (\chi, \psi) = F_{\chi}(\psi)\]
+Define operator $A^{\dagger}$ as
+\[AF_{\phi} = F_{A^{\dagger}\chi}\]
+Therefore,
+\[(A^{\dagger}\phi, \psi) = (\phi, A\psi)\]
+\[\langle \phi | A^{\dagger} | \psi \rangle ^* = \langle \psi | A | \phi \rangle\]
+Several useful properties of the adjoint operator:
+\begin{eqnarray}
+(cA)^{\dagger} &=& c^* A^{\dagger} \nonumber \\
+(A + B)^{\dagger} &=& A^{\dagger} + B^{\dagger} \nonumber \\
+(AB)^{\dagger} &=& B^{\dagger}  A^{\dagger} \nonumber
+\end{eqnarray}
+\paragraph{Outer product}
+\[(| \psi \rangle \langle \phi |) | \lambda \rangle = | \psi \rangle (\langle \phi | \lambda \rangle)\]
+\[(| \psi \rangle \langle \phi |) ^ {\dagger} = | \phi \rangle \langle \psi |\]
+\paragraph{Trace}
+\[ \mathrm{Tr} A = \sum \langle u_j | A | u_j \rangle \]
+where $\{ u_j \}$ may be any orthonormal basis. It can be shown that the value of $\mathrm{Tr}A$ is independent of the particular orthonormal basis that is chosen for its evaluation.
+
+\subsection{Self-Adjoint operators}
+An operator $A$ that is equal to its adjoint $A^{\dagger}$ is called self-adjoint. This means that it satisfies
+\[\langle \phi | A | \psi \rangle  = \langle \psi | A | \phi \rangle^*\]
+and that the domain of $A$ coincides with the domain of $A^{\dagger}$. An operator that only satisfies above equation is called Hermitian.
+\paragraph{Theorem 1} If $\langle \psi | A | \psi \rangle  = \langle \psi | A | \psi \rangle^*$ for all $| \psi \rangle$, then it follows that $\langle \phi_1 | A | \phi_2 \rangle  = \langle \phi_2 | A | \phi_1 \rangle^*$ for all $|\phi_1\rangle$ and $|\phi_2\rangle$, and hence that $A = A^{\dagger}$.\\
+If an operator acting on a certain vector produces a scalar multiple of that same vector,
+\[ A |\phi \rangle = a |\phi \rangle\]
+we call the vector $| \phi \rangle$ an eigenvector and the scalar a an eigenvalue of the operator $A$. The antilinear correspondence between bras and kets, and the definition of the adjoint operator $A^{\dagger}$, imply that the left-handed eigenvalue equation
+\[\langle \phi | A^{\dagger} = a^{*} \langle \phi |\]
+\paragraph{Theorem 2} If $A$ is a Hermitian operator then all of its eigenvalues are real.
+\paragraph{Theorem 3} Eigenvectors corresponding to distinct eigenvalues of a Hermitian operator must be orthogonal.
+\paragraph{Properties of complete orthonormal sets}
+If the orthonormal set of vectors $\{ \phi_i \}$ is complete, then we can expand an arbitrary vector $|v\rangle$ in terms of it:
+\[ |v\rangle = \sum | \phi_i \rangle (\langle \phi_i | v \rangle) = \left( \sum |\phi_i \rangle \langle \phi_i | \right) | v\rangle\]
+So,
+\[ \sum |\phi_i \rangle \langle \phi_i | = I\]
+If $A |\phi_i \rangle = a_i |\phi_i\rangle$ and the eigenvectors form a complete orthonormal set, then the operator can be reconstructed in a useful diagonal form in terms of its eigenvalues and eigenvectors:
+\[A = \sum a_i |\phi_i \rangle \langle \phi_i |\]
+We can define a function of an operator
+\[f(A) =  \sum f(a_i) |\phi_i \rangle \langle \phi_i |\]
+The Hermitian operators in a finite N-dimensional vector space have complete sets of eigenvectors. But This statement does not carry over to infinite-dimensional spaces. A Hermitian operator in an infinite dimensional vector space may or may not possess a complete set of eigenvectors, depending upon the precise nature of the operator and the vector space. Instead, we have spectral theorem.
+\paragraph{Theorem 4} To each self-adjoint operator $A$ there corresponds a unique family of projection operators, $E(\lambda)$, for real $\lambda$, with the properties:\\
+(1) If $\lambda_1 < \lambda_2$ then $E(\lambda_1)E(\lambda_2) = E(\lambda_2)E(\lambda_1) E(\lambda_1) $\\
+(2) If $\epsilon > 0$, then $E(\lambda + \epsilon)|\psi\rangle \to E(\lambda)|\psi\rangle$ as $\epsilon \to 0$;\\
+(3) $E(\lambda)|\psi\rangle to 0$ as $\lambda \to -\infty$;\\
+(4) $E(\lambda)|\psi\rangle to |\psi\rangle$ as $\lambda \to \infty$;
+(v) $\int_{-\infty}^{\infty} \lambda E(\lambda) = A$.
+We can define a function of an operator
+\[f(A) = \int_{-\infty}^{\infty} f(\lambda) E(\lambda)\]
+Following Dirac’s pioneering formulation, it has become customary in
+quantum mechanics to write a formal eigenvalue equation for an operator such as $Q$ that has a continuous spectrum,
+\[Q |q\rangle = q|q\rangle\]
+The orthonormality condition for the continuous case takes the form
+\[\langle q' | q'' \rangle = \delta(q-q')\]
+Evidently the norm of these formal eigenvectors is infinite, since 
+$\langle q | q \rangle \to \infty$. Instead of the spectral theorem for $Q$, Dirac would write
+\[Q = \int_{-\infty}^{\infty} q |q\rangle\langle q| dq\]
+Dirac’s formulation does not fit into the mathematical theory of Hilbert space, which admits only vectors of finite norm. The projection operator formally given by
+\[E(\lambda) = \int_{-\infty}^{\lambda}  |q\rangle\langle q| dq\]
+is is well defined in Hilbert space, but its derivative does not
+exist within the Hilbert space framework.
+\paragraph{Theorem 5} If $A$ and $B$ are self-adjoint operators, each of which possesses a complete set of eigenvectors, and if $AB =BA$, then there exists a complete set of vectors which are eigenvectors of both $A$ and $B$.\\ \\
+Let $(A, B, \cdots)$ be a set of mutually commutative operators that possess a complete set of common eigenvectors. Corresponding to a particular eigenvalue for each operator, there may be more than one eigenvector. If, however, there is no more than one eigenvector (apart from the arbitrary phase and normalization) for each set of eigenvalues $(a_n, b_m, \cdots)$, then the operators $(A, B, \cdots)$ are said to be a complete commuting set of operators.
+\paragraph{Theorem 6} Any operator that commutes with all members of a complete commuting set must be a function of the operators in that set.
+
+\subsection{Unitary operators}
+\paragraph{Definition} A unitary operator is a bounded linear operator $U: H\to H$ on a Hilbert space $H$ that satisfies $UU^{\dagger} = U^{\dagger}U =I$, where $U^{\dagger}$ is the adjoint of $U$, and $I: H \to H$ is the identity operator.
+\paragraph{Continuous unitary operators} Consider a family of unitary operators, $U(s)$, that depend on a single continuous parameter $s$. 
+Let $U(0) = I $ be the identity operator, and let $U(s_1+s_2) = U(s_1)U(s_2)$.
+We can demonstrate that
+\[\left. \frac{dU}{ds}\right|_{s=0} = iK \mbox{ with } K = K^{\dagger}\]
+The Hermitian operator $K$ is called the generator of the family of unitary operators because it determines $U(s)$, not only for infinitesimal $s$, but for all $s$. This can be shown by differentiating
+\[U(s_1+s_2) = U(s_1)U(s_2)\]
+with respect to $s_2$ and we can get
+\[\left. \frac{dU}{ds}\right|_{s=s_1} = U(s_1)iK \]
+This first order differential equation with initial condition $U(0) = I$ has the unique solution
+\[U(s) = e^{iKs}\]
+
+\subsection{Antiunitary operators}
+\paragraph{Definition} In mathematics, an antiunitary transformation, is a bijective antilinear map
+\[U:H_{1}\to H_{2}\,\]
+between two complex Hilbert spaces such that
+\[\langle Ux,Uy\rangle ={\overline {\langle x,y\rangle }}\]
+for all $x$ and $y$ y in $H_{1}$, where the horizontal bar represents the complex conjugate. If additionally one has $H_{1}=H_{2}$ then $U$ is called an antiunitary operator.
+
+\paragraph{Properties}
+(1) $\langle Ux,Uy\rangle =\overline {\langle x,y\rangle }=\langle y,x\rangle$ holds for all elements $x, y$ of the Hilbert space and an antiunitary $U$.\\
+(2) When $U$ is antiunitary then $U^{2}$ is unitary. This follows from
+\[ \langle U^{2}x,U^{2}y\rangle =\overline {\langle Ux,Uy\rangle }=\langle x,y\rangle\]
+(3) For unitary operator $V$ the operator $VK$, where $K$ is complex conjugate operator, is antiunitary. The reverse is also true, for antiunitary $U$ the operator $UK$ is unitary.\\
+(4) For antiunitary $U$ the definition of the adjoint operator $U^{*}$ is changed into
+\[\langle U^{*}x,y\rangle =\overline {\langle x,Uy\rangle }\]
+(5) The adjoint of an antiunitary $U$ is also antiunitary and $UU^{*}=U^{*}U=1$.
+
+\section{Formulation of quantum mechanics}
+\subsection{Axioms of quantum mechanics}
+(1) The properties of a quantum system are completely defined by specification of its state vector $|\psi\rangle$. The state vector is an element of a complex Hilbert space $\mathcal{H}$ called the space of states.\\
+(2) With every physical property $A$ (energy, position, momentum, angular momentum, ...) there exists an associated linear, Hermitian operator $A$ (usually called observable), which acts in the space of states. The eigenvalues of the operator are the possible values of the physical properties.\\
+(3) If $|\psi\rangle$ is the vector representing the state of a system and if $|\phi\rangle$ represents another physical state, there exists a probability $P(|\psi\rangle,|\phi\rangle)$ of finding $|\psi\rangle$ in state $|\phi\rangle$, which is given by the squared modulus of the scalar product on $\mathcal{H}: \, P(|\psi\rangle,|\phi\rangle) = |\langle \psi | \phi \rangle|^2$ (Born Rule)\\
+If $A$ is an observable with eigenvalues $a_k$ and eigenvectors $|k\rangle$, given a system in the state $|\psi\rangle$, the probability of obtaining $a_k$ as the outcome of the measurement of $A$ is $|\langle k | \psi \rangle|^2$. After the measurement
+the system is left in the state projected on the subspace of the eigenvalue $a_k$ (Wave function collapse).\\
+(4) The evolution of a closed system is unitary. The state vector $\psi(t)\rangle$ at time $t$ is derived from the state vector $\psi(t_0)\rangle$ at time $t_0$ by applying a unitary operator $U(t,t_0)$, called the evolution operator: $\psi(t)\rangle = U(t,t_0) \psi(t)\rangle$.
+
+\subsection{Transformations of States}
+A transformation of states can be described by $|\psi\rangle \to U(\tau) | \psi \rangle \equiv | \psi' \rangle$. And we demand that
+\[|\langle \phi | \psi \rangle| = |\langle \phi' | \psi' \rangle|\]
+\paragraph{Wigner Theorem}
+Any mapping of the vector space onto itself that preserves the value of $|\langle \phi | \psi \rangle|$ may be implemented by an operator $U$ with $U$ being either unitary (linear) or antiunitary (antilinear).
+\paragraph{Continuous transformation} Only linear operators can describe continuous transformations because every continuous transformation has a square root. Suppose, for example, that $U(l)$ describes a displacement through the distance $l$. This can be done by two displacements of $U(l/2)$, and hence $U(l) = U(l/2) U(l/2)$. The product of two antilinear operators is linear, since the second complex conjugation nullifies the effect of the first. Thus, regardless of the linear or antilinear character of $U(l/2)$, it must be the case that $U(l)$ is linear. A continuous operator cannot change discontinuously from linear to antilinear as a function of $l$, so the operator must be linear for all $l$.
+\paragraph{Transformations of observables}
+For an observable $Q$, 
+\[\langle \phi' | Q | \phi' \rangle = \langle \phi | U^{-1}QU | \phi \rangle \]
+If $U(\tau)^{-1}QU(\tau) = \tau Q$, we can prove that
+\[U|q\rangle = |\tau q\rangle\]
+Here, $|q\rangle$ is the eigenvector of $Q$ with eigenvalue $q$. 
+
+
+\subsection{Schr\"{o}dinger equation}
+$U(t,t_0)$ is unitary and $U(t_2,t_0) = U(t_2,t_1)U(t_1,t_0)$. We can define $H(t_0)$ as
+\[\left. \frac{d}{dt}U(t,t_0)\right|_{t=t_0} = -iH(t_0) \mbox{ with } H(t_0) = H(t_0)^{\dagger}\]
+We can demonstrate that
+\[\left. \frac{dU(t,t_0)}{dt}\right|_{t=t_1} = -iH(t_1)U(t_1,t_0) \]
+The formal solution of the differential equation is
+\[U(t,t_0) = I + (-i)^n \sum_{n=1}^{\infty} \int_{t_0}^{t}dt_1 \int_{t_0}^{t_1}dt_2 \cdots \int_{t_0}^{t_{n-1}} dt_n H(t_1)H(t_2)\cdots H(t_n)\]
+Suppose that $T$ stands for time ordering, placing all operators evaluated at later times to the left, the above equation can be written as
+\[U(t,t_0) = I + \frac{(-i)^n}{n!} \sum_{n=1}^{\infty} \int_{t_0}^{t}dt_1 \int_{t_0}^{t}dt_2 \cdots \int_{t_0}^{t} dt_n T\{H(t_1)H(t_2)\cdots H(t_n)\} \equiv \exp \left[ -i T\left\{ \int_{t_0}^{t} H(t')dt'\right\} \right] \]
+If the Hamiltonian operator $H$ is time-dependent but the $H$'s at different times commute. The equation above can be simplified to
+\[U(t,t_0) = \exp \left[ -i \int_{t_0}^{t} H(t')dt' \right] \]
+If the $H$ is time-independent, then
+\[U(t,t_0) = \exp \left[ -i H(t-t_0) \right] \]
+Since $|\psi(t)\rangle = U(t,t_0) |\psi(t_0)\rangle$, we can derive the Schr\"{o}dinger equation
+\[\frac{d |\psi(t)\rangle}{dt} = -iH(t) |\psi(t)\rangle\]
+The expectation value of an observable $Q$ is $\langle \psi | Q | \psi \rangle$, denoted by $\langle Q \rangle$. We can then derive that
+\[\frac{d\langle Q \rangle}{dt} = -i \left\{ \langle [Q,H] \rangle + \langle \frac{\partial Q}{\partial t} \rangle \right\}\]
+This is called Ehrenfest's theorem. 
+
+\subsection{Position operators}
+In three dimensional space, for a particle, we have three operators corresponding to the observations of its position in space, $\mathbf{X} = (X_1, X_2, X_3)$. If the particle has some other internal degrees of freedom, then $\mathbf{X}$ plus some other observables $S$'s will form  a complete commuting set of operators. The eigenstate state will be denoted by $| \mathbf{x},s \rangle$, satisfying that
+\[X_i | \mathbf{x},s \rangle = x_i | \mathbf{x},s \rangle  \]
+It describes a particle posited in $\mathbf{x}$ with internal state $s$. And we will normalize $| \mathbf{x},s \rangle $ by 
+\[\langle \mathbf{x},s'| \mathbf{x},s \rangle = \delta_{ss'}\delta(\mathbf{x}-\mathbf{x}')\]
+
+\subsection{Momentum operators and canonical quantization}
+Since $\mathbf{X}$ plus some other observables $S$'s form a complete commuting set of operators. So, the momentum operators can not be independent of them. Numerous experiments shows that the position and momentum of particles can not be measured simultaneously. So, we expect $[X,P] \neq 0$.
+\paragraph{Guess} 
+For a system which has a classical correspondence, the classical equation of motion of a particle is
+\begin{eqnarray}
+\dot{x} &=& [x,H_C(x,p,t)]_C \nonumber \\
+\dot{p} &=& [p,H_C(x,p,t)]_C \nonumber
+\end{eqnarray}
+$[\quad]_C$ is the Poisson bracket in classical mechanics. In quantum mechanics,
+\begin{eqnarray}
+\frac{d\langle X \rangle}{dt} &=& -i \langle [X,H] \rangle \nonumber \\
+\frac{d\langle P \rangle}{dt} &=& -i \langle [P,H] \rangle \nonumber
+\end{eqnarray}
+If we assume that the classical equation of motion of a particle is an approximation of quantum mechanics, we may expect
+\[[\quad] = i [\quad]_C \]
+Since the Poisson bracket in classical mechanics and commutation bracket in quantum mechanics have the same algebra structure. To get the right classical equation of motion of the particle, we demand that
+\[[X_i,X_j] = 0 \quad [X_i,X_j] = 0 \quad [X_i,P_j] = i \delta_{ij}\]
+and
+\[H = H_C(X,P,t)\]
+\paragraph{Definition} For a general system, we formally define momentum operator $\mathbf{P}$ by 
+\[[X_i,P_j] = i \delta_{ij}\]
+The form of $H$ can not be given as a priori, which can be specified only by the hints from classical theory and experiments.
+
+\subsection{Momentum operators and translation of states}
+\paragraph{Theorem} 
+\[\exp(iG\lambda) A \exp(-iG\lambda) = A + i\lambda[G,A] + \cdots + \frac{i^n\lambda^n}{n!}[G,[G,[G,\cdots[G,A]]]\cdots]+\cdots\]
+Define $T(\mathbf{a}) \equiv e^{-i\mathbf{P \cdot a}}$
+We can get
+\[T(\mathbf{a})^{-1} \mathbf{X} T(\mathbf{a}) = \mathbf{X} + \mathbf{a}\]
+\[T(\mathbf{a})|\mathbf{x}\rangle = |\mathbf{x}+\mathbf{a}\rangle\]
+So, $T(\mathbf{a})$ is the space translation operator. 
+Now, we can also define the momentum operator as the generator of space translation.
+
+\subsection{Angular momentum operators and rotation of states}
+We define the angular momentum operators $\mathbf{J}$ as the generator of rotation.
+\[R(\mathbf{\theta}) \equiv e^{-i\mathbf{J} \cdot \mathbf{n} \theta}\]
+If the operator $\mathbf{M} = (M_1,M_2,M_3)$ is a vector in configuration space and can be rotated by $R$, then we can demonstrate that
+\[[J_{i},M_{j}] = i \epsilon_{ijk}M_k\]
+Especially, 
+\[[J_i,J_j] = i\epsilon_{ijk}J_k\]
+
+\subsubsection{Orbital angular momentum}
+Orbital angular momentum of a particle is defined as $\mathbf{L} = \mathbf{X} \times \mathbf{P}$. It is the generator of rotation of the position of the particle, since
+\[[L_i,X_j] = i\epsilon_{ijk}X_k \quad [L_i,P_j] = i\epsilon_{ijk}P_k \quad [L_i,L_j] = i\epsilon_{ijk}L_k\]
+
+\subsubsection{Spin angular momentum}
+Experiments show that some microscopic particles possess a property called spin. The state of the spin is denoted by $|s\rangle$. The corresponding operators are $\mathbf{S} = [S_1,S_2,S_3]$, which measure the spin along the $\mathbf{1},\mathbf{2},\mathbf{3}$ direction. Spin operator is the generator of rotation of the spin of the particle, so we have
+\[[S_i,S_j]=i\epsilon_{ijk}S_k\]
+And the rotation of position and spin is independent, so
+\[[S_i,L_j] = 0\]
+
+\subsubsection{Total angular momentum}
+The total angular momentum of the particle is 
+\[\mathbf{J} = \mathbf{L} + \mathbf{S}\]
+It is the generator of the rotation of the entire system, which is equivalent to the rotation of the coordinates in opposite direction.
+
+\subsection{Heisenberg picture}
+Define
+\[Q_H = U^{\dagger}(t,t_0)QU(t,t_0)\]
+We can derive that
+\[\frac{dQ_H(t)}{dt} = -i[Q_H(t),H_H(t)] + \left(\frac{\partial Q}{\partial t}\right)_H \]
+Here, $H_H(t) = U^{\dagger}(t,t_0) H(t) U(t,t_0)$
+If the state of the system at $t_0$ is $|\phi_0\rangle$, then
+\[\langle Q \rangle_t = \langle \phi(t) | Q | \phi(t) \rangle = \langle \phi_0 | Q_H(t) | \phi_0 \rangle\]
+If the state $|q\rangle$ is the eigenstate of the $Q$ with the eigenvalue $q$, then $U^{\dagger}(t,t_0)|q\rangle$ is the eigenstate of the $Q_H$ with eigenvalue $q$, which can be denoted by $|q_H(t)\rangle$, so we have
+\[\langle q | \phi(t) \rangle = \langle q_H(t) | \phi_0 \rangle\]
+
+\subsection{Symmetries and conservation laws}
+Let $U = e^{iKs}$ be a continuous unitary transformation with generator$K=K^{\dagger}$. To say that the Hamiltonian
+operator $H$ is invariant under this transformation means that
+\[U(s)^{-1} H(t) U(s) = H(t)\]
+Then we can deduce that
+\[[K,H(t)] = 0\]
+Usually, $K$ does not depend on time explicitly. If the above equation hold for all $t$, then in Heisenberg picture, 
+\[K_H(t) = K \quad |k_H(t) \rangle = | k \rangle\]
+So, 
+\[\langle K \rangle_t = \langle K \rangle_{t_0} \quad \langle k | \phi(t) \rangle = \langle k | \phi_0 \rangle\]
+The probability distribution of the measurement of the observable $K$ will not change with time for an arbitrary initial state. We can assume that the $K$ is a constant of motion.
+
+\paragraph{Stationary states} 
+The concept of a constant of motion should not be confused with the
+concept of a stationary state. \\
+Suppose that the Hamiltonian operator $H$ is independent of $t$, and that the initial state vector is an eigenvector of $H$, $|\phi_0\rangle = | E_n \rangle$ with $H |E_n\rangle = E_n | E_n \rangle$. This describes a state having a unique value of energy $E_n$. So
+\[|\phi(t)\rangle = e^{-iE_nt} |\phi_0\rangle\]
+From this result it follows that the average of any dynamical variable $R$,
+\[\langle \phi(t) | R | \phi(t) \rangle = \langle E_n | R | E_n \rangle\]
+is independent of $t$ for such a state. By considering functions of $R$ we can further show that the probability distribution is independent of time. In a stationary state the averages and probabilities of all dynamical variables are independent of time, whereas a constant of motion has its average and probabilities independent of time for all states.
 \end{document}
