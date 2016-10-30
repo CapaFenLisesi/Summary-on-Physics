@@ -3,9 +3,18 @@
 First, we assume there is an upper limit of velocity of propagation of interaction $c$. Second, we assume that inertial reference frame are all the same in describing the law of physics. Then, we can find the invariant intervals when transforming from one inertial reference frame to another, $ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2$. 
 (In the following, we assume that $c=1$.)This transformation is called Lorentz transformation, which can be written as
 \[\bar{x}^{\mu} = \Lambda^{\mu}_{\phantom{\mu}\nu} x^{\nu}\]
-and it is easy to verify that
-\[\eta_{\mu \nu} \Lambda^{\mu}_{\phantom{\mu}\rho} \Lambda^{\nu}_{\phantom{\nu}\sigma} = \eta_{\rho \sigma},\]
+The invariant symbol of the vector representation of Lorentz transformation is $\eta^{\mu \nu}$
+\[\Lambda^{\mu}_{\phantom{\mu}\rho}  \Lambda^{\nu}_{\phantom{\nu}\sigma}  \eta^{\rho \sigma} = \eta^{\mu \nu},\]
 where,
+\[\eta_{\mu \nu} \equiv \left[ 
+\begin{matrix} 
+-1& & & \\ 
+& +1 & & \\
+& & +1 & \\
+& & & +1
+\end{matrix} 
+\right]\]
+The inverse matrix of $\eta^{\mu \nu}$ is
 \[\eta_{\mu \nu} = \left[ 
 \begin{matrix} 
 -1& & & \\ 
@@ -14,9 +23,13 @@ where,
 & & & +1
 \end{matrix} 
 \right]\]
-and
-\[(\Lambda^{-1})^{\rho}_{\phantom{\rho}\nu} = \Lambda_{\nu}^{\phantom{\mu}\rho}\]
-
+We can use $\eta^{\mu \nu}$ and and its inverse $\eta^{\mu \nu}$ to raise and lower vector indices, 
+\[x_{\mu} \equiv \eta_{\mu \nu} x^{\nu}\]
+And we can verify the following equations,
+\[\Lambda^{\rho}_{\phantom{\rho}\mu} \Lambda_{\rho}^{\phantom{\rho}\nu} = \delta^{\nu}_{\mu} \]
+\[x^{\mu} = \eta^{\mu \nu} x_{\nu}\]
+\[\bar{x}_{\mu} = \Lambda_{\mu}^{\phantom{\mu}\nu} x_{\nu}\]
+\[\Lambda_{\mu}^{\phantom{\mu}\rho}  \Lambda_{\nu}^{\phantom{\nu}\sigma}  \eta_{\rho \sigma} = \eta_{\mu \nu},\]
 In a special case when the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
 \[\bar{x}^{0} = \gamma x^0 - \gamma \beta x^1\]
 \[\bar{x}^{1} = -\gamma \beta x^0 + \gamma x^1\]
@@ -80,7 +93,7 @@ $\sum M^{\mu \nu} $ is conserved, where $M^{\mu \nu} = x^{\mu}p^{\nu} - x^{\nu}p
 \[S = \int \mathcal{L}(\phi_a,\dot{\phi}_a,\nabla \phi_a) d^4 x, \ \ \ \ \delta \phi_a |_{\Sigma} = 0\]
 \[\delta S = 0 \Rightarrow \partial_{\mu} \left (\frac{\partial \mathcal{L}}{\partial (\partial_{\mu} \phi_a)} \right ) - \frac{\partial \mathcal{L}}{\partial \phi_a} = 0\]
 \subsubsection{Locality of the theory}
-There are no terms in the Lagrangian coupling $\phi(\vec{x},t)$ directly to  $\phi(\vec{y},t)$ with $\vec{x} \neq \vec{y}$. The closet we get for the $\vec{x}$ label is coupling between $\phi(\vec{x},t)$ and $\phi(\vec{x}+\delta\vec{x},t)$ through the gradient term $\nabla \phi$.
+There are no terms in the Lagrangian coupling $\phi(\bm{x},t)$ directly to  $\phi(\bm{y},t)$ with $\bm{x} \neq \bm{y}$. The closet we get for the $\bm{x}$ label is coupling between $\phi(\bm{x},t)$ and $\phi(\bm{x}+\delta\bm{x},t)$ through the gradient term $\nabla \phi$.
 \subsubsection{Lorentz invariance}
 \noindent
 Scalar fields:
@@ -106,7 +119,7 @@ and if $\delta \mathcal{L} = \partial_{\mu} K^{\mu} = 0$, we can get
 $\bar{x} = x - a$ 
 \[j^{\mu} = -a_{\nu} T^{\mu \nu}\]
 \[T^{\mu \nu} \equiv -\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}\phi_a)} \partial^{\nu} \phi_a + \eta^{\mu \nu} \mathcal{L}\]
-If we define $P^{\mu} = \int T^{0 \mu} d^3 x$,then we have
+If we define $P^{\mu} \equiv \int T^{0 \mu} d^3 x$,then we have the law of momentum conservation:
 \[\frac{d P^{\mu}}{dt} = 0\]
 
 \subsubsection{Lorentz Transformation} 
@@ -122,12 +135,12 @@ The infinitesimal Lorentz transformation can be written as $I+\delta \omega^{\mu
 \end{matrix} 
 \right]\]
 This time, we assume that
-\[\bar{\phi}_a(x) = S_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
+\[\bar{\phi}_a(x) = \mathcal{S}_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
 In the limit of infinitesimal Lorentz transformation, we have
-\[S_{a}^{\phantom{a}b} = \delta_{a}^{\phantom{a}b}+\frac{1}{2} \delta \omega_{\alpha \beta} (\Sigma^{\alpha \beta})_{a}^{\phantom{a}b} \]
+\[\mathcal{S}_{a}^{\phantom{a}b} = \delta_{a}^{\phantom{a}b}+\frac{1}{2} \delta \omega_{\alpha \beta} (\Sigma^{\alpha \beta})_{a}^{\phantom{a}b} \]
 \[j^{\mu} = -\frac{1}{2} M^{\mu \nu \rho}  \delta \omega_{\nu \rho}\]
 \[M^{\mu \nu \rho} \equiv x^{\nu}T^{\mu \rho} - x^{\rho} T^{\mu \nu} - \frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi_a)}(\Sigma^{\nu \rho})_{a}^{\phantom{a}b}\phi_b\]
-If we define $M^{\nu \rho} = \int M^{0 \nu \rho} d^3 x$, then we have
+If we define $M^{\nu \rho} \equiv \int M^{0 \nu \rho} d^3 x$, then we have the law of angular momentum conservation:
 \[\frac{dM^{\nu \rho}}{dt} = 0\]
 
 \section{Functional derivatives}
@@ -163,25 +176,25 @@ If $G$ is an ordinary differentiable function $g$, then this reduces to
 \[\mathcal{H}(\phi_a,\nabla \phi_a,\pi^a) = \pi^a \dot{\phi_a} - \mathcal{L}\]
 \[H = \int \mathcal{H} d^3 x\]
 Now, we can get the Hamilton equation form $\delta S =0$,
-\[\dot{\phi_a}(\vec{x},t) = \frac{\delta}{\delta \pi^a(\vec{x},t)} H = \frac{\partial \mathcal{H}}{\partial \pi^a}\]
-\[\dot{\pi^a}(\vec{x},t) = -\frac{\delta}{\delta \phi_a(\vec{x},t)} H = - \frac{\partial \mathcal{H}}{\partial \phi_a} + \left(\frac{\partial \mathcal{H}}{\partial \phi_{a,b}}\right)_{,b}\]
+\[\dot{\phi_a}(\bm{x},t) = \frac{\delta}{\delta \pi^a(\bm{x},t)} H = \frac{\partial \mathcal{H}}{\partial \pi^a}\]
+\[\dot{\pi^a}(\bm{x},t) = -\frac{\delta}{\delta \phi_a(\bm{x},t)} H = - \frac{\partial \mathcal{H}}{\partial \phi_a} + \left(\frac{\partial \mathcal{H}}{\partial \phi_{a,b}}\right)_{,b}\]
 
 \subsection{Poission bracket}
 \noindent
-First, we demand that
-\[[\phi_a(\vec{x}),\phi_b(\vec{y})] = [\pi^a(\vec{x}),\phi_b(\vec{y})]= 0\]
-\[[\phi_a(\vec{x}),\pi^b(\vec{y})] = \delta^{b}_{a} \delta(\vec{x}-\vec{y})\]
-then, we assume the bracket operation has the same properties as the Poission bracket in classical mechanics. And we also assume that
-\[[\partial_x A(\vec{x}),B(\vec{y})] = \partial_x [A(\vec{x}),B(\vec{y})]\]
+First, we define that
+\[[\phi_a(\bm{x}),\phi_b(\bm{y})] \equiv [\pi^a(\bm{x}),\phi_b(\bm{y})] \equiv 0\]
+\[[\phi_a(\bm{x}),\pi^b(\bm{y})] \equiv \delta^{b}_{a} \delta(\bm{x}-\bm{y})\]
+then, we demand that the bracket operation has the same properties as the Poission bracket in classical mechanics. And we also demand that
+\[[\partial_x A(\bm{x}),B(\bm{y})] = \partial_x [A(\bm{x}),B(\bm{y})]\]
 and
-\[\left[\int d^3 x A(\vec{x}),B(\vec{y})\right] = \int d^3 x [A(\vec{x}),B(\vec{y})]\]
-We can verify that
-\[[W[\phi(\vec{x}),\pi(\vec{x})],Z[\phi(\vec{x}),\pi(\vec{x})]] = \int d^3x \left\{ \frac{\delta W}{\delta \phi(\vec{x})} \frac{\delta Z}{\delta \pi(\vec{x})} - \frac{\delta W}{\delta \pi(\vec{x})} \frac{\delta Z}{\delta \phi(\vec{x})} \right\}\]
-Specially,
-\[[\phi_a(\vec{x}),H] = \frac{\delta }{\delta \pi^a(\vec{x})} H, \ \ \ \ [\pi^a(\vec{x}),H] = -\frac{\delta }{\delta \phi_a(\vec{x})} H\]
+\[\left[\int d^3 x A(\bm{x}),B(\bm{y})\right] = \int d^3 x [A(\bm{x}),B(\bm{y})]\]
+As a result, we can verify that
+\[[W[\phi(\bm{x}),\pi(\bm{x})],Z[\phi(\bm{x}),\pi(\bm{x})]] = \int d^3x \left\{ \frac{\delta W}{\delta \phi(\bm{x})} \frac{\delta Z}{\delta \pi(\bm{x})} - \frac{\delta W}{\delta \pi(\bm{x})} \frac{\delta Z}{\delta \phi(\bm{x})} \right\}\]
+Especially,
+\[[\phi_a(\bm{x}),H] = \frac{\delta }{\delta \pi^a(\bm{x})} H, \ \ \ \ [\pi^a(\bm{x}),H] = -\frac{\delta }{\delta \phi_a(\bm{x})} H\]
 So, the Hamilton equation can be written as
 \[\dot{\phi_a} = [\phi_a,H], \ \ \ \ \dot{\pi^a} = [\pi^a,H]\]
-Further more, we can prove
+Further more, we can prove that
 \[\frac{dO(\phi,\pi,t)}{dt} = [O,H] + \frac{\partial O}{\partial t}\]
 and
 \[\frac{d[A,B]}{dt} = [A,\frac{dB}{dt}] + [\frac{dA}{dt},B]  \]
@@ -190,7 +203,7 @@ and
 \noindent
 It is easy to verify that
 \[P^{0} = H, \ \ \ \ P^{i} = \int -\pi^a \partial^i \phi_a d^3 x\]
-And we can get the commutation relationship that
+And we can get the Poisson bracket
 \begin{eqnarray}
 \left[\phi_a,P^{\mu}\right] &=& -\partial^{\mu} \phi_a \nonumber \\
 \left[\pi^a,P^{\mu}\right] &=& -\partial^{\mu} \pi^a \nonumber \\
@@ -202,25 +215,24 @@ And we can get the commutation relationship that
 \noindent
 It is easy to verify that
 \[M^{\mu \nu} = \int (x^{\mu}T^{0\nu}-x^{\nu}T^{0\mu}-\pi^a(\Sigma^{\mu \nu})_{a}^{\phantom{a}b}\phi_b) d^3 x\]
-We denote that
-\[M_{L}^{\mu \nu} = \int (x^{\mu}T^{0\nu}-x^{\nu}T^{0\mu}) d^3 x \quad M_S^{\mu \nu} = \int (-\pi^a(\Sigma^{\mu \nu})_{a}^{\phantom{a}b}\phi_b) d^3 x\]
-\[(L^{\mu \nu})_a^{\phantom{a}b} = -(x^{\mu}\partial^{\nu}-x^{\nu}\partial^{\mu})\delta_a^{\phantom{a}b} \quad (S^{\mu \nu})_a^{\phantom{a}b} = -(\Sigma^{\mu \nu})_a^{\phantom{a}b}\]
-So, we have the commutation relationship that
-\[M^{\mu \nu} = M_L^{\mu \nu} + M_S^{\mu \nu}\]
+We define that
+\[M_{L}^{\mu \nu} \equiv \int (x^{\mu}T^{0\nu}-x^{\nu}T^{0\mu}) d^3 x \quad M_S^{\mu \nu} \equiv \int (-\pi^a(\Sigma^{\mu \nu})_{a}^{\phantom{a}b}\phi_b) d^3 x\]
+\[(L^{\mu \nu})_a^{\phantom{a}b} \equiv -(x^{\mu}\partial^{\nu}-x^{\nu}\partial^{\mu})\delta_a^{\phantom{a}b} \quad (S^{\mu \nu})_a^{\phantom{a}b} \equiv -(\Sigma^{\mu \nu})_a^{\phantom{a}b}\]
+So, we can get the Poisson bracket
 \[[\phi_a,M_L^{\mu \nu}] = (L^{\mu \nu})_a^{\phantom{a}b} \phi_b \quad [\phi_a,M_S^{\mu \nu}] = (S^{\mu \nu})_a^{\phantom{a}b} \phi_b\]
 \[[\pi^a,M_L^{\mu \nu}] = (L^{\mu \nu})_b^{\phantom{b}a}\pi^{b}  \quad [\pi^a,M_S^{\mu \nu}] = - (S^{\mu \nu})_b^{\phantom{b}a} \pi^b \]
-Because $\frac{d M^{\mu \nu}}{dt} = 0$, we can prove that
+Because $\frac{d M^{\mu \nu}}{dt} = 0$, $M^{\mu \nu}$ can commutate with $\frac{d}{dt}$, so
 \[[[\phi(x),M^{\mu \nu}],M^{\rho \sigma}] = (L^{\mu \nu}+S^{\mu \nu})(L^{\rho \sigma}+S^{\rho \sigma})\phi(x)\]
-and then we can get the communication relationship from the Jacobi identity,
+At last, we can get the Poisson bracket 
 \[[\phi(x),[M^{\mu \nu},M^{\rho \sigma}]] = (L^{\mu \nu}L^{\rho \sigma}-L^{\rho \sigma}L^{\mu \nu} + S^{\mu \nu}S^{\rho \sigma}-S^{\rho \sigma}S^{\mu \nu})\phi(x)\]
-We can prove that
-\[L^{\mu \nu}L^{\rho \sigma}-L^{\rho \sigma}L^{\mu \nu} = -g^{\nu \rho}L^{\mu \sigma} + g^{\sigma \mu}L^{\rho \nu} + g^{\mu \rho}L^{\nu \sigma} - g^{\sigma \nu}L^{\rho \mu}\]
-If we demand that
-\[S^{\mu \nu}S^{\rho \sigma}-S^{\rho \sigma}S^{\mu \nu} = -g^{\nu \rho}S^{\mu \sigma} + g^{\sigma \mu}S^{\rho \nu} + g^{\mu \rho}S^{\nu \sigma} - g^{\sigma \nu}S^{\rho \mu}\]
-We can get get the communication relationship of the $M^{\mu \nu}$,
-\[[M^{\mu \nu},M^{\rho \sigma}] = -g^{\nu \rho}M^{\mu \sigma} + g^{\sigma \mu}M^{\rho \nu} + g^{\mu \rho}M^{\nu \sigma} - g^{\sigma \nu}M^{\rho \mu}\]
-up to the possibility of a term on the right-hand side that commutes with $\phi(x)$ and its derivatives.\\
-We now define $J_i \equiv \frac{1}{2} \epsilon_{ijk} M^{jk}$ and $K_i \equiv M^{i0}$,so
+Since we can prove that
+\[L^{\mu \nu}L^{\rho \sigma}-L^{\rho \sigma}L^{\mu \nu} = -\eta^{\nu \rho}L^{\mu \sigma} + \eta^{\sigma \mu}L^{\rho \nu} + \eta^{\mu \rho}L^{\nu \sigma} - \eta^{\sigma \nu}L^{\rho \mu}\]
+if we demand that
+\[S^{\mu \nu}S^{\rho \sigma}-S^{\rho \sigma}S^{\mu \nu} = -\eta^{\nu \rho}S^{\mu \sigma} + \eta^{\sigma \mu}S^{\rho \nu} + \eta^{\mu \rho}S^{\nu \sigma} - \eta^{\sigma \nu}S^{\rho \mu}\]
+We will get get the Poisson bracket of the $M^{\mu \nu}$,
+\[[M^{\mu \nu},M^{\rho \sigma}] = -\eta^{\nu \rho}M^{\mu \sigma} + \eta^{\sigma \mu}M^{\rho \nu} + \eta^{\mu \rho}M^{\nu \sigma} - \eta^{\sigma \nu}M^{\rho \mu}\]
+up to the possibility of a term on the right-hand side that commutes with $\phi(x)$ and its derivatives.\\ \\
+We now define $J_i \equiv \frac{1}{2} \epsilon_{ijk} M^{jk}$ and $K_i \equiv M^{i0}$, so we have
 \[M^{\mu \nu} = \left[ 
 \begin{matrix} 
 0   & -K_1 & -K_2 & -K_3 \\ 
@@ -228,15 +240,23 @@ K_1 & 0    & J_3  & -J_2 \\
 K_2 & -J_3 & 0    &  J_1 \\
 K_3 & J_2  & -J_1 &  0
 \end{matrix} 
-\right]\] 
-the communication relationship can be written as
+\right] \quad \left( 
+\delta \omega_{\mu\nu} = \left[
+\begin{matrix} 
+0       & -\beta_1   & -\beta_2   & -\beta_3   \\ 
+\beta_1 & 0         & -\theta_3 & \theta_2  \\
+\beta_2 & \theta_3  & 0         & -\theta_1 \\
+\beta_3 & -\theta_2 & \theta_1  & 0
+\end{matrix} 
+\right] \right)\] 
+the Poisson bracket can be written as
 \begin{eqnarray}
 \left[J_i,J_j\right] &=& \epsilon_{ijk}J_k \nonumber \\
 \left[J_i,K_j\right] &=& \epsilon_{ijk}K_k \nonumber \\
 \left[K_i,K_j\right] &=& -\epsilon_{ijk}J_k \nonumber
 \end{eqnarray}
 We can use the similar method to derive that
-\[[P^{\mu},M^{\rho \sigma}] = g^{\mu \sigma}P^{\mu} - g^{\mu \rho}P^{\sigma}\]
+\[[P^{\mu},M^{\rho \sigma}] = \eta^{\mu \sigma}P^{\mu} - \eta^{\mu \rho}P^{\sigma}\]
 It can also be written as
 \begin{eqnarray}
 \left[J_i,H\right] &=& 0 \nonumber \\

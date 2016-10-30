@@ -1,0 +1,237 @@
+\chapter{Vector Field}
+\section{Vector field}
+Consider a vector field $A^{\mu}(x)$. Here the index $\mu$ is a vector index that takes on four possible values. Under a Lorentz transformation, we have
+\[U(\Lambda)^{-1} A^{\mu}(x) U(\Lambda) = \Lambda^{\mu}_{\phantom{\mu}\nu} A^{\nu}(\Lambda^{-1}x)\]
+For an infinitesimal transformation, we can write
+\[\delta^{\mu}_{\phantom{\mu}\nu}+\delta \omega ^{\mu}_{\phantom{\mu}\nu} = \delta^{\mu}_{\phantom{\mu}\nu} + \frac{i}{2} \delta \omega_{\rho \sigma} (S_V^{\rho \sigma})^{\mu}_{\phantom{\mu}\nu}\]
+Here
+\[(S_V^{\rho \sigma})^{\mu}_{\phantom{\mu}\nu} = -i(\eta^{\rho \mu}\delta ^{\sigma}_{\phantom{\sigma}\nu} - \eta^{\sigma \mu}\delta^{\rho}_{\phantom{\rho}\nu})\]
+It is obvious that $A^{\dagger \mu}$ is also a vector field. 
+We know that $\eta^{\mu \nu}$ is invariant under Lorentz transformation, i.e.
+\[\Lambda^{\mu}_{\phantom{\mu}\rho} \Lambda^{\nu}_{\phantom{\mu}\sigma} \eta^{\rho \sigma} = \eta^{\mu \nu} \]
+We can use $\eta^{\mu \nu}$ and and its inverse $\eta_{\mu\nu}$ to raise and lower vector indices of the vector field,
+\[A_{\mu} \equiv \eta_{\mu \nu} A^{\nu}\]
+And we can verify the following equations
+\[\Lambda^{\mu}_{\phantom{\mu}\nu} \Lambda_{\mu}^{\phantom{\mu}\rho} = \delta^{\rho}_{\nu} \]
+\[A^{\mu}(x) = \eta^{\mu \nu} A_{\nu}(x)\]
+\[\Lambda_{\mu}^{\phantom{\mu}\rho} \Lambda_{\nu}^{\phantom{\nu}\sigma} \eta_{\rho \sigma} = \eta_{\mu \nu}\]
+\[U(\Lambda)^{-1} A_{\mu}(x) U(\Lambda) = \Lambda_{\mu}^{\phantom{\mu}\nu} A_{\nu}(\Lambda^{-1}x)\]
+Define $C_i \equiv \frac{1}{2}\epsilon_{ijk}S_V^{jk}$,$D_i \equiv S_V^{i0}$. For example, we have
+\[(C_3)_{\mu}^{\phantom{\mu}\nu} = \left(\begin{array}{rrrr}
+0 & 0 & 0 & 0 \\
+0 & 0 & -i & 0 \\
+0 & i & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{array}\right)\]
+The eigenvectors of $C_3$ are
+\[\left[\left(-1, \left[\left(0,\,1,\,-i,\,0\right)\right], 1\right),
+\left(1, \left[\left(0,\,1,\,i,\,0\right)\right], 1\right), \left(0,
+\left[\left(1,\,0,\,0,\,0\right), \left(0,\,0,\,0,\,1\right)\right],
+2\right)\right]\]
+We further define $N_i \equiv \frac{1}{2}(C_i-iD_i)$ and $N^{\dagger}_i \equiv \frac{1}{2}(C_i + i D_i)$. For example, we have
+\[(N_1)_{\mu}^{\phantom{\mu}\nu} = \left(\begin{array}{rrrr}
+0 & -\frac{1}{2} & 0 & 0 \\
+-\frac{1}{2} & 0 & 0 & 0 \\
+0 & 0 & 0 & -\frac{1}{2} i \\
+0 & 0 & \frac{1}{2} i & 0
+\end{array}\right)\]
+The eigenvectors of $N_1$ are
+\[\left[\left(-\frac{1}{2}, \left[\left(1,\,1,\,0,\,0\right),
+\left(0,\,0,\,1,\,-i\right)\right], 2\right), \left(\frac{1}{2},
+\left[\left(1,\,-1,\,0,\,0\right), \left(0,\,0,\,1,\,i\right)\right],
+2\right)\right]\]
+And we can conclude that vector is in the $(2,2)$ representation of the Lie algebra of the Lorentz group.
+
+\section{Electromagnetic field and gauge invariance}
+\noindent
+The Lagrangian of EM field is
+\[\mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\]
+Here,
+\[F_{\mu\nu} = \partial_{\mu} A_{\nu} - \partial_{\nu} A_{\mu} \quad \mbox{and} \quad A^{\mu} = (\phi,\bm{A})\]
+So,
+\[F_{0i} = \dot{A}^i + \nabla_i \phi \equiv -E^i \quad \mbox{and} \quad F_{ij} = \nabla_i A^j - \nabla_j A^i \equiv \epsilon_{ijk}B^k\]
+We can derive the equation of motion of the EM field by variation method,
+\[\partial_{\mu}F^{\mu \nu} = 0\]
+It can be rewritten in terms of $\bm{E}$ and $\bm{B}$, i.e. Maxwell equations:
+\begin{eqnarray}
+&\phantom{=}&\bm{\nabla} \cdot \bm{E} = 0 \quad \frac{\partial \bm{E}}{\partial t} = \bm{\nabla} \times \bm{B} \nonumber \\
+&\phantom{=}& \bm{\nabla} \cdot \bm{B} = 0  \quad \frac{\partial \bm{B}}{\partial t} = - \bm{\nabla} \times \bm{E}\nonumber
+\end{eqnarray}
+
+The massless vector field $A_{\mu}$ has 4 components, which would naively seem to tell us that the gauge field has 4 degrees of freedom.But there are two related comments which will ensure that quantizing the gauge field $A_{\mu}$ gives rise to 2 degrees of freedom, rather than 4.
+\begin{itemize}
+\item The field $A_0$ has no kinetic term $\dot{A_0}$ in the Lagrangian: it is not dynamical. This means that if we are given some initial data $A_i$ and $\dot{A_i}$ at a time $t_0$, then the field $A_0$ is fully determined by the equation of motion $\bm{\nabla} \cdot \bm{E} = 0$,which, expanding out,
+reads
+\[\nabla^2 A_0 = \bm{\nabla} \cdot \frac{\partial \bm{A}}{\partial t}\]
+So $A_0$ is not independent: we don't get to specify $A_0$ on the initial time slice.
+\item If we transform the EM field as
+\[A_{\mu} \to A_{\mu} + \partial_{\mu}\lambda(x) \]
+we can derive that
+\[F_{\mu\nu} \to F_{\mu \nu} \quad \mathcal{L} \to \mathcal{L}\]
+The seemed infinite number of symmetries, one for each function $\lambda(x)$, is to be viewed as a redundancy in our description. That is, two states related by a gauge symmetry are to be identified: they are the same physical state. One way to see that this interpretation is necessary is to notice that Maxwell’s equations are not sufficient to specify the evolution of $A_{\mu}$.The equations read,
+\[(\eta_{\mu\nu} \partial^2 - \partial_{\mu} \partial_{\nu}) A^{\nu} = 0\]
+But the operator $(\eta_{\mu\nu} \partial^2 - \partial_{\mu} \partial_{\nu})$ is not invertible: it annihilates any function of
+the form $\partial_{\mu} \lambda$. This means that given any initial data, we have no way to uniquely determine $A_{\mu}$ at a later time since we can't distinguish between $A_{\mu}$ and $A_{\mu} + \partial_{\mu} \lambda$. This would be problematic if we thought that $A_{\mu}$ is a physical object. However, if we're happy to identify $A_{\mu}$ and $A_{\mu} + \partial_{\mu} \lambda$ as corresponding to the same physical state, then our problems disappear. 
+\end{itemize}
+
+The picture that emerges for the theory of electromagnetism is of an enlarged phase space, foliated by gauge orbits. All states that lie along a given gauge orbit can be reached by a gauge transformation and are identified. To make progress, we pick a representative from each gauge orbit. It doesn't matter which representative we pick after all, they're all physically equivalent. But we should make sure that we pick a "good" gauge, in which we cut the orbits. Here we'll look at two different gauges:
+\begin{itemize}
+\item Coulomb Gauge: $\bm{\nabla} \cdot \bm{A} = 0$\\
+We can make use of the residual gauge transformations in Lorentz gauge to pick $\bm{\nabla} \cdot \dot{\bm{A}} = 0$. We
+have as a consequence $A_0 = 0$. Coulomb gauge is sometimes called radiation gauge.
+\item Lorentz Gauge: $\partial^{\mu} A_{\mu} = 0$\\
+In fact this condition doesn't pick a unique representative from the gauge orbit. We're always free to make further gauge transformations with $\partial^{\mu}\partial_{\mu} \lambda = 0$, which also has non-trivial solutions. As the name suggests, the Lorentz gauge has the advantage that it is Lorentz invariant.
+\end{itemize}
+
+\section{Canonical quantization of EM field}
+\subsection{Canonical quantization in Coulomb gauge}
+
+\subsubsection{Canonical momentum and Hamiltonian}
+\[\pi^0 = \frac{\partial \mathcal{L}}{\partial \dot{A_0}} = 0 \quad  \pi^{i} = \frac{\partial \mathcal{L}}{\partial(\partial_0 A_i)} = \dot{A}^i + \nabla_i \phi = -E^i\]
+\[\mathcal{H} = \frac{1}{2}(\bm{\pi}^2 + \bm{B}^2) + (\bm{\pi} \cdot \bm{\nabla}) A_0\]
+Integration by parts can give
+\[H = \int d^3x \frac{1}{2}(\bm{\pi}^2 + \bm{B}^2)\]
+
+\subsubsection{Momentum and angular momentum}
+\[P^0 = H \quad \vec{P} = \int - \bm{\pi} \vec{\nabla} \bm{A} d^3x\]
+\[\vec{J} = - \int \bm{\pi} (\vec{x}\times \vec{\nabla} + i \vec{C})\bm{A} \; d^3x \quad \vec{S} = -i \int \bm{\pi} \vec{C} \bm{A} \; d^3x\]
+
+\subsubsection{Canonical quantization}
+\noindent
+In Coulomb gauge, we have
+\[A_0 = \pi^0 = 0 \quad \pi^i = \dot{A}^i \]
+Three pairs of $A_i$ and $\pi^i$ are not independent from each other. They must satisfy the constraint equations
+\[\nabla \cdot \bm{A} = 0 \quad \nabla \cdot \bm{\pi} = 0\]
+A reasonable quantization condition can be written as
+\[[A_i(\bm{x},t),A_j(\bm{x}',t)] = 0 \quad [\pi^i(\bm{x},t),\pi^j(\bm{x}',t)] = 0\]
+\[[A_i(\bm{x},t),\pi^j(\bm{x}',t)] = i \left( \delta^{j}_i - \frac{\partial_i \partial^j}{\nabla^2} \right) \delta(\bm{x}-\bm{x}') \equiv i \int \frac{d^3k}{(2\pi)^3} \; (\delta^j_i - \frac{k_ik^j}{\bm{k}^2})e^{i\bm{k}\cdot(\bm{x}-\bm{x}')}\]
+In this case, we can verify that
+\[\dot{A}_i = -i[A_i(\bm{x},t),H] = \pi_i (\bm{x},t)\]
+\[\dot{\pi}^i = -i[\pi^i(\bm{x},t),H] = \nabla^2 A^i(\bm{x},t)\]
+It is constant with the field equation we derive from Euler-Lagrange equation.
+
+\subsubsection{Fourier expansion}
+\[\bm{A}(x) = \sum_{r = \pm} \int \widetilde{dp} [a_{r}(\bm{p}) \bm{\epsilon}_r(\bm{p})e^{ipx} + a^{\dagger}_{r}(\bm{p}) \bm{\epsilon}^*_r(\bm{p})e^{-ipx}]\]
+And we can derive from constraint condition that
+\[\bm{\epsilon} \cdot \bm{p} = 0\]
+We will choose $\bm{\epsilon}$ to satisfy that
+\[\bm{\epsilon}_r \cdot \bm{\epsilon}^*_s = \delta_{rs}\]
+So, the completeness relation for the polarization vectors is
+\[\sum_{r=\pm} \epsilon_r^i(\bm{p}) \epsilon_r^{*j}(\bm{p}) = \delta^{ij} - \frac{p^ip^j}{|\bm{p}|^2}\]
+\begin{example}
+If $\bm{p} = (0,0,p)$, we usually choose 
+\[\bm{\epsilon}_{+} = \frac{1}{\sqrt{2}}(1,i,0) \quad \bm{\epsilon}_{-} = \frac{1}{\sqrt{2}}(1,-i,0) \]
+$\bm{\epsilon}_{+}$ corresponds to left-handed rotation and it is the eigenvectors of the space-part of $C_3$ with eigenvalue $+1$. $\bm{\epsilon}_{-}$ corresponds to right-handed rotation and it is eigenvector of the space-part of $C_3$ with eigenvalue $- 1$.
+\end{example}
+\noindent
+We can further derive from above discussion that
+\[\bm{\pi}(x) = -i \sum_{r = \pm} \int \widetilde{dp} \omega [a_{r}(\bm{p}) \bm{\epsilon}_r(\bm{p})e^{ipx} - a^{\dagger}_{r}(\bm{p}) \bm{\epsilon}^*_r(\bm{p})e^{-ipx}]\]
+\[a_r(\bm{p}) = \bm{\epsilon}^*_r \int d^3x e^{-ikx}(i\bm{\pi}+\omega\bm{A})\]
+\[a^{\dagger}_r(\bm{p}) = \bm{\epsilon}_r \int d^3x e^{ikx}(-i\bm{\pi}+\omega\bm{A})\]
+\[[a_r(\bm{p}),a_{r'}(\bm{p'})] = 0 \quad [a^{\dagger}_r(\bm{p}),a^{\dagger}_{r'}(\bm{p'})] = 0 \quad [a_r(\bm{p}),a^{\dagger}_{r'}(\bm{p'})] = (2\pi)^3 2\omega \delta_{rr'} \delta(\bm{p} - \bm{p}')\]
+
+\subsubsection{Operator represented by $a$ and $a^{\dagger}$}
+\noindent
+Define that
+\[N(\bm{p},r) \equiv a^{\dagger}_{r}(\bm{p}) a_r(\bm{p})\]
+So, we can derive
+\[H = \sum_{r = \pm} \int \widetilde{dp} \; \omega N(\bm{p},r) + 2\mathcal{E}_0V\]
+\[\vec{P} = \sum_{r = \pm} \int \widetilde{dp} \; \vec{p} N(\bm{p},r) \]
+\[\vec{S} = \sum_{r,s = \pm} \int \widetilde{dp} \; \frac{1}{2}(\bm{\epsilon}^*_{s} \vec{C}\bm{\epsilon}_{r} - \bm{\epsilon}_{r} \vec{C}\bm{\epsilon}^*_{s}) a^{\dagger}_{s}(\bm{p}) a_r(\bm{p})\]
+From above equation, we can say that $a^{\dagger}_r(\bm{p})$ create an photon with energy $\omega$, momentum $\bm{p}$ and spin angular momentum along the direction of momentum $r$.
+
+\subsubsection{Propagator}
+\[G_{ij} \equiv \langle 0 |T A_i(x) A_j(y) | 0 \rangle = \int \frac{d^4p}{(2\pi)^4} \frac{-i}{p^2-i\epsilon} \left(\delta_{ij} - \frac{p_ip_j}{|\bm{p}|^2}\right) e^{ip(x-y)}\]
+
+\subsection{Canonical quantization in Lorentz gauge}
+\subsubsection{Undefined metric formalism}
+\noindent
+Modify the Maxwell Lagrangian introducing a new term
+\[\mathcal{L} = -\frac{1}{4} F_{\mu\nu}F^{\mu\nu} - \frac{1}{2\xi} (\partial_{\mu} A^{\mu})^2\]
+The equations of motion are now
+\[\partial^2 A_{\mu} - (1-\frac{1}{\xi})\partial^{\mu}(\partial \cdot A) = 0\]
+Canonical momentums are
+\[\pi^0 = \frac{1}{\xi} \partial \cdot A = \frac{1}{\xi}(-\dot{A}_0 + \partial_i A^i) \quad \pi^i = \dot{A}^i + \nabla^i A^0 = -E^i\]
+Hamiltonian is
+\[\mathcal{H} = \frac{1}{2}(\bm{\pi}^2 + \bm{B}^2 - \xi \pi^0 \pi^0) + (\bm{\pi} \cdot \bm{\nabla}) A_0 + \pi^0 (\bm{\nabla} \cdot \bm{A})\]
+\[H =  \int \left[ \frac{1}{2}(\bm{\pi}^2 + \bm{B}^2 - \xi \pi^0 \pi^0) -A_0(\bm{\nabla} \cdot \bm{\pi}) + \pi^0 (\bm{\nabla} \cdot \bm{A}) \right] d^3x \]
+We remark that the above Lagrangian and the equations of motion, reduce to Maxwell theory in the gauge $\partial \cdot A = 0$. This why we say that our choice corresponds to a class of Lorenz gauges with parameter $\xi$. With this abuse of language (in fact we are not setting $\partial \cdot A = 0$, otherwise the problems would come back) the value of $\xi=1$ is known as the Feynman gauge and $\xi=0$ as the Landau gauge. From now on we will take the case of the so-called Feynman gauge, where $\xi=1$. Then the equation of motion coincide with the Maxwell theory in the Lorenz gauge. In Feymann gauge,the canonical quantization conditions can be written as
+\[[A_{\mu}(\bm{x},t),A_{\nu}(\bm{x}',t)] = 0 \quad [\pi^{\mu}(\bm{x},t),\pi^{\nu}(\bm{x}',t)] = 0 \quad [A_{\mu}(\bm{x},t),\pi^{\nu}(\bm{x}',t)] = i\delta^{\nu}_{\mu} \delta(\bm{x}-\bm{x}')\]
+we can also derive that
+\[[\dot{A}_{\mu}(\bm{x},t),\dot{A}_{\nu}(\bm{x}',t)] = 0 \quad [A_{\mu}(\bm{x},t),\dot{A}_{\nu}(\bm{x}',t)] = i\eta_{\mu\nu} \delta(\bm{x}-\bm{x}')\]
+
+\subsubsection{Fourier expansion}
+\[A(x) = \sum_{\lambda=0}^{3} \int \widetilde{dp} [a_{\lambda}(\bm{p}) \epsilon_{\lambda}(\bm{p})e^{ipx} + a^{\dagger}_{\lambda}(\bm{p}) \epsilon^*_{\lambda}(\bm{p})e^{-ipx}]\]
+where $\epsilon_{\lambda \mu}$ are a set of four independent 4-vectors.  We will now make a choice for these 4-vectors. We choose $\epsilon_{1\mu}$ and $\epsilon_{2\mu}$ orthogonal to $k^{\mu}$ and $n^{\mu}$, such that
+\[\epsilon_{\lambda \mu} \epsilon^{*\mu}_{\lambda} = \delta_{\lambda \lambda'} \quad \lambda,\lambda' = 1,2\]
+After, we choose $\epsilon_{3\mu}$ in the plane $(k^{\mu},n^{\mu})$ and perpendicular to $n^{\mu}$ such that
+\[\epsilon_{3\mu} n^{\mu} = 0 \quad \epsilon_{3\mu} \epsilon^{*\mu}_{3} = 1\]
+Finally we choose $\epsilon_{0\mu} = n_{\mu}$. The vectors $\epsilon_{1\mu}$ and $\epsilon_{2\mu}$ are called transverse polarizations, while $\epsilon_{3\mu}$ and $\epsilon_{0\mu}$ longitudinal and scalar polarizations, respectively.\\
+In general we can show that
+\[\epsilon_{\lambda} \cdot \epsilon^*_{\lambda'} = \eta_{\lambda \lambda'} \quad \eta^{\lambda \lambda'} \epsilon_{\lambda \mu} \epsilon^*_{\lambda' \nu} = \eta_{\mu \nu} \]
+We can further derive from above discussion that
+\[\dot{A}(x) = -i \sum_{\lambda=0}^{3} \int \widetilde{dp} \omega [a_{\lambda}(\bm{p}) \epsilon_{\lambda}(\bm{p})e^{ipx} - a^{\dagger}_{\lambda}(\bm{p}) \epsilon^*_{\lambda}(\bm{p})e^{-ipx}]\]
+\[ a_{\lambda}(\bm{p}) =  \eta_{\lambda \lambda'} \epsilon^*_{\lambda'} \cdot \int d^3x e^{-ipx}(i\dot{A}+\omega A)\]
+\[ a^{\dagger}_{\lambda}(\bm{p}) =  \eta_{\lambda \lambda'} \epsilon_{\lambda'} \cdot \int d^3x e^{ipx}(-i\dot{A}+\omega A)\]
+\[[a_{\lambda}(\bm{p}),a_{\lambda'}(\bm{p'})] = 0 \quad [a^{\dagger}_{\lambda}(\bm{p}),a^{\dagger}_{\lambda'}(\bm{p'})] = 0 \quad [a_{\lambda}(\bm{p}),a^{\dagger}_{\lambda'}(\bm{p'})] = (2\pi)^3 2\omega \eta_{\lambda \lambda'} \delta(\bm{p} - \bm{p}')\]
+
+\subsubsection{Indefinite metric problem}
+We Introduce the vacuum state defined by
+\[a_{\lambda}(\bm{p}) | 0 \rangle = 0\]
+To see the problem with the sign we construct the one-particle state with scalar polarization, that is
+\[|1\rangle = \int \widetilde{dp} a^{\dagger}_{0}(\bm{p})|0\rangle
+\]
+and calculate its norm
+\[\langle 1 | 1 \rangle = -\langle 0 | 0 \rangle \int \widetilde{dp} |f(p)|^2\]
+The state $| 1 \rangle$ has a negative norm.
+
+To solve this problem we note that we are not working anymore with the classical Maxwell theory because we modified the Lagrangian. What we would like to do is to impose the condition $\partial \cdot A = 0$, but that is impossible as an equation for operators. We can, however, require that condition on a weaker form, as a condition only to be verified by the physical states.
+
+More specifically, we require that the part of $\partial \cdot A$ that contains the annihilation operator (positive frequencies) annihilates the physical states,
+\[\partial^{\mu} A^{+}_{\mu} | \psi \rangle = 0\]
+The states $| \psi \rangle$ can be written in the form
+\[| \psi \rangle = | \psi_T \rangle | \phi \rangle\]
+where $| \psi_T \rangle$  is obtained from the vacuum with creation operators with transverse polarization and $| \phi \rangle$ with scalar and longitudinal polarization.
+
+$\partial^{\mu} A^{+}_{\mu}$ contains only scalar and longitudinal polarizations
+\[\partial^{\mu} A^{+}_{\mu} = i\sum_{\lambda=0,3} \int \widetilde{dp} a_{\lambda}(\bm{p}) (p \cdot \epsilon_{\lambda}(\bm{p}) ) e^{ipx} \]
+Therefore the previous condition becomes
+\[i\sum_{\lambda=0,3} (p \cdot \epsilon_{\lambda}(\bm{p})) a_{\lambda}(\bm{p})  | \phi \rangle = 0\]
+The condition is equivalent to,
+\[(a_{0}(\bm{p}) - a_{3}(\bm{p})) | \phi \rangle = 0\]
+We can construct $| \phi \rangle$ as a linear combination of states $| \phi \rangle$ with $n$ scalar or longitudinal photons:
+\[| \phi \rangle = C_0 | \phi_0 \rangle + C_1 | \phi \rangle + \cdots \quad \mbox{Here,} | \phi_0 \rangle \equiv | 0 \rangle\]
+The states $|\phi_n\rangle$ are eigenstates of the operator number for scalar or longitudinal photons
+\[N' | \phi_n \rangle = n | \phi_n \rangle\]
+where,
+\[N' = \int \widetilde{dp} [a^{\dagger}_{3}(\bm{p})a_{3}(\bm{p})-a^{\dagger}_{0}(\bm{p})a_{0}(\bm{p})] \]
+Then
+\[n \langle \phi_n | \phi_n \rangle = \langle \phi_n |N'| \phi_n \rangle = 0\]
+This means that
+\[\langle \phi_n | \phi_n \rangle = \delta_{n0}\]
+that is, for $n \neq 0$, the state $| \phi_n \rangle$ has zero norm. We have then for the general state $| \phi \rangle$,
+\[\langle \phi | \phi \rangle = |C_0|^2 \geq 0\]
+and the coefficients $C_i(i=1,2,\cdots)$ are arbitrary.
+
+\subsubsection{Operator represented by $a$ and $a^{\dagger}$}
+\noindent
+Define that
+\[N'(\bm{p}) \equiv a^{\dagger}_{3}(\bm{p})a_{3}(\bm{p})-a^{\dagger}_{0}(\bm{p})a_{0}(\bm{p})\]
+\[N(\bm{p},1) \equiv a^{\dagger}_{1}(\bm{p}) a_{1}(\bm{p}) \quad N(\bm{p},2) \equiv a^{\dagger}_{2}(\bm{p}) a_{2}(\bm{p}) \quad N_T(\bm{p}) \equiv N(\bm{p},1) + N(\bm{p},2)\]
+We have that
+\[\langle \psi | N'(\bm{p}) | \psi\rangle = 0 \quad \langle \psi | N_T(\bm{p}) | \psi\rangle = \langle \psi_T | N_T(\bm{p}) | \psi_T\rangle\]
+We can derive
+\[ H = \int \widetilde{dp} \; \omega [N'(\bm{p}) + N_T(\bm{p})] + 2\mathcal{E}_0V\]
+\[ \vec{P} = \int \widetilde{dp} \; \vec{p} [N'(\bm{p}) + N_T(\bm{p})]\]
+
+So, the arbitrariness of $C_i(i=1,2,\cdots)$ does not affect the physical observables. Only the physical transverse polarizations
+contribute to the result. Two states that differ only in their timelike and longitudinal photon content, $|\phi_n\rangle$ with $n \geq 1$ are said to be physically equivalent. We can think of the gauge symmetry of the classical theory as descending to the Hilbert space of the quantum theory.
+
+It is important to note that although for the average values of the physical observables only the transverse polarizations contribute, the scalar and longitudinal polarizations are necessary for the consistency of the theory. In particular they show up when we consider complete sums over the intermediate states.
+
+\subsubsection{Propagator}
+\[G_{\mu\nu} \equiv \langle 0 |T A_{\mu}(x) A_{\nu}(y) | 0 \rangle = \int \frac{d^4p}{(2\pi)^4} \frac{-i\eta_{\mu\nu}}{p^2-i\epsilon}  e^{ip(x-y)}\]
+It is easy to verify that $G_{\mu\nu}(x-y)$ is the Green's function of the equation of motion, that for $\xi=1$ is the wave equation, that is
+\[\partial^2 G_{\mu\nu} = i\eta_{\mu\nu}\delta(x-y)\]
+For the general case, $\xi \neq 0$, the equal times commutation relations are more complicated. And the propagator will be
+\[G_{\mu\nu}  = \int \frac{d^4p}{(2\pi)^4} \left[\frac{-i\eta_{\mu\nu}}{p^2-i\epsilon} + i(1-\xi)\frac{k_{\mu}k_{\nu}}{(k^2-i\epsilon)^2}\right] e^{ip(x-y)}\]

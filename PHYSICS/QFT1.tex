@@ -1,13 +1,26 @@
 \chapter{From classical field to quantum field}
-\section{Heisenberg picture of fields}
+\section{Motivation}
 \noindent
-The state of the field is described by an element $|\psi\rangle$ in Hilbert space. The measurement of the field is described by an operator field $\phi_a(\vec{x},t)$. In Heisenberg picture, the dynamic of the field satisfy the equation
-\[\frac{d\phi_a(x)}{dt} = -i[\phi_a(x),H]\]
-So, the mean value of the measurement of the field is described by Erenfest theorem
-\[\frac{d\langle \psi| \phi_a | \psi \rangle}{dt} = -i \langle \psi | [\phi_a,H] | \psi \rangle\]
-If $[\phi_a,H]_Q = i[\phi_a,H]_C$, we can reproduce the classical field equation. We also note that the bracket operation here $[A,B] = AB - BA$ has the same properties as the poission bracket in classical mechanics. So, what we need here is the canonical quantization
-\[[\phi_a(\vec{x},t),\phi_b(\vec{y},t)] = 0 \quad [\pi^a(\vec{x},t),\pi^b(\vec{y},t)] = 0 \quad [\phi_a(\vec{x},t),\pi^b(\vec{y},t)] = i \delta_a^b \delta(\vec{x}-\vec{y}) \]
-and the definition of $\mathcal{L}$,$\pi^a$ and $H$ is the same as those in corresponding classical theory. Then we can recover the classical field theory.
+The state of the field is described by an element $|\psi\rangle$ in Hilbert space. The measurement of the field is described by an operator field $\phi_a(\bm{x})$. The mean value of the measurement of the field is described by Erenfest's theorem
+\[\frac{d\langle \psi| \phi_a(\bm{x}) | \psi \rangle}{dt} = -i \langle \psi | [\phi_a(\bm{x}),H_S] | \psi \rangle\]
+If $[\phi_a(\bm{x}),H_S]_Q = i[\phi_a(\bm{x}),H_S]_C$, we can reproduce the classical field theory as an average effect of quantum field theory. We also note that the commutation relation here $[A,B] = AB - BA$ obeys the same operation laws as the Poisson bracket in classical field theory. So, what we need here is
+\begin{enumerate}
+\item the canonical quantization
+\[[\phi_a(\bm{x}),\phi_b(\bm{y})] = 0 \quad [\pi^a(\bm{x}),\pi^b(\bm{y})] = 0 \quad [\phi_a(\bm{x}),\pi^b(\bm{y})] = i \delta_a^b \delta(\bm{x}-\bm{y}) \]
+\item the same definition of $\mathcal{L}$,$\pi^a$ and $H$ as those in corresponding classical theory.
+\end{enumerate}
+In Heisenberg picture, we define
+\[A_H \equiv U^{-1}(t,t_0) A_S U(t,t_0)\]
+Especially,
+\[\phi_a(x) \equiv U^{-1}(t,t_0) \phi_a(\bm{x}) U(t,t_0)\]
+\[\pi^a(x) \equiv U^{-1}(t,t_0) \pi^a(\bm{x}) U(t,t_0)\]
+If $A = f(\phi_a(\bm{x}),\pi^a(\bm{x}),t)$, then we have $A_H = f(\phi_a(x),\pi^a(x),t)$. \\
+The canonical quantization can be generalized to the field operator in any time
+\[[\phi_a(\bm{x},t),\phi_b(\bm{y},t)] = 0 \quad [\pi^a(\bm{x},t),\pi^b(\bm{y},t)] = 0 \quad [\phi_a(\bm{x},t),\pi^b(\bm{y},t)] = i \delta_a^b \delta(\bm{x}-\bm{y}) \]
+The dynamics of the field can be describe by Heisenberg equation
+\[\frac{d\phi_a(x)}{dt} = -i[\phi_a(x),H_H]\]
+\[\frac{d\pi^a(x)}{dt} = -i[\pi^a(x),H_H]\]
+whose form will be equivalent to the classical field equation.
 
 \section{Lorentz invariance in quantum field theory}
 \[| \bar{\psi}\rangle = U(\Lambda)| \psi\rangle\]
@@ -17,70 +30,76 @@ Scalar fields:
 Vector fields:
 \[\langle \bar{\psi} | A^{\mu}(x) | \bar{\psi}\rangle = \langle \psi | \Lambda^{\mu}_{\phantom{\mu}\nu} A^{\nu}(\Lambda^{-1}x) | \psi\rangle\]
 \[U^{-1}(\Lambda) A^{\mu}(x) U(\Lambda) = \Lambda^{\mu}_{\phantom{\mu}\nu} A^{\nu}(\Lambda^{-1}x)\]
-Lagrangian is a scalar, or more loosely, action is invariant under Lorentz transformation.
+Lorentz invariance means Lagrangian must be a scalar, or more loosely, action must be invariant under Lorentz transformation.
 
 \section{Momentum}
 \noindent
-The definition of momentum is the same as that in classical theory.
+The definition of momentum is the same as that in classical theory:
 \[T^{\mu \nu} \equiv -\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}\phi_a)} \partial^{\nu} \phi_a + \eta^{\mu \nu} \mathcal{L} \quad \partial_{\mu} T^{\mu \nu} = 0\]
 and
 \[P^{\mu} \equiv \int T^{0 \mu} d^3 x \quad \frac{d P^{\mu}}{dt} = 0\]
 \[P^{0} = H, \quad P^{i} = \int -\pi^a \partial^i \phi_a d^3 x\]
-And we can get the commutation relationship that
+We can get the commutation relation
 \begin{eqnarray}
 \left[\phi_a,P^{\mu}\right] &=& -i\partial^{\mu} \phi_a \nonumber \\
 \left[\pi^a,P^{\mu}\right] &=& -i\partial^{\mu} \pi^a \nonumber \\
 \left[P^{\mu},P^{\nu}\right] &=& 0 \nonumber 
 \end{eqnarray}
-We denote the translation operator as $T(s)$, so
+We define the translation operator $T(s)$ by
 \[T^{-1}(s) \phi_a(x) T(s) = \phi_a(x-s)\]
-we can deduce that
+then we can derive that
 \[T(\epsilon) = 1 - i\epsilon_{\mu} P^{\mu} \quad T(s) = e^{-iP^{\mu}s_{\mu}}\]
 
 
 \section{Angular Momentum}
 \noindent
-The definition of Angular momentum is the same as that in classical theory.
+The definition of angular momentum is the same as that in classical theory:
 \[M^{\mu \nu \rho} \equiv x^{\nu}T^{\mu \rho} - x^{\rho} T^{\mu \nu} - \frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi_a)}(\Sigma^{\nu \rho})_{a}^{\phantom{a}b}\phi_b\]
 and 
 \[M^{\nu \rho} \equiv \int M^{0 \nu \rho} d^3 x \quad \frac{dM^{\nu \rho}}{dt} = 0\]
 \[M^{\mu \nu} = \int (x^{\mu}T^{0\nu}-x^{\nu}T^{0\mu}-\pi^a(\Sigma^{\mu \nu})_{a}^{\phantom{a}b}\phi_b) d^3 x\]
-We denote that
+We also define that
 \[M_{L}^{\mu \nu} \equiv \int (x^{\mu}T^{0\nu}-x^{\nu}T^{0\mu}) d^3 x \quad M_S^{\mu \nu} \equiv\int (-\pi^a(\Sigma^{\mu \nu})_{a}^{\phantom{a}b}\phi_b) d^3 x\]
 \[(L^{\mu \nu})_a^{\phantom{a}b} \equiv -i(x^{\mu}\partial^{\nu}-x^{\nu}\partial^{\mu})\delta_a^{\phantom{a}b} \quad (S^{\mu \nu})_a^{\phantom{a}b} \equiv -i(\Sigma^{\mu \nu})_a^{\phantom{a}b}\]
-And we have the commutation relationship that
+We can get the commutation relation
 \[M^{\mu \nu} = M_L^{\mu \nu} + M_S^{\mu \nu}\]
 \[[\phi_a,M_L^{\mu \nu}] = (L^{\mu \nu})_a^{\phantom{a}b} \phi_b \quad [\phi_a,M_S^{\mu \nu}] = (S^{\mu \nu})_a^{\phantom{a}b} \phi_b\]
 \[[\pi^a,M_L^{\mu \nu}] = (L^{\mu \nu})_b^{\phantom{b}a}\pi^{b}  \quad [\pi^a,M_S^{\mu \nu}] = - (S^{\mu \nu})_b^{\phantom{b}a} \pi^b \]
-\[[M^{\mu \nu},M^{\rho \sigma}] = i(-g^{\nu \rho}M^{\mu \sigma} + g^{\sigma \mu}M^{\rho \nu} + g^{\mu \rho}M^{\nu \sigma} - g^{\sigma \nu}M^{\rho \mu})\]
-We again define $J_i \equiv \frac{1}{2} \epsilon_{ijk} M^{jk}$ and $K_i \equiv M^{i0}$, the communication relationship can be written as
+\[[M^{\mu \nu},M^{\rho \sigma}] = i(-\eta^{\nu \rho}M^{\mu \sigma} + \eta^{\sigma \mu}M^{\rho \nu} + \eta^{\mu \rho}M^{\nu \sigma} - \eta^{\sigma \nu}M^{\rho \mu})\] \\
+We again define $J_i \equiv \frac{1}{2} \epsilon_{ijk} M^{jk}$ and $K_i \equiv M^{i0}$, the communication relation can be written as
 \begin{eqnarray}
 \left[J_i,J_j\right] &=& i\epsilon_{ijk}J_k \nonumber \\
 \left[J_i,K_j\right] &=& i\epsilon_{ijk}K_k \nonumber \\
 \left[K_i,K_j\right] &=& -i\epsilon_{ijk}J_k \nonumber
-\end{eqnarray}
-Further more, 
-\[[P^{\mu},M^{\rho \sigma}] = i(g^{\mu \sigma}P^{\mu} - g^{\mu \rho}P^{\sigma})\]
+\end{eqnarray} \\
+Further more,
+\[[P^{\mu},M^{\rho \sigma}] = i(\eta^{\mu \sigma}P^{\mu} - \eta^{\mu \rho}P^{\sigma})\]
 \begin{eqnarray}
 \left[J_i,H\right] &=& 0 \nonumber \\
 \left[J_i,P_j\right] &=& i\epsilon_{ijk}P_k \nonumber \\
 \left[K_i,H\right] &=& iP_i \nonumber \\
 \left[K_i,P_j\right] &=& i\delta_{ij}H \nonumber
 \end{eqnarray}
-At last, we define $L_i \equiv \frac{1}{2} \epsilon_{ijk} M_L^{jk}$ and $S_i \equiv \frac{1}{2} \epsilon_{ijk} M_S^{jk}$. So
+At last, we also define $L_i \equiv \frac{1}{2} \epsilon_{ijk} M_L^{jk}$ and $S_i \equiv \frac{1}{2} \epsilon_{ijk} M_S^{jk}$. So
 \begin{eqnarray}
 \left[L_i,S_j\right] &=& 0 \nonumber \\
 \left[S_i,P_j\right] &=& 0 \nonumber \\
 \left[L_i,P_j\right] &=& i\epsilon_{ijk}P_k \nonumber
 \end{eqnarray}
-We denote the rotation operator as $U(\Lambda)$, so
-\[U^{-1}(\Lambda) \phi_a(x) U(\Lambda) = S_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
-and 
-\[S_{a}^{\phantom{a}b} = \delta_{a}^{\phantom{a}b}+\frac{i}{2} \delta \omega_{\alpha \beta} (S^{\alpha \beta})_{a}^{\phantom{a}b} \]
-we can deduce that
+We define the rotation operator $U(\Lambda)$ by
+\[U^{-1}(\Lambda) \phi_a(x) U(\Lambda) = \mathcal{S}_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
+where
+\[\mathcal{S}_{a}^{\phantom{a}b} = \delta_{a}^{\phantom{a}b}+\frac{i}{2} \delta \omega_{\alpha \beta} (S^{\alpha \beta})_{a}^{\phantom{a}b} \]
+We can derive that
 \[U(1+\delta \omega) = 1 + \frac{i}{2} \delta \omega_{\mu \nu} M^{\mu \nu} \quad U(\Lambda) = e^{\frac{i}{2} \theta_{\mu \nu} M^{\mu \nu}}\]
 \[U^{-1}(\Lambda) P^{\mu} U(\Lambda) = \Lambda^{\mu}_{\phantom{\mu}\nu} P^{\nu}\]
 \[U^{-1}(\Lambda) M^{\mu \nu} U(\Lambda) = \Lambda^{\mu}_{\phantom{\mu}\rho} \Lambda^{\nu}_{\phantom{\nu}\sigma}M^{\rho \sigma}\]
+
+\section{Anticommutation relation}
+\noindent
+We define the anticommutation relation of operators as $\{A,B\} \equiv AB + BA$. Suppose that the field operator and its canonical momentum operator has the following anticommutation relation
+\[\{\phi_a(\bm{x},t),\phi_b(\bm{y},t)\} = 0 \quad \{\pi^a(\bm{x},t),\pi^b(\bm{y},t)\} = 0 \quad \{\phi_a(\bm{x},t),\pi^b(\bm{y},t)\} = i \delta_a^b \delta(\bm{x}-\bm{y}) \]
+If the operator $A$ composes of the terms like $\pi^a \mathcal{E}_a^{\phantom{a}b} \phi_b$, we can show that the value of $[\phi_a,A]$ and $[\pi^a,A]$ is the same as those in the theory quantized with commutation relation. It is easy to verify that the operator $P^i$ and $M_S^{\mu \nu}$ has the required form. The form of $H$ is determined by the specific theory. As we can see later, the Hamiltonian of Dirac field  has the required form. When it is quantized with anticommutation relation, the commutation relation between field operator and momentum, angular momentum discussed in previous section will be hold automatically. 
 
 \chapter{Spin 0 Fields}
 \section{Klein-Gordon fields}
@@ -100,31 +119,31 @@ we can deduce that
 \section{Canonical quantization Formulation}
 \subsubsection{Canonical quantization}
 \begin{eqnarray}
-\left[\phi(\vec{x},t),\phi(\vec{y},t)\right] &=& 0 \nonumber \\
-\left[\pi(\vec{x},t),\pi(\vec{y},t)\right] &=& 0 \nonumber \\
-\left[\phi(\vec{x},t),\pi(\vec{y},t)\right] &=& i \delta(\vec{x}-\vec{y}) \nonumber
+\left[\phi(\bm{x},t),\phi(\bm{y},t)\right] &=& 0 \nonumber \\
+\left[\pi(\bm{x},t),\pi(\bm{y},t)\right] &=& 0 \nonumber \\
+\left[\phi(\bm{x},t),\pi(\bm{y},t)\right] &=& i \delta(\bm{x}-\bm{y}) \nonumber
 \end{eqnarray}
 \subsubsection{Fourier expansion}
-\[\phi(\vec{x},t) = \int \widetilde{dk} \left[ a(\vec{k})e^{ikx} + a^{\dagger}(\vec{k})e^{-ikx} \right]\]
-\[\pi(\vec{x},t) = -i \int  \widetilde{dk} \omega \left[ a(\vec{k})e^{ikx} - a^{\dagger}(\vec{k})e^{-ikx} \right]\]
-Here, $k^2 = \mathbf{k}^2 - \omega^2 = -m^2$, $kx = \mathbf{k}\cdot \mathbf{x} - \omega t$, $\widetilde{dk} = \frac{d^3}{(2\pi)^2 2\omega}$
-\[a(\vec{k}) = \int d^3 x e^{-ikx}(i\pi+\omega \phi)\]
-\[a^{\dagger}(\vec{k}) = \int d^3 x e^{ikx}(-i\pi+\omega \phi)\]
+\[\phi(\bm{x},t) = \int \widetilde{dk} \left[ a(\bm{k})e^{ikx} + a^{\dagger}(\bm{k})e^{-ikx} \right]\]
+\[\pi(\bm{x},t) = -i \int  \widetilde{dk} \omega \left[ a(\bm{k})e^{ikx} - a^{\dagger}(\bm{k})e^{-ikx} \right]\]
+Here, $k^2 = \bm{k}^2 - \omega^2 = -m^2$, $kx = \bm{k}\cdot \bm{x} - \omega t$, $\widetilde{dk} = \frac{d^3}{(2\pi)^2 2\omega}$
+\[a(\bm{k}) = \int d^3 x e^{-ikx}(i\pi+\omega \phi)\]
+\[a^{\dagger}(\bm{k}) = \int d^3 x e^{ikx}(-i\pi+\omega \phi)\]
 \begin{eqnarray}
-\left[a(\vec{p}),a(\vec{q})\right] &=& 0 \nonumber \\
-\left[a^{\dagger}(\vec{p}),a^{\dagger}(\vec{q})\right] &=& 0 \nonumber \\
-\left[a(\vec{p}),a^{\dagger}(\vec{q})\right] &=& (2\pi)^3 2\omega \delta(\vec{p}-\vec{q}) \nonumber
+\left[a(\bm{p}),a(\bm{q})\right] &=& 0 \nonumber \\
+\left[a^{\dagger}(\bm{p}),a^{\dagger}(\bm{q})\right] &=& 0 \nonumber \\
+\left[a(\bm{p}),a^{\dagger}(\bm{q})\right] &=& (2\pi)^3 2\omega \delta(\bm{p}-\bm{q}) \nonumber
 \end{eqnarray}
 \subsubsection{Operator represented by $a$ and $a^{\dagger}$}
-\[H=\int \widetilde{dk}\, \omega\, a^{\dagger}(\vec{k})a(\vec{k}) + (\mathcal{E}_0 - \Omega_0)V \quad \mathcal{E}_0 = \frac{1}{2}(2\pi)^{-3}\int d^3 k \,\omega\]
-\[P^{i}=\int \widetilde{dk}\, k^{i}\, a^{\dagger}(\vec{k})a(\vec{k}) \]
+\[H=\int \widetilde{dk}\, \omega\, a^{\dagger}(\bm{k})a(\bm{k}) + (\mathcal{E}_0 - \Omega_0)V \quad \mathcal{E}_0 = \frac{1}{2}(2\pi)^{-3}\int d^3 k \,\omega\]
+\[P^{i}=\int \widetilde{dk}\, k^{i}\, a^{\dagger}(\bm{k})a(\bm{k}) \]
 \subsubsection{Particles}
-\[[H,a(\vec{k})] = -\omega a(\vec{k}) \quad [H,a^{\dagger}(\vec{k})] = \omega a^{\dagger}(\vec{k})\]
-\[[P^i,a(\vec{k})] = -k^i a(\vec{k}) \quad [P^i,a^{\dagger}(\vec{k})] = k^i a^{\dagger}(\vec{k})\]
-Let $|p\rangle = a^{\dagger}(\vec{p})|0\rangle $,so
+\[[H,a(\bm{k})] = -\omega a(\bm{k}) \quad [H,a^{\dagger}(\bm{k})] = \omega a^{\dagger}(\bm{k})\]
+\[[P^i,a(\bm{k})] = -k^i a(\bm{k}) \quad [P^i,a^{\dagger}(\bm{k})] = k^i a^{\dagger}(\bm{k})\]
+Let $|p\rangle = a^{\dagger}(\bm{p})|0\rangle $,so
 \[H |p\rangle = \omega_p|p\rangle \quad P^i |p\rangle = p^i|p\rangle\]
-So, we interpret the state $|\vec{p}\rangle$ as the momentum eigenstate of a single particle of mass $m$. We can also show that 
-$J_i|\vec{p} = 0\rangle = 0$, so the particle carries no internal angular momentum.
+So, we interpret the state $|\bm{p}\rangle$ as the momentum eigenstate of a single particle of mass $m$. We can also show that 
+$J_i|\bm{p} = 0\rangle = 0$, so the particle carries no internal angular momentum.
 \subsubsection{Causality}
 \noindent
 The amplitude for a particle to propagate from $y$ to $x$ is $\langle 0 | \phi(x) \phi(y) | 0 \rangle$, denoted by $D(x-y)$.
@@ -149,14 +168,14 @@ Here, $T$ stands for time ordering, placing all operators evaluated at later tim
 
 \section{Perturbation theory for canonical quantization}
 \[\mathcal{L} = -\frac{1}{2}\partial_{\mu} \phi \partial^{\mu} \phi -\frac{1}{2}m_0^2 \phi^2 -\frac{\lambda_0}{4!}\phi^4\]
-\[H = H_0 + H_{int} \quad H_{int} = \int d^3 x \frac{\lambda_0^4}{4!} \phi^4 (\vec{x})\]
+\[H = H_0 + H_{int} \quad H_{int} = \int d^3 x \frac{\lambda_0^4}{4!} \phi^4 (\bm{x})\]
 \subsection{Perturbation expansion of correlation functions}
 \begin{note}
 The ground state of the interaction field theory is denoted by $| \Omega \rangle$, the ground state of the free field theory is denoted by $| 0 \rangle$. The zero of energy is defined by $H_0 | 0 \rangle =0$ and $E_0 = \langle \Omega | H | \Omega \rangle$.
 \end{note}
-\[\phi(t_0,\vec{x}) = \int \frac{d^3p}{(2\pi)^3}( a(\vec{p})e^{i\vec{p}\cdot\vec{x}} + a^{\dagger}(\vec{p})e^{-i\vec{p}\cdot\vec{x}})\]
-\[\phi(t,\vec{x}) = e^{iH(t-t_0)} \phi(t_0,\vec{x}) e^{-iH(t-t_0)}\]
-\[\phi_I(t,\vec{x}) \equiv e^{iH_0(t-t_0)} \phi(t_0,\vec{x}) e^{-iH_0(t-t_0)}\]
+\[\phi(t_0,\bm{x}) = \int \frac{d^3p}{(2\pi)^3}( a(\bm{p})e^{i\bm{p}\cdot\bm{x}} + a^{\dagger}(\bm{p})e^{-i\bm{p}\cdot\bm{x}})\]
+\[\phi(t,\bm{x}) = e^{iH(t-t_0)} \phi(t_0,\bm{x}) e^{-iH(t-t_0)}\]
+\[\phi_I(t,\bm{x}) \equiv e^{iH_0(t-t_0)} \phi(t_0,\bm{x}) e^{-iH_0(t-t_0)}\]
 \[H_I(x) = \int d^3x \frac{\lambda_0^4}{4!} \phi_I^4\]
 The perturbation expansion of correlation functions is
 \[\langle \Omega | T \{ \phi(x) \phi(y) \} | \Omega \rangle = \lim_{T \to \infty(1-i\epsilon)} \frac{\langle 0 | T \left\{ \phi_I(x) \phi_I(y) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle}{\langle 0 | T \left\{ \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle}\]
@@ -170,8 +189,8 @@ The proof can be found in chapter 4.3 of \emph{An introduction to quantum field 
 \begin{example}
 \begin{eqnarray}
 \langle 0 | T \left\{ \phi_I(x_1) \phi_I(x_2) \phi_I(x_3) \phi_I(x_4)\right\}| 0 \rangle &=& D_F(x_1-x_2)D_F(x_3-x_4) \nonumber \\
-&=& D_F(x_1-x_3)D_F(x_2-x_4) \nonumber \\
-&=& D_F(x_1-x_4)D_F(x_2-x_3) \nonumber
+&+& D_F(x_1-x_3)D_F(x_2-x_4) \nonumber \\
+&+& D_F(x_1-x_4)D_F(x_2-x_3) \nonumber
 \end{eqnarray}
 \end{example}
 
@@ -206,17 +225,16 @@ Here, the "E-disconnected" means disconnected from all external points", being c
 \subsection{Basic formulation}
 \noindent
 Recall the path integrals formulation in quantum mechanics, we have
-\[\langle \phi_b(\vec{x}) | e^{-iHT} | \phi_a(\vec{x}) \rangle = \int \mathcal{D}\phi \mathcal{D}\pi  \mathrm{exp} \left[ i\int_0^T d^4x (\pi\dot{\phi} - \frac{1}{2}\pi^2 - \frac{1}{2}(\nabla \phi)^2 -V(\phi))\right]\]
-Here, $\langle \phi_b(\vec{x}) |$ is the eigenstate of $\phi_S(\vec{x})=\phi_H(\vec{x},0)$ with eigenvalue $\phi_b(\vec{x})$ at time $t=T$,$| \phi_a(\vec{x}) \rangle$ is the eigenstate of $\phi_S(\vec{x})$ with eigenvalue $\phi_a(\vec{x})$ at time $t=0$.\\
+\[\langle \phi_b(\bm{x}) | e^{-iHT} | \phi_a(\bm{x}) \rangle = \int \mathcal{D}\phi \mathcal{D}\pi  \mathrm{exp} \left[ i\int_0^T d^4x (\pi\dot{\phi} - \frac{1}{2}\pi^2 - \frac{1}{2}(\nabla \phi)^2 -V(\phi))\right]\]
+Here, $\langle \phi_b(\bm{x}) |$ is the eigenstate of $\phi_S(\bm{x})=\phi_H(\bm{x},0)$ with eigenvalue $\phi_b(\bm{x})$ at time $t=T$,$| \phi_a(\bm{x}) \rangle$ is the eigenstate of $\phi_S(\bm{x})$ with eigenvalue $\phi_a(\bm{x})$ at time $t=0$.\\
 Since the exponential is quadratic in $\pi$, we can complete the square and evaluate the $\mathcal{D}(\pi)$ integral to obtain
-\[\langle \phi_b(\vec{x}) | e^{-iHT} | \phi_a(\vec{x}) \rangle = \int \mathcal{D}\phi  \mathrm{exp} \left[ i\int_0^T d^4x \mathcal{L} \right]\]
+\[\langle \phi_b(\bm{x}) | e^{-iHT} | \phi_a(\bm{x}) \rangle = \int \mathcal{D}\phi  \mathrm{exp} \left[ i\int_0^T d^4x \mathcal{L} \right]\]
 Now we can abandon the Hamiltonian formalism and take the the equation above to define the Hamiltonian dynamics.
 \begin{note}
 We emphasize that in this subsection, $\phi_H$ denotes the Heisenberg picture of field whose value is operators,$\phi_S$ denotes the Schr\"{o}dinger picture of field, $\phi(x)$ is classical field whose value is ordinary number.
 \end{note}
 
 \subsubsection{Correlation function}
-\noindent
 \[\langle \Omega | T \phi_H(x_1) \phi_H(x_2)| \Omega \rangle = \lim_{T \to \infty(1-i\epsilon)} \frac{\int \mathcal{D}\phi \phi(x_1)\phi(x_2) \mathrm{exp} \left[ i\int_T^T d^4x \mathcal{L} \right]}{\int \mathcal{D} \phi \mathrm{exp} \left[ i\int_T^T d^4x \mathcal{L} \right]}\]
 The proof can be found in chapter 9.2 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}.
 
@@ -244,11 +262,11 @@ So,
 \section{Perturbation theory for path integral quantization}
 \begin{eqnarray}
 \mathcal{L} &=& -\frac{1}{2}\partial_{\mu} \phi \partial^{\mu} \phi -\frac{1}{2}m_0^2 \phi^2 -\frac{\lambda_0}{4!}\phi^4 \nonumber \\
-\mathcal{L} &=& \mathcal{L}_0 + \mathcal{L}_1 \quad \mathcal{L}_1 =- \frac{\lambda_0}{4!} \phi^4 (\vec{x}) \nonumber \\
+\mathcal{L} &=& \mathcal{L}_0 + \mathcal{L}_1 \quad \mathcal{L}_1 =- \frac{\lambda_0}{4!} \phi^4 (\bm{x}) \nonumber \\
 Z[J] &=& \int \mathcal{D}\phi e^{i\int d^4x [\mathcal{L}_0 + \mathcal{L}_1 + J\phi]} \nonumber \\
 &=& e^{i\int d^4y \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(y)})} \int \mathcal{D}\phi e^{i\int d^4x [\mathcal{L}_0 + J\phi]} \nonumber \\
 &\propto & e^{i\int d^4x \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(x)})} \mathrm{exp} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)] \nonumber \\
-& =& \sum_{V=0}^{\infty} \frac{1}{V!} [ \frac{-i\lambda_0}{4!} \int d^4x (\frac{1}{i} \frac{\delta}{\delta J(x)})^4]^V \times \sum_{P=0}^{\infty} \frac{1}{P!} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)]^P
+& =& \sum_{V=0}^{\infty} \frac{1}{V!} [ \frac{-i\lambda_0}{4!} \int d^4x (\frac{1}{i} \frac{\delta}{\delta J(x)})^4]^V \times \sum_{P=0}^{\infty} \frac{1}{P!} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)]^P \nonumber
 \end{eqnarray}
 If we focus on a term with particular values of V and P, then
 the number of surviving sources (after we take all the functional derivatives) is $E = 2P-4V$. The $4V$ functional derivatives can act on the 2P sources in $\frac{(2P)!}{(2P-4V)!}$ different combinations. However, many of the resulting expressions are algebraically identical.\\ \\
@@ -267,8 +285,8 @@ The detailed discussion can be found in chapter 9 of \emph{Quantum field theory 
 \subsection{Field strength renormalization}
 \noindent
 The completeness relation:
-\[\mathbf{1} = |\Omega\rangle\langle\Omega| +  \sum_{\lambda} \int \frac{d^3p}{(2\pi)^3} \frac{1}{2E_{\mathbf{p}}} |\lambda_{\mathbf{p}}\rangle\langle\lambda_{\mathbf{p}}|\]
-Here, $E_{\mathbf{p}} = \sqrt{m_{\lambda}^2 + \mathbf{p}^2}$\\
+\[\bm{1} = |\Omega\rangle\langle\Omega| +  \sum_{\lambda} \int \frac{d^3p}{(2\pi)^3} \frac{1}{2E_{\bm{p}}} |\lambda_{\bm{p}}\rangle\langle\lambda_{\bm{p}}|\]
+Here, $E_{\bm{p}} = \sqrt{m_{\lambda}^2 + \bm{p}^2}$\\
 \begin{figure}[!h]
 \centering
 \includegraphics[height=7cm ,width=12cm]{QFT/FSR1.png}
@@ -276,9 +294,9 @@ Here, $E_{\mathbf{p}} = \sqrt{m_{\lambda}^2 + \mathbf{p}^2}$\\
 \end{figure}
 \\
 Assume for now $x^0 > y^0$ and define $\langle \Omega | \phi(x) \phi(y) | \Omega \rangle_{C} = \langle \Omega | \phi(x) \phi(y) | \Omega \rangle - \langle \Omega | \phi(x)| \Omega \rangle \langle | \Omega \phi(y) | \Omega \rangle$ as connected two point function. (The term $\langle \Omega | \phi(x)| \Omega \rangle \langle | \Omega \phi(y) | \Omega \rangle$ is usually zero by symmetry; for higher spin fields, it is zero by Lorentz invariance.) The connected two point function is
-\[\langle \Omega | \phi(x) \phi(y) | \Omega \rangle_{C} = \sum_{\lambda} \int \frac{d^3p}{(2\pi)^3} \frac{1}{2E_{\mathbf{p}}} \langle \Omega | \phi(x) |\lambda_{\mathbf{p}}\rangle\langle\lambda_{\mathbf{p}}| \phi(y) | \Omega \rangle\]
+\[\langle \Omega | \phi(x) \phi(y) | \Omega \rangle_{C} = \sum_{\lambda} \int \frac{d^3p}{(2\pi)^3} \frac{1}{2E_{\bm{p}}} \langle \Omega | \phi(x) |\lambda_{\bm{p}}\rangle\langle\lambda_{\bm{p}}| \phi(y) | \Omega \rangle\]
 It can be verified that
-\[\langle \Omega | \phi(x) |\lambda_{\mathbf{p}}\rangle = \langle \langle \Omega | \phi(0) | \lambda_0 \rangle e^{ipx} |_{p^0 = E_{\mathbf{p}}}\]
+\[\langle \Omega | \phi(x) |\lambda_{\bm{p}}\rangle = \langle \langle \Omega | \phi(0) | \lambda_0 \rangle e^{ipx} |_{p^0 = E_{\bm{p}}}\]
 So,
 \[\langle \Omega | \phi(x) \phi(y) | \Omega \rangle_C = \sum_{\lambda} \int \frac{d^4p}{(2\pi)^4} \frac{-i}{p^2 + m_{\lambda}^2 -i\epsilon} e^{ip(x-y)} |\langle \Omega | \phi(0) | \lambda_0 \rangle|^2\]
 Analogous expressions hold for the case $y^0 > x^0$, and both cases can be summarized as
@@ -306,12 +324,12 @@ $Z = |\langle \Omega | \phi(0) | \lambda_0 \rangle|^2$ is called field-strength 
 \subsection{LSZ reduction formula}
 \begin{newthem}[LSZ reduction formula]
 \begin{eqnarray}
-&& \quad \prod_1^n \int d^4 x_i e^{-ip_ix_i} \prod_1^m d^4 y_i e^{ik_jy_j} \langle \omega | T \{\phi(x_1) \cdots \phi(x_n) \phi(y_1) \cdots \phi(y_m)\} | \Omega \rangle \nonumber \\
-&& \underset{ p_i^0 \to E_{\mathbf{p}_i}\, k_i^0 \to E_{\mathbf{k}_i}}{\sim}  \left( \prod_1^n \frac{-\sqrt{Z} i}{p_i^2 + m^2 -i\epsilon} \right) \left( \prod_1^m \frac{-\sqrt{Z} i}{k_i^2 + m^2 -i\epsilon} \right) \langle \mathbf{p}_1 \cdots \mathbf{p}_n | S | \mathbf{k}_1 \cdots \mathbf{k}_m \rangle \nonumber
+&& \quad \prod_1^n \int d^4 x_i e^{-ip_ix_i} \prod_1^m d^4 y_j e^{ik_jy_j} \langle \Omega | T \{\phi(x_1) \cdots \phi(x_n) \phi(y_1) \cdots \phi(y_m)\} | \Omega \rangle \nonumber \\
+&& \underset{ p_i^0 \to E_{\bm{p}_i}\, k_i^0 \to E_{\bm{k}_i}}{\sim}  \left( \prod_1^n \frac{-\sqrt{Z} i}{p_i^2 + m^2 -i\epsilon} \right) \left( \prod_1^m \frac{-\sqrt{Z} i}{k_i^2 + m^2 -i\epsilon} \right) \langle \bm{p}_1 \cdots \bm{p}_n | S | \bm{k}_1 \cdots \bm{k}_m \rangle \nonumber
 \end{eqnarray}
 \end{newthem}
 \noindent
-The $\sim$ means the two sides of the expression share the same singular structure around $p_i^0 \to E_{\mathbf{p}_i}$, $k_i^0 \to E_{\mathbf{k}_i}$.
+The $\sim$ means the two sides of the expression share the same singular structure around $p_i^0 \to E_{\bm{p}_i}$, $k_i^0 \to E_{\bm{k}_i}$.
 The proof can be found in chapter 7.2 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}.
 To express the formula above in the language of Feynman diagrams, we consider the S-matrix element for 2-particle $\to$ 2-particle for example. Note the disconnected diagram should be disregarded because they do not have the singularity structure with a product of four poles indicated by on the right side of the LSZ reduction formula. So, the exact four point function
 \[\prod_1^2 \int d^4 x_i e^{-ip_ix_i} \prod_1^2 d^4 y_i e^{ik_jy_j} \langle \omega | T \{\phi(x_1)\phi(x_2)\phi(y_1) \phi(y_2)\} | \Omega \rangle \]
@@ -339,7 +357,7 @@ Figure 2.9.
 \caption{Diagram representation of exact propagator}
 \end{figure}\\
 The result is $\frac{-i}{p^2 + m_0^2 + M^2}$. If we expand each resummed propagator about the physical particle pole, we see that each external leg of the four-point amplitude contributes
-\[\frac{-i}{p^2 + m_0^2 + M^2} \underset{p^0 \to E_{\mathbf{p}}}{\sim} \frac{-iZ}{p^2+m^2} + \mbox{ (regular) }\]
+\[\frac{-i}{p^2 + m_0^2 + M^2} \underset{p^0 \to E_{\bm{p}}}{\sim} \frac{-iZ}{p^2+m^2} + \mbox{ (regular) }\]
 Thus, the sum of diagrams contains a product of four point poles:
 \[\frac{-iZ}{p_1^2 + m^2} \frac{-iZ}{p_2^2 + m^2} \frac{-iZ}{k_1^2 + m^2} \frac{-iZ}{k_2^2 + m^2}\]
 So, the S matrix element can be represented by 
@@ -360,9 +378,9 @@ It is easy to be generalized to the more complicated scattering cases. After Fou
 \end{enumerate}
 We can write $\langle f | S | i \rangle = i \mathcal{M} (2\pi)^4 \delta(\sum p_f - \sum p_i)$ for convenience.
 
-\section{Re-normalization}
+\section{Renormalization}
 \noindent
-Re-normalization, the procedure in quantum field theory by which divergent parts of a calculation, leading to nonsensical infinite results, are absorbed by redefinition into a few measurable quantities, so yielding finite answers.
+Renormalization, the procedure in quantum field theory by which divergent parts of a calculation, leading to nonsensical infinite results, are absorbed by redefinition into a few measurable quantities, so yielding finite answers.
 
 \subsection{Counting of ultraviolet divergence}
 \noindent
@@ -373,22 +391,22 @@ Let $N$ be the number of external lines in the diagram, $P$ the number of propag
 According the superficial degrees of divergence of the diagram. These three possible types of ultraviolet behaviour of quantum field theories. We will refer to them as follows
 
 \begin{enumerate}
-\item Super-Re-normalizable theory: Only a finite number of Feynman diagrams superficially diverge.
-\item Re-normalizable theory: Only a finite number of amplitudes superficially diverge; however, divergences
+\item Super-renormalizable theory: Only a finite number of Feynman diagrams superficially diverge.
+\item renormalizable theory: Only a finite number of amplitudes superficially diverge; however, divergences
 occur at all orders in perturbation theory. 
-\item Non-Re-normalizable theory: All amplitudes are divergent at a sufficiently high order in perturbation
+\item Non-renormalizable theory: All amplitudes are divergent at a sufficiently high order in perturbation
 theory.
 \end{enumerate}
 
-So, for $\phi^4$ theory in four dimension, $D = 4 - N$. It is a re-normalizable theory. For $\phi^3$ theory in four dimension, $D = 4 - V -N$. It is a super-re-normalizable theory. For $\phi^6$ theory in four dimension, $D = 4 + 2V -N$. It is a Non-re-normalizable theory. \\ \\
+So, for $\phi^4$ theory in four dimension, $D = 4 - N$. It is a renormalizable theory. For $\phi^3$ theory in four dimension, $D = 4 - V -N$. It is a super-renormalizable theory. For $\phi^6$ theory in four dimension, $D = 4 + 2V -N$. It is a Non-renormalizable theory. \\ \\
 The superficial degrees of freedom can also be derived from dimensional analysis. The dimension of $\lambda$ is $d - \frac{n(d-2)}{2}$. Now consider an arbitrary diagram with $N$ external lines. One way that such a diagram could arise is from an interaction term $\eta \phi^N$ in the Lagrangian. The dimension of $\eta$ would then be $d - \frac{N(d-2)}{2}$, and therefore we conclude that any (amputated) diagram with $N$ external lines has dimension $d - \frac{N(d-2)}{2}$. In our theory with only the $\lambda \phi^n$ vertex, if the diagram has $V$ vertices, its divergent part is proportional to $\lambda^V \Lambda^D$, where $\Lambda$ is a high momentum cut-off and $D$ is the superficial degree of divergence.  Applying dimensional analysis, we find
 \[d - \frac{N(d-2)}{2} = V[d - \frac{n(d-2)}{2}] + D\]
-Note that the quantity that multiplies $V$ in this expression is just the dimension of the coupling constant $\lambda$. Thus we can characterize the three degrees of re-normalizability in a second way:
+Note that the quantity that multiplies $V$ in this expression is just the dimension of the coupling constant $\lambda$. Thus we can characterize the three degrees of renormalizability in a second way:
 
 \begin{enumerate}
-\item Super-Re-normalizable: Coupling constant has positive mass dimension.
-\item  Re-normalizable: Coupling constant is dimensionless.
-\item  Non-Re-normalizable: Coupling constant has negative mass dimension.
+\item Super-renormalizable: Coupling constant has positive mass dimension.
+\item  renormalizable: Coupling constant is dimensionless.
+\item  Non-renormalizable: Coupling constant has negative mass dimension.
 \end{enumerate}
 
 \subsection{Renormalized perturbation theory}
@@ -419,8 +437,8 @@ The last three terms, known as counter-terms, have absorbed the infinite but uno
 \caption{Renormalization condition}
 \end{figure}
 
-The re-normalization scheme here is called on-shell (OS) scheme. Other re-normalization scheme would be introduced later.
-These equations are called re-normalization conditions.
+The renormalization scheme here is called on-shell (OS) scheme. Other renormalization scheme would be introduced later.
+These equations are called renormalization conditions.
 Our new Lagrangian gives a new set of Feynman rules as Figure 2.13.
 \begin{figure}[!h]
 \centering
@@ -428,7 +446,7 @@ Our new Lagrangian gives a new set of Feynman rules as Figure 2.13.
 \caption{Feynman rules for renormalized perturbation theory}
 \end{figure}
 
-We can use these new Feynman rules to compute any amplitude in $\phi^4$ theory. The procedure is as follows. Compute the desired amplitude as the sum of all possible diagrams created from the propagator and vertices shown above. The loop integrals in the diagrams will often diverge, so one must introduce a regulator. The result of this computation will be a function of the three unknown parameters $\delta_Z$, $\delta_m$, and $\delta_{\lambda}$. Adjust ( or "renormalise") these three parameters as necessary to maintain the re-normalization conditions. After this adjustment, the expression for the amplitude should be finite and independent of the regulator.
+We can use these new Feynman rules to compute any amplitude in $\phi^4$ theory. The procedure is as follows. Compute the desired amplitude as the sum of all possible diagrams created from the propagator and vertices shown above. The loop integrals in the diagrams will often diverge, so one must introduce a regulator. The result of this computation will be a function of the three unknown parameters $\delta_Z$, $\delta_m$, and $\delta_{\lambda}$. Adjust ( or "renormalise") these three parameters as necessary to maintain the renormalization conditions. After this adjustment, the expression for the amplitude should be finite and independent of the regulator.
 
 This procedure, using Feynman rules with counter-terms, is known as renormalized perturbation theory. 
 
@@ -446,7 +464,8 @@ $s$ is also known as the square of the center-of-mass energy (invariant mass) an
 We can verify that
 \[s+t+u = m_1^2 + m_3^2 + m_3^2 +m_4^2\]
 
-\subsection{Feynman's formula}
+\subsection{Techniques for renormalization}
+\subsubsection{Feynman's formula}
 \begin{newthem}[Feynman's formula]
 \[ \frac{1}{A_1 \cdots A_n} = \int dF_n (x_1A_1+ \cdots +x_nA_n)^{-n}\]
 where the integration measure over the Feynman parameters $x_i$ is
@@ -462,13 +481,13 @@ A generalization of Feynman's formula is
 \caption{Wick rotation}
 \end{figure}
 
-\subsection{Wick rotation}
+\subsubsection{Wick rotation}
 For an integral $\int d^d q f(q^2-i\epsilon)$, if the integrand vanishes fast enough as $|q_0| \to \infty$, we can rotate this contour clockwise by $\frac{\pi}{2}$, so that it runs from $-i\infty$ to $i\infty$. In making this Wick rotation, the contour does not pass over any poles. (The $i\epsilon$ are needed to make this statement unambiguous.) Thus the value of the integral is unchanged. It is now convenient to define a Euclidean d-dimensional vector $\bar{q}$ via $q^0 = i \bar{q}_d$ and $q_j = \bar{q}_j$; then $q^2 = \bar{q}^2$, where
 \[\bar{q}^2 = \bar{q}_1^2 + \cdots + \bar{q}_d^2\]
 Also, $d^dq = id^d \bar{q}$.Therefore, in general,
 \[\int d^d q f(q^2-i\epsilon) = i \int d^d\bar{q} f(\bar{q}^2)\]
 
-\subsection{Dimensional regularization}
+\subsubsection{Dimensional regularization}
 Dimensional regularization is a method for regularizing integrals in the evaluation of Feynman diagrams. For example, if one wishes to evaluate a loop integral which is logarithmically divergent in four dimensions, like
 \[\int {\frac {d^{d}p}{(2\pi )^{d}}}{\frac {1}{\left(p^{2}+m^{2}\right)^{2}}}\]
 
@@ -496,13 +515,13 @@ We can calculate that
 \[V(-p^2) = -\frac{1}{32\pi^2} \int_0^1 (\frac{2}{\epsilon} + \ln(\frac{\mu^2}{D(-p^2)}))\]
 where $\mu \equiv  \sqrt{4\pi} e^{-\gamma/2} \tilde{\mu}$, $D(-p^2) = x(1-x)p^2+m^2$
 
-The re-normalization condition implies that
+The renormalization condition implies that
 \[\delta_{\lambda} = -\lambda^2[V(4m^2)+2V(0)] + \mathcal{O}(\lambda^3)\]
 So,
 \[i\mathcal{M} = -i\lambda -\frac{i\lambda^2}{32\pi^2} \int_0^1 dx \left[\ln(\frac{D(s)}{D(4m^2)}) +\ln(\frac{D(t)}{D(0)})+\ln(\frac{D(u)}{D(0)})\right] + \mathcal{O}(\lambda^3)\]
 To determine $\delta_Z$ and $\delta_m$ we must compute the two-point function. Define $-iM(p^2)$ as the sum of all one-particle-irreducible insertions into the propagator.The full two-point function is given by
 \[\frac{-i}{p^2 + m^2 + M^2}\]
-The re-normalization conditions require that the pole in this full propagator occur at $p^2=-m^2$ and have residue $1$. These two conditions are equivalent, respectively, to
+The renormalization conditions require that the pole in this full propagator occur at $p^2=-m^2$ and have residue $1$. These two conditions are equivalent, respectively, to
 \[M^2(p^2)|_{p^2=-m^2} = 0 \quad \frac{d}{dp^2} M^2(p^2)|_{p^2=-m^2} =0\]
 We can calculate that
 \[-iM^2(p^2) = \frac{i\lambda}{32\pi^2}(\frac{2}{\epsilon} + \ln(\frac{\mu^2}{m^2})+1)m^2 -i(p^2\delta_Z + \delta_m)\]
@@ -510,6 +529,20 @@ So, to the order of $\lambda$,
 \[\delta_Z=\mathcal{O}(\lambda^2) \quad \delta_m = \frac{\lambda}{32\pi^2}(\frac{2}{\epsilon} + \ln(\frac{\mu^2}{m^2})+1)m^2 + \mathcal{O}(\lambda^2) \quad M^2(p^2) =\mathcal{O}(\lambda^2)\]
 
 The detailed calculation can be found in chapter 10.2 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)} and will be eliminated here.
+
+\subsubsection{Perturbation theory to all orders}
+We begin by summing all one-particle irreducible diagrams with two
+external lines; this gives us the self-energy. We next sum all 1PI
+diagrams with four external lines; this gives us the four-point vertex function $V_4(k_1, k_2, k_3, k_4)$. Order by order in $\lambda$, we must adjust the value of the lagrangian coefficients $\delta_Z$, $\delta_m$, and $\delta_{\lambda}$ to maintain the conditions $M^2(-m^2) = 0$, $\frac{dM^2}{dp^2}(-m^2) = 0$, and $V_4(s=4m^2) =0$. 
+
+Next we will construct the n-point vertex functions $V_n$ with $4 < n \leq E$, where $E$ is the number of external lines in the process of interest. We compute these using a skeleton expansion. This means that we draw all the contributing 1PI diagrams, but omit diagrams that include either propagator or three-point vertex corrections. That is, we include only diagrams that are not only 1PI, but also 2PI and 3PI: they remain connected when any one, two, or three lines are cut. (Cutting three lines may isolate a single treelevel vertex, but nothing more complicated.) Then we take the propagators and vertices in these diagrams to be given by the exact propagator $\frac{-i}{p^2+m^2+M^2(p^2)}$ and vertex $V_4(k_1,k_2,k_3,k_4)$, rather than by the tree-level propagator and vertex. We then sum these skeleton diagrams to get $V_n$ for $4 < n \leq E$. Order by order in $\lambda$, this procedure is
+equivalent to computing $V_n$ by summing the usual set of contributing 1PI diagrams.
+
+Next we draw all tree-level diagrams that contribute to the process of interest (which has $E$ external lines), including not only four-point vertices, but also n-point vertices. Then we evaluate these diagrams using the exact propagator for internal lines, and the exact 1PI vertices $V_n$; external lines are assigned a factor of one. We sum these tree diagrams to get the scattering amplitude. Order by order in $\lambda$, this procedure is equivalent to computing the scattering amplitude by summing the usual set of contributing diagrams.
+
+Thus we now know how to compute an arbitrary scattering amplitude
+to arbitrarily high order. The procedure is the same in any quantum field theory; only the form of the propagators and vertices change, depending on the spins of the fields.
+
 
 \subsection{Modified minimal-subtraction scheme}
 The Lagrangian of $\phi^4$ theory is
@@ -533,7 +566,7 @@ For loop corrections to vertex,
 \[\delta_{\lambda} = \left[\frac{3\lambda^2}{16\pi^2} + \mathcal{O}(\lambda^3)\right]\frac{1}{\epsilon}\]
 \[i\mathcal{M} = -i\lambda -\frac{i\lambda^2}{32\pi^2} \int_0^1 dx \left[\ln(\frac{D(s)}{\mu^2}) +\ln(\frac{D(t)}{\mu^2})+\ln(\frac{D(u)}{\mu^2})\right] + \mathcal{O}(\lambda^3)\]
 
-\subsection{The re-normalization group}
+\subsection{The renormalization group}
 \noindent
 The Lagrangian of $\phi^4$ theory is 
 \[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi_0 \partial_{\mu} \phi_0 -\frac{1}{2}m_0^2 \phi_0^2 - \frac{\lambda_0}{4!}\phi_0^4\]
@@ -541,7 +574,7 @@ It can be written as
 \[\mathcal{L} = -\frac{1}{2}Z_{\phi} \partial^{\mu} \phi \partial_{\mu} \phi -\frac{1}{2}Z_{m}m^2 \phi^2 - Z_{\lambda} \mu^{\epsilon}\frac{\lambda}{4!}\phi^4\]
 So, 
 \[\phi_0 = Z_{\phi}^{1/2}\phi \quad m_0 = Z_{\phi}^{-1/2} Z_{m}^{1/2}m \quad \lambda = Z_{\phi}^{-2} Z_{\lambda} \lambda \tilde{\mu}^{\epsilon}\]
-After using dimensional regularization, the infinities coming from loop integrals take the form of inverse powers of $\epsilon$. In the  $\mathrm{\overline{MS}}$ re-normalization scheme, we choose the Zs to cancel off these powers of $1/\epsilon$, and nothing more. Therefore the Zs can be written as
+After using dimensional regularization, the infinities coming from loop integrals take the form of inverse powers of $\epsilon$. In the  $\mathrm{\overline{MS}}$ renormalization scheme, we choose the Zs to cancel off these powers of $1/\epsilon$, and nothing more. Therefore the Zs can be written as
 \begin{eqnarray}
 Z_{\phi} = 1 + \sum_{n=1}^{\infty} \frac{a_n(\lambda)}{\epsilon^n} \nonumber \\
 Z_{m} = 1 + \sum_{n=1}^{\infty} \frac{b_n(\lambda)}{\epsilon^n} \nonumber \\
@@ -553,7 +586,7 @@ Remember that bare fields and parameters must be independent of $\mu$.Define
 We can calculate $G_1 = c_1 - 2a_1 = \frac{3\lambda}{16\pi^2} + \mathcal{O}(\lambda^2)$.
 As $\ln \lambda_0 = G + \ln \lambda + \epsilon \ln \tilde{\mu} $. From the independence of $\lambda_0$, we can derive
 \[\left ( 1 + \frac{\lambda G'_1}{\epsilon} + \cdots \right) \frac{d\lambda}{d\ln \mu} + \epsilon \lambda = 0\]
-In a re-normalizable theory, we should have
+In a renormalizable theory, we should have
 \[\frac{d\lambda}{d\ln\mu} = -\epsilon\lambda + \beta(\lambda)\]
 So
 \[\beta(\lambda) = \lambda^2 G'_1(\lambda)\]
@@ -640,7 +673,7 @@ Notice that there are no terms remaining that depend explicitly on $J$; thus, $\
 functional determinant.
 
 The last term provides a set of counter-terms that can be used
-to satisfy the re-normalization conditions on $\Gamma$ and, in the process, to cancel divergences that appear in the evaluation of the functional determinant and the diagrams. The re-normalization conditions will determine all of the counter-terms in $\delta \mathcal{L}$. However, the formalism we have constructed contains a new counter-term $\delta J$. That coefficient is determined by  $\langle \eta \rangle = 0$. In practice, we will satisfy this condition by simply ignoring any one-particle-irreducible one-point diagram, since any such diagram will be cancelled by adjustment of $\delta J$. 
+to satisfy the renormalization conditions on $\Gamma$ and, in the process, to cancel divergences that appear in the evaluation of the functional determinant and the diagrams. The renormalization conditions will determine all of the counter-terms in $\delta \mathcal{L}$. However, the formalism we have constructed contains a new counter-term $\delta J$. That coefficient is determined by  $\langle \eta \rangle = 0$. In practice, we will satisfy this condition by simply ignoring any one-particle-irreducible one-point diagram, since any such diagram will be cancelled by adjustment of $\delta J$. 
 
 \subsection{The effective action as a generating functional}
 \noindent
@@ -656,7 +689,7 @@ The chapter 21 of \emph{Quantum field theory (M. Srednicki)} gives an constructi
 \[\Gamma[\phi] \equiv \frac{1}{2} \int \frac{d^d k}{(2\pi)^d} \tilde{\phi}(-k)(-k^2 - m^2 - M^2(k^2))\tilde{\phi}(k) + \frac{1}{n!} \int \frac{d^d k_1}{(2\pi)^d} \cdots \frac{d^d k_n}{(2\pi)^d} (2\pi)^d \delta(k_1+\cdots+k_n) V_n(k_1,\cdots,k_n) \tilde{\phi}(k_1) \cdots \tilde{\phi}(k_n)\]
 Here $\tilde{\phi}(k) = \int d^dx e^{-ikx} \phi(x)$, and $iV_n(k_1,\cdots,k_n)$ equals the value of 1PI Feynman diagram in momentum space. The effective action has the property that the tree-level Feynman diagrams it generates give the complete scattering amplitude of the original theory. The author also proved that this definition is equivalent to the definition from \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}.
   
-\subsection{Re-normalization and symmetry}
+\subsection{Renormalization and symmetry}
 Consider first the computation of the effective potential for constant classical fields, in a field theory with an arbitrary number of fields $\phi^i$. The effective potential has mass dimension $4$, so we expect that $V_{\mathrm{eff}}(\phi_{\mathrm{cl}})$ will have divergent terms up to $\Lambda^4$. To understand these divergences,
 expand $V_{\mathrm{eff}}(\phi_{\mathrm{cl}})$ in a Taylor series:
 \[V_{\mathrm{eff}}(\phi_{\mathrm{cl}}) = A_0 + A_2^{ij}\phi_{\mathrm{cl}}^i \phi_{\mathrm{cl}}^j + A_4^{ijkl} \phi_{\mathrm{cl}}^i \phi_{\mathrm{cl}}^j \phi_{\mathrm{cl}}^k \phi_{\mathrm{cl}}^l + \cdots\]
@@ -701,3 +734,34 @@ for any $N \times N$ orthogonal group in $N$ dimensions, also called the N-dimen
 
 
 \section{Cross section and the S-matrix}
+\noindent
+Recall the definition of cross section
+\[\sigma \equiv \frac{\mbox{Number of Events}}{\mbox{Time} \times \mbox{Incident Flux}}\]
+Consider a  $2 \to n$ process:
+\[p_1 + p_2 \to \{p_j\}\]
+Suppose the volume of the space in which the scattering process takes place is $V$, the duration of the scattering process is $T$. 
+So, the incident flux is
+\[\Phi = \frac{|\bm{v}_1-\bm{v}_2|}{V},\]
+and the number of events is
+\[N = \frac{|\langle i | S | f \rangle|^2}{|\langle i | i \rangle||\langle f | f \rangle|} d\Pi .\]
+Here, $d\Pi$ is the region of final state momenta at which we are looking
+\[d\Pi = \prod_j \frac{V}{(2\pi)^3} d^3 p_j\]
+Recall that
+\[\delta^{(3)}(0) = \frac{V}{(2\pi)^3} \quad \delta^{(4)}(0) = \frac{VT}{(2\pi)^4} \quad \langle p | p \rangle = (2\pi)^3 2\omega \delta^{(3)}(0)\]
+We can calculate that
+\[|\langle i | S | f \rangle|^2 = |\mathcal{M}|^2 VT (2\pi)^4 \delta(\sum p_j - p_1 - p_2) \quad \langle i | i \rangle = (2E_1V) (2E_2V) \quad \langle f | f \rangle = \prod_j (2E_jV)\]
+At last, putting everything together, we have
+\[d\sigma = \frac{1}{(2E_1)(2E_2)|\bm{v}_1-\bm{v}_2|} |\mathcal{M}|^2 d\Pi_{\mathrm{LIPS}}\]
+where,
+\[d\Pi_{\mathrm{LIPS}} = \prod_j \frac{d^3p_j}{(2\pi)^3} \frac{1}{2E_j} (2\pi)^4 \delta(\sum p_j - p_1 - p_2)\]
+is called the Lorentz-invariant phase space (LIPS). \\
+All the factors of $V$ and $T$ have dropped out, so now it is trivial to take $V \to \infty$ and $T \to \infty$. 
+
+\subsubsection{Decay rates}
+\noindent
+The definition of decay rates is
+\[\Gamma \equiv \frac{\mbox{Number of Events}}{\mbox{Time}}\]
+Consider a  $1 \to n$ process:
+\[p_1 \to \{p_j\}\]
+We can derive the decay rates by the similar method,
+\[d\Gamma = \frac{1}{2E_1} |\mathcal{M}|^2 d\Pi_{\mathrm{LIPS}} \]

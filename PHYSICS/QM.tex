@@ -313,14 +313,14 @@ This is called Ehrenfest's theorem.
 
 \section{Position operators}
 \noindent
-In three dimensional space, for a particle, we have three operators corresponding to the observations of its position in space, $\mathbf{X} = (X_1, X_2, X_3)$. If the particle has some other internal degrees of freedom, then $\mathbf{X}$ plus some other observables $S$'s will form  a complete commuting set of operators. The eigenstate state will be denoted by $| \mathbf{x},s \rangle$, satisfying that
-\[X_i | \mathbf{x},s \rangle = x_i | \mathbf{x},s \rangle  \]
-It describes a particle posited in $\mathbf{x}$ with internal state $s$. And we will normalize $| \mathbf{x},s \rangle $ by 
-\[\langle \mathbf{x},s'| \mathbf{x},s \rangle = \delta_{ss'}\delta(\mathbf{x}-\mathbf{x}')\]
+In three dimensional space, for a particle, we have three operators corresponding to the observations of its position in space, $\bm{X} = (X_1, X_2, X_3)$. If the particle has some other internal degrees of freedom, then $\bm{X}$ plus some other observables $S$'s will form  a complete commuting set of operators. The eigenstate state will be denoted by $| \bm{x},s \rangle$, satisfying that
+\[X_i | \bm{x},s \rangle = x_i | \bm{x},s \rangle  \]
+It describes a particle posited in $\bm{x}$ with internal state $s$. And we will normalize $| \bm{x},s \rangle $ by 
+\[\langle \bm{x},s'| \bm{x},s \rangle = \delta_{ss'}\delta(\bm{x}-\bm{x}')\]
 
 \section{Momentum operators and canonical quantization}
 \noindent
-Since $\mathbf{X}$ plus some other observables $S$'s form a complete commuting set of operators. So, the momentum operators can not be independent of them. Numerous experiments shows that the position and momentum of particles can not be measured simultaneously. So, we expect $[X,P] \neq 0$.
+Since $\bm{X}$ plus some other observables $S$'s form a complete commuting set of operators. So, the momentum operators can not be independent of them. Numerous experiments shows that the position and momentum of particles can not be measured simultaneously. So, we expect $[X,P] \neq 0$.
 \paragraph{Guess} 
 For a system which has a classical correspondence, the classical equation of motion of a particle is
 \begin{eqnarray}
@@ -338,7 +338,7 @@ Since the Poisson bracket in classical mechanics and commutation bracket in quan
 \[[X_i,X_j] = 0 \quad [X_i,X_j] = 0 \quad [X_i,P_j] = i \delta_{ij}\]
 and
 \[H = H_C(X,P,t)\]
-For a general system, we formally define momentum operator $\mathbf{P}$ by 
+For a general system, we formally define momentum operator $\bm{P}$ by 
 \[[X_i,P_j] = i \delta_{ij}\]
 The form of $H$ can not be given as a priori, which can be specified only by the hints from classical theory and experiments.
 
@@ -347,30 +347,30 @@ The form of $H$ can not be given as a priori, which can be specified only by the
 \[\exp(iG\lambda) A \exp(-iG\lambda) = A + i\lambda[G,A] + \cdots + \frac{i^n\lambda^n}{n!}[G,[G,[G,\cdots[G,A]]]\cdots]+\cdots\]
 \end{newthem}
 \noindent
-Define $T(\mathbf{a}) \equiv e^{-i\mathbf{P \cdot a}}$
+Define $T(\bm{a}) \equiv e^{-i\bm{P \cdot a}}$
 We can get
-\[T(\mathbf{a})^{-1} \mathbf{X} T(\mathbf{a}) = \mathbf{X} + \mathbf{a}\]
-\[T(\mathbf{a})|\mathbf{x}\rangle = |\mathbf{x}+\mathbf{a}\rangle\]
-So, $T(\mathbf{a})$ is the space translation operator. 
+\[T(\bm{a})^{-1} \bm{X} T(\bm{a}) = \bm{X} + \bm{a}\]
+\[T(\bm{a})|\bm{x}\rangle = |\bm{x}+\bm{a}\rangle\]
+So, $T(\bm{a})$ is the space translation operator. 
 Now, we can also define the momentum operator as the generator of space translation.
 
 \section{Angular momentum operators and rotation of states}
 \noindent
-We define the angular momentum operators $\mathbf{J}$ as the generator of rotation.
-\[R(\mathbf{\theta}) \equiv e^{-i\mathbf{J} \cdot \mathbf{n} \theta}\]
-If the operator $\mathbf{M} = (M_1,M_2,M_3)$ is a vector in configuration space and can be rotated by $R$, then we can demonstrate that
+We define the angular momentum operators $\bm{J}$ as the generator of rotation.
+\[R(\bm{\theta}) \equiv e^{-i\bm{J} \cdot \bm{n} \theta}\]
+If the operator $\bm{M} = (M_1,M_2,M_3)$ is a vector in configuration space and can be rotated by $R$, then we can demonstrate that
 \[[J_{i},M_{j}] = i \epsilon_{ijk}M_k\]
 Especially, 
 \[[J_i,J_j] = i\epsilon_{ijk}J_k\]
 
 \subsubsection{Orbital angular momentum}
 \noindent
-Orbital angular momentum of a particle is defined as $\mathbf{L} = \mathbf{X} \times \mathbf{P}$. It is the generator of rotation of the position of the particle, since
+Orbital angular momentum of a particle is defined as $\bm{L} = \bm{X} \times \bm{P}$. It is the generator of rotation of the position of the particle, since
 \[[L_i,X_j] = i\epsilon_{ijk}X_k \quad [L_i,P_j] = i\epsilon_{ijk}P_k \quad [L_i,L_j] = i\epsilon_{ijk}L_k\]
 
 \subsubsection{Spin angular momentum}
 \noindent
-Experiments show that some microscopic particles possess a property called spin. The state of the spin is denoted by $|s\rangle$. The corresponding operators are $\mathbf{S} = [S_1,S_2,S_3]$, which measure the spin along the $\mathbf{1},\mathbf{2},\mathbf{3}$ direction. Spin operator is the generator of rotation of the spin of the particle, so we have
+Experiments show that some microscopic particles possess a property called spin. The state of the spin is denoted by $|s\rangle$. The corresponding operators are $\bm{S} = [S_1,S_2,S_3]$, which measure the spin along the $\bm{1},\bm{2},\bm{3}$ direction. Spin operator is the generator of rotation of the spin of the particle, so we have
 \[[S_i,S_j]=i\epsilon_{ijk}S_k\]
 And the rotation of position and spin is independent, so
 \[[S_i,L_j] = 0\]
@@ -378,7 +378,7 @@ And the rotation of position and spin is independent, so
 \subsubsection{Total angular momentum}
 \noindent
 The total angular momentum of the particle is 
-\[\mathbf{J} = \mathbf{L} + \mathbf{S}\]
+\[\bm{J} = \bm{L} + \bm{S}\]
 It is the generator of the rotation of the entire system, which is equivalent to the rotation of the coordinates in opposite direction.
 
 \section{Heisenberg picture}
@@ -420,23 +420,23 @@ is independent of $t$ for such a state. By considering functions of $R$ we can f
 To form a representation of an abstract linear vector space, one chooses a complete orthonormal set of basis vectors $\{|u_i\rangle\}$ and represents an arbitrary vector $|\psi\rangle$ by its expansion coefficients $\{c_i\}$, where $|\psi\rangle = \sum c_i |u_i\rangle$. 
 The array of coefficients $\langle u_i | \psi \rangle$ can be regarded as a column vector (possibly of infinite dimension), provided the basis set is discrete.
 
-Coordinate representation is obtained by choosing as the basis set the eigenvectors $\{|\mathbf{x}\rangle\}$ of the position operator . Since this is a continuous set, the expansion coefficients define a function of a continuous variable,
-\[\psi(\mathbf{x})  \equiv \langle \mathbf{x} | \psi \rangle\]
+Coordinate representation is obtained by choosing as the basis set the eigenvectors $\{|\bm{x}\rangle\}$ of the position operator . Since this is a continuous set, the expansion coefficients define a function of a continuous variable,
+\[\psi(\bm{x})  \equiv \langle \bm{x} | \psi \rangle\]
 We can show that the inner product of the state vector in coordinate representation is
-\[\langle \phi | \psi \rangle = \int \phi^{*}(\mathbf{x})\psi(\mathbf{x}) d^3\mathbf{x} \]
-It is a matter of taste whether one says that the set of functions forms a representation of the vector space, or that the vector space consists of the functions $\psi(\mathbf{x})$.
+\[\langle \phi | \psi \rangle = \int \phi^{*}(\bm{x})\psi(\bm{x}) d^3\bm{x} \]
+It is a matter of taste whether one says that the set of functions forms a representation of the vector space, or that the vector space consists of the functions $\psi(\bm{x})$.
 
 The action of an operator $A$ on the function space is related to its action on the abstract vector space by the rule
-\[A \psi(\mathbf{x}) \equiv  \langle \mathbf{x} |A| \psi \rangle\]
+\[A \psi(\bm{x}) \equiv  \langle \bm{x} |A| \psi \rangle\]
 The action of an position operator in coordinate representation is
-\[\mathbf{X}\psi(\mathbf{x}) = \mathbf{x} \psi(\mathbf{x})\]
+\[\bm{X}\psi(\bm{x}) = \bm{x} \psi(\bm{x})\]
 The action of an momentum operator in coordinate representation is
-\[\mathbf{P}\psi(\mathbf{x}) = -i \mathbf{\nabla}\psi(\mathbf{x})\]
+\[\bm{P}\psi(\bm{x}) = -i \bm{\nabla}\psi(\bm{x})\]
 
-For a spin-less particle in the scalar potential $W(\mathbf{x})$,
-$H = \frac{\mathbf{P}^2}{2m} + W(\mathbf{X})$. 
+For a spin-less particle in the scalar potential $W(\bm{x})$,
+$H = \frac{\bm{P}^2}{2m} + W(\bm{X})$. 
 The equation of motion in the coordinate representation is
-\[ \left[- \frac{1}{2M} \mathbf{\nabla}^2 + W(\mathbf{x}) \right] \psi(\mathbf{x},t) = i\frac{\partial}{\partial t}\psi(\mathbf{x},t)\]
+\[ \left[- \frac{1}{2M} \bm{\nabla}^2 + W(\bm{x}) \right] \psi(\bm{x},t) = i\frac{\partial}{\partial t}\psi(\bm{x},t)\]
 
 \section{Galilei transformation of Schr\"{o}dinger equation}
 For simplicity we shall treat only one spatial dimension. Let us consider two frames of reference: $F$ with coordinates $x$ and $t$, and $F'$ with coordinates $x'$ and $t'$. $F'$ is moving uniformly with velocity $v$ relative to $F$, so that
@@ -458,14 +458,14 @@ apart from an irrelevant constant term.
 \section{Probability flux and conditions on wave functions}
 \noindent
 Define the probability flux vector
-\[\mathbf{J}(\mathbf{x},t) = \frac{1}{M} \mathrm{Im}(\psi^*\mathbf{\nabla}\psi)\]
+\[\bm{J}(\bm{x},t) = \frac{1}{M} \mathrm{Im}(\psi^*\bm{\nabla}\psi)\]
 We can get a continuity equation
-\[\frac{d}{dt} |\psi(\mathbf{x},t)|^2 + \mathbf{\nabla} \cdot \mathbf{J}(\mathbf{x},t)\]
+\[\frac{d}{dt} |\psi(\bm{x},t)|^2 + \bm{\nabla} \cdot \bm{J}(\bm{x},t)\]
 Applying the divergence theorem, we obtain
-\[\frac{\partial}{\partial t} \int_{\Omega} |\psi(\mathbf{x},t)|^2 d^3x = - \oint_{\sigma} \mathbf{J} \cdot d\mathbf{s}\]
+\[\frac{\partial}{\partial t} \int_{\Omega} |\psi(\bm{x},t)|^2 d^3x = - \oint_{\sigma} \bm{J} \cdot d\bm{s}\]
 
 The equations of continuity require that the probability
-flux $\mathbf{J}(\mathbf{x},t)$ be continuous across any surface, since otherwise the surface would contain sources or sinks. Although this condition applies to all surfaces, implying that $\mathbf{J}(\mathbf{x},t)$ must be everywhere continuous, its practical applications are mainly to surfaces separating regions in which the potential has different analytic forms.
+flux $\bm{J}(\bm{x},t)$ be continuous across any surface, since otherwise the surface would contain sources or sinks. Although this condition applies to all surfaces, implying that $\bm{J}(\bm{x},t)$ must be everywhere continuous, its practical applications are mainly to surfaces separating regions in which the potential has different analytic forms.
 Usually, we have the following conditions,
 \begin{enumerate}
 \item \[\psi(x)|_{x+0} = \psi(x)|_{x-0} \quad \frac{d\psi}{dx}|_{x+0} = \frac{d\psi}{dx}|_{x-0}\]

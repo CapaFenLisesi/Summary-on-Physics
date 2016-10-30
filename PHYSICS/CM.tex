@@ -14,19 +14,19 @@ We can verify that
 \begin{example}
 \begin{enumerate}
 \item The form of Lagrangian for an isolated system of particles in inertial frame:
-\[L=\sum_a \frac{1}{2}m_a v_a^2 -U(\vec{r}_1,\vec{r}_2,\cdots,)\]
+\[L=\sum_a \frac{1}{2}m_a v_a^2 -U(\bm{r}_1,\bm{r}_2,\cdots,)\]
 The equation of motion is
-\[m_i \ddot{\vec{r}}_i = -\nabla_{\vec{r}_i} U\]
+\[m_i \ddot{\bm{r}}_i = -\nabla_{\bm{r}_i} U\]
 To get the form of Lagrangian for a system of interacting particles, we must assume:
 \begin{itemize}
 \item Space and time are homogeneous and isotropic in inertial frame;
 \item Galileo's relativity principle and Galilean transformation;
 \item Spontaneous interaction between particles;
 \end{itemize}
-\item Consider a reference frame $K$. Suppose the $K$ is moving with the velocity $\mathbf{V}(t)$ and  rotating with angular velocity $\mathbf{\Omega}$  relative to the inertial reference frame. We use the coordinates of the mass point in $K$ as general coordinates, i.e. $\mathbf{r} = (x_k,y_k,z_k)$. Then the Lagrangian of the mass point will be
-\[L = \frac{1}{2}m\mathbf{v}^2 + m\mathbf{v}\cdot(\mathbf{\Omega}\times\mathbf{r})+\frac{m}{2}(\mathbf{\Omega}\times\mathbf{r})^2 - m\dot{\mathbf{V}}\cdot\mathbf{r}-U\]
+\item Consider a reference frame $K$. Suppose the $K$ is moving with the velocity $\bm{V}(t)$ and  rotating with angular velocity $\bm{\Omega}$  relative to the inertial reference frame. We use the coordinates of the mass point in $K$ as general coordinates, i.e. $\bm{r} = (x_k,y_k,z_k)$. Then the Lagrangian of the mass point will be
+\[L = \frac{1}{2}m\bm{v}^2 + m\bm{v}\cdot(\bm{\Omega}\times\bm{r})+\frac{m}{2}(\bm{\Omega}\times\bm{r})^2 - m\dot{\bm{V}}\cdot\bm{r}-U\]
 The equation of motion will be
-\[m\frac{d\mathbf{v}}{dt} = -\frac{\partial U}{\partial \mathbf{r}} - m\dot{\mathbf{V}} + m(\mathbf{r} \times \dot{\mathbf{\Omega}}) + 2m(\mathbf{v} \times \mathbf{\Omega}) + m[\mathbf{\Omega}\times(\mathbf{r} \times \mathbf{\Omega})]\]
+\[m\frac{d\bm{v}}{dt} = -\frac{\partial U}{\partial \bm{r}} - m\dot{\bm{V}} + m(\bm{r} \times \dot{\bm{\Omega}}) + 2m(\bm{v} \times \bm{\Omega}) + m[\bm{\Omega}\times(\bm{r} \times \bm{\Omega})]\]
 \end{enumerate}
 \end{example}
 
@@ -37,10 +37,10 @@ For $q_i \to q_i+\delta q_i$ and $L \to L+\delta L$, if $\delta L= \frac{d f(q,\
 \end{newthem}
 \begin{example}
 For an isolated system of particles in inertial frame,\\ 
-$\delta L = 0$ when $\delta \vec{r}_i \rightarrow \vec{r}_i + \delta \vec{a}$, so
-\[\frac{d}{dt} (\sum_i \vec{p}_i) = 0\]
-$\delta L = 0$ when $\delta \vec{r}_i \rightarrow \vec{r}_i + \vec{r}_i \times \delta \vec{\theta}$, so
-\[\frac{d}{dt} (\sum_i \vec{r}_i \times \vec{p}_i) = 0\]
+$\delta L = 0$ when $\delta \bm{r}_i \rightarrow \bm{r}_i + \delta \bm{a}$, so
+\[\frac{d}{dt} (\sum_i \bm{p}_i) = 0\]
+$\delta L = 0$ when $\delta \bm{r}_i \rightarrow \bm{r}_i + \bm{r}_i \times \delta \bm{\theta}$, so
+\[\frac{d}{dt} (\sum_i \bm{r}_i \times \bm{p}_i) = 0\]
 \end{example}
 
 \paragraph{Homogeneity of time}
@@ -53,9 +53,9 @@ If $\frac{\partial L}{\partial t}=0$,then we get
 \[\dot{p^i}=-\frac{\partial H}{\partial q_i} \quad \dot{q_i}=\frac{\partial H}{\partial p^i}\]
 \begin{example}
  For an isolated system of particles in inertial frame, 
-\[\vec{p}_i = m_i \vec{v}_i\]
-\[H(q,p,t)=\sum_i \frac{p_i^2}{2m} + U(\vec{r}_1,\vec{r}_2,\cdots)\]
-\[\dot{\vec{p}}_i =-\nabla_{\vec{r}_i} U \quad \dot{r}_i = \frac{\vec{p}_i}{m_i}\]
+\[\bm{p}_i = m_i \bm{v}_i\]
+\[H(q,p,t)=\sum_i \frac{p_i^2}{2m} + U(\bm{r}_1,\bm{r}_2,\cdots)\]
+\[\dot{\bm{p}}_i =-\nabla_{\bm{r}_i} U \quad \dot{r}_i = \frac{\bm{p}_i}{m_i}\]
 \end{example}
  
 \subsection{Poisson Brackets}

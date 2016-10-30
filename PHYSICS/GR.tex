@@ -108,7 +108,7 @@ Let $M$ be a smooth manifold, and let $Y:M \to TM$ be a vector field. If $(U, (X
 \begin{newthem}
 Let $M$ be a $m$ dimensional smooth manifold and $v$ a smooth tangent vector field on $M$. $v:C^{\infty}(M) \to C^{\infty}$ satisfy that\\
 (1) $\forall f,g \in C^{\infty}(M),v(f+g)=v(f)+v(g)$;\\
-(2) $\forall f \in C^{\infty}(M),\alpha \in \mathbf{R},v(\alpha f)=\alpha \cdot v(f)$;\\
+(2) $\forall f \in C^{\infty}(M),\alpha \in \bm{R},v(\alpha f)=\alpha \cdot v(f)$;\\
 (3) $\forall f,g \in C^{\infty}(M),v(f,g) = f \cdot v(g) + g \cdot v(f)$.\\
 If $\alpha:C^{\infty}(M) \to C^{\infty}(M)$ satisfy the three conditions above, there exists a unique smooth vector field $v$ on $M$ that $\forall f \in C^{\infty}(M),v(f)=\alpha(f)$.
 \end{newthem}
@@ -126,9 +126,9 @@ $\forall X,Y \in \mathcal{H}(M),[X,Y]=X \circ Y -Y \circ X \in \mathcal{H}(M)$.
 \end{newprop}
 
 \begin{newdef}[One parameter differentiable transformation group]
-Let $M$ be a smooth manifold and $\phi:\mathbf{R} \times M \to M$ a smooth mapping, and $\forall (t,p) \in \mathbf{R} \times M$,denote $\phi_{t}(p) = \phi(t,p)$. If $\phi$ satisfy that\\
+Let $M$ be a smooth manifold and $\phi:\bm{R} \times M \to M$ a smooth mapping, and $\forall (t,p) \in \bm{R} \times M$,denote $\phi_{t}(p) = \phi(t,p)$. If $\phi$ satisfy that\\
 (1) $\phi_0 = \mathrm{id}:M \to M$;\\
-(2) $\forall s,t \in \mathbf{R}, \phi_s \circ \phi_t = \phi_{s+t}$;\\
+(2) $\forall s,t \in \bm{R}, \phi_s \circ \phi_t = \phi_{s+t}$;\\
 then $\phi$ is called a one parameter differentiable transformation group acting on $M$.\\
 Trajectory of $\phi$ through $p$ on $M$:$\gamma_p(t) = \phi(t,p)$.\\
 Vector field induced by $\phi$: $X_p(f) = \langle \gamma_p , f \rangle$.
@@ -607,41 +607,41 @@ So, newton gravity law can be written as
 Regard absolute time $t$ as a scalar field defined once and for all in Newtonian space-time $t=t(\mathcal{P})$.The layers of space-time are the slices of constant $t$-the "space slices"-each of which has an identical geometric structure: the old "absolute space."
 
 \subsubsection{Flat Euclidean space}
-A given space slice is endowed with basis vectors $\mathbf{e}_i = \frac{\partial}{\partial x^i}$; and this basis has vanishing connection coefficients,$\Gamma^i_{jk} = 0$. Consequently,the geometry of each space slice is completely flat. Absolute space is Euclidean in its geometry.Each space slice is endowed with a three-dimensional metric, and its Galilean coordinate basis is orthonormal,$\mathbf{e}_i \cdot \mathbf{e}_j = \delta_{ij}$.
+A given space slice is endowed with basis vectors $\bm{e}_i = \frac{\partial}{\partial x^i}$; and this basis has vanishing connection coefficients,$\Gamma^i_{jk} = 0$. Consequently,the geometry of each space slice is completely flat. Absolute space is Euclidean in its geometry.Each space slice is endowed with a three-dimensional metric, and its Galilean coordinate basis is orthonormal,$\bm{e}_i \cdot \bm{e}_j = \delta_{ij}$.
 
 \subsubsection{Curvature of space-time}
 Parallel transport a vector around a closed curve lying entirely in a space slice; it will return to its starting point unchanged.
 But transport it forward in time by $\Delta t$, northerly in space by $\Delta x_k$, back in time by $-\Delta t$, and southerly by $-\Delta x_k$ to its starting point; it will return changed by
-\[\delta \mathbf{A} = -\mathcal{R}(\Delta t \frac{\partial}{\partial t},\Delta x_k \frac{\partial}{\partial x_k}) \mathbf{A}\]
+\[\delta \bm{A} = -\mathcal{R}(\Delta t \frac{\partial}{\partial t},\Delta x_k \frac{\partial}{\partial x_k}) \bm{A}\]
 
 Geodesics of a space slice (Euclidean straight lines) that are initially parallel remain always parallel. But geodesics of space-time (trajectories of freely falling particles) initially parallel get pried apart or pushed together by space-time curvature,
-\[\nabla_{\mathbf{u}} \nabla_{\mathbf{u}} \mathbf{n} + \mathcal{R}(\mathbf{n},\mathbf{u})\mathbf{u} = 0\]
+\[\nabla_{\bm{u}} \nabla_{\bm{u}} \bm{n} + \mathcal{R}(\bm{n},\bm{u})\bm{u} = 0\]
 
 \section{Geometry formulation of Newtonian gravity}
 \begin{enumerate}
 \item There exists a function $t$ called "universal time", and a symmetric covariant derivative $\nabla$.
-\item The 1-form $\mathbf{d}t$ is covariant constant, i.e.,
-\[\nabla_{\mathbf{u}} \mathbf{d}t = 0  \mbox{ for all } \mathbf{u}.\]
+\item The 1-form $\bm{d}t$ is covariant constant, i.e.,
+\[\nabla_{\bm{u}} \bm{d}t = 0  \mbox{ for all } \bm{u}.\]
 \begin{note}
-if $\mathbf{w}$ is a spatial vector field, then $\nabla_{\mathbf{u}}\mathbf{w}$ is also spatial for every $\mathbf{u}$.
+if $\bm{w}$ is a spatial vector field, then $\nabla_{\bm{u}}\bm{w}$ is also spatial for every $\bm{u}$.
 \end{note}
 \item Spatial vectors are unchanged by parallel transport around infinitesimal closed curves; i.e.,
-\[\mathcal{R}(\mathbf{n},\mathbf{u}) \mathbf{w}=0 \mbox{ if }\mathbf{w}\mbox{ is spatial, for every } \mathbf{u} \mbox{ and } \mathbf{n}.\]
+\[\mathcal{R}(\bm{n},\bm{u}) \bm{w}=0 \mbox{ if }\bm{w}\mbox{ is spatial, for every } \bm{u} \mbox{ and } \bm{n}.\]
 \item All vectors are unchanged by parallel transport around infinitesimal, spatial, closed curves; i.e.,
-\[\mathcal{R}(\mathbf{v},\mathbf{w}) =0 \mbox{ for every spatial }\mathbf{v} \mbox{ and } \mathbf{w}.\]
+\[\mathcal{R}(\bm{v},\bm{w}) =0 \mbox{ for every spatial }\bm{v} \mbox{ and } \bm{w}.\]
 \item The Ricci curvature tensor has the form
-\[\mathbf{Ricci} = 4 \pi \rho \mathbf{d}t \otimes \mathbf{d}t\]
+\[\bm{Ricci} = 4 \pi \rho \bm{d}t \otimes \bm{d}t\]
 where $\rho$ is the density of mass.
-\item There exists a metric $\mathbf{\cdot}$ defined on spatial vectors only, which is compatible with the covariant derivative in this sense: for any spatial $\mathbf{w}$ and $\mathbf{v}$, and for any $\mathbf{u}$ whatsoever,
-\[\nabla_{\mathbf{u}}(\mathbf{w} \cdot \mathbf{v}) = (\nabla_{\mathbf{u}} \mathbf{w}) \cdot \mathbf{v} + \mathbf{w} \cdot (\nabla_{\mathbf{u}} \mathbf{v}).\]
+\item There exists a metric $\bm{\cdot}$ defined on spatial vectors only, which is compatible with the covariant derivative in this sense: for any spatial $\bm{w}$ and $\bm{v}$, and for any $\bm{u}$ whatsoever,
+\[\nabla_{\bm{u}}(\bm{w} \cdot \bm{v}) = (\nabla_{\bm{u}} \bm{w}) \cdot \bm{v} + \bm{w} \cdot (\nabla_{\bm{u}} \bm{v}).\]
 \begin{note}
 Axioms (1), (2), and (3) guarantee that such a spatial metric can exist.
 \end{note}
-\item The Jacobi curvature operator $\mathcal{J}(\mathbf{u},\mathbf{v})$, defined for any vectors $\mathbf{u},\mathbf{n},\mathbf{p}$ by
-\[\mathcal{J}(\mathbf{u},\mathbf{n})\mathbf{p} = \frac{1}{2}[\mathcal{R}(\mathbf{p},\mathbf{n})\mathbf{u} + \mathcal{R}(\mathbf{p},\mathbf{u})\mathbf{n}]\]
+\item The Jacobi curvature operator $\mathcal{J}(\bm{u},\bm{v})$, defined for any vectors $\bm{u},\bm{n},\bm{p}$ by
+\[\mathcal{J}(\bm{u},\bm{n})\bm{p} = \frac{1}{2}[\mathcal{R}(\bm{p},\bm{n})\bm{u} + \mathcal{R}(\bm{p},\bm{u})\bm{n}]\]
 is "self-ad-joint" when operating on spatial vectors,i.e.,
-\[\mathbf{v} \cdot [\mathcal{R}(\mathbf{u},\mathbf{n})\mathbf{w}] = 
-\mathbf{w} \cdot [\mathcal{R}(\mathbf{u},\mathbf{n})\mathbf{v}] \mbox{ for all spactial }\mathbf{v},\mathbf{w};\mbox{ and for any }\mathbf{u},\mathbf{n}. \]
+\[\bm{v} \cdot [\mathcal{R}(\bm{u},\bm{n})\bm{w}] = 
+\bm{w} \cdot [\mathcal{R}(\bm{u},\bm{n})\bm{v}] \mbox{ for all spactial }\bm{v},\bm{w};\mbox{ and for any }\bm{u},\bm{n}. \]
 \item "Ideal rods" measure the lengths that are calculated with the spatial metric; "ideal clocks" measure universal time $t$ ( or some multiple thereof); and "freely falling particles" move along geodesics of $\nabla$.
 \end{enumerate}
 
@@ -759,30 +759,30 @@ its trace $R_{\alpha \beta}$
 \subsection{The proper reference frame of an accelerated observer}
 \begin{enumerate}
 \item Let $\tau$ be proper time as measured by the accelerated observer's clock .Let $\mathcal{P} = \mathcal{P}_0(\tau)$ be the observer's world line.
-\item The observer carries with himself an orthonormal tetrad $\{\mathbf{e}_{\hat{\alpha}}\}$
+\item The observer carries with himself an orthonormal tetrad $\{\bm{e}_{\hat{\alpha}}\}$
 with
-\[\mathbf{e}_{\hat{0}} = \mathbf{u} = \frac{d \mathcal{P}_0}{d \tau}\]
+\[\bm{e}_{\hat{0}} = \bm{u} = \frac{d \mathcal{P}_0}{d \tau}\]
 and with
-\[\mathbf{e}_{\hat{\alpha}} \cdot \mathbf{e}_{\hat{\beta}} = \eta_{\alpha \beta}\]
+\[\bm{e}_{\hat{\alpha}} \cdot \bm{e}_{\hat{\beta}} = \eta_{\alpha \beta}\]
 \item The tetrad changes from point to point along the observer's world line, relative to parallel transport:
-\[\nabla_{\mathbf{u}} \mathbf{e}_{\hat{\alpha}} = - \mathbf{\Omega} \cdot \mathbf{e}_{\hat{\alpha}} \]
+\[\nabla_{\bm{u}} \bm{e}_{\hat{\alpha}} = - \bm{\Omega} \cdot \bm{e}_{\hat{\alpha}} \]
 \[\Omega^{\mu \nu} = a^{\mu} u^{\nu} - u^{\mu} a^{\nu} + u_{\alpha} \omega_{\beta}\epsilon^{\alpha \beta \mu \nu}\]
 This transport law has the same form in curved space-time as in flat because curvature can only be felt over finite distances, not over
 the infinitesimal distance involved in the "first time-rate of change of a vector" (equivalence principle).
-\[\mathbf{a} = \nabla_{\mathbf{u}} \mathbf{u}\]
-\[\mathbf{u} \cdot \mathbf{a} = \mathbf{u} \cdot \mathbf{\omega} = 0\]
-If $\omega$ were zero, the observer would be Fermi-Walker-transporting his tetrad (gyroscope-type transport). If both $\mathbf{a}$ and $\mathbf{\omega}$ were zero, he would be freely falling (geodesic motion) and would be parallel-transporting his tetrad.
-\item The observer constructs his proper reference frame (local coordinate system) in a manner analogous to the Riemann-normal construction. From each event $\mathcal{P}_0(\tau)$ on his world line, he sends out purely spatial geodesics (geodesics orthogonal to $\mathbf{u}$), with affine parameter equal to proper length. The tangent vector has unit length, because the chosen affine
+\[\bm{a} = \nabla_{\bm{u}} \bm{u}\]
+\[\bm{u} \cdot \bm{a} = \bm{u} \cdot \bm{\omega} = 0\]
+If $\omega$ were zero, the observer would be Fermi-Walker-transporting his tetrad (gyroscope-type transport). If both $\bm{a}$ and $\bm{\omega}$ were zero, he would be freely falling (geodesic motion) and would be parallel-transporting his tetrad.
+\item The observer constructs his proper reference frame (local coordinate system) in a manner analogous to the Riemann-normal construction. From each event $\mathcal{P}_0(\tau)$ on his world line, he sends out purely spatial geodesics (geodesics orthogonal to $\bm{u}$), with affine parameter equal to proper length. The tangent vector has unit length, because the chosen affine
 parameter is proper length.
-\item Each event near the observer's world line is intersected by precisely one of the geodesics $\mathcal{G}[\tau,\mathbf{n},s]$. [Far away, this is not true; the geodesics may cross, either
+\item Each event near the observer's world line is intersected by precisely one of the geodesics $\mathcal{G}[\tau,\bm{n},s]$. [Far away, this is not true; the geodesics may cross, either
 because of the observer's acceleration].
-\item Pick an event $\mathcal{P}$ near the observer's world line. The geodesic through it originated on the observer's world line at a specific time $\tau$, had original direction $\mathbf{n} = n^{\hat{j}} \mathbf{e}_{\hat{j}}$; and needed to extend a distance $s$ before reaching $\mathcal{P}$. Hence, the four numbers
+\item Pick an event $\mathcal{P}$ near the observer's world line. The geodesic through it originated on the observer's world line at a specific time $\tau$, had original direction $\bm{n} = n^{\hat{j}} \bm{e}_{\hat{j}}$; and needed to extend a distance $s$ before reaching $\mathcal{P}$. Hence, the four numbers
 \[(x^{\hat{0}},x^{\hat{1}},x^{\hat{2}},x^{\hat{3}}) \equiv (\tau,s n^{\hat{1}},s n^{\hat{2}},s n^{\hat{3}})\]
 are a natural way of identifying the event $\mathcal{P}$. These are the coordinates of $\mathcal{P}$ in the observer's proper reference frame.
 \end{enumerate}
 \noindent
 Along the world line of observer:
-\[\frac{\partial}{\partial x^{\hat{\alpha}}} = \mathbf{e}_{\hat{\alpha}}, \ \ g_{\hat{\alpha} \hat{\beta}} = \mathbf{e}_{\hat{\alpha}} \cdot \mathbf{e}_{\hat{\beta}} = \eta_{\hat{\alpha}\hat{\beta}}\]
+\[\frac{\partial}{\partial x^{\hat{\alpha}}} = \bm{e}_{\hat{\alpha}}, \ \ g_{\hat{\alpha} \hat{\beta}} = \bm{e}_{\hat{\alpha}} \cdot \bm{e}_{\hat{\beta}} = \eta_{\hat{\alpha}\hat{\beta}}\]
 \[\Gamma^{\hat{\beta}}_{\hat{\alpha} \hat{0}} = - \Omega^{\hat{\beta}}_{\hat{\alpha}}, \ \ \Gamma^{\hat{0}}_{\hat{0} \hat{0}} =0\]
 \[\Gamma^{\hat{0}}_{\hat{j} \hat{0}} = \Gamma^{\hat{j}}_{\hat{0} \hat{0}} = a^{\hat{j}}, \ \ \Gamma^{\hat{j}}_{\hat{k} \hat{0}} = -\omega^{\hat{i}} \epsilon_{0 \hat{i} \hat{j} \hat{k}} \]
 \[\Gamma^{\hat{\alpha}}_{\hat{j} \hat{k}} = 0 \]
@@ -886,7 +886,7 @@ Here, the connection $\Gamma^c_{ab}$ is compatible with $h_{ab}$.
 \begin{enumerate}
 \item Space-time is a four dimensional pseudo-Riemann manifold.
 \item The metric of the manifold is governed by the Einstein field equation
-\[\mathbf{G} = 8\pi\mathbf{T}.\]
+\[\bm{G} = 8\pi\bm{T}.\]
 \item  All special relativistic laws of physics are valid in local Lorentz frames of metric.
 \end{enumerate}
 
