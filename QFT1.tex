@@ -257,7 +257,7 @@ Recall that $(\partial^2-m^2)D_F(x-y) = i\delta(x-y)$, we can derive that
 After integration, we can know that
 \[Z[J] = Z_0 \mathrm{exp} [-\frac{1}{2} \int d^4x d^4y J(x)D_F(x-y)J(y)]\]
 So,
-\[\langle 0 | T \phi_H(x_1) \phi_H(x_2) | 0 \rangle =  - \frac{\delta}{\delta J(x_1)} \frac{\delta}{\delta J(x_2)} \mathrm{exp} [-\frac{1}{2} \int d^4x d^4y J(x)D_F(x-y)J(y)]|_{J=0} = D_F(x_1-x_2)\]
+\[\langle 0 | T \phi_H(x_1) \phi_H(x_2) | 0 \rangle =  \frac{1}{Z_0}- \frac{\delta}{\delta J(x_1)} \frac{\delta}{\delta J(x_2)} \mathrm{exp} [-\frac{1}{2} \int d^4x d^4y J(x)D_F(x-y)J(y)]|_{J=0} = D_F(x_1-x_2)\]
 
 \section{Perturbation theory for path integral quantization}
 \begin{eqnarray}
@@ -280,6 +280,92 @@ As, $W[0]=0$, we know
 \[-iW[J] = \sum_{I \neq \{0\}} C_I\]
 The notation $I\neq \{0\}$ means that the vacuum diagrams are omitted from the sum.\\
 The detailed discussion can be found in chapter 9 of \emph{Quantum field theory (M. Srednicki)}.
+
+\section{Symmetries in the functional formalism}
+\subsubsection{Equations of motion}
+\noindent
+The correlation function of the field theory is given by
+\[\langle \Omega | T \phi_H(x_1) \cdots \phi_H(x_n) | \Omega \rangle = Z_0^{-1} \int \mathcal{D}\phi e^{iS} \phi(x_1)\cdots\phi(x_n)\]
+The equation of motion of classical field theory will be give by
+\[\frac{\delta S}{\delta \phi(x)} = 0\]
+In quantum field theory, we derive the equation of motion by claim that the path integral will be invariant under the infinitesimal change of field, i.e. $\phi(x) \to \phi(x) + \epsilon(x)$.
+Define
+\[Z[\phi(x_1),\cdots,\phi(x_n)] \equiv  \int \mathcal{D}\phi e^{iS} \phi(x_1)\cdots\phi(x_n)\]
+We know
+\[\delta Z = \int \mathcal{D}\phi e^{iS} \left\{ \int d^4x \epsilon(x) \left[ i\frac{\delta S}{\delta \phi(x)} \phi(x_1)\cdots\phi(x_n) + \delta(x-x_1)\cdots\phi(x_n) + \cdots + \phi(x_1)\cdots\delta(x-x_n) \right]\right\} \]
+so
+\[\langle \frac{\delta S}{\delta \phi(x)} \phi(x_1)\cdots\phi(x_n) \rangle  = \sum_{i=1}^{n} \langle \phi(x_1) \cdots (i\delta(x-x_1)) \cdots \phi(x_n) \rangle\]
+\begin{example}
+For Klein-Gordon field,
+\[\mathcal{L} = -\frac{1}{2}\phi^{\mu}\phi \partial_{\mu}\phi - \frac{1}{2}m\phi^2\]
+The variation of $S$ gives
+\[\frac{\delta S}{\delta \phi(x)} = (\partial^2-m^2)\phi(x)\]
+So, we can get
+\[(\partial^2-m^2) \langle T \phi(x)\phi(x_1) \rangle = i\delta(x-x_1)\]
+\end{example}
+\subsubsection{Conservation law}
+Consider a local field theory of a set of fields $\phi_a(x)$, governed by a Lagrangian $\mathcal{L}(\phi)$. An infinitesimal symmetry transformation on the fields $\phi_a$ will be of the general form 
+\[\phi_a(x) \to \phi_a(x) + \epsilon \Delta \phi_a(x)\]
+We assume that when $\epsilon$ is a constant, the action is invariant under this transformation. Then the Lagrangian must be invariant up to a total divergence:
+\[\mathcal{L}[\phi] \to \mathcal{L}[\phi] + \epsilon \partial_{\mu} K^{\mu}\]
+If the symmetry parameter $\epsilon$ depend on $x$, the variation of Lagrangian will be
+\[L[\phi] \to \mathcal{L}[\phi] + (\partial_{\mu}\epsilon)\Delta \phi_a \frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi_a)} + \epsilon \partial_{\mu} K^{\mu}\]
+So, 
+\[\frac{\delta S}{\delta \epsilon(x)} = \partial_{\mu} j^{\mu} \quad j^{\mu} = -\frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi_a)}\Delta \phi_a + K^{\mu} \]
+If the measure $\mathcal{D}\phi$ is invariant under the transformation, we can derive similarly that
+\[\langle \partial_{\mu} j^{\mu}(x) \phi(x_1)\cdots\phi(x_n) \rangle  = \sum_{i=1}^{n} \langle \phi(x_1) \cdots (i\Delta \phi(x_i)\delta(x-x_i)) \cdots \phi(x_n) \rangle\]
+
+\section{Cross section and the S-matrix}
+\noindent
+Recall the definition of cross section
+\[\sigma \equiv \frac{\mbox{Number of Events}}{\mbox{Time} \times \mbox{Incident Flux}}\]
+Consider a  $2 \to n$ process:
+\[p_1 + p_2 \to \{p_j\}\]
+Suppose the volume of the space in which the scattering process takes place is $V$, the duration of the scattering process is $T$. 
+So, the incident flux is
+\[\Phi = \frac{|\bm{v}_1-\bm{v}_2|}{V},\]
+and the number of events is
+\[N = \frac{|\langle i | S | f \rangle|^2}{|\langle i | i \rangle||\langle f | f \rangle|} d\Pi .\]
+Here, $d\Pi$ is the region of final state momenta at which we are looking
+\[d\Pi = \prod_j \frac{V}{(2\pi)^3} d^3 p_j\]
+Recall that
+\[\delta^{(3)}(0) = \frac{V}{(2\pi)^3} \quad \delta^{(4)}(0) = \frac{VT}{(2\pi)^4} \quad \langle p | p \rangle = (2\pi)^3 2\omega \delta^{(3)}(0)\]
+We can calculate that
+\[|\langle i | S | f \rangle|^2 = |\mathcal{M}|^2 VT (2\pi)^4 \delta(\sum p_j - p_1 - p_2) \quad \langle i | i \rangle = (2E_1V) (2E_2V) \quad \langle f | f \rangle = \prod_j (2E_jV)\]
+At last, putting everything together, we have
+\[d\sigma = \frac{1}{(2E_1)(2E_2)|\bm{v}_1-\bm{v}_2|} |\mathcal{M}|^2 d\Pi_{\mathrm{LIPS}}\]
+where,
+\[d\Pi_{\mathrm{LIPS}} = \prod_j \frac{d^3p_j}{(2\pi)^3} \frac{1}{2E_j} (2\pi)^4 \delta(\sum p_j - p_1 - p_2)\]
+is called the Lorentz-invariant phase space (LIPS). \\
+All the factors of $V$ and $T$ have dropped out, so now it is trivial to take $V \to \infty$ and $T \to \infty$. 
+
+\subsubsection{Decay rates}
+\noindent
+The definition of decay rates is
+\[\Gamma \equiv \frac{\mbox{Number of Events}}{\mbox{Time}}\]
+Consider a  $1 \to n$ process:
+\[p_1 \to \{p_j\}\]
+We can derive the decay rates by the similar method,
+\[d\Gamma = \frac{1}{2E_1} |\mathcal{M}|^2 d\Pi_{\mathrm{LIPS}} \]
+
+\subsubsection{Special cases}
+\noindent
+For $2 \to 2$ scattering in the center-of-mass frame
+\[p_1 + p_2 \to p_3 + p_4\]
+Then
+\[d\Pi_{\mathrm{LIPS}} = \frac{d^3p_3}{(2\pi)^3} \frac{1}{2E_3 } \frac{d^3p_4}{(2\pi)^3} \frac{1}{2E_4} (2\pi)^4 \delta(p_3+p_4-p_1-p_2)\]
+We can now integrate over $\bm{p}_4$ to give
+\[d\Pi_{\mathrm{LIPS}} = \frac{1}{16\pi^2} d\Omega \int dp_f \frac{p_f^2}{E_3 E_4} \delta(E_3+E_4 -E_{CM})\]
+where $p_f = |\bm{p}_3| = |\bm{p}_4|$, $E_3 = \sqrt{p_f^2 + m_3^2}$ ,$E_4 = \sqrt{p_f^2 + m_4^2}$ and $E_{CM} = E_1 + E_2$. 
+Define $x(p_f) \equiv E_3 + E_4 - E_{CM}$, we can get
+\[\frac{dx}{dp_f} = \frac{E_3+E_4}{E_3 E_4}p_f\]
+So,
+\[d\Pi_{\mathrm{LIPS}} = \frac{1}{16\pi^2} d\Omega \frac{p_f}{E_{CM}}\theta (E_{CM} - m_3 -m_4)\]
+Plugging this into the general equation for cross section, we can get
+\[ \frac{d\sigma}{d\Omega} = \frac{1}{64\pi^2 E_{CM}^2} \frac{|\bm{p}_f|}{|\bm{p}_i|} |\mathcal{M}|^2 \theta (E_{CM} - m_3 -m_4) \]
+If all the masses are equal then this formula simplifies further
+\[\frac{d\sigma}{d\Omega} = \frac{1}{64\pi^2 E_{CM}^2} |\mathcal{M}|^2\]
+\newpage
 
 \section{LSZ reduction formula}
 \subsection{Field strength renormalization}
@@ -733,35 +819,3 @@ The Lagrangian is invariant under the symmetry
 for any $N \times N$ orthogonal group in $N$ dimensions, also called the N-dimensional orthogonal group or simply $O(N)$.
 
 
-\section{Cross section and the S-matrix}
-\noindent
-Recall the definition of cross section
-\[\sigma \equiv \frac{\mbox{Number of Events}}{\mbox{Time} \times \mbox{Incident Flux}}\]
-Consider a  $2 \to n$ process:
-\[p_1 + p_2 \to \{p_j\}\]
-Suppose the volume of the space in which the scattering process takes place is $V$, the duration of the scattering process is $T$. 
-So, the incident flux is
-\[\Phi = \frac{|\bm{v}_1-\bm{v}_2|}{V},\]
-and the number of events is
-\[N = \frac{|\langle i | S | f \rangle|^2}{|\langle i | i \rangle||\langle f | f \rangle|} d\Pi .\]
-Here, $d\Pi$ is the region of final state momenta at which we are looking
-\[d\Pi = \prod_j \frac{V}{(2\pi)^3} d^3 p_j\]
-Recall that
-\[\delta^{(3)}(0) = \frac{V}{(2\pi)^3} \quad \delta^{(4)}(0) = \frac{VT}{(2\pi)^4} \quad \langle p | p \rangle = (2\pi)^3 2\omega \delta^{(3)}(0)\]
-We can calculate that
-\[|\langle i | S | f \rangle|^2 = |\mathcal{M}|^2 VT (2\pi)^4 \delta(\sum p_j - p_1 - p_2) \quad \langle i | i \rangle = (2E_1V) (2E_2V) \quad \langle f | f \rangle = \prod_j (2E_jV)\]
-At last, putting everything together, we have
-\[d\sigma = \frac{1}{(2E_1)(2E_2)|\bm{v}_1-\bm{v}_2|} |\mathcal{M}|^2 d\Pi_{\mathrm{LIPS}}\]
-where,
-\[d\Pi_{\mathrm{LIPS}} = \prod_j \frac{d^3p_j}{(2\pi)^3} \frac{1}{2E_j} (2\pi)^4 \delta(\sum p_j - p_1 - p_2)\]
-is called the Lorentz-invariant phase space (LIPS). \\
-All the factors of $V$ and $T$ have dropped out, so now it is trivial to take $V \to \infty$ and $T \to \infty$. 
-
-\subsubsection{Decay rates}
-\noindent
-The definition of decay rates is
-\[\Gamma \equiv \frac{\mbox{Number of Events}}{\mbox{Time}}\]
-Consider a  $1 \to n$ process:
-\[p_1 \to \{p_j\}\]
-We can derive the decay rates by the similar method,
-\[d\Gamma = \frac{1}{2E_1} |\mathcal{M}|^2 d\Pi_{\mathrm{LIPS}} \]

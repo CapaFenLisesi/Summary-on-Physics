@@ -141,7 +141,7 @@ So, we can derive
 From above equation, we can say that $a^{\dagger}_r(\bm{p})$ create an photon with energy $\omega$, momentum $\bm{p}$ and spin angular momentum along the direction of momentum $r$.
 
 \subsubsection{Propagator}
-\[G_{ij} \equiv \langle 0 |T A_i(x) A_j(y) | 0 \rangle = \int \frac{d^4p}{(2\pi)^4} \frac{-i}{p^2-i\epsilon} \left(\delta_{ij} - \frac{p_ip_j}{|\bm{p}|^2}\right) e^{ip(x-y)}\]
+\[G_F(x-y)_{ij} \equiv \langle 0 |T A_i(x) A_j(y) | 0 \rangle = \int \frac{d^4p}{(2\pi)^4} \frac{-i}{p^2-i\epsilon} \left(\delta_{ij} - \frac{p_ip_j}{|\bm{p}|^2}\right) e^{ip(x-y)}\]
 
 \subsection{Canonical quantization in Lorentz gauge}
 \subsubsection{Undefined metric formalism}
@@ -230,8 +230,293 @@ contribute to the result. Two states that differ only in their timelike and long
 It is important to note that although for the average values of the physical observables only the transverse polarizations contribute, the scalar and longitudinal polarizations are necessary for the consistency of the theory. In particular they show up when we consider complete sums over the intermediate states.
 
 \subsubsection{Propagator}
-\[G_{\mu\nu} \equiv \langle 0 |T A_{\mu}(x) A_{\nu}(y) | 0 \rangle = \int \frac{d^4p}{(2\pi)^4} \frac{-i\eta_{\mu\nu}}{p^2-i\epsilon}  e^{ip(x-y)}\]
-It is easy to verify that $G_{\mu\nu}(x-y)$ is the Green's function of the equation of motion, that for $\xi=1$ is the wave equation, that is
-\[\partial^2 G_{\mu\nu} = i\eta_{\mu\nu}\delta(x-y)\]
+\[G_F(x-y)_{\mu\nu} \equiv \langle 0 |T A_{\mu}(x) A_{\nu}(y) | 0 \rangle = \int \frac{d^4p}{(2\pi)^4} \frac{-i\eta_{\mu\nu}}{p^2-i\epsilon}  e^{ip(x-y)}\]
+It is easy to verify that $G_F(x-y)_{\mu\nu}$ is the Green's function of the equation of motion, that for $\xi=1$ is the wave equation, that is
+\[\partial^2 G_F(x-y)_{\mu\nu} = i\eta_{\mu\nu}\delta(x-y)\]
 For the general case, $\xi \neq 0$, the equal times commutation relations are more complicated. And the propagator will be
-\[G_{\mu\nu}  = \int \frac{d^4p}{(2\pi)^4} \left[\frac{-i\eta_{\mu\nu}}{p^2-i\epsilon} + i(1-\xi)\frac{k_{\mu}k_{\nu}}{(k^2-i\epsilon)^2}\right] e^{ip(x-y)}\]
+\[G_F(x-y)_{\mu\nu}  = \int \frac{d^4p}{(2\pi)^4} \left[\frac{-i\eta_{\mu\nu}}{p^2-i\epsilon} + i(1-\xi)\frac{p_{\mu}p_{\nu}}{(p^2-i\epsilon)^2}\right] e^{ip(x-y)}\]
+
+\section{Perturbation theory for canonical quantization}
+\subsection{Lagrangian of QED}
+\noindent
+The Lagrangian of QED is
+\[\mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \overline{\Psi} (i\slashed{\partial}-m_0) \Psi + e_0j^{\mu} A_{\mu}, \]
+where $j^{\mu} \equiv \overline{\Psi}\gamma^{\mu}\Psi$. Usually, we also define a covariant derivative,
+\[D_{\mu}\Psi \equiv \partial_{\mu}\Psi -ie_0A_{\mu}\Psi \]
+So, the Lagrangian can also be written as
+\[\mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \overline{\Psi} (i\slashed{D}-m_0) \Psi\]
+The Lagrangian is invariant under the gauge transformation
+\[A_{\mu}(x) \to A_{\mu}(x) + \frac{1}{e_0}\partial_{\mu}\alpha(x) \quad \Psi(x) \to e^{i\alpha(x)} \Psi(x)\]
+
+\subsection{Coulomb gauge}
+\noindent
+The constraint equations are
+\[\bm{\nabla} \cdot \bm{A} = 0 \quad \bm{\nabla}^2 A_0 = e_0j^0\]
+The solution for $A_0$ is
+\[A_0(\bm{x},t) = -e_0 \int d^3 x' \frac{j^0(\bm{x}',t)}{4\pi|\bm{x}-\bm{x}'|}\]
+Finally, we can derive that
+\[H = H_{D} + H_{M} + H_{\mathrm{int}}\]
+where,
+\[H_{D} = \int d^3 x \; -\Pi (\vec{\alpha} \cdot \vec{\nabla} + i \beta m)\Psi \quad H_{M} = \int d^3x \; \frac{1}{2}(\bm{\pi}^2 + \bm{B}^2)\]
+\[H_{\mathrm{int}} = \int d^3x \; \left[-e_0\bm{j}\cdot\bm{A} + \frac{e_0^2}{2} \int d^3x' \frac{j^0(\bm{x}) j^0(\bm{x}')}{4\pi|\bm{x}-\bm{x}'|} \right]\]
+The perturbation expansion of correlation functions is
+\[\langle \Omega | T \{\Psi(x) \overline{\Psi}(y) A(z) \} | \Omega \rangle = \lim_{T \to \infty(1-i\epsilon)} \frac{\langle 0 | T \left\{ \Psi_I(x) \overline{\Psi}_I(y) A_I(z) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle}{\langle 0 | T \left\{ \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle}\]
+Here, $\int_{T}^{T} dt H_I$ can be written as
+\[\left[-\int d^4x e_0\overline{\Psi}_I\bm{\gamma}\Psi_I\cdot\bm{A}_I \right] +\left[ \int d^4x \int d^4x' \frac{e_0^2\delta(t-t')}{4\pi|\bm{x}-\bm{x}'|}\; \frac{1}{2} \overline{\Psi}_I(\bm{x},t)\gamma^0 \Psi_I(\bm{x},t) \overline{\Psi}_I(\bm{x}',t')\gamma^0 \Psi_I(\bm{x}',t') \right]\]
+Wick’s theorem for photons takes is similar to that in $\phi^4$ theory:
+\[T \left\{ A_I(x_1) A_I(x_2)  A_I(x_3) \cdots \right\} = N \left\{A_I(x_1) A_I(x_2)  A_I(x_3) \cdots + \mbox{ all possible contractions }\right\} \]
+\begin{example}
+\begin{eqnarray}
+&& \langle 0 | T \left\{ A_{Ii}(x_1) A_{Ij}(x_2) A_{Ik}(x_3) A_{Il}(x_4)\right\}| 0 \rangle \nonumber \\
+&=&  G_F(x_1-x_2)_{ij} G_F(x_3-x_4)_{kl} + G_F(x_1-x_3)_{ik}G_F(x_2-x_4)_{jl} +  G_F(x_1-x_4)_{il}G_F(x_2-x_3)_{jk} \nonumber
+\end{eqnarray}
+\end{example}
+\noindent
+Now we can derive the Feynman rule for QED theory.
+Firstly, we evaluate this term,
+\[\langle 0 | T \left\{ \Psi_{Ia}(x) \overline{\Psi}_{Ib}(y) A_{Ii}(z) (i e_0) \int dw^4 \overline{\Psi}_I(w) \bm{\gamma} \Psi_I(w) \cdot A_I(w) \right\} | 0 \rangle\]
+After contraction, it can be written as
+\begin{eqnarray}
+&-&  (ie_0) S_F(x-y)_{ab} \int d^4 w G_F(z-w)_{ik} \mathrm{Tr}[\gamma^k S_F(w-w)] \nonumber \\
+&+&  (ie_0) \int d^4 w G_F(w-z)_{ik}  [S_F(x-w) \gamma^k S_F(w-y)]_{ab}  \nonumber
+\end{eqnarray}
+It can be represented by the following Feynman diagram.
+\begin{figure}[!h]
+\centering
+\includegraphics[height=2cm ,width=5.4cm]{QFT/QEDFD1.png}
+\caption{Feynman diagram representation of perturbation expansion}
+\end{figure}\\
+Secondly, we evaluate this term,
+\[\langle 0 | T \left\{ \Psi_{Ia}(x) \overline{\Psi}_{Ib}(y) \int d^4w \int d^4w' \frac{-ie_0^2\delta(w^0-w'^0)}{4\pi|\bm{w}-\bm{w}'|}\; \frac{1}{2} \overline{\Psi}_I(w)\gamma^0 \Psi_I(w) \overline{\Psi}_I(w')\gamma^0 \Psi_I(w') \right\} | 0 \rangle\]
+After contraction, it can be written as
+\begin{eqnarray}
+&-&  (ie_0)^2 \int d^4w d^4w' \frac{i\delta(w^0-w'^0)}{4\pi|\bm{w}-\bm{w}'|} [S_F(x-w)\gamma^0 S_F(w-y)]_{ab} \mathrm{Tr}[\gamma^0 S_F(w'-w')] \nonumber \\
+&+&  (ie_0)^2 \int d^4w d^4w' \frac{i\delta(w^0-w'^0)}{4\pi|\bm{w}-\bm{w}'|} [S_F(x-w)\gamma^0 S_F(w-w') \gamma^0 S_F(w'-y)]_{ab} \nonumber \\
+&+& \frac{1}{2} (ie_0)^2 S_F(x-y)_{ab} \int d^4w d^4w' \frac{i\delta(w^0-w'^0)}{4\pi|\bm{w}-\bm{w}'|} \mathrm{Tr}[\gamma^0 S_F(w-w)] \mathrm{Tr}[\gamma^0 S_F(w'-w')] \nonumber \\
+&-& \frac{1}{2} (ie_0)^2 S_F(x-y)_{ab} \int d^4w d^4w' \frac{i\delta(w^0-w'^0)}{4\pi|\bm{w}-\bm{w}'|} \mathrm{Tr}[\gamma^0 S_F(w-w')\gamma^0 S_F(w'-w)] \nonumber
+\end{eqnarray}
+It can be represented by the following Feynman diagram.
+\begin{figure}[!h]
+\centering
+\includegraphics[height=4.5cm ,width=6.85cm]{QFT/QEDFD2.png}
+\caption{Feynman diagram representation of perturbation expansion}
+\end{figure}\\
+Before we write down Feymann rules, we notice that the offending non-local interaction comes from the $A_0$ component of the gauge field, we could try to redefine the propagator to include a $G_F(x-y)_{00}$ piece which will capture this term. We can verify that
+\[\frac{i\delta(w^0-w'^0)}{4\pi|\bm{w}-\bm{w}'|} = \int \frac{d^4p}{(2\pi)^4} \frac{ie^{ip(w-w')}}{|\bm{p}|^2}\]
+So we can combine the non-local interaction with the transverse photon propagator by defining a new photon propagator
+\[G_F(p)_{\mu\nu} \equiv \begin{cases} \frac{i}{|\bm{p}|^2} \quad \mu,\nu=0\\  \frac{-i}{p^2-i\epsilon} \left(\delta_{ij} - \frac{p_ip_j}{|\bm{p}|^2}\right) \quad \mu = i \neq 0, \nu = j \neq 0 \\ 0 \quad \mbox{otherwise} \end{cases} \]
+With this propagator, the wavy photon line now carries a $\mu \nu = 0,1,2,3$ index, with the extra $\mu=0$ component taking care of the instantaneous interaction.\\
+The Feynman rules for QED are:
+\begin{enumerate}
+\item For each Fermion propagator from $y$ to $x$, $P = S_F(x-y)$
+\item For each vector propagator, $P = G_F(x-y)$
+\item For each vertex, $V = (ie_0\gamma^{\mu})\int d^4w$
+\item For each external point, $E=1$
+\item Divided by the symmetry factor
+\end{enumerate}
+
+\subsection{Lorentz Gauge}
+\noindent
+In Lorentz gauge,
+\[\mathcal{H}_{int} = -e_0 \overline{\Psi} \gamma^{\mu} \Psi A_{\mu}\]
+The Feynman rules for QED in Lorentz gauge will be the same as that in Coulomb gauge expect for that the vector propagator will be
+\[G_F(p)_{\mu\nu}  = \frac{-i\eta_{\mu\nu}}{p^2-i\epsilon} + i(1-\xi)\frac{p_{\mu}p_{\nu}}{(p^2-i\epsilon)^2} \]
+Especially, for Feynman gauge $\xi=1$, we have
+\[G_F(p)_{\mu\nu}  = \frac{-i\eta_{\mu\nu}}{p^2-i\epsilon} \]
+
+\section{Path integral quantization}
+\subsection{Path integral formulation for free EM field}
+\noindent
+The correlation function is given by
+\[\langle \Omega | T A_H(x_1) A_H(x_2)| \Omega \rangle = \lim_{T \to \infty(1-i\epsilon)} \frac{\int \mathcal{D}A \; \mathrm{exp} \left[ i\int_{-T}^T d^4x (-\frac{1}{4} F^{\mu\nu}F_{\mu\nu}) \right] A(x_1) A(x_2)}{\int \mathcal{D}A \; \mathrm{exp} \left[ i\int_{-T}^T d^4x (-\frac{1}{4} F^{\mu\nu}F_{\mu\nu}) \right]}\]
+The generating function is 
+\[Z[J] = \int \mathcal{D}A \; \mathrm{exp} \left[ i\int d^4x (-\frac{1}{4} F^{\mu\nu}F_{\mu\nu}) + J^{\mu} A_{\mu} \right]\]
+We can verify that
+\[S = \int d^4x (-\frac{1}{4} F^{\mu\nu}F_{\mu\nu}) = \frac{1}{2} \int d^4x A_{\mu}(x) (\partial^2\eta^{\mu\nu} - \partial^{\mu}\partial^{\nu})A_{\nu}(x)\]
+Notice that $(\partial^2\eta^{\mu\nu} - \partial^{\mu}\partial^{\nu})$ is singular, since for any $\alpha(x)$, 
+\[(\partial^2\eta^{\mu\nu} - \partial^{\mu}\partial^{\nu})\partial_{\mu}\alpha(x) = 0\]
+This difficulty is due to gauge invariance: $\alpha(x)$ is gauge equivalent to $0$. The functional is badly defined because we are redundantly integrating over a continuous infinity of physically equivalent field configurations. To fix the problem, we would like to isolate the interesting part of the functional integral, which counts each physical configuration only once. \\
+Let $G(A)$ be some function that we wish to set equal zero as a gauge-fixing condition. We could constrain the functional integral to cover only the configurations with $G(A) = 0$ by inserting a functional delta function, $\delta(G(A))$. To do so, we insert $1$ in the path integral:
+\[ 1 = \int \mathcal{D}\alpha(x) \delta(G(A(\alpha))) \det \left( \frac{\delta G}{\delta \alpha} \right)\]
+where,
+\[A_{\mu}(\alpha(x)) = A_{\mu}(x) + \frac{1}{e_0}\partial_{\mu}\alpha(x)\]
+We set the gauge fixing function as $G(A) = \partial^{\mu} A_{\mu} -\omega(x)$, so $G(A(\alpha)) = \partial^{\mu} A_{\mu} + \frac{1}{e_0}\partial^2 \alpha - \omega(x)$. It is obvious that $\det \left( \frac{\delta G}{\delta \alpha} \right)$ is equivalent to $\det(\partial^2)/e_0$, which is independent of $A$. So,
+\[Z_0[A] = \det \left( \frac{\delta G}{\delta \alpha} \right) \int \mathcal{D}\alpha \int \mathcal{D}A e^{iS[A]} \delta(G(A(\alpha)))\]
+Now change variables from $A$ to $A(\alpha)$. This is a simple shift, so $\mathcal{D}A = \mathcal{D}A(\alpha)$. Also, by gauge invariance, $S[A] = S[A(\alpha)]$. Since $A(\alpha)$ is now just a dummy integration variable, we can rename it bake to $A$, so
+\[Z_0[A] = \det \left( \frac{\delta G}{\delta \alpha} \right) \int \mathcal{D}\alpha \int \mathcal{D}A e^{iS[A]} \delta(\partial^{\mu}A_{\mu} - \omega(x))\]
+Since the above equation is hold for any $\omega(x)$,so we have
+\begin{eqnarray}
+Z_0[A] &=& N(\xi) \int \mathcal{D}\omega \exp\left[ -i \int d^4x \frac{\omega^2}{2\xi} \right] \det(\partial^2) \int \mathcal{D}\alpha \int \mathcal{D}A e^{iS[A]} \delta(\partial^{\mu}A_{\mu} - \omega(x)) \nonumber \\
+&=& N(\xi) \frac{\det(\partial^2)}{e_0} \int \mathcal{D}\alpha \int \mathcal{D}A e^{iS[A]} \exp\left[ -i \int d^4x \frac{1}{2\xi} (\partial^{\mu}A_{\mu})^2\right] \nonumber \\
+&=& W(\xi) \int \mathcal{D}A \exp\left[ \frac{i}{2} \int d^4x  A_{\mu} (\partial^2\eta^{\mu\nu} - \partial^{\mu}\partial^{\nu} + \frac{1}{\xi} \partial^{\mu} \partial^{\nu})A_{\nu}\right] \nonumber
+\end{eqnarray}
+And we rewrite the generating function as
+\[Z[J] = W(\xi) \int \mathcal{D}A \exp\left[ \frac{i}{2} \int d^4x  A_{\mu} (\partial^2\eta^{\mu\nu} - \partial^{\mu}\partial^{\nu} + \frac{1}{\xi} \partial^{\mu} \partial^{\nu})A_{\nu} + J^{\mu} A_{\mu}\right]\]
+Define
+\[A'(x) = A(x) - i \int d^4y G_F(x-y)J(y)\]
+Recall that
+\[(\partial^2\eta^{\mu\nu} - \partial^{\mu}\partial^{\nu} + \frac{1}{\xi} \partial^{\mu} \partial^{\nu})G_F(x-y)_{\nu \rho} = i\delta^{\mu}_{\rho}\delta(x-y)\]
+We can derive that
+\[Z[J]=Z_0[A] \exp \left[ -\frac{1}{2} \int d^4x d^4y J^{\mu}(x) G_F(x-y)_{\mu\nu}J^{\nu}(y) \right]\]
+The two point correlation functions are
+\[\langle 0 | T A_H(x_1) A_H(x_2)| 0 \rangle = Z_0^{-1} \left(-i \frac{\delta}{\delta J(x_1)} \right) \left(-i \frac{\delta}{\delta J(x_2)} \right) Z[J]\bigg|_{J=0} = G_F(x_1-x_2) \]
+
+\subsection{Perturbation theory for path integral quantization}
+\noindent
+We use QED theory as an example.
+\[\mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \overline{\Psi} (i\slashed{\partial}-m_0) \Psi + e_0\overline{\Psi}\gamma^{\mu}\Psi A_{\mu}\]
+As we stated in section 4.1, the Lagrangian of QED is also invariant under a general gauge transformation. And we also notice that the measure $\mathcal{D}\Psi \mathcal{D}\overline{\Psi}$ is invariant under gauge transformation. By the similar method, we can show that
+\[Z_0 \equiv \int \mathcal{D}A \mathcal{D}\Psi \mathcal{D}\overline{\Psi}e^{iS[A,\Psi,\overline{\Psi}]} = W(\xi)\int \mathcal{D}A \mathcal{D}\Psi \mathcal{D}\overline{\Psi}e^{iS[A,\Psi,\overline{\Psi}]} \exp\left[ -i \int d^4x \frac{1}{2\xi} (\partial^{\mu}A_{\mu})^2\right] \]
+So,define
+\[\mathcal{L}_0 \equiv -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} - \frac{1}{2\xi} (\partial^{\mu}A_{\mu})^2 + \overline{\Psi} (i\slashed{\partial}-m_0) \Psi \quad \mathcal{L}_1 \equiv e_0\overline{\Psi}\gamma^{\mu}\Psi A_{\mu}\]
+\begin{eqnarray}
+Z[J] &=& W(\xi) \int \mathcal{D}A \mathcal{D}\overline{\Psi} \mathcal{D}\Psi e^{i\int d^4x [\mathcal{L}_0 + \mathcal{L}_1 + JA + \overline{\eta}\Psi + \overline{\Psi}\eta]} \nonumber \\
+&=& W(\xi) e^{i\int d^4x \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(x)},\frac{1}{i}\frac{\delta}{\delta \overline{\eta}(x)},-\frac{1}{i}\frac{\delta}{\delta \eta(x)})} \int \mathcal{D}\phi \mathcal{D}\overline{\Psi} \mathcal{D}A e^{i\int d^4y [\mathcal{L}_0 + JA + \overline{\eta}\Psi + \overline{\Psi}\eta]} \nonumber \\
+&\propto & e^{i\int d^4x \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(x)},\frac{1}{i}\frac{\delta}{\delta \overline{\eta}(x)},-\frac{1}{i}\frac{\delta}{\delta \eta(x)})} \mathrm{exp} [- \int d^4y d^4z  \frac{1}{2} J(y)G_F(y-z)J(z) + \overline{\eta}(y)S_F(y-z)\eta(z)] \nonumber \\
+& =& \sum_{V=0}^{\infty} \frac{1}{V!} [ie_0 \int d^4x (\frac{1}{i} \frac{\delta}{\delta J^{\mu}(x)} \cdot -\frac{1}{i}\frac{\delta}{\delta \eta(x)} \cdot \gamma^{\mu} \cdot  \frac{1}{i}\frac{\delta}{\delta \overline{\eta}(x)})]^V \nonumber \\
+&\times & \sum_{P_1=0}^{\infty} \frac{1}{P_1!} [-\frac{1}{2} \int d^4y_1 d^4z_1 J(y_1)G_F(y_1-z_1)J(z_1)]^{P_1} \nonumber \\
+&\times &  \sum_{P_2=0}^{\infty} \frac{1}{P_2!} [-\int d^4y_2 d^4z_2 \overline{\eta}(y_2)S_F(y_2-z_2)\eta(z_2)]^{P_2} \nonumber
+\end{eqnarray}
+If we focus on a term with particular values of $V$, $P_1$ and $P_2$, then the number of surviving scalar sources is $E_1 = 2P_1-V$, the number of surviving fermion sources is $E_2 = 2P_2-2V$.
+We can introduce Feynman diagrams as in the $\phi^4$ theory. In these diagrams, a wavy line segment stands for a vector propagator $G_F(x-y)$, a line with an arrow pointing from $y$ to $x$ for a fermion propagator $S_F(x-y)$, a filled circle at one end of a wavy line segment for a vector source $i\int d^4x J(x)$, a filled circle at the start of a line with an arrow for a fermion source $i\int d^4x \eta(x)$, a filled circle at the end of a line with an arrow for a anti-fermion source $i\int d^4x \overline{\eta}(x)$, a vertex joining three line segments for $ie_0\gamma^{\mu}\int d^4x$.
+
+\subsection{Ward-Takahahsi identity (1)}
+The Noether current of the symmetry $\Psi \to e^{i\alpha}\Psi$ is $j^{\mu} = e_0\overline{\Psi}\gamma^{\mu}\Psi$. Recall the conservation law in functional formalism
+\[\langle \partial_{\mu} j^{\mu}(x) \phi(x_1)\cdots\phi(x_n) \rangle  = \sum_{i=1}^{n} \langle \phi(x_1) \cdots (i\Delta \phi(x_i)\delta(x-x_i)) \cdots \phi(x_n) \rangle\]
+So, we can write the charge conservation law as
+\[i\partial_{\mu} \langle \Omega | T j^{\mu} \psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle = -ie_0\delta(x-x_1)\langle \Omega | T \psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle + ie_0\delta(x-x_2)\langle \Omega | T \psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle\]
+Notice that $i\langle \Omega | T j^{\mu} \psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle$ can be represented by
+\begin{figure}[!h]
+\centering
+\includegraphics[height=2cm ,width=4.46cm]{QFT/WDTA1.png}
+\caption{Feynman diagram representation of correlation function}
+\end{figure}\\
+From the diagram, we have
+\[\langle A_{\nu}(y) \rangle = \int d^4x G_F(x-y)_{\mu\nu} i\langle j^{\mu}(x) \rangle  = \int \frac{d^4p}{(2\pi)^4} e^{-ipy} G_F(p)_{\mu\nu} \int d^4x e^{ipx} i\langle j^{\mu}(x) \rangle\]
+So,
+\[\int d^4x \langle A_{\nu}(x) \rangle e^{ikx} = G_F(p)_{\mu\nu} \int d^4x e^{ikx} i\langle j^{\mu}(x)\]
+Compute the Fourier transformation of the equation of charge conservation by integrating
+\[\int d^4x e^{ikx} \int d^4x_1 e^{-iqx_1} \int d^4x_2 e^{ipx_2}\]
+We can get
+\begin{figure}[!h]
+\centering
+\includegraphics[height=1.67cm ,width=11.36cm]{QFT/WDTA2.png}
+\caption{Feynman diagram representation of Ward identity}
+\end{figure}\\
+Note that in the diagram above, the external leg of photon will be cut-off, but external leg of fermion will remain.
+The above equation can be generated to the diagram with $n$ external fermions. 
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[height=1.87cm ,width=11.63cm]{QFT/WDTA3.png}
+%\caption{Feynman diagram representation of Ward identity}
+%\end{figure}\
+Another proof of Ward-Takahashi identity by calculating the Feynman diagram directly can be found in chapter 7.4 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}
+
+\section{Exact propagator of photon}
+\subsection{Photon self-energy}
+\noindent
+The exact propagator of photon is
+\[\mathcal{G}(x)_{\mu\nu} = \langle  \Omega | T \{ A_{\mu}(x)A_{\nu}(0)| \Omega \rangle_C\]
+Its Fourier transformation can be represented by the following diagram. 
+\begin{figure}[!h]
+\centering
+\includegraphics[height=1.08cm ,width=13.65cm]{QFT/QEDRG1.png}
+\caption{Feynman diagram representation of exact propagator of photon}
+\end{figure}\\
+Let us define $i\Pi^{\mu\nu}$ to be the sum of all 1-particle-irreducible insertions into the photon propagator. So, we have
+\[\mathcal{G}(k) = G_F(k) + G_F(k)(i\Pi(k))G_F(k) + \cdots = G_F(k) \frac{1}{1-i\Pi(k)G_F(k)}\]
+Hence,
+\[(i\mathcal{G})^{-1} = (iG_F)^{-1} - \Pi\]
+Recall that
+\[iG_F(p)_{\mu\nu}  = \frac{\eta_{\mu\nu}}{k^2-i\epsilon} - (1-\xi)\frac{k_{\mu}k_{\nu}}{(k^2-i\epsilon)^2} = \frac{1}{k^2-i\epsilon}(P^T_{\mu\nu} + \xi P^L_{\mu\nu})\]
+Here, \[P^T_{\mu\nu} \equiv \eta_{\mu\nu} - \frac{k_{\mu}k_{\nu}}{k^2} \quad  P^L_{\mu\nu} \equiv \frac{k_{\mu}k_{\nu}}{k^2}\]
+We can derive that
+\[(iG_F)^{-1}(k)_{\mu\nu} = k^2 (P^T_{\mu\nu} + \frac{1}{\xi} P^L_{\mu\nu})\]
+We may also expand $i\Pi^{\mu\nu}$ as
+\[\Pi^{\mu\nu} = P_T^{\mu\nu}f_T(k^2) +  P_L^{\mu\nu}f_L(k^2) = \eta^{\mu\nu}f_T + \frac{k^{\mu}k^{\nu}}{k^2}(f_L-f_T)\]
+Therefore,
+\[(i\mathcal{G})^{-1}(k)_{\mu\nu} = (k^2-f_T(k^2))P^T_{\mu\nu} + (\frac{k^2}{\xi}-f_L(k^2)) P^L_{\mu\nu}\]
+\[\mathcal{G}(k)_{\mu\nu} = \frac{-i}{k^2-f_T(k^2)}P^T_{\mu\nu} + \frac{-i}{\frac{k^2}{\xi}-f_L(k^2)} P^L_{\mu\nu}\]
+We observe that if $f_{T,L}(k^2 = 0) \neq 0$, a mass will be generated for the photon. Because $\Pi(k)$ comes from 1PI diagrams, it should not be singular at $k^2 =0 $, and so $f_L - f_T = O(k^2)$, as $k \to 0$. We will show that gauge invariance ensures that no mass is generated from the loop corrections
+
+\subsection{Ward identities(2)}
+\noindent
+We define the generating functional for connected diagrams
+\[Z[J,\eta,\overline{\eta}] = e^{-iE[J,\eta,\overline{\eta}]}\]
+For example,
+\[\mathcal{G}(x-y)_{\mu\nu} = -i  \frac{\delta^2 E[J,\eta,\overline{\eta}]}{\delta J^{\mu}(x) \delta J^{\nu}(y)}\bigg|_{J,\eta,\overline{\eta}=0}\]
+Recall, for infinitesimal gauge transformations, $\delta A_{\mu} = \partial_{\mu} \lambda $, $\delta \Psi = ie_0\lambda\Psi$ and $\delta \overline{\Psi}  = -ie_0 \lambda \overline{\Psi}$. For a change of
+variables in the path integral, $Z[J,\eta,\overline{\eta}]$ will remain the same. 
+Recall that
+\[Z[J,\eta,\overline{\eta}] = W(\xi) \int \mathcal{D}A \mathcal{D}\overline{\Psi} \mathcal{D}\Psi e^{i\int d^4x [\mathcal{L}_0 + \mathcal{L}_1 + JA + \overline{\eta}\Psi + \overline{\Psi}\eta]} \]
+The change of action is
+\[\delta S = -\frac{1}{\xi} \int d^4x \partial_{\mu} A^{\mu} \partial^2 \lambda + \int d^4x J^{\mu}\partial_{\mu}\lambda + ie_0\overline{\eta}\Psi\lambda - ie_0\overline{\Psi}\eta\lambda\]
+Hence, we must have
+\[\int d^4x \lambda(x) W(\xi)\int \mathcal{D}A \mathcal{D}\overline{\Psi} \mathcal{D}\Psi e^{iS} \left[ -\frac{1}{\xi} \partial^2 \partial_{\mu} A^{\mu} - \partial_{\mu}J^{\mu}  + ie_0(\overline{\eta}\Psi - \overline{\Psi}\eta)\right] \]
+Since
+\[\langle A_{\mu}(x) \rangle_{J,\eta,\overline{\eta}} = - \frac{\delta E}{\delta J^{\mu}} \quad \langle \Psi(x) \rangle_{J,\eta,\overline{\eta}} = - \frac{\delta E}{\delta \overline{\eta}} \quad \langle \overline{\Psi}(x) \rangle_{J,\eta,\overline{\eta}} =  \frac{\delta E}{\delta \eta}\]
+The above equation can be written as
+\[\frac{1}{\xi} \partial^2 \partial^{\mu}\frac{\delta E}{\delta J^{\mu}} - \partial_{\mu}J^{\mu} - ie_0\left[ \overline{\eta}\frac{\delta E}{\delta \overline{\eta}} + \frac{\delta E}{\delta \eta} \eta \right]=0\]
+We can derive that
+\[\frac{1}{\xi} \partial^2 \partial^{\mu} \frac{\delta^2 E[J,\eta,\overline{\eta}]}{\delta J^{\mu}(x) \delta J^{\nu}(y)}\bigg|_{J,\eta,\overline{\eta}=0} - \partial_{\nu} \delta(x-y) = 0\]
+that is,
+\[\frac{i}{\xi}\partial^2 \partial^{\mu} \mathcal{G}(x-y)_{\mu\nu}+ \partial_{\nu} \delta(x-y) = 0 \]
+or, written in momentum-space,
+\[-\frac{i}{\xi}k^2 k^{\mu} \mathcal{G}(k)_{\mu\nu}+ k_{\nu} = 0\]
+So
+\[- \frac{k^2}{k^2-\xi f_L(k^2)} k_{\nu} + k_{\nu} = 0\]
+Which means $f_L(k^2) =0$ and so, we have $f_T(k^2) \to O(k^2)$ as $k^2 \to 0$. The exact propagator of photon is
+\[\mathcal{G}(k)_{\mu\nu} = \frac{-i}{k^2(1-\pi(k^2))}P^T_{\mu\nu} + \frac{-i\xi}{k^2} P^L_{\mu\nu}\]
+where $\pi(k^2) \equiv \frac{f_T(k^2)}{k^2}$
+
+\section{LSZ reduction formula}
+\noindent
+Suppose that the probability for the quantum field to create or annihilate an exact one-particle eigenstate of H is $Z_3$, i.e.
+\[\langle \Omega | A(0) | p,\lambda \rangle = \sqrt{Z_3} \epsilon_{\lambda}(p)\]
+In Feynman gauge, because the norm of $|p,0\rangle$ is negative, the expansion of orthogonal complete set will be written as
+\[\frac{d^3q}{(2\pi)^3} \frac{1}{2E_q} \eta^{\lambda\lambda'} | p,\lambda\rangle\langle p, \lambda' |\]
+We have demonstrated that photon will remain massless when interacting with charged fermions. And recall that $\sum_{\lambda}\xi_{\lambda}(p)\xi^{*}_{\lambda}(p) = \eta_{\mu\nu}$. So, we can derive by the similar method in $\phi^4$ theory that
+\[\int d^4x \; e^{-ipx} \langle \Omega | T A_{\mu}(x) A_{\nu}(0) | \Omega \rangle_C = \frac{-iZ_3\eta_{\mu\nu}}{p^2-i\epsilon} + \cdots \]
+The LSZ reduction formula for fermions would take the form as \\ \\
+\begin{newthem}[LSZ reduction formula]
+\begin{eqnarray}
+&\phantom{=}& \langle \bm{p}_1 \cdots \bm{p}_n \; | S | \; \bm{k}_1 \cdots \bm{k}_m \; \rangle  
+\nonumber \\
+&=& \quad \prod_1^n \int d^4 x_i e^{-i p_ix_i } \prod_1^m \int d^4 y_j e^{ik_jy_j} 
+\nonumber \\
+&\times & \left( \frac{i}{\sqrt{Z}_3} \right) ^{m+n}  [p_1^2 \epsilon^{*\mu_1}_{\lambda_1}(p_1)] \cdots [p_n^2 \epsilon^{*\mu_n}_{\lambda_n}(p_n)] [k_1^2 \epsilon^{ \nu_1}_{\lambda'_1}(k_1)] \cdots [k_m^2 \epsilon^{ \nu_m}_{\lambda'_m}(p_m)]
+\nonumber \\
+&\times & \langle \Omega | T \{A_{\mu_1}(x_1) \cdots A_{\mu_n}(x_n)
+A_{\nu_1}(y_1) \cdots A_{\nu_m}(y_m) \} | \Omega \rangle
+\nonumber
+\end{eqnarray}
+\end{newthem}
+The LSZ reduction formula in other gauge would give similar procedure for calculating scattering amplitude: Fourier transform the Green function in position space to momentum space, cut-off the external legs and multiply the polarization vector of asymptotic states. (Note there is still an extra factor $\sqrt{Z_3}^{m+n}$ to multiply, similar to the $\phi^4$ theory).\\
+Finally, we list the Feymann rules of QED in momentum space as follows:
+\begin{enumerate}
+\item For each incoming electron, draw a solid line with an arrow pointed towards the vertex, and label it with the electron's four-momentum, $p_i$.
+\item For each outgoing electron, draw a solid line with an arrow pointed away from the vertex, and label it with the electron's four-momentum, $p'_i$.
+\item For each incoming positron, draw a solid line with an arrow pointed away from the vertex, and label it with minus the positron's four-momentum, $-p_i$.
+\item For each outgoing positron, draw a solid line with an arrow pointed towards the vertex, and label it with minus the positron's four-momentum, $-p'_i$.
+\item For each incoming photon, draw a wavy line with an arrow pointed towards the vertex, and label it with the photon's four-momentum,$k_i$.
+\item For each outgoing photon, draw a wavy line with an arrow pointed away from the vertex, and label it with the photon's four-momentum, $k'_i$.
+\item The only allowed vertex joins two solid lines, one with an arrow pointing towards it and one with an arrow pointing away from it, and one wavy line. Using this vertex, join up all the external lines, including extra internal lines as needed. In this way, draw all possible diagrams that are topologically inequivalent.
+\item Assign each internal line its own four-momentum. Think of the four-momenta as flowing along the arrows, and conserve four-momentum at each vertex. 
+\item The value of a diagram consists of the following factors:
+\begin{itemize}
+\item for each incoming photon, $\epsilon^{\mu}_{\lambda}(k)$; 
+for each outgoing photon, $\epsilon^{*\mu}_{\lambda}(k)$;
+\item for each incoming electron, $u_{r}(\bm{k})$; for each outgoing electron, $\overline{u}_{s}(\bm{p})$;
+\item for each incoming positron, $\overline{v}_{\overline{r}}(\overline{\bm{k}})$; for each outgoing positron, $v_{\overline{s}}(\overline{\bm{p}})$;
+\item for each vertex, $ie_0 \gamma^{\mu}$;
+for each internal photon, $G_F(p)$;
+for each internal fermion, $S_F(p)$.
+\end{itemize}
+\item Spinor indices are contracted by starting at one end of a fermion line: specifically, the end that has the arrow pointing away from the vertex. The factor associated with the external line is either $\bar{u}$ or $\bar{v}$. Go along the complete fermion line, following the arrows backwards, and write down (in order from left to right) the factors associated with the vertices and propagators that you encounter. The last factor is either a $u$ or $v$. Repeat this procedure for the other fermion lines, if any. The vector index on each vertex is contracted with the vector index on either the photon propagator (if the attached photon line is internal) or the
+photon polarization vector (if the attached photon line is external).
+\item The overall sign of a tree diagram is determined by drawing all contributing diagrams in a standard form: all fermion lines horizontal, with their arrows pointing from left to right, and with the left endpoints labeled in the same fixed order (from top to bottom); if the ordering of the labels on the right endpoints of the fermion lines in a given diagram is an even (odd) permutation of an arbitrarily chosen fixed ordering, then the sign of that diagram is positive (negative)
+\item Each closed fermion loop contributes an extra minus sign.
+\item Value of $i\mathcal{M}$ is given by a sum over the values of the contributing diagrams.
+\item $\langle f | S | i \rangle = i\mathcal{M}\delta(\sum p_f -\sum p_i)$
+\end{enumerate}
+\subsubsection{Ward Takahashi identity (3)}

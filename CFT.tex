@@ -109,15 +109,15 @@ Lagrangian is a scalar, or more loosely, action is invariant under Lorentz trans
 Every continuous symmetry of the Lagrangian gives rise to a conserved current $j^{\mu}(x)$ such that the equation of motion imply $\partial_{\mu} j^{\mu} = 0$.
 Suppose that the infinitesimal transformation is
 \[\phi_a \rightarrow \phi_a + \delta \phi_a\]
-\[\mathcal{L} \rightarrow + \mathcal{L} + \delta \mathcal{L} \]
-and if $\delta \mathcal{L} = \partial_{\mu} K^{\mu} = 0$, we can get
-\[j^{\mu} = \frac{\partial \mathcal{L}}{\partial (\partial_{\mu} \phi_a)} \delta \phi_a - K^{\mu}\]
+\[\mathcal{L} \rightarrow  \mathcal{L} + \delta \mathcal{L} \]
+and if $\delta \mathcal{L} = \partial_{\mu} K^{\mu}$, we can get
+\[j^{\mu} = -\frac{\partial \mathcal{L}}{\partial (\partial_{\mu} \phi_a)} \delta \phi_a + K^{\mu}\]
 \end{newthem}
 
 \subsubsection{space-time translation}
 \noindent
 $\bar{x} = x - a$ 
-\[j^{\mu} = -a_{\nu} T^{\mu \nu}\]
+\[j^{\mu} = a_{\nu} T^{\mu \nu}\]
 \[T^{\mu \nu} \equiv -\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}\phi_a)} \partial^{\nu} \phi_a + \eta^{\mu \nu} \mathcal{L}\]
 If we define $P^{\mu} \equiv \int T^{0 \mu} d^3 x$,then we have the law of momentum conservation:
 \[\frac{d P^{\mu}}{dt} = 0\]
@@ -138,7 +138,7 @@ This time, we assume that
 \[\bar{\phi}_a(x) = \mathcal{S}_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
 In the limit of infinitesimal Lorentz transformation, we have
 \[\mathcal{S}_{a}^{\phantom{a}b} = \delta_{a}^{\phantom{a}b}+\frac{1}{2} \delta \omega_{\alpha \beta} (\Sigma^{\alpha \beta})_{a}^{\phantom{a}b} \]
-\[j^{\mu} = -\frac{1}{2} M^{\mu \nu \rho}  \delta \omega_{\nu \rho}\]
+\[j^{\mu} = \frac{1}{2} M^{\mu \nu \rho}  \delta \omega_{\nu \rho}\]
 \[M^{\mu \nu \rho} \equiv x^{\nu}T^{\mu \rho} - x^{\rho} T^{\mu \nu} - \frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi_a)}(\Sigma^{\nu \rho})_{a}^{\phantom{a}b}\phi_b\]
 If we define $M^{\nu \rho} \equiv \int M^{0 \nu \rho} d^3 x$, then we have the law of angular momentum conservation:
 \[\frac{dM^{\nu \rho}}{dt} = 0\]
