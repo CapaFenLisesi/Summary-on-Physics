@@ -381,10 +381,10 @@ If we focus on a term with particular values of $V$, $P_1$ and $P_2$, then the n
 We can introduce Feynman diagrams as in the $\phi^4$ theory. In these diagrams, a wavy line segment stands for a vector propagator $G_F(x-y)$, a line with an arrow pointing from $y$ to $x$ for a fermion propagator $S_F(x-y)$, a filled circle at one end of a wavy line segment for a vector source $i\int d^4x J(x)$, a filled circle at the start of a line with an arrow for a fermion source $i\int d^4x \eta(x)$, a filled circle at the end of a line with an arrow for a anti-fermion source $i\int d^4x \overline{\eta}(x)$, a vertex joining three line segments for $ie_0\gamma^{\mu}\int d^4x$.
 
 \subsection{Ward-Takahahsi identity (1)}
-The Noether current of the symmetry $\Psi \to e^{i\alpha}\Psi$ is $j^{\mu} = e_0\overline{\Psi}\gamma^{\mu}\Psi$. Recall the conservation law in functional formalism
+The Noether current of the symmetry $\Psi \to e^{i\alpha}\Psi$ is $j^{\mu} = \overline{\Psi}\gamma^{\mu}\Psi$. Recall the conservation law in functional formalism
 \[\langle \partial_{\mu} j^{\mu}(x) \phi(x_1)\cdots\phi(x_n) \rangle  = \sum_{i=1}^{n} \langle \phi(x_1) \cdots (i\Delta \phi(x_i)\delta(x-x_i)) \cdots \phi(x_n) \rangle\]
 So, we can write the charge conservation law as
-\[i\partial_{\mu} \langle \Omega | T j^{\mu} \psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle = -ie_0\delta(x-x_1)\langle \Omega | T \psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle + ie_0\delta(x-x_2)\langle \Omega | T \psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle\]
+\[ie_0\partial_{\mu} \langle \Omega | T j^{\mu} \Psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle = -ie_0\delta(x-x_1)\langle \Omega | T \Psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle + ie_0\delta(x-x_2)\langle \Omega | T \Psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle\]
 Notice that $i\langle \Omega | T j^{\mu} \psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle$ can be represented by
 \begin{figure}[!h]
 \centering
@@ -392,9 +392,9 @@ Notice that $i\langle \Omega | T j^{\mu} \psi(x_1) \overline{\Psi}(x_2)| \Omega\
 \caption{Feynman diagram representation of correlation function}
 \end{figure}\\
 From the diagram, we have
-\[\langle A_{\nu}(y) \rangle = \int d^4x G_F(x-y)_{\mu\nu} i\langle j^{\mu}(x) \rangle  = \int \frac{d^4p}{(2\pi)^4} e^{-ipy} G_F(p)_{\mu\nu} \int d^4x e^{ipx} i\langle j^{\mu}(x) \rangle\]
+\[\langle A_{\nu}(y) \rangle = \int d^4x G_F(x-y)_{\mu\nu} ie\langle j^{\mu}(x) \rangle  = \int \frac{d^4p}{(2\pi)^4} e^{-ipy} G_F(p)_{\mu\nu} \int d^4x e^{ipx} ie\langle j^{\mu}(x) \rangle\]
 So,
-\[\int d^4x \langle A_{\nu}(x) \rangle e^{ikx} = G_F(p)_{\mu\nu} \int d^4x e^{ikx} i\langle j^{\mu}(x)\]
+\[\int d^4x \langle A_{\nu}(x) \rangle e^{ikx} = G_F(p)_{\mu\nu} \int d^4x e^{ikx} ie\langle j^{\mu}(x)\rangle\]
 Compute the Fourier transformation of the equation of charge conservation by integrating
 \[\int d^4x e^{ikx} \int d^4x_1 e^{-iqx_1} \int d^4x_2 e^{ipx_2}\]
 We can get
@@ -470,6 +470,7 @@ Which means $f_L(k^2) =0$ and so, we have $f_T(k^2) \to O(k^2)$ as $k^2 \to 0$. 
 where $\pi(k^2) \equiv \frac{f_T(k^2)}{k^2}$
 
 \section{LSZ reduction formula}
+\subsection{LSZ reduction formula and Feynman rules}
 \noindent
 Suppose that the probability for the quantum field to create or annihilate an exact one-particle eigenstate of H is $Z_3$, i.e.
 \[\langle \Omega | A(0) | p,\lambda \rangle = \sqrt{Z_3} \epsilon_{\lambda}(p)\]
@@ -517,6 +518,154 @@ photon polarization vector (if the attached photon line is external).
 \item The overall sign of a tree diagram is determined by drawing all contributing diagrams in a standard form: all fermion lines horizontal, with their arrows pointing from left to right, and with the left endpoints labeled in the same fixed order (from top to bottom); if the ordering of the labels on the right endpoints of the fermion lines in a given diagram is an even (odd) permutation of an arbitrarily chosen fixed ordering, then the sign of that diagram is positive (negative)
 \item Each closed fermion loop contributes an extra minus sign.
 \item Value of $i\mathcal{M}$ is given by a sum over the values of the contributing diagrams.
-\item $\langle f | S | i \rangle = i\mathcal{M}\delta(\sum p_f -\sum p_i)$
+\item $\langle f | S | i \rangle = (Z_2)^{\frac{n_f}{2}} (Z_3)^{\frac{n_p}{2}} i\mathcal{M}\delta(\sum p_f -\sum p_i)$
 \end{enumerate}
-\subsubsection{Ward Takahashi identity (3)}
+\subsection{Ward Takahashi identity (3)}
+Suppose the invariant matrix element for a process is $\mathcal{M}$, if we replace the polarization state vector $\epsilon_{\lambda}^{\mu}$ (or $\epsilon_{\lambda}^{*\mu}$) of one incoming (or outgoing) photon with its momentum vector $k^{\mu}$, we have
+\[k^{\mu} \mathcal{M}_{\mu} = 0\]
+\begin{newproof}
+Without losing generality, we can consider a physical process with a single incoming and outgoing fermion lines respectively. So, the ward identities states that
+\[-ik_{\mu} F^{\mu}(k;p,q) = ie_0\left[F_0(p+k,q)-F_0(p,q-k)\right]\]
+Here, $F$ keeps the external fermion legs but cuts external photon lines. According to the LSZ reduction formula, from each diagram a contribution to an S matrix element by taking the coefficient of the product of poles
+\[\left( \frac{-i}{\slashed{p}+m} \right) \left( \frac{-i}{\slashed{q}+m} \right)\] 
+But the terms on the right hand side contain one of these poles, but neither contains both poles. So they contribute nothing to S-matrix. 
+So, we can have
+\[k^{\mu} \mathcal{M}_{\mu} = 0\] 
+\end{newproof}
+We also note that when calculating invariant matrix element, the main difference between different gauge are photon propagator. In Coulomb gauge, we have
+\[G_F(p)_{\mu\nu} \equiv \begin{cases} \frac{i}{|\bm{p}|^2} \quad \mu,\nu=0\\  \frac{-i}{p^2-i\epsilon} \left(\delta_{ij} - \frac{p_ip_j}{|\bm{p}|^2}\right) \quad \mu = i \neq 0, \nu = j \neq 0 \\ 0 \quad \mbox{otherwise} \end{cases} \]
+In Lorentz gauge, we have
+\[G_F(p)_{\mu\nu}  = \frac{-i\eta_{\mu\nu}}{p^2-i\epsilon} + i(1-\xi)\frac{p_{\mu}p_{\nu}}{(p^2-i\epsilon)^2} \]
+We now argue that the lead to the same $\mathcal{M}$ element.
+For a general process, it can be represented as follows.
+\begin{figure}[!h]
+\centering
+\includegraphics[height=2.86cm ,width=5.31cm]{QFT/WDTA4.png}
+\caption{Feynman diagram representation of a QED process}
+\end{figure}\\
+The value of the diagram is
+\[\mathcal{M}_{1}^{\mu} G_F(k)_{\mu\nu}\mathcal{M}_{2}^{\nu}\]
+and $k_{\mu}\mathcal{M}_{1}^{\mu}=0$, $k_{\nu}\mathcal{M}_{2}^{\nu}=0$.
+So the factor $\xi$ in Lorentz gauge is irrelevant to the value of $\mathcal{M}$. As for Coulomb gauge, denote $\mathcal{M}_{1}^{\mu}$ as $\alpha^{\mu}$, $\mathcal{M}_{2}^{\mu}$ as $\beta^{\mu}$, so 
+\[\alpha^{\mu} G_F(k)_{\mu\nu} \beta^{\nu} = i\left( -\frac{\bm{\alpha} \cdot \bm{\beta}}{k^2} + \frac{(\bm{\alpha}\cdot\bm{k})(\bm{\beta}\cdot\bm{k})}{k^2 \bm{k}^2} + \frac{\alpha^0 \beta^0 }{\bm{k}^2} \right)\]
+Using the fact that $\bm{\alpha}\cdot\bm{k} + \alpha^0 k_0 = 0$, we can verify that
+\[\alpha^{\mu} G_F(k)_{\mu\nu} \beta^{\nu} = \alpha^{\mu} \left( -\frac{i\eta_{\mu\nu}}{k^2} \right)\beta^{\nu}\]
+So, the invariant matrix element is gauge invariant.
+
+\section{Renormalization}
+\subsection{Renormalized quantum electrodynamics}
+The Lagrangian of QED is
+\[\mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \overline{\Psi} (i\slashed{\partial}-m_0) \Psi + e_0j^{\mu} A_{\mu}, \]
+
+Suppose the number of external photons is $N_{\gamma}$, the number of external fermions is $N_{e}$, the number of photon propagator (after amputation) is $P_{\gamma}$, the number of fermion propagator is $P_{e}$, the number of vertex is $V$. So we know the number of loops is
+\[L = P_{\gamma}+P_{e} - V+1\]
+We also know that
+\[V = 2P_{\gamma} + N_{\gamma}  \quad 2V = 2P_{e} + N_{e}\]
+So, the superficial divergence is 
+\[D = 4L - 2P_{\gamma} - P_{e} = 4 -N_{\gamma} - \frac{3}{2}N_{e}\]
+
+Recall that $C$ is a symmetry of QED, so $C|\Omega\rangle = | \Omega \rangle$. But $j^{\mu}$ changes sign under charge conjugation, $C j^{\mu}(x)C^{\dagger} = - j^{\mu}(x)$, so its vacuum expectation value must vanish:
+\[\langle \Omega | T j^{\mu}(x) | \Omega \rangle = \langle \Omega | T C^{\dagger}C j^{\mu}(x)C^{\dagger}C | \Omega \rangle = -\langle \Omega | T j^{\mu}(x) | \Omega \rangle = 0 \]
+So, the amplitude with $N_{\gamma} = 1,N_{e}=0$ will vanish. Similarly, we can verify that the diagram with $N_{\gamma} = 3,N_e=0$ will also vanish.
+
+As for the amplitude with $N_{\gamma} = 4$, the superficial divergence $D = 0$. So the only divergence must be of the form $\log \Lambda$. But the ward identity implies that
+\[K^{\mu}\mathcal{M}_{\mu\nu\sigma\rho} = 0\]
+So, the divergent terms must vanish.
+
+If we neglect the vacuum term with $N_{\gamma}=0,N_{e}=0$, there are only three divergent amplitude terms left. 
+\begin{figure}[!h]
+\centering
+\includegraphics[height=5.44cm ,width=8.24cm]{QFT/QEDRG2.png}
+\caption{Feynman diagram representation of divergent amplitude in QED}
+\end{figure}\\
+We need four counter terms to eliminate all the divergence. The Lagrangian can be written as
+\[\mathcal{L} = \mathcal{L}_1 + \mathcal{L}_{ct}\]
+Here,
+\[\mathcal{L}_1 = -\frac{1}{4}F_r^{\mu\nu}F_{r\mu\nu} +  i\overline{\Psi}_r \gamma^{\mu} \partial_{\mu} \Psi_r - m \overline{\Psi}_r \Psi_r + e \overline{\Psi}_r\gamma^{\mu}\Psi_r A_{r\mu} \]
+\[\mathcal{L}_{ct} = -\frac{1}{4}\delta_3 F_r^{\mu\nu}F_{r\mu\nu} + i\delta_{2}\overline{\Psi}_r \gamma^{\mu} \partial_{\mu} \Psi_r - \delta_m \overline{\Psi}_r \Psi_r + e \delta_1 \overline{\Psi}_r\gamma^{\mu}\Psi_r A_{r\mu} \]
+\[A = \sqrt{Z_3}A_r \quad \Phi  = \sqrt{Z_2}\Phi_r \quad \delta_{3} = Z_3 - 1 \quad \delta_{2} = Z_2 - 1 \quad \]
+\[\delta_m = Z_2 m_0 - m  \quad \delta_1 = Z_1 - 1 =(e_0/e) Z_2 Z_3^{\frac{1}{2}} - 1\]
+The Feynman rules of counter terms are:
+\[-\frac{1}{4}\delta_3 F_r^{\mu\nu}F_{r\mu\nu} \quad  -i(\eta^{\mu\nu}q^2-q^{\mu}q^{\nu})\delta_3\]
+\[i\overline{\Psi}_r (\delta_{2}\slashed{\partial} - \delta_m)\Psi_r \quad -i(\delta_2\slashed{p}+\delta_m)\]
+\[ e \delta_1 \overline{\Psi}_r\gamma^{\mu}\Psi_r A_{r\mu} \quad \quad ie \gamma^{\mu}\delta_1 \quad \quad  \quad \]
+We also denote the renormalized 1PI component of exact propagator of photon as $i(\eta^{\mu\nu}q^2 -q^{\mu}q^{\nu})\Pi_r(q^2)$, the renormalized 1PI component of exact propagator of fermion as $-i\Sigma_r(\slashed{p})$, the renormalized exact amputated photon-fermion-antifermion vertex as $ie\Gamma^{\mu}_r(p,p')$. \\
+So, renormalized exact propagator of photon is
+\[\mathcal{G}_r(q)_{\mu\nu} = \frac{-i}{q^2(1-\Pi_r(q^2))}P^T_{\mu\nu}\]
+renormalized exact propagator of fermion is
+\[\mathcal{S}_r(p) = \frac{-i}{\slashed{p}+m+\Sigma_r(\slashed{p})}\]
+The on-shell renormalization conditions are
+\begin{eqnarray}
+\Sigma_r(\slashed{p}=-m) &=& 0 \nonumber \\
+\frac{d}{d\slashed{p}} \Sigma_r(\slashed{p}) \Big|_{\slashed{p} = -m} &=& 0 \nonumber \\
+\Pi_r(q^2 = 0) &=& 0 \nonumber \\
+ie\Gamma^{\mu}_r(p=p',p^2=-m^2) &=& ie\gamma^{\mu} \nonumber
+\end{eqnarray}
+Recall the ward identity, we have
+\[ie\sqrt{Z_2}\partial_{\mu} \langle \Omega | T j_r^{\mu} \Psi_r(x_1) \overline{\Psi}_r(x_2)| \Omega\rangle = -ie\delta(x-x_1)\langle \Omega | T \Psi_r(x_1) \overline{\Psi}_r(x_2)| \Omega\rangle + ie\delta(x-x_2)\langle \Omega | T \Psi_r(x_1) \overline{\Psi}_r(x_2)| \Omega\rangle\]
+In momentum space, we have
+\[-k_{\mu} Z_2 Z_1^{-1} \mathcal{S}_r(p+k) [ie\Gamma^{\mu}_r(p+k,p)] \mathcal{S}_r(p) \frac{1}{1-\Pi_r(k^2)} = e(\mathcal{S}_r(p+k) - \mathcal{S}_r(p)) \]
+So,
+\[Z_2 Z_1^{-1} k_{\mu} [\Gamma^{\mu}_r(p+k,p)] \frac{1}{1-\Pi_r(k^2)} =\slashed{k}+\Sigma_r(\slashed{k}+\slashed{p})-\Sigma_r(\slashed
+{p})\]
+Since $\Gamma_r$, $\Pi_r$ and $\Sigma_r$ are all finite by renormalization, so $Z_1/Z_2$ must be finite.
+In $\overline{MS}$ renormalization scheme, we immediately get
+\[Z_1 = Z_2\]
+In on-shell renormalization scheme, taking the limit of $k \to 0$, we can also get that
+\[Z_1 = Z_2\]
+So, we know
+\[e = \sqrt{Z_3}e_0\]
+This means that the relation between the bare and renormalized electric charge depends only on the photon field strength renormalization, not on quantities particular to the fermions, leading to a universal electric charge which has the same value for all species.\\
+In the following subsection, we would omit the subscript $r$ unless it is necessary to emphasis the difference of bare field and renormalized fields.
+
+\subsection{One loop structure of QED}
+\subsubsection{Photon propagator}
+\begin{figure}[!h]
+\centering
+\includegraphics[height=2.22cm ,width=9.21cm]{QFT/QEDRG3.png}
+\caption{The one-loop and counterterm corrections to the photon propagator}
+\end{figure}
+\[\Pi(k^2) = -\frac{e^2}{\pi^2} \int_0^1 dx x(1-x) \left[ \frac{1}{\epsilon} - \frac{1}{2}\ln(\frac{D}{\mu^2})\right] - \delta_3 + O(e^4)\]
+where $D = x(1-x)k^2+m^2-i\epsilon$ and $\mu^2 = 4\pi e^{-\gamma} \tilde{\mu}^2$.
+Impose the OS renormalization condition $\Pi(0) = 0$, we have
+\[\delta_3 = -\frac{e^2}{6\pi^2} \left[ \frac{1}{\epsilon} - \ln(\frac{m}{\mu})\right] + O(e^4)\]
+\[\Pi(k^2) = \frac{e^2}{2\pi^2} \int_0^1 dx x(1-x) \ln(\frac{D}{m^2}) + O(e^4)\]
+\subsubsection{Fermion propagator}
+The exact renormalized fermion propagator in OS renormalization can be written in Lehmann–Kallen form as
+\[i\mathcal{S}(\slashed{p}) = \frac{1}{\slashed{p}+m-i\epsilon} + \int_{m_{th}}^{\infty} ds \frac{\rho_{\Psi}(s)}{\slashed{p}+\sqrt{s}-i\epsilon}\]
+We see that the first term has a pole at $\slashed{p}=-m$ with residue one. This residue corresponds to the field normalization that is needed for the validity of the LSZ formula.
+
+There is a problem, however: in quantum electrodynamics, the threshold mass $m_{th}$ is $m$, corresponding to the contribution of a fermion and a zero energy photon. Thus the second term has a branch point at $\slashed{p}=-m$. The pole in the first term is therefore not isolated, and its residue is ill defined.
+
+This is a reflection of an underlying infrared divergence, associated with the massless photon. To deal with it, we must impose an infrared cutoff that moves the branch point away from the pole. The most direct method is to change the denominator of the photon propagator from $k^2$ to $k^2+m_{\gamma}^2$, where $m_{\gamma}$ is a fictitious photon mass. Ultimately, we must deal with this issue by computing cross sections that take into account detector inefficiencies. In quantum electrodynamics, we must specify the
+lowest photon energy $\omega_{min}$ that can be detected. Only after computing cross sections with extra undetectable photons, and then summing over them, is it safe to take the limit $m_{\gamma} \to 0$. 
+\begin{figure}[!h]
+\centering
+\includegraphics[height=1.98cm ,width=7.77cm]{QFT/QEDRG4.png}
+\caption{The one-loop and counterterm corrections to the fermion propagator}
+\end{figure}
+\[\Sigma(\slashed{p}) = \frac{e^2}{8\pi^2} \int_0^1 dx \left( (2-\epsilon)(1-x)\slashed{p} + (4-\epsilon)m \right) \left[ \frac{1}{\epsilon} - \frac{1}{2}\ln(\frac{D}{\mu^2})\right] + \delta_2 \slashed{p} + \delta_m + O(e^4) \]
+where $D = x(1-x)p^2 + xm^2 + (1-x)m_{\gamma}^2$.
+The fitness of $\Sigma(\slashed{p})$ requires that
+\[\delta_2 =  - \frac{e^2}{8\pi^2} \left( \frac{1}{\epsilon} + \mbox{ finite } \right) + O(e^4)\]
+\[\delta_m/m = - \frac{e^2}{2\pi^2} \left( \frac{1}{\epsilon} + \mbox{ finite } \right) + O(e^4) \]
+Impose the OS renormalization condition $\Sigma(-m) = 0$ and $\Sigma'(-m) = 0$, we have
+\[\Sigma(\slashed{p}) = -\frac{e^2}{8\pi^2} \int_0^1 dx \left( (1-x)\slashed{p} + 2m \right) \ln(\frac{D}{D_0})  + \kappa_2( \slashed{p} + m) + O(e^4) \]
+where $D_0 = x^2m^2 +(1-x)m_{\gamma}^2$ and $\kappa_2 = -2 \ln(m/m_{\gamma})+1$. 
+\subsubsection{Vertex}
+\begin{figure}[!h]
+\centering
+\includegraphics[height=2.75cm ,width=4.11cm]{QFT/QEDRG5.png}
+\caption{The one-loop correction to the photon-fermion-fermion vertex}
+\end{figure}
+\[\Gamma^{\mu}(p,p') = (1+\delta_1)\gamma^{\mu} + \frac{e^2}{8\pi^2} \left[\left(\frac{1}{\epsilon} - 1 - \frac{1}{2} \int dF_3 \ln (D/\mu^2)\right)\gamma^{\mu} + \frac{1}{4} \int dF_3 \frac{\tilde{N}^{\mu}}{D}\right] + O(e^4)\]
+where
+\[\int dF_3 = 2 \int_0^1 dx_1 dx_2 dx_3 \delta(x_1+x_2+x_3-1)\]
+\[D = x_1(1-x_1)p^2 + x_2(1-x_2)p'^2 - 2x_1x_2p \cdot p' + (x_1+x_2)m^2 + x_3 m_{\gamma}^2\]
+\[\tilde{N}^{\mu} = \gamma_{\nu}[x_1\slashed{p}-(1-x_2)\slashed{p}'+m]\gamma^{\mu}[-(1-x_1)\slashed{p}+x_2\slashed{p}'+m]\gamma^{\nu}\]
+Fitness of $\Gamma^{\mu}$ requires that
+\[\delta_1 = -  \frac{e^2}{8\pi^2}(\frac{1}{\epsilon}+\mbox{ finite }) + O(e^4)\]
+Impose the OS renormalization condition $\Gamma^{\mu}_r(p=p',p^2=-m^2) = \gamma^{\mu}$, we have
+\[\Gamma^{\mu}(p,p') = \gamma^{\mu} - \frac{e^2}{16\pi^2} \int dF_3 \left[\left(\ln (D/D_0)+2\kappa_1\right)\gamma^{\mu} - \frac{\tilde{N}^{\mu}}{2D}\right] + O(e^4)\]
+where
+\[D_0 = (1-x_3)^2m^2 + x_3 m_{\gamma}^2 \quad \kappa_1 = -2 \ln(m/m_{\gamma}) + \frac{5}{2}\]
