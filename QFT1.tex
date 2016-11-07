@@ -672,28 +672,71 @@ Remember that bare fields and parameters must be independent of $\mu$.Define
 We can calculate $G_1 = c_1 - 2a_1 = \frac{3\lambda}{16\pi^2} + \mathcal{O}(\lambda^2)$.
 As $\ln \lambda_0 = G + \ln \lambda + \epsilon \ln \tilde{\mu} $. From the independence of $\lambda_0$, we can derive
 \[\left ( 1 + \frac{\lambda G'_1}{\epsilon} + \cdots \right) \frac{d\lambda}{d\ln \mu} + \epsilon \lambda = 0\]
-In a renormalizable theory, we should have
+$\frac{d\lambda}{d\ln\mu}$ is the rate at which $\lambda$ must change to compensate for a small change in $\ln \mu$. If compensation is possible at all, this rate should be finite in the $\epsilon \to 0$ limit. In a renormalizable theory, we should have
 \[\frac{d\lambda}{d\ln\mu} = -\epsilon\lambda + \beta(\lambda)\]
 So
 \[\beta(\lambda) = \lambda^2 G'_1(\lambda)\]
-In $\phi^4$ theory, we have $\beta(\lambda) = \frac{3\lambda^2}{16\pi^2} + \mathcal{O}(\lambda^3)$.Define
+In $\phi^4$ theory, we have
+\[\beta(\lambda) = \frac{3\lambda^2}{16\pi^2} + \mathcal{O}(\lambda^3)\]
+Define
 \[M(\lambda,\epsilon) \equiv \ln(Z_{m}^{1/2} Z_{\phi}^{-1/2}) = \sum_{n=1}^{\infty} \frac{M_n(\lambda)}{\epsilon^n}\]
 We can calculate $M_1 = \frac{1}{2}b_1 - \frac{1}{2}a_1 = \frac{\lambda}{32\pi^2} + \mathcal{O}(\lambda^2)$.
 As $\ln m_0 = M + \ln m $, define the anomalous dimension of the mass
 \[\gamma_m(\lambda) \equiv \frac{1}{m} \frac{dm}{d \ln \mu}\]
 From the independence of $m_0$, we can derive
 \[\gamma_m(\lambda) = \lambda M'_1\]
-In $\phi^4$ theory, we have $\gamma_m(\lambda) = \frac{\lambda}{32\pi^2} + \mathcal{O}(\lambda^2)$. We can expand $\ln Z_{\phi}$ as
-\[\ln Z_{\phi} = \frac{a_1}{\epsilon} + \frac{a_2-\frac{1}{2}a_1^2}{\epsilon^2}\]
+In $\phi^4$ theory, we have
+\[\gamma_m(\lambda) = \frac{\lambda}{32\pi^2} + \mathcal{O}(\lambda^2)\]
+We can expand $\ln Z_{\phi}$ as
+\[\ln Z_{\phi} = \frac{a_1}{\epsilon} + \cdots\]
 Define the anomalous dimension of the field
-\[\gamma_{\phi}(\lambda) = \frac{1}{2} \frac{d\ln Z_{\phi}}{d \ln \mu}\]
+\[\gamma_{\phi}(\lambda) \equiv \frac{1}{2} \frac{d\ln Z_{\phi}}{d \ln \mu}\]
 We can derive
 \[\gamma_{\phi}(\lambda) = -\frac{1}{2}\lambda a'_1\]
-In $\phi^4$ theory, we have $\gamma_m(\lambda) = \mathcal{O}(\lambda^2)$.
+In $\phi^4$ theory, we have
+\[\gamma_{\phi}(\lambda) = \mathcal{O}(\lambda^2)\]
+
+\subsubsection{Running of coupling constants}
+In the limit of $\epsilon \to 0$, the coupling constant satisfies the differential equation
+\[\frac{\partial \lambda}{\partial \ln \mu} = \beta(\lambda)\]
+Three behaviours are possible in the region of small $\lambda$:
+\begin{enumerate}
+\item $\beta(\lambda) > 0$
+\item $\beta(\lambda) = 0$
+\item $\beta(\lambda) < 0$
+\end{enumerate}
+
+In theories of the first class, the running coupling constant goes to zero in the infra-red, leading to definite predictions about the small-momentum behaviour of the theory. However, the running coupling constant becomes large in the region of high momenta. Thus the short-distance behaviour of the theory cannot be computed using Feynman diagram perturbation theory.A Feynman diagram analysis is useful in such theories if one is mainly interested in large-distance or macroscopic behaviour.
+
+In theories of the second class, the coupling constant does not flow. In these theories, the running coupling constant is independent of the momentum scale, and thus equal to the bare coupling. This means that there can be no ultraviolet divergences in the relation of coupling constants. The only possible ultraviolet divergences in such theories are those associated with field resealing, which automatically cancel in the computation of S-matrix elements. Such theories are called finite quantum field theories. Before the emergence of our modern understanding of renormalization, these theories would have been embraced as the solution to the problem of ultraviolet infinities. But in fact the known finite field theories in four dimensions are very special constructions the so-called gauge theories with extended supersymmetry with no known physical application. 
+
+In theories of the third class, the running coupling constant becomes large in the large-distance regime and becomes small at large momenta or short distances. Such theories are called asymptotically free. In theories of this class, the short-distance behaviour is completely solvable by Feynman diagram methods. Though ultraviolet divergences appear in every order of perturbation theory, the renormalization group tells us that the sum of these divergences is completely harmless.
+
+In the region of strong coupling, the approximation we have made, ignoring the higher-order terms in the $\beta$ function is no longer valid. It is a logical possibility that the leading order term is positive while the higher terms of the $\beta$ function are negative, so that the $\beta$ function has a zero at a non-zero value $\lambda_*$. When $\lambda_*$ approaches this value, the renormalization group flow slows to a halt; thus $\lambda = \lambda_*$ would be a nontrivial fixed point of the renormalization group. 
+
+If the $\beta$ function behaves in the vicinity of the fixed point as 
+\[\beta \approx -B(\lambda - \lambda_*)\] 
+where $B$ is a positive constant. For $\lambda$ near $\lambda_*$ 
+\[\frac{d}{d\ln \mu} \lambda \approx -B(\lambda-\lambda_*)\]
+The solution of this equation is
+\[\lambda(\mu) = \lambda_* + C(\frac{\mu_0}{\mu})^B\]
+Thus, $\lambda$ indeed tends to $\lambda_*$ as $\mu \to \infty$, and the rate of approach is governed by the slope of the $\beta$ function at the fixed point. The fixed point here is called ultraviolet-stable fixed point. 
+
+A similar behavior is possible in an asymptotically free theory. If the $\beta$ function behaves in the vicinity of the fixed point as 
+\[\beta \approx B(\lambda - \lambda_*)\] 
+where $B$ is a positive constant.
+the running coupling constant will tend to a fixed point as $\mu \to 0$.  The fixed point is called infrared-stable fixed points. 
+
 \subsubsection{Callen-Symanzik equation}
 \[G^{(n)}(x_1,\cdots,x_n) \equiv \langle \Omega | T \phi(x_1) \cdots \phi(x_n) | \Omega \rangle_C \]
 As $G^{(n)}_0 = Z_{\phi}^{n/2} G^{(n)}$, from the independence of bare Green's function, we have
 \[\left( \frac{\partial}{\partial \ln \mu} + \beta(\lambda)  \frac{\partial}{\partial \lambda} + \gamma_m(\lambda) m  \frac{\partial}{\partial m} + n \gamma_{\phi}(\lambda)\right)G^{n}(x_1,\cdots,x_n;\lambda,m,\mu) = 0\]
+The Callan–Symanzik equation is most interesting in the massless limit, and for a theory with a zero of the beta function at a nonzero value of $\lambda$. So, let us suppose that $\beta(\lambda_*)$ for some $\lambda_* \neq 0$. Then, for $\lambda = \lambda_*$ and $m=0$, the Callan–Symanzik equation for two point Green function in momentum space becomes
+\[\left( \frac{\partial}{\partial \ln \mu} + 2 \gamma_{\phi}(\lambda_*)\right)\mathcal{D}(k^2) = 0\]
+The solution is
+\[\mathcal{D} = \frac{C(\lambda_*)}{k^2}\left( \frac{\mu^2}{k^2} \right )^{-\gamma_{\phi}(\lambda_*)}\]
+where $C(\lambda_*)$ is an integration constant. (We used the fact that $\mathcal{D}(k^2)$ has mass dimension $-2$ to get the $k^2$ dependence in addition to the $\mu$ dependence.) Thus the naive scaling law $\mathcal{D}(k^2) \sim k^{-2}$ is changed to $\mathcal{D}(k^2) \sim k^{-2[1-\gamma_{\phi}(\lambda_*)]}$. This has applications in the theory of critical phenomena.
+
 
 \section{Spontaneous symmetry breaking}
 \subsection{Effective action}
@@ -817,5 +860,3 @@ has a zero eigenvalue. This completes the proof of Goldstone's theorem.
 The Lagrangian is invariant under the symmetry
 \[\phi^i \to R^{ij} \phi^j\]
 for any $N \times N$ orthogonal group in $N$ dimensions, also called the N-dimensional orthogonal group or simply $O(N)$.
-
-

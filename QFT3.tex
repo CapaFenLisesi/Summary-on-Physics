@@ -669,3 +669,82 @@ Impose the OS renormalization condition $\Gamma^{\mu}_r(p=p',p^2=-m^2) = \gamma^
 \[\Gamma^{\mu}(p,p') = \gamma^{\mu} - \frac{e^2}{16\pi^2} \int dF_3 \left[\left(\ln (D/D_0)+2\kappa_1\right)\gamma^{\mu} - \frac{\tilde{N}^{\mu}}{2D}\right] + O(e^4)\]
 where
 \[D_0 = (1-x_3)^2m^2 + x_3 m_{\gamma}^2 \quad \kappa_1 = -2 \ln(m/m_{\gamma}) + \frac{5}{2}\]
+
+\subsubsection{Vertex function}
+Consider the process of electron-electron scattering
+\begin{figure}[!h]
+\centering
+\includegraphics[height=2.97cm ,width=10.65cm]{QFT/EES.png}
+\caption{Diagrams for the exact electron-electron scattering amplitude. The vertices and photon propagator are exact; external lines stand for the usual $u$ and $\bar{u}$ spinor factors, times the unit residue of the pole at $p^2=-m^2$.}
+\end{figure}
+In order to compute the contribution of these diagrams, we must evaluate $\overline{u}_{s'}(\bm{p}')\Gamma^{\mu}(p',p)u_s(\bm{p})$ with $p^2 = p'^2 = -m^2$, but with $q^2 = (p-p')^2$ arbitrary. Finally,we have 
+\[\overline{u}_{s'}(\bm{p}')\Gamma^{\mu}(p',p)u_s(\bm{p}) = \overline{u}'\left[F_1(q^2)\gamma^{\mu} - \frac{i}{m}F_2(q^2)S^{\mu\nu}q_{\nu}\right]u_s(\bm{p})\]
+where we have defined the form factors
+\begin{eqnarray}
+F_1(q^2) &=& 1 - \frac{e^2}{16\pi^2} \int dF_3  \ln \left ( 1 + \frac{x_1x_2q^2/m^2}{(1-x_3)^2}\right ) \nonumber \\
+&-& \frac{e^2}{16\pi^2} \int dF_3 \frac{1-4x_3+x_3^2}{(1-x_3)^2+x_3m_{\gamma}^2/m^2} + \frac{(x_3+x_1x_2)q^2/m^2-(1-4x_3+x_3^2)}{x_1x_2q^2/m^2+(1-x_3)^2+x_3m_{\gamma}^2/m^2} + O(e^4) \nonumber \\
+F_2(q^2) &=& \frac{e^2}{8\pi^2} \int dF_3 \frac{x_3-x_3^2}{x_1x_2q^2/m^2 + (1-x_3)^2} + O(e^4) \nonumber
+\end{eqnarray}
+
+The loop corrections of QED are related to anomalous magnetic moment of electrons and lamb shift of energy level in hydrogen atom. We will not discuss these interesting phenomenon in this notes. Discussion on anomalous magnetic moment can be found in chapter 6.2 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}. You can also find some comments on lamb shift due to vacuum polarization in chapter 7.5 . And a detailed treatment of infrared divergence is available in chapter 6.1, 6.4 and 6.5.
+
+\subsection{Renormalization group}
+\subsubsection{$\overline{MS}$ renormalization scheme}
+\[\Pi(k^2) = \frac{e^2}{2\pi^2} \int_0^1 dx \; x(1-x) \ln(\frac{x(1-x)k^2+m^2}{\mu^2}) + O(e^4)\]
+\[Z_3 = 1 + \delta_3 = 1-\frac{e^2}{6\pi^2} \frac{1}{\epsilon} + O(e^4)\]
+\[\Sigma(\slashed{p}) = -\frac{e^2}{8\pi^2} \int_0^1 dx  \ln(\frac{x(1-x)p^2 + xm^2 + (1-x)m_{\gamma}^2}{\mu^2}) \left((1-x)\slashed{p}+2m\right) + \frac{1}{2}\slashed{p} + m + O(e^4) \]
+\[Z_2 = 1 + \delta_2 =  1 - \frac{e^2}{8\pi^2}  \frac{1}{\epsilon} + O(e^4)\]
+\[Z_m = 1 + \delta_m/m = 1 - \frac{e^2}{2\pi^2} \frac{1}{\epsilon} + O(e^4) \]
+\[\Gamma^{\mu}(p,p') = \gamma^{\mu} + \frac{e^2}{8\pi^2} \left[-\left(  1 + \frac{1}{2} \int dF_3 \ln (D/\mu^2)\right)\gamma^{\mu} + \frac{1}{4} \int dF_3 \frac{\tilde{N}^{\mu}}{D}\right] + O(e^4)\]
+\[D = x_1(1-x_1)p^2 + x_2(1-x_2)p'^2 - 2x_1x_2p \cdot p' + (x_1+x_2)m^2 + x_3 m_{\gamma}^2\]
+\[Z_1 =1 + \delta_1 = 1 -  \frac{e^2}{8\pi^2}\frac{1}{\epsilon} + O(e^4)\]
+\subsubsection{Renormalization group}
+\noindent
+The Lagrangian of QED is
+\[\mathcal{L} = -\frac{1}{4}F_{0\mu\nu}F_0^{\mu\nu} + \overline{\Psi}_0 (i\slashed{\partial}-m_0) \Psi_0 + e_0\overline{\Psi}_0\gamma^{\mu}\Psi_0 A_{0\mu}, \]
+It can be written as
+\[\mathcal{L} = -\frac{1}{4} Z_3 F_{\mu\nu}F^{\mu\nu} + \overline{\Psi} (iZ_2 \slashed{\partial}-Z_m m) \Psi + Z_1 e\overline{\Psi}\gamma^{\mu}\Psi A_{\mu}, \]
+So,
+\[\Psi_0 = Z_{2}^{1/2}\phi \quad m_0 = Z_{2}^{-1} Z_{m}m \quad A_0 = Z_3^{1/2}A \quad e_0 = Z_{2}^{-1}Z_1 Z_{3}^{-1/2} e \tilde{\mu}^{\epsilon/2} = Z_{3}^{-1/2} e \tilde{\mu}^{\epsilon/2}\]
+After using dimensional regularization, the infinities coming from loop integrals take the form of inverse powers of $\epsilon$. In the  $\mathrm{\overline{MS}}$ renormalization scheme, we choose the Zs to cancel off these powers of $1/\epsilon$, and nothing more. Therefore the Zs can be written as
+\begin{eqnarray}
+Z_{1} = 1 + \sum_{n=1}^{\infty} \frac{a_n(\lambda)}{\epsilon^n} \quad Z_{2} = 1 + \sum_{n=1}^{\infty} \frac{b_n(\lambda)}{\epsilon^n} \nonumber \\
+Z_{3} = 1 + \sum_{n=1}^{\infty} \frac{c_n(\lambda)}{\epsilon^n} \quad Z_{m} = 1 + \sum_{n=1}^{\infty} \frac{d_n(\lambda)}{\epsilon^n} \nonumber 
+\end{eqnarray}
+In QED, $a_1 = -\frac{e^2}{8\pi^2} + O(e^4)$, $b_1 = -\frac{e^2}{8\pi^2} + O(e^4)$,$c_1 = -\frac{e^2}{6\pi^2} + O(e^4)$,$d_1 = -\frac{e^2}{2\pi^2} + O(e^4)$\\
+Remember that bare fields and parameters must be independent of $\mu$.Define
+\[E(e,\epsilon) \equiv \ln(Z_3^{-1/2}) = \sum_{n=1}^{\infty} \frac{E_n(e)}{\epsilon^n}\]
+We can calculate $E_1 = -\frac{1}{2}c_1 = \frac{e^2}{12\pi^2} + O(e^4)$.
+As $\ln e_0 = E + \ln e + \frac{\epsilon}{2} \ln \tilde{\mu} $. From the independence of $e_0$, we can derive
+\[\left ( 1 + \frac{e E'_1}{\epsilon} + \cdots \right) \frac{d e}{d\ln \mu} + \frac{\epsilon}{2} e = 0\]
+In a renormalizable theory, we should have
+\[\frac{d e}{d\ln\mu} = -\frac{\epsilon}{2} e + \beta(e)\]
+So
+\[\beta(e) = \frac{e^2}{2} E'_1(\lambda)\]
+In QED, we have
+\[\beta(e) = \frac{e^3}{12\pi^2} + O(e^5)\]
+Define
+\[M(e,\epsilon) \equiv \ln(Z_{m} Z_{2}^{-1}) = \sum_{n=1}^{\infty} \frac{M_n(\lambda)}{\epsilon^n}\]
+We can calculate $M_1 = d_1 - b_1 = -\frac{3e^2}{8\pi^2} + O(e^4)$.
+As $\ln m_0 = M + \ln m $, define the anomalous dimension of the mass
+\[\gamma_m(e) \equiv \frac{1}{m} \frac{dm}{d \ln \mu}\]
+From the independence of $m_0$, we can derive
+\[\gamma_m(e) = \frac{e}{2} M'_1\]
+In QED theory, we have
+\[\gamma_m(e) = -\frac{3e^2}{8\pi^2} + O(e^4)\]
+Expand $\ln Z_{2}$ as
+\[\ln Z_{2} = \frac{b_1}{\epsilon} + \cdots\]
+Define the anomalous dimension of the fermion field
+\[\gamma_{2}(e) \equiv \frac{1}{2} \frac{d\ln Z_{2}}{d \ln \mu}\]
+We can derive
+\[\gamma_{2}(e) = -\frac{1}{4}e b'_1\]
+In QED theory, we have
+\[\gamma_2(e) = \frac{e^2}{16\pi^2} + O(e^4)\]
+Expand $\ln Z_{3}$ as
+\[\ln Z_{3} = \frac{c_1}{\epsilon} + \cdots\]
+Define the anomalous dimension of the EM field
+\[\gamma_{3}(e) \equiv \frac{1}{2} \frac{d\ln Z_{3}}{d \ln \mu}\]
+We can derive
+\[\gamma_{3}(e) = -\frac{1}{4}e c'_1\]
+In QED theory, we have
+\[\gamma_3(e) = \frac{e^2}{12\pi^2} + O(e^4)\]
