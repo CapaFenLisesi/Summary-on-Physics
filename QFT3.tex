@@ -283,7 +283,7 @@ After contraction, it can be written as
 It can be represented by the following Feynman diagram.
 \begin{figure}[!h]
 \centering
-\includegraphics[height=2cm ,width=5.4cm]{QFT/QEDFD1.png}
+\includegraphics[height=2cm ,width=5.4cm]{QFT3/FD1.png}
 \caption{Feynman diagram representation of perturbation expansion}
 \end{figure}\\
 Secondly, we evaluate this term,
@@ -298,7 +298,7 @@ After contraction, it can be written as
 It can be represented by the following Feynman diagram.
 \begin{figure}[!h]
 \centering
-\includegraphics[height=4.5cm ,width=6.85cm]{QFT/QEDFD2.png}
+\includegraphics[height=4.5cm ,width=6.85cm]{QFT3/FD2.png}
 \caption{Feynman diagram representation of perturbation expansion}
 \end{figure}\\
 Before we write down Feymann rules, we notice that the offending non-local interaction comes from the $A_0$ component of the gauge field, we could try to redefine the propagator to include a $G_F(x-y)_{00}$ piece which will capture this term. We can verify that
@@ -388,7 +388,7 @@ So, we can write the charge conservation law as
 Notice that $i\langle \Omega | T j^{\mu} \psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle$ can be represented by
 \begin{figure}[!h]
 \centering
-\includegraphics[height=2cm ,width=4.46cm]{QFT/WDTA1.png}
+\includegraphics[height=2cm ,width=4.46cm]{QFT3/WI1.png}
 \caption{Feynman diagram representation of correlation function}
 \end{figure}\\
 From the diagram, we have
@@ -400,14 +400,14 @@ Compute the Fourier transformation of the equation of charge conservation by int
 We can get
 \begin{figure}[!h]
 \centering
-\includegraphics[height=1.67cm ,width=11.36cm]{QFT/WDTA2.png}
+\includegraphics[height=1.67cm ,width=11.36cm]{QFT3/WI2.png}
 \caption{Feynman diagram representation of Ward identity}
 \end{figure}\\
 Note that in the diagram above, the external leg of photon will be cut-off, but external leg of fermion will remain.
 The above equation can be generated to the diagram with $n$ external fermions. 
 %\begin{figure}[!h]
 %\centering
-%\includegraphics[height=1.87cm ,width=11.63cm]{QFT/WDTA3.png}
+%\includegraphics[height=1.87cm ,width=11.63cm]{QFT3/WI3.png}
 %\caption{Feynman diagram representation of Ward identity}
 %\end{figure}\
 Another proof of Ward-Takahashi identity by calculating the Feynman diagram directly can be found in chapter 7.4 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}
@@ -420,7 +420,7 @@ The exact propagator of photon is
 Its Fourier transformation can be represented by the following diagram. 
 \begin{figure}[!h]
 \centering
-\includegraphics[height=1.08cm ,width=13.65cm]{QFT/QEDRG1.png}
+\includegraphics[height=1.08cm ,width=13.65cm]{QFT3/RG1.png}
 \caption{Feynman diagram representation of exact propagator of photon}
 \end{figure}\\
 Let us define $i\Pi^{\mu\nu}$ to be the sum of all 1-particle-irreducible insertions into the photon propagator. So, we have
@@ -540,7 +540,7 @@ We now argue that the lead to the same $\mathcal{M}$ element.
 For a general process, it can be represented as follows.
 \begin{figure}[!h]
 \centering
-\includegraphics[height=2.86cm ,width=5.31cm]{QFT/WDTA4.png}
+\includegraphics[height=2.86cm ,width=5.31cm]{QFT3/WI4.png}
 \caption{Feynman diagram representation of a QED process}
 \end{figure}\\
 The value of the diagram is
@@ -557,12 +557,8 @@ So, the invariant matrix element is gauge invariant.
 The Lagrangian of QED is
 \[\mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \overline{\Psi} (i\slashed{\partial}-m_0) \Psi + e_0j^{\mu} A_{\mu}, \]
 
-Suppose the number of external photons is $N_{\gamma}$, the number of external fermions is $N_{e}$, the number of photon propagator (after amputation) is $P_{\gamma}$, the number of fermion propagator is $P_{e}$, the number of vertex is $V$. So we know the number of loops is
-\[L = P_{\gamma}+P_{e} - V+1\]
-We also know that
-\[V = 2P_{\gamma} + N_{\gamma}  \quad 2V = 2P_{e} + N_{e}\]
-So, the superficial divergence is 
-\[D = 4L - 2P_{\gamma} - P_{e} = 4 -N_{\gamma} - \frac{3}{2}N_{e}\]
+Suppose the number of external photons is $N_{\gamma}$, the number of external fermions is $N_{e}$, the number of vertex is $V$. The superficial divergence is
+\[D = 4 -N_{\gamma} - \frac{3}{2}N_{e}\]
 
 Recall that $C$ is a symmetry of QED, so $C|\Omega\rangle = | \Omega \rangle$. But $j^{\mu}$ changes sign under charge conjugation, $C j^{\mu}(x)C^{\dagger} = - j^{\mu}(x)$, so its vacuum expectation value must vanish:
 \[\langle \Omega | T j^{\mu}(x) | \Omega \rangle = \langle \Omega | T C^{\dagger}C j^{\mu}(x)C^{\dagger}C | \Omega \rangle = -\langle \Omega | T j^{\mu}(x) | \Omega \rangle = 0 \]
@@ -575,7 +571,7 @@ So, the divergent terms must vanish.
 If we neglect the vacuum term with $N_{\gamma}=0,N_{e}=0$, there are only three divergent amplitude terms left. 
 \begin{figure}[!h]
 \centering
-\includegraphics[height=5.44cm ,width=8.24cm]{QFT/QEDRG2.png}
+\includegraphics[height=5.44cm ,width=8.24cm]{QFT3/RG2.png}
 \caption{Feynman diagram representation of divergent amplitude in QED}
 \end{figure}\\
 We need four counter terms to eliminate all the divergence. The Lagrangian can be written as
@@ -622,7 +618,7 @@ In the following subsection, we would omit the subscript $r$ unless it is necess
 \subsubsection{Photon propagator}
 \begin{figure}[!h]
 \centering
-\includegraphics[height=2.22cm ,width=9.21cm]{QFT/QEDRG3.png}
+\includegraphics[height=2.22cm ,width=9.21cm]{QFT3/RG3.png}
 \caption{The one-loop and counterterm corrections to the photon propagator}
 \end{figure}
 \[\Pi(k^2) = -\frac{e^2}{\pi^2} \int_0^1 dx x(1-x) \left[ \frac{1}{\epsilon} - \frac{1}{2}\ln(\frac{D}{\mu^2})\right] - \delta_3 + O(e^4)\]
@@ -641,7 +637,7 @@ This is a reflection of an underlying infrared divergence, associated with the m
 lowest photon energy $\omega_{min}$ that can be detected. Only after computing cross sections with extra undetectable photons, and then summing over them, is it safe to take the limit $m_{\gamma} \to 0$. 
 \begin{figure}[!h]
 \centering
-\includegraphics[height=1.98cm ,width=7.77cm]{QFT/QEDRG4.png}
+\includegraphics[height=1.98cm ,width=7.77cm]{QFT3/RG4.png}
 \caption{The one-loop and counterterm corrections to the fermion propagator}
 \end{figure}
 \[\Sigma(\slashed{p}) = \frac{e^2}{8\pi^2} \int_0^1 dx \left( (2-\epsilon)(1-x)\slashed{p} + (4-\epsilon)m \right) \left[ \frac{1}{\epsilon} - \frac{1}{2}\ln(\frac{D}{\mu^2})\right] + \delta_2 \slashed{p} + \delta_m + O(e^4) \]
@@ -655,7 +651,7 @@ where $D_0 = x^2m^2 +(1-x)m_{\gamma}^2$ and $\kappa_2 = -2 \ln(m/m_{\gamma})+1$.
 \subsubsection{Vertex}
 \begin{figure}[!h]
 \centering
-\includegraphics[height=2.75cm ,width=4.11cm]{QFT/QEDRG5.png}
+\includegraphics[height=2.75cm ,width=4.11cm]{QFT3/RG5.png}
 \caption{The one-loop correction to the photon-fermion-fermion vertex}
 \end{figure}
 \[\Gamma^{\mu}(p,p') = (1+\delta_1)\gamma^{\mu} + \frac{e^2}{8\pi^2} \left[\left(\frac{1}{\epsilon} - 1 - \frac{1}{2} \int dF_3 \ln (D/\mu^2)\right)\gamma^{\mu} + \frac{1}{4} \int dF_3 \frac{\tilde{N}^{\mu}}{D}\right] + O(e^4)\]
@@ -674,7 +670,7 @@ where
 Consider the process of electron-electron scattering
 \begin{figure}[!h]
 \centering
-\includegraphics[height=2.97cm ,width=10.65cm]{QFT/EES.png}
+\includegraphics[height=2.97cm ,width=10.65cm]{QFT3/EES.png}
 \caption{Diagrams for the exact electron-electron scattering amplitude. The vertices and photon propagator are exact; external lines stand for the usual $u$ and $\bar{u}$ spinor factors, times the unit residue of the pole at $p^2=-m^2$.}
 \end{figure}
 In order to compute the contribution of these diagrams, we must evaluate $\overline{u}_{s'}(\bm{p}')\Gamma^{\mu}(p',p)u_s(\bm{p})$ with $p^2 = p'^2 = -m^2$, but with $q^2 = (p-p')^2$ arbitrary. Finally,we have 

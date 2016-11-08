@@ -399,7 +399,7 @@ Generally, we have
 The transformation properties of the various fermion bilinears under $C$,$P$ and $T$ are summarized in the table below. Here we use the shorthand $(-1)^{\mu} \equiv = 1$ for $\mu =0$ and $(-1)^{\mu} \equiv = -1$ for $\mu=1,2,3$.
 \begin{figure}[!h]
 \centering
-\includegraphics[height=3cm ,width=12cm]{QFT/CPT.png}
+\includegraphics[height=3cm ,width=12cm]{QFT2/CPT.png}
 \caption{Transformation of fermion bilinears under CPT}
 \end{figure}\\
 \begin{newthem}[CPT theorem]
@@ -442,7 +442,7 @@ to the first order of $g_0$
 It can be represented by the so called Feynman diagram.
 \begin{figure}[!h]
 \centering
-\includegraphics[height=2.6cm ,width=6.8cm]{QFT/FFD1.png}
+\includegraphics[height=2.6cm ,width=6.8cm]{QFT2/FD1.png}
 \caption{Feynman diagram representation of perturbation expansion}
 \end{figure}\\
 The Feynman rules for Yukama theory are:
@@ -601,40 +601,3 @@ Finally, we list the Feymann rules of Yukawa theory in momentum space as follows
 \item Value of $i\mathcal{M}$ is given by a sum over the values of the contributing diagrams.
 \item $\langle f | S | i \rangle = (Z_1)^{\frac{n_s}{2}} (Z_2)^{\frac{n_f}{2}}i\mathcal{M}\delta(\sum p_f -\sum p_i)$
 \end{enumerate}
-
-\section{Renormalization}
-\noindent
-The full Lagrangian of Yukawa theory is
-\[\mathcal{L} = -\frac{1}{2}\partial_{\mu} \phi \partial^{\mu} \phi -\frac{1}{2}M_0^2 \phi^2 + i\overline{\Psi} \gamma^{\mu} \partial_{\mu} \Psi - m_0\overline{\Psi}\Psi - a_0\phi -\frac{1}{3!}b_0\phi^3 -\frac{1}{4!}c_0 \phi^4 -g_0 \overline{\Psi}\Psi\phi\]
-Suppose the number of external lines of scalar is $N_1$, the number of external lines of fermions is $N_2$, the number of scalar propagator (after amputation) is $P_1$, the number of fermion propagator is $P_2$, the number of vertex is $V_a$,$V_b$,$V_c$ and $V_g$. So we know the number of loops is
-\[L = P_1+P_2-V_a -V_b-V_c-V_g+1\]
-We also know that
-\[V_a + 3V_b + 4V_c + V_g = 2P_1 + N_1  \quad 2V_g = 2P_2 + N_2\]
-So, the superficial divergence is 
-\[D = 4L - 2P_1 - P_2 = 4 -N_1 - \frac{3}{2}N_2 - 3V_a - V_b\]
-So, Yukawa theory is a renormalizable theory. Only a finite number of amplitudes superficially diverge; however, divergences occur at all orders in perturbation theory. The only divergent amplitudes (except vacuum energy) are therefore
-\begin{figure}[!h]
-\centering
-\includegraphics[height=4cm ,width=9.5cm]{QFT/DRG1.png}
-\caption{Divergence of Yukawa theory}
-\end{figure}\\
-There are six kinds of divergent diagrams, including two propagators. So, we can use eight counter terms to absorb all the infinities order by order. The Lagrangian can be written as
-\[\mathcal{L} = \mathcal{L}_1 + \mathcal{L}_{ct}\]
-Here,
-\[\mathcal{L}_1 = -\frac{1}{2}\partial_{\mu} \phi_r \partial^{\mu} \phi_r -\frac{1}{2}M^2 \phi_r^2 + i\overline{\Psi}_r \gamma^{\mu} \partial_{\mu} \Psi_r - m \overline{\Psi}_r \Psi_r - a\phi_r- \frac{1}{3!}b\phi_r^3 -\frac{1}{4!}c \phi_r^4 -g \overline{\Psi}_r\Psi_r\phi_r \]
-\[\mathcal{L}_{ct} = -\frac{1}{2}\delta_{Z_1}\partial_{\mu} \phi_r \partial^{\mu} \phi_r -\frac{1}{2}\delta_M \phi_r^2 + i\delta_{Z_2}\overline{\Psi}_r \gamma^{\mu} \partial_{\mu} \Psi_r - \delta_m \overline{\Psi}_r \Psi_r - \delta_a\phi_r- \frac{1}{3!}\delta_b\phi_r^3 -\frac{1}{4!}\delta_c \phi_r^4 -\delta_g \overline{\Psi}_r\Psi_r\phi_r \]
-\[\phi = \sqrt{Z_1}\phi_r \quad \Phi  = \sqrt{Z_2}\Phi_r \quad \delta_{Z_1} = Z_1 - 1 \quad \delta_{Z_2} = Z_2 - 1 \quad \delta_M = Z_1 M_0^2 - M^2\]
-\[\delta_m = Z_2 m_0 - m \quad \delta_a = \sqrt{Z_1}a_0 - a \quad \delta_b = \sqrt[3]{Z_1} b_0 - b \quad \delta_c= Z_1^2 c_0 - c \quad \delta_g = \sqrt{Z_1}Z_2 g_0 - g\]
-
-The Feymann rules for most counter terms will be similar to those in $\phi^4$ theory. We only need to notice that the vertex value of the term  $i\delta_{Z_2}\overline{\Psi}_r \gamma^{\mu} \partial_{\mu} \Psi_r - \delta_m \overline{\Psi}_r \Psi_r $ is
-\[-i(\delta_{Z_2} \slashed{p} + \delta m)\]
-
-Then we can use either on-shell renormolization scheme or $\overline{MS}$ renormalization scheme to get renormalization conditions. 
-We would mention the diagram representation of exact fermion propagator. If we denote the sum of all 1PI diagrams with two external fermion lines as $-i\Sigma$, then the full propagator will take the form as
-\[\frac{-i}{\slashed{p}+m+\Sigma(\slashed{p})}\]
-The on-shell renormolization scheme condition implies that
-\[\Sigma(\slashed{p})_{\slashed{p}=-m} = 0 \quad \left(\frac{d\Sigma}{d\slashed{p}}\right)_{\slashed{p} = -m} = 0\]
-
-We can adjust the counter terms as necessary to maintain the renormalization conditions. After this adjustment, the expression for the amplitude should be finite and independent of the regulator.
-
-The one loop structure of Yukawa theory is somewhat complicated and will not be discussed here. The chapter 51 and 52 from \emph{Quantum Field Theory (Mark Srednicki)} will discussed the one loop structure and beta function of a modified Yukawa theory.
