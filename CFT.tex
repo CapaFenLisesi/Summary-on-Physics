@@ -1,8 +1,8 @@
-\chapter{Mechanics within special relativity}
-\section{Basic Assumption}
+\chapter{Special relativity}
+\section{The principle of relativity}
 First, we assume there is an upper limit of velocity of propagation of interaction $c$. Second, we assume that inertial reference frame are all the same in describing the law of physics. Then, we can find the invariant intervals when transforming from one inertial reference frame to another, $ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2$. 
 (In the following, we assume that $c=1$.)This transformation is called Lorentz transformation, which can be written as
-\[\bar{x}^{\mu} = \Lambda^{\mu}_{\phantom{\mu}\nu} x^{\nu}\]
+\[\overline{x}^{\mu} = \Lambda^{\mu}_{\phantom{\mu}\nu} x^{\nu}\]
 The invariant symbol of the vector representation of Lorentz transformation is $\eta^{\mu \nu}$
 \[\Lambda^{\mu}_{\phantom{\mu}\rho}  \Lambda^{\nu}_{\phantom{\nu}\sigma}  \eta^{\rho \sigma} = \eta^{\mu \nu},\]
 where,
@@ -28,79 +28,142 @@ We can use $\eta^{\mu \nu}$ and and its inverse $\eta^{\mu \nu}$ to raise and lo
 And we can verify the following equations,
 \[\Lambda^{\rho}_{\phantom{\rho}\mu} \Lambda_{\rho}^{\phantom{\rho}\nu} = \delta^{\nu}_{\mu} \]
 \[x^{\mu} = \eta^{\mu \nu} x_{\nu}\]
-\[\bar{x}_{\mu} = \Lambda_{\mu}^{\phantom{\mu}\nu} x_{\nu}\]
+\[\overline{x}_{\mu} = \Lambda_{\mu}^{\phantom{\mu}\nu} x_{\nu}\]
 \[\Lambda_{\mu}^{\phantom{\mu}\rho}  \Lambda_{\nu}^{\phantom{\nu}\sigma}  \eta_{\rho \sigma} = \eta_{\mu \nu},\]
 In a special case when the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
-\[\bar{x}^{0} = \gamma x^0 - \gamma \beta x^1\]
-\[\bar{x}^{1} = -\gamma \beta x^0 + \gamma x^1\]
+\[\overline{x}^{0} = \gamma x^0 - \gamma \beta x^1\]
+\[\overline{x}^{1} = -\gamma \beta x^0 + \gamma x^1\]
 
 Some physical quantity will behave like a tensor (vector,scalar) when transforming form one inertial frame to another. For example,
 \paragraph{scalar} proper time: $d \tau$, mass: $m$, electrical charge $e$
-\paragraph{vector} four velocity: $v^{\mu} = \frac{dx^{\mu}}{d \tau}$, four momentum: $p^{\mu} = m v^{\mu}$, four acceleration: $a^{\mu} = \frac{du^{\mu}}{d \tau}$, four force: $f^{\mu} = m a^{\mu}$
-
-\section{"Three vector"}
+\paragraph{vector} four velocity: $v^{\mu} = \frac{dx^{\mu}}{d \tau}$, four momentum: $p^{\mu} = m v^{\mu}$, four acceleration: $a^{\mu} = \frac{du^{\mu}}{d \tau}$, four force: $f^{\mu} = m a^{\mu}$.\\ \\
 \noindent
-three velocity: $\hat{u}^{i} = \frac{dx^i}{dt}$
+We can also define the corresponding three vector.
+\paragraph{three velocity}: $\hat{u}^{i} = \frac{dx^i}{dt}$
 \[u^0 = \gamma_v, u^i = \gamma \hat{u}^i\]
-transformation of three velocity when we boost along $\hat{1}$ direction:
-\[\bar{\hat{v}}^1 = \frac{\hat{v}^1 - \beta}{1-\hat{v}^1 \beta}\]
-\[\bar{\hat{v}}^2 = \frac{\hat{v}^2}{\gamma(1-\hat{v}^2 \beta})\]
-\[\bar{\hat{v}}^3 = \frac{\hat{v}^3}{\gamma(1-\hat{v}^3 \beta})\]
-three momentum: $\hat{p}^{i} = p^i$
+When the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
+\[\overline{\hat{v}}^1 = \frac{\hat{v}^1 - \beta}{1-\hat{v}^1 \beta}\]
+\[\overline{\hat{v}}^2 = \frac{\hat{v}^2}{\gamma(1-\hat{v}^2 \beta})\]
+\[\overline{\hat{v}}^3 = \frac{\hat{v}^3}{\gamma(1-\hat{v}^3 \beta})\]
+\paragraph{three momentum}: $\hat{p}^{i} = p^i$
 \[\hat{p}^{i} \gamma_v \hat{v}^i\]
-three acceleration: $\hat{a}^{i} = \frac{dv^i}{dt}$\\
-three force: $\hat{f}^i = \frac{d\hat{p}^i}{dt}$
+\paragraph{three acceleration}: $\hat{a}^{i} = \frac{dv^i}{dt}$\\
+\paragraph{three force}: $\hat{f}^i = \frac{d\hat{p}^i}{dt}$
 \[f^i = \gamma_v \hat{f}^i\]
-Energy: $E = p^0 = m u^0 = \gamma_v m$
 
-\section{Mechanics}
+\section{Relativistic Mechanics}
 \noindent
-Revised newton's second law:
-\[f^{\mu} = \frac{dp^{\mu}}{d\tau}\]
-It can be written in three vector language as
-\[\hat{f}^i = \gamma_v m \hat{a}^i + \gamma_v^3 (\hat{a}^j \hat{v}_j) m \hat{v}^i\]
-
-\section{Lagrangian formulation}
+For a free particle, we have
+\[\frac{dp^{\mu}}{d\tau} = 0\]
+It can be formulated in several ways
+\subsubsection{Lagrangian formulation}
 \[S=-m\int_{a}^{b} d\tau, \ \ \ \ \delta x^{\mu}(a) = \delta x^{\mu}(b) = 0\]
 \[\delta S = 0 \Rightarrow m\frac{du^{\mu}}{d\tau} = 0\]
-
-\section{Hamiltonian formulation}
+\subsubsection{Hamiltonian formulation}
 \[S = -m \int_{t_1}^{t_2} \sqrt{1-\dot{x}_i\dot{x}^i} dt\]
 \[L = - m \sqrt{1-\dot{x}_i\dot{x}^i}\]
 \[\pi^i = \frac{\partial L}{\partial \dot{x}_i} = \gamma m \eta^{ij}\dot{x}_j\]
 \[H = \pi^i \dot{x}_i - L = \gamma m = \sqrt{m^2 + \pi^i \pi_i}\]
-
-\subsubsection{Hamilton equation}
+So, the Hamiltonian equations are
 \[\dot{\pi}^i = 0, \ \ \ \ \dot{x_i} = \eta_{ij}\frac{\pi^j}{\sqrt{m^2 + \pi^k \pi_k}}\]
-
 \subsubsection{Hamiltonian-Jacobi equation}
 \[H = -\frac{\partial S}{\partial t}, \ \ \ \ \pi^i = \frac{\partial S}{\partial x_i}\]
 If we define $p^0 = H$, $p^i = \pi^i$, then we can verify that $p^{\mu} = \frac{\partial S}{\partial x_{\mu}}$. So, $p^{\mu}$ is a vector under Lorentz transformation. The Hamiltonian-Jacobi equation can be written as
-\[(\frac{\partial S}{\partial t})^2 = m^2 + (\frac{\partial S}{\partial x})^2 + (\frac{\partial S}{\partial y})^2 + (\frac{\partial S}{\partial z})^2\]
-
-\section{Symmetry and conservation law}
+\[(\frac{\partial S}{\partial t})^2 = m^2 + (\frac{\partial S}{\partial x})^2 + (\frac{\partial S}{\partial y})^2 + (\frac{\partial S}{\partial z})^2\]\\ \\
+For a non-free particle, we have the revised newton's second law:
+\[f^{\mu} = \frac{dp^{\mu}}{d\tau}\]
+The formula is the definition of the four force. It can also be written in three vector as
+\[\hat{f}^i = \gamma_v m \hat{a}^i + \gamma_v^3 (\hat{a}^j \hat{v}_j) m \hat{v}^i\]\\ \\
+If the system consists of more than one particles interacting with each other. We can derive the conservation laws from the symmetry.
 \subsubsection{Translational symmetry and conservation of momentum}
-\[\bar{x}^{\mu} = x^{\mu} + \delta x^{\mu}\]
+\[\overline{x}^{\mu} = x^{\mu} + \delta x^{\mu}\]
 \[\delta S = \sum mu_{\mu} \delta x^{\mu}|_a^b = 0 \]
 $\sum p^{\mu}$ is conserved.
 \subsubsection{Rotational symmetry and conservation of angular momentum}
-\[\bar{x}^{\mu} = x^{\mu} + x_{\nu}\delta \Omega^{\mu \nu}\]
+\[\overline{x}^{\mu} = x^{\mu} + x_{\nu}\delta \Omega^{\mu \nu}\]
 \[\delta S = \sum mu^{\mu} x^{\nu} \delta \Omega_{\mu \nu}|_a^b = 0 \]
 $\sum M^{\mu \nu} $ is conserved, where $M^{\mu \nu} = x^{\mu}p^{\nu} - x^{\nu}p^{\mu}$.
+
+\section{Relativistic Scattering}
+\subsection{Distribution function}
+The number of particles in the region $\bm{r}+d\bm{r}$ and $\bm{p} + d\bm{p}$ is $f(\bm{p},\bm{r})dp_x dp_y dp_z dx dy dz$. Then  $f(\bm{p},\bm{r})$ is called distribution function.
+
+We first determine the properties of the "volume element" $dp_x dp_y dp_z$, with respect to Lorentz transformations. If we introduce a four-dimensional coordinate system, on whose axes are marked the components of the four-momentum of a particle, then $dp_x dp_y dp_z$, can be considered as the zeroth component of an element of the hypersurface defined by the equation $p^{\mu}p_{\mu} + m^2 = 0$. The element of hypersurface is a four-vector directed along the normal to the hypersurface; in our case the direction of the normal obviously coincides with the direction of the four-vector $p^{\mu}$. From this it follows that the ratio
+\[\frac{dp_x dp_y dp_z}{E}\]
+is an invariant quantity, since it is the ratio of corresponding components of two parallel four-vectors.
+
+Then, we notice that $dVdt$ is invariant under Lorentz transformation and $dt = \frac{E}{m} d\tau $. So we can infer that
+\[dx dv dz E\]
+is an invariant quantity quantity. Putting all together, we know the phase volume
+\[dp_x dp_y dp_z dx dy dz\]
+is an invariant volume. So, we have
+\[f(\bm{r},\bm{p}) = f'(\bm{r}',\bm{p}')\]
+in coordinate transformation.
+
+\subsection{Invariant cross section}
+Recall the definition of cross section
+\[\sigma \equiv \frac{\mbox{Number of Events per target}}{\mbox{Time} \times \mbox{Incident Flux}}\]
+Here, the incident flux and time are measured in the frame of target particle.
+
+Suppose that we have two colliding beams; we denote by $n_1$ and $n_2$ the particle densities in them and by b$\bm{v}_1$ and $\bm{v_2}$ the velocities of the particles. In the reference system in which particle 2 is at rest, we are dealing with the collision of the beam of particles 1 with a stationary target. Then according to the usual definition of the cross-section $\sigma$, the number of collisions occurring in volume $dV$ in time $dt$ is 
+\[dN = \sigma v_{rel} n_1 n_2 dV dt\]
+,where $v_{rel}$ is the velocity of particle 1 in the rest system of particle 2 (which is just the definition of the relative velocity of two particles in relativistic mechanics). 
+
+The number $dN$ is by its very nature an invariant quantity. We would like to express it in a form which is applicable in any reference system: 
+\[dN = A n_1 n_2 dV dt\] 
+where $A$ is a number to be determined, for which we know that its value in the rest frame of one of the particles is $v_{rel} \sigma$. We shall always mean by $\sigma$ precisely the cross-section in the rest frame of one of the particles, i.e. by definition, an invariant quantity. From its definition, the relative velocity $v_{rel}$ is also invariant. The product dVdt is an invariant. Therefore the product $A n_1 n_2$ must also be an invariant. The law of transformation of the particle density n is
+\[n = \frac{n_0}{\sqrt{1-v^2}} = n_0 E/m\]
+so we can construct $A$ in an arbitrary frame as
+\[A = -\sigma v_{rel} \frac{p_1^{\mu}p_{2\mu}}{E_1 E_2}\]
+Note that
+\[-p_1^{\mu}p_{2\mu} = \frac{m_1}{\sqrt{1-v_{rel}^2}}m_2 = m_1 m_2 \frac{1-\bm{v}_1\cdot\bm{v}_2}{\sqrt{(1-\bm{v}_1^2)\cdot(1-\bm{v}_2^2)}}\]
+we can get the following expression for $v_{rel}$:
+\[v_{rel} = \frac{\sqrt{(\bm{v}_1-\bm{v}_2)^2-(\bm{v}_1\times\bm{v}_2)^2}}{1-\bm{v}_1\cdot\bm{v}_2}\]
+Finally, we have
+\[dN = \sigma \sqrt{(\bm{v}_1-\bm{v}_2)^2-(\bm{v}_1\times\bm{v}_2)^2} n_1 n_2 dV dt\]
+If the velocities $v_1$ and $v_2$ are collinear, then we have
+\[dN = \sigma |\bm{v}_1 - \bm{v}_2| n_1 n_2 dV dt\]
+If we have only one target, then
+\[dN = \sigma |\bm{v}_1 - \bm{v}_2| n_1 dt\]
+
+\subsection{Elastic scattering between two particles}
+\[(E_1,\bm{p}_1,E_2,\bm{p}_2) \to (E_1',\bm{p}_1',E_2',\bm{p}_2')\]
+In lab frame (L frame),
+\[E_2 = m_2 \quad \bm{p}_2 = 0\]
+By the conservation of momentum, we can derive that
+\[\cos \theta_1 = \frac{E_1'(E_1+m_2)-E_1 m_2 - m_1^2}{p_1 p_1'}\]
+\[\cos \theta_2 = \frac{(E_1+m_2)(E_2'-m_2)}{p_1 p_2'}\]
+Here $\theta_1(\theta_2)$ is the angle between $\bm{p}_1'(\bm{p}_2')$ with $\bm{p}_1$.
+In a special case where $m_1 =0$, we have
+\[E_1' = \frac{m_2}{1-\cos\theta_1 + \frac{m_2}{E_1}}\]
+Suppose in the center of mass frame (C frame), the scattering angle is $\chi$,then we can derive that
+\[E_1' = E_1 - \Delta E \quad E_2' = m_2 + \Delta E\]
+Here,
+\[\Delta E = \frac{m_2(E_1^2-m_1^2)}{m_1^2 + m_2^2 + 2m_2E_1}(1-\cos\chi)\]
+Next, suppose in L frame, let $x = p_1'\cos\theta_1$,$y = p_1'\sin\theta_1$,we can get that
+\[\frac{(x-c)^2}{a^2}+\frac{y^2}{b^2}=1\]
+Here,
+\[a = \frac{p_1(E_1m_2+m_2^2)}{m_1^2 + m_2^2 + 2m_2 E_1} = \frac{m_2V}{\sqrt{1-V^2}} \quad b = \frac{m_2 p_1}{\sqrt{m_1^2 + m_2^2 + 2m_2 E_1}} = \frac{a}{\sqrt{1-V^2}} \quad c = \frac{ p_1(E_1m_2+m_1^2)}{m_1^2 + m_2^2 + 2m_2 E_1}\]
+Here $V = \frac{p_1}{E_1 + m_2}$ is the velocity of particle 2 before scattering in C frame. And it is easy to see that $a + c = p_1$. The result above can be represented by a picture.
+\begin{figure}[!h]
+\centering
+\includegraphics[height=3.4cm ,width=15.98cm]{CFT/scattering.png}
+\caption{Relativistic scattering}
+\end{figure}
 
 \chapter{Classical field theory}
 \section{Lagrangian formulation}
 \[S = \int \mathcal{L}(\phi_a,\dot{\phi}_a,\nabla \phi_a) d^4 x, \ \ \ \ \delta \phi_a |_{\Sigma} = 0\]
 \[\delta S = 0 \Rightarrow \partial_{\mu} \left (\frac{\partial \mathcal{L}}{\partial (\partial_{\mu} \phi_a)} \right ) - \frac{\partial \mathcal{L}}{\partial \phi_a} = 0\]
 \subsubsection{Locality of the theory}
-There are no terms in the Lagrangian coupling $\phi(\bm{x},t)$ directly to  $\phi(\bm{y},t)$ with $\bm{x} \neq \bm{y}$. The closet we get for the $\bm{x}$ label is coupling between $\phi(\bm{x},t)$ and $\phi(\bm{x}+\delta\bm{x},t)$ through the gradient term $\nabla \phi$.
+There are no terms in the Lagrangian coupling $\phi(\bm{x},t)$ directly to  $\phi(\bm{y},t)$ with $\bm{x} \neq \bm{y}$. The closet we get for the $\bm{x}$ label is coupling between $\phi(\bm{x},t)$ and $\phi(\bm{x}+\delta\bm{x},t)$ through the gradient term $\bm{\nabla} \phi$.
 \subsubsection{Lorentz invariance}
 \noindent
 Scalar fields:
-\[\bar{\phi}(x) = \phi(\Lambda^{-1} x)\]
+\[\overline{\phi}(x) = \phi(\Lambda^{-1} x)\]
 Vector fields:
-\[\bar{A}^{\mu}(x) = \Lambda^{\mu}_{\phantom{\mu}\nu} A^{\nu}(\Lambda^{-1}x)\]
-\[\bar{A}_{\mu}(x) = (\Lambda^{-1})^{\nu}_{\phantom{\mu}\mu} A_{\nu}(\Lambda^{-1}x) = \Lambda_{\mu}^{\phantom{\mu}\nu}A_{\nu}(\Lambda^{-1}x)\]
+\[\overline{A}^{\mu}(x) = \Lambda^{\mu}_{\phantom{\mu}\nu} A^{\nu}(\Lambda^{-1}x)\]
+\[\overline{A}_{\mu}(x) = (\Lambda^{-1})^{\nu}_{\phantom{\mu}\mu} A_{\nu}(\Lambda^{-1}x) = \Lambda_{\mu}^{\phantom{\mu}\nu}A_{\nu}(\Lambda^{-1}x)\]
 \[\overline{\partial_{\mu}\phi}(x) = (\Lambda^{-1})^{\nu}_{\phantom{\mu}\mu} \partial_{\nu} \phi (\Lambda^{-1}x) = \Lambda_{\mu}^{\phantom{\mu}\nu} \partial_{\nu} \phi (\Lambda^{-1}x)\]
 Lagrangian is a scalar, or more loosely, action is invariant under Lorentz transformation.
 
@@ -116,7 +179,7 @@ and if $\delta \mathcal{L} = \partial_{\mu} K^{\mu}$, we can get
 
 \subsubsection{space-time translation}
 \noindent
-$\bar{x} = x - a$ 
+$\overline{x} = x - a$ 
 \[j^{\mu} = a_{\nu} T^{\mu \nu}\]
 \[T^{\mu \nu} \equiv -\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}\phi_a)} \partial^{\nu} \phi_a + \eta^{\mu \nu} \mathcal{L}\]
 If we define $P^{\mu} \equiv \int T^{0 \mu} d^3 x$,then we have the law of momentum conservation:
@@ -124,7 +187,7 @@ If we define $P^{\mu} \equiv \int T^{0 \mu} d^3 x$,then we have the law of momen
 
 \subsubsection{Lorentz Transformation} 
 \noindent
-$\bar{x}^{\mu} = x^{\mu} + \delta \omega^{\mu}_{\phantom{\mu}\nu} x^{\nu}$\\
+$\overline{x}^{\mu} = x^{\mu} + \delta \omega^{\mu}_{\phantom{\mu}\nu} x^{\nu}$\\
 The infinitesimal Lorentz transformation can be written as $I+\delta \omega^{\mu}_{\phantom{\mu}\nu}$
 \[\delta \omega^{\mu}_{\phantom{\mu}\nu} = \left[ 
 \begin{matrix} 
@@ -135,7 +198,7 @@ The infinitesimal Lorentz transformation can be written as $I+\delta \omega^{\mu
 \end{matrix} 
 \right]\]
 This time, we assume that
-\[\bar{\phi}_a(x) = \mathcal{S}_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
+\[\overline{\phi}_a(x) = \mathcal{S}_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
 In the limit of infinitesimal Lorentz transformation, we have
 \[\mathcal{S}_{a}^{\phantom{a}b} = \delta_{a}^{\phantom{a}b}+\frac{1}{2} \delta \omega_{\alpha \beta} (\Sigma^{\alpha \beta})_{a}^{\phantom{a}b} \]
 \[j^{\mu} = \frac{1}{2} M^{\mu \nu \rho}  \delta \omega_{\nu \rho}\]
@@ -271,3 +334,238 @@ we can demonstrate that
 \left[S_i,P_j\right] &=& 0 \nonumber \\
 \left[L_i,P_j\right] &=& \epsilon_{ijk}P_k \nonumber
 \end{eqnarray}
+
+\chapter{Classical Electrodynamics}
+\section{The formulation of classical electrodynamics}
+\subsection{Maxwell equations and Lorentz force}
+\noindent
+The Lagrangian of the EM field $A^{\mu}$ when coupling with current is
+\[\mathcal{L} = -\frac{1}{4}F^{\mu\nu}F_{\mu\nu} + j^{\mu} A_{\mu}\]
+Here
+\[F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu} \quad j^{\mu} = \rho_{e0} u^{\mu}\]
+$\rho_{e0}$ is the charge density measured in the frame of charge.
+Then we can derive the Euler-Lagrange equation of EM field:
+\[\partial_{\nu} F^{\mu\nu} = j^{\mu}\]
+And we can derive the charge conservation equation
+\[\partial_{\mu} j^{\mu} = 0\]
+For a charged particle moving in EM field with orbit $x^{\mu}(\tau)$, we have
+\[j^{\mu} =  e_a \delta(\bm{r}-\bm{r}_a(t)) \sqrt{1-\bm{v}_a^2} u_a^\mu \]
+Then we can derive that
+\[\int dV dt j^{\mu} A_{\mu} = \int dx^{\mu} e A_{\mu}\]
+So, the action for a charged particle when coupling with EM field is
+\[S = - m \int d\tau + e\int dx^{\mu} A_{\mu}\]
+We can derive the Euler-Lagrangian equation of the particle:
+\[ma_{\mu} = eF_{\mu \nu}u^{\nu}\]
+The Hamiltonian formulation of electrodynamics will be discussed in detail in the Hamiltonian formulation of general relativity and canonical quantization formulation of quantum electrodynamics.\\
+We now define the electric field and magnetic field as follows,
+\[E^i \equiv F^{0i} = -\dot{A}^i - \nabla^i A^0 \quad B^i \equiv \epsilon_{ijk} \nabla^j A^k\]
+We also define $\rho_e \equiv j^0$ and $J^i \equiv j^i$,so
+the field equation can then be written
+\begin{eqnarray}
+\bm{\nabla} \times  \bm{B} &=& \frac{\partial \bm{E}}{\partial t} +  \bm{J} \nonumber \\
+\bm{\nabla} \times \bm{E} &=& -\frac{\partial \bm{B}}{\partial t} \nonumber \\
+\bm{\nabla} \cdot \bm{E} &=& \rho_e \nonumber \\
+\bm{\nabla} \cdot \bm{B} &=& 0 \nonumber
+\end{eqnarray}
+That is the so-called Maxwell equation.\\
+The equation of motion of the charged particle can be written as
+\[\frac{d\bm{p}}{dt} = e(\bm{E} + \bm{v} \times \bm{B}) \quad \frac{d \mathcal{E}}{dt} = e \bm{E} \cdot \bm{v}\]
+That is the so-called Lorentz force.\\
+We note that the Field $A$ cannot be completely determined by Maxwell and Lorentz equation. If we make the transformation $A_{\mu} \to A_{\mu} + \partial_{\mu} \xi(x)$, $\mathcal{L}$ and $F^{\mu\nu}$ would be invariant, and the Maxwell and Lorentz equation is still valid. This arbitrariness of $\xi$ is called gauge invariance. The topic will be discussed in detail in QED.
+
+\subsection{Lorentz transformation of fields}
+\noindent
+In the new coordinate system $\overline{x}^{\mu} = \Lambda^{\mu}_{\phantom{\mu}\nu}x^{\nu}$, we have
+\[\overline{A}^{\mu}(\overline{x}) = \Lambda^{\mu}_{\phantom{\mu}\nu}A^{\nu}(\Lambda^{-1}\overline{x})\]
+In a special case when the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
+\[\overline{x}^{0} = \gamma x^0 - \gamma \beta x^1 \quad \overline{x}^{1} = -\gamma \beta x^0 + \gamma x^1\]
+So, we have
+\[\overline{A}^{0} = \gamma A^0 - \gamma \beta A^1 \quad \overline{A}^{1} = -\gamma \beta A^0 + \gamma A^1\]
+We can further derive that
+\[\overline{E}_1 = E_1 \quad \overline{E}_2 = \gamma E_2 - \gamma \beta B_3 \quad \overline{E}_3 = \gamma E_3 + \gamma \beta B_2\]
+\[\overline{B}_1 = B_1 \quad \overline{B}_2 = \gamma B_2 + \gamma \beta E_3 \quad \overline{B}_3 = \gamma B_3 - \gamma \beta E_2\]
+It can be written in the three vector form as
+\[\bm{\overline{E}} = \gamma(\bm{E}_{\perp} + \bm{\beta} \times \bm{B}) + \bm{E}_{\parallel}\]
+\[\bm{\overline{B}} = \gamma(\bm{B}_{\perp} - \bm{\beta} \times \bm{E}) + \bm{B}_{\parallel}\]
+If $\beta \ll 1$, neglect the higher order of $\beta^2$, we have
+\[\bm{\overline{E}} = \bm{E} + \bm{\beta} \times \bm{B}\]
+\[\bm{\overline{B}} = \bm{B} - \bm{\beta} \times \bm{E}\]
+We also note that $F_{\mu\nu}F^{\mu\nu}$ and $\epsilon_{\mu\nu\rho\sigma}F^{\mu\nu}F^{\rho\sigma}$ is invariant under Lorentz transformation. It can be represented by the electric and magnetic field as
+\[E^2 - B^2 = \mbox{ inv } \quad \bm{E} \cdot \bm{B} = \mbox{ inv }\]
+
+\subsection{Energy-momentum tensor}
+\noindent
+For a free EM field, the energy-momentum tensor is
+\[T_f^{\mu \nu} \equiv -\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}A_{\rho})} \partial^{\nu} A_{\rho} + \eta^{\mu \nu} \mathcal{L} = \partial^{\nu}A^{\rho} F^{\mu}_{\phantom{\rho}\rho}-\frac{1}{4}\eta^{\mu\nu}F_{\rho\sigma}F^{\rho\sigma}\]
+We note that the energy-momentum tensor defined above is not symmetric, so we define a modified energy-momentum tensor by adding a term $-\partial^{\rho}A^{\nu}F^{\mu}_{\phantom{\rho}\rho}$,so
+\[T_e'^{\mu\nu} = F^{\nu\rho}F^{\mu}_{\phantom{\rho}\rho}-\frac{1}{4}\eta^{\mu\nu}F_{\rho\sigma}F^{\rho\sigma}\]
+Note that for free EM field, $\partial^{\rho}A^{\nu}F^{\mu}_{\phantom{\rho}\rho} = \partial^{\rho}\left(A^{\nu}F^{\mu}_{\phantom{\rho}\rho}\right)$.So,
+we can get that
+\[\partial_{\mu}T_f'^{\mu\nu} = 0 \quad P_f'^{\mu} = P_f^{\mu}\]
+So, from now on, we will use $T_f'$ as the energy-momentum tensor of EM field and omit the prime of $T_f'$ for simplicity.
+The momentum of the free EM field is
+\[P_f^{0} = \int dV \frac{1}{2}(\bm{E}^2+\bm{B}^2) \equiv \int dV w \quad P_f^{i} = \int dV \bm{E} \times \bm{B} \equiv \int dV \bm{S}\]\\
+If there also exists charged particles in the system, i.e. the source of EM field, we must also include the energy-momentum tensor of the particles to get the right conservation equation. The energy-momentum tensor of particles is defined as
+\[T_p^{\mu\nu} \equiv \sum_a m_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2} u_a^\mu u_a^{\nu}\]
+In this definition, we have
+\[P_p^0 = \sum_a \frac{m_a}{\sqrt{1-\bm{v}_a^2}} \quad \bm{P}_p =  \sum_a \frac{m_a}{\sqrt{1-\bm{v}_a^2}} \bm{v}_a\]
+So, our definition is consistent with the definition of four momentum in previous chapter.
+Recall that
+\[j^{\mu}_e = \sum_a e_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2} u_a^\mu \]
+We can define the mass current as
+\[j^{\mu}_m \equiv \sum_a m_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2} u_a^\mu \]
+If there is no particle creation and annihilation, and the mass of the particle is constant during the motion, we would have
+\[\partial_{\mu} j^{\mu}_{ma} = 0\]
+Recall the Lorentz force equation $m a_{\mu} = eF_{\mu\nu}u^{\nu}$, it can be rewritten as
+\[\rho_{m0a} \frac{du_{\mu}}{d\tau} = F_{\mu\nu}j_{ea}^{\nu}\]
+Here, $\rho_{m0a} \equiv m_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2}$ is the mass density measured in the rest frame of the particle. Then, on the one hand, we have
+\[\partial_{\mu} T_p^{\mu\nu} = \sum_a \rho_{m0a}u^{\mu} \frac{\partial u_a^{\nu}}{\partial x^{\mu}} = \sum_a \rho_{m0a} \frac{d u_a^{\nu}}{d \tau} = F^{\nu}_{\phantom{\nu}\mu}j_e^{\mu}\]
+On the other hand, we can derive that
+\[\partial_{\mu} T_f^{\mu\nu} = - F^{\nu}_{\phantom{\nu}\mu}j_e^{\mu}\]
+by implementing Maxwell equation.
+Define
+\[T^{\mu \nu} \equiv T_f^{\mu\nu} + T_p^{\mu\nu}\]
+We have
+\[\partial_{\mu} T^{\mu\nu} = 0\]
+We define the Maxwell stress tensor as
+\[f^{ij} \equiv -T_f^{ij} = E^{i}E^{j} + B^{i}B^{j} - w\delta^{ij}\]
+Then, we can write down the conservation law of energy and momentum as
+\[\frac{d}{dt}\left(P_p^0 + \int w dV \right) = -\oint \bm{S}\cdot d\bm{\sigma}\]
+\[\frac{d}{dt}\left(\bm{P}_p + \int \bm{S} dV \right) = \oint \bm{f}\cdot d\bm{\sigma}\]
+We assume there is no particle cross the boundary.\\
+At last, because $T^{\mu\nu} = T^{\nu\mu}$, we have
+\[\partial_{\mu}(x^{\nu}T^{\mu\rho}-x^{\rho}T^{\mu\nu}) = 0\]
+It is easy to write down the conservation law of angular momentum as
+\[\frac{d}{dt}\left(\bm{L}_p + \int \bm{r} \times \bm{S} dV \right) = \oint \bm{r} \times \bm{f}\cdot d\bm{\sigma}\]
+Here,
+\[\bm{L}_p = \sum_a \frac{m_a}{\sqrt{1-\bm{v}_a^2}} \bm{r}_a  \times \bm{v}_a \]
+
+\subsection{Charged particles in a given EM field}
+Now we suppose the EM field is given, i.e. we will neglect the EM field generated by the test charged particles. Then we have
+\[S = \int_{t_1}^{t_2} (-\sqrt{1-v^2}m + e\bm{A}\cdot\bm{v}-e\phi)dt\]
+So,
+\[L = -\sqrt{1-v^2}m + e\bm{A}\cdot\bm{v}-e\phi\]
+The canonical momentum is
+\[\bm{\pi} = \frac{\partial L}{\partial \bm{v}} = \gamma m \bm{v} + e \bm{A}\]
+The Hamiltonian is therefore
+\[H = \bm{\pi} \cdot \bm{v} - L = \gamma m + e \phi = \sqrt{m^2+(\bm{\pi}-e\bm{A})^2}+e\phi\]
+If $v \ll 1$, we would have
+\[L = \frac{mv^2}{2} + e\bm{A}\cdot\bm{v}-e\phi \quad \bm{\pi} =  m \bm{v} + e \bm{A} \quad H = \frac{(\bm{\pi}-e\bm{A})^2}{2m}+e\phi\]
+If the EM field is constant in time, we have
+\[\bm{\nabla} \times \bm{E} = 0\]
+we would choose the gauge that
+\[\dot{\bm{A}} = 0 \quad \bm{E} = -\bm{\nabla} \phi\]
+Because $\frac{\partial L}{\partial t}=0$, we can know that $\gamma m + e\phi$ is a constant.\\
+Now we would list some special case.
+\subsubsection{Motion in a uniform and constant electric field}
+Suppose the the direction of electric field is  $\hat{x}$, the orbit is in the $x-y$ plane. So, the equation of motion is
+\[\dot{p}_x = eE \quad \dot{p}_y = 0\]
+The final solution is
+\[x = \frac{1}{eE}\sqrt{\mathcal{E}_0^2 + (eEt)^2} \quad y = \frac{p_0}{eE} \mathrm{arcsinh} \frac{eEt}{\mathcal{E}_0}\]
+Here, we assume when $t=0$, $p_x = 0$,$p_y=p_0$.
+The orbit function is
+\[x = \frac{\mathcal{E}_0}{eE}\cosh \frac{eEy}{p_0}\]
+\subsubsection{Motion in a uniform and constant magnetic field}
+Suppose the direction of magnetic field is $\hat{z}$. Note that particle's kinetic energy $\mathcal{E} = \gamma m$ is constant if there are no electric field, we can derive the equation of motion
+\[\dot{v}_x = \omega v_y \quad \dot{v}_y = -\omega v_x \quad \dot{v}_z = 0\]
+Here, $\omega = \frac{eB}{\gamma m}$. The final solution is
+\[x = x_0 + r\sin(\omega t + \alpha) \quad y = y_0 + r\cos(\omega t + \alpha) \quad z = z_0 + v_{0z}t\]
+Here, $x_0,y_0,z_0,r,\alpha,v_{0z}$ should be determined by initial condition.
+\subsubsection{Motion in a uniform and constant EM field}
+We only focus on the case that the velocity of particle is much smaller the velocity of light. Suppose the direction of magnetic field is $\hat{z}$, the direction of electric field is within $y-z$ plane. The equation of motion is
+\[m\ddot{x} = eB\dot{y} \quad m\ddot{y} =eE_y - eB\dot{x} \quad m\ddot{z}=eE_z\]
+The solution is
+\[\dot{x} = a \cos \omega t + \frac{E_y}{B} \quad \dot{y} = -a\sin \omega t \quad \dot{z} = v_{0z} + \frac{eE}{m}t\]
+Here, $\omega = \frac{eB}{m}$ , $a,v_{z0}$ is determined by initial condition. As we suppose that $v \ll 1$ is satisfied,we must have that
+\[a \ll 1 \quad v_{0z} \ll 1 \quad \frac{eE_z t}{m} \ll 1 \quad E_y \ll B\]
+
+\section{Constant electromagnetic field}
+\subsection{Coulomb' law}
+For constant electric field, the Maxwell equation take the form 
+\[\bm{\nabla} \cdot \bm{E} = \rho_e \quad \bm{\nabla} \times \bm{E} = \rho_e\]
+So, we have
+\[\bm{E} = -\bm{\nabla} \phi \quad \nabla^2 \phi = -\rho_e \]
+The solution is
+\[\phi(\bm{r}) = \int  \frac{\rho_e(\bm{r}')}{4\pi|\bm{r}-\bm{r}'|} dV'\]
+If $\rho_e(\bm{r}') = Q \delta(\bm{r}')$, we have
+\[\phi(\bm{r}) =  \frac{Q}{4\pi|\bm{r}|} \quad E(\bm{r}) = \frac{Q\bm{r}}{4\pi|\bm{r}|^3}\]
+
+For a system of static charged particles, the total energy is
+\[U = \frac{1}{2}\int E^2 dV = \frac{1}{2} \int \rho \phi dV = \frac{1}{2} \sum e_a \phi_a + \frac{1}{2}\sum e_a \Phi_a\]
+Here, $\phi_a$ is the electric potential at the point where $e_a$ is located, produced by $e_a$ itself, while  $\Phi_a$ is the potential produced by other charges. It is obvious that $U_{self} = \frac{1}{2} e_a \phi_a$ is infinite, indicating that classical electrodynamics is no more valid in small distance. This problem will be solved in quantum electrodynamics: the mass of charged particle we measured is already renormalized to include the electromagnetic self energy. So, actually, we have
+\[U = \frac{1}{2}\int E^2 dV - U_{self} = \frac{1}{2}\sum_{a \ne b} \frac{e_a e_b}{4\pi R_{ab}}\]
+
+If the charged particle is moving with a constant velocity, we can derive the electric field it produced by Lorentz transformation, the final result is that
+\[\bm{E} = \frac{e\bm{R}}{4\pi R^3} \frac{1-V^2}{(1-V^2\sin^2\theta)^{3/2}} \quad \bm{B} = \bm{V} \times \bm{E}\]
+Here, $\bm{R}$ is the vector point from the particle to the point we measure the electric field, and $\theta$ is the angle between $\bm{V}$ and $\bm{R}$.If $V \sim 1$, the electric field will be concentrated in the direction perpendicular to the $\bm{V}$. If $\bm{V} \ll 1$, we have
+\[\bm{E} = \frac{e\bm{R}}{4\pi R^3} \quad \bm{B} = \frac{e\bm{V} \times\bm{R}}{4\pi R^3}\]
+
+\subsection{Multipole moments}
+For a system of charged particles, the potential it produced at $\bm{R}$ is
+\[\phi = \sum_a \frac{e_a}{4\pi|\bm{R}_0 - \bm{r}_a|}\]
+If $R \gg r_a$, we can expand the equation around $r_a=0$. Generally, we have
+\[\frac{1}{|\bm{R} - \bm{r}|} = \sum_{l=0}^{\infty} \sum_{m=-l}^{l} \frac{r^l}{R^{l+1}} \frac{4\pi}{2l+1} Y^*_{lm}(\Theta,\Phi)Y_{lm}(\theta,\phi)\]
+So,we have
+\[\phi = \sum \phi^{(l)}\]
+Here,
+\[\phi^{(l)} = \frac{1}{4\pi R^{l+1}} \sum_{m=-l}^{l} \sqrt{\frac{4\pi}{2l+1}} Q_{m}^{(l)} Y^*_{lm}(\Theta,\Phi)\]
+\[Q_m^{(l)} =\sum_a e_a r_a^l \sqrt{\frac{4\pi}{2l+1}} Y_{lm}(\theta_a,\phi_a)\]
+Special case: 
+\[\phi^{(0)} = \frac{Q}{4\pi R} \quad E^{(0)} = \frac{Q\bm{n}}{4\pi R^2} \quad Q = \sum_a e_a\]
+\[\phi^{(1)} = \frac{\bm{d} \cdot \bm{n}}{4\pi R^2}  \quad E^{(1)} = \frac{3(\bm{d}\cdot\bm{n})\bm{n}-\bm{d}}{4\pi R^3} \quad \bm{d} = \sum_a e_a \bm{r}_a\]
+\[\phi^{(2)} = \frac{\bm{n} \cdot \bm{D} \cdot \bm{n}}{8\pi R^3} \quad E^{(2)} = \frac{5(\bm{n} \cdot \bm{D} \cdot \bm{n})\bm{n} - (\bm{n} \cdot \bm{D} + \bm{D} \cdot \bm{n})}{8\pi R^4} \quad D_{ij} = \sum e(3x_ix_j-r^2\delta_{ij})\]
+
+For a system of charged particles in the electric field $\phi(\bm{r})$, if all the particles is near the $r=0$, we can make the expansion
+\[\phi(\bm{r}) = \sum_{l=0}^{\infty} r^l \sum_{m=-l}^{m=l} a_{lm} \sqrt{\frac{4\pi}{2l+1}} Y_{lm}(\theta,\phi)\]
+So
+\[U = \sum_{l=0}^{\infty} U^{(l)} \quad U^{(l)} = \sum_{m=-l}^{l} a_{lm}Q^{(l)}_m\]
+Special case:
+\[U^{(0)} = Q\phi_0 \quad F^{(0)} = Q\bm{E}_0\]
+\[U^{(1)} = -\bm{d}\cdot \bm{E}_0 \quad F^{(1)} = \bm{d}\cdot \bm{\nabla}\bm{E}_0 \quad M^{(1)} = \bm{d} \times \bm{E}_0\]
+\[U^{(2)} = -\frac{1}{6}\bm{D}\cdot \bm{\nabla}\bm{E}_0 \quad F^{(2)} = \frac{1}{6} \bm{D}\cdot \bm{\nabla}\bm{\nabla}\bm{E}_0 \quad M^{(2)} = \frac{1}{3} \bm{\nabla} \cdot (\bm{D} \times \bm{E}_0)\]
+
+\subsection{Biot-Savart law}
+Let us consider the magnetic field produced by charges which perform a finite motion, in which the particles are always within a finite region of space and the momenta also always remain finite. Consider the time average magnetic field $\overline{\bm{B}}$ , produced by the charges; this field will now be a function only of the coordinates and not of the time. We take the time average of the Maxwell equations
+\[\bm{\nabla} \cdot \bm{B} = 0 \quad \bm{\nabla} \times \bm{B} = \frac{\partial \bm{E}}{\partial t} + \bm{j}\] 
+Note that the average value of the derivative $\partial \bm{E} / \partial t$, like the derivative of any quantity which varies over a finite range, is zero. We can get
+\[\bm{\nabla} \cdot \overline{\bm{B}} = 0 \quad \bm{\nabla} \times \overline{\bm{B}} =  \overline{\bm{j}}\]
+Recall that $\bm{B} = \bm{\nabla} \times \bm{A} = 0$. We impose the gauge condition $\bm{\nabla} \cdot \bm{A} = 0$, we have
+\[\nabla^2 \overline{\bm{A}} = - \overline{\bm{j}}\]
+The solution is
+\[\overline{\bm{A}}(\bm{r}) = \frac{1}{4\pi} \int \frac{\overline{\bm{j}}(\bm{r}')}{|\bm{r}-\bm{r}'|} dV' = \frac{1}{4\pi} \sum \overline{\frac{e_a \bm{v}_a}{|\bm{r}-\bm{r}_a|}}\]
+And the magnetic field is
+\[\overline{\bm{B}}(\bm{r}) = \frac{1}{4\pi} \int \frac{\overline{\bm{j}}(\bm{r}') \times \bm{R}}{R^3} dV' \quad \bm{R} = \bm{r}-\bm{r}'\]
+
+\subsection{Magnetic moment}
+For a system of charged particles, the potential it produced at $\bm{R}$ is
+\[\overline{\bm{A}} = \frac{1}{4\pi} \sum \overline{\frac{e_a \bm{v}_a}{|\bm{R}-\bm{r}_a|}}\]
+If $R \gg r_a$, we can expand the equation around $r_a=0$ the first order,
+\[4\pi \overline{\bm{A}} = \frac{1}{R} \sum e \overline{\bm{v}} - \sum \overline{e \bm{v} \left( \bm{r} \cdot \bm{\nabla} \frac{1}{R}\right)}\]
+Firstly,
+\[\sum e \overline{\bm{v}} = \overline{\frac{d}{dt} \sum e \bm{r}} = 0\]
+Secondly,
+\[-\sum \overline{e \bm{v} \left( \bm{r} \cdot \bm{\nabla} \frac{1}{R}\right)} = \frac{1}{R^3} \sum \overline{e\bm{v} (\bm{r} \cdot \bm{R})}\]
+Note that
+\[\sum e\bm{v} (\bm{r} \cdot \bm{R}) = \frac{1}{2} \frac{d}{dt} e\bm{r}(\bm{r}\cdot\bm{R}) + \frac{1}{2} \left(\sum e \bm{r} \times \bm{v}\right) \times \bm{R}\]
+Define the magnetic moment as
+\[\bm{m} \equiv \frac{1}{2} \left(\sum e \bm{r} \times \bm{v}\right)\]
+We can get
+\[\overline{\bm{A}} = \frac{\overline{\bm{m}} \times \bm{R}}{4\pi R^3} \quad \overline{\bm{B}} = \frac{3\bm{n}(\overline{\bm{m}} \cdot \bm{n})-\overline{\bm{m}}}{4\pi R^3}\]
+If all the particles have the same charge-mass ratio, and the velocity of all the particles is much smaller than that of light, we have
+\[\bm{m} = \frac{e}{2m} \sum m \bm{r} \times \bm{v} = \frac{e}{2m} \bm{M}\]
+
+Let us consider a system of charges in an external constant uniform magnetic field. The time average of the force acting on the system, 
+\[\bm{F} = \sum e \overline{\bm{v} \times \bm{B}} = \overline{\frac{d}{dt} \sum e \bm{r} \times \bm{B}} = 0\]
+The average value of the moment of the forces is 
+\[\overline{\bm{K}} = \sum e \overline{\bm{r} \times (\bm{v} \times \bm{B})}\]
+We can derive that
+\[\overline{\bm{K}} = \overline{\bm{m}} \times \bm{B}\]
+
+Let us consider the change in the average angular momentum $\overline{\bm{M}}$ of the system. According to a well-known equation of mechanics, the derivative of $\bm{M}$ is equal to the moment $\bm{K}$ of the forces acting on the system. We therefore have
+\[\frac{d \overline{\bm{M}}}{dt} = \overline{\bm{m}} \times \bm{B}\]
+If the charge-mass ratio is the same for all particles of the system, the angular momentum and magnetic moment are proportional to one another, and we find:
+\[\frac{d \overline{\bm{M}}}{dt} = - \bm{\Omega} \times \overline{\bm{M}} \quad \bm{\Omega} = \frac{e}{2m} \bm{B}\]
+This equation states that the vector $\overline{\bm{M}}$ rotates with angular velocity $-\bm{\Omega}$ around the direction of the field, while its absolute magnitude and the angle which it makes with this direction remain fixed. This motion is called the Larmor precession.
+
+Let us consider the Lagrangian for a system of charges in an external constant uniform magnetic field, it contains the additional term
+\[L_H = \sum e \bm{A} = \sum e (\bm{B} \times \bm{r}) \cdot \bm{v} = \sum e (\bm{r} \times \bm{v}) \cdot \bm{B} = \bm{m} \cdot \bm{B}\]

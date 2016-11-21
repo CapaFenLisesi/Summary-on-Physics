@@ -896,7 +896,7 @@ Here, the connection $\Gamma^c_{ab}$ is compatible with $h_{ab}$.
 \[\delta x^{\alpha}(\tau_1)=0, \delta x^{\alpha}(\tau_2)=0\]
 \[\delta S = 0 \Rightarrow \frac{d}{d\tau} \frac{\partial L}{\partial u^{\alpha}} - \frac{\partial L}{\partial x^{\alpha}}=0\]
 \begin{example}
-\[L = -m(-g_{\mu\nu} u^{\mu} u^{\nu})^{-1/2} + e A_{\mu} u^{\mu}\]
+\[L = -m(-g_{\mu\nu} u^{\mu} u^{\nu})^{1/2} + e A_{\mu} u^{\mu}\]
 \[\Downarrow\]
 \[m(\frac{du_{\alpha}}{d\tau} - \frac{1}{2} \frac{\partial g_{uv}}{\partial x^{\alpha}} u^{\mu} u^{\nu}) = e(A_{\mu,\alpha}-A_{\alpha,\mu})u^{\mu} \Rightarrow ma_{\alpha} = eF_{\alpha\mu} u^{\mu} \]
 \end{example}
@@ -975,7 +975,7 @@ ds^2 &=& g_{\alpha \beta} dx^{\alpha} dx^{\beta} \nonumber \\
 For electromagnetic field in 3+1 decomposition form, we define the electrical field as $E_a = F_{\alpha \beta} n^{\beta} e_a^{\alpha}$, the magnetic field as $\epsilon_{abc} B^c = F_{\alpha \beta} e_a^{\alpha} e_b^{\beta}$. In this definition, the equation of motion of particles in electromagnetic field can be written as
 \[m A_a = \gamma e (E_a + \epsilon_{abc} v^b B^c)\]
 Here, $A_a = u_{\alpha;\beta} u^{\beta} e_a^{\alpha}$, $\gamma = \frac{1}{\sqrt{1-v^2}}$. So, the three force
-\[\vec {f}=\frac{d\vec {p}}{dt} = e(\vec {E} + \vec {v} \times \vec {B})\]
+\[\bm {f}=\frac{d\bm {p}}{dt} = e(\bm {E} + \bm {v} \times \bm {B})\]
 If we adopt the coordinates $(t,y^a)$, it is easy to verify that
 \[E^a = N F^{0a}, \ \ \ \ B^a = \frac{1}{2} \epsilon^{abc} F_{bc}\]
 We further define
@@ -992,10 +992,10 @@ Then, the Hamilton equation can be written as
 and also the constraint equation $\pi^a_{,a} + \sqrt{h}\rho_e = 0$.
 After simplification, the Maxwell equations are
 \begin{eqnarray}
-\frac{1}{\sqrt{h}}\frac{\partial}{\partial t}(\sqrt{h} \vec{E}) &=& \nabla \times (N \vec{B} - \vec{N} \times \vec{E}) - N \vec{J} \nonumber \\
-\frac{1}{\sqrt{h}}\frac{\partial}{\partial t}(\sqrt{h} \vec{B}) &=& -\nabla \times (N \vec{E} + \vec{N} \times \vec{B}) \nonumber \\
-\nabla \cdot \vec{E} &=& \rho_e \nonumber \\
-\nabla \cdot \vec{B} &=& 0 \nonumber
+\frac{1}{\sqrt{h}}\frac{\partial}{\partial t}(\sqrt{h} \bm{E}) &=& \nabla \times (N \bm{B} - \bm{N} \times \bm{E}) - N \bm{J} \nonumber \\
+\frac{1}{\sqrt{h}}\frac{\partial}{\partial t}(\sqrt{h} \bm{B}) &=& -\nabla \times (N \bm{E} + \bm{N} \times \bm{B}) \nonumber \\
+\nabla \cdot \bm{E} &=& \rho_e \nonumber \\
+\nabla \cdot \bm{B} &=& 0 \nonumber
 \end{eqnarray}
 \end{example}
 

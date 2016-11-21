@@ -121,7 +121,7 @@ So, the completeness relation for the polarization vectors is
 \begin{example}
 If $\bm{p} = (0,0,p)$, we usually choose 
 \[\bm{\epsilon}_{+} = \frac{1}{\sqrt{2}}(1,i,0) \quad \bm{\epsilon}_{-} = \frac{1}{\sqrt{2}}(1,-i,0) \]
-$\bm{\epsilon}_{+}$ corresponds to left-handed rotation and it is the eigenvectors of the space-part of $C_3$ with eigenvalue $+1$. $\bm{\epsilon}_{-}$ corresponds to right-handed rotation and it is eigenvector of the space-part of $C_3$ with eigenvalue $- 1$.
+$\bm{\epsilon}_{+}$ corresponds to anticlockwise rotation and it is the eigenvectors of the space-part of $C_3$ with eigenvalue $+1$. $\bm{\epsilon}_{-}$ corresponds to clockwise rotation and it is eigenvector of the space-part of $C_3$ with eigenvalue $- 1$.
 \end{example}
 \noindent
 We can further derive from above discussion that
@@ -179,7 +179,7 @@ We can further derive from above discussion that
 We Introduce the vacuum state defined by
 \[a_{\lambda}(\bm{p}) | 0 \rangle = 0\]
 To see the problem with the sign we construct the one-particle state with scalar polarization, that is
-\[|1\rangle = \int \widetilde{dp} a^{\dagger}_{0}(\bm{p})|0\rangle
+\[|1\rangle = \int \widetilde{dp} f(p) a^{\dagger}_{0}(\bm{p})|0\rangle
 \]
 and calculate its norm
 \[\langle 1 | 1 \rangle = -\langle 0 | 0 \rangle \int \widetilde{dp} |f(p)|^2\]
@@ -392,9 +392,9 @@ Notice that $i\langle \Omega | T j^{\mu} \psi(x_1) \overline{\Psi}(x_2)| \Omega\
 \caption{Feynman diagram representation of correlation function}
 \end{figure}\\
 From the diagram, we have
-\[\langle A_{\nu}(y) \rangle = \int d^4x G_F(x-y)_{\mu\nu} ie\langle j^{\mu}(x) \rangle  = \int \frac{d^4p}{(2\pi)^4} e^{-ipy} G_F(p)_{\mu\nu} \int d^4x e^{ipx} ie\langle j^{\mu}(x) \rangle\]
+\[\langle A_{\nu}(y) \rangle = \int d^4x G_F(x-y)_{\mu\nu} ie_0\langle j^{\mu}(x) \rangle  = \int \frac{d^4p}{(2\pi)^4} e^{-ipy} G_F(p)_{\mu\nu} \int d^4x e^{ipx} ie_0\langle j^{\mu}(x) \rangle\]
 So,
-\[\int d^4x \langle A_{\nu}(x) \rangle e^{ikx} = G_F(p)_{\mu\nu} \int d^4x e^{ikx} ie\langle j^{\mu}(x)\rangle\]
+\[\int d^4x \langle A_{\nu}(x) \rangle e^{ikx} = G_F(p)_{\mu\nu} \int d^4x e^{ikx} ie_0\langle j^{\mu}(x)\rangle\]
 Compute the Fourier transformation of the equation of charge conservation by integrating
 \[\int d^4x e^{ikx} \int d^4x_1 e^{-iqx_1} \int d^4x_2 e^{ipx_2}\]
 We can get
