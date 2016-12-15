@@ -1,0 +1,180 @@
+\documentclass[cyan]{elegantnote}
+\author{Yuyang Songsheng}
+\email{songshengyuyang@gmail.com}
+\zhtitle{物理}
+\entitle{Physics}
+\version{1.00}
+\myquote{Do not ask what it is. Ask what you can say about it.}
+\logo{logo.jpg}
+\cover{cover.pdf}
+%green color
+   \definecolor{main1}{RGB}{210,168,75}
+   \definecolor{seco1}{RGB}{9,80,3}
+   \definecolor{thid1}{RGB}{0,175,152}
+%cyan color
+   \definecolor{main2}{RGB}{239,126,30}
+   \definecolor{seco2}{RGB}{0,175,152}
+   \definecolor{thid2}{RGB}{236,74,53}
+%cyan color
+   \definecolor{main3}{RGB}{127,191,51}
+   \definecolor{seco3}{RGB}{0,145,215}
+   \definecolor{thid3}{RGB}{180,27,131}
+
+
+\usepackage{makecell}
+\usepackage{lipsum}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{latexsym}
+\usepackage{hyperref}
+\usepackage{feynmf}
+\usepackage{exscale}
+\usepackage{relsize}
+\usepackage{bm}%bold math, for vector
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Scattering theory}
+\section{Lippmann–Schwinger equation}
+Imagine a particle coming in and getting scattered by a short-ranged potential $V(x)$ located around the origin $x \sim 0$. The time-independent Schr\"{o}dinger equation is simply
+\[(H_0 + V)|\psi\rangle = E |\psi\rangle\]
+Here, $H_0 = \frac{p^2}{2m}$ is the free-particle Hamiltonian operator. We can write the solution as
+\[|\psi^{(\pm)}\rangle = \frac{1}{E-H_0 \pm i\epsilon}V|\psi^{(\pm)}\rangle + |\phi\rangle\]
+Here, $H_0 |\phi\rangle = E |\phi\rangle$. In coordinate representation,
+\[\psi^{(\pm)}(\mathbf{x}) = \phi(\mathbf{x}) + \int d^3x' \langle \mathbf{x} | \frac{1}{E-H_0 \pm i\epsilon} | \mathbf{x}' \rangle V(\mathbf{x}') \psi^{(\pm)}(\mathbf{x}')\]
+Here, $\phi(\mathbf{x}) = \frac{e^{i\mathbf{k}\cdot\mathbf{x}}}{(2\pi)^{\frac{3}{2}}}$. Define the Green function as
+\[G_{\pm}(\mathbf{x},\mathbf{x}') \equiv \frac{1}{2m} \langle \mathbf{x} | \frac{1}{E-H_0 \pm i\epsilon} | \mathbf{x}' \rangle\]
+We can derive that
+\[G_{\pm}(\mathbf{x},\mathbf{x}') = -\frac{1}{4\pi} \frac{e^{\pm ik|\mathbf{x}-\mathbf{x}'|}}{|\mathbf{x}-\mathbf{x}'|}\]
+where $k = \sqrt{2mE}$. And it is easy to show that
+\[(\nabla^2 + k^2)G_{\pm}(\mathbf{x},\mathbf{x}') = \delta(\mathbf{x}-\mathbf{x}')\]
+So, we have
+\[\psi^{(\pm)}(\mathbf{x}) = \frac{e^{i\mathbf{k}\cdot\mathbf{x}}}{(2\pi)^{\frac{3}{2}}} - 2m \int d^3x' \frac{1}{4\pi} \frac{e^{\pm ik|\mathbf{x}-\mathbf{x}'|}}{|\mathbf{x}-\mathbf{x}'|} V(\mathbf{x}') \psi^{(\pm)}(\mathbf{x}')\]
+We now can interpret $\psi^{+}(\mathbf{x})$ as a superposition of incident plane wave and scattered wave which propagate from scatterer to outside region. From now on, we will denote it as $\psi(\mathbf{x})$.
+
+The experiment is done typically by placing the detector far away from the scatterer $|\mathbf{x}| \ll a$ where $a$ is the "size" of the scatterer. The integration over $\mathbf{x}'$, on the other hand, is limited within the "size" of the scatterer because of the $V(\mathbf{x}')$ factor. Therefore, we are in the situation $|\mathbf{x}| \ll |\mathbf{x}'|$, and hence can use the approximation
+\[|\mathbf{x}-\mathbf{x}'| \approx |\mathbf{x}| - \frac{\mathbf{x}' \cdot \mathbf{x}}{|\mathbf{x}|}\]
+Under this limit,
+\[\psi(\mathbf{x}) = \frac{e^{i\mathbf{k}\cdot\mathbf{x}}}{(2\pi)^{\frac{3}{2}}} - 2m \frac{e^{ikr}}{4\pi r} \int d^3x' e^{-\mathbf{k}' \cdot \mathbf{x}'} V(\mathbf{x}') \psi(\mathbf{x}')\]
+Here, $r = |\mathbf{x}|$ and $\mathbf{k}' = k \frac{\mathbf{x}}{r}$. It is customary to write this equation in the form
+\[\psi(\mathbf{x}) = \frac{1}{(2\pi)^{\frac{3}{2}}}\left( e^{i\mathbf{k}\cdot\mathbf{x}} +  f(\mathbf{k},\mathbf{k}') \frac{e^{ikr}}{r} \right) \]
+Here,
+\[f(\mathbf{k},\mathbf{k}') \equiv - \frac{m}{2\pi} (2\pi)^3  \langle \mathbf{k}'| V | \psi\rangle \]
+Recall the definition of cross section
+\[\sigma \equiv \frac{\mbox{Number of Events}}{\mbox{Time} \times \mbox{Incident Flux}}\]
+So, the differential cross section for particles being scattered into the solid angle is
+\[d\sigma = \frac{|\mathbf{j}_{\mathrm{scatt}}| r^2 d\Omega}{|\mathbf{j}_{\mathrm{inc}}|} = |f(\mathbf{k},\mathbf{k}')|^2 d\Omega\]
+
+In a more realistic situation, we should use wave packets to describe the scattering process. The basic picture is a free wave packet approaches the scattering center. After a long time, we have both the original wave packet moving in the original direction plus a spherical wave front that moves outward. The details can be found in the section 3 of the lecture notes 
+\href{http://hitoshi.berkeley.edu/221B/index.html}{\emph{Scattering Theory I (Hitoshi Murayama)}}.
+
+Furthermore, if we require that the normalization of the wave function should always satisfy $\int dx^3 |\psi(\mathbf{x})|^2$ for any $t$, as guaranteed by the unitarity of time evolution operator. This requirement leads to a special requirement on the scattered wave, and hence $f(\mathbf{k},\mathbf{k}')$, from witch we can derive the optical theorem.
+
+\begin{newthem}[Optical theorem]
+\[\mathrm{Im} f(\theta = 0) = \frac{k\sigma_{\mathrm{tot}}}{4\pi}\]
+where
+\[f(\theta = 0) \equiv f(\mathbf{k},\mathbf{k}),\]
+the setting of $\mathbf{k} \equiv \mathbf{k}'$ imposes scattering in the forward direction, and
+\[\sigma_{\mathrm{tot}} = \int \frac{d\sigma}{d\Omega} d\Omega\]
+\end{newthem}
+The meaning of this theorem is clear. Because the scattered wave takes the probability away to different directions, the total probability for the particle to go to the forward direction (unscattered) should decrease. This decrease is caused by the interference between the unscattered and scattered waves and hence is proportional to $f(0)$. On the other hand, the amount of decrease in the forward direction should equal the total probability at other directions, which is proportional to the total cross section. The proof can be found in the section 4 of the lecture notes \href{http://hitoshi.berkeley.edu/221B/index.html}{\emph{Scattering Theory I (Hitoshi Murayama)}}.
+
+\section{Born approximation}
+If $|\psi\rangle = |\phi\rangle + O(V)$ is close to $|\phi\rangle$, we can solve the Lippmanmn-Schwinger equation by perturbation theory. The lowest order approximation in $V$ is
+\[|\psi\rangle = \frac{1}{E-H_0 + i\epsilon} V|\phi\rangle + |\phi\rangle\]
+This is called Born approximation. In coordinate representation,
+\[f^{(1)}(\mathbf{k},\mathbf{k}') = - \frac{m}{2\pi} \int d^3x V(\mathbf{x}) e^{i\mathbf{q}\cdot\mathbf{x}}\]
+Here, $\mathbf{q} = |\mathbf{k} - \mathbf{k}'|$. If the potential is central, we can derive that
+\[f^{(1)}(\mathbf{k},\mathbf{k}') = - \frac{2m}{q} \int_0^{\infty} dr \: r V(r) \sin(qr)\]
+
+\subsubsection{Yukawa potential}
+\[V = \frac{\alpha}{r}  e^{-\mu r}\]
+So, we can derive
+\[f(\theta) = - \frac{2m\alpha}{q^2 + \mu^2}\]
+Different cross section is therefore given by
+\[\frac{d\sigma}{d\Omega} = (2m\alpha)^2 \frac{1}{[2k^2(1-\cos\theta) + \mu^2]^2}\]
+The total cross section is obtained by integrating over $d\Omega$,
+\[\sigma = (2m\alpha)^2 \frac{4\pi}{4k^2\mu^2 + \mu^4}\]
+
+\subsubsection{Coulomb potential}
+\[V = \frac{\alpha}{r}\]
+Take the limit $\mu \to 0$, we can get
+\[f(\theta) = - \frac{2m\alpha}{q^2}\]
+Different cross section is given by
+\[\frac{d\sigma}{d\Omega} = (\frac{\alpha}{4E})^2 \frac{1}{\sin^4{\frac{\theta}{2}}}\]
+The total cross section diverges. The divergence is in the $\cos\theta$ integral when $\theta \to 0$. In other words, the divergence occurs for the small momentum transfer $q \to 0$, which corresponds to large distances.
+The reason why the total cross section diverges is because the Coulomb potential is actually a long-range force. No matter how far the incident particles are from the charge, there is always an effect on the motion of the particles and they get scattered.
+
+\subsubsection{Form factor}
+\noindent
+If the source of Coulomb potential has an distribution $\rho_N(\mathbf{x})$, then
+\[V(\mathbf{x}) = \int d^3x \frac{\alpha}{|\mathbf{x}-\mathbf{x}'|} \rho(\mathbf{x}')\]
+Note that the potential is mathematically a convolution of the Coulomb potential and the probability density. Since the first Born amplitude is nothing but the Fourier transform of the potential, the convolution becomes a product of Fourier transforms, one for the Coulomb potential and the other for the probability density. So
+\[f(\theta) = f(\theta)_{\mathrm{pointlike}} F(q)\]
+Here,
+\[F(q) \equiv \int d^3x \rho_N(\mathbf{x}) e^{i \mathbf{q} \cdot \mathbf{x}},\]
+being called form factor.
+
+\subsubsection{Born expansion}
+\noindent
+Define T-matrix by
+\[V | \psi \rangle = T |\phi\rangle\]
+Using the definition of the T-matrix, we find
+\[f(\mathbf{k},\mathbf{k}') = - \frac{m}{2\pi} (2\pi)^3  \langle \mathbf{k}'| T | \mathbf{k}\rangle \]
+Using the Lippmann–Schwinger equation and multiplying the
+both sides by $V$ from left, we find
+\[ T |\phi\rangle = V \frac{1}{E-H_0 + i\epsilon}T|\phi\rangle + V|\phi\rangle\]
+A formal solution to the T-matrix is
+\[T = \frac{1}{1-V\frac{1}{E-H_0 + i\epsilon}}V\]
+By Taylor expanding this operator in geometric series, we find
+\[T = V + V \frac{1}{E-H_0 + i\epsilon} V + V \frac{1}{E-H_0 + i\epsilon} V \frac{1}{E-H_0 + i\epsilon} V + \cdots\]
+So,
+\[|\psi\rangle = \left( 1 +  \frac{1}{E-H_0 + i\epsilon} V +  \frac{1}{E-H_0 + i\epsilon} V \frac{1}{E-H_0 + i\epsilon} V + \cdots \right) | \phi \rangle\]
+The first term is the wave which did not get scattered.
+The second term is the wave that gets scattered at a point in the potential and then propagates outwards by the propagator. 
+In the third term, the wave gets scattered at a point in the potential, propagates for a while, and gets scattered again at another point in the potential, and propagates outwards. 
+In the $n+1$-th term, there are $n$ times scattering of the wave before it propagates outwards.
+
+\section{Partial wave analysis}
+\subsubsection{Partial wave expansion}
+When the potential is \textbf{central}, angular momentum is conserved due to Noether's theorem. Therefore, we can expand the wave function in the eigenstates of the angular momentum. Obtained waves with definite angular momenta are called partial waves. We can solve the scattering problem for each partial wave separately, and then in the end put them together to obtain the full scattering amplitude.
+The plane wave can be expanded as follows.
+\[e^{ikz} = \sum_{l=0}^{\infty}(2l+1)i^l j_l(kr) P_l(\cos \theta)\]
+Here, $j_l(kr)$ is spherical Bessel functions of first kind. The asymptotic behaviour of $j_l(kr)$ at large $r$ can be written as
+\[j_l(kr) \sim \frac{\sin(kr-\frac{l\pi}{2})}{kr}\]
+so,
+\[e^{ikz} \sim \frac{1}{2ikr} \sum_{l=0}^{\infty} (2l+1) (e^{ikr} - (-1)^l e^{-ikr})P_l(\cos \theta)\]
+Meanwhile, the $f$ factor can be expanded as
+\[f(\theta) = \sum_{l=0}^{\infty} f_l (2l+1)P_l(\cos \theta)\]
+
+\subsubsection{Optical theorem constraint}
+\noindent
+The cross section can be represented by expansion coefficient of $f$ factor as
+\[\sigma = 4\pi \sum_l (2l+1)|f_l|^2\]
+On the other hand, 
+\[\mathrm{Im} f(0) = \sum_l (2l+1) \mathrm{Im} f_l\]
+From optical theorem we can derive that
+\[|f_l|^2 = \frac{1}{k} \mathrm{Im} f_l\]
+This constraint can be rewritten as
+\[|1+2ikf_l|^2 = 1\]
+So we can define a phase $\delta_l$ as 
+\[1+2ikf_l = e^{i\delta_l}\]
+or equivalently,
+\[f_l = \frac{1}{k} e^{i\delta_l} \sin(\delta_l)\]
+
+\subsubsection{Phase shifts}
+\noindent
+We can derive the asymptotic behaviour of the wave function as
+\[\psi(\mathbf{x}) \sim \frac{1}{2ikr} \sum_{l} (2l+1)P_l(\cos \theta) [e^{ikr}e^{2i\delta_l} - (-1)^l e^{-ikr}]\]
+Compare it to the case of the plane wave without scattering. What this equation says is that the wave converging on the scatterer
+has the well-defined phase factor $-(-1)^l$, the same as in the case without scattering. On the other hand, the wave that emerges from the scatterer has an additional phase factor $e^{2i\delta_l}$. All what scattering did is to shift the phase of the emerging wave by $2\delta_l$. The reason why this is merely a phase factor is
+the conservation of probability. What converged to the origin must come out with the same strength. But this shift in the phase causes the interference among all partial waves different from the case without the phase shifts, and the result is not a plane wave but contains the scattered wave.\\
+In terms of the phase shifts, the cross section is given by
+\[\sigma = \frac{4\pi}{k^2} \sum_l (2l+1) \sin^2\delta_l\]
+Actual calculation of phase shifts is basically to solve the Schr\"{o}dinger equation for each partial waves,
+\[\left[-\frac{1}{r}\frac{d^2}{dr^2}r+\frac{l(l+1)}{r^2}+2mV(r)\right]R_l(r) = k^2 R_l(r)\]
+After solving the equation, we take the asymptotic limit $r \to \infty$, and write $R_l(r)$ as a linear combination of $j_l(kr)\cos \delta_l + n_l(kr) \sin \delta_l $. The relative coefficients of $j_l$ and $n_l$ determines the phase shift $\delta_l$, and hence the cross section.
+\end{document}
