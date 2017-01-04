@@ -55,16 +55,15 @@ If $\frac{\partial L}{\partial t}=0$,then we get
  For an isolated system of particles in inertial frame, 
 \[\bm{p}_i = m_i \bm{v}_i\]
 \[H(q,p,t)=\sum_i \frac{p_i^2}{2m} + U(\bm{r}_1,\bm{r}_2,\cdots)\]
-\[\dot{\bm{p}}_i =-\nabla_{\bm{r}_i} U \quad \dot{r}_i = \frac{\bm{p}_i}{m_i}\]
+\[\dot{\bm{p}}_i =-\nabla_{\bm{r}_i} U \quad \dot{\bm{r}}_i = \frac{\bm{p}_i}{m_i}\]
 \end{example}
  
 \subsection{Poisson Brackets}
-\noindent
 First, we assume the bracket operation has the following properties:
 \[ \left[f,g\right]=-\left[g,f\right] \]
 \[\left[\alpha_1 f_1+\alpha_2 f_2,\beta_1 g_1+\beta_2 g_2\right]=\alpha_1 \beta_1\left[f_1,g_1\right]
 +\alpha_1 \beta_2\left[f_1,g_2\right]+\alpha_2 \beta_1\left[f_2,g_1\right]+\alpha_2 \beta_2\left[f_2,g_2\right]\]
-\[\left[f_1 f_2,g_1 g_2\right]=f_1\left[f_2,g_1\right]g_2+f_1 g_1\left[f_2,g_2\right]+g_1\left[f_1,g_2\right]f_2 +\left[f_1,f_2\right]g_2 f_2 \]
+\[\left[f_1 f_2,g_1 g_2\right]=f_1\left[f_2,g_1\right]g_2+f_1 g_1\left[f_2,g_2\right]+g_1\left[f_1,g_2\right]f_2 +\left[f_1,g_1\right]g_2 f_2 \]
 \[\left[f,\left[g,h\right]\right]+\left[g,\left[h,f\right]\right]+\left[h,\left[f,g\right]\right]=0\]
 Here, $f,g,h$ are functions of $p^i,q_i,t$.
 Then, we assume that
@@ -121,7 +120,6 @@ As a result, the condition for canonical transformation can also be stated as
 \subsection{Evolution as canonical transformations}
 Let $q_t$,$p_t$ be the values of the canonical variables at time $t$, and $q_{t+\tau}$,$p_{t+\tau}$ their values at another time $t+\tau$. The latter are some functions of the former:
 \[q_{t+\tau} = q(q_t,p_t,t,\tau) \quad p_{t+\tau} = p(q_t,p_t,t,\tau)\]
-
 If these formulae are regarded as a transformation from the variables $q_t$,$p_t$ to $q_{t+\tau}$, $p_{t+\tau}$, then this transformation is canonical. This is evident from the
 expression
 \[dS = p_t dq_t + p_{t+\tau} dq_{t+\tau} -(H_{t+\tau}-H_t)dt\]
@@ -145,7 +143,6 @@ The phase volume is invariant under canonical transformation.The change in $p$ a
 \end{newproof}
 
 \section{Symmetry and Conservation Laws(2)}
-\noindent
 Suppose $g$ is a function of $p$ and $q$. If the transformation of $q$ and $p$ can be described as
 \[q \rightarrow q + \epsilon [q,g]\]
 \[p \rightarrow p + \epsilon [p,g]\]
@@ -154,7 +151,6 @@ We can prove that
 So if $H$ is invariant under the transformation, then $[H,g] = 0$, that means $\frac{dg}{dt} = 0$, i.e. $g$ is a conserved quantity of the motion.
 
 \section{Hamilton-Jacobi equation}
-\noindent
 We define
 \[S(q,t)=\left(\int_{q_0,t_0}^{q,t} L dt\right)|_{extremum}\]
 We can prove that
@@ -173,7 +169,6 @@ So,
 By means of the $s$ equations $\beta_s = \frac{\partial f}{\partial \alpha^s}$, the $s$ coordinates $q$ can be expressed in terms of the time and the $2s$ constants. This gives the general integral of the equations of motion.
 
 \section{Symmetry and Conservation Laws(3)}
-\noindent
 If $S$ is invariant under transformation
 $q_i \rightarrow q_i + \delta q_i$, then 
 \[\delta S = (\sum_i p^i \delta q_i) |_{q_0,t_0}^{q,t} = 0\]

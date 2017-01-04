@@ -46,7 +46,7 @@ First, we assume there is an upper limit of velocity of propagation of interacti
 The invariant symbol of the vector representation of Lorentz transformation is $\eta^{\mu \nu}$
 \[\Lambda^{\mu}_{\phantom{\mu}\rho}  \Lambda^{\nu}_{\phantom{\nu}\sigma}  \eta^{\rho \sigma} = \eta^{\mu \nu},\]
 where,
-\[\eta_{\mu \nu} \equiv \left[ 
+\[\eta^{\mu \nu} \equiv \left[ 
 \begin{matrix} 
 -1& & & \\ 
 & +1 & & \\
@@ -63,36 +63,32 @@ The inverse matrix of $\eta^{\mu \nu}$ is
 & & & +1
 \end{matrix} 
 \right]\]
-We can use $\eta^{\mu \nu}$ and and its inverse $\eta^{\mu \nu}$ to raise and lower vector indices, 
+We can use $\eta^{\mu \nu}$ and and its inverse $\eta_{\mu \nu}$ to raise and lower vector indices, 
 \[x_{\mu} \equiv \eta_{\mu \nu} x^{\nu}\]
 And we can verify the following equations,
-\[\Lambda^{\rho}_{\phantom{\rho}\mu} \Lambda_{\rho}^{\phantom{\rho}\nu} = \delta^{\nu}_{\mu} \]
+\[\Lambda^{\mu}_{\phantom{\rho}\rho} \Lambda_{\nu}^{\phantom{\rho}\rho} = \delta^{\nu}_{\mu} \]
 \[x^{\mu} = \eta^{\mu \nu} x_{\nu}\]
 \[\overline{x}_{\mu} = \Lambda_{\mu}^{\phantom{\mu}\nu} x_{\nu}\]
 \[\Lambda_{\mu}^{\phantom{\mu}\rho}  \Lambda_{\nu}^{\phantom{\nu}\sigma}  \eta_{\rho \sigma} = \eta_{\mu \nu},\]
 In a special case when the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
 \[\overline{x}^{0} = \gamma x^0 - \gamma \beta x^1\]
 \[\overline{x}^{1} = -\gamma \beta x^0 + \gamma x^1\]
-
 Some physical quantity will behave like a tensor (vector,scalar) when transforming form one inertial frame to another. For example,
 \paragraph{scalar} proper time: $d \tau$, mass: $m$, electrical charge $e$
-\paragraph{vector} four velocity: $v^{\mu} = \frac{dx^{\mu}}{d \tau}$, four momentum: $p^{\mu} = m v^{\mu}$, four acceleration: $a^{\mu} = \frac{du^{\mu}}{d \tau}$, four force: $f^{\mu} = m a^{\mu}$.\\ \\
-\noindent
+\paragraph{vector} four velocity: $u^{\mu} = \frac{dx^{\mu}}{d \tau}$, four momentum: $p^{\mu} = m u^{\mu}$, four acceleration: $a^{\mu} = \frac{du^{\mu}}{d \tau}$, four force: $f^{\mu} = m a^{\mu}$.\\ \\
 We can also define the corresponding three vector.
-\paragraph{three velocity}: $\hat{u}^{i} = \frac{dx^i}{dt}$
-\[u^0 = \gamma_v, u^i = \gamma \hat{u}^i\]
+\paragraph{three velocity}: $\hat{v}^{i} = \frac{dx^i}{dt}$
+\[u^0 = \gamma_v, u^i = \gamma \hat{v}^i\]
 When the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
 \[\overline{\hat{v}}^1 = \frac{\hat{v}^1 - \beta}{1-\hat{v}^1 \beta}\]
-\[\overline{\hat{v}}^2 = \frac{\hat{v}^2}{\gamma(1-\hat{v}^2 \beta})\]
-\[\overline{\hat{v}}^3 = \frac{\hat{v}^3}{\gamma(1-\hat{v}^3 \beta})\]
+\[\overline{\hat{v}}^2 = \frac{\hat{v}^2}{\gamma(1-\hat{v}^2 \beta)}\]
+\[\overline{\hat{v}}^3 = \frac{\hat{v}^3}{\gamma(1-\hat{v}^3 \beta)}\]
 \paragraph{three momentum}: $\hat{p}^{i} = p^i$
-\[\hat{p}^{i} \gamma_v \hat{v}^i\]
-\paragraph{three acceleration}: $\hat{a}^{i} = \frac{dv^i}{dt}$\\
+\paragraph{three acceleration}: $\hat{a}^{i} = \frac{dv^i}{dt}$
 \paragraph{three force}: $\hat{f}^i = \frac{d\hat{p}^i}{dt}$
 \[f^i = \gamma_v \hat{f}^i\]
 
 \section{Relativistic Mechanics}
-\noindent
 For a free particle, we have
 \[\frac{dp^{\mu}}{d\tau} = 0\]
 It can be formulated in several ways
@@ -126,12 +122,10 @@ $\sum M^{\mu \nu} $ is conserved, where $M^{\mu \nu} = x^{\mu}p^{\nu} - x^{\nu}p
 
 \section{Relativistic Scattering}
 \subsection{Distribution function}
-The number of particles in the region $\bm{r}+d\bm{r}$ and $\bm{p} + d\bm{p}$ is $f(\bm{p},\bm{r})dp_x dp_y dp_z dx dy dz$. Then  $f(\bm{p},\bm{r})$ is called distribution function.
-
+The number of particles in the region $\bm{r}+d\bm{r}$ and $\bm{p} + d\bm{p}$ is $f(\bm{p},\bm{r})dp_x dp_y dp_z dx dy dz$. Then  $f(\bm{p},\bm{r})$ is called distribution function.\\
 We first determine the properties of the "volume element" $dp_x dp_y dp_z$, with respect to Lorentz transformations. If we introduce a four-dimensional coordinate system, on whose axes are marked the components of the four-momentum of a particle, then $dp_x dp_y dp_z$, can be considered as the zeroth component of an element of the hypersurface defined by the equation $p^{\mu}p_{\mu} + m^2 = 0$. The element of hypersurface is a four-vector directed along the normal to the hypersurface; in our case the direction of the normal obviously coincides with the direction of the four-vector $p^{\mu}$. From this it follows that the ratio
 \[\frac{dp_x dp_y dp_z}{E}\]
-is an invariant quantity, since it is the ratio of corresponding components of two parallel four-vectors.
-
+is an invariant quantity, since it is the ratio of corresponding components of two parallel four-vectors.\\
 Then, we notice that $dVdt$ is invariant under Lorentz transformation and $dt = \frac{E}{m} d\tau $. So we can infer that
 \[dx dv dz E\]
 is an invariant quantity quantity. Putting all together, we know the phase volume
@@ -143,12 +137,10 @@ in coordinate transformation.
 \subsection{Invariant cross section}
 Recall the definition of cross section
 \[\sigma \equiv \frac{\mbox{Number of Events per target}}{\mbox{Time} \times \mbox{Incident Flux}}\]
-Here, the incident flux and time are measured in the frame of target particle.
-
-Suppose that we have two colliding beams; we denote by $n_1$ and $n_2$ the particle densities in them and by b$\bm{v}_1$ and $\bm{v_2}$ the velocities of the particles. In the reference system in which particle 2 is at rest, we are dealing with the collision of the beam of particles 1 with a stationary target. Then according to the usual definition of the cross-section $\sigma$, the number of collisions occurring in volume $dV$ in time $dt$ is 
+Here, the incident flux and time are measured in the frame of target particle.\\
+Suppose that we have two colliding beams; we denote by $n_1$ and $n_2$ the particle densities in them and by $\bm{v}_1$ and $\bm{v_2}$ the velocities of the particles. In the reference system in which particle 2 is at rest, we are dealing with the collision of the beam of particles 1 with a stationary target. Then according to the usual definition of the cross-section $\sigma$, the number of collisions occurring in volume $dV$ in time $dt$ is 
 \[dN = \sigma v_{rel} n_1 n_2 dV dt\]
-,where $v_{rel}$ is the velocity of particle 1 in the rest system of particle 2 (which is just the definition of the relative velocity of two particles in relativistic mechanics). 
-
+,where $v_{rel}$ is the velocity of particle 1 in the rest system of particle 2 (which is just the definition of the relative velocity of two particles in relativistic mechanics). \\
 The number $dN$ is by its very nature an invariant quantity. We would like to express it in a form which is applicable in any reference system: 
 \[dN = A n_1 n_2 dV dt\] 
 where $A$ is a number to be determined, for which we know that its value in the rest frame of one of the particles is $v_{rel} \sigma$. We shall always mean by $\sigma$ precisely the cross-section in the rest frame of one of the particles, i.e. by definition, an invariant quantity. From its definition, the relative velocity $v_{rel}$ is also invariant. The product dVdt is an invariant. Therefore the product $A n_1 n_2$ must also be an invariant. The law of transformation of the particle density n is
@@ -186,9 +178,9 @@ Here,
 \[a = \frac{p_1(E_1m_2+m_2^2)}{m_1^2 + m_2^2 + 2m_2 E_1} = \frac{m_2V}{\sqrt{1-V^2}} \quad b = \frac{m_2 p_1}{\sqrt{m_1^2 + m_2^2 + 2m_2 E_1}} = \frac{a}{\sqrt{1-V^2}} \quad c = \frac{ p_1(E_1m_2+m_1^2)}{m_1^2 + m_2^2 + 2m_2 E_1}\]
 Here $V = \frac{p_1}{E_1 + m_2}$ is the velocity of particle 2 before scattering in C frame. And it is easy to see that $a + c = p_1$. The result above can be represented by a picture.
 \begin{figure}[!h]
-\centering
-\includegraphics[height=3.4cm ,width=15.98cm]{CFT/scattering.png}
-\caption{Relativistic scattering}
+	\centering
+	\includegraphics[height=3.4cm ,width=15.98cm]{CFT/scattering.png}
+	\caption{Relativistic scattering}
 \end{figure}
 
 \chapter{Classical field theory}
@@ -198,7 +190,7 @@ Here $V = \frac{p_1}{E_1 + m_2}$ is the velocity of particle 2 before scattering
 \subsubsection{Locality of the theory}
 There are no terms in the Lagrangian coupling $\phi(\bm{x},t)$ directly to  $\phi(\bm{y},t)$ with $\bm{x} \neq \bm{y}$. The closet we get for the $\bm{x}$ label is coupling between $\phi(\bm{x},t)$ and $\phi(\bm{x}+\delta\bm{x},t)$ through the gradient term $\bm{\nabla} \phi$.
 \subsubsection{Lorentz invariance}
-\noindent
+
 Scalar fields:
 \[\overline{\phi}(x) = \phi(\Lambda^{-1} x)\]
 Vector fields:
@@ -209,16 +201,15 @@ Lagrangian is a scalar, or more loosely, action is invariant under Lorentz trans
 
 \section{Symmetry and conservation law}
 \begin{newthem}[Noether's theorem]
-Every continuous symmetry of the Lagrangian gives rise to a conserved current $j^{\mu}(x)$ such that the equation of motion imply $\partial_{\mu} j^{\mu} = 0$.
-Suppose that the infinitesimal transformation is
-\[\phi_a \rightarrow \phi_a + \delta \phi_a\]
-\[\mathcal{L} \rightarrow  \mathcal{L} + \delta \mathcal{L} \]
-and if $\delta \mathcal{L} = \partial_{\mu} K^{\mu}$, we can get
-\[j^{\mu} = -\frac{\partial \mathcal{L}}{\partial (\partial_{\mu} \phi_a)} \delta \phi_a + K^{\mu}\]
+	Every continuous symmetry of the Lagrangian gives rise to a conserved current $j^{\mu}(x)$ such that the equation of motion imply $\partial_{\mu} j^{\mu} = 0$.
+	Suppose that the infinitesimal transformation is
+	\[\phi_a \rightarrow \phi_a + \delta \phi_a\]
+	\[\mathcal{L} \rightarrow  \mathcal{L} + \delta \mathcal{L} \]
+	and if $\delta \mathcal{L} = \partial_{\mu} K^{\mu}$, we can get
+	\[j^{\mu} = -\frac{\partial \mathcal{L}}{\partial (\partial_{\mu} \phi_a)} \delta \phi_a + K^{\mu}\]
 \end{newthem}
 
 \subsubsection{space-time translation}
-\noindent
 $\overline{x} = x - a$ 
 \[j^{\mu} = a_{\nu} T^{\mu \nu}\]
 \[T^{\mu \nu} \equiv -\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}\phi_a)} \partial^{\nu} \phi_a + \eta^{\mu \nu} \mathcal{L}\]
@@ -226,7 +217,7 @@ If we define $P^{\mu} \equiv \int T^{0 \mu} d^3 x$,then we have the law of momen
 \[\frac{d P^{\mu}}{dt} = 0\]
 
 \subsubsection{Lorentz Transformation} 
-\noindent
+
 $\overline{x}^{\mu} = x^{\mu} + \delta \omega^{\mu}_{\phantom{\mu}\nu} x^{\nu}$\\
 The infinitesimal Lorentz transformation can be written as $I+\delta \omega^{\mu}_{\phantom{\mu}\nu}$
 \[\delta \omega^{\mu}_{\phantom{\mu}\nu} = \left[ 
@@ -248,13 +239,12 @@ If we define $M^{\nu \rho} \equiv \int M^{0 \nu \rho} d^3 x$, then we have the l
 
 \section{Functional derivatives}
 \begin{newdef}[Functional derivatives]
-Given a manifold $M$ representing (continuous/smooth) functions $\rho$ (with certain boundary conditions etc.), and a functional $F$ defined as
-\[F\colon M\rightarrow \mathbb {R} \quad {\mbox{or}}\quad F\colon M\rightarrow \mathbb {C} \,,\]
-the functional derivative of $F[\rho]$, denoted $\frac{\delta F}{\delta \rho}$,is defined by
-\[{\begin{aligned}\int {\frac {\delta F}{\delta \rho }}(x)\phi (x)\;dx&=\lim _{\varepsilon \to 0}{\frac {F[\rho +\varepsilon \phi ]-F[\rho ]}{\varepsilon }}\\&=\left[{\frac {d}{d\epsilon }}F[\rho +\epsilon \phi ]\right]_{\epsilon =0},\end{aligned}}\]
-where $\phi$ is an arbitrary function. The quantity $\epsilon \phi$ is called the variation of $\rho$. 
+	Given a manifold $M$ representing (continuous/smooth) functions $\rho$ (with certain boundary conditions etc.), and a functional $F$ defined as
+	\[F\colon M\rightarrow \mathbb {R} \quad {\mbox{or}}\quad F\colon M\rightarrow \mathbb {C} \,,\]
+	the functional derivative of $F[\rho]$, denoted $\frac{\delta F}{\delta \rho}$,is defined by
+	\[{\begin{aligned}\int {\frac {\delta F}{\delta \rho }}(x)\phi (x)\;dx&=\lim _{\varepsilon \to 0}{\frac {F[\rho +\varepsilon \phi ]-F[\rho ]}{\varepsilon }}\\&=\left[{\frac {d}{d\epsilon }}F[\rho +\epsilon \phi ]\right]_{\epsilon =0},\end{aligned}}\]
+	where $\phi$ is an arbitrary function. The quantity $\epsilon \phi$ is called the variation of $\rho$. 
 \end{newdef}
-
 Like the derivative of a function, the functional derivative satisfies the following properties, where $F[\rho]$ and $G[\rho]$ are functionals:\\
 Linearity:
 \[{\frac {\delta (\lambda F+\mu G)[\rho ]}{\delta \rho (x)}}=\lambda {\frac {\delta F[\rho ]}{\delta \rho (x)}}+\mu {\frac {\delta G[\rho ]}{\delta \rho (x)}},\]
@@ -263,15 +253,15 @@ Product rule:
 \[{\frac {\delta (FG)[\rho ]}{\delta \rho (x)}}={\frac {\delta F[\rho ]}{\delta \rho (x)}}G[\rho ]+F[\rho ]{\frac {\delta G[\rho ]}{\delta \rho (x)}}\,,\]
 Chain rules:\\
 If $F$ is a functional and $G$ an operator, then
-\[{\displaystyle \displaystyle {\frac {\delta F[G[\rho ]]}{\delta \rho (y)}}=\int dx{\frac {\delta F[G]}{\delta G(x)}}_{G=G[\rho ]}\cdot {\frac {\delta G[\rho ](x)}{\delta \rho (y)}}\ .}\]
+\[{\displaystyle \displaystyle {\frac {\delta F[G[\rho ]]}{\delta \rho }(y)}=\int dx{\frac {\delta F[G[\rho]]}{\delta G[\rho]}}(x)\cdot {\frac {\delta G[\rho ]}{\delta \rho}(x,y)}\ }\]
 If $G$ is an ordinary differentiable function $g$, then this reduces to
-\[{\displaystyle \displaystyle {\frac {\delta F[g(\rho )]}{\delta \rho (y)}}={\frac {\delta F[g(\rho )]}{\delta g[\rho (y)]}}\ {\frac {dg(\rho )}{d\rho (y)}}\ .} \]
+\[{\displaystyle \displaystyle {\frac {\delta F[g(\rho )]}{\delta \rho}(y)}={\frac {\delta F[g(\rho )]}{\delta g[\rho ]}(y)}\ {\frac {dg(\rho )}{d\rho }(y)}\ } \]
 \begin{newprop}[Properties of functional derivatives]
-\[\frac{\delta F}{\delta \rho} (y) = \lim_{\epsilon \to \infty} \frac{1}{\epsilon} \{ F[\rho(x) + \epsilon \delta(x-y)] - F[\rho(x)] \}\]
-\[\frac{\delta f(x)}{\delta f(y)} = \delta(x-y)\]
-\[\frac{\delta}{\delta f(y)} \int g\left( f(x)\right) dx =  g'(f(y))\]
-\[\frac{\delta f'(x)}{\delta f(y)} = \frac{d}{dx}\delta(x-y)\]
-\[\frac{\delta}{\delta f(y)} \int g\left( f'(x)\right) dx = -\frac{d}{dy} g'(f'(y))\]
+	\[\frac{\delta F}{\delta \rho} (y) = \lim_{\epsilon \to \infty} \frac{1}{\epsilon} \{ F[\rho(x) + \epsilon \delta(x-y)] - F[\rho(x)] \}\]
+	\[\frac{\delta f(x)}{\delta f(y)} = \delta(x-y)\]
+	\[\frac{\delta}{\delta f(y)} \int g\left( f(x)\right) dx =  g'(f(y))\]
+	\[\frac{\delta f'(x)}{\delta f(y)} = \frac{d}{dx}\delta(x-y)\]
+	\[\frac{\delta}{\delta f(y)} \int g\left( f'(x)\right) dx = -\frac{d}{dy} g'(f'(y))\]
 \end{newprop}
 
 \section{Hamiltonian formulation}
@@ -283,9 +273,9 @@ Now, we can get the Hamilton equation form $\delta S =0$,
 \[\dot{\pi^a}(\bm{x},t) = -\frac{\delta}{\delta \phi_a(\bm{x},t)} H = - \frac{\partial \mathcal{H}}{\partial \phi_a} + \left(\frac{\partial \mathcal{H}}{\partial \phi_{a,b}}\right)_{,b}\]
 
 \subsection{Poission bracket}
-\noindent
+
 First, we define that
-\[[\phi_a(\bm{x}),\phi_b(\bm{y})] \equiv [\pi^a(\bm{x}),\phi_b(\bm{y})] \equiv 0\]
+\[[\phi_a(\bm{x}),\phi_b(\bm{y})] \equiv [\pi^a(\bm{x}),\pi^b(\bm{y})] \equiv 0\]
 \[[\phi_a(\bm{x}),\pi^b(\bm{y})] \equiv \delta^{b}_{a} \delta(\bm{x}-\bm{y})\]
 then, we demand that the bracket operation has the same properties as the Poission bracket in classical mechanics. And we also demand that
 \[[\partial_x A(\bm{x}),B(\bm{y})] = \partial_x [A(\bm{x}),B(\bm{y})]\]
@@ -303,19 +293,19 @@ and
 \[\frac{d[A,B]}{dt} = [A,\frac{dB}{dt}] + [\frac{dA}{dt},B]  \]
 
 \subsection{Momentum}
-\noindent
+
 It is easy to verify that
 \[P^{0} = H, \ \ \ \ P^{i} = \int -\pi^a \partial^i \phi_a d^3 x\]
 And we can get the Poisson bracket
 \begin{eqnarray}
-\left[\phi_a,P^{\mu}\right] &=& -\partial^{\mu} \phi_a \nonumber \\
-\left[\pi^a,P^{\mu}\right] &=& -\partial^{\mu} \pi^a \nonumber \\
-\left[P^{\mu},P^{\nu}\right] &=& 0 \nonumber 
+	\left[\phi_a,P^{\mu}\right] &=& -\partial^{\mu} \phi_a \nonumber \\
+	\left[\pi^a,P^{\mu}\right] &=& -\partial^{\mu} \pi^a \nonumber \\
+	\left[P^{\mu},P^{\nu}\right] &=& 0 \nonumber 
 \end{eqnarray}
 
 
 \subsection{Angular momentum}
-\noindent
+
 It is easy to verify that
 \[M^{\mu \nu} = \int (x^{\mu}T^{0\nu}-x^{\nu}T^{0\mu}-\pi^a(\Sigma^{\mu \nu})_{a}^{\phantom{a}b}\phi_b) d^3 x\]
 We define that
@@ -354,31 +344,31 @@ K_3 & J_2  & -J_1 &  0
 \right] \right)\] 
 the Poisson bracket can be written as
 \begin{eqnarray}
-\left[J_i,J_j\right] &=& \epsilon_{ijk}J_k \nonumber \\
-\left[J_i,K_j\right] &=& \epsilon_{ijk}K_k \nonumber \\
-\left[K_i,K_j\right] &=& -\epsilon_{ijk}J_k \nonumber
+	\left[J_i,J_j\right] &=& \epsilon_{ijk}J_k \nonumber \\
+	\left[J_i,K_j\right] &=& \epsilon_{ijk}K_k \nonumber \\
+	\left[K_i,K_j\right] &=& -\epsilon_{ijk}J_k \nonumber
 \end{eqnarray}
 We can use the similar method to derive that
 \[[P^{\mu},M^{\rho \sigma}] = \eta^{\mu \sigma}P^{\mu} - \eta^{\mu \rho}P^{\sigma}\]
 It can also be written as
 \begin{eqnarray}
-\left[J_i,H\right] &=& 0 \nonumber \\
-\left[J_i,P_j\right] &=& \epsilon_{ijk}P_k \nonumber \\
-\left[K_i,H\right] &=& P_i \nonumber \\
-\left[K_i,P_j\right] &=& \delta_{ij}H \nonumber
+	\left[J_i,H\right] &=& 0 \nonumber \\
+	\left[J_i,P_j\right] &=& \epsilon_{ijk}P_k \nonumber \\
+	\left[K_i,H\right] &=& P_i \nonumber \\
+	\left[K_i,P_j\right] &=& \delta_{ij}H \nonumber
 \end{eqnarray}
 At last, we define $L_i \equiv \frac{1}{2} \epsilon_{ijk} M_L^{jk}$ and $S_i \equiv \frac{1}{2} \epsilon_{ijk} M_S^{jk}$
 we can demonstrate that
 \begin{eqnarray}
-\left[L_i,S_j\right] &=& 0 \nonumber \\
-\left[S_i,P_j\right] &=& 0 \nonumber \\
-\left[L_i,P_j\right] &=& \epsilon_{ijk}P_k \nonumber
+	\left[L_i,S_j\right] &=& 0 \nonumber \\
+	\left[S_i,P_j\right] &=& 0 \nonumber \\
+	\left[L_i,P_j\right] &=& \epsilon_{ijk}P_k \nonumber
 \end{eqnarray}
 
 \chapter{Classical Electrodynamics}
 \section{The formulation of classical electrodynamics}
 \subsection{Maxwell equations and Lorentz force}
-\noindent
+
 The Lagrangian of the EM field $A^{\mu}$ when coupling with current is
 \[\mathcal{L} = -\frac{1}{4}F^{\mu\nu}F_{\mu\nu} + j^{\mu} A_{\mu}\]
 Here
@@ -402,10 +392,10 @@ We now define the electric field and magnetic field as follows,
 We also define $\rho_e \equiv j^0$ and $J^i \equiv j^i$,so
 the field equation can then be written
 \begin{eqnarray}
-\bm{\nabla} \times  \bm{B} &=& \frac{\partial \bm{E}}{\partial t} +  \bm{J} \nonumber \\
-\bm{\nabla} \times \bm{E} &=& -\frac{\partial \bm{B}}{\partial t} \nonumber \\
-\bm{\nabla} \cdot \bm{E} &=& \rho_e \nonumber \\
-\bm{\nabla} \cdot \bm{B} &=& 0 \nonumber
+	\bm{\nabla} \times  \bm{B} &=& \frac{\partial \bm{E}}{\partial t} +  \bm{J} \nonumber \\
+	\bm{\nabla} \times \bm{E} &=& -\frac{\partial \bm{B}}{\partial t} \nonumber \\
+	\bm{\nabla} \cdot \bm{E} &=& \rho_e \nonumber \\
+	\bm{\nabla} \cdot \bm{B} &=& 0 \nonumber
 \end{eqnarray}
 That is the so-called Maxwell equation.\\
 The equation of motion of the charged particle can be written as
@@ -414,7 +404,7 @@ That is the so-called Lorentz force.\\
 We note that the Field $A$ cannot be completely determined by Maxwell and Lorentz equation. If we make the transformation $A_{\mu} \to A_{\mu} + \partial_{\mu} \xi(x)$, $\mathcal{L}$ and $F^{\mu\nu}$ would be invariant, and the Maxwell and Lorentz equation is still valid. This arbitrariness of $\xi$ is called gauge invariance. The topic will be discussed in detail in QED.
 
 \subsection{Lorentz transformation of fields}
-\noindent
+
 In the new coordinate system $\overline{x}^{\mu} = \Lambda^{\mu}_{\phantom{\mu}\nu}x^{\nu}$, we have
 \[\overline{A}^{\mu}(\overline{x}) = \Lambda^{\mu}_{\phantom{\mu}\nu}A^{\nu}(\Lambda^{-1}\overline{x})\]
 In a special case when the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
@@ -434,7 +424,7 @@ We also note that $F_{\mu\nu}F^{\mu\nu}$ and $\epsilon_{\mu\nu\rho\sigma}F^{\mu\
 \[E^2 - B^2 = \mbox{ inv } \quad \bm{E} \cdot \bm{B} = \mbox{ inv }\]
 
 \subsection{Energy-momentum tensor}
-\noindent
+
 For a free EM field, the energy-momentum tensor is
 \[T_f^{\mu \nu} \equiv -\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}A_{\rho})} \partial^{\nu} A_{\rho} + \eta^{\mu \nu} \mathcal{L} = \partial^{\nu}A^{\rho} F^{\mu}_{\phantom{\rho}\rho}-\frac{1}{4}\eta^{\mu\nu}F_{\rho\sigma}F^{\rho\sigma}\]
 We note that the energy-momentum tensor defined above is not symmetric, so we define a modified energy-momentum tensor by adding a term $-\partial^{\rho}A^{\nu}F^{\mu}_{\phantom{\rho}\rho}$,so
@@ -522,19 +512,17 @@ Here, $\omega = \frac{eB}{m}$ , $a,v_{z0}$ is determined by initial condition. A
 \section{Constant electromagnetic field}
 \subsection{Coulomb' law}
 For constant electric field, the Maxwell equation take the form 
-\[\bm{\nabla} \cdot \bm{E} = \rho_e \quad \bm{\nabla} \times \bm{E} = \rho_e\]
+\[\bm{\nabla} \cdot \bm{E} = \rho_e \quad \bm{\nabla} \times \bm{E} = 0\]
 So, we have
 \[\bm{E} = -\bm{\nabla} \phi \quad \nabla^2 \phi = -\rho_e \]
 The solution is
 \[\phi(\bm{r}) = \int  \frac{\rho_e(\bm{r}')}{4\pi|\bm{r}-\bm{r}'|} dV'\]
 If $\rho_e(\bm{r}') = Q \delta(\bm{r}')$, we have
 \[\phi(\bm{r}) =  \frac{Q}{4\pi|\bm{r}|} \quad E(\bm{r}) = \frac{Q\bm{r}}{4\pi|\bm{r}|^3}\]
-
 For a system of static charged particles, the total energy is
 \[U = \frac{1}{2}\int E^2 dV = \frac{1}{2} \int \rho \phi dV = \frac{1}{2} \sum e_a \phi_a + \frac{1}{2}\sum e_a \Phi_a\]
 Here, $\phi_a$ is the electric potential at the point where $e_a$ is located, produced by $e_a$ itself, while  $\Phi_a$ is the potential produced by other charges. It is obvious that $U_{self} = \frac{1}{2} e_a \phi_a$ is infinite, indicating that classical electrodynamics is no more valid in small distance. This problem will be solved in quantum electrodynamics: the mass of charged particle we measured is already renormalized to include the electromagnetic self energy. So, actually, we have
 \[U = \frac{1}{2}\int E^2 dV - U_{self} = \frac{1}{2}\sum_{a \ne b} \frac{e_a e_b}{4\pi R_{ab}}\]
-
 If the charged particle is moving with a constant velocity, we can derive the electric field it produced by Lorentz transformation, the final result is that
 \[\bm{E} = \frac{e\bm{R}}{4\pi R^3} \frac{1-V^2}{(1-V^2\sin^2\theta)^{3/2}} \quad \bm{B} = \bm{V} \times \bm{E}\]
 Here, $\bm{R}$ is the vector point from the particle to the point we measure the electric field, and $\theta$ is the angle between $\bm{V}$ and $\bm{R}$.If $V \sim 1$, the electric field will be concentrated in the direction perpendicular to the $\bm{V}$. If $\bm{V} \ll 1$, we have
@@ -542,7 +530,7 @@ Here, $\bm{R}$ is the vector point from the particle to the point we measure the
 
 \subsection{Multipole moments}
 For a system of charged particles, the potential it produced at $\bm{R}$ is
-\[\phi = \sum_a \frac{e_a}{4\pi|\bm{R}_0 - \bm{r}_a|}\]
+\[\phi = \sum_a \frac{e_a}{4\pi|\bm{R} - \bm{r}_a|}\]
 If $R \gg r_a$, we can expand the equation around $r_a=0$. Generally, we have
 \[\frac{1}{|\bm{R} - \bm{r}|} = \sum_{l=0}^{\infty} \sum_{m=-l}^{l} \frac{r^l}{R^{l+1}} \frac{4\pi}{2l+1} Y^*_{lm}(\Theta,\Phi)Y_{lm}(\theta,\phi)\]
 So,we have
@@ -554,7 +542,6 @@ Special case:
 \[\phi^{(0)} = \frac{Q}{4\pi R} \quad E^{(0)} = \frac{Q\bm{n}}{4\pi R^2} \quad Q = \sum_a e_a\]
 \[\phi^{(1)} = \frac{\bm{d} \cdot \bm{n}}{4\pi R^2}  \quad E^{(1)} = \frac{3(\bm{d}\cdot\bm{n})\bm{n}-\bm{d}}{4\pi R^3} \quad \bm{d} = \sum_a e_a \bm{r}_a\]
 \[\phi^{(2)} = \frac{\bm{n} \cdot \bm{D} \cdot \bm{n}}{8\pi R^3} \quad E^{(2)} = \frac{5(\bm{n} \cdot \bm{D} \cdot \bm{n})\bm{n} - (\bm{n} \cdot \bm{D} + \bm{D} \cdot \bm{n})}{8\pi R^4} \quad D_{ij} = \sum e(3x_ix_j-r^2\delta_{ij})\]
-
 For a system of charged particles in the electric field $\phi(\bm{r})$, if all the particles is near the $r=0$, we can make the expansion
 \[\phi(\bm{r}) = \sum_{l=0}^{\infty} r^l \sum_{m=-l}^{m=l} a_{lm} \sqrt{\frac{4\pi}{2l+1}} Y_{lm}(\theta,\phi)\]
 So
@@ -569,7 +556,7 @@ Let us consider the magnetic field produced by charges which perform a finite mo
 \[\bm{\nabla} \cdot \bm{B} = 0 \quad \bm{\nabla} \times \bm{B} = \frac{\partial \bm{E}}{\partial t} + \bm{j}\] 
 Note that the average value of the derivative $\partial \bm{E} / \partial t$, like the derivative of any quantity which varies over a finite range, is zero. We can get
 \[\bm{\nabla} \cdot \overline{\bm{B}} = 0 \quad \bm{\nabla} \times \overline{\bm{B}} =  \overline{\bm{j}}\]
-Recall that $\bm{B} = \bm{\nabla} \times \bm{A} = 0$. We impose the gauge condition $\bm{\nabla} \cdot \bm{A} = 0$, we have
+Recall that $\bm{B} = \bm{\nabla} \times \bm{A}$. We impose the gauge condition $\bm{\nabla} \cdot \bm{A} = 0$, we have
 \[\nabla^2 \overline{\bm{A}} = - \overline{\bm{j}}\]
 The solution is
 \[\overline{\bm{A}}(\bm{r}) = \frac{1}{4\pi} \int \frac{\overline{\bm{j}}(\bm{r}')}{|\bm{r}-\bm{r}'|} dV' = \frac{1}{4\pi} \sum \overline{\frac{e_a \bm{v}_a}{|\bm{r}-\bm{r}_a|}}\]
@@ -593,21 +580,109 @@ We can get
 \[\overline{\bm{A}} = \frac{\overline{\bm{m}} \times \bm{R}}{4\pi R^3} \quad \overline{\bm{B}} = \frac{3\bm{n}(\overline{\bm{m}} \cdot \bm{n})-\overline{\bm{m}}}{4\pi R^3}\]
 If all the particles have the same charge-mass ratio, and the velocity of all the particles is much smaller than that of light, we have
 \[\bm{m} = \frac{e}{2m} \sum m \bm{r} \times \bm{v} = \frac{e}{2m} \bm{M}\]
-
 Let us consider a system of charges in an external constant uniform magnetic field. The time average of the force acting on the system, 
 \[\bm{F} = \sum e \overline{\bm{v} \times \bm{B}} = \overline{\frac{d}{dt} \sum e \bm{r} \times \bm{B}} = 0\]
 The average value of the moment of the forces is 
 \[\overline{\bm{K}} = \sum e \overline{\bm{r} \times (\bm{v} \times \bm{B})}\]
 We can derive that
 \[\overline{\bm{K}} = \overline{\bm{m}} \times \bm{B}\]
-
 Let us consider the change in the average angular momentum $\overline{\bm{M}}$ of the system. According to a well-known equation of mechanics, the derivative of $\bm{M}$ is equal to the moment $\bm{K}$ of the forces acting on the system. We therefore have
 \[\frac{d \overline{\bm{M}}}{dt} = \overline{\bm{m}} \times \bm{B}\]
 If the charge-mass ratio is the same for all particles of the system, the angular momentum and magnetic moment are proportional to one another, and we find:
 \[\frac{d \overline{\bm{M}}}{dt} = - \bm{\Omega} \times \overline{\bm{M}} \quad \bm{\Omega} = \frac{e}{2m} \bm{B}\]
 This equation states that the vector $\overline{\bm{M}}$ rotates with angular velocity $-\bm{\Omega}$ around the direction of the field, while its absolute magnitude and the angle which it makes with this direction remain fixed. This motion is called the Larmor precession.
-
 Let us consider the Lagrangian for a system of charges in an external constant uniform magnetic field, it contains the additional term
 \[L_H = \sum e \bm{A} = \sum e (\bm{B} \times \bm{r}) \cdot \bm{v} = \sum e (\bm{r} \times \bm{v}) \cdot \bm{B} = \bm{m} \cdot \bm{B}\]
 
+\section{Electromagnetic waves}
+\subsection{Electromagnetic waves}
+electromagnetic fields occurring in vacuum in the absence of  charges are called electromagnetic waves. We choose the Coulomb's Gauge, i.e.
+\[ \phi = 0 \quad \bm{\nabla} \cdot \bm{A} = 0\]
+So,
+\[\bm{E} = -\frac{\partial A}{\partial t} \quad \bm{B} = \bm{\nabla} \times \bm{A}\]
+Then,from Maxwell equation we can derive that
+\[\nabla^2 \bm{A} - \frac{\partial^2 \bm{A}}{\partial t^2} = 0\]
+This is the equation which determines the potentials of electromagnetic waves. It is called the d'Alembert equation, or the wave equation. We can verify that the electric and magnetic fields $\bm{E}$ and $\bm{H}$ satisfy the same wave equation.\\ \\
+We consider the special case of electromagnetic waves in which the fields depends only on one coordinates,say $x$,Such waves are said to be plane. In this case the equation for the field becomes
+\[\frac{\partial^2 f}{\partial t^2}  - \frac{\partial^2 f}{\partial x^2} = 0\]
+The solution is
+\[f(t,x) = f_1(t-x) + f_2(t+x)\]
+$f_1(t-x)$ represents a plane wave moving in the positive direction along the $x$ axis. $f_2(t-x)$ represents a plane wave moving in the negative direction along the $x$ axis. The Coulomb's gauge would imply that $A_x = 0$, and we can obtain
+\[\bm{E} = -\bm{A}' \quad \bm{B} = -\bm{n} \times \bm{A}' = \bm{n} \times \bm{E}\]
+where the prime denotes differentiation with respect to $t-x$ and $\bm{n}$ is a unit vector along the direction of propagation of the wave. We see that the electric and magnetic fields $\bm{E}$ and $\bm{B}$ of a plane wave are directed perpendicular to the direction of propagation of the wave. For this reason, electromagnetic waves are said to be transverse.\\
+The energy density and flux of the plane waves are
+\[W = \bm{E}^2 \quad \bm{S} = W\bm{n}\]
+
+\subsection{Monochromatic wave}
+A very important special case of electromagnetic waves is a wave in which the field is a simply periodic function of the time. Such a wave is said to be monochromatic. All quantities
+(potentials, field components) in a monochromatic wave depend on the time through a factor of the form $\cos(\omega t + a)$. The quantity $\omega$ is called the cyclic frequency of the wave (we shall simply call it the frequency). For the monochromatic wave, the wave equation becomes
+\[\frac{\partial^2 f}{\partial x^2} +	 \omega^2 f = 0\]
+The vector potential of such a wave is most conveniently written as the real part of a complex expression
+\[\bm{A} = \mathrm{Re}\left\{ \bm{A}_0 e^{i(\bm{k}\cdot\bm{r}-\omega t)}\right\} \quad \bm{k} = \omega \bm{n}\]
+The electric and magnetic field are
+\[\bm{E} = ik\bm{A} \quad \bm{B} = i\bm{k}\times\bm{A}\]
+And we can verify that $(\omega,\bm{k})$ transform like a four-vector.\\ \\
+Generally, the electric field can be  written as
+\[E_y = A\cos(\phi) \quad E_z = B\cos(\phi + \delta) \quad \phi= kx -\omega t   \quad -\pi < \delta \leq \pi\]
+The end of the vector $\bm{E}$ in $y-z$ plane will form an ellipse. The magnitudes of the semiaxes of the polarized ellipse are
+\[|\sqrt{A^2+B^2+2AB\sin\delta} \pm \sqrt{A^2+B^2-2AB\sin\delta}|\]
+The angle $\theta$ between the major axis and $y$ axis satisfies the equation
+\[\tan 2\theta = \frac{2AB\cos\delta}{A^2-B^2}\]
+If $-\frac{\pi}{2} < \delta < \frac{\pi}{2}$, major axis is in the second and forth quadrant. If $\delta > \frac{\pi}{2}$ or $\delta < -\frac{\pi}{2}$, major axis is in the first and third quadrant. If $\delta = \pm \frac{\pi}{2}$ and $A>B$, the major axis is $y$ axis. If $\delta = \pm \frac{\pi}{2}$ and $A<B$, the major axis is $z$ axis. If $\delta = \pm \frac{\pi}{2}$ and $A=B$, the ellipse becomes a circle.\\ 
+If $0 < \delta < \pi$, the rotation is positive in the direction of $x$ axis (left handed). If $-\pi < \delta < 0$, the rotation is negative in the direction of $x$ axis(right handed). If $\delta = 0,\pi$, the ellipse becomes a line.\\ \\
+Any field is expandable in a Fourier integral containing a continuous or discrete distribution of different frequencies. Such an expansion has the form
+\[f(t) = \int_{-\infty}^{\infty} f_{\omega}e^{-i\omega t} \frac{d\omega}{2\pi}\]
+where the Fourier components are given in terms of the function $f(t)$ by the integrals
+\[f_{\omega} = \int_{-\infty}^{\infty} f(t)e^{i\omega t} dt\]
+Because $f(t)$ must be real, so
+\[f_{-\omega} = f_{\omega}^{*}\]
+The total intensity of the wave is
+\[\int_{-\infty}^{\infty} f^2 dt = \int_{-\infty}^{\infty} |f_{\omega}|^2 \frac{d\omega}{2\pi} = 2\int_{0}^{\infty} |f_{\omega}|^2 \frac{d\omega}{2\pi} \]
+
+\subsection{Partially polarized light}
+Every monochromatic wave is necessarily polarized. However we usually have to deal with waves which are only approximately monochromatic, and which contain frequencies in a small interval $\Delta \omega$. We consider such a wave, and let $\omega$ be some average frequency for it. Then its field at a fixed point in space can be written in the form
+\[\bm{E_0}(t)e^{-i\omega t}\]
+where the complex amplitude $\bm{E}_0$ is some slowly varying function of the time. Since $\bm{E}_0$ determines the polarization of the wave, this means that at each point of the wave, its polarization changes with time, such a wave is said to be partially polarized.\\
+The polarization properties of electromagnetic waves are observed experimentally by passing the light to be investigated through various bodies and then
+observing the intensity of the transmitted light. From the mathematical point of view this means that we draw conclusions concerning the polarization properties of the light from the values of certain quadratic functions of its field. Here of course we are considering the time averages of such functions.\\
+Quadratic functions of the field are made up of terms proportional to the products $E_{\alpha} E_{\beta}$,
+$E_{\alpha}^{*} E^{*}_{\beta}$ or $E_{\alpha}^* E_{\beta}$. Products of the form $E_{\alpha} E_{\beta}$ and
+$E_{\alpha}^{*} E^{*}_{\beta}$ contain the rapidly oscillating factors $e^{-i2\omega t}$ and will give zero when the time average is taken. Thus we see that the polarization properties of the light are completely characterized by the tensor
+\[J_{\alpha \beta} = E_{0\alpha} E_{0\beta}^{*}\]
+The trace of the tensor
+\[J \equiv J_{\alpha\alpha} = \bm{E}_0 \bm{E}^*_0\]
+determines the intensity of the wave, as measured by the energy flux density.To eliminate this quantity which is not directly related to the polarization properties, we
+introduce the tensor
+\[\rho_{\alpha\beta} = \frac{J_{\alpha\beta}}{J}\]
+we call it the polarization tensor.\\ \\
+Generally, the polarization tensor is expressed as
+\[\rho = \frac{1}{2} \left[ \begin{matrix} 1+p_{3}& p_1-ip_2\\ p_1+ip_2& 1-p_{3}\end{matrix} \right] \]
+If we introduce the Pauli matrix, i.e.
+\[\sigma_1 = \left[ \begin{matrix} 0& 1\\ 1& 0\end{matrix} \right] \quad \sigma_2 = \left[ \begin{matrix} 0& - i\\ i& 0\end{matrix} \right] \sigma_3 = \left[ \begin{matrix} 1& 0\\ 0& -1\end{matrix} \right] \]
+The $\rho$ can be expressed as
+\[\frac{1}{2} (1-P) I + \frac{1}{2} P(I + \bm{n} \cdot \bm{\sigma})\]
+Here,
+\[P = \sqrt{p_1^2 + p_2^2 + p_3^2} \quad \bm{n} = (\frac{p_1}{P},\frac{p_2}{P},\frac{p_3}{P})\]
+For a totally polarized light with polarization state$ | E\rangle = (\cos \frac{\theta}{2} e^{-i\frac{\phi}{2}} , \sin \frac{\theta}{2} e^{i\frac{\phi}{2}})$, the polarization tensor $\rho = |E\rangle \langle E|$. We can verify that
+\[P = 1 \quad \bm{n} = (\sin\theta \cos\phi, \sin\theta \sin\phi, \cos \theta)\]
+So, for an arbitrary light,
+\[\rho = (1-P)\rho_{n} + P \rho_{p} \quad \rho_n = \frac{1}{2}I \quad \rho_p = \frac{1}{2}(I + \bm{n} \cdot \bm{\sigma})\]
+Thus, we call $P$ the Polarization degree. \\ \\
+Suppose there is a polarizing filter,  which allow the light with polarization state
+\[| D \rangle = (\cos \frac{\theta}{2} e^{-i\frac{\phi}{2}} , \sin \frac{\theta}{2} e^{i\frac{\phi}{2}})\]
+to pass totally. If a light with polarization tensor $\rho$ pass through the device, the relative intensity will become
+\[\langle D | \rho | D \rangle = \frac{1}{2} + \frac{1}{2} \bm{p} \cdot \bm{m}\]
+Here, $\bm{p} = (p_1,p_2,p_3)$, $\bm{m} = (\sin\theta \cos\phi, \sin\theta \sin\phi, \cos \theta)$\\ \\
+In optics, the Stokes vectors are defined as
+The Stokes parameters are defined by
+\begin{eqnarray}
+I&\equiv& \langle E_{x}^{2}\rangle +\langle E_{y}^{2}\rangle \nonumber \\
+&=& \langle E_{a}^{2}\rangle +\langle E_{b}^{2}\rangle \nonumber \\
+&=& \langle E_{l}^{2}\rangle +\langle E_{r}^{2}\rangle \nonumber \\
+Q&\equiv& \langle E_{x}^{2}\rangle -\langle E_{y}^{2}\rangle \nonumber \\
+U&\equiv& \langle E_{a}^{2}\rangle -\langle E_{b}^{2}\rangle \nonumber \\
+V&\equiv& \langle E_{l}^{2}\rangle -\langle E_{r}^{2}\rangle \nonumber
+\end{eqnarray}
+where the subscripts refer to three different bases of the space of Jones vectors: the standard Cartesian basis ${\hat {x}},{\hat {y}}$, a Cartesian basis rotated by 45° ${\hat {a}},{\hat {b}}$, and a circular basis ${\hat {l}},{\hat {r}}$. The symbols $\langle \cdot \rangle$ represent expectation values. The light can be viewed as a random variable taking values in the space $C^2$ of Jones vectors $(E_1,E_2)$. It is easy to verify that
+\[Q = Ip_3 \quad U = Ip_2 \quad V = Ip_1\]
 \end{document}
