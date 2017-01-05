@@ -138,9 +138,9 @@ Here,
 \[a = \frac{p_1(E_1m_2+m_2^2)}{m_1^2 + m_2^2 + 2m_2 E_1} = \frac{m_2V}{\sqrt{1-V^2}} \quad b = \frac{m_2 p_1}{\sqrt{m_1^2 + m_2^2 + 2m_2 E_1}} = \frac{a}{\sqrt{1-V^2}} \quad c = \frac{ p_1(E_1m_2+m_1^2)}{m_1^2 + m_2^2 + 2m_2 E_1}\]
 Here $V = \frac{p_1}{E_1 + m_2}$ is the velocity of particle 2 before scattering in C frame. And it is easy to see that $a + c = p_1$. The result above can be represented by a picture.
 \begin{figure}[!h]
-\centering
-\includegraphics[height=3.4cm ,width=15.98cm]{CFT/scattering.png}
-\caption{Relativistic scattering}
+	\centering
+	\includegraphics[height=3.4cm ,width=15.98cm]{CFT/scattering.png}
+	\caption{Relativistic scattering}
 \end{figure}
 
 \chapter{Classical field theory}
@@ -161,12 +161,12 @@ Lagrangian is a scalar, or more loosely, action is invariant under Lorentz trans
 
 \section{Symmetry and conservation law}
 \begin{newthem}[Noether's theorem]
-Every continuous symmetry of the Lagrangian gives rise to a conserved current $j^{\mu}(x)$ such that the equation of motion imply $\partial_{\mu} j^{\mu} = 0$.
-Suppose that the infinitesimal transformation is
-\[\phi_a \rightarrow \phi_a + \delta \phi_a\]
-\[\mathcal{L} \rightarrow  \mathcal{L} + \delta \mathcal{L} \]
-and if $\delta \mathcal{L} = \partial_{\mu} K^{\mu}$, we can get
-\[j^{\mu} = -\frac{\partial \mathcal{L}}{\partial (\partial_{\mu} \phi_a)} \delta \phi_a + K^{\mu}\]
+	Every continuous symmetry of the Lagrangian gives rise to a conserved current $j^{\mu}(x)$ such that the equation of motion imply $\partial_{\mu} j^{\mu} = 0$.
+	Suppose that the infinitesimal transformation is
+	\[\phi_a \rightarrow \phi_a + \delta \phi_a\]
+	\[\mathcal{L} \rightarrow  \mathcal{L} + \delta \mathcal{L} \]
+	and if $\delta \mathcal{L} = \partial_{\mu} K^{\mu}$, we can get
+	\[j^{\mu} = -\frac{\partial \mathcal{L}}{\partial (\partial_{\mu} \phi_a)} \delta \phi_a + K^{\mu}\]
 \end{newthem}
 
 \subsubsection{space-time translation}
@@ -199,11 +199,11 @@ If we define $M^{\nu \rho} \equiv \int M^{0 \nu \rho} d^3 x$, then we have the l
 
 \section{Functional derivatives}
 \begin{newdef}[Functional derivatives]
-Given a manifold $M$ representing (continuous/smooth) functions $\rho$ (with certain boundary conditions etc.), and a functional $F$ defined as
-\[F\colon M\rightarrow \mathbb {R} \quad {\mbox{or}}\quad F\colon M\rightarrow \mathbb {C} \,,\]
-the functional derivative of $F[\rho]$, denoted $\frac{\delta F}{\delta \rho}$,is defined by
-\[{\begin{aligned}\int {\frac {\delta F}{\delta \rho }}(x)\phi (x)\;dx&=\lim _{\varepsilon \to 0}{\frac {F[\rho +\varepsilon \phi ]-F[\rho ]}{\varepsilon }}\\&=\left[{\frac {d}{d\epsilon }}F[\rho +\epsilon \phi ]\right]_{\epsilon =0},\end{aligned}}\]
-where $\phi$ is an arbitrary function. The quantity $\epsilon \phi$ is called the variation of $\rho$. 
+	Given a manifold $M$ representing (continuous/smooth) functions $\rho$ (with certain boundary conditions etc.), and a functional $F$ defined as
+	\[F\colon M\rightarrow \mathbb {R} \quad {\mbox{or}}\quad F\colon M\rightarrow \mathbb {C} \,,\]
+	the functional derivative of $F[\rho]$, denoted $\frac{\delta F}{\delta \rho}$,is defined by
+	\[{\begin{aligned}\int {\frac {\delta F}{\delta \rho }}(x)\phi (x)\;dx&=\lim _{\varepsilon \to 0}{\frac {F[\rho +\varepsilon \phi ]-F[\rho ]}{\varepsilon }}\\&=\left[{\frac {d}{d\epsilon }}F[\rho +\epsilon \phi ]\right]_{\epsilon =0},\end{aligned}}\]
+	where $\phi$ is an arbitrary function. The quantity $\epsilon \phi$ is called the variation of $\rho$. 
 \end{newdef}
 Like the derivative of a function, the functional derivative satisfies the following properties, where $F[\rho]$ and $G[\rho]$ are functionals:\\
 Linearity:
@@ -217,11 +217,11 @@ If $F$ is a functional and $G$ an operator, then
 If $G$ is an ordinary differentiable function $g$, then this reduces to
 \[{\displaystyle \displaystyle {\frac {\delta F[g(\rho )]}{\delta \rho}(y)}={\frac {\delta F[g(\rho )]}{\delta g[\rho ]}(y)}\ {\frac {dg(\rho )}{d\rho }(y)}\ } \]
 \begin{newprop}[Properties of functional derivatives]
-\[\frac{\delta F}{\delta \rho} (y) = \lim_{\epsilon \to \infty} \frac{1}{\epsilon} \{ F[\rho(x) + \epsilon \delta(x-y)] - F[\rho(x)] \}\]
-\[\frac{\delta f(x)}{\delta f(y)} = \delta(x-y)\]
-\[\frac{\delta}{\delta f(y)} \int g\left( f(x)\right) dx =  g'(f(y))\]
-\[\frac{\delta f'(x)}{\delta f(y)} = \frac{d}{dx}\delta(x-y)\]
-\[\frac{\delta}{\delta f(y)} \int g\left( f'(x)\right) dx = -\frac{d}{dy} g'(f'(y))\]
+	\[\frac{\delta F}{\delta \rho} (y) = \lim_{\epsilon \to \infty} \frac{1}{\epsilon} \{ F[\rho(x) + \epsilon \delta(x-y)] - F[\rho(x)] \}\]
+	\[\frac{\delta f(x)}{\delta f(y)} = \delta(x-y)\]
+	\[\frac{\delta}{\delta f(y)} \int g\left( f(x)\right) dx =  g'(f(y))\]
+	\[\frac{\delta f'(x)}{\delta f(y)} = \frac{d}{dx}\delta(x-y)\]
+	\[\frac{\delta}{\delta f(y)} \int g\left( f'(x)\right) dx = -\frac{d}{dy} g'(f'(y))\]
 \end{newprop}
 
 \section{Hamiltonian formulation}
@@ -258,9 +258,9 @@ It is easy to verify that
 \[P^{0} = H, \ \ \ \ P^{i} = \int -\pi^a \partial^i \phi_a d^3 x\]
 And we can get the Poisson bracket
 \begin{eqnarray}
-\left[\phi_a,P^{\mu}\right] &=& -\partial^{\mu} \phi_a \nonumber \\
-\left[\pi^a,P^{\mu}\right] &=& -\partial^{\mu} \pi^a \nonumber \\
-\left[P^{\mu},P^{\nu}\right] &=& 0 \nonumber 
+	\left[\phi_a,P^{\mu}\right] &=& -\partial^{\mu} \phi_a \nonumber \\
+	\left[\pi^a,P^{\mu}\right] &=& -\partial^{\mu} \pi^a \nonumber \\
+	\left[P^{\mu},P^{\nu}\right] &=& 0 \nonumber 
 \end{eqnarray}
 
 
@@ -304,25 +304,25 @@ K_3 & J_2  & -J_1 &  0
 \right] \right)\] 
 the Poisson bracket can be written as
 \begin{eqnarray}
-\left[J_i,J_j\right] &=& \epsilon_{ijk}J_k \nonumber \\
-\left[J_i,K_j\right] &=& \epsilon_{ijk}K_k \nonumber \\
-\left[K_i,K_j\right] &=& -\epsilon_{ijk}J_k \nonumber
+	\left[J_i,J_j\right] &=& \epsilon_{ijk}J_k \nonumber \\
+	\left[J_i,K_j\right] &=& \epsilon_{ijk}K_k \nonumber \\
+	\left[K_i,K_j\right] &=& -\epsilon_{ijk}J_k \nonumber
 \end{eqnarray}
 We can use the similar method to derive that
 \[[P^{\mu},M^{\rho \sigma}] = \eta^{\mu \sigma}P^{\mu} - \eta^{\mu \rho}P^{\sigma}\]
 It can also be written as
 \begin{eqnarray}
-\left[J_i,H\right] &=& 0 \nonumber \\
-\left[J_i,P_j\right] &=& \epsilon_{ijk}P_k \nonumber \\
-\left[K_i,H\right] &=& P_i \nonumber \\
-\left[K_i,P_j\right] &=& \delta_{ij}H \nonumber
+	\left[J_i,H\right] &=& 0 \nonumber \\
+	\left[J_i,P_j\right] &=& \epsilon_{ijk}P_k \nonumber \\
+	\left[K_i,H\right] &=& P_i \nonumber \\
+	\left[K_i,P_j\right] &=& \delta_{ij}H \nonumber
 \end{eqnarray}
 At last, we define $L_i \equiv \frac{1}{2} \epsilon_{ijk} M_L^{jk}$ and $S_i \equiv \frac{1}{2} \epsilon_{ijk} M_S^{jk}$
 we can demonstrate that
 \begin{eqnarray}
-\left[L_i,S_j\right] &=& 0 \nonumber \\
-\left[S_i,P_j\right] &=& 0 \nonumber \\
-\left[L_i,P_j\right] &=& \epsilon_{ijk}P_k \nonumber
+	\left[L_i,S_j\right] &=& 0 \nonumber \\
+	\left[S_i,P_j\right] &=& 0 \nonumber \\
+	\left[L_i,P_j\right] &=& \epsilon_{ijk}P_k \nonumber
 \end{eqnarray}
 
 \chapter{Classical Electrodynamics}
@@ -352,10 +352,10 @@ We now define the electric field and magnetic field as follows,
 We also define $\rho_e \equiv j^0$ and $J^i \equiv j^i$,so
 the field equation can then be written
 \begin{eqnarray}
-\bm{\nabla} \times  \bm{B} &=& \frac{\partial \bm{E}}{\partial t} +  \bm{J} \nonumber \\
-\bm{\nabla} \times \bm{E} &=& -\frac{\partial \bm{B}}{\partial t} \nonumber \\
-\bm{\nabla} \cdot \bm{E} &=& \rho_e \nonumber \\
-\bm{\nabla} \cdot \bm{B} &=& 0 \nonumber
+	\bm{\nabla} \times  \bm{B} &=& \frac{\partial \bm{E}}{\partial t} +  \bm{J} \nonumber \\
+	\bm{\nabla} \times \bm{E} &=& -\frac{\partial \bm{B}}{\partial t} \nonumber \\
+	\bm{\nabla} \cdot \bm{E} &=& \rho_e \nonumber \\
+	\bm{\nabla} \cdot \bm{B} &=& 0 \nonumber
 \end{eqnarray}
 That is the so-called Maxwell equation.\\
 The equation of motion of the charged particle can be written as
@@ -579,6 +579,8 @@ A very important special case of electromagnetic waves is a wave in which the fi
 \[\frac{\partial^2 f}{\partial x^2} +	 \omega^2 f = 0\]
 The vector potential of such a wave is most conveniently written as the real part of a complex expression
 \[\bm{A} = \mathrm{Re}\left\{ \bm{A}_0 e^{i(\bm{k}\cdot\bm{r}-\omega t)}\right\} \quad \bm{k} = \omega \bm{n}\]
+The time average of the product of field intensity can be calculated as
+\[\overline{\bm{A}\bm{B}} = \frac{1}{2}\mathrm{Re}\left\{ \bm{A}_0 \bm{B}_0^*\right\}\]
 The electric and magnetic field are
 \[\bm{E} = ik\bm{A} \quad \bm{B} = i\bm{k}\times\bm{A}\]
 And we can verify that $(\omega,\bm{k})$ transform like a four-vector.\\ \\
@@ -645,3 +647,53 @@ V&\equiv& \langle E_{l}^{2}\rangle -\langle E_{r}^{2}\rangle \nonumber
 \end{eqnarray}
 where the subscripts refer to three different bases of the space of Jones vectors: the standard Cartesian basis ${\hat {x}},{\hat {y}}$, a Cartesian basis rotated by 45° ${\hat {a}},{\hat {b}}$, and a circular basis ${\hat {l}},{\hat {r}}$. The symbols $\langle \cdot \rangle$ represent expectation values. The light can be viewed as a random variable taking values in the space $C^2$ of Jones vectors $(E_1,E_2)$. It is easy to verify that
 \[Q = Ip_3 \quad U = Ip_2 \quad V = Ip_1\]
+
+\section{The field of moving charges}
+\subsection{Retarded potential}
+This time we impose the Lorenz Gauge $\partial_{\mu} A^{\mu} = 0$. Now, Maxwell equations would imply that
+\[\partial^2 A^{\mu} = j^{\mu}\]
+We can rewrite it in three dimension form,
+\[\nabla^2 \bm{A} - \frac{\partial^2 \bm{A}}{\partial t^2} = -\bm{J} \quad \nabla^2 \phi - \frac{\partial^2\phi}{\partial t^2} = -\rho\]
+To find the particular solution, we divide the whole space into infinitely small regions and determine the field produced by the charges located in one of these volume elements. Because of the linearity of the field equations, the actual field will be the sum of the fields produced by all such elements. \\
+The charge $de$ in a given volume element is a function of the time. If we choose the origin of coordinates in the volume element under consideration, then the charge density is $de(t)\delta(\bm{R})$, where $R$ is the distance from the origin. Thus we must solve the equation
+\[\nabla^2 \phi - \frac{\partial^2\phi}{\partial t^2} = -de(t)\delta(\bm{R})\]
+The particular solution is
+\[\phi = \frac{de(t-R)}{4\pi R}\]
+For an arbitrary distribution of charges $\rho(\bm{r}',t)$, we have
+\[\phi(\bm{r},t) = \int \frac{\rho(\bm{r}',t-|\bm{r}-\bm{r}'|)}{4\pi |\bm{r}-\bm{r}'|} dV'\]
+Similarly we have for the vector potential
+\[\bm{A}(\bm{r},t) = \int \frac{\bm{J}(\bm{r}',t-|\bm{r}-\bm{r}'|)}{4\pi |\bm{r}-\bm{r}'|} dV'\]
+The particular solution above is called retarded potential.\\ 
+\\
+Now we consider an arbitrary charged particle with kinetic equation $\bm{r} = \bm{r}_0(t)$, so we have
+\[\rho(\bm{r},t) = Q\delta(\bm{r}-\bm{r}_0(t))\]
+\[\phi(\bm{r},t) = \int \frac{Q \delta (\bm{r}'-\bm{r}_0(t-|\bm{r}-\bm{r}'|))}{4\pi |\bm{r}-\bm{r}'|} dV' = \frac{Q}{4\pi R^* (1 - \frac{\bm{R}^* \cdot \bm{v}^*}{R^*})}\]
+Here, 
+\[\bm{R}^* = \bm{r} - \bm{r}_0(t^*) \quad \bm{v}^* = \bm{v}_0(t^*) \quad t^* = t - R^*\]
+Similarly, we have
+\[\bm{A}(\bm{r},t) = \frac{Q\bm{v}^*}{4\pi R^* (1 - \frac{\bm{R}^* \cdot \bm{v}^*}{R^*})}\]
+The potential is called Lienard-Wiechert potentials.\\
+We can derive that
+\[\frac{\partial t^*}{\partial t} = \frac{1}{1- \frac{\bm{R}^* \cdot \bm{v}^*}{R^*}} \quad \bm{\nabla} t^* = \frac{\bm{R}^*}{R^* - \bm{R}^* \cdot \bm{v}^*}\]
+With the help of the equation above, we can calculate the electric and magnetic field intensity.
+\[\bm{E} = \frac{Q}{4\pi(R^* - \bm{R}^* \cdot \bm{v}^*)^3} \left\{ (1-v^{*2})(\bm{R}^* - R^*\bm{v}^*) + \bm{R}^* \times \left[(\bm{R}^* - R^*\bm{v}^*) \times \bm{a}^* \right] \right\}\]
+\[\bm{B} = \frac{\bm{R}^*}{R^*} \times \bm{E}\]
+The electric field consists of two parts of different type. The first term depends only on the velocity of the particle (and not on its acceleration) and varies at large distances like $\frac{1}{R^2}$. The second term depends on the acceleration, and for large $R$ it varies like $\frac{1}{R}$. This latter term is related to the electromagnetic waves radiated by the particle.
+
+\subsection{Spectral resolution of the retarded potentials}
+Suppose
+\[\rho(\bm{r},t) = \int_{-\infty}^{\infty} \rho_{\omega}(\bm{r}) e^{-i\omega t} \frac{d\omega}{2\pi} \quad \phi(\bm{r},t) = \int_{-\infty}^{\infty} \phi_{\omega}(\bm{r}) e^{-i\omega t} \frac{d\omega}{2\pi}\]
+We can derive that
+\[\phi_{\omega}(\bm{r}) = \int dV' \int_{-\infty}^{\infty} dt \frac{\rho(\bm{r}',t)}{4\pi R} e^{i\omega(
+R+t)}\]
+If there is just one point charge, we set
+\[\rho = Q\delta(\bm{r} - \bm{r}_0(t))\]
+we can get
+\[\phi_{\omega}(\bm{r}) =  \int_{-\infty}^{\infty} dt \frac{Q}{4\pi R(t)} e^{i\omega[
+R(t)+t]} \quad \bm{R}(t) =\bm{r}-\bm{r}_0(t)\]
+Similarly, for vector potential, we have
+\[\bm{A}_{\omega}(\bm{r}) =  \int_{-\infty}^{\infty} dt \frac{Q\bm{v}_0(t)}{4\pi R(t)} e^{i\omega[
+R(t)+t]} \quad \bm{R}(t) =\bm{r}-\bm{r}_0(t)\]
+For electric and magnetic field, we have
+\[\bm{E}_{\omega} = -\bm{\nabla}\phi_{\omega} + i\omega \bm{A}_{\omega}\]
+\[\bm{B}_{\omega} = \bm{\nabla} \times \bm{A}_{\omega}\]
