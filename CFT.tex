@@ -600,6 +600,14 @@ Because $f(t)$ must be real, so
 \[f_{-\omega} = f_{\omega}^{*}\]
 The total intensity of the wave is
 \[\int_{-\infty}^{\infty} f^2 dt = \int_{-\infty}^{\infty} |f_{\omega}|^2 \frac{d\omega}{2\pi} = 2\int_{0}^{\infty} |f_{\omega}|^2 \frac{d\omega}{2\pi} \]
+There is a special case that $f(t)$ is a periotic function with angular frequency $\omega_0$, then $f(t)$ can be expanded as
+\[f(t) = \sum_{-\infty}^{\infty} f_n e^{-in\omega_0}\]
+here,
+\[f_n = \frac{1}{T} \int_{0}^{T} f(t)e^{in\omega_0} dt\]
+The average intensity of the wave is
+\[\frac{1}{T}\int_{0}^{T} f^2 dt = \sum_{-\infty}^{\infty} |f_n|^2\]
+And we can verify that
+\[f_{\omega} = \sum_{-\infty}^{\infty} 2\pi f_n \delta(\omega-n\omega_0)\]
 
 \subsection{Partially polarized light}
 Every monochromatic wave is necessarily polarized. However we usually have to deal with waves which are only approximately monochromatic, and which contain frequencies in a small interval $\Delta \omega$. We consider such a wave, and let $\omega$ be some average frequency for it. Then its field at a fixed point in space can be written in the form
@@ -666,17 +674,17 @@ Similarly we have for the vector potential
 The particular solution above is called retarded potential.\\ 
 \\
 Now we consider an arbitrary charged particle with kinetic equation $\bm{r} = \bm{r}_0(t)$, so we have
-\[\rho(\bm{r},t) = Q\delta(\bm{r}-\bm{r}_0(t))\]
-\[\phi(\bm{r},t) = \int \frac{Q \delta (\bm{r}'-\bm{r}_0(t-|\bm{r}-\bm{r}'|))}{4\pi |\bm{r}-\bm{r}'|} dV' = \frac{Q}{4\pi R^* (1 - \frac{\bm{R}^* \cdot \bm{v}^*}{R^*})}\]
+\[\rho(\bm{r},t) = e\delta(\bm{r}-\bm{r}_0(t))\]
+\[\phi(\bm{r},t) = \int \frac{e \delta (\bm{r}'-\bm{r}_0(t-|\bm{r}-\bm{r}'|))}{4\pi |\bm{r}-\bm{r}'|} dV' = \frac{e}{4\pi R^* (1 - \frac{\bm{R}^* \cdot \bm{v}^*}{R^*})}\]
 Here, 
 \[\bm{R}^* = \bm{r} - \bm{r}_0(t^*) \quad \bm{v}^* = \bm{v}_0(t^*) \quad t^* = t - R^*\]
 Similarly, we have
-\[\bm{A}(\bm{r},t) = \frac{Q\bm{v}^*}{4\pi R^* (1 - \frac{\bm{R}^* \cdot \bm{v}^*}{R^*})}\]
+\[\bm{A}(\bm{r},t) = \frac{e\bm{v}^*}{4\pi R^* (1 - \frac{\bm{R}^* \cdot \bm{v}^*}{R^*})}\]
 The potential is called Lienard-Wiechert potentials.\\
 We can derive that
 \[\frac{\partial t^*}{\partial t} = \frac{1}{1- \frac{\bm{R}^* \cdot \bm{v}^*}{R^*}} \quad \bm{\nabla} t^* = \frac{\bm{R}^*}{R^* - \bm{R}^* \cdot \bm{v}^*}\]
 With the help of the equation above, we can calculate the electric and magnetic field intensity.
-\[\bm{E} = \frac{Q}{4\pi(R^* - \bm{R}^* \cdot \bm{v}^*)^3} \left\{ (1-v^{*2})(\bm{R}^* - R^*\bm{v}^*) + \bm{R}^* \times \left[(\bm{R}^* - R^*\bm{v}^*) \times \bm{a}^* \right] \right\}\]
+\[\bm{E} = \frac{e}{4\pi(R^* - \bm{R}^* \cdot \bm{v}^*)^3} \left\{ (1-v^{*2})(\bm{R}^* - R^*\bm{v}^*) + \bm{R}^* \times \left[(\bm{R}^* - R^*\bm{v}^*) \times \bm{a}^* \right] \right\}\]
 \[\bm{B} = \frac{\bm{R}^*}{R^*} \times \bm{E}\]
 The electric field consists of two parts of different type. The first term depends only on the velocity of the particle (and not on its acceleration) and varies at large distances like $\frac{1}{R^2}$. The second term depends on the acceleration, and for large $R$ it varies like $\frac{1}{R}$. This latter term is related to the electromagnetic waves radiated by the particle.
 
@@ -687,13 +695,189 @@ We can derive that
 \[\phi_{\omega}(\bm{r}) = \int dV' \int_{-\infty}^{\infty} dt \frac{\rho(\bm{r}',t)}{4\pi R} e^{i\omega(
 R+t)}\]
 If there is just one point charge, we set
-\[\rho = Q\delta(\bm{r} - \bm{r}_0(t))\]
+\[\rho = e\delta(\bm{r} - \bm{r}_0(t))\]
 we can get
-\[\phi_{\omega}(\bm{r}) =  \int_{-\infty}^{\infty} dt \frac{Q}{4\pi R(t)} e^{i\omega[
+\[\phi_{\omega}(\bm{r}) =  \int_{-\infty}^{\infty} dt \frac{e}{4\pi R(t)} e^{i\omega[
 R(t)+t]} \quad \bm{R}(t) =\bm{r}-\bm{r}_0(t)\]
 Similarly, for vector potential, we have
-\[\bm{A}_{\omega}(\bm{r}) =  \int_{-\infty}^{\infty} dt \frac{Q\bm{v}_0(t)}{4\pi R(t)} e^{i\omega[
+\[\bm{A}_{\omega}(\bm{r}) =  \int_{-\infty}^{\infty} dt \frac{e\bm{v}_0(t)}{4\pi R(t)} e^{i\omega[
 R(t)+t]} \quad \bm{R}(t) =\bm{r}-\bm{r}_0(t)\]
 For electric and magnetic field, we have
 \[\bm{E}_{\omega} = -\bm{\nabla}\phi_{\omega} + i\omega \bm{A}_{\omega}\]
 \[\bm{B}_{\omega} = \bm{\nabla} \times \bm{A}_{\omega}\]
+
+\section{Radiation}
+\subsection{Far field approximation}
+We consider the field produced by a system of moving charges at distances large compared with the dimensions of the system. We choose the origin of coordinates $O$ anywhere in the interior of the system of charges. The radius vector from $O$ to the point $P$, where we determine the field, we denote by $\bm{R_0}$, and the unit vector in this direction by $\bm{n}$. Let the radius vector of the charge element be $\bm{r}$, and the radius vector from de to the point $P$ be $\bm{R}$. At large distances from the system of charges,$R_0 \gg r$, and we have approximately,
+\[R \approx R_0 - \bm{n}\cdot\bm{r}\]
+We substitute this for the retarded potentials. In the denominator of the integrands we can neglect $\bm{n}\cdot\bm{r}$ compared with $R_0$. In $t-R$, whether it is possible to neglect these terms is determined by how much the quantities $e$ and $\bm{j}$ change during the time $\bm{n}\cdot\bm{r}$. The potentials of the field at large distances from the system of charges are
+\[\phi(\bm{R}_0,t) = \frac{1}{4\pi R_0} \int \rho(\bm{r},t-R_0+\bm{n}\cdot\bm{r}) dV\]
+\[\bm{A}(\bm{R}_0,t) = \frac{1}{4\pi R_0} \int \bm{J}(\bm{r},t-R_0+\bm{n}\cdot\bm{r}) dV\]
+At sufficiently large distances from the system of charges, the field over small regions of space can be considered to be a plane wave. 
+For this it is necessary that the distance be large
+compared not only with the dimensions of the system, but also with the wavelength of the electromagnetic waves radiated by the system. 
+We refer to this region of space as the wave
+zone of the radiation.
+In wave zone, we have
+\[\bm{B} = \frac{\partial \bm{A}}{\partial t} \times \bm{n} \quad \bm{E} = \left(\frac{\partial \bm{A}}{\partial t} \times \bm{n}\right) \times \bm{n}\]
+The energy flux is given by the Poynting vector which, for a plane wave, is
+\[\bm{S} = B^2\bm{n}\]
+The intensity of radiation into the element of solid angle do
+\[dI = B^2R_0^2 do\]
+Since the field is inversely proportional to $R_0$, we see that the amount of energy radiated by the system in unit time into the element of solid angle do is the same for all distances.
+For the radiation produced by a single arbitrarily moving point charge, it turns out to be convenient to use the Lienard-Wiechert potentials. At large distances, we have
+\[\bm{A}(\bm{R}_0,t) = \frac{e\bm{v}(t')}{4\pi R_0 (1 - \bm{n}\cdot\bm{v}_0(t'))}\]
+Here, 
+\[ t'-\bm{n}\cdot\bm{r}_0(t') = t - R_0\]\\
+For the spectral resolution of the field of the waves radiated by the system, we have
+\[\bm{A}_{\omega}(\bm{R_0}) =  \frac{e^{ikR_0}}{R_0} \int \bm{J}_{\omega} e^{-i\bm{k}\cdot\bm{r}} dV\]
+In wave zone, we have
+\[\bm{B}_{\omega} = i\bm{k} \times \bm{A}_{\omega} \quad \bm{E} = \frac{1}{\omega} \left( \bm{k} \times \bm{A}_{\omega}\right) \times \bm{k}\]
+Suppose $d\mathcal{E}_{\omega\bm{n}}$ is the energy radiated into the element of solid angle do in the form of waves with frequencies in the interval $d\omega$. We have
+\[d\mathcal{E}_{\omega\bm{n}} = 2B_{\omega}^2 R_0^2 do \frac{d\omega}{2\pi}\]
+For the radiation produced by a single arbitrarily moving point charge,we have
+\[\bm{A}_{\omega}(\bm{R}_0) = \frac{e e^{i\omega
+R_0}}{4\pi R_0}  \int_{-\infty}^{\infty} e^{i\omega[
+t-\bm{n}\cdot\bm{v}_0]} \bm{v}_0 dt\]
+\[\bm{B}_{\omega}(\bm{R}_0) = \frac{e\omega e^{i\omega
+R_0}}{4\pi R_0}  \int_{-\infty}^{\infty} e^{i\omega[
+t-\bm{n}\cdot\bm{v}_0]}  \bm{n} \times d\bm{r}_0\]
+
+\subsection{Low velocity approximation}
+If the charge density (current density) distribution changes a little during time $\bm{r}\cdot\bm{n}$, then we can expand $f(r,t-R_0+\bm{r}\cdot\bm{n})$ in series of $(\bm{r}\cdot\bm{n})^2$. In this case, if the typical angular frequency of the motion is $\omega$, the typical scale of the motion is $a$, then we have
+\[a \ll T \sim \frac{2\pi}{\omega} \sim \lambda\]
+or
+\[v \sim \frac{a}{T} \ll 1\]
+which means that the velocity of the particles is much smaller then that of light, or the scale of the system is much smaller then the wavelength.\\
+As for the zeroth order approximation, we just drop the $\bm{r}\cdot\bm{n}$ in the equation, so
+\[\bm{A}(\bm{R}_0,t) = \frac{1}{4\pi R_0} \int \bm{J}(\bm{r},t-R_0) dt\]
+For the radiation produced by arbitrarily moving point charges, we have
+\[\bm{A}(\bm{R}_0,t) = \frac{1}{4\pi R_0} \sum e_a \bm{v}_a(\bm{r},t-R_0) = \frac{1}{4\pi R_0} \dot{\bm{d}}\]
+So,
+\[\bm{B} = \frac{1}{4\pi R_0} \ddot{\bm{d}} \times \bm{n} \quad \bm{E} = \frac{1}{4\pi R_0} (\ddot{\bm{d}} \times \bm{n})\times \bm{n}\]
+Radiation of this kind is called dipole radiation. 
+We note that a closed system of particles, for all of which the ratio of charge to mass is the same, cannot radiate (by dipole radiation).The intensity of the dipole radiation is
+\[dI = \frac{\ddot{\bm{d}}^2}{16\pi^2} \sin^2\theta do\]
+where $\theta$ is the angle between $\ddot{\bm{d}}$ and $n$.
+Integrate over all over the direction, we have
+\[I = \frac{\ddot{\bm{d}}^2}{6\pi}\]
+If we have just one charge moving in the external field, we have
+\[I = \frac{e^2 w^2}{6\pi}\]
+$\bm{w}$ is the acceleration of the charge.
+For the spectral resolution of the intensity of dipole radiation, we have
+\[d\mathcal{E}_{\omega} = \frac{|(\ddot{\bm{d}})_{\omega}|^2}{3\pi} = \frac{\omega^4}{3\pi}|\bm{d}_{\omega}|^2 \frac{d\omega}{2\pi}\]
+More details on dipole radiation during collisions and Coulomb interaction can be found in section 68,69 and 70 of \emph{The classical theory of fields (L.D.Landau \& E.M.Lifshitz)}.\\ \\
+If we keep the first order of $\bm{n}\cdot\bm{r}$, we have
+\[\bm{A} = \frac{\dot{\bm{d}}}{4\pi R_0} + \frac{\ddot{\bm{D}}}{24\pi R_0} + \frac{\dot{\bm{m}}\times \bm{n}}{4\pi R_0}\]
+Here,
+\[\bm{D} = \sum e[3\bm{r}(\bm{n}\cdot\bm{r} - \bm{n}r^2)] \quad \bm{m} = \frac{1}{2} \sum e\bm{r}\times\bm{v}\]
+So
+\[\bm{B} = \frac{1}{4\pi R_0} \left[ \ddot{\bm{d}} \times \bm{n} + \frac{1}{6}\dddot{\bm{D}}\times\bm{n} + (\ddot{\bm{m}}\times\bm{n})\times\bm{n}\right]\]
+\[\bm{E} = \frac{1}{4\pi R_0} \left[ (\ddot{\bm{d}} \times \bm{n})\times \bm{n} + \frac{1}{6}(\dddot{\bm{D}}\times\bm{n})\times \bm{n} + \bm{n} \times \ddot{\bm{m}}\right]\]
+\[I = \frac{1}{6\pi}\ddot{\bm{d}}^2 + \frac{1}{720\pi} \dddot{D}_{ij}^2 + \frac{1}{6\pi} \ddot{\bm{m}}^2 \quad D_{ij} = \sum e(3r_{i}r_{j}-r^2\delta_{ij})\]
+The total radiation consists of three independent parts:
+dipole, quadrupole, and magnetic dipole radiation. The details of the derivation can be found in section 71 of \emph{The classical theory of fields (L.D.Landau \& E.M.Lifshitz)}.
+
+\subsection{Radiation from a rapidly moving charge}
+Consider the particle in the system of reference in which the particle is at rest at a given moment; in this system of reference we can apply low velocity approximation. Here, we have
+\[d\mathcal{E} = \frac{e^2 w^2}{6\pi}dt \quad d\bm{P} = 0\]
+So, in an arbitrary reference, we have
+\[dP^{\mu} = -\frac{e^2}{6\pi} \frac{du^{\nu}}{d\tau} \frac{du_{\nu}}{d\tau} u^{\mu}d\tau\]
+Recall the Lorentz equation, the total four-momentum radiated during the time of passage of the particle through a given electromagnetic field is equal to
+\[\Delta P^{\mu} = -\frac{e^4}{6\pi m^2} \int F_{\nu\rho}u^{\rho} F^{\nu\sigma}u_{\sigma} dx^{\mu}\]
+Particularly, we have
+\[\Delta \mathcal{E} = \frac{e^2}{6\pi} \int \frac{w^2 - (\bm{v} \times \bm{w})^2}{(1-v^2)^3} dt = \frac{e^4}{6\pi m^2} \int \frac{(\bm{E} + \bm{v} \times \bm{B})^2-(\bm{E} \cdot \bm{v})^2}{1-v^2} dt\]
+It is clear from formula above that for velocities close to the velocity of light, the total energy radiated per unit time is proportionally to the square of the energy of the moving particle. The only exception is motion in an electric field, along the direction of the field. In this case the factor $(1-v^2)$ standing in the denominator is cancelled by an identical factor in the numerator, and the radiation does not depend on the energy of the particle.\\ \\
+Now we discuss the angular distribution of the radiation from a rapidly moving charge. The radiation electric field is
+\[\bm{E} = \frac{e}{4\pi R} \frac{\bm{n} \times \left[(\bm{n} - \bm{v}) \times \bm{w} \right]}{(1 - \bm{n} \cdot \bm{v})^3}  \quad \bm{B} = \bm{n} \times \bm{E}\]
+where all the quantities on the right sides of the equations refer to the retarded time $t' = t - \frac{R}{c}$. \\
+The intensity radiated into the solid angle $do$ is
+\[dI = \frac{e^2}{16\pi^2} \left\{ \frac{2(\bm{n}\cdot\bm{w})(\bm{v}\cdot\bm{w})}{(1-\bm{v}\cdot\bm{n})^5} + \frac{\bm{w}^2}{(1-\bm{v}\cdot\bm{n})^4} - \frac{(1-v^2)(\bm{n}\cdot\bm{w})^2}{(1-\bm{v}\cdot\bm{n})^6}\right\}do\]
+If we want to determine the angular distribution of the total radiation throughout the whole motion of the particle, we must integrate the intensity over the time. In doing this, it
+is important to remember that the integrand is a function of $t'$; therefore we must write
+\[dt = (1-\bm{n}\cdot\bm{v})dt'\]
+after which the integration over $t'$ is immediately done.\\
+In the ultrarelativistic case, the intensity is large within the narrow range of angles in which $1-\bm{v}\cdot\bm{n}$ is small. Thus an ultrarelativistic particle radiates mainly along the direction of its own motion, within the small range  of angles around the direction of its velocity. We also point out that, for arbitrary velocity and acceleration of the particle, there are always two directions for which the radiated intensity is zero. These are the directions for
+which the vector $\bm{n}-\bm{v}$ is parallel to the vector $\bm{w}$.\\ \\
+If the velocity and acceleration of the particle are parallel,
+\[\bm{B} = \frac{e}{4\pi R} \frac{\bm{w} \times \bm{n}}{(1-\bm{v}\cdot\bm{n})^3}\]
+and the intensity is
+\[dI = \frac{e^2}{16\pi^2} \frac{w^2 \sin^2 \theta}{(1-v\cos\theta)^6}\]
+It is naturally, symmetric around the common direction of $\bm{v}$ and $\bm{w}$, and vanishes along ($\theta=0$) and opposite to ($\theta = \pi$) the direction of the velocity. In the ultrarelativistic case, the intensity as a function of $\theta$ has a sharp double maximum near $\bm{v}$ , with a steep drop to zero for $\theta = 0$.\\ \\
+If the velocity and acceleration are perpendicular to one another,
+\[dI = \frac{e^2 w^2}{16\pi^2} \left[ \frac{1}{(1-v\cos\theta)^4} - \frac{(1-v^2)\sin^2\theta \cos^2\phi}{(1-v\cos\theta)^6} \right]\]
+where $\theta$ is again the angle between $\bm{v}$ and $\bm{n}$, and $\phi$ is the azimuthal angle of the vector $\bm{n}$ relative to the plane passing through $\bm{v}$ and $\bm{w}$.\\ \\
+The discussion of synchrotron radiation (magnetic bremsstrahlung) can be found in section 74 of \emph{The classical theory of fields (L.D.Landau \& E.M.Lifshitz)}.
+
+\section{The interaction between charged particles and EM field}
+\subsection{Radiation reaction}
+If a charged particle accelerates, it radiates away energy. This means that if an external force is applied to a charge, not all of the energy transferred to the charge by the force is converted to the kinetic energy of the charge; some of the energy is radiated away in the form of electromagnetic waves.  From Newton's law $\bm{F}=m\bm{a}$, the net force on the charge must be less than the applied external force. In effect, the fields surrounding the charge exert a recoil or reaction force on the charge.\\
+The fields of a moving point charge are
+\[\bm{E} = \frac{e}{4\pi(\bm{R}^*\cdot\bm{u}^*)^3}\left\{(1-v^{*2})R^*\bm{u} + \bm{R}^* \times [R^*\bm{u}^* \times \bm{a}^*]\right\} \quad \bm{B} = \frac{\bm{R}^*}{R^*}\times E\]
+Here,$\bm{u}^* = \frac{\bm{R}^*}{R^*}-v^*$.
+It is only those terms that go as $\frac{1}{R}$ that contribute to radiation energy. The other term falls off as $\frac{1}{R^2}$ so contributes nothing to the integral of the Poynting vector over a large sphere. This term is called the velocity field and, although it doesn't contribute to the energy radiated away by the EM field, it does store energy, so some of the energy imparted by the force that gets the charge moving must be siphoned off to create these velocity fields. These velocity fields are curious beasts, however, for they contain energy that is never actually lost to the charge. If a charge is accelerated to some velocity, the velocity fields are constructed around the moving charge, but if the charge is then decelerated to rest again, the velocity fields disappear without having radiated away any energy. It would seem to be reabsorbed by the charge as it slows down. \\
+If we look at a charged particle that starts off in some state, then goes through an acceleration followed by a deceleration, and finally ends up in the same state that it started from, what we can say is that the velocity fields are the same at the end as they were at the start, so over this period, the only energy that is truly lost from the particle is the energy that is radiated away. In non-relativistic case,
+\[\int_{t_{1}}^{t_{2}}\bm{F}_{rad}\cdot\bm{v}dt = -\int_{t_{1}}^{t_{2}}Pdt = -\frac{e^{2}}{6\pi }\int_{t_{1}}^{t_{2}}a^{2}dt \]
+Since
+\[\int_{t_{1}}^{t_{2}}a^{2}dt = \int_{t_{1}}^{t_{2}}\dot{\bm{v}}\cdot\dot{\bm{v}}dt = \bm{v}\cdot\dot{\bm{v}}|_{t_{1}}^{t_{2}}-\int_{t_{1}}^{t_{2}}\bm{v} \cdot\ddot{\bm{v}}dt = -\int_{t_{1}}^{t_{2}}\bm{v} \cdot\ddot{\bm{v}}dt\]
+So,we have
+\[\bm{F}_{rad} = \frac{e^2}{6\pi}\cdot{\bm{a}}\]
+This is known as the Abraham-Lorentz formula for radiation reaction. This equation can only be applied when the frequency and intensity of the EM field is not very big, i.e.
+\[\lambda \gg \frac{e^2}{m} \quad H \ll \frac{m^2}{e^3}\]
+The details can be found in section 75 of \emph{The classical theory of fields (L.D.Landau \& E.M.Lifshitz)}.\\ \\
+We derive the relativistic expression for the radiation damping for a single charge, which is applicable also to motion with velocity comparable to that of light. This force is now a four-vector $g^{\mu}$, which must be included in the equation of motion of the charge, written in four-dimensional form:
+\[m\frac{du^{\mu}}{d\tau} = eF^{\mu\nu}u_{\nu} + g^{\mu}\]
+To determine $g^{\mu}$ we note that for $v \ll 1$, its three space components must go over into the components of the vector $\frac{e^2}{6\pi}\cdot{\bm{a}}$. It is easy to see that the vector $\frac{e^2}{6\pi} \frac{d^2u^{\mu}}{d\tau^2}$ has this property. However, it does not satisfy the identity $g^{\mu}u_{\mu} = 0$, which is valid for any force four-vector. 
+In order to satisfy this condition, we must add to the expression given a certain auxiliary four-vector, made up from the four-velocity $u^{\mu}$ and its derivatives. 
+The three space components of this vector must become zero in the limiting case $v = 0$. As a result we find
+\[g^{\mu} = \frac{e^2}{6\pi} \left( \frac{d^2u^{\mu}}{d\tau^2} -u^{\mu}u^{\nu}\frac{d^2u^{\nu}}{d\tau^2} \right)\]
+It is called Abraham–Lorentz–Dirac force.\\
+The integral of the four-force $g^{\mu}$ over the world line of the motion of a charge, passing through a given field, must coincide (except for opposite sign) with the total four-momentum $\Delta P^{\mu}$ of the radiation from the charge. 
+The first term in equation above goes to zero on performing the integration, since at infinity the particle has no acceleration. We integrate the second term by parts and get:
+\[-\int g^{\mu} d\tau = -\frac{e^2}{6\pi} \int \frac{du^{\nu}}{d\tau} \frac{du_{\nu}}{d\tau} u^{\mu}d\tau = \Delta P^{\mu}\]
+
+\subsection{Scattering by free charges}
+If an electromagnetic wave falls on a system of charges, then under its action the charges are set in motion. This motion in turn produces radiation in all directions; there occurs, we say, a scattering of the original wave. 
+The scattering is most conveniently characterized by the ratio of the amount of energy emitted by the scattering system in a given direction per unit time, to the energy flux density of the incident radiation. This ratio clearly has dimensions of area, and is called the reflective
+scattering cross section. 
+Let $dI$ be the energy radiated by the system into solid angle do per second for an incident wave with Poynting vector $\bm{S}$. Then the effective cross-section for scattering (into the solid angle $do$) is
+\[d\sigma = \frac{d\bar{I}}{\bar{S}}\]
+(the dash over a symbol means a time average). The integral $\sigma$ of $d\sigma$ over all directions is the total scattering cross-section.\\
+Let us consider the scattering produced by a free charge at rest. Suppose there is incident on this charge an approximately plane monochromatic wave (partially polarized light). We shall assume that the velocity acquired by the charge under the influence of the incident wave is small compared with the velocity of light. Then we can neglect the force exerted by magnetic field. We also assume the wavelength of the EM field is much larger than the displacement of the charge during its vibrations. So, we have
+\[m\ddot{\bm{r}} = e\bm{E}_0(t) e^{-i\omega t}\]
+and
+\[\ddot{\bm{d}} = \frac{e^2}{m} \bm{E}_0(t) e^{-i\omega t}\]
+Now we assume the incident direction of the EM wave is $\hat{x}$, the scattered direction of the EM wave is $\bm{n}' =(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)$. The dipole radiation is
+\[\overline{dI} = \frac{e^4}{16\pi^2 m^2}\overline{(\bm{E}\times\bm{n}')^2} do\]
+Since
+\[(\bm{E}\times\bm{n}')^2 = -2 \, {E_y} {E_z} \cos\left({\theta}\right) \sin\left({\phi}\right)
+\sin\left({\theta}\right) - {\left({E_y}^{2} \sin\left({\phi}\right)^{2}
+- {E_z}^{2}\right)} \sin\left({\theta}\right)^{2} + {E_y}^{2}\]
+we have
+\[\overline{dI} = \frac{e^4 \bar{S}}{16\pi^2 m^2}[-(\rho_{12}+\rho_{21})\cos\left({\theta}\right)\sin\left({\phi}\right)
+\sin\left({\theta}\right) - {\left(\rho_{11} \sin\left({\phi}\right)^{2}
+- \rho_{22}\right)} \sin\left({\theta}\right)^{2} + \rho_{11} ]\]
+Here
+\[\bar{S} = \overline{\mathrm{Re}(\bm{E})\cdot \mathrm{Re}(\bm{E})} = \frac{1}{2}\mathrm{Re}\overline{\bm{E}_0 \cdot \bm{E}^*_0}\]
+The effective cross-section for scattering is
+\[d\sigma = \frac{e^4}{16\pi^2 m^2}[-(\rho_{12}+\rho_{21})\cos\left({\theta}\right)\sin\left({\phi}\right)
+\sin\left({\theta}\right) - {\left(\rho_{11} \sin\left({\phi}\right)^{2}
+- \rho_{22}\right)} \sin\left({\theta}\right)^{2} + \rho_{11} ]do\]
+The total cross section is
+\[\sigma = \frac{8\pi}{3} \left( \frac{e^2}{4\pi m} \right)^2\]
+If the incident light is totally linear polarized in $\hat{z}$ direction, then we have
+\[d\sigma = \frac{e^4}{16\pi^2 m^2} \sin^2\theta do\]
+If the incident light is unpolarized, we have
+\[d\sigma = \frac{e^4}{32\pi^2 m^2}\left(1 +  \cos^2\Theta \right)do\]
+Here, $\cos\Theta = \cos\phi\sin\theta$, $\Theta$ is the angle between the direction of incident light and scatted light.
+
+\subsubsection{Scattering by bound charges}
+The dynamic equation of the bound charges are
+\[\ddot{\bm{\xi}} = \frac{e}{m}\bm{E}_0e^{-i\omega t} - \omega_0^2 \bm{\xi} + \frac{e^2}{6\pi m} \dddot{\bm{\xi}}\]
+Suppose $\bm{\xi} = \bm{\xi}_0 e^{-i\omega t}$, we can get
+\[\bm{\xi} = \frac{e\bm{E}_0}{m(\omega_0^2 - \omega^2 - i\omega \gamma)} e^{-i\omega t}\]
+Here,
+\[\gamma = \frac{e^2 \omega^2}{6\pi m}\]
+We can show that
+\[\sigma = \sigma_0 \frac{\omega^4}{(\omega_0^2-\omega^2)^2 + \omega^2 \gamma^2}\]
+Here, $\sigma_0$ is the total cross section when EM wave is scattered by free charges. When $\omega \gg \omega_0$, $\sigma$ is independent of $\omega$,i.e. $\sigma \approx \sigma_0$. When $\omega \ll \omega_0$, $\sigma_0$ is proportional to $\omega^4$, i.e. $\sigma = \sigma_0 \left(\frac{\omega}{\omega_0}\right)^4$, and it is called Rayleigh scattering.
