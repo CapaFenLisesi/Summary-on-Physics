@@ -340,3 +340,217 @@ Then
 \[\theta_1 = \frac{1}{2}\chi \quad \theta_2 = \frac{1}{2}(\pi-\chi)\]
 \[v'_1 = v\cos\frac{1}{2}\chi \quad v'_2 = v\sin\frac{1}{2}\chi\]
 After the collision the particles move at right angles to each other.
+
+\section{Scattering and cross section}
+Scattering is a general physical process where some forms of radiation, such as light, sound, or moving particles, are forced to deviate from a straight trajectory by one or more paths due to localized non-uniformities in the medium through which they pass.  In classical mechanics, scattering generally refer to particle-particle collisions. \\
+The definition of cross section  of a scattering process is
+\[\sigma \equiv \frac{\mbox{Number of Events per target}}{\mbox{Time} \times \mbox{Incident Flux}}\]
+Here, the incident flux are measured in the frame of target particle. Recall that when we reduce two body problem in to one body problem, $\bm{r} = \bm{r}_1 - \bm{r}_2$ is the coordinates of projectile in the frame of target. So the scattering process can be represented by the reduced mass moving in the central field. 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=3.9cm ,width=5.2cm]{CM/scattering.png}
+	\caption{Scattering in central field}
+\end{figure}\\
+And we have
+\[\phi_0 = \int_{r_{min}}^{\infty} \frac{M}{r^2 \sqrt{2m(E-U(r))-\frac{M^2}{r^2}}} \quad \chi = |\pi - 2\phi_0|\]
+Since
+\[E = \frac{1}{2}m v_{\infty}^2 \quad M = m\rho v_{\infty},\]
+we can get the relation between  $\chi$ and $\rho$. Suppose the number density of the particles is $n$, then the incident flux is $nv_{\infty}$, number of events that particles are scattered into the solid angle $do = \sin\chi d\chi d\phi$ at $(\chi,\phi)$ in time $T$ is
+\[d\rho \rho(\chi) d\phi nv_{\infty} T \]
+So, we have
+\[d\sigma = \rho(\chi) d\rho d\phi = \frac{\rho(\chi)}{\sin\chi} \left| \frac{d\rho}{d\chi} \right| do\]
+In C system, we have $\bm{r}_1 = \frac{m_2}{m_1+m_2} \bm{r}$, so the scattering angle of particle 1 is the same as $\chi$. While in L system (particle 2 is at rest before scattering), we must making corresponding transformation to get the right expression for cross section.
+
+\subsubsection{Rutherford's formula}
+One of the most important applications of the formulae derived above is to the scattering of charged particles in a Coulomb field. As $U = \frac{\alpha}{r}$, we have
+\[\phi_0 = \arccos \frac{\alpha/mv^2_{\infty}\rho}{\sqrt{1+(\alpha/mv^2_{\infty}\rho)^2}}\]
+Recall that $\chi = \frac{1}{2}(\pi-\phi_0)$, we can obtain that
+\[\rho^2 = \frac{\alpha^2}{m^2v_{\infty}^4} \cot^2 \frac{1}{2}\chi\]
+and
+\[d\sigma = \left( \frac{\alpha}{2mv_{\infty}^2} \right)^2 \frac{do}{\sin^4 \frac{1}{2}\chi}\]
+This is Rutherford's formula. It may be noted that the effective cross-section is independent of the sign of $\alpha$, so that the result is equally valid for repulsive
+and attractive Coulomb fields.\\
+Formula above gives the effective cross-section in the frame of reference in which the centre of mass of the colliding particles is at rest. The transformation to the laboratory system is effected by means of
+\[\tan\theta_1 = \frac{m_2\sin\chi}{m_1 + m_2 \cos\chi} \quad \theta_2 = \frac{1}{2}(\pi - \chi)\]
+For particles initially at rest, we have
+\[d\sigma_2 = \left ( \frac{\alpha}{mv^2_{\infty}} \right )^2 \frac{do_2}{\cos^3 \theta_2}\]
+The same transformation for the incident particles leads, in general, to a very complex formula, and we shall merely note two particular cases.\\
+If the mass $m_2$ of the scattering particle is large compared with the mass $m_1$ of the scattered particle, then $\chi = \theta_1$ and $m = m_1$, so that
+\[d\sigma_1 = \left ( \frac{\alpha}{4E_1}\right )^2 \frac{do_1}{\sin^2 (\frac{1}{2}\theta_1)}\]
+here $E_1 = \frac{1}{2}m_1v^2_{\infty}$ is the energy of the incident particle.\\
+If the masses of the two particles are equal, then by $\theta_1 = \frac{\chi}{2}$, we have
+\[d\sigma_1 =  \left ( \frac{\alpha}{E_1}\right )^2 \frac{\cos\theta_1}{\sin^4\theta_1} do_1\]
+If the particles are entirely identical, that which was initially at rest cannot be distinguished after the collision. The total effective cross-section for all
+particles is obtained by adding $do_1$ and $do_2$, so
+\[d\sigma = \left ( \frac{\alpha}{E_1}\right )^2 \left ( \frac{1}{\sin^4\theta} + \frac{1}{\cos^4\theta} \right )\cos\theta do\]
+Let us return to the general formula and use it to determine the distribution of the scattered particles with respect to the energy lost in the collision. 
+When the masses of the scattered and scattering particles are arbitrary, the velocity acquired by the latter is given in terms of the angle of scattering in the C system by
+\[v'_2 = \frac{2m_1}{m_1+m_2} v_{\infty} \sin \frac{\chi}{2}\]
+The energy acquired by 2 and lost by 1 is therefore
+\[\epsilon = \frac{2m^2}{m_2} v_{\infty}^2 \sin^2 \frac{\chi}{2} \]
+Expressing $\sin \frac{\chi}{2}$ in terms of $\epsilon$, we obtain
+\[d\sigma = 2\pi \frac{\alpha^2}{m_2 v^2_{\infty}} \frac{d\epsilon}{\epsilon^2}\]
+This is the required formula: it gives the effective cross-section as a function, of the energy loss $\epsilon$, which takes values from zero to $\epsilon_{max} = 2m^2 v_{\infty}^2 /m_2$.
+
+\chapter{Small Oscillation}
+\section{Small oscillation in one dimensional}
+Let us consider the motion in one dimension, the potential energy of the particle is $V = V(q)$. If we choose the coordinate of equilibrium point as $q=0$, then $ \frac{\partial V}{\partial q} |_{q=0} = 0$. Expand $V(q)$ around $q=0$, we have
+\[V(q) = V(0) + \frac{1}{2}  \frac{\partial^2 V}{\partial q^2} |_{q=0} \; q^2 + \cdots  \]
+If the equilibrium point is stable,we have
+\[\frac{\partial^2 V}{\partial q^2} |_{q=0} \equiv V''(0) > 0\]
+For small oscillation, we can neglect the higher orders of $q$ and the Lagrangian can be written as
+\[L = \frac{1}{2}m\dot{q} - \frac{1}{2}V''(0)q^2\]
+The Euler-Lagrangian equation is
+\[\ddot{q} + \omega_0^2 q = 0 \quad \omega_0^2 = \frac{V''(0)}{m}\]
+The general solution is
+\[q = A\cos(\omega_0 t + \phi)\]
+$A$ and $\phi$ depends on the initial condition. \\ \\
+If there is a damped force which is proportional to the velocity of the particle, then we have
+\[\ddot{q} + \frac{1}{Q}\dot{q} + \omega_0^2 q = 0\]
+If $Q > \frac{1}{2\omega_0}$, we have
+\[q = A e^{-\frac{t}{2Q}} \cos(\omega t + \phi) \quad \omega = \sqrt{\omega_0^2 - \frac{1}{4Q^2}}\]
+It is called under damped oscillation.\\
+If $Q < \frac{1}{2\omega_0}$, we have
+\[q = Ae^{\lambda_+ t} + B Ae^{\lambda_- t}\]
+Here,
+\[\lambda_{\pm} = -\frac{1}{2Q} \pm \sqrt{\frac{1}{4Q^2} - \omega_0^2 }\]
+It is called over damped oscillation.\\
+If $Q = \frac{1}{2\omega_0}$, we have
+\[q = C(1+Dt)e^{-\omega_0 t}\]
+It is called critical damped oscillation.
+
+\section{Forced oscillation}
+The equation of motion for forced oscillation is
+\[\ddot{q} + \frac{1}{Q}\dot{q} + \omega_0^2 q = F(t)\]
+The form of solution is
+\[q = q_s + q_g\]
+and $q_g$ is the general solution of the homogeneous equation and $q_s$ is an arbitrary special solution of the equation. In order to get $q_s$, we consider the following equation
+\[\ddot{G} + \frac{1}{Q}\dot{G} + \omega_0^2 G = \delta(t-t')\]
+and its solution is $G(t,t')$.
+Then we have
+\[q_s = \int_{-\infty}^{\infty} F(t')G(t-t')dt'\]
+For under damped oscillation, we have
+\[G(t,t') = \begin{cases} \frac{e^{-\frac{t-t'}{2Q}}}{\omega} \sin\omega(t-t') \quad t>t'\\ 0 \quad t<t'\end{cases} \]
+And we can verify that
+\[q_s = \int_{0}^{\infty} F(t-t') \frac{e^{-\frac{t'}{2Q}}}{\omega} \sin\omega t' dt'\]
+A special case is that
+\[F(t) = F_0 \cos\Omega t\]
+and we have
+\[q(t) = \frac{F_0}{\sqrt{(\Omega^2 - \omega_0^2 + \frac{1}{2Q^2})^2 + \frac{\omega^2}{Q^2}}} \cos(\Omega t + \phi)\]
+Here
+\[\tan \phi = \frac{\frac{\Omega}{Q}}{\omega_0^2 - \Omega^2}\]
+When
+\[\Omega = \sqrt{\omega_0^2 - \frac{1}{2Q^2}}\]
+we have
+\[q_{max} = \frac{QF_0}{\omega}\]
+It is called resonance. 
+
+\section{Non-linear oscillation and perturbation theory}
+Consider the equation of motion
+\[\ddot{q} + \omega_0^2 q + \epsilon q^3 = 0\]
+Suppose $\epsilon$ is very small, then we can expand
+\[q = q_0 + \epsilon q_1 + \epsilon^2 q_2 + \cdots\]
+and
+\[\omega = \omega_0 + \epsilon \omega_1 + \epsilon^2 \omega_2 + \cdots\]
+The equation of motion can be written as
+\[\ddot{q} + \omega^2 q = (\omega^2 -\omega_0^2)q - \epsilon q^3\]
+Let $\tau \equiv \omega t$ and $q' \equiv \frac{dq}{d\tau} = \frac{\dot{q}}{\omega}$, we have
+\[q'' + q = (1- \frac{\omega_0^2}{\omega^2})q - \frac{\epsilon}{\omega^2} q^3 = 0\]
+We can solve the equation above power by power and get
+\[q_0'' + q_0 = 0\]
+\[q_1'' + q_1 = -\frac{q_0^3}{\omega_0^2} + \frac{2\omega_1}{\omega_0}q_0\]
+and so on. When doing the perturbation, we must adjust the $\omega_i$ to avoid the resonance solution. The details will be neglect here.\\ \\
+Now let us consider the non-linear oscillation with drive force. The equation of motion is
+\[\ddot{q} + \frac{1}{Q}\dot{q} + \omega_0^2 q + \epsilon q^3 = F_0 \cos \omega t\]
+It can be rewritten as
+\[\ddot{q} + \omega^2 q = - \frac{1}{Q} \dot{q} + (\omega^2 - \omega_0^2)q - \epsilon q^3 + F_0\cos\omega t\]
+We treat the right hand of the equation as perturbation, so we multiply it by a parameter $\mu$ and let it be $1$ later,
+\[\ddot{q} + \omega^2 q = \mu \left (- \frac{1}{Q} \dot{q} + (\omega^2 - \omega_0^2)q - \epsilon q^3 + F_0\cos\omega t \right )\]
+Concerning on the phase lagging effect, we redefine the "time" as 
+\[\tau \equiv \omega t - \delta\]
+so,
+\[q'' + q = \mu \left [ -\frac{1}{Q\omega} q' + \left ( 1- \frac{\omega_0^2}{\omega^2} \right ) q - \frac{\epsilon}{\omega^2} q^3 + \frac{F_0}{\omega^2} \cos (\tau + \delta) \right ]\]
+The expansion series of $q$ and $\delta$ are
+\[q = q_0 + \mu q_1 + \mu^2 q_2 + \cdots\]
+\[\delta = \delta0 + \mu \delta1 + \mu^2 \delta2 + \cdots\]
+We can solve the equation above power by power and get
+\[q''_0 + q_0 = 0\]
+\[q''_1 + q_1 =  -\frac{1}{Q\omega} q_0' + \left ( 1- \frac{\omega_0^2}{\omega^2} \right ) q_0 - \frac{\epsilon}{\omega^2} q_0^3 + \frac{F_0}{\omega^2} \cos (\tau + \delta_0)\]
+and so on. The solution of the zeroth order perturbation is
+\[q_0 = A_0 \cos\tau\]
+Substitute it into the first order equation, we have
+\[q''_1 + q_1 = \left ( \frac{A_0}{Q\omega} - \frac{F_0}{\omega^2} \sin\delta_0 \right ) \sin\tau + \left [ \left ( 1 - \frac{\omega_0^2}{\omega^2}\right ) A_0 - \frac{3\epsilon A_0^3}{4\omega^2} + \frac{F_0}{\omega^2}\cos\delta_0 \right ] \cos\tau - \frac{\epsilon A_0^3}{4\omega^2} \cos 3\tau\]
+To avoid non-physical solution, we have
+\[\sin\delta_0 = \frac{A_0 \omega}{F_0 Q}\]
+and
+\[\left ( 1 - \frac{\omega_0^2}{\omega^2}\right ) A_0 - \frac{3\epsilon A_0^3}{4\omega^2} + \frac{F_0}{\omega^2}\cos\delta_0 = 0\]
+At last, we can get
+\[A_0 = \frac{F_0}{\sqrt{\left[ (\omega^2 -\omega_0^2) - \frac{3}{4}\epsilon A_0^2 \right ]^2 + \frac{\omega^2}{Q^2} }}\]
+If we define
+\[x \equiv \frac{\omega}{\omega_0} \quad y \equiv \frac{A_0 \omega_0^2}{F_0}\]
+the equation above can be written as
+\[y^2 = \frac{1}{(x^2-1-ay^2)^2 + bx^2}\]
+Here
+\[a = \frac{3\epsilon F_0^2}{4\omega_0^6} \quad b = \frac{1}{\omega_0^2 Q^2}\]
+We than can solve for $x$ in terms of $y$.,
+\[x^2 = \frac{2 + 2ay-b \pm \sqrt{(b-2-2ay)^2-4(a^2y^2+2ay+1-\frac{1}{y})}}{2}\]
+So the resonance curve has two branches, corresponding to the two roots of the equation above.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=6cm ,width=12cm]{CM/resonance.png}
+	\caption{Resonance curve}
+\end{figure}\\ 
+When the frequency of the drive force increase from left, the amplitude of oscillation will become larger and larger. But when it comes to the point of inflection, the amplitude will drop to the low-right part of the curve. 
+When the frequency of the drive force decrease from right, the amplitude of oscillation will also become larger and larger. When it comes to the point of inflection, the amplitude will jump to the hight-left part of the curve. 
+This effect is called hysteresis.
+
+\section{Oscillations of systems with more than one degree of freedom}
+Let's look at a system with many degrees of freedom; we have
+\[L={\frac {1}{2}}\sum _{i,j}T_{ij}{\dot {q}}_{i}{\dot {q}}_{j}-V\left(q_{1},\ldots q_{n}\right)\]
+Let $q_{0,i}$ be an equilibrium position and expand about this point $q_{i}=q_{0,i}+\eta _{i}$, so $\dot{q}_{i}=\dot {\eta }_{i}$.
+We can expand the potential energy to give
+\[V\left(q_{1},\ldots q_{n}\right)=V\left(q_{0,1},\ldots q_{0,n}\right)+\sum _{i}\left({\frac {\partial V}{\partial q_{i}}}\right)_{q_{0,i}}\eta _{i}+{\frac {1}{2}}\sum _{i,j}\left({\frac {\partial ^{2}V}{\partial q_{i}\partial q_{j}}}\right)_{q_{0,i}}\eta _{i}\eta _{j}+\cdots\]
+The first term is a constant with respect to $\eta_i$ and constant terms do not affect the motion. The second term is zero, because $q_{0,i}$ is a point of equilibrium so we are left with
+\[L={\frac {1}{2}}\sum _{i,j}\left(T_{ij}{\dot {\eta }}_{i}{\dot {\eta }}_{j}-V_{ij}\eta _{i}\eta _{j}\right)\]
+where
+\[T_{ij}=T_{ij}\left(q_{0,1},\ldots q_{0,n}\right) \quad V_{ij}=\left({\frac {\partial ^{2}V}{\partial q_{i}\partial q_{j}}}\right)_{q_{0,i}}\]
+yielding the equations of motion
+\[\sum _{j}\left(T_{ij}{\ddot {\eta }}_{j}-V_{ij}\eta _{j}\right)=0\]
+This is a linear differential equation with constant coefficients. We can try the solution
+\[\eta _{i}=Ca_{i}e^{-i\omega t}\]
+so we have
+\[\sum _{j}\left(V_{ij}a_{j}-\omega ^{2}T_{ij}a_{j}\right)=0\]
+This is a matrix equation such that
+\[{\vec {\vec {A}}}\cdot {\vec {a}}=0\]
+with
+\[{\vec {a}}=\left[{\begin{matrix}a_{1}\\a_{2}\\\vdots \\a_{j}\end{matrix}}\right]\]
+and
+\[{\vec {\vec {A}}}=\left[{\begin{matrix}V_{11}-\omega ^{2}T_{11}&V_{12}-\omega ^{2}T_{12}&\cdots \\V_{21}-\omega ^{2}T_{21}&V_{22}-\omega ^{2}T_{22}&\cdots \\\vdots &&\end{matrix}}\right]\]
+This equation only has a solution is $\det {\vec {\vec {A}}}=0$. This gives a $n$th-degree polynomial to solve for $\omega^2$. We will get $n$ solutions for $\omega^2$ that we can substitute into the matrix equation and solve for $a_j$.
+
+\chapter{Motion of a Rigid Body}
+\section{Angular velocity}
+Suppose there are two coordinate frames. The frame 2 is rotating relatively to frame 1. If the coordinates of the particles in frame 2 is $r_2=(x_2,y_2,z_2)$.
+The the coordinates of the particle in frame 1 is
+\[r_1 = O(t)r_2\]
+and we have
+\[O^TO=I\]
+So, we can derive that
+\[\Omega + \Omega^T= 0 \quad \Omega \equiv O^T\frac{dO}{dt}\]
+It is easy to verify that
+\[\frac{dr_1}{dt} = \frac{dO}{dt}r_2 + O\frac{dr_2}{dt} = OO^T \frac{dO}{dt}r_2 + Ov_2  = O (\Omega r_2 + v_2)\]
+Suppose
+\[\Omega = \left[ \begin{matrix} 0& -\omega_{2z}& \omega_{2y}\\ \omega_{2z}& 0& -\omega_{2x}\\ -\omega_{2y}& \omega_{2x}& 0\end{matrix} \right] \]
+So, we have
+\[v_1 = O(\omega_2 \times r_2 + v_2) \]
+Now, we define
+\[\omega_1 \equiv O\omega_2\]
+We can derive that
+\[O \Omega O^T = \left[ \begin{matrix} 0& -\omega_{1z}& \omega_{1y}\\ \omega_{1z}& 0& -\omega_{1x}\\ -\omega_{1y}& \omega_{1x}& 0\end{matrix} \right] \]
+So, we have
+\[v_1 = \omega_1 \times r_1 + Ov_2\]
+$\omega$ is the so-called angular velocity.
+\begin{note}
+$\omega_1$ is independent of the base vector we choose for frame 2.\\
+If we choose frame 1 differently, $\omega_1$ will transform like an vector.
+\end{note}
