@@ -511,7 +511,7 @@ so,
 \[q'' + q = \mu \left [ -\frac{1}{Q\omega} q' + \left ( 1- \frac{\omega_0^2}{\omega^2} \right ) q - \frac{\epsilon}{\omega^2} q^3 + \frac{F_0}{\omega^2} \cos (\tau + \delta) \right ]\]
 The expansion series of $q$ and $\delta$ are
 \[q = q_0 + \mu q_1 + \mu^2 q_2 + \cdots\]
-\[\delta = \delta0 + \mu \delta1 + \mu^2 \delta2 + \cdots\]
+\[\delta = \delta_0 + \mu \delta_1 + \mu^2 \delta_2 + \cdots\]
 We can solve the equation above power by power and get
 \[q''_0 + q_0 = 0\]
 \[q''_1 + q_1 =  -\frac{1}{Q\omega} q_0' + \left ( 1- \frac{\omega_0^2}{\omega^2} \right ) q_0 - \frac{\epsilon}{\omega^2} q_0^3 + \frac{F_0}{\omega^2} \cos (\tau + \delta_0)\]
@@ -593,4 +593,109 @@ $\omega$ is the so-called angular velocity.
 $\omega_1$ is independent of the base vector we choose for frame 2.\\
 If we choose frame 1 differently, $\omega_1$ will transform like an vector.
 \end{note}
+
+\section{Dynamics of rigid body}
+\subsubsection{Inertial tensor of rigid body}
+Suppose there is frame attached to the rigid body, then the coordinate of all the mass point of the rigid body is constant in this frame, i.e.
+\[r_1 = r_0(t) + O(t)r_2 \quad r_2 \mbox{ is a constant}\]
+So we have
+\[v_1 = V + \omega_1 \times r_1 = V + O(\omega_2 \times r_2)\]
+The kinetic energy of the rigid body is
+\[T = \sum \frac{m}{2} (\bm{V} + \bm{\omega} \times \bm{r})^2 = \sum \frac{m}{2} V^2 + \sum m\bm{V}\cdot(\bm{\omega}\times\bm{r}) + \sum \frac{m}{2} (\bm{\omega} \times \bm{r})^2\]
+If we choose the origin of the frame 2 to be the center of mass of the rigid body, we have
+\[T = \frac{\mu V^2}{2} + \frac{1}{2}\sum m [\omega^2r^2-(\bm{\omega} \cdot \bm{r})^2]\]
+If we define the inertial tensor as
+\[I_{ik} = \sum m (x_l^2 \delta_{ik} - x_i x_k)\]
+the kinetic energy of the rigid body can be rewritten as
+\[T = \frac{\mu V^2}{2} + \frac{1}{2} I_{ik}\omega_i \omega_k\]
+and the Lagrangian of the rigid body is
+\[L = \frac{\mu V^2}{2} + \frac{1}{2} I_{ik}\omega_i \omega_k -U\]
+If the body is regarded as continuous, the sum becomes an integral over the volume of the body:
+\[I_{ik} = \int \rho (x_l^2 \delta_{ik} - x_i x_k) dV\]
+Like any symmetrical tensor of rank two, the inertia tensor can be reduced to diagonal form by an appropriate choice of the directions of the axes $x_1$, $x_2$ $x_3$. 
+These directions are called the principal axes of inertia, and the corresponding values of the diagonal components of the tensor are called the principal moments of inertia; we shall denote them by $I_1$, $I_2$, $I_3$. 
+When the axes $x_1$, $x_2$ $x_3$ are so chosen, the kinetic energy of rotation takes the very simple form
+\[T_{rot} = \frac{1}{2} (I_1 \omega_1^2 + I_2 \omega_2^2 + I_3 \omega_3^2)\]\\
+A body whose three principal moments of inertia are all different is called an asymmetrical top. \\
+If two are equal ($I_1 = I_2 \neq I_3$), we have a symmetrical top. 
+In this case the direction of one of the principal axes in the $x_1x_2$-plane may be chosen arbitrarily. \\
+If all three principal moments of inertia are equal, the body is called a spherical top, and the three axes of inertia may be chosen arbitrarily as any three mutually perpendicular axes.\\
+The determination of the principal axes of inertia is much simplified if the body is symmetrical, for it is clear that the position of the centre of mass and the directions of the principal axes must have the same symmetry as the body. \\
+For example, if the body has a plane of symmetry, the centre of mass must lie in that plane, which also contains two of the principal axes of inertia, while the third is perpendicular to the plane. \\
+If a body has an axis of symmetry of any order, the centre of mass must lie on that axis, which is also one of the principal axes of inertia, while the other two are perpendicular to it. \\
+If the axis is of order higher than the second, the body is a symmetrical top. For any principal axis perpendicular to the axis of symmetry can be turned through an angle different from $\pi$ about the latter, i.e. the choice of the perpendicular axes is not unique, and this can happen only if the body is a symmetrical top.\\ \\
+Finally, we may note one further result concerning the calculation of the inertia tensor. 
+Although this tensor has been defined with respect to a system of co-ordinates whose origin is at the centre of mass , it may sometimes be more conveniently found by first calculating a similar tensor,
+\[I'_{ik} = \sum m (x_l^{'2} \delta_{ik} - x'_i x'_k)\]
+defined with respect to some other origin $O'$. If the distance $OO'$ is represented by a vector $\bm{a}$, then $\bm{r} = \bm{r'} + \bm{a}$; since, by the definition
+of $O$, $\sum m\bm{r} = 0$, we have
+\[I'_{ik} = I_{ik} + \mu (a^2\delta_{ik}-a_i a_k)\]
+Using this formula, we can easily calculate $I_{ik}$ if $I'_{ik}$ is known.
+\subsubsection{Angular momentum}
+The value of the angular momentum of systems depends on the point with respect to which it is defined. In the mechanics of a rigid body, the most appropriate point to choose for this purpose is the origin of the moving system of co-ordinates, i.e. the centre of mass of the body. Then we have
+\[\bm{M} = \sum m\bm{r} \times (\bm{\omega} \times \bm{r} + \bm{V}) = \sum m \left [ r^2\bm{\omega} - (\omega \cdot \bm{r})\bm{r} \right ]\]
+or, in tensor notation,
+\[M_i = I_{ik}\omega_k\]
+If the axes $x_1$, $x_2$ $x_3$ are the same as the principal axes of inertia, we have
+\[M_1 = I_1 \omega_1 \quad M_2 = I_2 \omega_2 \quad M_3 = I_3 \omega_3\]
+
+\subsubsection{Equation of motion}
+Since a rigid body has, in general, six degrees of freedom, the general equations of motion must be six in number. They can be put in a form which gives the time derivatives of two vectors, the momentum and the angular momentum of the body.
+The first equation is obtained by simply summing the equations $\dot{\bm{p}} = \bm{f}$ for each particle in the body. In terms of the total momentum of the body
+\[\bm{P} = \sum \bm{p} = \mu\bm{V}\]
+and total force acting on it $\bm{F} = \sum \bm{f}$, we have
+\[\frac{d\bm{P}}{dt} = \bm{F}\]
+Although $\bm{F}$ has been defined as the sum of all the forces $\bm{f}$ acting on the various particles, including the forces due to other particles, $\bm{F}$ actually includes only external forces: the forces of interaction between the particles composing the body must cancel out, since if there are no external forces the momentum of the body, like that of any closed system, must be conserved, i.e. we must have $\bm{F} = 0$. \\ \\
+Let us now derive the second equation of motion, which gives the time derivative of the angular momentum $\bm{M}$. 
+To simplify the derivation, it is convenient to choose the fixed (inertial) frame of reference in such a way that the centre of mass is at rest in that frame at the instant considered. We have
+\[\dot{\bm{M}} = \frac{d}{dt} \sum \bm{r} \times \bm{p} = \sum \bm{\dot{r}} \times \bm{p} + \sum \bm{r} \times \dot{\bm{p}}\]
+Our choice of the frame of reference (with $\bm{V} = 0$) means that the vectors $\dot{r}$ and $\bm{p} = m\bm{v}$ are parallel, so $\dot{\bm{r}} \times \bm{p} = 0$. We have finally
+\[\frac{d\bm{M}}{dt} = \bm{K}\]
+where
+\[\bm{K} = \sum \bm{r} \times \bm{f}\]
+Since $\bm{M}$ has been defined as the angular momentum about the centre of mass, it is unchanged when we go from one inertial frame to another. We can therefore deduce that the equation of motion, though derived for a particular frame of reference, is valid in any other inertial frame, by Galileo's relativity principle.\\
+The vector $\bm{r}\times \bm{f}$ is called the moment of the force $\bm{f}$, and so $\bm{K}$ is the total torque, i.e. the sum of the moments of all the forces acting on the body. Like the total force, $\sum \bm{r} \times \bm{f}$ need include only the external forces: by the law of conservation of angular momentum, the sum of the moments of the internal forces in a closed system must be zero.
+
+\subsubsection{Euler's equation}
+Let $\frac{d\bm{A}}{dt}$ be the rate of change of any vector $\bm{A}$ with respect to the fixed system of co-ordinates. We have
+\[\frac{d\bm{A}}{dt} = \frac{d'\bm{A}}{dt} + \bm{\omega} \times \bm{A}\]
+where
+$\frac{d'\bm{A}}{dt}$ is the rate of change of the $\bm{A}$'s components in the body system of coordinates. So, we have
+\[\frac{d'\bm{M}}{dt} + \bm{\omega} \times \bm{M} = \bm{K}\]
+Suppose the principal axes of inertia are $x_1$, $x_2$ $x_3$, so we have
+\begin{eqnarray}
+I_1 \frac{d\omega_1}{dt} + (I_3-I_2)\omega_2\omega_3 &=& K_1 \nonumber \\
+I_2 \frac{d\omega_2}{dt} + (I_1-I_3)\omega_1\omega_3 &=& K_2 \nonumber \\
+I_3 \frac{d\omega_1}{dt} + (I_2-I_1)\omega_1\omega_2 &=& K_3 \nonumber
+\end{eqnarray}
+This is called Euler's equation.
+\section{Eulerian angle}
+The motion of a rigid body can be described by means of the three co-ordinates of its centre of mass and any three angles which determine the orientation of the axes $x_1$, $x_2$ $x_3$ in the moving system of coordinates relative to the fixed system $X$, $Y$, $Z$. These angles may often be conveniently taken as what are called Eulerian angles.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=5.7cm ,width=6.3cm]{CM/euler.png}
+	\caption{Eulerian angle}
+\end{figure}
+The moving $x_1x_2$-plane intersects the fixed $XY$-plane in some line $ON$, called the line of nodes. 
+This line is evidently perpendicular to both the $Z$-axis and the $x_3$-axis; we take its positive direction as that of the vector product $\bm{z} \times \bm{x}_3$.
+We take, as the quantities defining the position of the axes $x_1$, $x_2$ $x_3$ relative to the axes $X$, $Y$, $Z$ the angle $\theta$ between the $Z$ and $x_3$ axes, the angle $\phi$ between the $X$-axis and $ON$, and the angle $\psi$  between the $x_1$ and $ON$.\\
+Let us now express the components of the angular velocity  vector $\omega$ along the moving axes $x_1$, $x_2$ $x_3$ in terms of the Eulerian angles and their derivatives. 
+To do this, we must find the components along those axes of the angular velocities $\dot{\theta}$, $\dot{\phi}$, $\dot{\psi}$. The angular velocity $\dot{\theta}$ is along the line of nodes $ON$. The angular velocity $\dot{\phi}$ is along the $Z$-axis. The angular velocity $\psi$ is along the $x_3$-axis. Collecting the components along each axis, we have
+\begin{eqnarray}
+\omega_1 &=& \dot{\phi}\sin\theta\sin\psi + \dot{\theta}\cos\psi \nonumber \\
+\omega_2 &=& \dot{\phi}\sin\theta\cos\psi - \dot{\theta}\sin\psi \nonumber \\
+\omega_3 &=& \dot{\phi} \cos\theta + \dot{\psi} \nonumber
+\end{eqnarray}
+For a symmetrical top, by using the fact that the choice of directions of the principal axes $x_1$, $x_2$ is arbitrary for a symmetrical top. 
+If the $x_1$ axis is taken along the line of nodes $ON$, i.e. $\psi = 0$, the components of the angular velocity are simply
+\[\omega_1 = \dot{\theta} \quad \omega_2 = \dot{\phi}\sin\theta \quad \omega_3 = \dot{\phi}\cos\theta + \dot{\psi}\]
+For the free motion of a symmetrical top, we take the $Z$-axis of the fixed system of coordinates in the direction of the constant angular momentum $M$ of the top. The $x_3$-axis of the moving system is along the axis of the top; let the $x_1$-axis coincide with the line of nodes at the instant considered. 
+Then the components of the vector $M$ are
+\[M_1 = I_1\dot{\theta} \quad M_2 = I_2 \dot{\phi}\sin\theta \quad M_3 = I_3(\dot{\phi}\cos\theta + \dot{\psi})\]
+Since the $x_1$-axis is perpendicular to the $Z$-axis, we have
+\[M_1 = 0 \quad M_2 = M\sin\theta \quad M_3 = M\cos\theta\]
+Comparison gives
+\[\dot{\theta} = 0 \quad  \dot{\phi} = \frac{M}{I_1} \quad \dot{\phi}\cos\theta + \dot{\psi} = \frac{M\cos\theta}{I_3}\]
+The first of these equations gives $\theta = \mbox{ constant} $, i.e. the angle between the axis of the top and the direction of $\bm{M}$ is constant. The second equation gives
+the angular velocity of precession $\dot{\phi} = \frac{M}{I_1}$. Finally, the third equation gives the angular velocity with which the top rotates about its own axis $\omega_3 = \frac{M\cos\theta}{I_3}$.
 \end{document}
