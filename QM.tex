@@ -762,7 +762,7 @@ eigenvectors will be denoted as $|j_1,j_2,J,M\rangle$. And we have the unitarity
 The coefficients of this transformation are called the Clebsch–Gordan coefficients, denoted as $(j_1,j_2,m_1,m_2|J,M)$. We fix the phase of $|j_1, j_2, J, M\rangle$ by requiring that $(j_1,j_2,m_1,m_2|J,M)$ be real and positive. The CG coefficient vanishes unless the following conditions are satisfied:
 \begin{itemize}
 \item $m_1+m_2=M$
-\item $|j_1-j_2| \leq M \leq |j_1+j_2|$
+\item $|j_1-j_2| \leq J \leq |j_1+j_2|$
 \item $j_1+j_2+J =$ an integer
 \end{itemize}
 It is possible to calculate the values of the CG coefficients by successive application of the raising or lowering operator to
@@ -866,7 +866,7 @@ We have
 \[[K_i,K_j] = ie(\partial_i A_j-\partial_j A_i) = ie\epsilon_{ijk}B_k\]
 So
 \[M \frac{d^2\bm{X}}{dt^2} = -i[\bm{K},H] + \frac{\partial \bm{K}}{\partial t} = e \left[ \bm{E}+ \frac{1}{2} \left( \frac{d\bm{X}}{dt} \times \bm{B} - \bm{B}\times\frac{d\bm{X}}{dt} \right) \right]\]\\
-In coordinate representation of Schrodinger picture, we have
+In coordinate representation of Schrödinger picture, we have
 \[\frac{1}{2M} \left[ -i\bm{\nabla}-e\bm{A} \right] \cdot \left[ -i\bm{\nabla}-e\bm{A} \right] \psi(\bm{x},t) + e\phi(\bm{x})\psi(\bm{x},t) = i \frac{\partial \psi(\bm{x},t)}{\partial t}\]
 Define probability current $\bm{j}$ as
 \[\bm{j} \equiv \frac{1}{M} \mathrm{Im}(\psi^{*}\bm{\nabla}\psi) - \frac{e}{M}\bm{A}|\psi|^2\]
@@ -876,7 +876,7 @@ Transformation
 \[\phi \to \phi - \frac{\partial \Lambda}{\partial t} \quad \bm{A} \to \bm{A} + \bm{\nabla}\Lambda\]
 will leave $\bm{E}$ and $\bm{B}$ unchanged. The transformation is called gauged transformation. In classical electrodynamics, gauge transformation will not change the trajectory of particles, (which is the only thing we can observed in experiment). In quantum theory, suppose the state vector $|\psi\rangle$ will transform as 
 \[|\psi(t)\rangle \to O(t)|\psi(t)\rangle\]
-where $O(t)$ is an unitary operator. If the Schrodinger equation is always satisfied, we can derive that
+where $O(t)$ is an unitary operator. If the Schrödinger equation is always satisfied, we can derive that
 \[H'O - OH = i\frac{\partial O}{\partial t}\]
 where $H'$ is the Hamiltonian operator after gauge transformation. Generally, we have
 \[O(t) = \exp \left[ ie\Lambda(\bm{X},t)\right]\]
@@ -927,7 +927,7 @@ A long solenoid is placed perpendicular to the plane of the figure, so that a ma
 	\includegraphics[height=4cm ,width=6.5cm]{QM/AB_effect.png}
 	\caption{The Aharonov–Bohm experiment}
 \end{figure}\\
-Let $\Psi^{(0)}(\bm{x},t)$ be the solution of the Schrodinger equation and boundary conditions of this problem for the case in which the vector potential is everywhere zero. Now let us consider the case in which the magnetic field is non-zero inside the cylinder but zero outside of it. The vector potential $\bm{A}$ will not vanish everywhere in the exterior region, even though $\bm{B}=\bm{\nabla}\times\bm{A}=0$
+Let $\Psi^{(0)}(\bm{x},t)$ be the solution of the Schrödinger equation and boundary conditions of this problem for the case in which the vector potential is everywhere zero. Now let us consider the case in which the magnetic field is non-zero inside the cylinder but zero outside of it. The vector potential $\bm{A}$ will not vanish everywhere in the exterior region, even though $\bm{B}=\bm{\nabla}\times\bm{A}=0$
 outside of the cylinder. This follows by applying Stokes's theorem to any path surrounding the cylinder
 \[\oint \bm{A}\cdot d\bm{x} = \int\int (\bm{\nabla}\times\bm{A})\cdot d\bm{S} = \int\int \bm{B}\cdot d\bm{S} = \Phi\]
 If the flux through the cylinder is not zero, then the vector potential must be nonzero on every path that encloses the cylinder. However in any simply connected region outside of the cylinder, it is possible to express the vector potential as the gradient of a scalar, from the zero potential solution by means of a gauge transformation, $\Psi = \Psi^{(0)}\exp(ie\Lambda)$.\\
@@ -958,6 +958,99 @@ There is also a magnetic dipole moment associated with the spin, $\bm{\mu}_{S} =
 For strong magnetic fields the term in the Hamiltonian that is proportional to $B^2$ becomes important. The details of the discussion can be found in section 11.5 of \emph{Quantum mechanics - a modern development(Leslie E. Ballentine)}.
 
 \chapter{Discrete Symmetries}
+\section{Space inversion}
+The space inversion transformation is $\bm{x} \to -\bm{x}$. The corresponding operator on state vector space is usually called the parity operator. It will be denoted by $P$. By definition, the parity operator reverses the signs of the position operator and the momentum operator
+\[P^{-1}\bm{X}P = -\bm{X} \quad P^{-1}\bm{P}P = -\bm{P}\]
+It follows that the orbital angular momentum, $\bm{L} = \bm{X}\times\bm{P}$, is unchanged by the parity transformation. This property is extended, by definition, to any angular momentum operator,
+\[P^{-1}\bm{J}P = \bm{J}\]
+We can verify that $P$ must be linear by applying space inversion to the commutation relation $[X_i,P_i] = i$. Therefore the parity operator is a unitary operator rather than an anti-unitary operator. Since two consecutive space inversions produce no change at all, it follows that the states described by $|\psi\rangle$ and by $P^2|\psi\rangle$ must be the same. Thus the
+operator $P^2$ can differ from the identity operator by at most a phase factor. This phase factor is left arbitrary. It is most convenient to choose that phase factor to be unity, and hence we have
+\[P = P^{-1} = P^{\dagger}\]
+Further more, we can derive that
+\[P|\bm{x}\rangle = |-\bm{x}\rangle\]
+So the effect of $P$ on a wave function is
+\[P\psi(\bm{x}) \equiv \langle \bm{x} | P | \psi\rangle = \langle -\bm{x} | \psi\rangle = \psi(-\bm{x})\]
+From the fact the $P^2=1$, it follows that $P$ has eigenvalues $\pm 1$. Any even function, $\psi_e(\bm{x}) = \psi_e(-\bm{x})$, is an eigenfunction on $P$ with eigenvalue $1$, and any odd function, $\psi_o(\bm{x}) = -\psi_o(-\bm{x})$, is an eigenfunction of $P$ with eigenvalue $-1$.
+A function corresponding to parity $+1$ is also said to be of even parity, and a function corresponding to parity $-1$ is said to be of odd parity.\\ \\
+\textbf{Example}\\
+Under space inversion, $\bm{x} \to -\bm{x}$, the spherical harmonic undergoes the transformation
+\[Y_l^m(\theta,\phi) \to Y_l^m(\pi-\theta,\phi+\pi) = (-1)^l Y_l^m(\theta,\phi)\]
+Hence the single particle orbital angular momentum eigenvector $|l,m\rangle$ is also an eigenvector of parity, with parity $(-1)^l$.\\
+A total orbital angular momentum eigenvector for a two-
+electron atom is of the form
+\[|l_1,l_2,L,M\rangle = \sum_{m_1,m_2}  \langle l_1,l_2,m_1,m_2 | l_1,l_2,L,M\rangle |l_1,m_1\rangle \otimes |l_2,m_2\rangle\]
+It is apparent that
+\[P|l_1,l_2,L,M\rangle = (-1)^{l_1+l_2}|l_1,l_2,L,M\rangle\]
+and that $(-1)^{l_1+l_2} \neq (-1)^{L}$ . Thus we see that, in general, the parity of an angular momentum state is not determined by its total angular momentum.\\ \\
+If the parity operator $P$ commutes with the Hamiltonian $H$, then parity eigenvalue $\pm 1$ is a conserved quantity. In that case an even parity state can never acquire an odd parity component, and an odd parity state can never acquire an even parity component. \\
+If $|\psi(t)\rangle$ is a physical process of the system with Hamiltonian $H$, then we have Schrödinger equation 
+\[H|\psi\rangle = i\frac{\partial |\psi\rangle }{\partial t}\]
+If $PH = HP$, we can verify that
+\[H P|\psi\rangle = i\frac{\partial P |\psi\rangle }{\partial t}\]
+So, the space inversion of $|\psi(t)\rangle$, $P|\psi(t)\rangle$, can also be a possible physical process of the system.\\
+Experiments have shown that parity in $\beta$ decay is not conserved.
+
+\section{Time reversal}
+The effect of the time reversal operator $T$ is to reverse the linear and angular momentum while leaving the position unchanged. Thus we require, by definition,
+\[T^{-1}\bm{X}T = \bm{X} \quad T^{-1}\bm{P}T = -\bm{P} \quad T^{-1}\bm{J}T = -\bm{J}\]
+We can verify that $T$ must be anti-linear by applying space inversion to the commutation relation $[X_i,P_i] = i$. Therefore the parity operator is a anti-unitary operator.\\
+The time evolution of a system satisfied Schrödinger equation
+\[H|\psi(t)\rangle = i\frac{\partial |\psi(t)\rangle }{\partial t}\]
+Suppose that $TH=HT$, we can derive that
+\[HT|\psi(t)\rangle = -i\frac{\partial T|\psi(t)\rangle }{\partial t}\]
+i.e.
+\[HT|\psi(-t)\rangle = i\frac{\partial T|\psi(-t)\rangle }{\partial t}\]
+$T|\psi(-t)\rangle$ is also a possible physical process of the system.\\ \\
+In coordinate representation the Schrödinger equation takes the form
+\[ \left[ -\frac{1}{2M}\nabla^2 + W(\bm{x}) \right] \psi(\bm{x},t) = i\frac{\partial \psi(\bm{x},t)}{\partial t}\]
+Its complex conjugate is
+\[ \left[ -\frac{1}{2M}\nabla^2 + W^*(\bm{x}) \right] \psi^*(\bm{x},t) = -i\frac{\partial \psi^*(\bm{x},t)}{\partial t}\]
+The condition for the Hamiltonian to be invariant under complex conjugation is that the potential be real: $W=W^*$. In that case it is apparent that if $\psi(\bm{x},t)$ is a solution then so is  $\psi^*(\bm{x},t)$. This suggests that we may identify the time reversal operator with the complex conjugation operator in this representation,
+\[T = K_0\]
+where, by definition, $K_0\psi(\bm{x},t) = \psi^*(\bm{x},t)$. In this case $T$ is its own inverse. 
+The formal expression for an arbitrary vector in coordinate representation is $|\psi\rangle = \int \psi(\bm{x})|\bm{x}\rangle d^3 \bm{x}$, where the basis vector $|\bm{x}\rangle$ is an eigenvector of the position operator. Since $T$ is equal to the complex conjugation operator, its effect is simply $T|\psi\rangle = \int \psi^*(\bm{x})|\bm{x}\rangle d^3 \bm{x}$, with $T|\bm{x}\rangle = |\bm{x}\rangle$.\\ \\
+In momentum representation, an arbitrary vector can be written as
+\[|\psi\rangle = \int \psi(\bm{p})|\bm{p}\rangle d^3 \bm{p}\]
+Since
+\[T|\bm{p}\rangle = \int \langle \bm{x} | \bm{p}\rangle^* |
+\bm{x}\rangle d^3 \bm{x} = |-\bm{p}\rangle\]
+so we have
+\[T|\psi\rangle = \int \psi^*(\bm{p})|-\bm{p}\rangle d^3 \bm{p} = \int \psi^*(\bm{-p})|\bm{p}\rangle d^3 \bm{p}\]\\ 
+The time reversal operator must reverse the angular momentum. For spin operator, we have
+\[T^{-1}\bm{S}T = -\bm{S}\]
+In the standard representation of the spin operators, $S_x$ and $S_z$ are real, while $S_y$ is imaginary. The time reversal operator $T$ cannot be equal to the complex conjugation operator $K_0$ in this representation, since the effect of the latter is
+\[K_0S_xK_0 = S_x \quad K_0S_yK_0 = -S_y \quad K_0S_zK_0 = S_z\]
+Let us write the time reversal operator as $T=YK_0$, where $Y$ is a linear operator. $Y$ must have the following properties:
+\[Y^{-1}S_xY = -S_x \quad Y^{-1}S_yY = S_y \quad Y^{-1}S_zY = -S_z\]
+And $Y$ must operate only on the spin degrees of freedom. A reasonable choice is that $Y = e^{-i\pi S_y}$, whose effect is
+to rotate spin (and only spin) through the angle $\pi$ about the $y$ axis. Therefore the explicit form of the time reversal in this representation is
+\[T = e^{-i\pi S_y}K_0\]\\
+Two successive applications of the time reversal transformation, must leave the physical situation unchanged. Therefore
+\[T^2|\Psi\rangle = c|\Psi\rangle\]
+where $|c|=1$. And we have
+\[T^2(T|\Psi\rangle) = T(T^2|\Psi\rangle) = T(c|\Psi\rangle) = c^* T|\Psi\rangle\]
+so 
+\[T^2(|\Psi\rangle + T|\Psi\rangle) = c|\Psi\rangle + c^* T|\Psi\rangle = c'(|\Psi\rangle + T|\Psi\rangle)\]
+And we can determine that $c' = c^* = c$. Thus we must have $c = \pm 1$, i.e.
+\[T^2|\Psi\rangle = \pm |\Psi\rangle\]
+In the particularly representation, we have
+\[T^2 = e^{-i\pi S_y}K_0 e^{-i\pi S_y}K_0 = e^{-i2\pi S_y}\]
+This may equivalently be written as
+\[T^2 = e^{-i2\pi J_y}\]
+since $e^{-i2\pi L_y} = I$. So we have an identity
+\[T^2 = R(2\pi)\]
+
+\subsubsection{Kramer's theorem}
+Let us consider the energy eigenvalue equation, $H|\Psi\rangle = E|\Psi\rangle$, for a time-reversal-invariant Hamiltonian, $TH=HT$. 
+Then $HT|\Psi\rangle =  TH|\Psi\rangle = ET|\Psi\rangle$, and so
+both $|\Psi\rangle$ and $T|\Psi\rangle$ are eigenvectors with energy eigenvalue $E$. 
+There are two possibilities: 
+(a) $|\Psi\rangle$and $T|\Psi\rangle$ are linearly dependent, and so describe the same state.
+(b) $|\Psi\rangle$and $T|\Psi\rangle$ are linearly independent,
+and so describe two degenerate states.\\
+Suppose that (a) is true, in which case we must have $T|\Psi\rangle = a|\Psi\rangle$ with $|a|=1$. A second application of T yields $T^2|\Psi\rangle = |\Psi\rangle$. 
+So for those states that satisfy $T^2|\Psi\rangle = -|\Psi\rangle$ it is necessarily true that $|\Psi\rangle$and $T|\Psi\rangle$ are linearly independent, degenerate states. This result is known as Kramer's theorem: any
+system for which $T^2|\Psi\rangle = -|\Psi\rangle$ has only degenerate energy levels.
 
 \chapter{Approximation method}
 \section{Time independent perturbation theory}
