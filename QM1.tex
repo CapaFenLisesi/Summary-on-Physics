@@ -638,9 +638,19 @@ So
 Therefore, either $J_+ | \beta,m\rangle$ is an eigenvector of $J_z$ with the raised eigenvalue $m+1$, or $J_+ | \beta,m\rangle = 0$. Now for fixed $\beta$ there is a maximum value of $m$, which we shall denote as $j$. It must be the case that
 \[J_+ |\beta,j\rangle = 0\]
 Since
-\[J_+ J_- = J^2 - J_z^2 - J_z\]
+\[J_- J_+ = J^2 - J_z^2 - J_z\]
 it is obvious that $\beta = j(j+1)$. By similar method, we can show the minimum eigenvalue of $J_z$ for fixed $\beta$ satisfy that $\beta = k(k-1)$. So, we have $k = -j$. \\
-We have thus shown the existence of a set of eigenvectors corresponding to integer spaced $m$ values in the range $-j \leq m \leq j$. Since the difference between the maximum value $j$ and the minimum value $-j$ must be an integer, it follows that $j = \mbox{ integer} / 2$. Henceforth we shall adopt the common and more convenient notation of labeling the eigenvectors by $j$ instead of by $\beta$. Thus the vector that was previously denoted as $|\beta,m\rangle$ will now be denoted as $|j,m\rangle$. 
+We have thus shown the existence of a set of eigenvectors corresponding to integer spaced $m$ values in the range $-j \leq m \leq j$. Since the difference between the maximum value $j$ and the minimum value $-j$ must be an integer, it follows that $j = \mbox{ integer} / 2$. Henceforth we shall adopt the common and more convenient notation of labeling the eigenvectors by $j$ instead of by $\beta$. Thus the vector that was previously denoted as $|\beta,m\rangle$ will now be denoted as $|j,m\rangle$. \\ \\
+To find the matrix element of angular momentum operator, we notice that
+\[\langle j,m| J_-J_+|j,m\rangle = j(j+1)-m(m+1)\]
+so, we can get
+\[J_+ |j,m\rangle = \sqrt{(j+m+1)(j-m)} |j,m+1\rangle\]
+Similarly, we have
+\[J_- |j,m\rangle = \sqrt{(j-m+1)(j+m)} |j,m-1\rangle\]
+The matrix element of $J_+$, $J_-$ and $J_z$ are
+\[\langle j',m'| J_+ | j,m\rangle = \sqrt{(j+m+1)(j-m)} \delta_{jj'}\delta_{m',m+1}\]
+\[\langle j',m'| J_- | j,m\rangle = \sqrt{(j-m+1)(j+m)} \delta_{jj'}\delta_{m',m-1}\]
+\[\langle j',m'| J_z | j,m\rangle = m \delta_{jj'}\delta_{m',m}\]
 
 \section{Orbital Angular Momentum and Spin}
 Let $\psi(\bm{x})$ be a one-component state function in coordinate representation. When it is subjected to a rotation it is transformed into
@@ -714,7 +724,23 @@ where
 \[ d_{mm'}^{(j)}(\beta) = \langle j',m' | e^{-i\beta J_{y}} | j,m \rangle\]
 For the case of $j = \frac{1}{2}$, we have $J_y = \frac{1}{2}\sigma_y$ and $\sigma_y^2 = I$. We can obtain
 \[d^{(1/2)}(\beta) = \left[ \begin{matrix} \cos \frac{\beta}{2} & -\sin \frac{\beta}{2} \\ \cos \frac{\beta}{2}& \sin \frac{\beta}{2}\end{matrix} \right] \]
-Notice that this matrix is periodic in $\beta$ with period $4\pi$, but it changes sign when $2\pi$ is added to $\beta$. This double-valuedness under rotation by $2\pi$ is a characteristic of the full rotation matrix whenever $j$ is a half odd-integer. The matrix is single-valued under rotation by $2\pi$ whenever $j$ is an integer.\\ \\
+Notice that this matrix is periodic in $\beta$ with period $4\pi$, but it changes sign when $2\pi$ is added to $\beta$. This double-valuedness under rotation by $2\pi$ is a characteristic of the full rotation matrix whenever $j$ is a half odd-integer. The matrix is single-valued under rotation by $2\pi$ whenever $j$ is an integer.\\
+Rotation of angular momentum eigenvectors now can be written as
+\[\bm{R}(\alpha,\beta,\gamma)|j,m\rangle = \sum_{m'} D_{m'm}^{(j)}(\alpha,\beta,\gamma) |j,m'\rangle\]
+When it comes to spherical harmonics, we have
+\[Y_l^m(\theta',\phi') = \bm{R}^{-1}((\alpha,\beta,\gamma)) Y_l^m(\theta,\phi) = \sum_{m'} Y_{l}^{m'}(\theta,\phi) [D_{mm'}^{(j)}((\alpha,\beta,\gamma))]^*\]
+By putting $\beta = \gamma = 0$ we obtain
+\[Y_l^m(\theta,\phi+\alpha) = \sum_{m'} Y_{l}^{m'}(\theta,\phi) [D_{mm'}^{(j)}((\alpha,0,0))]^* = e^{i\alpha m} Y_{l}^{m}(\theta,\phi)\]
+Setting $\phi=0$ then yields
+\[Y_l^m(\theta,\alpha) = e^{i\alpha m} Y_{l}^{m}(\theta,0)\]
+Since the direction $\theta = 0$ is the polar axis, continuity of the spherical harmonic requires that $Y_l^m(0,\alpha)$ be independent of $\alpha$. Therefore we must
+have $Y_l^m(0,0) = 0$ for $m \neq 0$, and so we can write\\
+\[Y_{l}^{m}(\theta,0) = c_{l}\delta{m0}\]
+The we have
+\[Y_l^m(\theta,\phi) = \sum_{m'} Y_{l}^{m'}(0,0) [D_{mm'}^{(j)}((\phi,\theta,\gamma))]^* = c_l [D_{m0}^{(j)}((\phi,\theta,\gamma))]^*\]
+for arbitrary $\gamma$, thus obtaining a simple relation between the spherical harmonics and the rotation matrices. Conventional normalization is obtained if we put
+\[c_l = \left( \frac{2l+1}{4\pi} \right) ^{1/2}\]
+\\
 The operator for a rotation through $2\pi$ about an axis
 along the unit vector $\bm{n}$ is $\bm{R}_n(2\pi) = e^{-2\pi i\bm{n}\cdot\bm{J}}$. Its effect on the standard angular momentum eigenvectors is
 \[\bm{R}_n(2\pi) = (-1)^{2j}|j,m\rangle \]
@@ -756,19 +782,24 @@ Therefore,
 \[n(M)=\begin{cases} 0 \quad |M| > j_1 + j_2\\ j_1+j_2+1-|M|\quad |j_1-j_2| \leq M \leq |j_1+j_2|\\ 2j_{min}+1 \quad 0 \leq |M|\leq |j_1-j_2|\end{cases} \]
 It then follows that
 \[N(J)=\begin{cases} 1 \quad |j_1-j_2| \leq J \leq |j_1+j_2|\\ 0 \quad \mbox{otherwise}\end{cases} \]
-It has turned out that $N(J)$ is never greater that $1$, and so the vectors $|\alpha, J, M \rangle$ can be uniquely labeled by the eigenvalues of the four operators $\bm{J}^{(1)}\cdot\bm{J}^{(1)}$, $\bm{J}^{(2)}\cdot\bm{J}^{(2)}$, $\bm{J}\cdot\bm{J}$ and $\bm{J}_z$. Henceforth these total angular momentum
+It has turned out that $N(J)$ is never greater that $1$, and so the vectors $|\alpha, J, M \rangle$ can be uniquely labelled by the eigenvalues of the four operators $\bm{J}^{(1)}\cdot\bm{J}^{(1)}$, $\bm{J}^{(2)}\cdot\bm{J}^{(2)}$, $\bm{J}\cdot\bm{J}$ and $\bm{J}_z$. Henceforth these total angular momentum
 eigenvectors will be denoted as $|j_1,j_2,J,M\rangle$. And we have the unitarity transformation 
 \[|j_1,j_2,J,M\rangle = \sum_{m_1,m_2} |j_1,j_2,m_1,m_2\rangle \langle j_1,j_2,m_1,m_2 | j_1,j_2,J,M\rangle\]
-The coefficients of this transformation are called the Clebsch–Gordan coefficients, denoted as $(j_1,j_2,m_1,m_2|J,M)$. We fix the phase of $|j_1, j_2, J, M\rangle$ by requiring that $(j_1,j_2,m_1,m_2|J,M)$ be real and positive. The CG coefficient vanishes unless the following conditions are satisfied:
+The coefficients of this transformation are called the Clebsch–Gordan coefficients, denoted as $(j_1,j_2,m_1,m_2|J,M)$.
+The phases of the CG coefficients are not yet defined because of the indeterminacy of the relative phases of the vectors $|j_1,j_2,J,M\rangle$. For different values of $M$ but fixed $J$ we adopt the usual phase convention that led to
+\[J_+ |j_1,j_2,J,M\rangle = \sqrt{(J+M+1)(J-M)} |j_1,j_2,J,M+1\rangle\]
+This leaves one arbitrary phase for each $J$ value, which we fix by requiring that $(j_1,j_2,j_1,J-j_1|J,J)$ be real and positive. It can be shown that all of the CG coefficients are now real.\\
+We can also prove that the CG coefficient vanishes unless the following conditions are satisfied:
 \begin{itemize}
 \item $m_1+m_2=M$
 \item $|j_1-j_2| \leq J \leq |j_1+j_2|$
 \item $j_1+j_2+J =$ an integer
 \end{itemize}
 It is possible to calculate the values of the CG coefficients by successive application of the raising or lowering operator to
-\[|j_1,j_2,J,M\rangle = \sum_{m_1,m_2} |j_1,j_2,m_1,m_2\rangle \langle j_1,j_2,m_1,m_2 | j_1,j_2,J,M\rangle\]
-The details of the calculation can be found in section 7.7 of \emph{Quantum mechanics - a modern development(Leslie E. Ballentine)}.And we have \href{https://en.wikipedia.org/wiki/Table_of_Clebsch-Gordan_coefficients}{Table of CG coefficients} and \href{http://www.wolframalpha.com/input/?i=CG+coefficient}{Calculator of CG coefficients} on the internet. A special case of angular momentum addition is spin–orbit coupling of spin $\frac{1}{2}$ particles, and we list the corresponding CG coefficients $(l,\frac{1}{2}, M-m_s, m_s|J,M)$ here:
+\[|j_1,j_2,J,M\rangle = \sum_{m_1,m_2} |j_1,j_2,m_1,m_2\rangle (j_1,j_2,m_1,m_2|J,M)\]
+The details of the calculation can be found in section 7.7 of \emph{Quantum mechanics - a modern development(Leslie E. Ballentine)}.And we have \href{https://en.wikipedia.org/wiki/Table_of_Clebsch-Gordan_coefficients}{Table of CG coefficients} and \href{http://www.wolframalpha.com/input/?i=CG+coefficient}{Calculator of CG coefficients} on the internet. A special case of angular momentum addition is spin–orbit coupling of spin $\frac{1}{2}$ particles, and we list the corresponding CG coefficients $(l,\frac{1}{2}, M-m_s, m_s|J,M)$ in the table 1.1.
 \begin{table}[!th]
+\centering
 \begin{tabular}{|c|c|c|}
 \hline
  & $J=l+\frac{1}{2}$ & $J=l-\frac{1}{2}$ \\
@@ -779,16 +810,89 @@ The details of the calculation can be found in section 7.7 of \emph{Quantum mech
 \hline
 \end{tabular}
 \caption{Spin-Orbit coupling}
-\end{table}
-\subsubsection{Magnetic moment}
-The magnetic moment operator for an atom has the form
+\end{table}\\
+Now let us consider the relation between CG coefficients and rotation matrices. On the one hand, we have
+\[\langle j_1,j_2,m_1,m_2 | \bm{R} | j_1,j_2,m'_1,m'_2\rangle = D_{m_1m'_1}^{(j_1)}(R) D_{m_2m'_2}^{(j_2)}(R)\]
+On the other hand, we have
+\begin{eqnarray}
+&\phantom{=}& \langle j_1,j_2,m_1,m_2 | \bm{R} | j_1,j_2,m'_1,m'_2\rangle \nonumber \\
+&=& \sum_{J,M,J',M'} (j_1,j_2,m_1,m_2|J,M) (j_1,j_2,m'_1,m'_2|J',M')  \langle j_1,j_2,J,M | \bm{R} | j_1,j_2,J',M'\rangle \nonumber \\
+&=& \sum_{J,M,M'} (j_1,j_2,m_1,m_2|J,M) (j_1,j_2,m'_1,m'_2|J,M')D_{MM'}^{(J)}(R) \nonumber
+\end{eqnarray}
+So, we can get
+\[D_{m_1m'_1}^{(j_1)}(R) D_{m_2m'_2}^{(j_2)}(R) = \sum_{J,M,M'} (j_1,j_2,m_1,m_2|J,M) (j_1,j_2,m'_1,m'_2|J,M')D_{MM'}^{(J)}(R)\]
+It is called Clebsch-Gordan series.\\
+Recall that
+\[Y_l^m(\theta,\phi) =  \left( \frac{2l+1}{4\pi} \right) ^{1/2} [D_{m0}^{(j)}((\phi,\theta,0))]^* \]
+so, we have
+\[Y_{l_1}^{m_1}(\theta,\phi) Y_{l_2}^{m_2}(\theta,\phi) = \sum_{l,m} \sqrt{\frac{(2l_1+1)(2l_2+1)}{4\pi(2l+1)}} (l_1,l_2,m_1,m_2|l,m) (l_1,l_2,0,0|l,0) Y_l^m(\theta,\phi)\]
+The orthogonal relation of spherical harmonics then would imply that
+\[\int d\Omega Y_l^{m*}(\theta,\phi)Y_{l_1}^{m_1}(\theta,\phi) Y_{l_2}^{m_2}(\theta,\phi) = \sqrt{\frac{(2l_1+1)(2l_2+1)}{4\pi(2l+1)}} (l_1,l_2,m_1,m_2|l,m) (l_1,l_2,0,0|l,0)\]
+
+\section{Tensor operators}
+Suppose the state of the system is $|\psi\rangle$, then the state after rotation $R$ is $U(R)|\psi\rangle$, denoted as $|\psi'\rangle$. An operator $K$ is called scalar operator if and only if
+\[\langle \psi' | K | \psi' \rangle = \langle \psi | K | \psi\rangle\]
+i.e.
+\[U^{-1}(R)KU(R) = K\]
+Taking the case of infinitesimal rotation, we can derive that
+\[[\bm{J},K] = 0\]
+A group of operators $\bm{V}$ is called vector operator if and only if
+\[\langle \psi' | V_i | \psi' \rangle = R_{ii'} \langle \psi | V_{i'} | \psi\rangle\]
+i.e.
+\[U^{-1}(R)V_{i}U(R) = \sum_{i'} R_{ii'} V_{i'}\]
+Taking the case of infinitesimal rotation, we can derive that
+\[[J_i, V_j] = i\epsilon_{ijk}V_k\]
+If $\bm{V}$ and $\bm{W}$ are vector operators, we can prove that $\bm{V} \cdot \bm{W}$ is scalar operator and $\bm{V} \times \bm{W}$ is vector operator.\\
+Similarly, tensor operators are defined as
+\[U^{-1}(R) T_{ij\cdots k} U(R) = \sum_{i'\cdots} R_{ii'} R_{jj'} \cdots R_{kk'} T_{i'j'\cdots k'}\]
+Such a tensor is known as a Cartesian tensor.\\
+The trouble with a Cartesian tensor is that it is reducible, i.e. it can be decomposed into objects that transform independently under rotations. For example, the trace of a tensor transform like a scalar under rotations. 
+So we now define spherical tensor operators which are irreducible under rotations.  We define a spherical tensor operator of rank $k$ with $(2k+1)$ components as
+\[U^{-1}(R) T^{(k)}_q U(R) = \sum_{q'=-k}^{k} [D^{(k)}_{qq'}(R)]^* T^{(k)}_{q'}\]
+or equivalently
+\[U(R) T^{(k)}_q U^{-1}(R) = \sum_{q'=-k}^{k} D^{(k)}_{q'q}(R) T^{(k)}_{q'}\]
+where $D^{(k)}_{qq'}$ is the rotation matrix.\\
+Taking the case of infinitesimal rotation, we can derive that
+\[[J_{\pm},T^{(k)}_{q}] = \sqrt{(k \mp q)(k \pm q +1)} T^{(k)}_{q \pm 1}\]
+\[[J_z, T^{(k)}_{q}] = q T^{(k)}_{q}\]
+For example, spherical components of a vector operator $\bm{V}$, 
+\[V_{-1} = \frac{V_x - i V_y}{\sqrt{2}} \quad V_0 = V_z \quad V_{1} = -\frac{V_x + i V_y}{\sqrt{2}}\]
+satisfy the commutation relation above, so they are spherical tensor of rank $1$.
+Spherical tensors can be formed as products of other spherical  tensors, we have following theorem.
+\newpage
+\begin{newthem}
+Let $X^{(k_1)}_{q_1}$ and $Z^{(k_2)}_{q_2}$ be irreducible spherical tensors of rank $k_1$ and $k_2$. Then
+\[T^{(k)}_{q} = \sum_{q_1.q_2} (k_1,k_2,q_1,q_2|k,q) X^{(k_1)}_{q_1} Z^{(k_2)}_{q_2}\]
+is a irreducible spherical tensor of rank $k$. 
+\end{newthem}
+\noindent
+The proof can be found in section 3.10 of \emph{Modern Quantum Mechanics(J.J.Sakurai)}.\\
+For example, suppose $\bm{V}$ and $\bm{U}$ are spherical tensor
+\[T^{(0)}_{0} = \sqrt{\frac{1}{3}} (U_{-1}V_{1} + U_{1}V_{-1}-U_{0}U_{0}) = - \sqrt{\frac{1}{3}} (U_x^2 + U_y^2 + U_z^2)\]
+is tensor of rank $1$, then is a spherical tensor of rank $0$. Another important theorem is Wigner-Eckart theorem.
+\begin{newthem}
+The matrix elements of tensor operators with respect to angular-momentum eigenstates satisfy
+\[\langle \tau',j',m'| T^{(k)}_{q}| \tau,j,m\rangle = (j,k,m,q|j',m') \frac{\langle \tau',j' || T^{(k)} || \tau,j\rangle}{\sqrt{2j+1}}\]
+where the double-bar matrix element is independent of $m$ and $m'$ and $q$.
+\end{newthem}
+\noindent
+The proof can be found in section 3.10 of \emph{Modern Quantum Mechanics(J.J.Sakurai)}.\\
+So, for scaler operator $K$, we have
+\[\langle \tau',j',m'| S| \tau,j,m\rangle = \delta_{jj'}\delta_{mm'} \frac{\langle \tau',j' || S || \tau,j\rangle}{\sqrt{2j+1}}\]
+For spherical tensor of rank $1$, we have
+\[\langle \tau',j',m'| V_{q} | \tau,j,m\rangle = (j,1,m,q|j',m') \frac{\langle \tau',j' || V_q || \tau,j\rangle}{\sqrt{2j+1}}\]
+It would vanish unless
+\[m'-m = q \quad j'-j = 0,1,-1 \quad j \mbox{ and } j' \mbox{ are not both  } 0\]
+For $j=j'$, Wigner-Eckart theorem - when applied to the vector operator- takes a particularly simple form. We can derive that
+\[\langle \tau',j,m' | V_q | \tau, j ,m \rangle = \frac{\langle \tau',j,m | \bm{J}\cdot\bm{V} | \tau, j ,m \rangle}{j(j+1)} \langle j,m' | J_q | j ,m \rangle\]
+For example, the magnetic moment operator for an atom has the form
 \[\bm{\mu} = \frac{-e}{2m_e c} (g_L\bm{L} + g_s \bm{S})\]
 The parameters $g_L$ and $g_S$ have approximately the
-values $g_L = 1$ and $g_S = 2$. The former is an generalization of the magnetic moment we calculated in classical electrodynamics for a system of charged particles. The latter will be discussed in quantum field theory. We define the effective Lande factor as
+values $g_L = 1$ and $g_S = 2$. The former is an generalization of the magnetic moment we calculated in classical electrodynamics for a system of charged particles. The latter will be discussed in quantum field theory.
+We define the effective Lande factor as
 \[\langle \tau,J,M' | \bm{\mu} | \tau,J,M \rangle = \frac{-e}{2m_e c} g_{eff} \langle J,M' | \bm{J} | J,M \rangle\]
-So, we have
+Then, we have
 \[g_{eff} = \frac{\langle \tau,J,M | g_L\bm{L}\cdot\bm{J} + g_s \bm{S}\cdot\bm{J} | \tau,J,M \rangle}{J(J+1)} = 1 + \frac{J(J+1)- L(L+1) + S(S+1)}{2J(J+1)}\]
-A formal discussion can be found in section 7.8 of \emph{Quantum mechanics - a modern development(Leslie E. Ballentine)}.
 
 \section{Spherical potential well}
 The stationary states of a particle in the spherical potential well are determined by
@@ -849,6 +953,8 @@ A measure of the spatial extent of the bound states of hydrogen is given by the 
 \langle r^2 \rangle &=& n^4a_0^2 \left \{ 1 + \frac{3}{2} \left [ 1 - \frac{l(l+1)-1/3}{n^2} \right] \right\} \nonumber \\
 \langle \frac{1}{r} \rangle &=& \frac{1}{n^2 a_0} \nonumber
 \end{eqnarray}
+
+
 
 \chapter{Quantum-mechanical Particles and Classical Electromagnetic Field}
 \section{Charged Particle in EM field}
