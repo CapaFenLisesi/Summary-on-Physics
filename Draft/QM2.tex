@@ -123,6 +123,70 @@ H'_1 &=& H_1 + \sum_{k= m,n; \alpha} (\epsilon_k - \bar{\epsilon} )|k\alpha\rang
 Then standard degenerate perturbation theory may be applied.
 We will call this procedure "nearly degenerate perturbation theory."
 
+\section{Application of time independent perturbation theory}
+\subsection{Stark effect in hydrogen atom}
+The Stark effect concerns the behaviour of atoms in external electric fields. We choose hydrogen atom because it is single-electron atoms.
+The hydrogen atom will be modelled with the central force Hamiltonian
+\[H_0 = \frac{p^2}{2m} - \frac{e^2}{4\pi r}\]
+In this Hamiltonian we ignore spin and other small effects such as relativistic corrections, hyperfine effects and the Lamb shift. These effects cause a splitting and shifting of the energy levels of our simplified model, as well as the introduction of new quantum numbers and new degrees of freedom.
+But these effects are all small, and if the applied electric field is strong enough, it will overwhelm them and the physical consequences will be much as we shall describe them with our simplified model. \\
+The unperturbed energy levels in hydrogen are given by
+\[E_n = -\frac{1}{2n^2} \frac{e^2}{4\pi a_0}\]
+where $a_0$ is the Bohr radius. These levels are $n^2$ degenerate.\\
+As for the perturbation, let us write $\bm{F}$ for the external electric field , and let us take it to lie in the z-direction. Thus, the perturbing potential has the form
+\[V_1 = -(-e)\bm{F}\cdot\bm{x} = eFz\]
+For small $z$, the attractive Coulomb field dominates the total potential and we have the usual Coulomb well that supports atomic bound states. However, for large negative $z$, the unperturbed potential goes to zero, while the perturbing
+potential becomes large and negative. At intermediate values of negative $z$, the competition between the two potentials gives a maximum in the total potential. The electric force on the electron is zero at the maximum of the potential. 
+Given the relative weakness of the applied field, the maximum must occur at a distance from the nucleus that is large in comparison to the Bohr radius $a_0$. Atomic states with small principal quantum numbers $n$ lie well inside this radius. The perturbation analysis we shall perform applies to these states.\\
+The bound states of the unperturbed system are able to tunnel through the potential barrier. When an external electric field is turned on, the bound states of the atom cease to be bound in the strict sense, and become resonances. 
+Electrons that tunnel through the barrier and emerge into the classically allowed region at large negative $z$ will accelerate in the external field, leaving behind an ion. This is the phenomenon of field ionization. This effect can be neglected if the external field is weak enough and the lifetime of the "bound state" is long enough.\\ \\
+In the case of hydrogen, the ground state is $|100\rangle$. The first order shift in the ground state energy level is given by
+\[\Delta E^{(1)}_{gnd} = \langle 100 | eFz | 100\rangle = 0\]
+which vanishes because the parity of $z$ is odd, but $\langle 100 |$ and $| 100\rangle$ have the same parity.\\
+For the excited states of hydrogen, according to first order degenerate perturbation theory, the shifts in the energy levels $E_n$ are given by the eigenvalues of the $n^2\times n^2$ matrix,
+\[\langle nlm | eFz | nl'm'\rangle\]
+According to the Wigner-Eckart theorem and parity, the matrix elements vanish unless $l -l' = \pm 1$ and $m = m'$. Consider, for example, the case $n=2$. The four degenerate states are  $|2,0,0\rangle$, $|2,1,-1\rangle$, $|2,1,0\rangle$ and $|2,1,1\rangle$. Only the states $|2,0,0\rangle$ and $|2,1,0\rangle$ are connected by the perturbation. Therefore of the $16$ matrix elements, the only nonvanishing ones are
+\[\langle 2,0,0 | eFz | 2,1,0\rangle = -W = -3eFa_0\]
+and its complex conjugate. The matrix connecting the two states $|2,0,0\rangle$ and $|2,1,0\rangle$ is
+\[\begin{pmatrix}0 & -W \\ -W & 0\end{pmatrix} \]
+and its eigenvalues are the first order energy shifts in the $n=2$ level,
+\[\Delta E_2^{(1)} = \pm W\]
+In addition, the two states $|2,1,-1\rangle$ and $|2,1,1\rangle$ do not shift their energies at first order. The perturbed eigenfunctions are
+\[|+W\rangle = \frac{|2,0,0\rangle - |2,1,0\rangle}{\sqrt{2}} \quad |-W\rangle = \frac{|2,0,0\rangle + |2,1,0\rangle}{\sqrt{2}}\]
+This is zeroth order part of the exact eigenstates.\\
+Now let us look at the exact symmetries of the full, perturbed Hamiltonian $ H = H_0 + H_1$, without doing perturbation theory at all. Since $[H,L_z]$ the exact eigenstates of $H$ can be chosen to be eigenstates of $L_z$ as well.
+Denote these by $|\gamma m \rangle$, where $\gamma$ is an additional index needed to specify an energy
+eigenstate. Thus, we have
+\[L_z |\gamma m \rangle = m |\gamma m \rangle \quad H |\gamma m \rangle = E_{\gamma m} |\gamma m \rangle\]
+where $E_{\gamma m}$ is allowed to depend on $m$ since the full rotational symmetry is broken. \\
+As for time reversal, the state $T|\gamma m\rangle$ must be an eigenstate of energy with eigenvalue $E_{\gamma m}$ since $TH = HT$. But because $T^{-1}L_zT = -L_z$, it also follows that $T|\gamma m\rangle$ is an eigenstate of $L_z$ with eigenvalue $-m$ . If $m \neq 0$, we must have a degeneracy of at least two. 
+The only energy levels that can be nondegenerate are those with $m=0$. In the example above, even higher order corrections cannot separate $|2,1,-1\rangle$ and $|2,1,1\rangle$.
+
+\subsection{Fine structure of hydrogen atom}
+Fine structure of atoms concerns the effects of relativity and spin on the dynamics of the electron. Both these effects are of the same order of magnitude, and must be treated together in any realistic treatment of the atomic structure.\\
+The fine structure terms account for relativistic effects through order $v^2$ , and have the effect of enlarging the Hilbert space by the inclusion of the spin degrees of freedom, introducing new quantum numbers, and shifting and splitting the energy levels of the electrostatic model. 
+The splitting in particular means that spectral lines that appear a singlets under low resolution become closely spaced multiplets under higher resolution.\\
+Derivation of the exact form of relativistic corrections of Hamiltonian in quantum mechanics can be very rigorous and needs some reasonable guess. The details of derivation can be found in 
+\href{http://bohr.physics.berkeley.edu/classes/221/1112/notes/finestruc.pdf}{lecture notes on fine structure} by Robert G. Littlejohn. Here we just list the result.
+\[H_{FS} = H_{RKE} + H_{D} + H_{SO}\]
+The term $H_{RKE}$ is due to the second order term of the expansion series of $E = \sqrt{p^2+m^2}$. (The first order term is just the kinetic energy in non relativistic quantum mechanics). We have
+\[H_{RKE} = - \frac{p^4}{8m^3}\]
+The term $H_{D}$ comes out as a result of virtual process $e^{-} \to e^{-} + e^{-} + e^{+}$ in the region whose is scale is smaller than the Compton length $\lambda_C = \frac{1}{m} = \alpha a_0$ of electrons. Such virtual states appear in perturbation theory when one sums over intermediate states, which derive ultimately from a resolution of the identity. The effect is to smear out the position of the atomic electron
+over a distance of order $\lambda_C$. We have
+\[H_D = \frac{1}{8m^2} \nabla^2 V\]
+The term $H_{SO}$ arises because the electric field of nuclei generates a magnetic field in the rest frame of electron. We have
+\[H_{SO} = \frac{1}{2m^2} \frac{1}{r} \frac{dV}{dr} \bm{L}\cdot\bm{S}\]
+The unperturbed energy levels in hydrogen are given by
+\[E_n = -\frac{1}{2n^2} \frac{e^2}{4\pi a_0}\]
+When spin of electron is taken into account,  these levels are $2n^2$ degenerate. One choice of base is $|nlm_{l}s\rangle$. It is the eigenvector of operator $L^2$, $L_z$ and $S_z$. However, $L_z$ and $S_z$ do not commute with $H_{SO}$. A better choice of base is $|nljm_j\rangle$. It is the eigenvector of operator $L^2$, $J^2$ and $J_z$. $H_{SO}$, $H_{RKE}$ and $H_{SO}$ are all commute with $L^2$, $J^2$ and $J_z$. So
+\[\langle n l' j' m'_j | H | n l j m_j\rangle\]
+vanishes unless $l'=l$, $j=j'$ and $m'_j = m_j$. The final results are
+\[\langle n l j m_j | H_{RKE} | n l j m_j\rangle = -\alpha^2 E_n \frac{1}{n^2} \left(\frac{3}{4} - \frac{n}{l+\frac{1}{2}} \right)\]
+\[\langle n l j m_j | H_{D} | n l j m_j\rangle = -\alpha^2 E_n \frac{1}{n}\delta_{l0}\]
+\[\langle n l j m_j | H_{SO} | n l j m_j\rangle = -\alpha^2 E_n \frac{1}{2n} \frac{j(j+1)-l(l+1)-\frac{3}{4}}{l(l+\frac{1}{2})(l+1)}\]
+When we add them up to get the total energy shift due to the fine structure we find
+\[\Delta E_{FS} = -\alpha^2 E_n \frac{1}{n^2} \left(\frac{3}{4} - \frac{n}{j+\frac{1}{2}} \right)\]
+It is independent of the orbital angular momentum quantum number $l$, although each of the individual terms does depend on $l$. However, the total energy shift does depend on $j$ in addition to the principal quantum number $n$, so when we take into account the fine structure corrections, the energy levels of hydrogen atom have the form $E_{nj}$.
 
 \section{Time dependent perturbation theory}
 \section{Atomic Radiation}
