@@ -1,0 +1,15 @@
+- [ ] Zeaman effect, hyperfine structure, alkali atoms
+- [ ] Time dependent perturbation
+- [ ] Electronic transition
+- [ ] WKB Method
+- [ ] Variation Method
+- [ ] Identical Particles
+- [ ] Helium atom
+- [ ] Hartree-Fock Method in Atoms
+- [ ] Atomic structure
+- [ ] QFT
+- [ ] Scattering
+- [ ] Adiabatic Invariance in CM
+- [ ] Adiabatic Invariance in QM
+- [ ] QFT
+- [ ] MTW chapter 22

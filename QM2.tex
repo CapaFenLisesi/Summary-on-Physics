@@ -149,9 +149,57 @@ When we add them up to get the total energy shift due to the fine structure we f
 \[\Delta E_{FS} = -\alpha^2 E_n \frac{1}{n^2} \left(\frac{3}{4} - \frac{n}{j+\frac{1}{2}} \right)\]
 It is independent of the orbital angular momentum quantum number $l$, although each of the individual terms does depend on $l$. However, the total energy shift does depend on $j$ in addition to the principal quantum number $n$, so when we take into account the fine structure corrections, the energy levels of hydrogen atom have the form $E_{nj}$.
 
+\subsection{Zeeman effect}
+The Zeeman effect concerns the interaction of atomic systems with external magnetic fields. The Hamiltonian for the electron in hydrogen atom is
+\[H = \frac{(\bm{P}+e\bm{A})^2}{2m} - \frac{e^2}{4\pi r} + H_{FS} + \frac{e}{m}\bm{S}\cdot\bm{B}\]
+We assume a uniform magnetic field $\bm{B} = B\hat{\bm{z}}$. We take the gauge
+\[\bm{A} = \frac{1}{2}\bm{B}\times\bm{r}\]
+which is Coulomb gauge so that $\bm{\nabla}\times\bm{A} = 0$. This implies
+\[\bm{P}\cdot\bm{A} = \bm{A}\cdot\bm{P}\]
+so the cross terms in the expansion of the kinetic energy can be written in either order. We also notice that
+\[\bm{P}\cdot\bm{A} = \frac{1}{2} \bm{P}\cdot\bm{B}\times\bm{r}  = \frac{1}{2}\bm{B}\cdot\bm{L}\] 
+At last, we have
+\[H = H_a + H_Z + H_B + H_{FS}\]
+where
+\[H_a = \frac{p^2}{2m} - \frac{e^2}{4\pi r} \quad  H_Z = \frac{e}{2m}(L_z + 2S_z)B \quad H_B = \frac{e^2}{8m}B^2(x^2+y^2)\]
+Suppose the typical energy of the term $H_{i}$ is $E_i$, then we have $E_a \sim \frac{me^4}{32 n^2 \pi^2\hbar^2\epsilon_0^2}$, $E_z \sim \frac{ne\hbar B}{2m}$ and $E_B \sim \frac{e^2}{8mc^2}n^4 a_0^2 = \frac{2n^4\pi^2 \epsilon_0^2 \hbar^4 B^2}{m^3 e^2}$. So
+\[\frac{E_Z}{E_a} \sim \frac{16\pi^2 n^3 \hbar^3 \epsilon_0^2}{m^2 e^3} B \sim \frac{n^3B}{2\times10^5 T}\]
+\[\frac{E_B}{E_a} \sim \left[ \frac{8\pi^2 n^3 \hbar^3 \epsilon_0^2}{m^2 e^3} B\right]^2 \sim \left[ \frac{n^3B}{4\times10^5 T} \right]^2\]
+In the previous section, we have derived that
+\[\frac{E_{FS}}{E_a} \sim \frac{3\alpha^2}{4n^2} \sim \frac{1}{2.5\times10^4 n^2}\]
+So,in the usual experimental condition, we have
+\[E_B \ll E_z \ll E_a\]
+So, in the following discussion, we will neglect $E_B$ term.
+But whether $\frac{E_z}{E_Z}$ is much larger than $1$, much smaller than $1$ or close to $1$ depends on the $B$ and $n$.\\ \\
+If $H_{FS}$ is much smaller than $H_Z$ and can be neglected, then we have
+\[H = H_a + \frac{e}{2m}(L_z + 2S_z)B\]
+The eigenvector of $H$ is $|nlm_lm_s\rangle$ with eigenvalue $E = E_n + \frac{eB}{2m}(m_l+2m_s)$.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=4cm ,width=16cm]{QM/zeeman1.png}
+	\caption{Zeeman effect for $n=2$ in Hydrogen atom}
+\end{figure}\\
+If $H_{FS}$ is much smaller than $H_Z$ and but cannot be neglected, we may treat it as a perturbation. For simplicity, we only take $H_{SO}$ into account. Up to the first order, we consider the matrix element
+\[\langle n l m_l m_s | f(r)\bm{L}\cdot\bm{S}| n l' m'_l m'_s\rangle\]
+Since $[H_{SO},L^2] = 0$, the term above vanishes unless $l = l'$. So we focus on the matrix in the subspace $l = l'$. For the $2p$ orbit of hydrogen, there is a 2-fold degeneracy between $|2,1,-1,\frac{1}{2}\rangle$ and $|2,1,1,-\frac{1}{2}\rangle$.
+This makes one $2 \times 2$ matrix. Let us look at the off-diagonal element,
+\[\langle 2,1,-1,\frac{1}{2} | f(r)\bm{L}\cdot\bm{S}| 2,1,1,-\frac{1}{2}\rangle\]
+in which we use the identity
+\[\bm{L}\cdot\bm{S} = \frac{1}{2}(L_+S_-+L_-S_+)+L_zS_z\]
+To be non-vanishing, the operator in the middle of the matrix element must connect states with $\Delta m_l = 2$, but in fact that operator permits only $\Delta_m = 0,\pm1$. Therefore the off-diagonal matrix element vanishes and the energy shift is determined by diagonal elements. For $2p$ orbit, we can get
+\[\Delta E = \langle n l m_l m_s | f(r)\bm{L}\cdot\bm{S}| n l m_l m_s\rangle \propto m_lm_s\]
+As for the $2s$ levels, for them $\bm{L} = 0$ (that is, the operator $\bm{L}$ vanishes on the 2s-subspace), so $\Delta E = 0$.\\ \\
+The final case we shall examine is the weak field limit, in which $H_z \ll H_{FS}$ and we will treat $H_z$ as perturbation.
+The eigenvector of $H_a + H_{FS}$ are $|nljm_j\rangle$ with eigenvalue $E_{nj}$. Up to the first order,the matrix elements we need have the form
+\[\langle n l' j m'_j | H_z | n l j m_j\rangle\]
+Since $[H_Z,L^2] = 0$ and $[H_Z,J_z] = 0$, off-diagonal matrix element vanishes automatically.The energy shift is
+\[\Delta E = \frac{eB}{2m}\langle n l j m_j | L_z + 2S_z | n l j m_j\rangle = g_{eff} \frac{eB}{2m} m_j\]
+where
+\[g_{eff} = 1 + \frac{j(j+1)-l(l+1)+s(s+1)}{2j(j+1)}\]
+\subsection{Hyperfine structure}
+
 \section{Time dependent perturbation theory}
 \section{Atomic Radiation}
-\section{The classical limit}
 
 \chapter{Many body problem}
 \section{Identical particles}
