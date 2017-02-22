@@ -1,15 +1,16 @@
 - [ ] Zeaman effect, hyperfine structure, alkali atoms
 - [ ] Time dependent perturbation
 - [ ] Electronic transition
-- [ ] WKB Method
 - [ ] Variation Method
 - [ ] Identical Particles
 - [ ] Helium atom
+- [ ] NRQFT
+- [ ] Scattering
+- [ ] QED
+- [ ] Introduction to gauge field theory 
+- [ ] Thermodynamics, hydrodynamics, electrodynamics, geometric optics, and kinetic theory in GR
 - [ ] Hartree-Fock Method in Atoms
 - [ ] Atomic structure
-- [ ] QFT
-- [ ] Scattering
 - [ ] Adiabatic Invariance in CM
+- [ ] WKB Method
 - [ ] Adiabatic Invariance in QM
-- [ ] QFT
-- [ ] MTW chapter 22

@@ -123,8 +123,8 @@ H'_1 &=& H_1 + \sum_{k= m,n; \alpha} (\epsilon_k - \bar{\epsilon} )|k\alpha\rang
 Then standard degenerate perturbation theory may be applied.
 We will call this procedure "nearly degenerate perturbation theory."
 
-\section{Application of time independent perturbation theory}
-\subsection{Stark effect in hydrogen atom}
+\section{Application of time independent perturbation theory in hydrogen atom}
+\subsection{Stark effect}
 The Stark effect concerns the behaviour of atoms in external electric fields. We choose hydrogen atom because it is single-electron atoms.
 The hydrogen atom will be modelled with the central force Hamiltonian
 \[H_0 = \frac{p^2}{2m} - \frac{e^2}{4\pi r}\]
@@ -162,7 +162,7 @@ where $E_{\gamma m}$ is allowed to depend on $m$ since the full rotational symme
 As for time reversal, the state $T|\gamma m\rangle$ must be an eigenstate of energy with eigenvalue $E_{\gamma m}$ since $TH = HT$. But because $T^{-1}L_zT = -L_z$, it also follows that $T|\gamma m\rangle$ is an eigenstate of $L_z$ with eigenvalue $-m$ . If $m \neq 0$, we must have a degeneracy of at least two. 
 The only energy levels that can be nondegenerate are those with $m=0$. In the example above, even higher order corrections cannot separate $|2,1,-1\rangle$ and $|2,1,1\rangle$.
 
-\subsection{Fine structure of hydrogen atom}
+\subsection{Fine structure}
 Fine structure of atoms concerns the effects of relativity and spin on the dynamics of the electron. Both these effects are of the same order of magnitude, and must be treated together in any realistic treatment of the atomic structure.\\
 The fine structure terms account for relativistic effects through order $v^2$ , and have the effect of enlarging the Hilbert space by the inclusion of the spin degrees of freedom, introducing new quantum numbers, and shifting and splitting the energy levels of the electrostatic model. 
 The splitting in particular means that spectral lines that appear a singlets under low resolution become closely spaced multiplets under higher resolution.\\
@@ -186,11 +186,15 @@ vanishes unless $l'=l$, $j=j'$ and $m'_j = m_j$. The final results are
 \[\langle n l j m_j | H_{SO} | n l j m_j\rangle = -\alpha^2 E_n \frac{1}{2n} \frac{j(j+1)-l(l+1)-\frac{3}{4}}{l(l+\frac{1}{2})(l+1)}\]
 When we add them up to get the total energy shift due to the fine structure we find
 \[\Delta E_{FS} = -\alpha^2 E_n \frac{1}{n^2} \left(\frac{3}{4} - \frac{n}{j+\frac{1}{2}} \right)\]
-It is independent of the orbital angular momentum quantum number $l$, although each of the individual terms does depend on $l$. However, the total energy shift does depend on $j$ in addition to the principal quantum number $n$, so when we take into account the fine structure corrections, the energy levels of hydrogen atom have the form $E_{nj}$.
+It is independent of the orbital angular momentum quantum number $l$, although each of the individual terms does depend on $l$. However, the total energy shift does depend on $j$ in addition to the principal quantum number $n$, so when we take into account the fine structure corrections, the energy levels of hydrogen atom have the form $E_{nj}$.\\ \\
+Besides fine structure effect, the remaining important effects causing energy shift are hyperfine effects and the Lamb shift.\\
+The Lamb shift is a shift in the energy levels due to the interaction of the electron with the vacuum fluctuations of the quantized electromagnetic field. It has small effects on the s-states ($l = 0$) of hydrogen, thereby introducing a dependence of the energy levels on $l$. Thus, including the Lamb shift, the energy levels in hydrogen have the form $E_{nlj}$ , and the only degeneracy is that due to rotational invariance. It will be further discussed in quantum electrodynamics.\\
+Hyperfine effects are caused by the interaction between electro spin and nuclei spin, and will be discussed later.
 
 \subsection{Zeeman effect}
 The Zeeman effect concerns the interaction of atomic systems with external magnetic fields. The Hamiltonian for the electron in hydrogen atom is
-\[H = \frac{(\bm{P}+e\bm{A})^2}{2m} - \frac{e^2}{4\pi r} + H_{FS} + \frac{e}{m}\bm{S}\cdot\bm{B}\]
+\[H = \frac{(\bm{P}+e\bm{A})^2}{2m} - \frac{e^2}{4\pi r} + H_{FS} + g_e \mu_B\bm{S}\cdot\bm{B}\]
+where $g_e \approx 2$ and $\mu_B \equiv \frac{e}{2m}$.
 We assume a uniform magnetic field $\bm{B} = B\hat{\bm{z}}$. We take the gauge
 \[\bm{A} = \frac{1}{2}\bm{B}\times\bm{r}\]
 which is Coulomb gauge so that $\bm{\nabla}\times\bm{A} = 0$. This implies
@@ -201,7 +205,7 @@ At last, we have
 \[H = H_a + H_Z + H_B + H_{FS}\]
 where
 \[H_a = \frac{p^2}{2m} - \frac{e^2}{4\pi r} \quad  H_Z = \frac{e}{2m}(L_z + 2S_z)B \quad H_B = \frac{e^2}{8m}B^2(x^2+y^2)\]
-Suppose the typical energy of the term $H_{i}$ is $E_i$, then we have $E_a \sim \frac{me^4}{32 n^2 \pi^2\hbar^2\epsilon_0^2}$, $E_z \sim \frac{ne\hbar B}{2m}$ and $E_B \sim \frac{e^2}{8mc^2}n^4 a_0^2 = \frac{2n^4\pi^2 \epsilon_0^2 \hbar^4 B^2}{m^3 e^2}$. So
+Suppose the typical energy of the term $H_{i}$ is $E_i$, then we have $E_a \sim \frac{me^4}{32 n^2 \pi^2\hbar^2\epsilon_0^2}$, $E_z \sim \frac{ne\hbar B}{2m}$ and $E_B \sim \frac{e^2}{8m}n^4 a_0^2 = \frac{2n^4\pi^2 \epsilon_0^2 \hbar^4 B^2}{m^3 e^2}$. So
 \[\frac{E_Z}{E_a} \sim \frac{16\pi^2 n^3 \hbar^3 \epsilon_0^2}{m^2 e^3} B \sim \frac{n^3B}{2\times10^5 T}\]
 \[\frac{E_B}{E_a} \sim \left[ \frac{8\pi^2 n^3 \hbar^3 \epsilon_0^2}{m^2 e^3} B\right]^2 \sim \left[ \frac{n^3B}{4\times10^5 T} \right]^2\]
 In the previous section, we have derived that
@@ -212,7 +216,7 @@ So, in the following discussion, we will neglect $E_B$ term.
 But whether $\frac{E_z}{E_Z}$ is much larger than $1$, much smaller than $1$ or close to $1$ depends on the $B$ and $n$.\\ \\
 If $H_{FS}$ is much smaller than $H_Z$ and can be neglected, then we have
 \[H = H_a + \frac{e}{2m}(L_z + 2S_z)B\]
-The eigenvector of $H$ is $|nlm_lm_s\rangle$ with eigenvalue $E = E_n + \frac{eB}{2m}(m_l+2m_s)$.
+The eigenvector of $H$ is $|nlm_lm_s\rangle$ with eigenvalue $E = E_n + \mu_B B(m_l+2m_s)$.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[height=4cm ,width=16cm]{QM/zeeman1.png}
@@ -229,13 +233,81 @@ To be non-vanishing, the operator in the middle of the matrix element must conne
 \[\Delta E = \langle n l m_l m_s | f(r)\bm{L}\cdot\bm{S}| n l m_l m_s\rangle \propto m_lm_s\]
 As for the $2s$ levels, for them $\bm{L} = 0$ (that is, the operator $\bm{L}$ vanishes on the 2s-subspace), so $\Delta E = 0$.\\ \\
 The final case we shall examine is the weak field limit, in which $H_z \ll H_{FS}$ and we will treat $H_z$ as perturbation.
+\begin{note}
+In the case of hydrogen, one should also consider the Lamb shift for a realistic treatment. For example, in the $n=2$ levels of hydrogen, the Lamb shift is about $10$ times smaller than the fine structure energy shifts, indicating that we really should question how the Lamb shift compares to the Zeeman term which is also (by our assumptions) much smaller than the fine structure term.
+\end{note}
+\noindent
 The eigenvector of $H_a + H_{FS}$ are $|nljm_j\rangle$ with eigenvalue $E_{nj}$. Up to the first order,the matrix elements we need have the form
 \[\langle n l' j m'_j | H_z | n l j m_j\rangle\]
 Since $[H_Z,L^2] = 0$ and $[H_Z,J_z] = 0$, off-diagonal matrix element vanishes automatically.The energy shift is
-\[\Delta E = \frac{eB}{2m}\langle n l j m_j | L_z + 2S_z | n l j m_j\rangle = g_{eff} \frac{eB}{2m} m_j\]
+\[\Delta E = \mu_B B\langle n l j m_j | L_z + 2S_z | n l j m_j\rangle = g_{eff} \mu_B B m_j\]
 where
 \[g_{eff} = 1 + \frac{j(j+1)-l(l+1)+s(s+1)}{2j(j+1)}\]
+
 \subsection{Hyperfine structure}
+The nucleus of an atom contains localized charge and current distributions, which produce electric and magnetic fields that can be decomposed into multipole fields much as in classical electrostatics or magnetostatics.
+The first of the multipole moments, the electric monopole, is of course the Coulomb electrostatic field that holds the electrons in their orbits and produces the gross structure of the atom.
+The higher order multipole moments produce small corrections to the atomic structure that are known generally as hyperfine effects.\\
+Multipole moments for a system of charges has been discussed in the part of classical electrodynamics. In quantum mechanics, we recall that the intrinsic magnetic moment operator of an electron is defined in the space of electron spin. So we may infer that multipole moments of nuclei is defined in the space of nuclear spin $\bm{I}$. 
+We let the quantum number of the operator $I^2$ be $i$, so that $I^2$ has eigenvalues $i(i+1)$. The nuclear Hilbert space is a  $(2i+1)$ dimensional space in which the standard basis is $|im_i\rangle$ with $-i \leq m \leq i$.\\
+Not all the multipole fields that occur classically are allowed in the case of a nuclei. There are two rules governing the allowed multipole moments of the nucleus.\\ 
+The first is that electric multipoles of odd $k$ and magnetic mutlipoles of even $k$ are forbidden. For example, if the nucleus had an electric dipole moment, the perturbing Hamiltonian would be
+\[H_1 = -e \frac{\bm{d}\cdot\bm{r}}{r^3}\]
+And just like $\bm{\mu}$,$\bm{d}$, must be proportional to the spin, say $\bm{d} = k\bm{I}$, because all vector operators on a single irreducible subspace are proportional (Wigner-Eckart theorem). Thus,
+\[H_1 = -ke \frac{\bm{I}\cdot\bm{r}}{r^3}\]
+We find that $H_1$ violates time reversal and parity
+\[T H_1 T^{\dagger} = -H_1 \quad P H_1 P^{\dagger} = -H_1\]
+The weak interactions do violate parity, and we do know that time reversal (more precisely, CP) is violated at a very small  level in certain decay processes, so it is possible that the terms forbidden by this rule actually exist at a small level. For example, the neutron or the electron may have an electric dipole moment, but if such moments exist, they are certainly very small and can be neglected in our discussion.\\
+The second rule states that a $2^k$-pole can occur only if $k \leq 2i$. For example, the proton with $i = \frac{1}{2}$ can possess an electric monopole moment and a magnetic dipole moment, but not an electric quadrupole moment. Lying behind this rule is the fact that the operator representing the $2^k$ -pole on the nuclear Hilbert space is, in fact, an order $k$ irreducible tensor operator. But the maximum order of an irreducible tensor operator on the nuclear Hilbert space with
+spin $i$ is $k = 2i$.\\
+So for hydrogen atom, whose nuclear spin is $i = \frac{1}{2}$, the only term we have to concern is magnetic moment. A point magnetic dipole of moment $\bm{\mu}$ is
+\[\bm{A}(\bm{r}) = \frac{\bm{\mu}\times\bm{r}}{r^3}\]
+To avoid the sigularuty at origin, we modify $\bm{A}(\bm{r})$ as
+\[\bm{A}(\bm{r}) = \bm{\mu}\times\bm{r} \begin{cases} \frac{1}{a^3} \quad r < a\\ \frac{1}{r^3} \quad r > a\end{cases} \]
+taking into account of the finite size of nuclei. 
+By taking the curl we compute the magnetic field
+\[\bm{B}(\bm{r}) =  \begin{cases} \frac{2\bm{\mu}}{a^3} \quad r < a\\ \bm{\mu}\cdot\hat{T} \quad r > a\end{cases} \]
+where $T_{ij} = \frac{3x_ix_j-r^2\delta_{ij}}{r^5}$
+We define
+\[\Delta(r) \equiv \begin{cases} \frac{1}{a^3} \quad r < a\\ 0 \quad r > a\end{cases}\]
+and
+\[f(r) \equiv \begin{cases} 0 \quad r < a\\ 1 \quad r > a\end{cases}\]
+Then we can write
+\[\bm{A}(\bm{r}) = \bm{\mu}\times\bm{r} \left [\Delta(r) + \frac{f(r)}{r^3}\right ] \]
+and
+\[\bm{B}(\bm{r}) = \bm{\mu}\cdot \left [2\Delta(r)\hat{I} + f(r)\hat{T}\right ] \]
+In the limit $a \to 0$, we have
+\[\lim_{a \to 0} \Delta(r) = \frac{4\pi}{3}\delta(\bm{r}) \quad \lim_{a \to 0} f(r) = 1\]\\
+The Hamiltonian of the system is
+\[H = \frac{(\bm{p}+e\bm{A})^2}{2m} - \frac{e^2}{4\pi r} + H_{FS} + H_{Lamb} + \frac{e}{m}\bm{S}\cdot{B}\]
+The expressions  for $\bm{A}$ and $\bm{B}$ are are given above and $\bm{\mu}$ in the expression are given by
+\[\bm{\mu} = g_{p} \mu_p \bm{I}\]
+where $g_p$ is g-factor of proton and $\mu_p \equiv \frac{e}{2m_p}$. Thus, the Hamiltonian must be interpreted as an operator acting the total Hilbert space
+\[\mathcal{H} = \mathcal{H}_{elec} \otimes \mathcal{H}_{nucl}\]
+For $\mathcal{H}_{elec}$ the obvious basis is $|nljm_j\rangle$ with energies $E_{nlj}$ when there is no hyperfine terms. In hydrogen energies depend on $l$ because of the Lamb shift. The obvious basis in $\mathcal{H}_{nucl}$ is $|im_i\rangle$. Thus we define the basis states in $\mathcal{H}$ as $|nljm_jm_i\rangle$ (we suppress the index $i$ since it is a constant).It is called uncoupled basis. Now we expand the Hamiltonian and neglect the term $A^2$, writing the result as $H = H_0 + H_1$ , where
+\[H_0 = \frac{p^2}{2m} - \frac{e^2}{4\pi r}  + H_{FS} + H_{Lamb}\]
+and
+\[H_1 = 2\mu_B(\bm{p}\cdot{A} + \bm{S}\cdot\bm{B})\]
+Since
+\[\bm{p}\cdot(\bm{I}\cdot{r}) = \bm{I}\cdot(\bm{r}\cdot{P}) = \bm{I}\cdot\bm{L}\]
+we have
+\[H_{1,orbi} \equiv 2\mu_B(\bm{p}\cdot\bm{A}) = k(\bm{I}\cdot\bm{L}) \left[\Delta(r) + \frac{f(r)}{r^3}\right ]\]
+where $k \equiv = g_eg_p\mu_B\mu_p$.
+On the other hand, we have
+\[H_{1,spin} \equiv 2\mu_B \bm{S}\cdot\bm{B} = k\left [2\Delta(r)\bm{I}\cdot\bm{S} + f(r)\bm{I}\cdot\hat{T}\cdot\bm{S}\right ] \]
+In the limit $a \to 0$, we have
+\[H_{1,orbi} = k(\bm{I}\cdot\bm{L}) \left[\frac{4\pi}{3}\delta(\bm{r}) + \frac{1}{r^3}\right ]\]
+and
+\[H_{1,spin}  = k\left [\frac{8\pi}{3}\delta(\bm{r})\bm{I}\cdot\bm{S} + \bm{I}\cdot\hat{T}\cdot\bm{S}\right ] \]
+Since the coupling term (e.g.$\bm{I}\cdot{S}$) are not invariant under either electronic rotations alone or under nuclear rotations alone. The uncoupled basis is not the best one for carrying out the perturbation calculation. The total angular momentum of the system are defined by
+\[\bm{F} \equiv \bm{I} + \bm{J} = \bm{I} + \bm{L} + \bm{S}\]
+The new coupled basis is $|nljfm_f\rangle$. Since $[\bm{F},H] = 0$, $|nljfm_f\rangle$ is the eigenvector of $H$. The energy shift caused by $H_1$ is
+\[\Delta E = \langle nljfm_f | H_1 | nljfm_f\rangle\]
+After a lengthy calculation, we can get
+\[\Delta E = \frac{g_eg_p\mu_B\mu_p}{4\pi a_0^3} \frac{1}{n^3} \frac{f(f+1)-j(j+1)-i(i+1)}{j(j+1)(2l+1)} \]
+The energy levels were $E_{nlj}$ before the hyperfine interactions were turned on, but since $\Delta E$ depends on $f$, they now have the form $E_{nljf}$ . The energy eigenstates are $|nljfm_f\rangle$, and are $(2f+1)$-fold degenerate, causing the fine structure levels of hydrogen to split, giving rise to hyperfine multiplets. \\
+For example, the ground state $|1,0,\frac{1}{2}\rangle$ splits into two levels $f = 0$ and $f = 1$. This $f = 0$ level is the true ground state of hydrogen. It is nondegenerate. The $f=1$ level is 3-fold degenerate, and lies above the ground state by an energy of approximately $1.42 GHz$ in frequency
+units, or $21 cm$ in wave length units.
 
 \section{Time dependent perturbation theory}
 \section{Atomic Radiation}
