@@ -271,11 +271,154 @@ For example, the ground state $|1,0,\frac{1}{2}\rangle$ splits into two levels $
 units, or $21 cm$ in wave length units.
 
 \section{Time dependent perturbation theory}
+Time-dependent perturbation theory applies to Hamiltonians of the form
+\[H = H_0 + H_1(t)\]
+where $H_0$ is solvable and $H_1$ is treated as a perturbation.In time-dependent perturbation theory, we are usually interested in time-dependent transitions between eigenstates of the unperturbed system induced by the perturbation $H_1$.
+Time-dependent transitions are usually described by the transition amplitude, defined as the quantity
+\[\langle f | U(t) | i \rangle\]
+where $U(t)$ is the exact time evolution operator for the Hamiltonian, and where $|i\rangle$ and $|f\rangle$ are
+two eigenstates of the unperturbed Hamiltonian $H_0$. 
+Let us denote the unperturbed time-evolution operator by $U_0(t)$ and the exact one by $U(t)$.
+These operators satisfy the evolution equations
+\[i\frac{\partial U_0(t)}{\partial t} = H_0U_0(t) \quad i\frac{\partial U(t)}{\partial t} = HU(t)\]
+Since $H_0$ is independent of time, we have $U_0 = e^{-iH_0 t}$.\\ \\
+Suppose the state in Schrödinger picture is $|\psi_S(t)\rangle$, then we define the state in interaction picture as
+\[|\psi_I(t)\rangle \equiv U^{\dagger}_0(t) |\psi_S(t)\rangle\]
+Similarly, we define the operator in interaction picture as
+\[A_I(t) \equiv U^{\dagger}_0(t) A_S(t) U_0(t)\]
+Let us define $W(t)$ as the operator that evolves kets in the interaction picture forward from time $0$ to final time $t$, i.e.
+\[ |\psi_I(t)\rangle = W(t) |\psi_I(0)\rangle \]
+We can verify that
+\[W(t) = U^{\dagger}_0U(t)\]
+And we can get the time evolution of $W(t)$
+\[i\frac{\partial W}{\partial t} = H_{1I}(t)W(t)\]
+The formal solution is
+\[W(t) = I + (-i)^n \sum_{n=1}^{\infty} \int_{0}^{t}dt_1 \int_{0}^{t_1}dt_2 \cdots \int_{0}^{t_{n-1}} dt_n H_{1I}(t_1)H_{1I}(t_2)\cdots H_{1I}(t_n)\]\\
+Let us assume for simplicity that $H_0$ has a discrete spectrum $H_0|n\rangle = E_n|n\rangle$. 
+We assume that the system is initially in an eigenstate of the unperturbed system, what we will call the "initial" state $|i\rangle$ with energy $E_i$. Then 
+\[|\psi_I(t)\rangle = W(t)|i\rangle\]
+Let us expand the exact solution of the Schrödinger equation in the interaction picture in the unperturbed eigenstates
+\[|\psi_I(t)\rangle = \sum_n c_n(t) |n\rangle\]
+We then have
+\[c_n(t) = \langle n | W(t) | i\rangle = \langle n | U^{\dagger}_0U(t) | i\rangle = e^{iE_nt} \langle n | U(t) | i\rangle \]
+So the transition amplitudes in the interaction picture and those in the Schrödinger picture are related by a simple phase factor.The transition probabilities are the squares of the amplitudes and are the same in either case. The perturbation expansion of the transition amplitude $c_n(t)$ is
+\[c_n(t) = \delta_{ni} + c^{(1)}_n(t) + \cdots\]
+where
+\[c^{(1)}_n(t) = \frac{1}{i} \int_0^t dt' \langle n | H_{1I}(t')|i\rangle = \frac{1}{i} \int_0^t dt' e^{i(E_n-E_i)t'} \langle n | H_{1}(t')|i\rangle\]\\
+If $H_1$ is time-independent, we have
+\[c^{(1)}_n(t) = \frac{2}{i} e^{i\omega_{ni}t/2} \left( \frac{\sin\omega_{ni}t/2}{\omega_{ni}} \right) \langle n | H_1 | i \rangle\]
+Up to the first order, the transition probability is
+\[P_n(t) = 4 \left( \frac{\sin^2\omega_{ni}t/2}{\omega_{ni}^2} \right) |\langle n | H_1 | i \rangle|^2 \quad (n \neq i)\]\\
+Another case that is important in practice is when $H_1$ has a periodic time dependence of the form
+\[H_1(t) = Ke^{-i\omega_0t} + K^{\dagger}e^{i\omega_0t}\]
+We can get
+\[c^{(1)}_n(t) = \frac{2}{i} \left[ e^{i(\omega_{ni}-\omega0)t/2} \left( \frac{\sin(\omega_{ni}-\omega_0)t/2}{\omega_{ni}-\omega_0} \right) \langle n | K | i \rangle  + e^{i(\omega_{ni}+\omega_0)t/2} \left( \frac{\sin(\omega_{ni}+\omega_0)t/2}{\omega_{ni}+\omega_0} \right) \langle n | K^{\dagger} | i \rangle \right]  \]
+Often, we are most interested in those final states to which most of the probability goes, which are the states for which one or the other of the two denominators is small.
+For these states we have
+\[E_n \approx E_i \pm \omega_0\]
+We call these two cases absorption and stimulated emission, respectively. 
+Taking the case of absorption, and looking only at final states that are near resonance, we can write the transition probability to first order of perturbation theory as
+\[P_n(t) = 4 \left( \frac{\sin^2(\omega_{ni}-\omega_0)t/2}{(\omega_{ni}-\omega_0)^2} \right) |\langle n | K | i \rangle|^2\]\\
+Let us fix the final state and examine how the probability develops as a function of time in first order time-dependent perturbation theory.
+Obviously $P_n(0) = 0$. At later times we see that $P_n(t)$ oscillates at frequency $\omega_{ni}$ between $0$ and a maximum proportional to $\frac{1}{\omega_{ni}}$.
+The frequency $\omega_{ni}$ measures how far the final state is off resonance, that is, how much it fails to conserve energy. If this frequency is large, the probability oscillates rapidly between zero and a small maximum. 
+But as we move the state closer to the initial state in energy, $\omega_{ni}$ gets smaller, the period of oscillations becomes longer, and the amplitude grows.\\
+If there is a final state degenerate in energy with the initial state, then $\omega_{ni}=0$ and the time-dependent factor takes on its limiting value $\frac{t^2}{4}$. In this case, first order perturbation theory predicts that the probability grows without bound. 
+This is an indication of the fact that at sufficiently long times first order perturbation theory breaks down and we must take into account higher order terms in the perturbation expansion. But at short times it is correct that $P_n$ for a state on resonance grows as $t^2$.\\ \\
+Now let us fix the time $t$ and examine how the expression for $P_n(t)$ in first order perturbation theory depends on the energy of the final state. To do this we focus on $\frac{\sin^2(\omega t/2)}{\omega^2}$ as a function of $\omega$.\\
+The curve of the function consists of oscillations under the envelope $\frac{1}{\omega^2}$, with zeroes at $\omega = \frac{2n\pi}{t}$. The
+central lobe has height $\frac{t^2}{4}$ and width that is proportional to $\frac{1}{t}$, so the area of the central lobe
+is proportional to $t$. We can derive that
+\[\lim_{t \to \infty} \frac{1}{t} \frac{\sin^2\omega t/2}{\omega^2} = \frac{\pi}{2}\delta(\omega)\]
+The $\delta$-function enforces energy conservation in the limit $t \to \infty$. But at finite times, transitions take place to states in a range of energies about the initial energy.
+This width is of order $\frac{1}{t}$. This is an example of
+the energy-time uncertainty relation, $\Delta t \Delta E = 1$, indicating that a system that is isolated (not
+subjected to a measurement) over a time interval $\Delta t$ has an energy that is uncertain by an amount $\Delta E \geq \frac{1}{\Delta t}$.
+
 \section{Atomic Radiation}
+\section{Variational Method}
 
 \chapter{Many body problem}
 \section{Identical particles}
+If two particles are identical, their exchange must not change physical quantities, so we have
+\[|\cdots\psi_j\cdots\psi_i\cdots\rangle = E_{ij}|\cdots\psi_i\cdots\psi_j\cdots\rangle = e^{i\theta} |\cdots\psi_i\cdots\psi_j\cdots\rangle\]
+where $E_{ij}$ is the operator to exchange particle $i$ and $j$ and $psi_i$ is the quantum number to describe the state of particle $i$.
+In coordinate representation, it can be expressed as
+\[\Psi(\cdots\bm{x}_j\cdots\bm{x}_i\cdots) = e^{i\theta} \Psi(\cdots\bm{x}_i\cdots\bm{x}_j\cdots)\]
+In three dimension space, the value of $e^{i\theta}$ can only be $\pm 1$. If the spin of the particle is integer, then the phase factor must be $1$ and the particle is called boson. If the spin of the particle is half-integer, then the phase factor must be $-1$ and the particle is called fermion. This is called spin-statistics theorem and can only be proved by relativistic quantum field theory. Here, we will take it for granted.
+\begin{note}
+In two dimension space, the phase $e^{i\theta}$ can be anything, and the particles that obey quantum statistics of this sort are called anyons. There is a brief introduction in chapter 12.1 and
+12.2 of the book \emph{Quantum Field Theory and the Standard Model (Matthew D. Schwartz)}.
+\end{note}
+\noindent
+So not all vectors in the space $\mathcal{H}_1\otimes\cdots\otimes\mathcal{H}_n$ are physical state. The physical states must be the eigenvectors of all $E_{ij}$ with eigenvalue $1$ ($-1$) for bosons (fermions). The space composed of physical states is the so-called Fock space. For example, suppose there are three particles with different state $a,b,c$. $|abc\rangle$ is not a physical state. The physical state for bosons is
+\[\frac{1}{\sqrt{3!}} \left( |abc\rangle + |acb\rangle + |bca\rangle + |bac\rangle + |cab\rangle + |cba\rangle\right)\]
+The physical state for fermions is
+\[\frac{1}{\sqrt{3!}} \left( |abc\rangle - |acb\rangle + |bca\rangle - |bac\rangle + |cab\rangle - |cba\rangle\right)\]
+In general, for $N$ particles filling $N$ distinct states, there are $N!$ states to start with, but there is only one totally symmetric state and one totally anti-symmetric state, and the rest of $N!-2$ states are thrown out. Therefore quantum statistics reduces the size of the Hilbert space quite dramatically.\\
+Further more, not all Hermitian operators are physical observables. A nonphysical operator is one that takes a state
+in the physical subspace of the Hilbert space (one that satisfies the right symmetry under exchange), and maps it into a nonphysical state (one that does not have the right symmetry).
+An example is the operator $\bm{X}_1$. We might call this the operator corresponding to the measurement of the position of
+particle 1. 
+The problem with this operator from a physical standpoint is that you cannot measure the position of particle 1. You can select a region of space, and ask whether there is a particle in that region. But if you find one, you cannot say whether it is particle 1 or particle 2, since they are identical. 
+If $O$ is a physical observables, we must have
+\[[E_{ij},O] = 0\]
+for all $ij$.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=4cm ,width=9.7cm]{QM/pathint.png}
+	\caption{The path integral for three identical fermions}
+\end{figure}\\
+In path integral formulation of quantum mechanics, we calculate the transition amplitudes
+\[\langle \bm{x}_f,t_f | \bm{x}_i,t_i\rangle = \int \mathcal{D}\bm{x}(t) e^{i\int_{t_i}^{t_f} dt L(t)}\]
+The generalization to the N -particle case is
+\[\langle \bm{x}_{1f}\cdots\bm{x}_{Nf},t_f | \bm{x}_{1i}\cdots\bm{x}_{Ni},t_i\rangle = \int \mathcal{D}\bm{x}_1(t)\cdots\bm{x}_N(t) e^{i\int_{t_i}^{t_f} dt L(t)}\]
+Here, the particle 1 at the initial position $\bm{x}_{1i}$ moves to the final position $\bm{x}_{1f}$, the particle 2 at the initial position $\bm{x}_{2i}$ to $\bm{x}_{2f}$ , etc, and you sum over all possible paths.
+When the particles are identical, however, we need to introduce proper (anti-)symmetry of the state. For fermions (The case for bosons can be obtained easily by dropping all minus signs), we introduce the anti-symmetrized position bra
+\[\langle [\bm{x}_1\cdots\bm{x}_N]| = \frac{1}{\sqrt{N!}} \sum_{\sigma} (-1)^{\sigma} \langle \bm{x}_{\sigma(1)}\cdots\bm{x}_{\sigma(N)}|\]
+We now consider path integral representation of the transition amplitudes
+\[\langle [\bm{x}_{1f}\cdots\bm{x}_{Nf}],t_f | [\bm{x}_{1i}\cdots\bm{x}_{Ni}],t_i\rangle\]
+On the other hand, the Lagrangian for identical particles must be invariant under the exchange of particles, we can prove that
+\[\langle [\bm{x}_{1f}\cdots\bm{x}_{Nf}],t_f | [\bm{x}_{1i}\cdots\bm{x}_{Ni}],t_i\rangle = \sum_{\sigma} \langle \bm{x}_{\sigma(1)f}\cdots\bm{x}_{\sigma(N)f},t_f | \bm{x}_{1i}\cdots\bm{x}_{Ni},t_i\rangle\]
+In other words, the path integral sums over all possible paths allowing the positions at the final time slice are interchanged in all possible ways starting from the positions at the initial time slice.
+
+\section{Homonuclear Molecule}
+
 \section{Non-relativistic quantum field theory}
+There are some limitations of of multi-body Schrödinger wave function. Firstly, when the number of particles is large, multi-body Schrödinger wave function would be cumbersome. Secondly, it is incapable of describing processes where the number of particles changes.\\
+The aim of the quantum field theory is to come up with a formalism which is completely equivalent to multi-body Schrödinger equations but just better:
+it allows you to consider a variable number of particles all within the same framework and can even describe the change in the number of particles. 
+It also gives totally symmetric or anti-symmetric multi-body wave function automatically. 
+It also allows a systematic way of organizing perturbation theory in terms of Feynman diagrams.
+It is particularly suited to multi-body problems.\\
+In quantum mechanics, you start with classical particle Hamiltonian mechanics, with no concept of wave or interference. After quantizing it, we introduce Schrödinger wave function and there emerges concepts of wave and its interference. 
+In quantum field theory, you start with classical wave equation, with no concept of particle. After quantizing it, we find particle interpretation of excitations in the system.\\ \\
+Let us consider a classical field equation
+\[\left (i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m}\right ) \psi(\bm{x},t) = 0\]
+A solution to this field equation is that of a plane wave
+\[\psi(\bm{x},t) = e^{i\bm{k}\cdot\bm{x} - i\omega t}\]
+where $\omega = \frac{k^2}{2m}$. This classical field equation can be derived from the action
+\[S = \int dt d\bm{x} \mathcal{L} \quad \mathcal{L} = \psi^{*}\left (i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m}\right ) \psi\]
+We can even add a non-linear term in the action, for instance
+\[\mathcal{L} = \psi^{*}\left (i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m}\right )\psi - \frac{1}{2}\gamma \psi^{*2}\psi^2\]
+Variation method gives a non-linear field equation
+\[\left (i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m} -\gamma \psi^*\psi\right) \psi(\bm{x},t) = 0\]\\
+Now we quantize the Schrödinger field by canonical quantization method. A more formal discussion on the motivation and validity of canonical quantization will be discussed in relativistic quantum field theory.\\
+The canonically conjugate momenta is
+\[\pi(\bm{x}) = \frac{\partial \mathcal{L}}{\partial \dot{\psi}(\bm{x})} = i\psi^{\dagger}(\bm{x})\] 
+We now introduce canonical commutation relation
+\[[\psi(\bm{x}),\pi(\bm{y})] = i\delta(\bm{x}-\bm{y})\]
+so
+\[[\psi(\bm{x}),\psi^{\dagger}(\bm{y})] = \delta(\bm{x}-\bm{y})\]
+We now regard $\psi(\bm{x})$ as annihilation operator and $\psi(\bm{x})$ creation operator of a particle at position $\bm{x}$. \\
+The Hamiltonian of the system is
+\[H = \int d^3\bm{x} \left( -\psi^{\dagger}\frac{\nabla^2}{2m}\psi + \frac{1}{2}\gamma\psi^{\dagger 2}\psi^2 \right)\]
+We define the "vacuum" $|0\rangle$ which is annihilated by the annihilation operator
+\[\psi(\bm{x})|0\rangle = 0\]
+and construct the Fock space by
+\[|\bm{x}_1\cdots\bm{x}_N\rangle = \psi^{\dagger}(\bm{x}_1)\cdots\psi^{\dagger}(\bm{x}_N)|0\rangle \]
+The state $|\bm{x}_1\cdots\bm{x}_N\rangle$ is an n-particle state of identical bosons in the position eigenstate
+at $\bm{x}_1\cdots\bm{x}_N$. We will verify this interpretation below explicitly.\\ \\
 
 \chapter{Scattering theory}
 \section{Lippmann–Schwinger equation}
