@@ -424,6 +424,7 @@ In other words, the path integral sums over all possible paths allowing the posi
 \section{Homonuclear Molecule}
 
 \section{Non-relativistic quantum field theory}
+\subsection{Motivation and formulation of quantum field theory}
 There are some limitations of of multi-body Schrödinger wave function. Firstly, when the number of particles is large, multi-body Schrödinger wave function would be cumbersome. Secondly, it is incapable of describing processes where the number of particles changes.\\
 The aim of the quantum field theory is to come up with a formalism which is completely equivalent to multi-body Schrödinger equations but just better:
 it allows you to consider a variable number of particles all within the same framework and can even describe the change in the number of particles. 
@@ -439,9 +440,9 @@ A solution to this field equation is that of a plane wave
 where $\omega = \frac{k^2}{2m}$. This classical field equation can be derived from the action
 \[S = \int dt d\bm{x} \mathcal{L} \quad \mathcal{L} = \psi^{*}\left (i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m}\right ) \psi\]
 We can even add a non-linear term in the action, for instance
-\[\mathcal{L} = \psi^{*}\left (i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m}\right )\psi - \frac{1}{2}\gamma \psi^{*2}\psi^2\]
+\[\mathcal{L} = \psi^{*}\left (i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m}\right )\psi - \frac{1}{2}\lambda \psi^{*2}\psi^2\]
 Variation method gives a non-linear field equation
-\[\left (i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m} -\gamma \psi^*\psi\right) \psi(\bm{x},t) = 0\]\\
+\[\left (i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m} -\lambda \psi^*\psi\right) \psi(\bm{x},t) = 0\]\\
 Now we quantize the Schrödinger field by canonical quantization method. A more formal discussion on the motivation and validity of canonical quantization will be discussed in relativistic quantum field theory.\\
 The canonically conjugate momenta is
 \[\pi(\bm{x}) = \frac{\partial \mathcal{L}}{\partial \dot{\psi}(\bm{x})} = i\psi^{\dagger}(\bm{x})\] 
@@ -451,13 +452,113 @@ so
 \[[\psi(\bm{x}),\psi^{\dagger}(\bm{y})] = \delta(\bm{x}-\bm{y})\]
 We now regard $\psi(\bm{x})$ as annihilation operator and $\psi(\bm{x})$ creation operator of a particle at position $\bm{x}$. \\
 The Hamiltonian of the system is
-\[H = \int d^3\bm{x} \left( -\psi^{\dagger}\frac{\nabla^2}{2m}\psi + \frac{1}{2}\gamma\psi^{\dagger 2}\psi^2 \right)\]
+\[H = \int d\bm{x} \left( -\psi^{\dagger}\frac{\nabla^2}{2m}\psi + \frac{1}{2}\lambda\psi^{\dagger 2}\psi^2 \right)\]
+We have
+\[[H,\psi^{\dagger}] = -\frac{\nabla^2}{2m}\psi^{\dagger} + \lambda \psi^{\dagger 2}\psi\]
+
+\subsection{Particles in quantum field theory}
 We define the "vacuum" $|0\rangle$ which is annihilated by the annihilation operator
 \[\psi(\bm{x})|0\rangle = 0\]
 and construct the Fock space by
-\[|\bm{x}_1\cdots\bm{x}_N\rangle = \psi^{\dagger}(\bm{x}_1)\cdots\psi^{\dagger}(\bm{x}_N)|0\rangle \]
+\[|\bm{x}_1\cdots\bm{x}_N\rangle = \frac{1}{\sqrt{N!}}\psi^{\dagger}(\bm{x}_1)\cdots\psi^{\dagger}(\bm{x}_N)|0\rangle \]
 The state $|\bm{x}_1\cdots\bm{x}_N\rangle$ is an n-particle state of identical bosons in the position eigenstate
 at $\bm{x}_1\cdots\bm{x}_N$. We will verify this interpretation below explicitly.\\ \\
+Let us look at the one-particle state
+\[|x\rangle = \psi^{\dagger}(\bm{x})|0\rangle\]
+We can derive that
+\[\langle \bm{y}| \bm{x}\rangle = \delta(\bm{x}-\bm{y})\]
+Therefore, this state is normalized in the same way as the one-particle position eigenstate in quantum mechanics.
+We define a general one-particle state in the quantum field theory as
+\[|\Psi(t)\rangle \equiv \int d\bm{x} \Psi(\bm{x},t)\psi^{\dagger}(\bm{x})|0\rangle\]
+$\psi(\bm{x})$ corresponds to the Schrödinger wave function in the particle quantum mechanics. The Schrödinger equation in quantum field theory is
+\[i\frac{\partial |\Psi(t)\rangle}{\partial t} = H|\psi(t)\rangle\]
+Since we can derive that
+\begin{eqnarray}
+H|\Psi(t)\rangle &=& \int d\bm{x} \Psi(\bm{x},t) H\psi^{\dagger}(\bm{x})|0\rangle \nonumber \\
+&=& \int d\bm{x} \Psi(\bm{x},t) [H,\psi^{\dagger}](\bm{x})|0\rangle \nonumber \\
+&=& \int d\bm{x} \left( -\frac{\nabla^2}{2m}\Psi(\bm{x},t) \right)|\bm{x}\rangle \nonumber
+\end{eqnarray}
+So we have
+\[i\frac{\partial \Psi(\bm{x},t)}{\partial t} = -\frac{\nabla^2\Psi(\bm{x},t)}{2m}\]
+This is exactly the Schrödinger equation in coordinate representation of quantum mechanics for one isolate particle.\\ \\
+Let us next study the two-particle state
+\[|\bm{x}_1\bm{x}_2\rangle = \frac{1}{\sqrt{2}} \psi^{\dagger}(\bm{x}_1)\psi^{\dagger}(\bm{x}_2)|0\rangle\]
+We can derive that
+\[\langle \bm{x}_1\bm{x}_2 |\bm{y}_1\bm{y}_2\rangle = \frac{1}{2} \left( \delta(\bm{x}_1-\bm{y}_1)\delta(\bm{x}_2-\bm{y}_2) + \delta(\bm{x}_1-\bm{y}_2)\delta(\bm{x}_2-\bm{y}_1)\right)\]
+This normalization suggests that we are dealing with a two-particle state of identical particles, because the norm is non-vanishing when $\bm{x}_1 = \bm{y}_1$ and $\bm{x}_2 = \bm{y}_2$, but also when $\bm{x}_1 = \bm{y}_2$ and $\bm{x}_2 = \bm{y}_1$, i.e., two particles interchanged. A general two-particle state is given by
+\[|\Psi(t)\rangle \equiv \int d\bm{x}_1 d\bm{x}_2 \Psi(\bm{x}_1,\bm{x}_2,t)\psi^{\dagger}(\bm{x}_1)\psi^{\dagger}(\bm{x}_2)|0\rangle\]
+Because $[\psi^{\dagger}(\bm{x}_1),\psi^{\dagger}(\bm{x}_2)]$, the integration over $\bm{x}_1$ and $\bm{x}_2$ is symmetric
+under the interchange of $\bm{x}_1$ and $\bm{x}_2$, and hence 
+$\Psi(\bm{x}_1,\bm{x}_2,t) =\Psi(\bm{x}_2,\bm{x}_1,t)$. 
+The symmetry under the exchange suggests that we are dealing with identical bosons.\\
+Since
+\begin{eqnarray}
+H|\Psi(t)\rangle &=& \frac{1}{\sqrt{2}} \int d\bm{x}_1 d\bm{x}_2 \Psi(\bm{x}_1,\bm{x}_2,t) H\psi^{\dagger}(\bm{x}_1)\psi^{\dagger}(\bm{x}_2)|0\rangle \nonumber \\
+&=& \frac{1}{\sqrt{2}} \int d\bm{x} \Psi(\bm{x}_1,\bm{x}_2,t) ([H,\psi^{\dagger}(\bm{x}_1)]\psi^{\dagger}(\bm{x}_2) + \psi^{\dagger}(\bm{x}_1)[H,\psi^{\dagger}(\bm{x}_2)]) |0\rangle \nonumber \\
+&=& \int d\bm{x}_1 d\bm{x}_2 \left( -\frac{\nabla^2_1}{2m}  -\frac{\nabla^2_2}{2m} + \lambda\delta(\bm{x}_1-\bm{x}_2)\right)\Psi(\bm{x}_1,\bm{x}_2,t) |\bm{x}_1\bm{x}_2\rangle \nonumber
+\end{eqnarray}
+So we have
+\[i\frac{\partial \Psi(\bm{x}_1,\bm{x}_2,t)}{\partial t} = \left( -\frac{\nabla^2_1}{2m}  -\frac{\nabla^2_2}{2m} + \lambda\delta(\bm{x}_1-\bm{x}_2)\right)\Psi(\bm{x}_1,\bm{x}_2,t)\]
+It is a Schrödinger equation for two-particle wave function with a delta function potential as an interaction between them.
+Therefore, the Fock space with two creation operators correctly describes the two-particle quantum mechanics.\\
+If we want a general interaction potential between them, the action must be modified to
+\[S = \int dt \left[ \int d\bm{x} \psi^{\dagger}(\bm{x})\left( i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m} \right)\psi(\bm{x}) - \frac{1}{2}\int d\bm{x} d\bm{y} \psi^{\dagger}(\bm{x}) \psi^{\dagger}(\bm{y}) V(\bm{x} - \bm{y}) \psi(\bm{x})\psi(\bm{y})\right]\]
+The corresponding Hamiltonian is
+\[H = \int d\bm{x} -\psi^{\dagger}\frac{\nabla^2}{2m}\psi + \frac{1}{2}\int d\bm{x} d\bm{y} \psi^{\dagger}(\bm{x}) \psi^{\dagger}(\bm{y}) V(\bm{x} - \bm{y}) \psi(\bm{x})\psi(\bm{y})\]
+Similarly, we can derive the equation
+\[i\frac{\partial \Psi(\bm{x}_1,\bm{x}_2,t)}{\partial t} = \left( -\frac{\nabla^2_1}{2m}  -\frac{\nabla^2_2}{2m} +  V(\bm{x}_1-\bm{x}_2)\right)\Psi(\bm{x}_1,\bm{x}_2,t)\]
+\\
+Generally, for the $n$-particle state, we have
+\[i\frac{\partial \Psi(\bm{x}_1,\cdots,\bm{x}_n,t)}{\partial t} = \left( \sum_{i} -\frac{\nabla^2_i}{2m} +  \sum_{i < j}V(\bm{x}_i-\bm{x}_j)\right)\Psi(\bm{x}_1,\cdots,\bm{x}_n,t)\]
+So it is reasonable that  an n-particle state can be constructed as
+\[|\Psi(t)\rangle = \frac{1}{\sqrt{n!}} \int d\bm{x}_1 \cdots d\bm{x}_n \Psi(\bm{x}_1,\cdots,\bm{x}_n) \psi^{\dagger}(\bm{x}_1)\cdots\psi^{\dagger}(\bm{x}_n)|0\rangle\]
+\\
+If we are interested in a system in a background potential.  
+A good example is the electrons in an atom, where all of them are moving in the background Coulomb potential due to the nucleus. In this case, the correct field-theory Hamiltonian
+\[H = \int d\bm{x} \psi^{\dagger}(\bm{x}) \left(\frac{-\nabla^2}{2m} - \frac{Ze^2}{4\pi |\bm{x}|} \right)\psi(\bm{x}) + \frac{1}{2}\int d\bm{x} d\bm{y} \psi^{\dagger}(\bm{x}) \psi^{\dagger}(\bm{y}) \frac{e^2}{4\pi|\bm{x}-\bm{y}|} \psi(\bm{x})\psi(\bm{y})\]
+\\
+The total number of particles is an eigenvalue of the operator
+\[N \equiv \int d\bm{x} \psi^{\dagger}(\bm{x})\psi(\bm{x})\]
+We can get the commutation relation
+\[[N,\psi] = -\psi \quad [N,\psi^{\dagger}] = \psi^{\dagger}\]
+So we can derive
+\[N|\bm{x}_1,\cdots,\bm{x}_n\rangle = n|\bm{x}_1,\cdots,\bm{x}_n\rangle\]
+
+\subsection{Momentum space}
+We define creation and annihilation operators in the
+momentum space as
+\[a(\bm{p}) \equiv (2\pi)^{-3/2}\int d\bm{x} \psi(\bm{x}) e^{-i\bm{p}\cdot\bm{x}} \quad a^{\dagger}(\bm{p}) \equiv  (2\pi)^{-3/2} \int d\bm{x} \psi^{\dagger}(\bm{x}) e^{i\bm{p}\cdot\bm{x}}\]
+So we can derive the commutation relation
+\[[a(\bm{p}),a^{\dagger}(\bm{q})] = \delta(\bm{p}-\bm{q}) \quad [a(\bm{p}),a(\bm{q})] = [a^{\dagger}(\bm{p}),a^{\dagger}(\bm{q})] = 0\]
+We can rewrite the Hamiltonian in the momentum space. The
+free part of the Hamiltonian is
+\[H_0 = \int d\bm{x} \psi^{\dagger} \frac{-\nabla^2}{2m} \psi == \int d\bm{p} \frac{p^2}{2m} a^{\dagger}(\bm{p})a(\bm{p})\]
+The free Hamltonian simply countes the number of particles in a given momentum state and assigns the energy $\frac{p^2}{2m}$ accordingly. \\
+The interaction Hamltonian is
+\begin{eqnarray}
+\Delta H &=& \frac{1}{2}\int d\bm{x} d\bm{y} \psi^{\dagger}(\bm{x}) \psi^{\dagger}(\bm{y}) V(\bm{x} - \bm{y}) \psi(\bm{x})\psi(\bm{y})  \nonumber \\
+&=& \frac{1}{2} \int d\bm{p}d\bm{q}d\bm{p}'d\bm{q}' V(\bm{p}-\bm{q}) a^{\dagger}(\bm{p}) a^{\dagger}(\bm{p}') a(\bm{q}) a(\bm{q}') \delta(\bm{p}+\bm{p}'-\bm{q}-\bm{q}')\nonumber
+\end{eqnarray}
+where
+\[V(\bm{p}-\bm{q}) = \frac{1}{(2\pi)^3} \int d\bm{x} V(\bm{x}) e^{-i(\bm{p}-\bm{q})\cdot\bm{x}}\]
+The delta function represents the momentum conservation in the scattering process due to the potential $V$. The potential term of Hamiltonian causes scattering, by annihilating two particles in momentum states $\bm{q}$, $\bm{q}'$ and create them in different momentum states $\bm{p}$, $\bm{p}'$ with the amplitude
+$V(\bm{p}-\bm{q})$.
+
+\subsection{Fermions}
+We have seen that the quantized Schrödinger field gives multi-body states of identical bosons. For fermions, we should use anti-commutation relations rather than commutation relations.
+\[\{\psi(\bm{x}),\psi^{\dagger}(\bm{y})\} = \delta(\bm{x}-\bm{y}) \quad \{\psi(\bm{x}),\psi(\bm{y})\} = \{\psi^{\dagger}(\bm{x}),\psi^{\dagger}(\bm{y})\} = 0\]
+One noteworthy point is that $\psi^{\dagger}(\bm{x}) = \frac{1}{2}\{\psi^{\dagger}(\bm{x}),\psi^{\dagger}(\bm{x})\} = 0$. 
+What this means is that one cannot create two particles at the same position, an expression of Pauli's exclusion principle for fermions.\\
+Here are a few useful identities. Similarly to the identity of commutators $[A,BC] = A[B,C] + [A,B]C$, we find
+\[[A,BC] = {A,B}C - B{A,C} \quad [AB,C] = A{B,C} - {A,C}B\]
+So we can get
+\[[H,\psi^{\dagger}(\bm{x})] = -\frac{\nabla^2}{2m}\psi^{\dagger}(\bm{x}) + \int d\bm{y} \psi^{\dagger}(\bm{x}) \psi^{\dagger}(\bm{y})V(\bm{x}-\bm{y})\psi(\bm{y})\]
+It is the same result as in the case of bosons!
+Consider a two-particle state
+\[|\Psi(t)\rangle = \frac{1}{\sqrt{2}} \int d\bm{x}_1 d\bm{x}_2 \Psi(\bm{x}_1,\bm{x}_2,t) \psi^{\dagger}(\bm{x}_1)\psi^{\dagger}(\bm{x}_2) |0\rangle\]
+From the anti-commutation relations, we have
+\[\Psi(\bm{x}_1,\bm{x}_2) = - \Psi(\bm{x}_2,\bm{x}_1)\]
+Such a state indeed describes identical fermions. And we can get the same Schrödinger equation as in the case for bosons.
 
 \chapter{Scattering theory}
 \section{Lippmann–Schwinger equation}
