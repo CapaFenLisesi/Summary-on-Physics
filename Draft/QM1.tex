@@ -37,7 +37,7 @@
 \begin{document}
 \maketitle
 \tableofcontents
-
+\chapter{Angular Momentum}
 \section{Eigenvalues of angular momentum operator}
 The commutation relations among the angular momentum operators are
 \[[J_i,J_j] = \epsilon_{ijk} J_k\]
@@ -274,9 +274,9 @@ Taking the case of infinitesimal rotation, we can derive that
 \[[J_z, T^{(k)}_{q}] = q T^{(k)}_{q}\]
 For example, spherical components of a vector operator $\bm{V}$, 
 \[V_{-1} = \frac{V_x - i V_y}{\sqrt{2}} \quad V_0 = V_z \quad V_{1} = -\frac{V_x + i V_y}{\sqrt{2}}\]
-satisfy the commutation relation above, so they are spherical tensor of rank $1$.
-Spherical tensors can be formed as products of other spherical  tensors, we have following theorem.
-\newpage
+satisfy the commutation relation above, so they are spherical tensor of rank $1$. Generally, if $\bm{V}$ is a vector operator, then $Y_l^m(\bm{V})$ is a spherical tensor of ranks $l$.\\
+Spherical tensors can be formed as products of other spherical  tensors, we have following theorem.\\
+
 \begin{newthem}
 Let $X^{(k_1)}_{q_1}$ and $Z^{(k_2)}_{q_2}$ be irreducible spherical tensors of rank $k_1$ and $k_2$. Then
 \[T^{(k)}_{q} = \sum_{q_1.q_2} (k_1,k_2,q_1,q_2|k,q) X^{(k_1)}_{q_1} Z^{(k_2)}_{q_2}\]
@@ -286,8 +286,9 @@ is a irreducible spherical tensor of rank $k$.
 The proof can be found in section 3.10 of \emph{Modern Quantum Mechanics(J.J.Sakurai)}.\\
 For example, suppose $\bm{V}$ and $\bm{U}$ are spherical tensor
 \[T^{(0)}_{0} = \sqrt{\frac{1}{3}} (U_{-1}V_{1} + U_{1}V_{-1}-U_{0}U_{0}) = - \sqrt{\frac{1}{3}} (U_x^2 + U_y^2 + U_z^2)\]
-is tensor of rank $1$, then is a spherical tensor of rank $0$. Another important theorem is Wigner-Eckart theorem.
-\begin{newthem}
+is tensor of rank $1$, then is a spherical tensor of rank $0$. Another important theorem is Wigner-Eckart theorem.\\
+
+\begin{newthem}[Wigner-Eckart theorem]
 The matrix elements of tensor operators with respect to angular-momentum eigenstates satisfy
 \[\langle \tau',j',m'| T^{(k)}_{q}| \tau,j,m\rangle = (j,k,m,q|j',m') \frac{\langle \tau',j' || T^{(k)} || \tau,j\rangle}{\sqrt{2j+1}}\]
 where the double-bar matrix element is independent of $m$ and $m'$ and $q$.
@@ -303,40 +304,40 @@ It would vanish unless
 For $j=j'$, Wigner-Eckart theorem - when applied to the vector operator- takes a particularly simple form. We can derive that
 \[\langle \tau',j,m' | V_q | \tau, j ,m \rangle = \frac{\langle \tau',j,m | \bm{J}\cdot\bm{V} | \tau, j ,m \rangle}{j(j+1)} \langle j,m' | J_q | j ,m \rangle\]
 For example, the magnetic moment operator for an atom has the form
-\[\bm{\mu} = \frac{-e}{2m_e c} (g_L\bm{L} + g_s \bm{S})\]
+\[\bm{\mu} = \frac{-e}{2m_e } (g_L\bm{L} + g_s \bm{S})\]
 The parameters $g_L$ and $g_S$ have approximately the
 values $g_L = 1$ and $g_S = 2$. The former is an generalization of the magnetic moment we calculated in classical electrodynamics for a system of charged particles. The latter will be discussed in quantum field theory.
 We define the effective Lande factor as
-\[\langle \tau,J,M' | \bm{\mu} | \tau,J,M \rangle = \frac{-e}{2m_e c} g_{eff} \langle J,M' | \bm{J} | J,M \rangle\]
+\[\langle \tau,J,M' | \bm{\mu} | \tau,J,M \rangle = \frac{-e}{2m_e } g_{eff} \langle J,M' | \bm{J} | J,M \rangle\]
 Then, we have
 \[g_{eff} = \frac{\langle \tau,J,M | g_L\bm{L}\cdot\bm{J} + g_s \bm{S}\cdot\bm{J} | \tau,J,M \rangle}{J(J+1)} = 1 + \frac{J(J+1)- L(L+1) + S(S+1)}{2J(J+1)}\]
 
 \section{Spherical potential well}
 The stationary states of a particle in the spherical potential well are determined by
-\[-\frac{1}{2M}\nabla^2 \Psi  + W(r) \Psi = E\Psi \]
+\[-\frac{1}{2m}\nabla^2 \Psi  + W(r) \Psi = E\Psi \]
 In spherical coordinates, 
 \[\nabla^2 = \frac{1}{r^2} \frac{\partial}{\partial r} \left [ r^2\frac{\partial}{\partial r} \right ] + \frac{1}{r^2\sin\theta} \frac{\partial}{\partial \theta} \left [\sin\theta \frac{\partial}{\partial \theta} \right ] + \frac{1}{r^2\sin^2\theta} \frac{\partial^2}{\partial\phi^2}\]
 So, the eigenvalue equation becomes
-\[-\frac{1}{2M} \frac{1}{r^2} \frac{\partial}{\partial r} \left [ r^2\frac{\partial \Psi}{\partial r}\right ]  + \frac{L^2}{2Mr^2} \Psi + W(r)\Psi = E\Psi\]
+\[-\frac{1}{2m} \frac{1}{r^2} \frac{\partial}{\partial r} \left [ r^2\frac{\partial \Psi}{\partial r}\right ]  + \frac{L^2}{2Mr^2} \Psi + W(r)\Psi = E\Psi\]
 Suppose the eigenfunctions have the factored form
 \[\Psi(r,\theta,\phi) = Y_l^m(\theta,\phi) \frac{u(r)}{r}\]
 The radial function then satisfies the equation
-\[-\frac{1}{2M} \frac{d^2 u(r)}{dr^2} + \left[ \frac{l(l+1)}{2Mr^2} + W(r)\right]u(r) = Eu(r)\]
+\[-\frac{1}{2m} \frac{d^2 u(r)}{dr^2} + \left[ \frac{l(l+1)}{2mr^2} + W(r)\right]u(r) = Eu(r)\]
 The radial function must satisfy the boundary condition $u(0) = 0$ since $\Psi(r,\theta,\phi)$ would otherwise have an $r^{-1}$ singularity at the origin. The normalization $\langle \Psi | \Psi \rangle = 1$ implies that
 \[\int_0^{\infty} = |u(r)|^2 dr = 1\]
 
 \subsubsection{The hydrogen atom}
 The hydrogen atom is a two-particle system consisting of an electron and a proton. The Hamiltonian is
-\[H = \frac{P_e^2}{2M_e} + \frac{P_p^2}{2M_p} - \frac{e^2}{4\pi|\bm{Q}_e-\bm{Q}_p|}\]
+\[H = \frac{P_e^2}{2m_e} + \frac{P_p^2}{2m_p} - \frac{e^2}{4\pi|\bm{Q}_e-\bm{Q}_p|}\]
 We take as independent variables the center of mass and relative coordinates of the particles
-\[\bm{Q}_c = \frac{M_e\bm{Q}_e + M_p\bm{Q}_p}{M_e+M_p} \quad \bm{Q}_r = \bm{Q}_e-\bm{Q}_p\]
+\[\bm{Q}_c = \frac{m_e\bm{Q}_e + m_p\bm{Q}_p}{m_e+m_p} \quad \bm{Q}_r = \bm{Q}_e-\bm{Q}_p\]
 The corresponding momentum operators are
-\[\bm{P}_c = \bm{P}_e + \bm{P}_p \quad \bm{P}_r = \frac{M_p\bm{P}_e-M_e\bm{P}_p}{M_e + M_p}\]
+\[\bm{P}_c = \bm{P}_e + \bm{P}_p \quad \bm{P}_r = \frac{m_p\bm{P}_e-m_e\bm{P}_p}{m_e + m_p}\]
 We can verify that
 \[[Q_{c\alpha},P_{c\beta}] = [Q_{r\alpha},P_{r\beta}] = i\delta_{\alpha\beta} \quad [Q_{c\alpha},P_{r\beta}] = [Q_{r\alpha},P_{c\beta}] = 0\]
 The Hamiltonian becomes
-\[H = \frac{P_c^2}{2(M_e+M_p)} + \frac{p_r^2}{2\mu} - \frac{e^2}{4\pi|\bm{Q}_r|}\]
-where $\mu$ is called the reduced mass, and is defined by $\mu \equiv \frac{M_eM_p}{M_e+M_p}$.
+\[H = \frac{P_c^2}{2(m_e+m_p)} + \frac{p_r^2}{2\mu} - \frac{e^2}{4\pi|\bm{Q}_r|}\]
+where $\mu$ is called the reduced mass, and is defined by $\mu \equiv \frac{m_em_p}{m_e+m_p}$.
 The center of mass behaves as a free particle, and its
 motion is not coupled to the relative coordinate. We shall confine our attention to the internal degrees of freedom described by the relative coordinate $\bm{Q}_r$. The energy eigenvalue equation in coordinate representation is
 \[-\frac{1}{2\mu}\nabla^2 \Psi(\bm{r})  -\frac{e^2}{4\pi r} \Psi(\bm{r}) = E\Psi(\bm{r})\]

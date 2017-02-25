@@ -567,51 +567,53 @@ Imagine a particle coming in and getting scattered by a short-ranged potential $
 Here, $H_0 = \frac{p^2}{2m}$ is the free-particle Hamiltonian operator. We can write the solution as
 \[|\psi^{(\pm)}\rangle = \frac{1}{E-H_0 \pm i\epsilon}V|\psi^{(\pm)}\rangle + |\phi\rangle\]
 Here, $H_0 |\phi\rangle = E |\phi\rangle$. In coordinate representation,
-\[\psi^{(\pm)}(\mathbf{x}) = \phi(\mathbf{x}) + \int d^3x' \langle \mathbf{x} | \frac{1}{E-H_0 \pm i\epsilon} | \mathbf{x}' \rangle V(\mathbf{x}') \psi^{(\pm)}(\mathbf{x}')\]
-Here, $\phi(\mathbf{x}) = \frac{e^{i\mathbf{k}\cdot\mathbf{x}}}{(2\pi)^{\frac{3}{2}}}$. Define the Green function as
-\[G_{\pm}(\mathbf{x},\mathbf{x}') \equiv \frac{1}{2m} \langle \mathbf{x} | \frac{1}{E-H_0 \pm i\epsilon} | \mathbf{x}' \rangle\]
+\[\psi^{(\pm)}(\mathbf{x}) = \phi(\mathbf{x}) + \int d^3x' \langle \bm{x} | \frac{1}{E-H_0 \pm i\epsilon} | \bm{x}' \rangle V(\bm{x}') \psi^{(\pm)}(\bm{x}')\]
+Here, $\phi(\bm{x}) = \frac{e^{i\bm{k}\cdot\bm{x}}}{(2\pi)^{\frac{3}{2}}}$. Define the Green function as
+\[G_{\pm}(\bm{x},\bm{x}') \equiv \frac{1}{2m} \langle \bm{x} | \frac{1}{E-H_0 \pm i\epsilon} | \bm{x}' \rangle\]
 We can derive that
-\[G_{\pm}(\mathbf{x},\mathbf{x}') = -\frac{1}{4\pi} \frac{e^{\pm ik|\mathbf{x}-\mathbf{x}'|}}{|\mathbf{x}-\mathbf{x}'|}\]
+\[G_{\pm}(\bm{x},\bm{x}') = -\frac{1}{4\pi} \frac{e^{\pm ik|\bm{x}-\bm{x}'|}}{|\bm{x}-\bm{x}'|}\]
 where $k = \sqrt{2mE}$. And it is easy to show that
-\[(\nabla^2 + k^2)G_{\pm}(\mathbf{x},\mathbf{x}') = \delta(\mathbf{x}-\mathbf{x}')\]
+\[(\nabla^2 + k^2)G_{\pm}(\bm{x},\bm{x}') = \delta(\bm{x}-\bm{x}')\]
 So, we have
-\[\psi^{(\pm)}(\mathbf{x}) = \frac{e^{i\mathbf{k}\cdot\mathbf{x}}}{(2\pi)^{\frac{3}{2}}} - 2m \int d^3x' \frac{1}{4\pi} \frac{e^{\pm ik|\mathbf{x}-\mathbf{x}'|}}{|\mathbf{x}-\mathbf{x}'|} V(\mathbf{x}') \psi^{(\pm)}(\mathbf{x}')\]
-We now can interpret $\psi^{+}(\mathbf{x})$ as a superposition of incident plane wave and scattered wave which propagate from scatterer to outside region. From now on, we will denote it as $\psi(\mathbf{x})$.
-
-The experiment is done typically by placing the detector far away from the scatterer $|\mathbf{x}| \ll a$ where $a$ is the "size" of the scatterer. The integration over $\mathbf{x}'$, on the other hand, is limited within the "size" of the scatterer because of the $V(\mathbf{x}')$ factor. Therefore, we are in the situation $|\mathbf{x}| \ll |\mathbf{x}'|$, and hence can use the approximation
-\[|\mathbf{x}-\mathbf{x}'| \approx |\mathbf{x}| - \frac{\mathbf{x}' \cdot \mathbf{x}}{|\mathbf{x}|}\]
+\[\psi^{(\pm)}(\bm{x}) = \frac{e^{i\bm{k}\cdot\bm{x}}}{(2\pi)^{\frac{3}{2}}} - 2m \int d^3x' \frac{1}{4\pi} \frac{e^{\pm ik|\bm{x}-\bm{x}'|}}{|\bm{x}-\bm{x}'|} V(\bm{x}') \psi^{(\pm)}(\bm{x}')\]
+We now can interpret $\psi^{+}(\bm{x})$ as a superposition of incident plane wave and scattered wave which propagate from scatterer to outside region. From now on, we will denote it as $\psi(\bm{x})$.
+\\
+The experiment is done typically by placing the detector far away from the scatterer $|\bm{x}| \ll a$ where $a$ is the "size" of the scatterer. The integration over $\bm{x}'$, on the other hand, is limited within the "size" of the scatterer because of the $V(\bm{x}')$ factor. Therefore, we are in the situation $|\bm{x}| \ll |\bm{x}'|$, and hence can use the approximation
+\[|\bm{x}-\bm{x}'| \approx |\bm{x}| - \frac{\bm{x}' \cdot \bm{x}}{|\bm{x}|}\]
 Under this limit,
-\[\psi(\mathbf{x}) = \frac{e^{i\mathbf{k}\cdot\mathbf{x}}}{(2\pi)^{\frac{3}{2}}} - 2m \frac{e^{ikr}}{4\pi r} \int d^3x' e^{-\mathbf{k}' \cdot \mathbf{x}'} V(\mathbf{x}') \psi(\mathbf{x}')\]
-Here, $r = |\mathbf{x}|$ and $\mathbf{k}' = k \frac{\mathbf{x}}{r}$. It is customary to write this equation in the form
-\[\psi(\mathbf{x}) = \frac{1}{(2\pi)^{\frac{3}{2}}}\left( e^{i\mathbf{k}\cdot\mathbf{x}} +  f(\mathbf{k},\mathbf{k}') \frac{e^{ikr}}{r} \right) \]
+\[\psi(\bm{x}) = \frac{e^{i\bm{k}\cdot\bm{x}}}{(2\pi)^{\frac{3}{2}}} - 2m \frac{e^{ikr}}{4\pi r} \int d^3x' e^{-i\bm{k}' \cdot \bm{x}'} V(\bm{x}') \psi(\bm{x}')\]
+Here, $r = |\bm{x}|$ and $\bm{k}' = k \frac{\bm{x}}{r}$. It is customary to write this equation in the form
+\[\psi(\bm{x}) = \frac{1}{(2\pi)^{\frac{3}{2}}}\left( e^{i\bm{k}\cdot\bm{x}} +  f(\bm{k},\bm{k}') \frac{e^{ikr}}{r} \right) \]
 Here,
-\[f(\mathbf{k},\mathbf{k}') \equiv - \frac{m}{2\pi} (2\pi)^3  \langle \mathbf{k}'| V | \psi\rangle \]
+\[f(\bm{k},\bm{k}') \equiv - \frac{m}{2\pi} (2\pi)^3  \langle \bm{k}'| V | \psi\rangle \]
 Recall the definition of cross section
 \[\sigma \equiv \frac{\mbox{Number of Events}}{\mbox{Time} \times \mbox{Incident Flux}}\]
 So, the differential cross section for particles being scattered into the solid angle is
-\[d\sigma = \frac{|\mathbf{j}_{\mathrm{scatt}}| r^2 d\Omega}{|\mathbf{j}_{\mathrm{inc}}|} = |f(\mathbf{k},\mathbf{k}')|^2 d\Omega\]
-
+\[d\sigma = \frac{|\bm{j}_{\mathrm{scatt}}| r^2 d\Omega}{|\bm{j}_{\mathrm{inc}}|} = |f(\bm{k},\bm{k}')|^2 d\Omega\]
+\\
 In a more realistic situation, we should use wave packets to describe the scattering process. The basic picture is a free wave packet approaches the scattering center. After a long time, we have both the original wave packet moving in the original direction plus a spherical wave front that moves outward. The details can be found in the section 3 of the lecture notes 
 \href{http://hitoshi.berkeley.edu/221B/index.html}{\emph{Scattering Theory I (Hitoshi Murayama)}}.
-
-Furthermore, if we require that the normalization of the wave function should always satisfy $\int dx^3 |\psi(\mathbf{x})|^2$ for any $t$, as guaranteed by the unitarity of time evolution operator. This requirement leads to a special requirement on the scattered wave, and hence $f(\mathbf{k},\mathbf{k}')$, from witch we can derive the optical theorem.
+\\ \\
+Furthermore, if we require that the normalization of the wave function should always satisfy $\int dx^3 |\psi(\bm{x})|^2 = 1$ for any $t$, as guaranteed by the unitarity of time evolution operator. This requirement leads to a special requirement on the scattered wave, and hence $f(\bm{k},\bm{k}')$, from witch we can derive the optical theorem.\\
 
 \begin{newthem}[Optical theorem]
 \[\mathrm{Im} f(\theta = 0) = \frac{k\sigma_{\mathrm{tot}}}{4\pi}\]
 where
-\[f(\theta = 0) \equiv f(\mathbf{k},\mathbf{k}),\]
-the setting of $\mathbf{k} \equiv \mathbf{k}'$ imposes scattering in the forward direction, and
+\[f(\theta = 0) \equiv f(\bm{k},\bm{k}),\]
+the setting of $\bm{k} \equiv \bm{k}'$ imposes scattering in the forward direction, and
 \[\sigma_{\mathrm{tot}} = \int \frac{d\sigma}{d\Omega} d\Omega\]
 \end{newthem}
+\noindent
+\\
 The meaning of this theorem is clear. Because the scattered wave takes the probability away to different directions, the total probability for the particle to go to the forward direction (unscattered) should decrease. This decrease is caused by the interference between the unscattered and scattered waves and hence is proportional to $f(0)$. On the other hand, the amount of decrease in the forward direction should equal the total probability at other directions, which is proportional to the total cross section. The proof can be found in the section 4 of the lecture notes \href{http://hitoshi.berkeley.edu/221B/index.html}{\emph{Scattering Theory I (Hitoshi Murayama)}}.
 
 \section{Born approximation}
 If $|\psi\rangle = |\phi\rangle + O(V)$ is close to $|\phi\rangle$, we can solve the Lippmanmn-Schwinger equation by perturbation theory. The lowest order approximation in $V$ is
 \[|\psi\rangle = \frac{1}{E-H_0 + i\epsilon} V|\phi\rangle + |\phi\rangle\]
 This is called Born approximation. In coordinate representation,
-\[f^{(1)}(\mathbf{k},\mathbf{k}') = - \frac{m}{2\pi} \int d^3x V(\mathbf{x}) e^{i\mathbf{q}\cdot\mathbf{x}}\]
-Here, $\mathbf{q} = |\mathbf{k} - \mathbf{k}'|$. If the potential is central, we can derive that
-\[f^{(1)}(\mathbf{k},\mathbf{k}') = - \frac{2m}{q} \int_0^{\infty} dr \: r V(r) \sin(qr)\]
+\[f^{(1)}(\bm{k},\bm{k}') = - \frac{m}{2\pi} \int d^3x V(\bm{x}) e^{i\bm{q}\cdot\bm{x}}\]
+Here, $\bm{q} = \bm{k} - \bm{k}'$. If the potential is central, we can derive that
+\[f^{(1)}(\bm{k},\bm{k}') = - \frac{2m}{q} \int_0^{\infty} dr \: r V(r) \sin(qr)\]
 
 \subsubsection{Yukawa potential}
 \[V = \frac{\alpha}{r}  e^{-\mu r}\]
@@ -633,12 +635,12 @@ The reason why the total cross section diverges is because the Coulomb potential
 
 \subsubsection{Form factor}
 \noindent
-If the source of Coulomb potential has an distribution $\rho_N(\mathbf{x})$, then
-\[V(\mathbf{x}) = \int d^3x \frac{\alpha}{|\mathbf{x}-\mathbf{x}'|} \rho(\mathbf{x}')\]
+If the source of Coulomb potential has an distribution $\rho_N(\bm{x})$, then
+\[V(\bm{x}) = \int d^3x \frac{\alpha}{|\bm{x}-\bm{x}'|} \rho(\bm{x}')\]
 Note that the potential is mathematically a convolution of the Coulomb potential and the probability density. Since the first Born amplitude is nothing but the Fourier transform of the potential, the convolution becomes a product of Fourier transforms, one for the Coulomb potential and the other for the probability density. So
 \[f(\theta) = f(\theta)_{\mathrm{pointlike}} F(q)\]
 Here,
-\[F(q) \equiv \int d^3x \rho_N(\mathbf{x}) e^{i \mathbf{q} \cdot \mathbf{x}},\]
+\[F(q) \equiv \int d^3x \rho_N(\bm{x}) e^{i \bm{q} \cdot \bm{x}},\]
 being called form factor.
 
 \subsubsection{Born expansion}
@@ -646,7 +648,7 @@ being called form factor.
 Define T-matrix by
 \[V | \psi \rangle = T |\phi\rangle\]
 Using the definition of the T-matrix, we find
-\[f(\mathbf{k},\mathbf{k}') = - \frac{m}{2\pi} (2\pi)^3  \langle \mathbf{k}'| T | \mathbf{k}\rangle \]
+\[f(\bm{k},\bm{k}') = - \frac{m}{2\pi} (2\pi)^3  \langle \bm{k}'| T | \bm{k}\rangle \]
 Using the Lippmann–Schwinger equation and multiplying the
 both sides by $V$ from left, we find
 \[ T |\phi\rangle = V \frac{1}{E-H_0 + i\epsilon}T|\phi\rangle + V|\phi\rangle\]
@@ -666,7 +668,7 @@ In the $n+1$-th term, there are $n$ times scattering of the wave before it propa
 When the potential is \textbf{central}, angular momentum is conserved due to Noether's theorem. Therefore, we can expand the wave function in the eigenstates of the angular momentum. Obtained waves with definite angular momenta are called partial waves. We can solve the scattering problem for each partial wave separately, and then in the end put them together to obtain the full scattering amplitude.
 The plane wave can be expanded as follows.
 \[e^{ikz} = \sum_{l=0}^{\infty}(2l+1)i^l j_l(kr) P_l(\cos \theta)\]
-Here, $j_l(kr)$ is spherical Bessel functions of first kind. The asymptotic behaviour of $j_l(kr)$ at large $r$ can be written as
+Here, $j_l(kr)$ is \href{https://en.wikipedia.org/wiki/Bessel_function#Spherical_Bessel_functions:_jn.2C_yn}{spherical Bessel functions} of first kind. The asymptotic behaviour of $j_l(kr)$ at large $r$ can be written as
 \[j_l(kr) \sim \frac{\sin(kr-\frac{l\pi}{2})}{kr}\]
 so,
 \[e^{ikz} \sim \frac{1}{2ikr} \sum_{l=0}^{\infty} (2l+1) (e^{ikr} - (-1)^l e^{-ikr})P_l(\cos \theta)\]
@@ -684,14 +686,14 @@ From optical theorem we can derive that
 This constraint can be rewritten as
 \[|1+2ikf_l|^2 = 1\]
 So we can define a phase $\delta_l$ as 
-\[1+2ikf_l = e^{i\delta_l}\]
+\[1+2ikf_l = e^{2i\delta_l}\]
 or equivalently,
 \[f_l = \frac{1}{k} e^{i\delta_l} \sin(\delta_l)\]
 
 \subsubsection{Phase shifts}
 \noindent
 We can derive the asymptotic behaviour of the wave function as
-\[\psi(\mathbf{x}) \sim \frac{1}{2ikr} \sum_{l} (2l+1)P_l(\cos \theta) [e^{ikr}e^{2i\delta_l} - (-1)^l e^{-ikr}]\]
+\[\psi(\bm{x}) \sim \frac{1}{2ikr} \sum_{l} (2l+1)P_l(\cos \theta) [e^{ikr}e^{2i\delta_l} - (-1)^l e^{-ikr}]\]
 Compare it to the case of the plane wave without scattering. What this equation says is that the wave converging on the scatterer
 has the well-defined phase factor $-(-1)^l$, the same as in the case without scattering. On the other hand, the wave that emerges from the scatterer has an additional phase factor $e^{2i\delta_l}$. All what scattering did is to shift the phase of the emerging wave by $2\delta_l$. The reason why this is merely a phase factor is
 the conservation of probability. What converged to the origin must come out with the same strength. But this shift in the phase causes the interference among all partial waves different from the case without the phase shifts, and the result is not a plane wave but contains the scattered wave.\\
@@ -699,5 +701,165 @@ In terms of the phase shifts, the cross section is given by
 \[\sigma = \frac{4\pi}{k^2} \sum_l (2l+1) \sin^2\delta_l\]
 Actual calculation of phase shifts is basically to solve the Schr\"{o}dinger equation for each partial waves,
 \[\left[-\frac{1}{r}\frac{d^2}{dr^2}r+\frac{l(l+1)}{r^2}+2mV(r)\right]R_l(r) = k^2 R_l(r)\]
-After solving the equation, we take the asymptotic limit $r \to \infty$, and write $R_l(r)$ as a linear combination of $j_l(kr)\cos \delta_l + n_l(kr) \sin \delta_l $. The relative coefficients of $j_l$ and $n_l$ determines the phase shift $\delta_l$, and hence the cross section.
+After solving the equation, we take the asymptotic limit $r \to \infty$, and write $R_l(r)$ as a linear combination of $j_l(kr)\cos \delta_l - n_l(kr) \sin \delta_l $. The relative coefficients of $j_l$ and $n_l$ determines the phase shift $\delta_l$, and hence the cross section.
+
+\subsubsection{Hard sphere scattering}
+The potential for hard sphere scattering is
+\[V = \begin{cases} 0 \quad (r > a) \\ \infty \quad (r < a)\end{cases}\]
+The infinite potential corresponds to the boundary condition $R_l(a) = 0$. We first analyze the S-wave ($l = 0$). The Schrödinger equation is simply 
+\[-\frac{d^2 rR_0(r)}{dr^2} = k^2 rR_0(r)\]
+The solution is
+\[rR_0(r) = c\sin(k(r-a)) = \frac{ce^{ika}}{2i} \left[ e^{i(kr-2ka)} - e^{-ikr} \right]\]
+So we have $\delta_0 = -ka$. The reason behind the phase shift is that the wave cannot penetrate into $r < a$, the wave is shifted outwards, which is the shift in the phase $-ka$. The cross section from the S-wave scattering is
+\[\sigma_0 = \frac{4\pi}{k^2}\sin^2 ka\]
+\\
+Let us generalize the discussion to the case of a little bit penetrable potential
+\[V = \begin{cases} 0 \quad (r > a) \\ V_0 \quad (r < a)\end{cases}\]
+Define $K^2 \equiv 2mV_0$. If $k > K$, we have
+\[rR_0 = \begin{cases} \sin \sqrt{k^2-K^2}r \quad (r < a) \\ \sin(kr+\delta_0) \quad (r > a)\end{cases}\]
+By matching the logarithmic derivatives of the wave function at $r = a$, we find
+\[\delta_0 = \tan^{-1} \left[\frac{k}{\sqrt{k^2-K^2}} \tan\sqrt{k^2-K^2}a \right]-ka\]
+For $k \gg K$, one can neglect $K$ and the phase shift vanishes. The energy is too large to care the slight potential and there is no scattering any more.\\
+If $k < K$, we have
+\[rR_0 = \begin{cases} \sinh \sqrt{K^2-k^2}r \quad (r < a) \\ \sin(kr+\delta_0) \quad (r > a)\end{cases}\]
+The phase shift is obtained as
+\[\delta_0 = \tan^{-1} \left[\frac{k}{\sqrt{K^2-k^2}} \tanh\sqrt{K^2-k^2}a \right]-ka\]
+For $k \ll K$, we have
+\[\delta_0 \sim ka \left[ \frac{1}{Ka} \tanh Ka - 1 \right]\]
+The phase shift $\delta_0$ always starts linearly with $k$ at small momentum, and the slope is negative. This is a completely general result for a repulsive potential, and a convenient quantity
+\[a_0 = \lim_{k \to 0} -\frac{d\delta_0}{dk}\]
+is called the scattering length, as it has the dimension of the length. This quantity basically measures how big the scatterer is. The cross section at $k \to 0$ limit is then given by $4\pi a_0^2$ . For the hard sphere potential, the scattering length is indeed the size of the sphere.
+\\ \\
+For the hard sphere problem, the phase shifts for higher partial waves can be worked out similarly. We have
+\[\tan\delta_l = \frac{j_l(ka)}{n_l(ka)}\]
+The cross section is then given by
+\[\sigma = \frac{4\pi}{k^2} \sum_l (2l+1) \sin^2\delta_l = \sum_{l=0}^{\infty} \frac{4\pi(2l+1)}{k^2} \frac{[j_l(ka)]^2}{[j_l(ka)]^2+[n_l(ka)]^2}\]
+For small momenta $k \ll a^{-1}$, we can use the power expansion of the spherical Bessel function
+\[j_l(r) \sim \frac{r^{l}}{(2l+1)!!} \quad n_l(r) \sim -\frac{(2l-1)!!}{r^{l+1}}\]
+and get that
+\[\delta_l \sim (ka)^{2l+1}\]
+So phase shift (and so cross section) is smaller for higher partial waves. This is easy to understand. When $k$ is small, the centrifugal barrier does not allow the particle to reach $r=a$ classically. Therefore the effect of the potential is extremely suppressed.\\
+On the other hand at high monenta, $\sin^2\delta_l$ oscillates between $0$ and $1$ as a function of $l$ up to $l \sim ka$. Above this value, the phase shift drops rapidly to zero. This makes sense from the classical physics intuition. When $l > ka$,
+the impact parameter is larger than the size of the target and there should not be any scattering.
+
+\section{Resonance}
+\subsection{Attractive potential}
+As for attractive potential scattering
+\[V = \begin{cases} 0 \quad (r > a) \\ -V_0 \quad (r < a)\end{cases}\]
+the phase shift for S-wave is
+\[\delta_0 = \tan^{-1} \left[\frac{k}{\sqrt{k^2+K^2}} \tan\sqrt{k^2+K^2}a \right]-ka\]
+The scattering length is
+\[a_0 = a\left[ 1 - \frac{\tan Ka}{Ka} \right] \]
+For small $K$, the scattering length is negative. This is easy to understand because the wave is pulled into the potential rather pushed out unlike the repulsive case. However, once we
+make the potential more attractive (larger $K$), the scattering length grows and becomes even infinite at $K = \frac{\pi}{2}$.
+\\
+Let us study the analytic structure of the scattering amplitude more carefully. We have
+\[e^{2i\delta_0} = e^{-2ika} \frac{1 + i \frac{k}{\sqrt{k^2+K^2}} \tan\sqrt{k^2+K^2}a}{1 - i \frac{k}{\sqrt{k^2+K^2}} \tan\sqrt{k^2+K^2}a}\]
+It can have a pole if
+\[1 - i \frac{k}{\sqrt{k^2+K^2}} \tan\sqrt{k^2+K^2}a = 0\]
+This equation appears impossible to satisfy, but it can be on the complex plane of $k$. For a pure imaginary $k = i\kappa$, the equation becomes
+\[\kappa = - \frac{\sqrt{K^2-\kappa^2}}{\tan \sqrt{K^2-\kappa^2}a}\]
+This is the condition for bound states (the scattering wave $e^{ike}$ becomes $e^{-\kappa r}$, which is trapped by scatter). By decreasing $K$ from a sufficiently large value with bound states, the bound state energies $E = -\frac{\kappa^2}{2m}$ move up. When $Ka = (n + \frac{1}{2})\pi$, $\tan Ka \to \infty$, and we find a bound state approaching $\kappa = k = 0$. 
+This is when the scattering length diverges. In other words, the infinite scattering cross section at $k = 0$ happens because there is a bound state exactly at $ k = 0$.\\
+This can also be seen on the complex $k$ plane in the following manner. The lower half plane is unphysical as it corresponds to an exponentially growing wave function at the infinity for the scattered wave. 
+When there are bound states, we see poles along the positive imaginary axis. By decreasing $K$, the poles along the positive imaginary axis go down, and a pole reaches the origin. 
+By further decreasing $K$, the pole goes below the origin into the unphysical region. 
+However, the existence of a pole just below the origin makes the scattering amplitude at $k \to 0$ large and results in an anomalously large cross section. 
+
+\subsection{Delta-shell potential}
+As for delta shell scattering
+\[V = \gamma\delta(r-a)\]
+the phase shift for S-wave is
+\[e^{2i\delta_0} = e^{-2ika}\frac{\sin ka + \frac{k}{2m\gamma}e^{ika}}{\sin ka + \frac{k}{2m\gamma}e^{-ika}}\]
+The poles satisfies that
+\[e^{2ika} = 1 - 2i\frac{k}{2m\gamma}\]
+When $\gamma$ is large, we can get
+\[k \approx \frac{n\pi}{a + \frac{1}{2m\gamma}} -i \left(\frac{1}{2m\gamma} \right)^2 \frac{n^2\pi^2}{a^3} + O(\gamma^{-2})\]
+The poles are in the unphysical lower half plane. But when $\gamma$ is large, the poles are very close to the real axis, and the scattering amplitude receives a large enhancement due to these poles. 
+In the limit of $\gamma \to \infty$, or in other words in the limit of no coupling between the regions inside and outside the shell, they become poles along the real axis. 
+They are the discrete states inside the shell in this limit. 
+By making $\gamma$ finite, we introduce coupling between the discrete states inside the shell to the continuum states outside the shell.
+\\ \\
+It is instructive to solve Schrödinger equation for the values of $k$ which correspond to the location of poles. Because the outgoing wave $e^{ikr}$ is enhanced relative to the incoming wave $e^{-ikr}$ by an infinite amount due to the pole, the boundary condition is that the solution is "purely outgoing", i.e.
+\[rR_0 = \begin{cases} \sin kr \quad (r<a) \\ \sin ka e^{ik(r-a)} \quad (r>a)  \end{cases} \quad \mathrm{Re}(k) > 0\]
+Because the factor $e^{ik(r-a)}$ grows exponentially at large $r$ due to the negative imaginary part in $k$, the solution is not a regular normalizable solution.
+In the large $\gamma$ limit, $\sin ka \sim O(\gamma^{-1})$ is small. Therefore the wave function almost vanishes at the shell.
+Outside the shell, the wave function oscillates at the small amplitude $\sin(ka)$, which however starts growing again due to the $e^{ik(r-a)}$ factor exponentially.
+\\
+We now put the time dependence in. The energy eigenvalue
+is $E = \frac{k^2}{2m}$, where $k$ is at the pole. If the pole is at
+\[k = k_0 - i\kappa\]
+the energy eigenvalue is at
+\[E = E_0 - i\frac{\Gamma}{2} = \frac{k_0^2}{2m} - i \frac{k_0\kappa}{m} + O(\kappa^2)\]
+For instance in the large $\gamma$ limit
+\[E \sim \frac{1}{2m} \left( \frac{n\pi}{a + \frac{1}{2m\gamma}}\right)^2 - i \left( \frac{n\pi}{2ma}\right)^3 \frac{2}{\gamma^2 a} + O(\gamma^{-3})\]
+The time dependence of the wave function is simply
+\[rR_0(r,t) = rR_0(r) e^{-iE_0t} e^{-\frac{\Gamma t}{2}} = \begin{cases} \sin kr \, e^{-iE_0t} e^{-\frac{\Gamma t}{2}} \quad (r<a) \\\sin ka \,  e^{ik(r-a)} e^{-iE_0t} e^{-\frac{\Gamma t}{2}} \quad (r > a) \end{cases}\]
+Inside the shell, it shows an exponentially decaying probability density uniformly over space.
+Outside the shell, the probability density is $|rR_0|^2 \propto e^{2\kappa r-\Gamma t}$ , which shows the probability flowing out to infinity with speed $\Gamma/2\kappa = \frac{k_0}{m}$,
+nothing but the velocity of the particle itself. In other words, the wave function describes a "bound state" inside shell decaying into a continuum state outside the shell moving away at the expected velocity. The resonances can be viewed as
+quasi-bound states which decay into continuum states. The lifetime of the quasi-bound states is $\tau = \frac{1}{\Gamma}$.
+A more rigorous treatment of resonance using wave packets can be found in the section 5 of the lecture notes 
+\href{http://hitoshi.berkeley.edu/221B/index.html}{\emph{Scattering Theory III (Hitoshi Murayama)}}.
+
+\subsection{General description of resonances}
+In general, once we know that there is a pole just below the real axis, we can approximate the phase shift by the contribution from the pole only, ignoring a continuum:
+\[e^{2i\delta_l} \sim \frac{g(E)}{E-E_0 + i\Gamma/2}\]
+Because of the unitarity $|e^{2i\delta_l}|^2 = 1$ , we immediately conclude
+\[ e^{2i\delta_l} \sim e^{2i\theta}\frac{E-E_0-i\Gamma/2}{E-E_0 + i\Gamma/2} \]
+Ignoring the continuum contribution $e^{2i\theta}$,
+\[\sin^2 \delta_l = \frac{\Gamma^2/4}{(E-E_0)^2+\Gamma^2/4}\]
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=4cm ,width=6.23cm]{QM/resonance.png}
+	\caption{Resonance curve}
+\end{figure}\\
+We then can establish the relationship between the life time of the quasi-bound state and the FWHM of the resonance
+\[\tau \Delta E \sim 1\]
+
+\section{Two-to-two scattering}
+Similar to the discussion in hydrogen atom, we take as independent variables the center of mass and relative coordinates of the particles
+\[\bm{X} = \frac{m_1\bm{x}_1 + m_2\bm{x}_2}{m_1+m_2} \quad \bm{x} = \bm{x}_1-\bm{x}_2\]
+The corresponding momentum operators are
+\[\bm{P} = \bm{p}_1 + \bm{p}_2 \quad \bm{p} = \frac{m_1\bm{p}_1-m_2\bm{p}_2}{m_1 + m_2}\]
+Then the Hamiltonian becomes
+\[H = \frac{P^2}{2M} + \frac{p^2}{2\mu} + V(|\bm{x}|)\]
+Then the problem reduces to the potential scattering problem for a particle of mass $\mu = \frac{m_1m_2}{m_1+m_2}$.
+\\ \\
+If two particles that scatter are identical particles, such as electron-electron scattering or scattering of two identical atoms, symmetry of the wave function needs to be considered.
+Under the interchange of two particles, the center of mass motion is not affected, but the relative coordinates change their signs. If they have spins, their spins need to be interchanged at the same time.
+\\
+If two particles are identical spinless bosons, there is no spin degrees of freedom and the interchange of particles is simply $\bm{x} \to -\bm{x}$ in the wave function. 
+Because they are bosons, the wave function should not change under the interchange of particles, and hence the wave function must be an even function of $\bm{x}$. 
+Therefore the asymptotic form of the wave function must be changed to
+\[\psi(\bm{x}) \to e^{ikz} + e^{-ikz} + [f(\theta) + f(\pi - \theta)] \frac{e^{ikr}}{r}\]
+The differential cross section is then found to be
+\[\frac{d\sigma}{d\Omega} = |f(\theta)+f(\pi-\theta)^2|\]
+Note that one should not integrate over the entire solid angle to obtain the total cross section because $(\theta,\phi)$ and $(\pi - \theta,\phi+\pi)$ correspond to an identical state.
+\\
+For two spin $\frac{1}{2}$ fermions, there are two possible spin wave functions, symmetric $S = 1$ and anti-symmetric $S = 0$.
+Therefore depending on the spin wave function, we either have a anti-symmetric or symmetric spatial wave function, respectively. In particular, the differential cross section is the same as the spinless bosons for the anti-symmetric spin wave function $S= 0 $ while it is
+\[\frac{d\sigma}{d\Omega} = |f(\theta) - f(\pi-\theta)^2|\]
+for the symmetric spin wave function $S = 1$.
+
+\section{Time-dependent formulation}
+Recall the time-dependent perturbation theory, the rate of the initial state $|i\rangle$ to transform to the final state $|f\rangle$ to the first order in perturbation $V$ is
+\[\Gamma(i \to f) = 2\pi \delta(E_i-E_f) |V_{fi}|^2\]
+When applied to the scattering problem, an additional issue is to define how we sum over the final states. 
+In particular, we would like to sum over the continuum plane-wave states, and we must make the sum well-defined.
+To define the sum over the continuum states, it is useful to consider the system in a cube of size $L$. 
+We impose the periodic boundary condition. The plane-wave solutions in this box are given by
+\[\psi_{n_x,n_y,n_z}(\bm{x}) = \frac{1}{L^{3/2}} e^{2\pi i(n_x x + n_y y + n_z z)/L}\]
+In the limit $L \to \infty$, we have
+\[\sum_{n_x,n_y,n_z} = \left( \frac{L}{2\pi}\right)^3 \sum_{n_x,n_y,n_z} \left( \frac{2\pi}{L}\right)^3 \to \left( \frac{L}{2\pi}\right)^3 \int d\bm{p} = \int \frac{d\bm{x}d\bm{p}}{(2\pi)^3}\]
+Coming back to the scattering problem, we sum over the final states to define the probability of the outgoing particle to go into various momentum states
+\[\sum_{f} \Gamma(i \to f) = \int \frac{L^3 d\bm{p}}{(2\pi)^3} 2\pi \delta(E_i-E_f) |V_{fi}|^2\]
+Note that
+\[V_{fi} = \int d\bm{x} \frac{e^{-i\bm{p}_f \cdot \bm{x}}}{L^{3/2}} V(\bm{x}) \frac{e^{i\bm{p}_i \cdot \bm{x}}}{L^{3/2}}  = \frac{1}{L^3} \int d\bm{x} V(\bm{x}) e^{i\bm{q}\cdot\bm{x}}\]
+where $\bm{q} = \bm{p}_i - \bm{p}_f$.
+Since the incident flux of the incoming particle is $\frac{v}{L^3}$, the cross section is
+\[\sigma = \frac{L^3}{v} \sum_{f} \Gamma(i \to f) =  \frac{m}{p_i} \int \frac{ d\bm{p}}{(2\pi)^3} 2\pi \delta(E_i-E_f) \left |\int d\bm{x} V(\bm{x}) e^{i\bm{q}\cdot\bm{x}} \right|^2\]
+Note that $E = \frac{p^2}{2m}$ and $\delta(E_i-E_f) = \frac{m}{p_i} \delta(p_f-p_i)$, finally we can get
+\[\sigma = \int d\Omega \left | \frac{m}{2\pi} \int d\bm{x} V(\bm{x}) e^{i\bm{q}\cdot\bm{x}} \right|^2\]
+This is nothing but the Born approximation for the cross section.
 \end{document}
