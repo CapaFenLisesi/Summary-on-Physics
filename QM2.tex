@@ -271,6 +271,7 @@ For example, the ground state $|1,0,\frac{1}{2}\rangle$ splits into two levels $
 units, or $21 cm$ in wave length units.
 
 \section{Time dependent perturbation theory}
+\subsubsection{Dyson series}
 Time-dependent perturbation theory applies to Hamiltonians of the form
 \[H = H_0 + H_1(t)\]
 where $H_0$ is solvable and $H_1$ is treated as a perturbation.In time-dependent perturbation theory, we are usually interested in time-dependent transitions between eigenstates of the unperturbed system induced by the perturbation $H_1$.
@@ -304,7 +305,9 @@ We then have
 So the transition amplitudes in the interaction picture and those in the Schrödinger picture are related by a simple phase factor.The transition probabilities are the squares of the amplitudes and are the same in either case. The perturbation expansion of the transition amplitude $c_n(t)$ is
 \[c_n(t) = \delta_{ni} + c^{(1)}_n(t) + \cdots\]
 where
-\[c^{(1)}_n(t) = \frac{1}{i} \int_0^t dt' \langle n | H_{1I}(t')|i\rangle = \frac{1}{i} \int_0^t dt' e^{i(E_n-E_i)t'} \langle n | H_{1}(t')|i\rangle\]\\
+\[c^{(1)}_n(t) = \frac{1}{i} \int_0^t dt' \langle n | H_{1I}(t')|i\rangle = \frac{1}{i} \int_0^t dt' e^{i(E_n-E_i)t'} \langle n | H_{1}(t')|i\rangle\]
+
+\subsubsection{Constant and harmonic perturbation}
 If $H_1$ is time-independent, we have
 \[c^{(1)}_n(t) = \frac{2}{i} e^{i\omega_{ni}t/2} \left( \frac{\sin\omega_{ni}t/2}{\omega_{ni}} \right) \langle n | H_1 | i \rangle\]
 Up to the first order, the transition probability is
@@ -318,7 +321,9 @@ For these states we have
 \[E_n \approx E_i \pm \omega_0\]
 We call these two cases absorption and stimulated emission, respectively. 
 Taking the case of absorption, and looking only at final states that are near resonance, we can write the transition probability to first order of perturbation theory as
-\[P_n(t) = 4 \left( \frac{\sin^2(\omega_{ni}-\omega_0)t/2}{(\omega_{ni}-\omega_0)^2} \right) |\langle n | K | i \rangle|^2\]\\
+\[P_n(t) = 4 \left( \frac{\sin^2(\omega_{ni}-\omega_0)t/2}{(\omega_{ni}-\omega_0)^2} \right) |\langle n | K | i \rangle|^2\]
+
+\subsubsection{Transition probability}
 Let us fix the final state and examine how the probability develops as a function of time in first order time-dependent perturbation theory.
 Obviously $P_n(0) = 0$. At later times we see that $P_n(t)$ oscillates at frequency $\omega_{ni}$ between $0$ and a maximum proportional to $\frac{1}{\omega_{ni}}$.
 The frequency $\omega_{ni}$ measures how far the final state is off resonance, that is, how much it fails to conserve energy. If this frequency is large, the probability oscillates rapidly between zero and a small maximum. 
@@ -332,11 +337,50 @@ is proportional to $t$. We can derive that
 \[\lim_{t \to \infty} \frac{1}{t} \frac{\sin^2\omega t/2}{\omega^2} = \frac{\pi}{2}\delta(\omega)\]
 The $\delta$-function enforces energy conservation in the limit $t \to \infty$. But at finite times, transitions take place to states in a range of energies about the initial energy.
 This width is of order $\frac{1}{t}$. This is an example of
-the energy-time uncertainty relation, $\Delta t \Delta E = 1$, indicating that a system that is isolated (not
-subjected to a measurement) over a time interval $\Delta t$ has an energy that is uncertain by an amount $\Delta E \geq \frac{1}{\Delta t}$.
+the energy-time uncertainty relation, $\Delta t \Delta E \sim 1$, indicating that a system that is isolated (not
+subjected to a measurement) over a time interval $\Delta t$ has an energy that is uncertain by an amount $\Delta E \sim \frac{1}{\Delta t}$.\\
+It is conventional to define the transition rate as the transition probability per unit time,i.e.
+\[\Gamma(i \to f) = \lim_{t \to \infty}{P(i \to f)}{t}\]
+Up to the first order, we have
+\[\Gamma(i \to f) = 2\pi \delta(E_i - E_f) |V_{fi}|^2\]
+where $V_{fi} = \langle f | H_1 | i \rangle$.
 
 \section{Atomic Radiation}
+We apply time-dependent perturbation theory to the interaction of atomic electron with the classical radiation field.
+The basic Hamiltonian, with $A^2$ omitted, is
+\[H = \frac{p^2}{2m} - e\phi(\bm{x}) + \frac{e}{m}\bm{A}\cdot\bm{p}\]
+Specifically, we work with a linear polarized monochromatic field of the plane wave for
+\[\bm{A} = 2A_0\bm{\epsilon}\cos(\bm{k}\cdot\bm{x}-\omega t) = A_0\bm{\epsilon} [e^{i\bm{k}\cdot\bm{x}}e^{-i\omega t}  + e^{-i\bm{k}\cdot\bm{x}}e^{i\omega t} ]\]
+So, $\frac{e}{m}\bm{A}\cdot\bm{p}$ is a Harmonic perturbation with $K = \frac{eA_0}{m} e^{i\bm{k}\cdot\bm{x}} (\bm{\epsilon}\cdot\bm{p})$.
+For example, take the case of absorption, the transition rate is
+\[\Gamma(i \to f) = 2\pi \frac{e^2|A_0|^2}{m^2} |\langle f |e^{i\bm{k}\cdot\bm{x}} (\bm{\epsilon}\cdot\bm{p}) |i \rangle|^2 \delta(E_f-E_i-\omega)\]
+The cross section can be calculated by the transition rate of absorption.\\ \\
+The electrical dipole approximation is based on the fact that the wavelength of radiation field is far longer than the atomic dimension, so that the series
+\[e^{i\bm{k}\cdot\bm{x}} = 1+ ii\bm{k}\cdot\bm{x}+\cdots\]
+can be approximated by its leading term, $1$. Suppose the direction of the EM is wave is $z$, we now have
+\[\langle f |e^{i\bm{k}\cdot\bm{x}} (\bm{\epsilon}\cdot\bm{p}) |i \rangle = \langle f | p_z |i \rangle = \frac{m}{i} \langle f |  [z,H_0] |i \rangle = im(E_n-E_i)\langle f | n |i \rangle  \]
+where $H_0 = \frac{p^2}{2m} - e\phi(\bm{x})$.\\
+Recall the Wigner-Eckart theorem, we have the selection rules: The matrix element would vanish unless $\Delta m = 0$ and $\Delta l = \pm 1$ ($\Delta l $ can be $0$ because parity consideration. Further more, if the EM wave is circular polarized, we would have $\Delta m = \pm 1$. If the fine structure is taken into account, we would have $\Delta j = 0,\pm 1$ and $\Delta l = \pm 1$. If the hyperfine structure is taken into account, we would have $\Delta f = 0,\pm 1$, $\Delta j = 0,\pm 1$ and $\Delta l = \pm 1$. 
+
 \section{Variational Method}
+Let $H$ be a Hamiltonian which is assumed to have some bound states. Let the discrete (bound state) energy eigenvalues be ordered $E_0 < E_1 < \cdots$. The eigenvalues are allowed to be degenerate. There may also be a continuous spectrum above some energy, as often happens in practice.\\
+Let $|\psi\rangle$ be any normalizable state. Then the theorem states that
+\[\frac{\langle \psi | H | \psi \rangle}{\langle \psi | \psi \rangle} > E_0\]
+The state $|\psi\rangle$ is chosen to be an approximation to the ground state, based on physical intuition or other criteria, and the upper bound on $E_0$ that is obtained is often quite useful. \\
+In practice we often choose a continuous family of trial wave functions. Let $\lambda$ be a continuous parameter, and let us write the family as $|\psi(\lambda)\rangle$. Then we define a function of $\lambda$, really an energy function,
+\[F(\lambda) = \frac{\langle \psi(\lambda) | H | \psi(\lambda) \rangle}{\langle \psi(\lambda) | \psi(\lambda) \rangle}\]
+We minimize this by finding the root $\lambda_0$ of
+\[\frac{\partial F}{\partial \lambda} = 0\]
+so that the best estimate to the ground state wave function out of the family is $|\psi(\lambda)\rangle$ and the best estimate for the ground state energy is $F(\lambda_0)$. 
+Of course we must check that the root is actually a minimum.
+\\ \\
+In practice the normalization denominators are often inconvenient. One possibility is simply to normalize each member of the set of trial wave functions so those denominators are not
+present. 
+But often it is easier to enforce normalization by using Lagrange multipliers. We introduce the function,
+\[F(\lambda,\beta) = \langle \psi(\lambda) | H | \psi(\lambda) \rangle - \beta (\langle \psi(\lambda) | \psi(\lambda) \rangle - 1)\]
+and then require
+\[\frac{\partial F}{\partial \lambda} = 0 \quad \frac{\partial F}{\partial \beta} = 0\]
+
 
 \chapter{Many body problem}
 \section{Identical particles}
@@ -381,8 +425,6 @@ We now consider path integral representation of the transition amplitudes
 On the other hand, the Lagrangian for identical particles must be invariant under the exchange of particles, we can prove that
 \[\langle [\bm{x}_{1f}\cdots\bm{x}_{Nf}],t_f | [\bm{x}_{1i}\cdots\bm{x}_{Ni}],t_i\rangle = \sum_{\sigma} \langle \bm{x}_{\sigma(1)f}\cdots\bm{x}_{\sigma(N)f},t_f | \bm{x}_{1i}\cdots\bm{x}_{Ni},t_i\rangle\]
 In other words, the path integral sums over all possible paths allowing the positions at the final time slice are interchanged in all possible ways starting from the positions at the initial time slice.
-
-\section{Homonuclear Molecule}
 
 \section{Non-relativistic quantum field theory}
 \subsection{Motivation and formulation of quantum field theory}
