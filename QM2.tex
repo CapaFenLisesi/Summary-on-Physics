@@ -507,7 +507,7 @@ Therefore, the Fock space with two creation operators correctly describes the tw
 If we want a general interaction potential between them, the action must be modified to
 \[S = \int dt \left[ \int d\bm{x} \psi^{\dagger}(\bm{x})\left( i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m} \right)\psi(\bm{x}) - \frac{1}{2}\int d\bm{x} d\bm{y} \psi^{\dagger}(\bm{x}) \psi^{\dagger}(\bm{y}) V(\bm{x} - \bm{y}) \psi(\bm{x})\psi(\bm{y})\right]\]
 The corresponding Hamiltonian is
-\[H = \int d\bm{x} -\psi^{\dagger}\frac{\nabla^2}{2m}\psi + \frac{1}{2}\int d\bm{x} d\bm{y} \psi^{\dagger}(\bm{x}) \psi^{\dagger}(\bm{y}) V(\bm{x} - \bm{y}) \psi(\bm{x})\psi(\bm{y})\]
+\[H = \int d\bm{x} \psi^{\dagger}\frac{-\nabla^2}{2m}\psi + \frac{1}{2}\int d\bm{x} d\bm{y} \psi^{\dagger}(\bm{x}) \psi^{\dagger}(\bm{y}) V(\bm{x} - \bm{y}) \psi(\bm{x})\psi(\bm{y})\]
 Similarly, we can derive the equation
 \[i\frac{\partial \Psi(\bm{x}_1,\bm{x}_2,t)}{\partial t} = \left( -\frac{\nabla^2_1}{2m}  -\frac{\nabla^2_2}{2m} +  V(\bm{x}_1-\bm{x}_2)\right)\Psi(\bm{x}_1,\bm{x}_2,t)\]
 \\
@@ -535,7 +535,7 @@ So we can derive the commutation relation
 \[[a(\bm{p}),a^{\dagger}(\bm{q})] = \delta(\bm{p}-\bm{q}) \quad [a(\bm{p}),a(\bm{q})] = [a^{\dagger}(\bm{p}),a^{\dagger}(\bm{q})] = 0\]
 We can rewrite the Hamiltonian in the momentum space. The
 free part of the Hamiltonian is
-\[H_0 = \int d\bm{x} \psi^{\dagger} \frac{-\nabla^2}{2m} \psi == \int d\bm{p} \frac{p^2}{2m} a^{\dagger}(\bm{p})a(\bm{p})\]
+\[H_0 = \int d\bm{x} \psi^{\dagger} \frac{-\nabla^2}{2m} \psi = \int d\bm{p} \frac{p^2}{2m} a^{\dagger}(\bm{p})a(\bm{p})\]
 The free Hamltonian simply countes the number of particles in a given momentum state and assigns the energy $\frac{p^2}{2m}$ accordingly. \\
 The interaction Hamltonian is
 \begin{eqnarray}
