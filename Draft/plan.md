@@ -1,5 +1,8 @@
 - [ ] QED
-- [ ] Introduction to gauge field theory 
+- [ ] Introduction to gauge field theory [24, 69, 70, 71, 72, 73, 74, 75, 76, 77, 84, 87, 88, 89 (29, 82, 83, 90)]
+- [ ] WEAK GRAVITATIONAL FIELDS
+- [ ] MASS AND ANGULAR MOMENTUM OF A GRAVITATING SYSTEM
+- [ ] CONSERVATION LAWS FOR 4-MOMENTUM AND ANGULAR MOMENTUM
 - [ ] Thermodynamics, hydrodynamics, electrodynamics, geometric optics, and kinetic theory in GR
 - [ ] Adiabatic Invariance in CM
 - [ ] WKB Method

@@ -141,8 +141,8 @@ We define the anticommutation relation of operators as $\{A,B\} \equiv AB + BA$.
 \[\{\phi_a(\bm{x},t),\phi_b(\bm{y},t)\} = 0 \quad \{\pi^a(\bm{x},t),\pi^b(\bm{y},t)\} = 0 \quad \{\phi_a(\bm{x},t),\pi^b(\bm{y},t)\} = i \delta_a^b \delta(\bm{x}-\bm{y}) \]
 If the operator $A$ composes of the terms like $\pi^a \mathcal{E}_a^{\phantom{a}b} \phi_b$, we can show that the value of $[\phi_a,A]$ and $[\pi^a,A]$ is the same as those in the theory quantized with commutation relation. It is easy to verify that the operator $P^i$ and $M_S^{\mu \nu}$ has the required form. The form of $H$ is determined by the specific theory. As we can see later, the Hamiltonian of Dirac field  has the required form. When it is quantized with anticommutation relation, the commutation relation between field operator and momentum, angular momentum discussed in previous section will be hold automatically. 
 
-\chapter{Spin 0 Fields}
-\section{Klein-Gordon fields}
+\chapter{Spin 0 Field}
+\section{Klein-Gordon field}
 \subsubsection{Lagrangian}
 \[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi \partial_{\mu} \phi -\frac{1}{2}m^2 \phi^2 + \Omega_0\]
 \subsubsection{Field equation}
@@ -285,8 +285,8 @@ The proof can be found in chapter 9.2 of \emph{An introduction to quantum field 
 We define the generating functional as
 \[Z[J] \equiv \int \mathcal{D} \phi \mathrm{exp} \left[ i\int d^4x \mathcal{L} + J(x)\phi(x) \right]\]
 We can prove that
-\[\langle \Omega | T \phi_H(x_1) \cdots \phi_H(x_n) | \Omega \rangle = \frac{1}{Z_0} \left. \left( -i\frac{\delta}{\delta J(x_1)} \right)\cdots \left( -i\frac{\delta}{\delta J(x_n)} \right) Z[J]\right|_{J=0}\]
-Here, $Z_0 \equiv Z[J=0]$.
+\[\langle \Omega | T \phi_H(x_1) \cdots \phi_H(x_n) | \Omega \rangle = \frac{1}{Z[0]} \left. \left( -i\frac{\delta}{\delta J(x_1)} \right)\cdots \left( -i\frac{\delta}{\delta J(x_n)} \right) Z[J]\right|_{J=0}\]
+Here, $Z[0] \equiv Z[J=0]$.
 
 \subsection{Free field theory}
 \noindent
@@ -297,9 +297,9 @@ Define
 Recall that $(\partial^2-m^2)D_F(x-y) = i\delta(x-y)$, we can derive that
 \[\int d^4x [\mathcal{L}_0+J\phi] = \int d^4x [\frac{1}{2}\phi' (\partial^2 -m^2+i\epsilon)\phi'] - \int d^4x d^4y \frac{1}{2} J(x)[-iD_F(x-y)]J(y)\]
 After integration, we can know that
-\[Z[J] = Z_0 \mathrm{exp} [-\frac{1}{2} \int d^4x d^4y J(x)D_F(x-y)J(y)]\]
+\[Z[J] = Z[0] \mathrm{exp} [-\frac{1}{2} \int d^4x d^4y J(x)D_F(x-y)J(y)]\]
 So,
-\[\langle 0 | T \phi_H(x_1) \phi_H(x_2) | 0 \rangle =  \frac{1}{Z_0}- \frac{\delta}{\delta J(x_1)} \frac{\delta}{\delta J(x_2)} \mathrm{exp} \left. \left[-\frac{1}{2} \int d^4x d^4y J(x)D_F(x-y)J(y)\right] \right |_{J=0} = D_F(x_1-x_2)\]
+\[\langle 0 | T \phi_H(x_1) \phi_H(x_2) | 0 \rangle =  \frac{1}{Z[0]}- \frac{\delta}{\delta J(x_1)} \frac{\delta}{\delta J(x_2)} \mathrm{exp} \left. \left[-\frac{1}{2} \int d^4x d^4y J(x)D_F(x-y)J(y)\right] \right |_{J=0} = D_F(x_1-x_2)\]
 
 \section{Perturbation theory for path integral quantization}
 \begin{eqnarray}
@@ -307,17 +307,17 @@ So,
 \mathcal{L} &=& \mathcal{L}_0 + \mathcal{L}_1 \quad \mathcal{L}_1 =- \frac{\lambda_0}{4!} \phi^4 (\bm{x}) \nonumber \\
 Z[J] &=& \int \mathcal{D}\phi e^{i\int d^4x [\mathcal{L}_0 + \mathcal{L}_1 + J\phi]} \nonumber \\
 &=& e^{i\int d^4y \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(y)})} \int \mathcal{D}\phi e^{i\int d^4x [\mathcal{L}_0 + J\phi]} \nonumber \\
-&\propto & e^{i\int d^4x \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(x)})} \mathrm{exp} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)] \nonumber \\
-& =& \sum_{V=0}^{\infty} \frac{1}{V!} [ \frac{-i\lambda_0}{4!} \int d^4x (\frac{1}{i} \frac{\delta}{\delta J(x)})^4]^V \times \sum_{P=0}^{\infty} \frac{1}{P!} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)]^P \nonumber
+& = & Z_0[0]e^{i\int d^4x \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(x)})} \mathrm{exp} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)] \nonumber \\
+& =& Z_0[0]\sum_{V=0}^{\infty} \frac{1}{V!} [ \frac{-i\lambda_0}{4!} \int d^4x (\frac{1}{i} \frac{\delta}{\delta J(x)})^4]^V \times \sum_{P=0}^{\infty} \frac{1}{P!} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)]^P \nonumber
 \end{eqnarray}
 If we focus on a term with particular values of V and P, then
 the number of surviving sources (after we take all the functional derivatives) is $E = 2P-4V$. The $4V$ functional derivatives can act on the 2P sources in $\frac{(2P)!}{(2P-4V)!}$ different combinations. However, many of the resulting expressions are algebraically identical.\\ \\
 To organize them, we introduce Feynman diagrams similar to that in perturbation theory of canonical quantization. In these diagrams, a line segment stands for a propagator $D_F(x-y)$, a filled circle at one end of a line segment for a source $i\int d^4x J(x)$, and a vertex joining four line segments for $-i\lambda_0 \int d^4 z$.\\ \\
 For each diagram, we can assign a symmetry factor $S_P$ similar to that in perturbation theory for canonical quantization. Due to the fact that some external sources are identical here, usually $S_P \neq S_C$. But when calculating the correlation function, the exchange of the order of functional derivatives to identical sources can eliminate the difference.\\ \\
 We can demonstrate that
-\[Z[J] \propto \mathrm{exp}(\sum_I C_I)\]
-Here, $C_I$ stands for a particular connected diagram, including its symmetry factor. We define $W[J]$ as
-\[Z[J] \equiv Z_0 \mathrm{exp}(-iW[J])\]
+\[Z[J] = Z_0[0] \mathrm{exp}(\sum_I C_I)\]
+Here, $C_I$ stands for a particular connected diagram, including its symmetry factor. We can define $W[J]$ as
+\[Z[J] \equiv Z[0] \mathrm{exp}(-iW[J])\]
 As, $W[0]=0$, we know
 \[-iW[J] = \sum_{I \neq \{0\}} C_I\]
 The notation $I\neq \{0\}$ means that the vacuum diagrams are omitted from the sum.\\
@@ -327,7 +327,7 @@ The detailed discussion can be found in chapter 9 of \emph{Quantum field theory 
 \subsubsection{Equations of motion}
 \noindent
 The correlation function of the field theory is given by
-\[\langle \Omega | T \phi_H(x_1) \cdots \phi_H(x_n) | \Omega \rangle = Z_0^{-1} \int \mathcal{D}\phi e^{iS} \phi(x_1)\cdots\phi(x_n)\]
+\[\langle \Omega | T \phi_H(x_1) \cdots \phi_H(x_n) | \Omega \rangle = Z[0]^{-1} \int \mathcal{D}\phi e^{iS} \phi(x_1)\cdots\phi(x_n)\]
 The equation of motion of classical field theory will be give by
 \[\frac{\delta S}{\delta \phi(x)} = 0\]
 In quantum field theory, we derive the equation of motion by claim that the path integral will be invariant under the infinitesimal change of field, i.e. $\phi(x) \to \phi(x) + \epsilon(x)$.
@@ -938,27 +938,25 @@ Replace $\phi$ by $\phi_{\mathrm{cl}}+\eta$,
 &+& \frac{1}{2} \int d^4x \, d^4y \, \eta(x) \eta(y) \frac{\delta^2 \mathcal{L}_1}{\delta \phi(x) \delta \phi(y)} \nonumber \\
 &+& \frac{1}{3!} \int d^4x \, d^4y \, d^4z \, \eta(x) \eta(y) \eta(z) \frac{\delta^3 \mathcal{L}_1}{\delta \phi(x) \delta \phi(y) \delta \phi(z)} + \cdots \nonumber
 \end{eqnarray}
-The term linear in $\eta$ vanishes by definition of $J_1$.  Keeping only the term up to quadratic order in $\eta$ and still neglecting the counter-terms, we have a pure Gaussian integral, which can be evaluated in terms of a functional determinant:
-\begin{eqnarray}
-&&\int \mathcal{D}\eta \exp \left[ i \left( \int ( \mathcal{L}_1 [\phi_{\mathrm{cl}}] + J_1\phi_{\mathrm{cl}} ) +  \frac{1}{2} \int \eta \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \eta \right) \right] \nonumber \\
-&=& \exp \left[ i \int ( \mathcal{L}_1 [\phi_{\mathrm{cl}}] + J_1\phi_{\mathrm{cl}} )\right] \left( \det \left[ - \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] \right) ^{-\frac{1}{2}} \nonumber
-\end{eqnarray}
-Finally, put back the effects of the counter-term Lagrangian,writing it as
+The term linear in $\eta$ vanishes by definition of $J_1$. 
+Then, put back the effects of the counter-term Lagrangian,writing it as
 \[(\delta \mathcal{L}[\phi_{\mathrm{cl}}] + \delta J \phi_{\mathrm{cl}} ) + ( \delta \mathcal{L}[\phi_{\mathrm{cl}} + \eta] - \delta\mathcal{L} [\phi_{\mathrm{cl}}] + \delta J \eta)\]
 Define
 \[\mathcal{L}_2 = \left(\frac{1}{3!} \int d^4x \, d^4y \, d^4z \, \eta(x) \eta(y) \eta(z) \frac{\delta^3 \mathcal{L}_1}{\delta \phi(x) \delta \phi(y) \delta \phi(z)} + \cdots \right) + ( \delta \mathcal{L}[\phi_{\mathrm{cl}} + \eta] - \delta\mathcal{L} [\phi_{\mathrm{cl}}] + \delta J \eta)\]
 So
 \[e^{-iE[J]} = C_1 e^{i\int \mathcal{L}_2(\frac{1}{i} \frac{\delta}{\delta I})} \left. \int \mathcal{D}\eta e^{i\int \left(\frac{1}{2} \eta \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \eta + I\eta \right)} \right|_{I=0}\]
 where
-\[C_1 = \exp \left[ i \int ( \mathcal{L}_1 [\phi_{\mathrm{cl}}] + J_1\phi_{\mathrm{cl}} + \delta \mathcal{L}[\phi_{\mathrm{cl}}] + \delta J \phi_{\mathrm{cl}} )\right]\]
+\[C_1 \equiv \exp \left[ i \int ( \mathcal{L}_1 [\phi_{\mathrm{cl}}] + J_1\phi_{\mathrm{cl}} + \delta \mathcal{L}[\phi_{\mathrm{cl}}] + \delta J \phi_{\mathrm{cl}} )\right]\]
 If we define propagator $D_F$ as
 \[D_F \equiv i \left( \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi}\right)^{-1}\]
 We have
-\[e^{-iE[J]} =C_1 \left( \det \left[  -\frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] \right) ^{-\frac{1}{2}} e^{i\int \mathcal{L}_2(\frac{1}{i} \frac{\delta}{\delta I})} \left. \int \mathcal{D}\eta e^{i\int \left(-\frac{1}{2} I D_F I \right)} \right|_{I=0}\]
+\[Z[J] = e^{-iE[J]} =C_1 Z_0[0] e^{i\int \mathcal{L}_2(\frac{1}{i} \frac{\delta}{\delta I})} \left. \int \mathcal{D}\eta e^{i\int \left(-\frac{1}{2} I D_F I \right)} \right|_{I=0}\]
+where
+\[Z_0[0] \equiv \int \mathcal{D}\eta e^{ \frac{i}{2}\int \eta \left( \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi}\right) \eta }\]
 Similar to the procedure in the perturbation theory for path integral quantization, we can get a perturbation expansion for $iE[J]$ using connected Feynman diagram,
-\[-iE[J] = i \int ( \mathcal{L}_1 [\phi_{\mathrm{cl}}] + J_1\phi_{\mathrm{cl}} + \delta \mathcal{L}[\phi_{\mathrm{cl}}] + \delta J \phi_{\mathrm{cl}} ) - \frac{1}{2} \log \det \left[ - \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] + \mbox{ connected diagrams }\]
+\[-iE[J] = i \int ( \mathcal{L}_1 [\phi_{\mathrm{cl}}] + J_1\phi_{\mathrm{cl}} + \delta \mathcal{L}[\phi_{\mathrm{cl}}] + \delta J \phi_{\mathrm{cl}} ) + \log(Z_0[0]) + \mbox{ connected diagrams }\]
 From this equation, $\Gamma$ follows directly:
-\[\Gamma[\phi_{\mathrm{cl}}] = \int d^4x \mathcal{L}_1[\phi_{\mathrm{cl}}] + \frac{i}{2} \log \det \left[ - \frac{\delta^2 \mathcal{L}_1}{\delta \phi \delta \phi} \right] -i \mbox{ connected diagrams} + \int d^4x \delta\mathcal{L}[\phi_{\mathrm{cl}}]\]
+\[\Gamma[\phi_{\mathrm{cl}}] = \int d^4x \mathcal{L}_1[\phi_{\mathrm{cl}}] -i\log(Z_0[0]) -i \mbox{ connected diagrams} + \int d^4x \delta\mathcal{L}[\phi_{\mathrm{cl}}]\]
 \\
 Notice that there are no terms remaining that depend explicitly on $J$; thus, $\Gamma$ is expressed as a function of $\phi_{\mathrm{cl}}$ , as it should be. The Feynman diagrams contributing to $\Gamma[\phi_{\mathrm{cl}}]$ have no external lines, and the simplest ones turn out to have two loops. The lowest-order quantum correction to $\Gamma$ is given by the
 functional determinant.
@@ -1096,12 +1094,84 @@ We choose the vacuum state by demanding $\phi_{\mathrm{cl}}^i$ points in the $N$
 \[\phi_{\mathrm{cl}}^i = (0,\cdots,\phi_{\mathrm{cl}})\]
 Then the operator is just equal to the Klein-Gordon operator $(\partial^2-m_i^2)$, where
 \[m_i^2 = \begin{cases} \lambda\phi_{\mathrm{cl}}^2-\mu^2 \quad i=1,\cdots,N-1 \\ 3\lambda\phi_{\mathrm{cl}}^2-\mu^2 \quad i=N \end{cases}\]
-The calculation of functional determinant will be covered in the next chapter, and you can check the section 11.4 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)} for the details. Here, we list the final result
-\[\log\det [-\partial^2 + m^2] = -i\frac{\Gamma(-\frac{d}{2})}{(4\pi)^{d/2}}(m^2)^{\frac{d}{2}}VT\]
-So, up to one loop corrections.
+We would perform the calculation of $\log Z_0[0]$ in the next subsection. Here, we just list the result:
+\[\log Z_0[0] = \frac{i}{2}\frac{\Gamma(-\frac{d}{2})}{(4\pi)^{d/2}}(m^2)^{\frac{d}{2}}VT\]
+So, up to one loop corrections, we can get
 \[V_{\mathrm{eff}} = -\frac{1}{2} \mu^2 \phi_{\mathrm{cl}}^2 + \frac{\lambda}{4} \phi_{\mathrm{cl}}^4 - \frac{1}{2}\frac{\Gamma(-\frac{d}{2})}{(4\pi)^{d/2}}[(N-1)(\lambda\phi_{\mathrm{cl}}^2-\mu^2)^{\frac{d}{2}} + (3\lambda\phi_{\mathrm{cl}}^2-\mu^2)^{\frac{d}{2}}] + \frac{1}{2}\delta_{\mu}\phi_{\mathrm{cl}}^2 + \frac{1}{4}\delta_{\lambda}\phi_{\mathrm{cl}}^4\]
 And if we want $V_{\mathrm{eff}}$ is finite for terms involving $\phi_{\mathrm{cl}}$, we can get
 \[\delta_{\lambda} = \frac{2\lambda^2(N+8)}{(4\pi)^2} \times \frac{1}{4-d} + \mbox{ finite terms }\]
 \[\delta_{\mu} = -\frac{2\lambda\mu^2(N+2)}{(4\pi)^2} \times \frac{1}{4-d} + \mbox{ finite terms }\]
 It is the same result as that in previous section.
+
+\subsection{Functional determinants}
+\[Z_0[0] \equiv \prod_{i=1}^{N} Z_i  = \prod_{i=1}^{N} \int \mathcal{D}\eta e^{ \frac{i}{2}\int \eta \left( \partial^2-m_i^2\right) \eta }\]
+Here, $m_i$ is a function of $\phi_{cl}$. We want to get $\log Z_0[0]$ as a function of $\phi_{cl}$ and the constant infinite shift of $\log Z_0[0]$ will be dropped in our calculation. We treat $-\frac{1}{2}m_i^2\eta^2$ as a perturbation, so we have
+\[Z_i \propto e^{-\frac{im_i^2}{2}(\frac{1}{i} \frac{\delta}{\delta I})^2} \left. \int \mathcal{D}\eta e^{i\int \left(-\frac{1}{2} I D_F I \right)} \right|_{I=0}\] 
+where
+\[D_F(x-y) = \int \frac{d^4p}{(2\pi)^4} \frac{-i}{p^2}e^{ip(x-y)}\]
+Now we can have the following Feynamn rules.
+\begin{itemize}
+\item A line from $x$ to $y$ is associated with $D_F(x-y)$
+\item A vertex joining two lines at $x$ is associated with $-im_i^2\int d^4x$
+\end{itemize}
+So we have
+\[\log Z_i = \sum_{I}C_I\]
+where $C_I$ represents connected diagram without external source.
+A connected diagram without external source must have the following form
+
+\begin{figure}[!h]
+\centering
+\includegraphics[height=5cm ,width=5.26cm]{QFT1/effective.png}
+\caption{Connected Feymann diagram without external source}
+\end{figure}
+
+\noindent
+So, we have
+\[C_n = \frac{1}{2n}\int \prod_{k=1}^{n} \frac{d^4p_k d^4x_k}{(2\pi)^4} \frac{-m_i^2}{p_k^2} \exp(ip_k(x_k-x_{k+1})) = \int d^4p \delta(0) \left(-\frac{m_i^2}{p^2} \right)^n\]
+\[\log Z_i = -\frac{1}{2}VT \int \frac{d^4p}{(2\pi)^4} \sum -\frac{1}{n} \left(-\frac{m_i^2}{p^2} \right)^n = -\frac{1}{2}VT\int  \frac{d^4p}{(2\pi)^4} \log(1+\frac{m_i^2}{p^2})\]
+The following calculation needs tricks of wick rotation and dimension regularization and you can refer to the equation 11.72 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}.\\ \\
+However, recall the Gaussian integral
+\[\int _{-\infty }^{\infty }e^{\left(-{\frac {i}{2}}\sum \limits _{i,j=1}^{n}A_{ij}x_{i}x_{j}\right)}\,d^{n}x
+= {\sqrt {\frac {(-2\pi i)^{n}}{\det A}}} \]
+So formally, we have
+\[\log Z_i = -\frac{1}{2}\log \det (-\partial_x^2 + m_i^2)\delta(x-y)\]
+Define
+\[M(x-y) \equiv (-\partial_x^2 + m_i^2)\delta(x-y) \quad M_0(x,y) \equiv -\partial_x^2\delta(x-y) \quad M_1(y,z) \equiv \delta(y-z) + im_i^2D_F(y-z)\]
+We can verify that
+\[M(x,z) = \int d^4y M_0(x-y)M_1(y-z)\]
+So, 
+\[\log \det M = \log \det M_0 + \log \det M_1 \approx \log \det M_1\]
+We drop out $\log \det M_0$ because it do not contain $m(\phi_{\mathrm{cl}})$. Furthermore, we have $M_1 = I - G$, where $I = \delta(x-y)$ is the identity matrix and $G = -im_i^2D_F$. So
+\[\log \det M_1 =  \mathrm{Tr} \log M_1 = \mathrm{Tr} \log(I-G) = -\frac{1}{n}\sum_{n=1}^{\infty} \mathrm{Tr} G_n\]
+We can verify that
+\[C_n = \frac{1}{2n} \mathrm{Tr} G_n\]
+So, the function determinant method is valid.
+
+\section{Non-relativistic limit}
+\subsection{Complex Klein-Gordon field}
+The Lagrangian of complex Klein-Gordon field is
+\[\mathcal{L} = - \partial^{\mu}\Phi^{\dagger}\partial_{\mu}\Phi - m^2\Phi^{\dagger}\Phi\]
+The canonical momentum is
+\[\pi = \dot{\Phi}^{\dagger} \quad \pi^{\dagger} = \dot{\Phi}\]
+The commutation relations are
+\[[\phi(\bm{x},t),\pi(\bm{y},t)] = i\delta(\bm{x}-\bm{y})\]
+Since the equation of motion is
+\[(\partial^2-m^2)\Phi = 0\]
+we have the Fourier expansion
+\[\Phi = \int \widetilde{dp} [b(\bm{p})e^{ipx} + c^{\dagger}(\bm{p})e^{-ipx}] \quad \Phi^{\dagger} = \int \widetilde{dp} [b^{\dagger}(\bm{p})e^{-ipx} + c(\bm{p})e^{ipx}]\]
+We can get the commutation relations for creation and annihilation operators
+\[[b(\bm{p}), b^{\dagger}(\bm{q})] = (2\pi)^3 2\omega \delta(\bm{p}-\bm{q}) \quad [c(\bm{p}), c^{\dagger}(\bm{q})] = (2\pi)^3 2\omega \delta(\bm{p}-\bm{q})\]
+After work out the commutation relations between $H,P$ and $b,b^{\dagger},c,c^{\dagger}$, we can conclude that $b^{\dagger}(\bm{p})(c^{\dagger}(\bm{p}))$ creates a b(c) particle with momentum $\bm{p}$, and $b(\bm{p})(c(\bm{p}))$ annihilates a b(c) particle with momentum $\bm{p}$. They share the same mass $m$.\\
+We notice that $\mathcal{L}$ is invariant under change $\Phi \to \Phi e^{i\alpha}$. Noether theorem implies that complex Klein-Gordon field has a conserve charge
+\[Q = i\int d^3x (\dot{\Phi}^{\dagger}\Phi - \Phi^{\dagger}\dot{\Phi}) = \int \widetilde{dp} (c^{\dagger}(\bm{p})c(\bm{p}) - b^{\dagger}(\bm{p})b(\bm{p})) = N_c - N_b\]
+Now we can interpret c-particle as the antiparticle of b-particle. And The number of anti-particles minus the number of particles is a conserved quantity, i.e. particles and anti-particles must be created in pair.
+
+\subsection{Non-relativistic limit}
+We decompose the complex Klein-Gordon equation as
+\[\Phi(x) = \frac{1}{\sqrt{2m}} e^{-imt}\psi(x)\]
+The The non-relativistic limit of a particle is $|\bm{p}| \ll m$. After a Fourier transform, this is equivalent to saying that $\dot{\psi} \ll m\psi $. In this limit, we have
+\[\frac{\partial \phi^{\dagger}}{\partial t} \frac{\partial \phi}{\partial t} - m^2 \phi^{\dagger}\phi \approx \frac{i}{2} \left( \phi^{\dagger}\frac{\partial \phi}{\partial t} - \frac{\partial \phi^{\dagger}}{\partial t} \phi\right)\]
+After integration by parts, the Lagrangian of the complex Klein-Gordon can be written as
+\[\mathcal{L} = i\phi^{\dagger}\left(\partial_t + \frac{\nabla^2}{2m} \right)\phi\]
+It is exactly the Schr\"{o}dinger field in non-relativistic quantum field theory.
 \end{document}
