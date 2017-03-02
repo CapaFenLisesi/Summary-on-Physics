@@ -504,8 +504,8 @@ In a general integral
 \[(\prod_i \int d\theta^*_i d\theta_i) f(\theta)\]
 the only term of $f(\theta)$ that survives has exactly one factor of each $\theta_i$ and $\theta^*_i$; it is proportional to $(\prod_i \theta_i)(\prod_i \theta^*_i)$. If we replace $\theta$ by $U\theta$, this term acquires a factor of $\det U \det U^* = 1$, so the integral is unchanged under the unitary transformation.\\ \\
 Gaussian integral over multiple complex Grassmann numbers:
-\[(\prod_i \int d\theta^*_i d\theta_i) e^{-\theta^* B_{ij}\theta_j} = \det B\]
-\[(\prod_i \int d\theta^*_i d\theta_i) \theta_k \theta^*_l e^{-\theta^* B_{ij}\theta_j} =B^{-1}_{kl} \det B\]
+\[(\prod_i \int d\theta^*_i d\theta_i) e^{-\theta^*_i B_{ij}\theta_j} = \det B\]
+\[(\prod_i \int d\theta^*_i d\theta_i) \theta_k \theta^*_l e^{-\theta^*_i B_{ij}\theta_j} =B^{-1}_{kl} \det B\]
 
 \subsection{Path integral formulation for free Dirac field}
 A Grassmann field is a function of space-time whose values are Grassmann numbers. The classical Dirac field being used to evaluate path integral is a Grassmann field. The correlation function is given by
@@ -613,3 +613,35 @@ Finally, we list the Feymann rules of Yukawa theory in momentum space as follows
 \item Value of $i\mathcal{M}$ is given by a sum over the values of the contributing diagrams.
 \item $\langle f | S | i \rangle = (Z_1)^{\frac{n_s}{2}} (Z_2)^{\frac{n_f}{2}}i\mathcal{M}\delta(\sum p_f -\sum p_i)$
 \end{enumerate}
+
+\section{Functional determinant}
+We consider a theory of a Dirac fermion $\Psi$ with
+\[\mathcal{L} = i\overline{\Psi} \gamma^{\mu} \partial_{\mu} \Psi - m\overline{\Psi}\Psi -g \overline{\Psi}\Psi\phi\]
+where $\phi$ is again a real scalar background field. We define the path integral
+\[Z(\phi) = \int \mathcal{D}\overline{\Psi}\mathcal{D}\Psi e^{i\int d^4x \mathcal{L}} \]
+Recall that if we have $N$ complex Grassmann variables $\theta_i$, then we can evaluate gaussian integrals by the general formula
+\[\int d^n\theta^* d\theta \exp[-i\theta^{*}_i M_{ij}\theta_j] \propto \det M\]
+In the case of the functional integral,the matrix $M$ becomes
+\[M_{\alpha\beta}(x,y) = (-i\slashed{\partial}_x + m + g\phi(x))_{\alpha\beta}\delta(x-y)\]
+We define
+\[M_{0\alpha\beta}(x,y) \equiv (-i\slashed{\partial}_x + m )_{\alpha\beta}\delta(x-y)\]
+\[M_{1\beta\gamma}(y,z) \equiv \delta_{\beta\gamma}\delta(y-z) + igS_{F}(y-z)_{\beta\gamma}\phi(z)\]
+We can verify that
+\[M_{\alpha\gamma}(x,z) = \int d^4y M_{0\alpha\beta}(x,y)M_{1\beta\gamma}(y,z) \]
+Furthermore, we have $M_1 = I - G$, where $I$ is the identity matrix and
+\[G_{\alpha\beta}(x-y) = -igS_{F}(x-y)_{\alpha\beta}\phi(x)\]
+So, 
+\[\log Z[\phi] = \log \det M_1 = -\sum_{n=1}^{\infty} \frac{1}{n} \mathrm{Tr}G^n\]
+where now
+\[\mathrm{Tr}G^n = (-ig)^n \int d^4x_1 \cdots d^4x_n \mathrm{tr} S_F(x_1-x_2)\phi(x_2) \cdots S_F(x_n-x_1)\phi(x_1)\]
+and "tr" denotes a trace over spinor indices.
+\\ \\
+To better understand what it means, we will rederive it in a different way. 
+Consider treating the $-g\phi\overline{\Psi}\Psi$ term in $\mathcal{L}$ as an interaction. This leads to a vertex that connects two $\Psi$ propagators; the associated vertex factor
+is $-ig\phi(x)$. 
+So, we have
+\[\log Z[\phi] = \sum_{I}C_I\]
+where $C_I$ represents connected diagram without external source. The only connected diagrams we can draw with these Feynman rules are fermion circles with $n$ vertices. 
+The has an $n$-fold cyclic symmetry, leading to a symmetry factor of $S= n$. The closed fermion loop implies a trace over the spinor indices. Thus the value of the $n$-vertex diagram is
+\[\frac{1}{n}(-ig)^n \int d^4x_1 \cdots d^4x_n \mathrm{tr} S_F(x_1-x_2)\phi(x_2) \cdots S_F(x_n-x_1)\phi(x_1)\]
+Summing up these diagrams, we find that we are missing the overall minus sign. The appropriate conclusion is that we must associate an extra minus sign with each closed fermion loop.

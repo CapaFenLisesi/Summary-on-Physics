@@ -1106,3 +1106,31 @@ We drop out $\log \det M_0$ because it do not contain $m(\phi_{\mathrm{cl}})$. F
 We can verify that
 \[C_n = \frac{1}{2n} \mathrm{Tr} G_n\]
 So, the function determinant method is valid.
+
+\section{Non-relativistic limit}
+\subsection{Complex Klein-Gordon field}
+The Lagrangian of complex Klein-Gordon field is
+\[\mathcal{L} = - \partial^{\mu}\Phi^{\dagger}\partial_{\mu}\Phi - m^2\Phi^{\dagger}\Phi\]
+The canonical momentum is
+\[\pi = \dot{\Phi}^{\dagger} \quad \pi^{\dagger} = \dot{\Phi}\]
+The commutation relations are
+\[[\phi(\bm{x},t),\pi(\bm{y},t)] = i\delta(\bm{x}-\bm{y})\]
+Since the equation of motion is
+\[(\partial^2-m^2)\Phi = 0\]
+we have the Fourier expansion
+\[\Phi = \int \widetilde{dp} [b(\bm{p})e^{ipx} + c^{\dagger}(\bm{p})e^{-ipx}] \quad \Phi^{\dagger} = \int \widetilde{dp} [b^{\dagger}(\bm{p})e^{-ipx} + c(\bm{p})e^{ipx}]\]
+We can get the commutation relations for creation and annihilation operators
+\[[b(\bm{p}), b^{\dagger}(\bm{q})] = (2\pi)^3 2\omega \delta(\bm{p}-\bm{q}) \quad [c(\bm{p}), c^{\dagger}(\bm{q})] = (2\pi)^3 2\omega \delta(\bm{p}-\bm{q})\]
+After work out the commutation relations between $H,P$ and $b,b^{\dagger},c,c^{\dagger}$, we can conclude that $b^{\dagger}(\bm{p})(c^{\dagger}(\bm{p}))$ creates a b(c) particle with momentum $\bm{p}$, and $b(\bm{p})(c(\bm{p}))$ annihilates a b(c) particle with momentum $\bm{p}$. They share the same mass $m$.\\
+We notice that $\mathcal{L}$ is invariant under change $\Phi \to \Phi e^{i\alpha}$. Noether theorem implies that complex Klein-Gordon field has a conserve charge
+\[Q = i\int d^3x (\dot{\Phi}^{\dagger}\Phi - \Phi^{\dagger}\dot{\Phi}) = \int \widetilde{dp} (c^{\dagger}(\bm{p})c(\bm{p}) - b^{\dagger}(\bm{p})b(\bm{p})) = N_c - N_b\]
+Now we can interpret c-particle as the antiparticle of b-particle. And The number of anti-particles minus the number of particles is a conserved quantity, i.e. particles and anti-particles must be created in pair.
+
+\subsection{Non-relativistic limit}
+We decompose the complex Klein-Gordon equation as
+\[\Phi(x) = \frac{1}{\sqrt{2m}} e^{-imt}\psi(x)\]
+The The non-relativistic limit of a particle is $|\bm{p}| \ll m$. After a Fourier transform, this is equivalent to saying that $\dot{\psi} \ll m\psi $. In this limit, we have
+\[\frac{\partial \phi^{\dagger}}{\partial t} \frac{\partial \phi}{\partial t} - m^2 \phi^{\dagger}\phi \approx \frac{i}{2} \left( \phi^{\dagger}\frac{\partial \phi}{\partial t} - \frac{\partial \phi^{\dagger}}{\partial t} \phi\right)\]
+After integration by parts, the Lagrangian of the complex Klein-Gordon can be written as
+\[\mathcal{L} = i\phi^{\dagger}\left(\partial_t + \frac{\nabla^2}{2m} \right)\phi\]
+It is exactly the Schr\"{o}dinger field in non-relativistic quantum field theory.
