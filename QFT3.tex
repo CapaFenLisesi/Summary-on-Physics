@@ -57,7 +57,7 @@ It can be rewritten in terms of $\bm{E}$ and $\bm{B}$, i.e. Maxwell equations:
 &\phantom{=}&\bm{\nabla} \cdot \bm{E} = 0 \quad \frac{\partial \bm{E}}{\partial t} = \bm{\nabla} \times \bm{B} \nonumber \\
 &\phantom{=}& \bm{\nabla} \cdot \bm{B} = 0  \quad \frac{\partial \bm{B}}{\partial t} = - \bm{\nabla} \times \bm{E}\nonumber
 \end{eqnarray}
-
+\\
 The massless vector field $A_{\mu}$ has 4 components, which would naively seem to tell us that the gauge field has 4 degrees of freedom.But there are two related comments which will ensure that quantizing the gauge field $A_{\mu}$ gives rise to 2 degrees of freedom, rather than 4.
 \begin{itemize}
 \item The field $A_0$ has no kinetic term $\dot{A_0}$ in the Lagrangian: it is not dynamical. This means that if we are given some initial data $A_i$ and $\dot{A_i}$ at a time $t_0$, then the field $A_0$ is fully determined by the equation of motion $\bm{\nabla} \cdot \bm{E} = 0$,which, expanding out,
@@ -68,12 +68,13 @@ So $A_0$ is not independent: we don't get to specify $A_0$ on the initial time s
 \[A_{\mu} \to A_{\mu} + \partial_{\mu}\lambda(x) \]
 we can derive that
 \[F_{\mu\nu} \to F_{\mu \nu} \quad \mathcal{L} \to \mathcal{L}\]
-The seemed infinite number of symmetries, one for each function $\lambda(x)$, is to be viewed as a redundancy in our description. That is, two states related by a gauge symmetry are to be identified: they are the same physical state. One way to see that this interpretation is necessary is to notice that Maxwell’s equations are not sufficient to specify the evolution of $A_{\mu}$.The equations read,
+The seemed infinite number of symmetries, one for each function $\lambda(x)$, is to be viewed as a redundancy in our description. That is, two states related by a gauge symmetry are to be identified: they are the same physical state. One way to see that this interpretation is necessary is to notice that Maxwell's equations are not sufficient to specify the evolution of $A_{\mu}$.The equations read,
 \[(\eta_{\mu\nu} \partial^2 - \partial_{\mu} \partial_{\nu}) A^{\nu} = 0\]
 But the operator $(\eta_{\mu\nu} \partial^2 - \partial_{\mu} \partial_{\nu})$ is not invertible: it annihilates any function of
 the form $\partial_{\mu} \lambda$. This means that given any initial data, we have no way to uniquely determine $A_{\mu}$ at a later time since we can't distinguish between $A_{\mu}$ and $A_{\mu} + \partial_{\mu} \lambda$. This would be problematic if we thought that $A_{\mu}$ is a physical object. However, if we're happy to identify $A_{\mu}$ and $A_{\mu} + \partial_{\mu} \lambda$ as corresponding to the same physical state, then our problems disappear. 
 \end{itemize}
 
+\noindent
 The picture that emerges for the theory of electromagnetism is of an enlarged phase space, foliated by gauge orbits. All states that lie along a given gauge orbit can be reached by a gauge transformation and are identified. To make progress, we pick a representative from each gauge orbit. It doesn't matter which representative we pick after all, they're all physically equivalent. But we should make sure that we pick a "good" gauge, in which we cut the orbits. Here we'll look at two different gauges:
 \begin{itemize}
 \item Coulomb Gauge: $\bm{\nabla} \cdot \bm{A} = 0$\\
@@ -145,7 +146,6 @@ From above equation, we can say that $a^{\dagger}_r(\bm{p})$ create an photon wi
 
 \subsection{Canonical quantization in Lorentz gauge}
 \subsubsection{Undefined metric formalism}
-\noindent
 Modify the Maxwell Lagrangian introducing a new term
 \[\mathcal{L} = -\frac{1}{4} F_{\mu\nu}F^{\mu\nu} - \frac{1}{2\xi} (\partial_{\mu} A^{\mu})^2\]
 The equations of motion are now
@@ -163,7 +163,7 @@ we can also derive that
 \subsubsection{Fourier expansion}
 \[A(x) = \sum_{\lambda=0}^{3} \int \widetilde{dp} [a_{\lambda}(\bm{p}) \epsilon_{\lambda}(\bm{p})e^{ipx} + a^{\dagger}_{\lambda}(\bm{p}) \epsilon^*_{\lambda}(\bm{p})e^{-ipx}]\]
 where $\epsilon_{\lambda \mu}$ are a set of four independent 4-vectors.  We will now make a choice for these 4-vectors. We choose $\epsilon_{1\mu}$ and $\epsilon_{2\mu}$ orthogonal to $k^{\mu}$ and $n^{\mu}$, such that
-\[\epsilon_{\lambda \mu} \epsilon^{*\mu}_{\lambda} = \delta_{\lambda \lambda'} \quad \lambda,\lambda' = 1,2\]
+\[\epsilon_{\lambda \mu} \epsilon^{*\mu}_{\lambda'} = \delta_{\lambda \lambda'} \quad \lambda,\lambda' = 1,2\]
 After, we choose $\epsilon_{3\mu}$ in the plane $(k^{\mu},n^{\mu})$ and perpendicular to $n^{\mu}$ such that
 \[\epsilon_{3\mu} n^{\mu} = 0 \quad \epsilon_{3\mu} \epsilon^{*\mu}_{3} = 1\]
 Finally we choose $\epsilon_{0\mu} = n_{\mu}$. The vectors $\epsilon_{1\mu}$ and $\epsilon_{2\mu}$ are called transverse polarizations, while $\epsilon_{3\mu}$ and $\epsilon_{0\mu}$ longitudinal and scalar polarizations, respectively.\\
@@ -184,15 +184,15 @@ To see the problem with the sign we construct the one-particle state with scalar
 and calculate its norm
 \[\langle 1 | 1 \rangle = -\langle 0 | 0 \rangle \int \widetilde{dp} |f(p)|^2\]
 The state $| 1 \rangle$ has a negative norm.
-
+\\
 To solve this problem we note that we are not working anymore with the classical Maxwell theory because we modified the Lagrangian. What we would like to do is to impose the condition $\partial \cdot A = 0$, but that is impossible as an equation for operators. We can, however, require that condition on a weaker form, as a condition only to be verified by the physical states.
-
+\\
 More specifically, we require that the part of $\partial \cdot A$ that contains the annihilation operator (positive frequencies) annihilates the physical states,
 \[\partial^{\mu} A^{+}_{\mu} | \psi \rangle = 0\]
 The states $| \psi \rangle$ can be written in the form
 \[| \psi \rangle = | \psi_T \rangle | \phi \rangle\]
 where $| \psi_T \rangle$  is obtained from the vacuum with creation operators with transverse polarization and $| \phi \rangle$ with scalar and longitudinal polarization.
-
+\\
 $\partial^{\mu} A^{+}_{\mu}$ contains only scalar and longitudinal polarizations
 \[\partial^{\mu} A^{+}_{\mu} = i\sum_{\lambda=0,3} \int \widetilde{dp} a_{\lambda}(\bm{p}) (p \cdot \epsilon_{\lambda}(\bm{p}) ) e^{ipx} \]
 Therefore the previous condition becomes
@@ -223,10 +223,10 @@ We have that
 We can derive
 \[ H = \int \widetilde{dp} \; \omega [N'(\bm{p}) + N_T(\bm{p})] + 2\mathcal{E}_0V\]
 \[ \vec{P} = \int \widetilde{dp} \; \vec{p} [N'(\bm{p}) + N_T(\bm{p})]\]
-
+\\
 So, the arbitrariness of $C_i(i=1,2,\cdots)$ does not affect the physical observables. Only the physical transverse polarizations
 contribute to the result. Two states that differ only in their timelike and longitudinal photon content, $|\phi_n\rangle$ with $n \geq 1$ are said to be physically equivalent. We can think of the gauge symmetry of the classical theory as descending to the Hilbert space of the quantum theory.
-
+\\
 It is important to note that although for the average values of the physical observables only the transverse polarizations contribute, the scalar and longitudinal polarizations are necessary for the consistency of the theory. In particular they show up when we consider complete sums over the intermediate states.
 
 \subsubsection{Propagator}
@@ -341,12 +341,12 @@ Let $G(A)$ be some function that we wish to set equal zero as a gauge-fixing con
 where,
 \[A_{\mu}(\alpha(x)) = A_{\mu}(x) + \frac{1}{e_0}\partial_{\mu}\alpha(x)\]
 We set the gauge fixing function as $G(A) = \partial^{\mu} A_{\mu} -\omega(x)$, so $G(A(\alpha)) = \partial^{\mu} A_{\mu} + \frac{1}{e_0}\partial^2 \alpha - \omega(x)$. It is obvious that $\det \left( \frac{\delta G}{\delta \alpha} \right)$ is equivalent to $\det(\partial^2)/e_0$, which is independent of $A$. So,
-\[Z_0[A] = \det \left( \frac{\delta G}{\delta \alpha} \right) \int \mathcal{D}\alpha \int \mathcal{D}A e^{iS[A]} \delta(G(A(\alpha)))\]
+\[Z[0] = \det \left( \frac{\delta G}{\delta \alpha} \right) \int \mathcal{D}\alpha \int \mathcal{D}A e^{iS[A]} \delta(G(A(\alpha)))\]
 Now change variables from $A$ to $A(\alpha)$. This is a simple shift, so $\mathcal{D}A = \mathcal{D}A(\alpha)$. Also, by gauge invariance, $S[A] = S[A(\alpha)]$. Since $A(\alpha)$ is now just a dummy integration variable, we can rename it bake to $A$, so
-\[Z_0[A] = \det \left( \frac{\delta G}{\delta \alpha} \right) \int \mathcal{D}\alpha \int \mathcal{D}A e^{iS[A]} \delta(\partial^{\mu}A_{\mu} - \omega(x))\]
+\[Z[0] = \det \left( \frac{\delta G}{\delta \alpha} \right) \int \mathcal{D}\alpha \int \mathcal{D}A e^{iS[A]} \delta(\partial^{\mu}A_{\mu} - \omega(x))\]
 Since the above equation is hold for any $\omega(x)$,so we have
 \begin{eqnarray}
-Z_0[A] &=& N(\xi) \int \mathcal{D}\omega \exp\left[ -i \int d^4x \frac{\omega^2}{2\xi} \right] \det(\partial^2) \int \mathcal{D}\alpha \int \mathcal{D}A e^{iS[A]} \delta(\partial^{\mu}A_{\mu} - \omega(x)) \nonumber \\
+Z[0] &=& N(\xi) \int \mathcal{D}\omega \exp\left[ -i \int d^4x \frac{\omega^2}{2\xi} \right] \det(\partial^2) \int \mathcal{D}\alpha \int \mathcal{D}A e^{iS[A]} \delta(\partial^{\mu}A_{\mu} - \omega(x)) \nonumber \\
 &=& N(\xi) \frac{\det(\partial^2)}{e_0} \int \mathcal{D}\alpha \int \mathcal{D}A e^{iS[A]} \exp\left[ -i \int d^4x \frac{1}{2\xi} (\partial^{\mu}A_{\mu})^2\right] \nonumber \\
 &=& W(\xi) \int \mathcal{D}A \exp\left[ \frac{i}{2} \int d^4x  A_{\mu} (\partial^2\eta^{\mu\nu} - \partial^{\mu}\partial^{\nu} + \frac{1}{\xi} \partial^{\mu} \partial^{\nu})A_{\nu}\right] \nonumber
 \end{eqnarray}
@@ -357,16 +357,16 @@ Define
 Recall that
 \[(\partial^2\eta^{\mu\nu} - \partial^{\mu}\partial^{\nu} + \frac{1}{\xi} \partial^{\mu} \partial^{\nu})G_F(x-y)_{\nu \rho} = i\delta^{\mu}_{\rho}\delta(x-y)\]
 We can derive that
-\[Z[J]=Z_0[A] \exp \left[ -\frac{1}{2} \int d^4x d^4y J^{\mu}(x) G_F(x-y)_{\mu\nu}J^{\nu}(y) \right]\]
+\[Z[J]=Z[0] \exp \left[ -\frac{1}{2} \int d^4x d^4y J^{\mu}(x) G_F(x-y)_{\mu\nu}J^{\nu}(y) \right]\]
 The two point correlation functions are
-\[\langle 0 | T A_H(x_1) A_H(x_2)| 0 \rangle = Z_0^{-1} \left(-i \frac{\delta}{\delta J(x_1)} \right) \left(-i \frac{\delta}{\delta J(x_2)} \right) Z[J]\bigg|_{J=0} = G_F(x_1-x_2) \]
+\[\langle 0 | T A_H(x_1) A_H(x_2)| 0 \rangle = Z[0]^{-1} \left(-i \frac{\delta}{\delta J(x_1)} \right) \left(-i \frac{\delta}{\delta J(x_2)} \right) Z[J]\bigg|_{J=0} = G_F(x_1-x_2) \]
 
 \subsection{Perturbation theory for path integral quantization}
 \noindent
 We use QED theory as an example.
 \[\mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \overline{\Psi} (i\slashed{\partial}-m_0) \Psi + e_0\overline{\Psi}\gamma^{\mu}\Psi A_{\mu}\]
 As we stated in section 4.1, the Lagrangian of QED is also invariant under a general gauge transformation. And we also notice that the measure $\mathcal{D}\Psi \mathcal{D}\overline{\Psi}$ is invariant under gauge transformation. By the similar method, we can show that
-\[Z_0 \equiv \int \mathcal{D}A \mathcal{D}\Psi \mathcal{D}\overline{\Psi}e^{iS[A,\Psi,\overline{\Psi}]} = W(\xi)\int \mathcal{D}A \mathcal{D}\Psi \mathcal{D}\overline{\Psi}e^{iS[A,\Psi,\overline{\Psi}]} \exp\left[ -i \int d^4x \frac{1}{2\xi} (\partial^{\mu}A_{\mu})^2\right] \]
+\[Z[0] \equiv \int \mathcal{D}A \mathcal{D}\Psi \mathcal{D}\overline{\Psi}e^{iS[A,\Psi,\overline{\Psi}]} = W(\xi)\int \mathcal{D}A \mathcal{D}\Psi \mathcal{D}\overline{\Psi}e^{iS[A,\Psi,\overline{\Psi}]} \exp\left[ -i \int d^4x \frac{1}{2\xi} (\partial^{\mu}A_{\mu})^2\right] \]
 So,define
 \[\mathcal{L}_0 \equiv -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} - \frac{1}{2\xi} (\partial^{\mu}A_{\mu})^2 + \overline{\Psi} (i\slashed{\partial}-m_0) \Psi \quad \mathcal{L}_1 \equiv e_0\overline{\Psi}\gamma^{\mu}\Psi A_{\mu}\]
 \begin{eqnarray}
@@ -385,7 +385,7 @@ The Noether current of the symmetry $\Psi \to e^{i\alpha}\Psi$ is $j^{\mu} = \ov
 \[\langle \partial_{\mu} j^{\mu}(x) \phi(x_1)\cdots\phi(x_n) \rangle  = \sum_{i=1}^{n} \langle \phi(x_1) \cdots (i\Delta \phi(x_i)\delta(x-x_i)) \cdots \phi(x_n) \rangle\]
 So, we can write the charge conservation law as
 \[ie_0\partial_{\mu} \langle \Omega | T j^{\mu} \Psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle = -ie_0\delta(x-x_1)\langle \Omega | T \Psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle + ie_0\delta(x-x_2)\langle \Omega | T \Psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle\]
-Notice that $i\langle \Omega | T j^{\mu} \psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle$ can be represented by
+Notice that $ie_0\langle \Omega | T j^{\mu} \psi(x_1) \overline{\Psi}(x_2)| \Omega\rangle$ can be represented by
 \begin{figure}[!h]
 \centering
 \includegraphics[height=2cm ,width=4.46cm]{QFT3/WI1.png}
@@ -394,13 +394,13 @@ Notice that $i\langle \Omega | T j^{\mu} \psi(x_1) \overline{\Psi}(x_2)| \Omega\
 From the diagram, we have
 \[\langle A_{\nu}(y) \rangle = \int d^4x G_F(x-y)_{\mu\nu} ie_0\langle j^{\mu}(x) \rangle  = \int \frac{d^4p}{(2\pi)^4} e^{-ipy} G_F(p)_{\mu\nu} \int d^4x e^{ipx} ie_0\langle j^{\mu}(x) \rangle\]
 So,
-\[\int d^4x \langle A_{\nu}(x) \rangle e^{ikx} = G_F(p)_{\mu\nu} \int d^4x e^{ikx} ie_0\langle j^{\mu}(x)\rangle\]
+\[\int d^4y \langle A_{\nu}(y) \rangle e^{iky} = G_F(k)_{\mu\nu} \int d^4x e^{ikx} ie_0\langle j^{\mu}(x)\rangle\]
 Compute the Fourier transformation of the equation of charge conservation by integrating
 \[\int d^4x e^{ikx} \int d^4x_1 e^{-iqx_1} \int d^4x_2 e^{ipx_2}\]
 We can get
 \begin{figure}[!h]
 \centering
-\includegraphics[height=1.67cm ,width=11.36cm]{QFT3/WI2.png}
+\includegraphics[height=2cm ,width=10.27cm]{QFT3/WI2.png}
 \caption{Feynman diagram representation of Ward identity}
 \end{figure}\\
 Note that in the diagram above, the external leg of photon will be cut-off, but external leg of fermion will remain.
@@ -431,11 +431,11 @@ Recall that
 \[iG_F(p)_{\mu\nu}  = \frac{\eta_{\mu\nu}}{k^2-i\epsilon} - (1-\xi)\frac{k_{\mu}k_{\nu}}{(k^2-i\epsilon)^2} = \frac{1}{k^2-i\epsilon}(P^T_{\mu\nu} + \xi P^L_{\mu\nu})\]
 Here, \[P^T_{\mu\nu} \equiv \eta_{\mu\nu} - \frac{k_{\mu}k_{\nu}}{k^2} \quad  P^L_{\mu\nu} \equiv \frac{k_{\mu}k_{\nu}}{k^2}\]
 We can derive that
-\[(iG_F)^{-1}(k)_{\mu\nu} = k^2 (P^T_{\mu\nu} + \frac{1}{\xi} P^L_{\mu\nu})\]
+\[(iG_F)^{-1}_{\mu\nu} = k^2 (P^T_{\mu\nu} + \frac{1}{\xi} P^L_{\mu\nu})\]
 We may also expand $i\Pi^{\mu\nu}$ as
 \[\Pi^{\mu\nu} = P_T^{\mu\nu}f_T(k^2) +  P_L^{\mu\nu}f_L(k^2) = \eta^{\mu\nu}f_T + \frac{k^{\mu}k^{\nu}}{k^2}(f_L-f_T)\]
 Therefore,
-\[(i\mathcal{G})^{-1}(k)_{\mu\nu} = (k^2-f_T(k^2))P^T_{\mu\nu} + (\frac{k^2}{\xi}-f_L(k^2)) P^L_{\mu\nu}\]
+\[(i\mathcal{G})^{-1}_{\mu\nu} = (k^2-f_T(k^2))P^T_{\mu\nu} + (\frac{k^2}{\xi}-f_L(k^2)) P^L_{\mu\nu}\]
 \[\mathcal{G}(k)_{\mu\nu} = \frac{-i}{k^2-f_T(k^2)}P^T_{\mu\nu} + \frac{-i}{\frac{k^2}{\xi}-f_L(k^2)} P^L_{\mu\nu}\]
 We observe that if $f_{T,L}(k^2 = 0) \neq 0$, a mass will be generated for the photon. Because $\Pi(k)$ comes from 1PI diagrams, it should not be singular at $k^2 =0 $, and so $f_L - f_T = O(k^2)$, as $k \to 0$. We will show that gauge invariance ensures that no mass is generated from the loop corrections
 
@@ -452,7 +452,7 @@ Recall that
 The change of action is
 \[\delta S = -\frac{1}{\xi} \int d^4x \partial_{\mu} A^{\mu} \partial^2 \lambda + \int d^4x J^{\mu}\partial_{\mu}\lambda + ie_0\overline{\eta}\Psi\lambda - ie_0\overline{\Psi}\eta\lambda\]
 Hence, we must have
-\[\int d^4x \lambda(x) W(\xi)\int \mathcal{D}A \mathcal{D}\overline{\Psi} \mathcal{D}\Psi e^{iS} \left[ -\frac{1}{\xi} \partial^2 \partial_{\mu} A^{\mu} - \partial_{\mu}J^{\mu}  + ie_0(\overline{\eta}\Psi - \overline{\Psi}\eta)\right] \]
+\[\int d^4x \lambda(x) W(\xi)\int \mathcal{D}A \mathcal{D}\overline{\Psi} \mathcal{D}\Psi e^{iS} \left[ -\frac{1}{\xi} \partial^2 \partial_{\mu} A^{\mu} - \partial_{\mu}J^{\mu}  + ie_0(\overline{\eta}\Psi - \overline{\Psi}\eta)\right] = 0 \]
 Since
 \[\langle A_{\mu}(x) \rangle_{J,\eta,\overline{\eta}} = - \frac{\delta E}{\delta J^{\mu}} \quad \langle \Psi(x) \rangle_{J,\eta,\overline{\eta}} = - \frac{\delta E}{\delta \overline{\eta}} \quad \langle \overline{\Psi}(x) \rangle_{J,\eta,\overline{\eta}} =  \frac{\delta E}{\delta \eta}\]
 The above equation can be written as
@@ -478,7 +478,9 @@ In Feynman gauge, because the norm of $|p,0\rangle$ is negative, the expansion o
 \[\frac{d^3q}{(2\pi)^3} \frac{1}{2E_q} \eta^{\lambda\lambda'} | p,\lambda\rangle\langle p, \lambda' |\]
 We have demonstrated that photon will remain massless when interacting with charged fermions. And recall that $\sum_{\lambda}\xi_{\lambda}(p)\xi^{*}_{\lambda}(p) = \eta_{\mu\nu}$. So, we can derive by the similar method in $\phi^4$ theory that
 \[\int d^4x \; e^{-ipx} \langle \Omega | T A_{\mu}(x) A_{\nu}(0) | \Omega \rangle_C = \frac{-iZ_3\eta_{\mu\nu}}{p^2-i\epsilon} + \cdots \]
-The LSZ reduction formula for fermions would take the form as \\ \\
+The LSZ reduction formula for fermions would take the form as
+\\
+
 \begin{newthem}[LSZ reduction formula]
 \begin{eqnarray}
 &\phantom{=}& \langle \bm{p}_1 \cdots \bm{p}_n \; | S | \; \bm{k}_1 \cdots \bm{k}_m \; \rangle  
@@ -492,6 +494,8 @@ A_{\nu_1}(y_1) \cdots A_{\nu_m}(y_m) \} | \Omega \rangle
 \nonumber
 \end{eqnarray}
 \end{newthem}
+
+\noindent
 The LSZ reduction formula in other gauge would give similar procedure for calculating scattering amplitude: Fourier transform the Green function in position space to momentum space, cut-off the external legs and multiply the polarization vector of asymptotic states. (Note there is still an extra factor $\sqrt{Z_3}^{m+n}$ to multiply, similar to the $\phi^4$ theory).\\
 Finally, we list the Feymann rules of QED in momentum space as follows:
 \begin{enumerate}
@@ -507,8 +511,8 @@ Finally, we list the Feymann rules of QED in momentum space as follows:
 \begin{itemize}
 \item for each incoming photon, $\epsilon^{\mu}_{\lambda}(k)$; 
 for each outgoing photon, $\epsilon^{*\mu}_{\lambda}(k)$;
-\item for each incoming electron, $u_{r}(\bm{k})$; for each outgoing electron, $\overline{u}_{s}(\bm{p})$;
-\item for each incoming positron, $\overline{v}_{\overline{r}}(\overline{\bm{k}})$; for each outgoing positron, $v_{\overline{s}}(\overline{\bm{p}})$;
+\item for each incoming electron, $u_{r}(k)$; for each outgoing electron, $\overline{u}_{s}(p)$;
+\item for each incoming positron, $\overline{v}_{\overline{r}}(\overline{k})$; for each outgoing positron, $v_{\overline{s}}(\overline{p})$;
 \item for each vertex, $ie_0 \gamma^{\mu}$;
 for each internal photon, $G_F(p)$;
 for each internal fermion, $S_F(p)$.
@@ -520,6 +524,7 @@ photon polarization vector (if the attached photon line is external).
 \item Value of $i\mathcal{M}$ is given by a sum over the values of the contributing diagrams.
 \item $\langle f | S | i \rangle = (Z_2)^{\frac{n_f}{2}} (Z_3)^{\frac{n_p}{2}} i\mathcal{M}\delta(\sum p_f -\sum p_i)$
 \end{enumerate}
+
 \subsection{Ward Takahashi identity (3)}
 Suppose the invariant matrix element for a process is $\mathcal{M}$, if we replace the polarization state vector $\epsilon_{\lambda}^{\mu}$ (or $\epsilon_{\lambda}^{*\mu}$) of one incoming (or outgoing) photon with its momentum vector $k^{\mu}$, we have
 \[k^{\mu} \mathcal{M}_{\mu} = 0\]
@@ -532,17 +537,22 @@ But the terms on the right hand side contain one of these poles, but neither con
 So, we can have
 \[k^{\mu} \mathcal{M}_{\mu} = 0\] 
 \end{newproof}
+
+\noindent
 We also note that when calculating invariant matrix element, the main difference between different gauge are photon propagator. In Coulomb gauge, we have
 \[G_F(p)_{\mu\nu} \equiv \begin{cases} \frac{i}{|\bm{p}|^2} \quad \mu,\nu=0\\  \frac{-i}{p^2-i\epsilon} \left(\delta_{ij} - \frac{p_ip_j}{|\bm{p}|^2}\right) \quad \mu = i \neq 0, \nu = j \neq 0 \\ 0 \quad \mbox{otherwise} \end{cases} \]
 In Lorentz gauge, we have
 \[G_F(p)_{\mu\nu}  = \frac{-i\eta_{\mu\nu}}{p^2-i\epsilon} + i(1-\xi)\frac{p_{\mu}p_{\nu}}{(p^2-i\epsilon)^2} \]
 We now argue that the lead to the same $\mathcal{M}$ element.
 For a general process, it can be represented as follows.
+
 \begin{figure}[!h]
 \centering
 \includegraphics[height=2.86cm ,width=5.31cm]{QFT3/WI4.png}
 \caption{Feynman diagram representation of a QED process}
-\end{figure}\\
+\end{figure}
+
+\noindent
 The value of the diagram is
 \[\mathcal{M}_{1}^{\mu} G_F(k)_{\mu\nu}\mathcal{M}_{2}^{\nu}\]
 and $k_{\mu}\mathcal{M}_{1}^{\mu}=0$, $k_{\nu}\mathcal{M}_{2}^{\nu}=0$.
@@ -556,18 +566,18 @@ So, the invariant matrix element is gauge invariant.
 \subsection{Renormalized quantum electrodynamics}
 The Lagrangian of QED is
 \[\mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \overline{\Psi} (i\slashed{\partial}-m_0) \Psi + e_0j^{\mu} A_{\mu}, \]
-
+\\
 Suppose the number of external photons is $N_{\gamma}$, the number of external fermions is $N_{e}$, the number of vertex is $V$. The superficial divergence is
 \[D = 4 -N_{\gamma} - \frac{3}{2}N_{e}\]
-
+\\
 Recall that $C$ is a symmetry of QED, so $C|\Omega\rangle = | \Omega \rangle$. But $j^{\mu}$ changes sign under charge conjugation, $C j^{\mu}(x)C^{\dagger} = - j^{\mu}(x)$, so its vacuum expectation value must vanish:
 \[\langle \Omega | T j^{\mu}(x) | \Omega \rangle = \langle \Omega | T C^{\dagger}C j^{\mu}(x)C^{\dagger}C | \Omega \rangle = -\langle \Omega | T j^{\mu}(x) | \Omega \rangle = 0 \]
 So, the amplitude with $N_{\gamma} = 1,N_{e}=0$ will vanish. Similarly, we can verify that the diagram with $N_{\gamma} = 3,N_e=0$ will also vanish.
-
+\\
 As for the amplitude with $N_{\gamma} = 4$, the superficial divergence $D = 0$. So the only divergence must be of the form $\log \Lambda$. But the ward identity implies that
-\[K^{\mu}\mathcal{M}_{\mu\nu\sigma\rho} = 0\]
+\[k^{\mu}\mathcal{M}_{\mu\nu\sigma\rho} = 0\]
 So, the divergent terms must vanish.
-
+\\
 If we neglect the vacuum term with $N_{\gamma}=0,N_{e}=0$, there are only three divergent amplitude terms left. 
 \begin{figure}[!h]
 \centering
@@ -592,13 +602,16 @@ renormalized exact propagator of fermion is
 \[\mathcal{S}_r(p) = \frac{-i}{\slashed{p}+m+\Sigma_r(\slashed{p})}\]
 The on-shell renormalization conditions are
 \begin{eqnarray}
-\Sigma_r(\slashed{p}=-m) &=& 0 \nonumber \\
-\frac{d}{d\slashed{p}} \Sigma_r(\slashed{p}) \Big|_{\slashed{p} = -m} &=& 0 \nonumber \\
+\Sigma_r(\slashed{p}=-m\gamma^0) &=& 0 \nonumber \\
+\frac{d}{d\slashed{p}} \Sigma_r(\slashed{p}) \Big|_{\slashed{p} = -m\gamma^0} &=& 0 \nonumber \\
 \Pi_r(q^2 = 0) &=& 0 \nonumber \\
 ie\Gamma^{\mu}_r(p=p',p^2=-m^2) &=& ie\gamma^{\mu} \nonumber
 \end{eqnarray}
 Recall the ward identity, we have
-\[ie\sqrt{Z_2}\partial_{\mu} \langle \Omega | T j_r^{\mu} \Psi_r(x_1) \overline{\Psi}_r(x_2)| \Omega\rangle = -ie\delta(x-x_1)\langle \Omega | T \Psi_r(x_1) \overline{\Psi}_r(x_2)| \Omega\rangle + ie\delta(x-x_2)\langle \Omega | T \Psi_r(x_1) \overline{\Psi}_r(x_2)| \Omega\rangle\]
+\begin{eqnarray}
+&\phantom{=}& ieZ_2\partial_{\mu} \langle \Omega | T j_r^{\mu} \Psi_r(x_1) \overline{\Psi}_r(x_2)| \Omega\rangle \nonumber \\
+&=& -ie\delta(x-x_1)\langle \Omega | T \Psi_r(x_1) \overline{\Psi}_r(x_2)| \Omega\rangle + ie\delta(x-x_2)\langle \Omega | T \Psi_r(x_1) \overline{\Psi}_r(x_2)| \Omega\rangle \nonumber
+\end{eqnarray}
 In momentum space, we have
 \[-k_{\mu} Z_2 Z_1^{-1} \mathcal{S}_r(p+k) [ie\Gamma^{\mu}_r(p+k,p)] \mathcal{S}_r(p) \frac{1}{1-\Pi_r(k^2)} = e(\mathcal{S}_r(p+k) - \mathcal{S}_r(p)) \]
 So,
@@ -607,7 +620,7 @@ So,
 Since $\Gamma_r$, $\Pi_r$ and $\Sigma_r$ are all finite by renormalization, so $Z_1/Z_2$ must be finite.
 In $\overline{MS}$ renormalization scheme, we immediately get
 \[Z_1 = Z_2\]
-In on-shell renormalization scheme, taking the limit of $k \to 0$, we can also get that
+In on-shell renormalization scheme, taking the limit of $k \to 0$ and $p^2 = -m^2$, we can also get that
 \[Z_1 = Z_2\]
 So, we know
 \[e = \sqrt{Z_3}e_0\]
@@ -626,13 +639,14 @@ where $D = x(1-x)k^2+m^2-i\epsilon$ and $\mu^2 = 4\pi e^{-\gamma} \tilde{\mu}^2$
 Impose the OS renormalization condition $\Pi(0) = 0$, we have
 \[\delta_3 = -\frac{e^2}{6\pi^2} \left[ \frac{1}{\epsilon} - \ln(\frac{m}{\mu})\right] + O(e^4)\]
 \[\Pi(k^2) = \frac{e^2}{2\pi^2} \int_0^1 dx x(1-x) \ln(\frac{D}{m^2}) + O(e^4)\]
+
 \subsubsection{Fermion propagator}
 The exact renormalized fermion propagator in OS renormalization can be written in Lehmann–Kallen form as
 \[i\mathcal{S}(\slashed{p}) = \frac{1}{\slashed{p}+m-i\epsilon} + \int_{m_{th}}^{\infty} ds \frac{\rho_{\Psi}(s)}{\slashed{p}+\sqrt{s}-i\epsilon}\]
 We see that the first term has a pole at $\slashed{p}=-m$ with residue one. This residue corresponds to the field normalization that is needed for the validity of the LSZ formula.
-
+\\
 There is a problem, however: in quantum electrodynamics, the threshold mass $m_{th}$ is $m$, corresponding to the contribution of a fermion and a zero energy photon. Thus the second term has a branch point at $\slashed{p}=-m$. The pole in the first term is therefore not isolated, and its residue is ill defined.
-
+\\
 This is a reflection of an underlying infrared divergence, associated with the massless photon. To deal with it, we must impose an infrared cutoff that moves the branch point away from the pole. The most direct method is to change the denominator of the photon propagator from $k^2$ to $k^2+m_{\gamma}^2$, where $m_{\gamma}$ is a fictitious photon mass. Ultimately, we must deal with this issue by computing cross sections that take into account detector inefficiencies. In quantum electrodynamics, we must specify the
 lowest photon energy $\omega_{min}$ that can be detected. Only after computing cross sections with extra undetectable photons, and then summing over them, is it safe to take the limit $m_{\gamma} \to 0$. 
 \begin{figure}[!h]
@@ -648,6 +662,7 @@ The fitness of $\Sigma(\slashed{p})$ requires that
 Impose the OS renormalization condition $\Sigma(-m) = 0$ and $\Sigma'(-m) = 0$, we have
 \[\Sigma(\slashed{p}) = -\frac{e^2}{8\pi^2} \int_0^1 dx \left( (1-x)\slashed{p} + 2m \right) \ln(\frac{D}{D_0})  + \kappa_2( \slashed{p} + m) + O(e^4) \]
 where $D_0 = x^2m^2 +(1-x)m_{\gamma}^2$ and $\kappa_2 = -2 \ln(m/m_{\gamma})+1$. 
+
 \subsubsection{Vertex}
 \begin{figure}[!h]
 \centering
@@ -674,15 +689,16 @@ Consider the process of electron-electron scattering
 \caption{Diagrams for the exact electron-electron scattering amplitude. The vertices and photon propagator are exact; external lines stand for the usual $u$ and $\bar{u}$ spinor factors, times the unit residue of the pole at $p^2=-m^2$.}
 \end{figure}
 In order to compute the contribution of these diagrams, we must evaluate $\overline{u}_{s'}(\bm{p}')\Gamma^{\mu}(p',p)u_s(\bm{p})$ with $p^2 = p'^2 = -m^2$, but with $q^2 = (p-p')^2$ arbitrary. Finally,we have 
-\[\overline{u}_{s'}(\bm{p}')\Gamma^{\mu}(p',p)u_s(\bm{p}) = \overline{u}'\left[F_1(q^2)\gamma^{\mu} - \frac{i}{m}F_2(q^2)S^{\mu\nu}q_{\nu}\right]u_s(\bm{p})\]
+\[\overline{u}_{s'}(\bm{p}')\Gamma^{\mu}(p',p)u_s(\bm{p}) = \overline{u}'_{s'}(\bm{p}')\left[F_1(q^2)\gamma^{\mu} - \frac{i}{m}F_2(q^2)S^{\mu\nu}q_{\nu}\right]u_s(\bm{p})\]
 where we have defined the form factors
 \begin{eqnarray}
 F_1(q^2) &=& 1 - \frac{e^2}{16\pi^2} \int dF_3  \ln \left ( 1 + \frac{x_1x_2q^2/m^2}{(1-x_3)^2}\right ) \nonumber \\
 &-& \frac{e^2}{16\pi^2} \int dF_3 \frac{1-4x_3+x_3^2}{(1-x_3)^2+x_3m_{\gamma}^2/m^2} + \frac{(x_3+x_1x_2)q^2/m^2-(1-4x_3+x_3^2)}{x_1x_2q^2/m^2+(1-x_3)^2+x_3m_{\gamma}^2/m^2} + O(e^4) \nonumber \\
-F_2(q^2) &=& \frac{e^2}{8\pi^2} \int dF_3 \frac{x_3-x_3^2}{x_1x_2q^2/m^2 + (1-x_3)^2} + O(e^4) \nonumber
+F_2(q^2) &=& \frac{e^2}{8\pi^2} \int_0^1 dy \frac{1}{1 + y(1-y)q^2/m^2} + O(e^4) \nonumber
 \end{eqnarray}
-
-The loop corrections of QED are related to anomalous magnetic moment of electrons and lamb shift of energy level in hydrogen atom. We will not discuss these interesting phenomenon in this notes. Discussion on anomalous magnetic moment can be found in chapter 6.2 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}. You can also find some comments on lamb shift due to vacuum polarization in chapter 7.5 . And a detailed treatment of infrared divergence is available in chapter 6.1, 6.4 and 6.5.
+and
+\[S^{\mu\nu}= \frac{i}{4}[\gamma^{\mu},\gamma^{\nu}]\]
+In on-shell renormalization scheme, we have $F_1(0) = 1$ and $F_2(0) = \frac{\alpha}{2\pi} + O(\alpha^2)$.
 
 \subsection{Renormalization group}
 \subsubsection{$\overline{MS}$ renormalization scheme}
@@ -744,3 +760,85 @@ We can derive
 \[\gamma_{3}(e) = -\frac{1}{4}e c'_1\]
 In QED theory, we have
 \[\gamma_3(e) = \frac{e^2}{12\pi^2} + O(e^4)\]
+
+\subsection{The magnetic moment of the electron}
+Suppose there is a constant classical electromagnetic background field $A_{\mu}^{\mathrm{cl}}(\bm{x})$. Then we have a new term
+\[e\gamma^{\mu}A_{\mu}^{\mathrm{cl}}(\bm{x}) \overline{\Psi}\Psi\]
+in the Lagrangian. In Feynman diagram, this term joins two fermion lines. The value of the vertex is
+\[ie\gamma^{\mu}\int d^4x e^{-i\bm{q}\cdot\bm{x}}e^{i(E'-E)t} A_{\mu}^{\mathrm{cl}}(\bm{x}) = ie\gamma^{\mu}\tilde{A}_{\mu}^{\mathrm{cl}}(\bm{q})(2\pi)\delta(E'-E)\]
+where
+\[\bm{q} = \bm{p}' - \bm{p} \quad \tilde{A}_{\mu}^{\mathrm{cl}}(\bm{q}) = \int d^3x e^{-i\bm{q}\cdot\bm{x}} A_{\mu}^{\mathrm{cl}}(\bm{x})\]
+If an electron scatters in the background field and its momentum changes from $p$ to $p'$, then the scattering matrix is
+\[\langle \bm{p}' | S | \bm{p} \rangle = ie\overline{u}_{s'}(\bm{p}')\Gamma^{\mu}(p',p)u_s(\bm{p})\tilde{A}_{\mu}^{\mathrm{cl}}(\bm{q})(2\pi)\delta(E'-E)\]
+where
+\[F_1(q^2)\gamma^{\mu} - \frac{i}{m}F_2(q^2)S^{\mu\nu}q_{\nu}\]
+If there is only magnetic field, we have
+\[A_{\mu}^{\mathrm{cl}}(x) = (0,\bm{A}_{i}^{\mathrm{cl}}) \quad \bm{B} = \bm{\nabla} \times \bm{A}^{\mathrm{cl}}\]
+In momentum space, we have
+\[\tilde{\bm{B}}^{\mathrm{cl}}(\bm{q}) = i\bm{q}\times\tilde{\bm{A}}^{\mathrm{cl}}(\bm{q})\]
+Recall that
+\[u(\bm{p}) = D(\Lambda)u(\bm{0})\]
+where $\Lambda$ boost the the four momentum $(m,\bm{0})$ to $(E,\bm{p})$.
+In the non-relativistic limit, we keep only the first order of momentum. So the rapidity for the boost is $\bm{\beta} = \frac{\bm{p}}{m}$. And so
+\[D(\Lambda) = I + \frac{i}{2}\delta\omega_{\mu\nu}S^{\mu\nu} = I + i \beta^i S^{i0} = I - \frac{1}{2m} \begin{bmatrix} p^i \sigma^i  &0\\0& -p^i \sigma^i \end{bmatrix} \]
+So, 
+\[u(\bm{p}) = \sqrt{m}  \begin{pmatrix}(1 - \bm{p}\cdot\bm{\sigma}/2m)\xi\\(1 + \bm{p}\cdot\bm{\sigma}/2m)\xi\end{pmatrix} \]
+where $\xi$ is the state of electron spin. We can get
+\[\bar{u}(\bm{p}') \gamma^i u(\bm{p}) = 2m \xi'^{\dagger} \left( \frac{\bm{p}'\cdot\bm{\sigma}}{2m}\sigma^i + \sigma^i\frac{\bm{p}\cdot\bm{\sigma}}{2m} \right) \xi = 2m \xi'^{\dagger} \left( \frac{p_i + p'_i}{2m} -\frac{i}{2m}\epsilon_{ijk}q_j\sigma_k \right) \xi\]
+The first term in the bracket is spin-independent. It is the contribution of the operator $[\bm{p}\cdot\bm{A} + \bm{A}\cdot\bm{p}]$ in the standard kinetic energy term of non-relativistic quantum mechanics. 
+The second is the magnetic moment interaction we are seeking. So we retain only the latter term in the following discussion. \\
+We can also get
+\[\bar{u}(\bm{p}') \left( - \frac{i}{m}S^{i\nu}q_{\nu} \right) u(\bm{p}) = 2m \xi'^{\dagger} \left( -\frac{i}{2m}\epsilon_{ijk}q_j\sigma_k \right) \xi\]
+Finally, we have
+\begin{eqnarray}
+\langle \bm{p}' | S | \bm{p} \rangle &=& 2ime \xi'^{\dagger} \left( -\frac{i}{2m}\epsilon_{ijk}q_j\sigma_k[F_1(0) + F_2(0)] \right) \xi \tilde{A}_{i}^{\mathrm{cl}}(\bm{q})(2\pi)\delta(E-E') \nonumber \\
+&=& i(2m)\xi'^{\dagger} \left( \frac{e}{m}[F_1(0) + F_2(0)] \frac{\sigma_k}{2}\right) \xi \tilde{B}_{k}^{\mathrm{cl}}(\bm{q})(2\pi)\delta(E-E') \nonumber
+\end{eqnarray}
+Recall in quantum mechanics, the time dependent perturbation theory gives the transition matrix in first order as
+\[\langle \bm{p}' | T | \bm{p} \rangle = -i\int_0^t dt e^{i(E'-E)t} \langle \bm{p}' | V(\bm{x}) | \bm{p} \rangle \to 2\pi\delta(E'-E)V(\bm{q})\]
+where $V(\bm{x})$ is perturbed potential we applied to free particles. Note that in quantum field theory, we normalize the momentum eigenvector as
+\[\langle \bm{p}' | \bm{p} \rangle = (2\pi)^3 2E \delta(\bm{p}-\bm{p}')  \]
+rather than
+\[\langle \bm{p}' | \bm{p} \rangle = (2\pi)^3 \delta(\bm{p}-\bm{p}')  \]
+So there is a extra factor $2m$ in the equation we derived by field theory. By comparison, we conclude that
+\[V(\bm{q}) = -\xi'^{\dagger} \left( \frac{e}{m}[F_1(0) + F_2(0)] \frac{\sigma_k}{2}\right) \xi \tilde{B}_{k}^{\mathrm{cl}}(\bm{q})\]
+So, the magnetic moment of electron is
+\[\bm{\mu} = \frac{e}{2m}[2F_1(0) + 2F_2(0)]\bm{S}\]
+The g-factor is
+\[g = 2F_0 + 2F_2(0) = 2 + \frac{\alpha}{2\pi}\]
+
+\subsection{Lamb shift}
+Let us consider the scattering of distinguishable fermions, for example electron and proton, in the non-relativistic limit. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[height=3cm ,width=12.8cm]{QFT3/lamb.png}
+\caption{Coulomb potential scattering} 
+\end{figure}
+
+\noindent
+Up to tree level, we have
+\[i\mathcal{M} = \bar{u}(k')(-ie\gamma^{\mu})u(k) \frac{-i\eta_{\mu\nu}}{q^2} \bar{u}(p')(ie\gamma^{\nu})u(p) = -i \frac{-e^2}{\bm{q}^2} 2m \delta_{ss'} 2m\delta_{rr'}\]
+By comparison to Born approximation in quantum mechanics, we have
+\[\tilde{V}(\bm{q}) = \frac{-e^2}{\bm{q}^2}\]
+Transform the potential to position space, we can get
+\[V(r) = \frac{-e^2}{4\pi r}\]
+It is the Coulomb potential of electron and proton.
+\\ \\
+Next let us examine how $\Pi(q^2)$ modifies the electromagnetic interaction. We have the modified potential
+\[\tilde{V}(\bm{q}) = \frac{-e^2}{\bm{q}^2(1-\Pi(q^2))}\]
+where
+\[\Pi(q^2) = -\frac{2\alpha}{\pi} \int_0^1 dx x(1-x) \ln \left( \frac{m^2}{m^2 + x(1-x)q^2} \right)\]
+In the limit of $|q^2|<m^2$, we have
+\[\Pi(q^2) = \frac{\alpha}{15\pi}\frac{\bm{q}^2}{m^2} \quad \tilde{V}(\bm{q}) = -\frac{4\pi\alpha}{\bm{q}^2} - \frac{4\alpha^2}{15m^2}\]
+Transform the potential to position space, we can get
+\[V(r) = -\frac{\alpha}{r} - \frac{4\alpha^2}{15m^2} \delta(\bm{x})\]
+The correction term indicates that the electromagnetic force becomes much stronger at small distances. This effect can be measured in the hydrogen atom, where the energy levels are shifted by
+\[\Delta E = - \frac{4\alpha^2}{15m^2} |\psi(0)|^2\]
+The wave function is non-zero at the origin only for s -wave states. For the 2S state, the shift is about $-1.123 \times 10^{-7}$ eV. Note that the energy level of fine structure is $E_{nj}$. This modified potential causes a split for degenerate levels of different $l$. This is a (small) part of the Lamb shift splitting. \\
+A more precise correction is given by Uehling potential
+\[\delta V(r) = -\frac{\alpha^2}{4\sqrt{\pi}r} \frac{e^{-2mr}}{(mr)^{3/2}}\]
+Thus the range of the correction term is roughly the electron Compton wavelength, $\frac{1}{m}$. 
+Since hydrogen wave functions are nearly constant on this scale, the delta function was a good approximation.\\
+We can interpret the correction as being due to screening. At $r > \frac{1}{m}$, virtual $e^+e^-$ pairs make the vacuum a dielectric medium in which the apparent charge is less than the true charge. 
+At smaller distances we begin to penetrate the polarization cloud and see the bare charge. This phenomenon is known as vacuum polarization.
