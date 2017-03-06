@@ -49,7 +49,7 @@ where $R$ is an orthogonal matrix with a positive determinant: $R^T = R^{-1}$ an
 \\
 Consider an infinitesimal $SO(N)$ transformation
 \[R_{ij} = \delta_{ij} + \theta_{ij} + O(\theta^2)\]
-Orthogonality of $R_{ij}$ implies that $\theta_{ij}$ is real and antisymmetric. It is convenient to express $\theta_{ij}$ in terms of a basis set of hermitian matrices $T^a_{ij}$. The index a runs from $1$ to $\frac{1}{2}N(N-1)$, the number of linearly independent, hermitian, antisymmetric, $N \times N$ matrices. Commonly, we demand these matrices obey the normalization condition
+Orthogonality of $R_{ij}$ implies that $\theta_{ij}$ is real and antisymmetric. It is convenient to express $\theta_{ij}$ in terms of a basis set of hermitian matrices $T^a_{ij}$. The index a runs from $1$ to $\frac{1}{2}N(N-1)$, the number of linearly independent, hermitian, antisymmetric, $N \times N$ matrices. Commonly, for $SO(N)$ group, we demand these matrices obey the normalization condition
 \[\mathrm{Tr}(T^a T^b) = 2\delta^{ab}\]
 In terms of them, we can write
 \[\theta_{ij} = -i\theta^a T^a_{ij}\]
@@ -76,8 +76,8 @@ The group $U(N)$ is the direct product of the group $U(1)$ and the group $SU(N)$
 Consider an infinitesimal $SU(N)$ transformation
 \[\widetilde{U}_{ij} = \delta_{ij} - i\theta^aT^a_{ij} + O(\theta^2)\]
 where $\theta^a$ is a set of real, infinitesimal parameters. Unitarity of $\widetilde{U}$ implies that the generator matrices $T$ are hermitian, and $\det \widetilde{U} = 1$ implies that each $T$ is traceless.
-The index a runs from $1$ to $N^2 - 1$, the number of linearly independent, hermitian, traceless, $N \times N$ matrices. We can choose these matrices to obey the normalization condition
-\[\mathrm{Tr}(T^a T^b) =2\delta^{ab}\]
+The index a runs from $1$ to $N^2 - 1$, the number of linearly independent, hermitian, traceless, $N \times N$ matrices. Commonly, for $SU(N)$ group, we demand these matrices obey the normalization condition
+\[\mathrm{Tr}(T^a T^b) =\frac{1}{2}\delta^{ab}\]
 
 \begin{example}
 For $SU(2)$, we can choose $T^a_{ij} = \frac{1}{2}\sigma^a_{ij}$. The commutation relations become
@@ -132,5 +132,125 @@ a field $\phi(x)$ with $D(R)$ components, we can write its covariant derivative 
 Under a gauge transformation, $\phi(x) \to U_R(x)\phi(x)$. The theory will be gauge invariant provided that
 \[A^c_{\mu} \to A^c_{\mu} + g\theta^aA^b_{\mu}f^{abc} - \partial_{\mu}\theta^c\]
 under infinitesimal transformation, which is independent of representation.
+
+\subsection{Group representations}
+Given the structure coefficients $f^{abc}$ of a compact nonabelian group, a representation of that group is specified by a set of $D(R)\times D(R)$ traceless hermitian matrices $T^a_R$ that obey the same commutation relations as the original generators matrices $T^a$.
+The number $D(R)$ is the dimension of the representation. The original $T^a$s correspond to the fundamental or defining representation.
+\\
+If $T^a_R$ is a representation of the group, then we can verify that  $-(T^a_R)^*$ is also a representation. 
+\begin{itemize}
+\item If $T^a_R = -(T^a_R)$ , or if we can find a unitary transformation $T^a_R \to U^{-1}T^a_RU$ that makes $-(T^a_R)^* = T^a_R$ for every $a$, then the representation $R$ is real.
+\item If such a unitary transformation does not exist, but we can find a unitary matrix $V \neq I$ such that $V^{-1}T^a_RV = -(T^a_R)^*$ for every $a$, then the representation $R$ is pseudoreal.
+\item If such a unitary matrix also does not exist, then the representation $R$ is complex.
+\item One way to prove that a representation is complex is to show that at least one generator matrix $T^a_R$ (or a real linear combination of them) has eigenvalues that do not come in plus-minus pairs.
+\end{itemize}
+
+\begin{example}
+\begin{itemize}
+\item The fundamental representation of $SO(N)$ is real
+\item The fundamental representation for $SU(2)$ is pseudoreal
+\item The fundamental representation for $SU(N)$ with $N \geq 3$ is complex
+\end{itemize}
+\end{example}
+
+\noindent
+We note that
+\[\mathrm{Tr} T^e\left([[T^a,T^b],T^c] + [[T^c,T^a],T^b] + [[T^b,T^c],T^a] \right) = 0\]
+by which we can derive the Jacobian identity
+\[f^{abd}f^{dce} + f^{bcd}f^{dae} + f^{cad}f^{dbe} = 0\]
+It can be rearranged as 
+\[(-if^{abd})(-if^{cde})-(-if^{cbd})(-if^{ade}) = if^{acd} (-if^{dbe})\]
+Define
+\[(T^a_{A})^{bc} \equiv -if^{abc}\]
+we can get a new representation of the group. It is called adjoint representation. The dimension of adjoint representation is equal to the number of the generators. And it is easy to show that adjoint representation is real.
+\\ \\
+It can be demonstrated that once the fundamental representation is normalized so that $\mathrm{Tr}T^aT^b$ is proportion to the $\delta^{ab}$, so is it with any irreducible representation of the group. Then we can define the index of a representation $T(R)$ as
+\[Tr(T^a_R T^b_R) = T(R)\delta^{ab}\]
+We can verify that the matrix $T^a_R T^a_R$ commutes with
+every generator, and so must be a number times the identity matrix. We define quadratic Casimir $C(R)$ by
+\[T^a_R T^a_R = C^(R)I\]
+It is easy to show that
+\[T(R)D(A) = C(R)D(R)\]
+For $SU(N)$, the standard normalization for fundamental representation is $T(N) = \frac{1}{2}$, so we have $C(N) = \frac{N^2-1}{2N}$. We will show later that $T(A) = C(A) = N$. \\
+For $SO(N)$, the standard normalization for fundamental representation is $T(N) = 2$, so we have $C(N) = N-1$. We will show later that $T(A) = C(A) = 2N-4$.
+\\ \\
+A representation $R$ is reducible if there is a unitary transformation $T^a_R \to U^{-1}T^a_RU$ that puts all the nonzero entries into the same diagonal blocks
+for each $a$; otherwise it is irreducible. 
+Consider a reducible representation $R$ whose generators can be put into two blocks, with the blocks forming the generators of the irreducible representations $R_1$ and $R_2$ . Then $R$ is the direct sum representation $R = R_1\oplus R_2$, and we have
+\[D(R_1\oplus R_2) = D(R_1) + D(R_2)\]
+\[T(R_1\oplus R_2) = T(R_1) + T(R_2)\]
+\begin{note}
+We define the $T(R)$ of reducible representation by taking the trace of the product of two identical generator.
+\end{note}
+
+\noindent
+Suppose we have a field $\phi_{iI}$ that carries two group indices, one for the representation $R_1$ and one for the representation $R_2$, denoted by $i$ and $I$ respectively.
+This field is in the direct product representation $R_1 \otimes R_2$ . The corresponding generator matrix is
+\[(T^a_{R_1 \otimes R_2})_{iI,jJ} = (T^a_{R_1})\delta_{IJ} + \delta_{ij}(T^a_{R_2})_{IJ}\]
+We then have
+\[D(R_1\otimes R_2) = D(R_1)D(R_2)\]
+\[T(R_1\otimes R_2) = T(R_1)D(R_2) + T(R_2)D(R_1)\]
+\\
+Consider a field $\phi$ in the complex representation $R$. We will adopt the convention that such a field carries a
+down index: $\phi_i$, and its Hermitian conjugation carries a up index: $\phi^{\dagger i}$, where $i = 1,\cdots,D(R)$.
+\\ 
+Since
+\[\phi_i \to \phi_i - i\theta_a (T^a_R)_{i}^{\phantom{i}j}\phi_j \]
+we have
+\[\phi^{\dagger i} \to \phi^{\dagger j} - i\theta_a (-T^{a*}_R)_{i}^{\phantom{i}j}\phi^{\dagger j} = \phi^{\dagger j} - i\theta_a (-T^{a}_R)_{j}^{\phantom{i}i}\phi^{\dagger j} \equiv \phi^{\dagger j} - i\theta_a (T^{a}_{\overline{R}})^{i}_{\phantom{i}j}\phi^{\dagger j}\]
+i.e.
+\[(T^{a}_{\overline{R}})^{i}_{\phantom{i}j} = (-T^{a}_R)_{j}^{\phantom{i}i}\]
+Consider the Kronecker delta symbol with one index down and one up: $\delta_i^{\phantom{i}j}$ . Under a group transformation, we have
+\[\delta_i^{\phantom{i}j} \to (1+i\theta^a T^a_R)_{i}^{\phantom{i}k} (1+i\theta^a T^a_{\overline{R}})^{j}_{\phantom{i}l}\delta_k^{\phantom{i}l} = \delta_i^{\phantom{i}j} + O(\theta^2)\]
+$\delta_i^{\phantom{i}j}$ is an invariant symbol of the group. This existence of this invariant symbol, which carries one index for $R$ and one for $\overline{R}$, tells us that the product of the representations $R$ and $\overline{R}$ must contain the singlet representation $1$, specified by $T_1^a = 0$. We therefore can write
+\[R \otimes \overline{R} = 1 \oplus \cdots\]
+We can further verify that the generator matrix $(T_R^a)_i^{\phantom{i}j}$, which carries one index for $R$, one for $\overline{R}$, and one for the adjoint representation $A$, is also an invariant symbol.
+This implies that
+\[R \times \overline{R} \otimes A = 1 \oplus \cdots\]
+If we now multiply both sides by $A$, and use $A \otimes A = 1 \oplus \cdots$ (note $A$ is real), we find $R \times \overline{R} = A \oplus \cdots$. Finally, we have
+\[R \otimes \overline{R} = 1 \oplus A \oplus \cdots \]
+So the product of a representation with its complex conjugate is always reducible into a sum that includes at least the singlet and adjoint representations. For the fundamental representation of $SU(N)$, we have
+\[N \otimes \overline{N} = 1 \oplus A \]
+by dimension analysis. We can derive $T(A) = N$ from this equation.
+\\ \\
+Consider now a real representation $R$, we have
+\[R \times R \otimes A = 1 \oplus \cdots\]
+The singlet on the right-hand side implies the existence of an invariant symbol with two $R$ indices; this symbol is the Kronecker delta $\delta_{ij}$ . It is invariant because
+\[\delta_{ij} \to (1+i\theta^a T^a_R)_{i}^{\phantom{i}k} (1+i\theta^a T^a_{\overline{R}})_{j}^{\phantom{i}l}\delta_{kl} = \delta_{ij} - i\theta^a [(T^a_R)_{ij} + (T^a_R)_{ji}] + O(\theta^2)\]
+The term in square brackets vanishes by hermiticity and $(T^{a}_{\overline{R}})^{i}_{\phantom{i}j} = (-T^{a}_R)_{j}^{\phantom{i}i}$. 
+The fact that $\delta_{ij} = \delta_{ji}$ implies that the singlet on the right-hand side of the equation above appears in the symmetric part of this product of two identical representations.
+\\
+The fundamental representation of $SO(N)$ is real, and we have
+\[N \times N = 1_S \oplus A_A \oplus S_S\]
+The representation S corresponds to a field with a symmetric traceless pair of fundamental indices.
+\\ \\
+Consider now a pseudoreal representation $R$. Since $R$ is equivalent to its complex conjugate, up to a change of basis, $R \times R \otimes A = 1 \oplus \cdots$  still holds. However, we cannot identify $\delta_{ij}$ as the corresponding invariant symbol, because then $R$ would have to be real, rather than pseudoreal. 
+From the perspective of the direct product, the only alternative is to have the singlet appear in the antisymmetric part of the product, rather than the symmetric part. The corresponding invariant symbol must then be antisymmetric on exchange of its two $R$ indices.
+An example is the fundamental representation of $SU(2)$, which is discussed in spinor field theory.
+\\ \\
+The structure constants $f^{abc}$ are another invariant symbol. This follows from $(T^a_A)^{bc} = -if^{abc}$, since we have seen that generator matrices are invariant.
+\\
+Alternatively, given the generator matrices in a representation $R$, we can write
+\[T(R)f^{abc} = -i \mathrm{Tr}(T^a_R[T^b_R,T^c_R])\]
+Since the right-hand side is invariant, the left-hand side must be as well.
+\\
+If we use an anticommutator in place of the commutator, we get another invariant symbol,
+\[A(R)d^{abc} = \frac{1}{2} \mathrm{Tr}(T^a_R\{T^b_R,T^c_R\})\]
+where $A(R)$ is the anomaly coefficient of the representation. The cyclic property of the trace implies that $d^{abc}$ is symmetric on exchange of any pair of indices. Using $(T^{a}_{\overline{R}})^{i}_{\phantom{i}j} = (-T^{a}_R)_{j}^{\phantom{i}i}$, we can see that
+\[A(\overline{R}) = -A(R)\]
+Thus, if $R$ is real or pseudoreal, $A(R) = 0$. We also have
+\[A(R_1\oplus R_2) = A(R_1) + A(R_2)\]
+\[A(R_1\otimes R_2) = A(R_1)D(R_2) + A(R_2)D(R_1)\]
+We normalize the anomaly coefficient so that it equals one for the smallest complex representation. In particular, for $SU(3)$ with $N \geq 3$, the smallest complex representation is the fundamental, and $A(N) = 1$. For $SU(2)$, all representations are real or pseudoreal, and $A(R) = 0$ for all of them.
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
