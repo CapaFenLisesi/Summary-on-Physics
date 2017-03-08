@@ -243,6 +243,98 @@ Thus, if $R$ is real or pseudoreal, $A(R) = 0$. We also have
 \[A(R_1\otimes R_2) = A(R_1)D(R_2) + A(R_2)D(R_1)\]
 We normalize the anomaly coefficient so that it equals one for the smallest complex representation. In particular, for $SU(3)$ with $N \geq 3$, the smallest complex representation is the fundamental, and $A(N) = 1$. For $SU(2)$, all representations are real or pseudoreal, and $A(R) = 0$ for all of them.
 
+\section{Quantization of nonabelian gauge theory}
+\subsection{The path integral for nonabelian gauge theory}
+We wish to evaluate the path integral for nonabelian gauge theory
+\[Z[0] = \int \mathcal{D}A e^{iS_{YM}}\]
+\[S_{YM} = \int d^4x \left[-\frac{1}{4}F^{a\mu\nu}F^{a}_{\mu\nu} \right]\]
+Recall under an infinitesimal gauge transformation, we have
+\[A^{a}_{\mu} \to A^{a}_{\mu} -(\delta^{ac}\partial_{\mu}-igA^{b}_{\mu}(T_{A}^{b})^{ac})\theta^c\]
+We can define a covariant derivative for adjoint representation
+\[D_{\mu}^{ac} \equiv \delta^{ac}\partial_{\mu}-igA^{b}_{\mu}(T_{A}^{b})^{ac}\]
+so we have
+\[A^{a}_{\mu} \to A^{a}_{\mu} - D_{\mu}^{ac}\theta^c\]
+Similar to the case in electromagnetic field, we introduce a gauge fixing function
+\[G^a(A(\theta)) \equiv \partial^{\mu}A^a_{\mu}(\theta)  - \omega^a(x)\]
+Now, we insert $1$ in the path integral
+\[1 = \int \mathcal{D}\theta \delta(G) \det\left( \frac{\delta G}{\delta \theta} \right)\]
+Here,
+\[\frac{\delta G^a(x)}{\delta \theta^b(y)} = -\partial^{\mu}D_{\mu}^{ab}(\theta)\delta^4(x-y)\]
+A functional determinant can be written as a path integral over complex Grassmann variables. So let us introduce the complex Grassmann field $c^a(x)$, and its hermitian conjugate $\overline{c}^a(x)$. These fields are called Faddeev–Popov ghosts. Then we can write
+\[ \det\left( \frac{\delta G}{\delta \theta} \right) \propto \int \mathcal{D}c \mathcal{D}\overline{c} e^{iS_{gh}[A(\theta)]}\]
+where
+\[\mathcal{L}_{gh}[A(\theta)] = \overline{c}^a \partial^{\mu}D^{ab}_{\mu}(\theta)c^b = -\partial^{\mu}\overline{c}^a \partial_{\mu}c^a + gf^{abc}A^c_{\mu}(\theta)\partial^{\mu}\overline{c}^a c^b\]
+We see that $c^a(x)$ has the standard kinetic term for a complex scalar field.  The ghost field is also a Grassmann field, and so a closed loop of ghost lines in a Feynman diagram carries an extra factor of minus one. Since the particles associated with the ghost field do not in fact exist (and would violate the spin-statistics theorem if they did), it must be that the amplitude to produce them in any scattering process is zero.
+\\
+Now change variables from $A$ to $A(\theta)$. This is a simple shift, so $\mathcal{D}A = \mathcal{D}A(\theta)$. Also, by gauge invariance, $S_{YM}[A] = S_{YM}[A(\theta)]$. Since $A(\theta)$ is now just a dummy integration variable, we can rename it bake to $A$, so
+\[Z[0] \propto \left(\int \mathcal{D}\theta\right) \int \mathcal{D}c \mathcal{D}\overline{c} \mathcal{D}A e^{iS_YM + iS_{gh}} \delta(\partial^{\mu}A^a_{\mu}-\omega^a(x))\]
+Since the above equation is hold for any $\omega(x)$,so we have
+\begin{eqnarray}
+Z[0] &\propto& \int \mathcal{D}\omega \exp \left[-i\int d^4x \frac{\omega^a\omega^a}{2\xi} \right] \int \mathcal{D}c \mathcal{D}\overline{c} \mathcal{D}A e^{iS_YM + iS_{gh}} \delta(\partial^{\mu}A^a_{\mu}-\omega^a(x)) \nonumber \\
+&=&  \int \mathcal{D}c \mathcal{D}\overline{c} \mathcal{D}A e^{iS_YM + iS_{gh} + iS_{gf}}
+\end{eqnarray}
+where
+\[\mathcal{L}_{gf} = -\frac{1}{2\xi}\partial^{\mu}A^a_{\mu} \partial^{\nu}A^a_{\nu}\]
+
+\subsection{The Feynman rules for nonabelian gauge theory}
+\[\mathcal{L}_{YM} = -\frac{1}{2}\partial^{\mu}A^{a\nu} \partial_{\mu}A^a_{\nu} + \frac{1}{2}\partial^{\mu}A^{a\nu} \partial_{\nu}A^a_{\mu} -gf^{abe}A^{a\mu}A^{b\nu}\partial_{\mu}A^e_{\nu} - \frac{1}{4}g^2 f^{abe}f^{cde}A^{a\mu}A^{b\nu}A^c_{\mu}A^d_{\nu}\]
+Add the gauge-fixing term for $R_{\xi}$ gauge, and do some integrations-by-parts in the quadratic terms, we find
+\[\mathcal{L}_{YM} + \mathcal{L}_{gf} = \frac{1}{2}A^{e\mu}(\eta_{\mu\nu}\partial^2 -(1-\frac{1}{\xi}) \partial_{\mu}\partial_{\nu})A^{e\nu} -gf^{abe}A^{a\mu}A^{b\nu}\partial_{\mu}A^e_{\nu} - \frac{1}{4}g^2 f^{abe}f^{cde}A^{a\mu}A^{b\nu}A^c_{\mu}A^d_{\nu}\]
+So, the gluon propagator in $R_{\xi}$ gauge is
+\[G_F(k)^{ab}_{\mu\nu} = \frac{-i\delta^{ab}}{k^2-i\epsilon} \left( \eta_{\mu\nu} - (1 - \frac{1}{\xi}) \frac{k_{\mu}k_{\nu}}{k^2} \right)\]
+The three-gluon vertex factor is
+\begin{eqnarray}
+iV^{abc}_{\mu\nu\rho}(p,q,r) &=& i (-gf^{abc})(-ir_{\mu}g_{\nu\rho}) + [5 \mbox{ permutations of } (a,\mu,p),(b,\nu,q),(c,\rho,r)] \nonumber \\
+&=& gf^{abc}[(q-r)_{\mu}g_{\nu\rho} + (r-p)_{\nu}g_{\rho\mu} + (p-q)_{\rho}g_{\mu\nu}] \nonumber
+\end{eqnarray}
+The four-gluon vertex factor is
+\begin{eqnarray}
+iV^{abcd}_{\mu\nu\rho\sigma} &=& -ig^2f^{abe} f^{cde} g_{\mu\rho}g_{\nu\sigma} + [5 \mbox{ permutations of } (b,\nu),(c,\rho),(d,\sigma)] \nonumber \\
+&=& -ig^2 [f^{abe}f^{cde}(g_{\mu\rho}g_{\nu\sigma} - g_{\mu\sigma}g_{\nu\rho}) + f^{ace}f^{dbe}(g_{\mu\sigma}g_{\rho\nu} - g_{\mu\nu}g_{\rho\sigma}) + f^{ade}f^{bce}(g_{\mu\nu}g_{\sigma\rho} - g_{\mu\rho}g_{\sigma\nu})] \nonumber
+\end{eqnarray}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=4cm ,width=10.13cm]{QFT4/gluon_vertices.png}
+	\caption{The three-gluon and four-gluon vertices in nonabelian gauge theory}
+\end{figure}
+
+\noindent
+For loop calculations, we need to include the ghosts. The ghost lagrangian is
+\[\mathcal{L}_{gh} = -\partial^{\mu}\overline{c}^c \partial_{\mu}c^c + gf^{abc}A^a_{\mu}\partial^{\mu}\overline{c}^b c^c\]
+The ghost propagator is
+\[D_F(k) = \frac{-i\delta^{ab}}{k^2-i\epsilon}\]
+Because the ghosts are complex scalars, their propagators carry a charge arrow. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=4cm ,width=7.81cm]{QFT4/ggg_vertex.png}
+	\caption{The ghost-ghost-gluon vertex in nonabelian gauge theory}
+\end{figure}
+
+\noindent
+The ghost–ghost–gluon vertex factor is
+\[iV^{abc}_{\mu}(-iq_{\mu}) = gf^{abc}a_{\mu}\]
+If we include a quark coupled to the gluons, we have the quark lagrangian
+\[\mathcal{L}_{q} = i\overline{\Psi}_{i}\slashed{D}_{ij}\Psi_{j} - m\overline{\Psi}_{i}\Psi_{i} = i\overline{\Psi}_{i}\slashed{\partial}\Psi_{i} - m\overline{\Psi}_{i}\Psi_{i} + gA^a_{\mu}\overline{\Psi}_{i} \gamma^{\mu} T^a_{ij} \Psi_j \]
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=3cm ,width=5.07cm]{QFT4/ffg_vertex.png}
+	\caption{The quark-quark-gluon vertex in nonabelian gauge theory}
+\end{figure}
+
+\noindent
+The quark propagator is
+\[S_F(p)_{ij} = \frac{i(\slashed{p}-m)\delta_{ij}}{p^2+m^2 - i\epsilon}\]
+The quark–quark–gluon vertex factor is
+\[iV^{\mu a}_{ij} ig\gamma^{\mu}T^a_{ij}\]
+
+
+
+
+
+
 
 
 
