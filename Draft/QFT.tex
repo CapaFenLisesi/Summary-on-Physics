@@ -330,6 +330,73 @@ The quark propagator is
 The quark–quark–gluon vertex factor is
 \[iV^{\mu a}_{ij} ig\gamma^{\mu}T^a_{ij}\]
 
+\section{Renormalization of nonabelian gauge theory}
+We now rescale the fields to the renormalized field strengths by extracting the factors $Z_2$, $Z_3$ and $Z_2^c$ for the fermions, gauge bosons, and ghosts, and shift the coupling to the renormalized coupling $g$. The counterterm Lagrangian then takes the form
+\begin{eqnarray}
+\mathcal{L}_{ct} &=& -\frac{1}{4}\delta_3 F^{a\mu\nu}F^a_{\mu\nu} + \overline{\Psi}(i\delta_2\slashed{\partial}-\delta_m)\Psi + \delta_2^c \overline{c}^a \partial^2 c^a \nonumber \\
+&+& g\delta_1 A^a_{\mu}\overline{\Psi}\gamma^{\mu}T^a\Psi -g\delta_{1}^{3g} f^{abe}A^{a\mu}A^{b\nu}\partial_{\mu}A^e_{\nu} - \frac{1}{4}g^2\delta_1^{4g} f^{abe}f^{cde}A^{a\mu}A^{b\nu}A^c_{\mu}A^d_{\nu} \nonumber \\
+&+& g\delta_1^c f^{abc}A^a_{\mu}\partial^{\mu}\overline{c}^b c^c \nonumber
+\end{eqnarray}
+with the counterterms de ned by
+\[\delta_2 = Z_2 - 1 \quad \delta_3 = Z_3 - 1 \quad \delta_2^c = Z_2^c - 1 \quad \delta_m = Z_2m_0-m\]
+\[\delta_1 = \frac{g_0}{g}Z_2(Z_3)^{1/2} - 1 \quad \delta_1^{3g} = \frac{g_0}{g}(Z_3)^{3/2} - 1 \quad \delta_1^{4g} = \frac{g_0^2}{g^2}(Z_3)^2 - 1 \quad \delta_1^c = \frac{g_0}{g}Z_2^c(Z_3)^{1/2} - 1\]
+Notice that these eight counterterms depend on five underlying parameters; thus, there are three relations among them. The situation is very similar to that for the scalar theories with spontaneously broken symmetry that we studied before. 
+The underlying symmetry of the theory - local gauge invariance - implies relations among the divergent amplitudes of the theory and among the counterterms required to cancel them. 
+In the present case, a set of five renormalization conditions uniquely specifies all of the counterterms in a way that removes all divergences from the theory.
+The rigorous proof will be omitted here.
+
+\subsubsection{Quark propagator}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=2.96cm ,width=11cm]{QFT4/loop1.png}
+	\caption{The one-loop and counterterm corrections to the quark propagator in quantum chromodynamics}
+\end{figure}
+
+\noindent
+In $\overline{MS}$ renormalization scheme and Feynman gauge, we have
+\[Z_2 = 1 - C(R)\frac{g^2}{8\pi^2}\frac{1}{\epsilon} + O(g^4)\]
+\[Z_m = 1 - C(R)\frac{g^2}{2\pi^2}\frac{1}{\epsilon} + O(g^4)\]
+
+\subsubsection{Quark-quark-gluon vertex}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=4cm ,width=9.78cm]{QFT4/loop2.png}
+	\caption{The one-loop corrections to the quark–quark–gluon vertex in quantum chromodynamics.}
+\end{figure}
+\[Z_1 = 1 - [C(R) + T(A)]\frac{g^2}{8\pi^2}\frac{1}{\epsilon} + O(g^4)\]
+
+\subsubsection{Gluon propagator}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=6cm ,width=13.4cm]{QFT4/loop3.png}
+	\caption{The one-loop and counterterm corrections to the gluon propagator in quantum chromodynamics.}
+\end{figure}
+\[Z_3 = 1 + \left[\frac{5}{3}T(A) - \frac{4}{3}n_F T(R)\right]\frac{g^2}{8\pi^2}\frac{1}{\epsilon} + O(g^4)\]
+
+\subsubsection{Beta function}
+We define
+\[\alpha \equiv \frac{g^2}{4\pi}\]
+Then we have
+\[\alpha_0 = \frac{Z_1^2}{Z_2^2 Z_3} \alpha \tilde{\mu}^{\epsilon}\]
+Let us write
+\[\ln \left( Z_3^{-1}Z_2^{-2}Z_1^2 \right) = \sum_{n=1}^{\infty} \frac{G_n(\alpha)}{\epsilon^n}\]
+Then we have
+\[\ln \alpha_0 = \sum_{n=1}^{\infty} \frac{G_n(\alpha)}{\epsilon^n} + \ln \alpha + \epsilon \ln \tilde{\mu}\]
+And we can get
+\[G_1(\alpha) = - \left[ \frac{11}{3}T(A) - \frac{4}{3} n_F T(R) \right] \frac{\alpha}{2\pi} + O(\alpha^2)\]
+Since the bare coefficients is independent of $\mu$, we then can get
+\[\beta(\alpha) = \alpha^2 G_1(\alpha) = - \left[ \frac{11}{3}T(A) - \frac{4}{3} n_F T(R) \right] \frac{\alpha^2}{2\pi} + O(\alpha^3)\]
+In quantum chromodynamics, the gauge group is $SU(3)$, and the quarks are in the fundamental representation. Thus $T(A) = 3$ and $T(R) = \frac{1}{2}$, and the factor in square brackets is $11 - \frac{2}{3} n_F$. So for $n_F \leq 16$, the beta function is negative: the gauge coupling in quantum chromodynamics gets weaker at high energies, and stronger at low energies.\\
+This has dramatic physical consequences. Perturbation theory cannot serve as a reliable guide to the low-energy physics. And indeed, in nature we do not see isolated quarks or gluons. (Quarks, in particular, have fractional electric charges and would be easy to discover.) The appropriate conclusion is that color is confined : all finite-energy states are invariant under a global $SU(3)$ transformation. This has not yet been rigorously proven, but it is the
+only hypothesis that is consistent with all of the available theoretical and experimental information.
+
+
+
+
+
+
+
+
 
 
 

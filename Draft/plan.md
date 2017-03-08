@@ -1,8 +1,11 @@
-- [ ] Introduction to gauge field theory [24, 69, 70, 71, 72, 73, 74, 75, 76, 77, 84, 87, 88, 89 (29, 82, 83, 90)]
+- [ ] Introduction to gauge field theory [73, 75, 76, 77, 84, 87, 88, 89 (29, 82, 83, 90)]
 - [ ] Weak Gravitational Fields
 - [ ] Mass and Angular Momentum of A Gravitating System
 - [ ] Conservation Laws for 4-momentum and Angular Momentum
-- [ ] Thermodynamics, hydrodynamics, electrodynamics, geometric optics, and kinetic theory in GR
+
+The following will be done later:
+
 - [ ] Adiabatic Invariance in CM
 - [ ] WKB Method
 - [ ] Adiabatic Invariance in QM
+- [ ] Thermodynamics, hydrodynamics, electrodynamics, geometric optics, and kinetic theory in GR
