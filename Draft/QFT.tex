@@ -390,26 +390,69 @@ In quantum chromodynamics, the gauge group is $SU(3)$, and the quarks are in the
 This has dramatic physical consequences. Perturbation theory cannot serve as a reliable guide to the low-energy physics. And indeed, in nature we do not see isolated quarks or gluons. (Quarks, in particular, have fractional electric charges and would be easy to discover.) The appropriate conclusion is that color is confined : all finite-energy states are invariant under a global $SU(3)$ transformation. This has not yet been rigorously proven, but it is the
 only hypothesis that is consistent with all of the available theoretical and experimental information.
 
+\section{Chiral gauge theories and anomalies}
+\subsection{Chiral gauge theories}
+Recall that a Dirac field $\Psi$ can be written in terms of two left-handed Weyl ields $\chi$ and $\xi$ as
+\[\Psi = \begin{pmatrix}\chi\\ \xi^{\dagger} \end{pmatrix}\] If $\Psi$ is in a representation $R$ of the gauge group, then $\chi$ and $\xi^{\dagger}$ must be as well. Equivalently, $\chi$ must be in the representation $R$, and $\xi$ must be in the complex conjugate representation $\overline{R}$.
+\\
+Now suppose that we have a single left-handed Weyl field $\psi$ in a complex representation $R$. Such a gauge theory is automatically parity violating (because the right-handed hermitian conjugate of the left-handed Weyl field is in an inequivalent representation of the gauge group), and is said to be chiral.
+The Lagrangian is
+\[\mathcal{L} = i\psi^{\dagger} \overline{\sigma}^{\mu} D_{\mu} \psi - \frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu}\]
+where $D_{\mu} = \partial_{\mu} - igA^{a}_{\mu} T^a_R$.
+\\
+Since $T^a_R$ is a hermitian matrix, $i\psi^{\dagger} \overline{\sigma}^{\mu} D_{\mu} \psi$ is hermitian (up to a total divergence). We cannot include a mass term for $\psi$, though, because $\psi\psi$ transforms as $R \otimes R$, and $R \otimes R$ does not contain a singlet if $R$ is complex. Thus, $\psi\psi$ is not gauge invariant. 
+\\ \\
+Now we focus on the simplest possible example: a $U(1)$ theory with a single Weyl field $\psi$ with charge $+1$. The lagrangian is
+\[\mathcal{L} = i\psi^{\dagger} \overline{\sigma}^{\mu} (\partial_{\mu} - igA_{\mu}) \psi - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}\]
+We note that
+\[P_L \Psi = \begin{pmatrix}
+\psi \\ 0
+\end{pmatrix}\]
+Then we can write
+\[\mathcal{L} = i\overline{\Psi} \gamma^{\mu} (\partial_{\mu} - igA_{\mu}) P_L\Psi - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}\]
+To better understand the physical consequences of the projection operator, consider the case of a free field. The mode expansion is
+\[P_L\Psi(x) = \sum_{s = \pm} \int \tilde{dp} [b_s(\bm{p})P_Lu_s(\bm{p})e^{ipx} + d_s^{\dagger}(\bm{p})P_L v_s(\bm{p}) e^{-ipx}]\]
+For a massless field, we have $P_L u_{+}(\bm{p}) = 0$ and $P_L v_-(\bm{p}) = 0$. Thus we can write as
+\[P_L\Psi(x) =  \int \tilde{dp} [b_-(\bm{p})u_-(\bm{p})e^{ipx} + d_+^{\dagger}(\bm{p}) v_+(\bm{p}) e^{-ipx}]\]
+We can easily read the Feynman rules from the Lagrangian. In particular, the fermion propagator in momentum space is
+\[\frac{iP_L\slashed{p}}{p^2-i\epsilon}\]
+and the fermion-fermion-photon vertex is
+\[ig\gamma^{\mu} P_L\]
+\\
+Now consider the correction to the photon propagator. Calculation shows that at the one-loop level, the contribution to $\Pi^{\mu\nu}(k)$ of a single charged Weyl field is half that of a Dirac field. This is physically reasonable, since a Dirac field is equivalent to two charged Weyl fields.
+\\
+Nothing interesting happens in the one-loop corrections to the fermion propagator, or the fermion-fermion-photon vertex. There is simply an extra factor of $P_L$ along the fermion line, which can be moved to the far right. Except for this factor, the results exactly duplicate those of spinor electrodynamics.
+\\
+All of this implies that a single Weyl field makes half the contribution of a Dirac field to the leading term in the beta function for the gauge coupling.
+\\ \\
+Next we turn to diagrams with three external photons, and no external fermions. In spinor electrodynamics, the fact that the vector potential is odd under charge conjugation implies that the sum of these diagrams must vanish. For the present case of a single Weyl field, there is no charge-conjugation symmetry, and so we must evaluate these diagrams.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.2]{QFT4/chiral1.png}
+	\caption{One-loop contributions to the three-photon vertex}
+\end{figure}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\noindent
+Detailed calculation shows that
+\[r_{\rho}V^{\mu\nu\rho}(p,q,r) = 0\]
+However,
+\[p_{\mu}V^{\mu\nu\rho}(p,q,r) = \frac{ig^3}{8\pi^2}\epsilon^{\alpha\nu\beta\rho}p_{\alpha}q_{\beta}\]
+\[q_{\nu}V^{\mu\nu\rho}(p,q,r) = \frac{ig^3}{8\pi^2}\epsilon^{\alpha\rho\beta\mu}q_{\alpha}p_{\beta}\]
+We have therefore failed to construct a gauge-invariant $U(1)$ theory with a single charged Weyl field.
+\\ \\
+Consider now a $U(1)$ gauge theory with several left-handed Weyl fields $\psi_i$, with charges $Q_i$, so that the covariant derivative of $\psi_i$ is $\partial_{\mu} - igQ_iA_{\mu}$. Then each of these fields circulates in the loop in figure above, and each vertex has an extra factor of $Q_i$. The right-hand sides of equation above are now multiplied by $\sum_i Q_i^3$. And if $\sum_i Q_i^3$ happens to be zero, then gauge invariance is restored. 
+\\
+The simplest possibility is to have the $\psi$s come in
+pairs with equal and opposite charges. But there are other possibilities as well: for example, one field with charge $+2$ and eight with charge $-1$. Such a gauge theory is still chiral, but it is anomaly free.
+\\ \\
+All of this has a straightforward generalization to nonabelian gauge theories. 
+Suppose we have a single Weyl field in a (possibly reducible) representation $R$ of the gauge group. Then we must attach an extra factor of $\mathrm{Tr}(T^a_R T^b_R T^c_R)$ to the first diagram, and a factor of $\mathrm{Tr}(T^a_R T^c_R T^b_R)$ to the second; here the group indices $a,b,c$ go along with the momenta $p,q,r$, respectively.
+Repeating our analysis shows that the diagrams with $P_L \to \frac{1}{2}$ come with an extra factor of $\frac{1}{2}\mathrm{Tr}([T^a_R, T^b_R] T^c_R)$; these contribute to the renormalization of the tree-level three-gluon vertex. Diagrams with $P_L \to - \frac{1}{2}\gamma_5$ come with an extra factor of
+\[\frac{1}{2}\mathrm{Tr}(\{T^a_R, T^b_R\} T^c_R) = A(R)d^{abc}\]
+Here $d^{abc}$ is a completely symmetric tensor that is independent of the representation, and $A(R)$ is the anomaly coefficient of $R$. In order for this theory to exist, we must have $A(R) = 0$. 
+Since $A(R) + A(\overline{R}) = 0$; thus a theory whose left-handed Weyl fields come in $R \oplus \overline{R}$ pairs is automatically anomaly free (as is one whose Weyl fields are all in real representations). Otherwise, we must arrange the cancellation by hand. 
+\\
+For $SU(2)$ and $SO(N)$, $N \neq 2,6$ all representations have $A(R) = 0$. For $SU(N)$ with $N \geq 3$, the fundamental representation has $A(N) = 1$, and most complex $SU(N)$ representations $R$ have $A(R) \neq 0$. So the cancellation is nontrivial.
 
 
 \end{document}
