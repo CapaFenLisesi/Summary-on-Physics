@@ -328,7 +328,7 @@ If we include a quark coupled to the gluons, we have the quark lagrangian
 The quark propagator is
 \[S_F(p)_{ij} = \frac{i(\slashed{p}-m)\delta_{ij}}{p^2+m^2 - i\epsilon}\]
 The quark–quark–gluon vertex factor is
-\[iV^{\mu a}_{ij} ig\gamma^{\mu}T^a_{ij}\]
+\[iV^{\mu a}_{ij} =  ig\gamma^{\mu}T^a_{ij}\]
 
 \section{Renormalization of nonabelian gauge theory}
 We now rescale the fields to the renormalized field strengths by extracting the factors $Z_2$, $Z_3$ and $Z_2^c$ for the fermions, gauge bosons, and ghosts, and shift the coupling to the renormalized coupling $g$. The counterterm Lagrangian then takes the form
@@ -453,6 +453,102 @@ Here $d^{abc}$ is a completely symmetric tensor that is independent of the repre
 Since $A(R) + A(\overline{R}) = 0$; thus a theory whose left-handed Weyl fields come in $R \oplus \overline{R}$ pairs is automatically anomaly free (as is one whose Weyl fields are all in real representations). Otherwise, we must arrange the cancellation by hand. 
 \\
 For $SU(2)$ and $SO(N)$, $N \neq 2,6$ all representations have $A(R) = 0$. For $SU(N)$ with $N \geq 3$, the fundamental representation has $A(N) = 1$, and most complex $SU(N)$ representations $R$ have $A(R) \neq 0$. So the cancellation is nontrivial.
+
+\subsection{Anomalies in global symmetries}
+Let us consider electrodynamics with a massless Dirac field. The lagrangian is
+\[\mathcal{L} = i\overline{\Psi}\slashed{D}\Psi - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}\]
+We can write $\Psi$ in terms of two left-handed Weyl fields $\chi$ and $\xi$ via
+\[\Psi = \begin{pmatrix}
+\chi \\ \xi^{\dagger}
+\end{pmatrix}\]
+In terms of $\chi$ and $\xi$, the Lagrangian is
+\[\mathcal{L} = i\chi^{\dagger}\overline{\sigma}^{\mu} (\partial_{\mu} - igA_{\mu})\chi + i\xi^{\dagger}\overline{\sigma}^{\mu} (\partial_{\mu} + igA_{\mu})\xi\]
+Because the fermion field is massless, the lagrangian is  invariant under a global symmetry in which $\chi$ and $\xi$ transform with the same phase
+\[\chi(x) \to e^{i\alpha}\chi(x) \quad \xi(x) \to e^{i\alpha}\xi(x)\]
+In terms of $\Psi$, this is
+\[\Psi(x) \to e^{-i\alpha\gamma_5}\Psi(x) \quad \overline{\Psi}(x) \to \overline{\Psi} e^{-i\alpha\gamma_5}\]
+This is called axial $U(1)$ symmetry, because the associated Noether current
+\[j^{\mu}_A = \overline{\Psi}(x) \gamma^{\mu} \gamma_5 \Psi(x)\]
+is an axial vector. Noether’s theorem leads us to expect that this current is conserved. However, we will show that the axial current actually has an anomalous divergence.
+\\ \\
+Consider the matrix element $\langle p,q | j^{\rho}_A(z) |  0 \rangle$, where $\langle p,q |$ is a state of two outgoing photons with four-momenta $p$ and $q$, and polarization vectors $\epsilon_{\mu}$ and $\epsilon'_{\nu}$, respectively. Using the LSZ formula for photons, we have
+\[\langle p,q | j^{\rho}_A(z) |  0 \rangle = (ig)^2 \epsilon_{\mu} \epsilon'_{\nu} \int d^4x d^4y e^{-i(px+qy)} \langle 0 | T j^{\mu}(x) j^{\nu}(y) j^{\rho}_A(z) | 0 \rangle \]
+where
+\[j^{\mu} = \overline{\Psi}\gamma^{\mu}\Psi\]
+Let us define $C^{\mu\nu\rho}(p,q,r)$ via
+\[(2\pi)^4 \delta(p+q+r)C^{\mu\nu\rho}(p,q,r) \equiv  \int d^4x d^4y d^4z e^{-i(px+qy+rz)} \langle 0 | T j^{\mu}(x) j^{\nu}(y) j^{\rho}_A(z) | 0 \rangle\]
+Then we have
+\[\langle p,q | j^{\rho}_A(z) |  0 \rangle = -g^2 \epsilon_{\mu} \epsilon'_{\nu} \left. C^{\mu\nu\rho}(p,q,r) e^{irz} \right|_{r=-q-p}\]
+Taking the divergence of the current yields
+\[\langle p,q | \partial_{\rho} j^{\rho}_A(z) |  0 \rangle = -ig^2 \epsilon_{\mu} \epsilon'_{\nu} r_{\rho} \left. C^{\mu\nu\rho}(p,q,r) e^{irz} \right|_{r=-q-p}\]
+We compute $C^{\mu\nu\rho}(p,q,r)$ with Feynman diagrams. At the one-loop level, the contributing diagrams are exactly those we computed in previous subsection, except that the three vertex factors are now $\gamma^{\mu}$, $\gamma^{\nu}$ and $\gamma^{\rho}\gamma_5$ instead of $ig\gamma^{\mu}P_L$, $ig\gamma^{\nu}P_L$ and $ig\gamma^{\rho}P_L$. But, as we saw, the three $P_L$s can be combined into just one at the last vertex, and then this one can be replaced by $-\frac{1}{2}\gamma_5$ . Thus, the vertex function $iV^{\mu\nu\rho}(p,q,r)$ is related to $C^{\mu\nu\rho}(p,q,r)$ by
+\[iV^{\mu\nu\rho}(p,q,r) = -\frac{1}{2}(ig)^3 C^{\mu\nu\rho}(p,q,r) + O(g^5)\]
+We could choose a regularization scheme that
+preserved $p_{\mu}C^{\mu\nu\rho}(p,q,r) = 0$ and $q_{\nu}C^{\mu\nu\rho}(p,q,r) = 0$ but not also $r_{\rho}C^{\mu\nu\rho}(p,q,r) = 0$. This results in
+\[r_{\rho}C^{\mu\nu\rho}(p,q,r) = -\frac{i}{2\pi^2} \epsilon^{\mu\nu\alpha\beta} p_{\alpha} q_{\beta} + O(g^2)\]
+So, we have
+\[\langle p,q | j^{\rho}_A(z) |  0 \rangle  = - \frac{g^2}{2\pi^2} \epsilon^{\mu\nu\alpha\beta} p_{\alpha} q_{\beta} \epsilon_{\mu} \epsilon'_{\nu} e^{-i(p+q)z} + O(g^4) \]
+The right-hand side of the equation is exactly what we get in free-field theory for the matrix element of
+\[- \frac{g^2}{16\pi^2} \epsilon^{\mu\nu\rho\sigma}F_{\mu\nu}F_{\rho\sigma} + O(g^4) \]
+In the next section, we will see the relation is exact.
+
+\subsection{Anomalies and the path integral for fermions}
+We begin with the path integral over the Dirac field, with the gauge field treated as a fixed background, to be integrated later. We have
+\[Z(A) \equiv \int \mathcal{D}\Psi \mathcal{D}\overline{\Psi} e^{iS(A)}\]
+where
+\[S(A) \equiv \int d^4x \overline{\Psi}i\slashed{D}\Psi \]
+is the Dirac action, $i\slashed{D} = i\gamma^{\mu} D_{\mu}$
+is the Dirac operator, and
+\[D_{\mu} = \partial_{\mu} - igA_{\mu}\]
+is the covariant derivative. Here $A_{\mu}$ is either the $U(1)$ gauge field, or the matrix-valued nonabelian gauge field, depending on the theory under consideration.
+\\
+Now consider an axial $U(1)$ transformation of the Dirac field, but with a space-time dependent parameter $\alpha(x)$
+\[\Psi(x) \to e^{-i\alpha(x)\gamma_5}\Psi(x) \quad \overline{\Psi}(x) \to \overline{\Psi} e^{-i\alpha(x)\gamma_5}\]
+The corresponding change in the action is
+\[S(A) \to S(A) + \int d^4x j^{\mu}_A(x) \partial_{\mu}\alpha(x) = S(A) - \int d^4x \alpha(x) \partial_{\mu}j^{\mu}_A(x) \]
+If we assume that the measure $\mathcal{D}\Psi \mathcal{D}\overline{\Psi}$ is invariant under the axial $U(1)$ transformation, then we have
+\[Z(A) = \int \mathcal{D}\Psi \mathcal{D}\overline{\Psi} e^{iS(A)} e^{-i \int d^4x \alpha(x)\partial_{\mu}j^{\mu}_A(x) }\]
+This implies that $\partial_{\mu}j^{\mu}_A(x) = 0$ holds inside quantum correlation functions, up to contact terms.
+\\ \\
+However, the assumption that the measure $\mathcal{D}\Psi \mathcal{D}\overline{\Psi}$ is invariant under the axial $U(1)$ transformation must be examined more closely. The change of variable is implemented by the functional matrix
+\[J(x,y) = \delta(x-y)e^{-i\alpha(x)\gamma_5} \]
+Because the path integral is over fermionic variables (rather than bosonic), we get a jacobian factor of $(\det J)^{-1}$ (rather than $\det J$) for each of the transformations, so that we have
+\[\mathcal{D}\Psi \mathcal{D}\overline{\Psi} \to (\det J)^{-2}\mathcal{D}\Psi \mathcal{D}\overline{\Psi}\]
+Using $\log \det J = \mathrm{Tr} \log J$, we can write
+\[(\det J)^{-2} = \exp \left[2i \int d^4x \alpha(x) \mathrm{Tr}\delta(x-x)\gamma_5 \right]\]
+where the explicit trace is over spin and group indices. We regularize the delta function by
+\[\delta(x-y) \to e^{(i\slashed{D}_x)^2/M^2} \delta(x-y)\]
+The following calculation can be found in section 77 of \emph{Quantum Field Theory (Mark Srednichi)}. Here, we list the final result
+\[\mathrm{Tr} \delta(x-y)\gamma_5 \to - \frac{g^2}{32\pi^2} \epsilon^{\mu\nu\rho\sigma} \mathrm{Tr} F_{\mu\nu}F_{\rho\sigma}\]
+We then have
+\[Z(A) = \int \mathcal{D}\Psi \mathcal{D}\overline{\Psi} e^{iS(A)} e^{-i \int d^4x \alpha(x)[ \frac{g^2}{16\pi^2} \epsilon^{\mu\nu\rho\sigma} \mathrm{Tr} F_{\mu\nu}F_{\rho\sigma} \partial_{\mu}j^{\mu}_A(x)] }\]
+So
+\[\partial_{\mu} j^{\mu}_A = -\frac{g^2}{16\pi^2} \epsilon^{\mu\nu\rho\sigma} \mathrm{Tr} F_{\mu\nu}F_{\rho\sigma}\]
+is exact. This result is known as the Adler–Bardeen theorem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
