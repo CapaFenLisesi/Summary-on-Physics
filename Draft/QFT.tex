@@ -43,7 +43,7 @@
 \subsection{Nonabelian symmetries}
 Consider the theory of $N$ real scalar fields $\phi_i$
 \[\mathcal{L} = -\frac{1}{2}\partial_{\mu}\phi_i \partial^{\mu}\phi_i - \frac{1}{2}m^2\phi_i\phi_i - \frac{1}{16}\lambda(\phi_i\phi_i)^2\]
-This lagrangian is clearly invariant under the $SO(N)$ transformation
+This Lagrangian is clearly invariant under the $SO(N)$ transformation
 \[\phi_i(x) \to R_{ij}\phi_j(x)\]
 where $R$ is an orthogonal matrix with a positive determinant: $R^T = R^{-1}$ and $\det R = +1$.
 \\
@@ -67,7 +67,7 @@ The simplest nonabelian group is $SO(3)$. In this case, we can choose $T^a_{ij} 
 \noindent
 Consider now the theory of $N$ complex scalar fields $\phi_i$
 \[\mathcal{L} = -\partial_{\mu}\phi^{\dagger}_i \partial^{\mu}\phi_i - m^2\phi_i^{\dagger}\phi_i - \frac{1}{4}\lambda(\phi_i^{\dagger}\phi_i)^2\]
-This lagrangian is clearly invariant under the $U(N)$ transformation
+This Lagrangian is clearly invariant under the $U(N)$ transformation
 \[\phi_i(x) \to U_{ij}\phi_j(x)\]
 where $U$ is a unitary matrix, $R^{\dagger} = R^{-1}$. We can write $U_{ij} = e^{-i\theta} \widetilde{U}_{ij}$, where $\theta$ is a real parameter and $\det \widetilde{U} = 1$.
 $\widetilde{U}_{ij}$ is called a special unitary matrix.
@@ -85,11 +85,11 @@ For $SU(2)$, we can choose $T^a_{ij} = \frac{1}{2}\sigma^a_{ij}$. The commutatio
 \end{example}
 
 \subsection{Nonabelian gauge theory}
-Consider a lagrangian with $N$ scalar or spinor fields $\phi^i(x)$ that is invariant under a continuous $SU(N)$ symmetry,
+Consider a Lagrangian with $N$ scalar or spinor fields $\phi^i(x)$ that is invariant under a continuous $SU(N)$ symmetry,
 \[\phi_i(x) = U_{ij}\phi_j(x)\]
 It is called a global symmetry transformation, because the matrix $U$ does not depend on the space-time label $x$.
 \\
-If we want to generalize the symmetry of lagrangian to local transformation
+If we want to generalize the symmetry of Lagrangian to local transformation
 \[\phi_i(x) = U_{ij}(x)\phi_j(x)\]
 terms with derivatives, such as $\partial^{\mu}\psi^{\dagger} \partial_{\mu}\phi_i$, will not remain invariant under local transformation. 
 So we must include a traceless hermitian $N \times N$ gauge field $A_{\mu}(x)$, and promote ordinary derivatives $\partial_{\mu}$ to covariant derivatives $D_{\mu} = \partial_{\mu} - igA_{\mu}$ to ensure that
@@ -300,7 +300,7 @@ iV^{abcd}_{\mu\nu\rho\sigma} &=& -ig^2f^{abe} f^{cde} g_{\mu\rho}g_{\nu\sigma} +
 \end{figure}
 
 \noindent
-For loop calculations, we need to include the ghosts. The ghost lagrangian is
+For loop calculations, we need to include the ghosts. The ghost Lagrangian is
 \[\mathcal{L}_{gh} = -\partial^{\mu}\overline{c}^c \partial_{\mu}c^c + gf^{abc}A^a_{\mu}\partial^{\mu}\overline{c}^b c^c\]
 The ghost propagator is
 \[D_F(k) = \frac{-i\delta^{ab}}{k^2-i\epsilon}\]
@@ -315,7 +315,7 @@ Because the ghosts are complex scalars, their propagators carry a charge arrow.
 \noindent
 The ghost–ghost–gluon vertex factor is
 \[iV^{abc}_{\mu}(-iq_{\mu}) = gf^{abc}a_{\mu}\]
-If we include a quark coupled to the gluons, we have the quark lagrangian
+If we include a quark coupled to the gluons, we have the quark Lagrangian
 \[\mathcal{L}_{q} = i\overline{\Psi}_{i}\slashed{D}_{ij}\Psi_{j} - m\overline{\Psi}_{i}\Psi_{i} = i\overline{\Psi}_{i}\slashed{\partial}\Psi_{i} - m\overline{\Psi}_{i}\Psi_{i} + gA^a_{\mu}\overline{\Psi}_{i} \gamma^{\mu} T^a_{ij} \Psi_j \]
 
 \begin{figure}[!h]
@@ -402,7 +402,7 @@ where $D_{\mu} = \partial_{\mu} - igA^{a}_{\mu} T^a_R$.
 \\
 Since $T^a_R$ is a hermitian matrix, $i\psi^{\dagger} \overline{\sigma}^{\mu} D_{\mu} \psi$ is hermitian (up to a total divergence). We cannot include a mass term for $\psi$, though, because $\psi\psi$ transforms as $R \otimes R$, and $R \otimes R$ does not contain a singlet if $R$ is complex. Thus, $\psi\psi$ is not gauge invariant. 
 \\ \\
-Now we focus on the simplest possible example: a $U(1)$ theory with a single Weyl field $\psi$ with charge $+1$. The lagrangian is
+Now we focus on the simplest possible example: a $U(1)$ theory with a single Weyl field $\psi$ with charge $+1$. The Lagrangian is
 \[\mathcal{L} = i\psi^{\dagger} \overline{\sigma}^{\mu} (\partial_{\mu} - igA_{\mu}) \psi - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}\]
 We note that
 \[P_L \Psi = \begin{pmatrix}
@@ -455,7 +455,7 @@ Since $A(R) + A(\overline{R}) = 0$; thus a theory whose left-handed Weyl fields 
 For $SU(2)$ and $SO(N)$, $N \neq 2,6$ all representations have $A(R) = 0$. For $SU(N)$ with $N \geq 3$, the fundamental representation has $A(N) = 1$, and most complex $SU(N)$ representations $R$ have $A(R) \neq 0$. So the cancellation is nontrivial.
 
 \subsection{Anomalies in global symmetries}
-Let us consider electrodynamics with a massless Dirac field. The lagrangian is
+Let us consider electrodynamics with a massless Dirac field. The Lagrangian is
 \[\mathcal{L} = i\overline{\Psi}\slashed{D}\Psi - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}\]
 We can write $\Psi$ in terms of two left-handed Weyl fields $\chi$ and $\xi$ via
 \[\Psi = \begin{pmatrix}
@@ -463,7 +463,7 @@ We can write $\Psi$ in terms of two left-handed Weyl fields $\chi$ and $\xi$ via
 \end{pmatrix}\]
 In terms of $\chi$ and $\xi$, the Lagrangian is
 \[\mathcal{L} = i\chi^{\dagger}\overline{\sigma}^{\mu} (\partial_{\mu} - igA_{\mu})\chi + i\xi^{\dagger}\overline{\sigma}^{\mu} (\partial_{\mu} + igA_{\mu})\xi\]
-Because the fermion field is massless, the lagrangian is  invariant under a global symmetry in which $\chi$ and $\xi$ transform with the same phase
+Because the fermion field is massless, the Lagrangian is  invariant under a global symmetry in which $\chi$ and $\xi$ transform with the same phase
 \[\chi(x) \to e^{i\alpha}\chi(x) \quad \xi(x) \to e^{i\alpha}\xi(x)\]
 In terms of $\Psi$, this is
 \[\Psi(x) \to e^{-i\alpha\gamma_5}\Psi(x) \quad \overline{\Psi}(x) \to \overline{\Psi} e^{-i\alpha\gamma_5}\]
@@ -526,23 +526,251 @@ So
 \[\partial_{\mu} j^{\mu}_A = -\frac{g^2}{16\pi^2} \epsilon^{\mu\nu\rho\sigma} \mathrm{Tr} F_{\mu\nu}F_{\rho\sigma}\]
 is exact. This result is known as the Adler–Bardeen theorem.
 
+\section{Spontaneous breaking of gauge symmetries}
+Consider scalar electrodynamics, specified by the Lagrangian
+\[\mathcal{L} = -(D_{\mu}\phi)^{\dagger}D_{\mu}\phi - V(\phi) - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}\]
+where $\phi$ is a complex scalar field, $D_{\mu} = \partial_{\mu} - ieA_{\mu}$ , and
+\[V(\phi) = m^2\phi^{\dagger}\phi + \frac{1}{4}\lambda (\phi^{\dagger}\phi)^2\]
+Let us consider $m^2 < 0$. Classically, the field has a nonzero vacuum expectation value (VEV for short), given by
+\[\langle 0 | \phi(x) | 0 \rangle = \frac{1}{\sqrt{2}}v\]
+where we have made a global $U(1)$ transformation to set the phase of the VEV to zero, and
+\[v = \sqrt{\frac{4|m|^2}{\lambda}}\]
+We therefore write
+\[\phi(x) = \frac{1}{\sqrt{2}} (v + \rho(x)) e^{-i\chi(x)/v}\]
+where $\rho(x)$ and $\chi(x)$ are real scalar fields. The scalar potential depends only on $\rho$, and is given by
+\[V = \frac{1}{4}\lambda v^2\rho^2 + \frac{1}{4}\lambda v \rho^3 + \frac{1}{16}\lambda \rho^4\]
+Since $\chi$ does not appear in the potential, it is massless; it is the Goldstone boson for the spontaneously broken $U(1)$ symmetry.
+We can make a gauge transformation that shifts the phase of $\phi(x)$ by an arbitrary space-time function.
+We can use this gauge freedom to set $\chi(x) = 0$; this choice is called unitary gauge.
+We have
+\[-(D_{\mu}\phi)^{\dagger}D_{\mu}\phi = -\frac{1}{2}\partial^{\mu}\rho \partial_{\mu}\rho - \frac{1}{2}g^2(v+\rho)^2 A^{\mu}A_{\mu}\]
+We see that the gauge field now has a mass
+\[M = gv\]
+This is the Higgs mechanism: the Goldstone boson disappears, and the gauge field acquires a mass. Note that this leaves the counting of particle spin states unchanged: a massless spin-one particle has two spin states, but a massive
+one has three. The Goldstone boson has become the third or longitudinal state of the now-massive gauge field. A scalar field whose VEV breaks a gauge symmetry is generically called a Higgs field.
+\\ \\
+This generalizes in a straightforward way to a nonabelian gauge theory. Consider a complex scalar field $\phi$ in a representation $R$ of the gauge group.
+The kinetic term for φ is $-(D_{\mu}\phi)^{\dagger}D_{\mu}\phi$, where the covariant derivative is $D_{\mu}\phi_i = \partial_{\mu}\phi_i - igA^a_{\mu}(T^a_R)_{i}^{\phantom{i}j} \phi_j$ , and the indices $i$ and $j$ run from $1$ to $d(R)$.
+We assume that $\phi$ acquires a VEV
+\[\langle 0 | \phi_i(x) | 0 \rangle = \frac{1}{\sqrt{2}}v_i\]
+If we replace $\phi$ by its VEV in $-(D_{\mu}\phi)^{\dagger}D_{\mu}\phi$, we find a mass term for the gauge fields
+\[\mathcal{L}_{mass} = - \frac{1}{2}(M^2)^{ab}A^{a\mu}A^b_{\mu}\]
+where the mass-squared matrix is
+\[(M^2)^{ab} = g^2 v_i^* (T^a_R T^b_R)_{ij}v_j \]
+If the field $\phi$ is real rather than complex (which is possible only if $R$ is a real representation), then we remove the factor of root-two from the right-hand side of vacuum expectation value of $\phi$, but this is compensated by an extra factor of one-half from the kinetic term for a real scalar field; thus the form of mass-squared matrix remains invariant.
+\\
+We say a generator $T^a$ is spontaneously broken if $(T^a_R)_{ij}v_j \neq 0$. We see that gauge fields corresponding to broken generators get a mass, while those corresponding to unbroken generators do not. The unbroken generators (if any) form a gauge group with massless gauge fields. The massive gauge fields (and all other fields) form
+representations of this unbroken group.
+\\ \\
+Consider the gauge group $SU(N)$, with a complex scalar field $\phi$ in the fundamental representation. We can make a global $SU(N)$ transformation to bring the VEV entirely into the last component, and furthermore make it real. 
+Any generator $(T^a)_{i}^{\phantom{j}}$ that does not have a nonzero entry in the last column will remain unbroken. These generators form an unbroken $SU(N-1)$ gauge group. There are three classes of broken generators: those with $(T^a)_{i}^{\phantom{N}} = \frac{1}{2}$  for $i \neq N$ (there are $N-1$ of these); those with
+$(T^a)_{i}^{\phantom{N}} = -\frac{i}{2}$  for $i \neq N$ (there are also $N - 1$ of these), and finally the single
+generator $T^{N^2 - 1} = [2N(N-1)]^{-1/2} \mathrm{diag}(1,1,\cdots,-N-1)$. 
+\\
+The gauge fields corresponding to the generators in the first two classes get a mass $M = \frac{1}{2}gv$.
+we can group them into a complex vector field that transforms in the fundamental representation of the unbroken $SU(N-1)$ subgroup. The gauge field corresponding to $T^{N^2-1}$ gets a mass $M = [2N(N-1)]^{1/2}gv$; it is a singlet of $SU(N-1)$.
+\\ \\
+Consider the gauge group $SO(N)$, with a real scalar field in the fundamental representation. We can make a global $SO(N)$ transformation to bring the VEV entirely into the last component. Any generator $(T^a)_{i}^{\phantom{j}}$ that does not have a nonzero entry in the last column will remain unbroken. These generators form an unbroken $SO(N-1)$ subgroup. There are $N - 1$ broken generators, those with $(T^a)_{i}^{\phantom{N}} = -i$  for $i \neq N$. 
+The corresponding gauge fields get a mass $M = gv$; they form a fundamental representation of the unbroken $SO(N-1)$ subgroup.
+\\ \\
+Consider the gauge group $SU(N)$, with a real scalar field $\Phi$ a in the adjoint representation. It will prove more convenient to work with the $N \times N$ matrix-valued field $\Phi = \phi^a T^a$; the covariant derivative of $\Phi$ is $D_{\mu}\Phi = \partial_{\mu}\Phi - igA^a_{\mu}[T^a,\Phi]$,
+and the VEV of $\phi$ is a traceless hermitian $N \times N$ matrix $V$. Thus the mass squared matrix for the gauge fields is
+\[-2g^2 \mathrm{Tr}\left([T^a,V][T^b,V]\right)\]
+We can make a global $SU(N)$ transformation to bring $V$ into diagonal form. Suppose the diagonal entries consist of $N_1$ $v_1$s, followed by $N_2$ $v_2$s, etc.,
+where $v_1 < v_2 < \cdots$ and $\sum_i N_i v_i = 0$. 
+Then all generators whose nonzero entries lie entirely within the $i$th block commute with $V$, and hence form an
+unbroken $SU(N_i)$ subgroup. Furthermore, generators that is proportional to $V$ also commutes with $V$, and forms a
+$U(1)$ subgroup. Thus the unbroken gauge group is $SU(N_1)\times SU(N_2) \times \cdots \times U(1)$. The gauge coupling constants for the different groups are all the same, and equal to the original $SU(N)$ gauge coupling constant.
+\\ \\
+\begin{example}
+Consider the case of $SU(5)$, which has $24$ generators. Let the diagonal entries of $V$ be given by $(-\frac{1}{3},-\frac{1}{3},-\frac{1}{3}, \frac{1}{2}, \frac{1}{2})$. The unbroken subgroup is then $SU(3) \times SU(2) \times U(1)$. The number of broken generators is $24 - 8 - 3 - 1 = 12$.
+\end{example}
 
+\section{Quantization of spontaneously broken gauge theory}
+\subsection{Spontaneously broken abelian gauge theory}
+Consider scalar electrodynamics, specified by the Lagrangian
+\[\mathcal{L} = -(D_{\mu}\phi)^{\dagger}D_{\mu}\phi - V(\phi) - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}\]
+where $\phi$ is a complex scalar field, $D_{\mu} = \partial_{\mu} - ieA_{\mu}$. We choose
+\[V(\phi) = \frac{1}{4}\lambda (\phi^{\dagger}\phi - \frac{1}{2}v^2)^2\]
+which yields a nonzero VEV for $\phi$. We therefore write
+\[\phi = \frac{1}{\sqrt{2}}(v + h + ib)\]
+where $h$ and $b$ are real scalar fields. In terms of $h$ and $b$, the potential is
+\[V = \frac{1}{4}\lambda v^2 h^2 + \frac{1}{4}\lambda vh(h^2+b^2) + \frac{1}{16}\lambda (h^2+b^2)^2\]
+The covariant derivative term can be expanded as
+\begin{eqnarray}
+-(D_{\mu}\phi)^{\dagger}D_{\mu} = &-& \frac{1}{2}\partial_{\mu}h \partial^{\mu}h -  \frac{1}{2}\partial_{\mu}b \partial^{\mu}b - \frac{1}{2} g^2v^2A^{\mu}A_{\mu} + gv A^{\mu}\partial_{\mu}b \nonumber \\
+&+& gA^{\mu} (h\partial_{\mu}b - b\partial_{\mu}h) - gvhA^{\mu}A_{\mu} - \frac{1}{2}g^2(h^2+b^2)A^{\mu}A_{\mu} \nonumber
+\end{eqnarray}
+The first line contains all the terms that are quadratic in the fields. The first two are the kinetic terms for the $h$ and $b$ fields. The third is the mass term for the vector field. The fourth is an annoying cross term between the vector field and the derivative of $b$.
+\\ \\
+In abelian gauge theory, in the absence of spontaneous symmetry breaking, we fix gauge by adding to $\mathcal{L}$ the gauge-fixing and ghost terms
+\[\mathcal{L}_{gf} + \mathcal{L}_{gh} = - \frac{G^2}{2\xi} - \overline{c}\frac{\delta G}{\delta \theta} c \]
+where $G = \partial^{\mu}A_{\mu}$, and $\theta(x)$ parameterizes an infinitesimal gauge transformation
+\[A_{\mu} \to A_{\mu} - \partial_{\mu}\theta \quad \phi \to ig\theta\phi\]
+Since $\delta G / \delta \theta = - \partial^2$, the ghost fields have no interactions, and can be ignored.
+\\ \\
+In the presence of spontaneous symmetry breaking, we choose instead
+\[G = \partial^{\mu}A_{\mu} - \xi g\nu b\]
+which reduces to $\partial^{\mu}A_{\mu}$ when $v = 0$. Multiplying out $G^2$ , we have
+\[\mathcal{L}_{gf} = -\frac{1}{2\xi} \partial^{\mu}A_{\mu} \partial^{\nu}A_{\nu} - gvA_{\mu}\partial^{\mu}b - \frac{1}{2}\xi g^2v^2b^2\]
+Note that the second term cancels the annoying cross term between the vector field and the derivative of $b$. Also, the last term on the gives a mass $\sqrt{\xi}M$ to the $b$ field ( $M = gv$).
+\\ \\
+We must still evaluate $\mathcal{L}_{gh}$. To do so, we note under gauge transformation,
+\[h \to h + g\theta b \quad b \to b - g\theta(v+h)\]
+Then we have
+\[\frac{\delta G}{\delta \theta} = -\partial^2 + \xi g^2 v(v+h)\]
+The ghost Lagrangian is
+\[\mathcal{L}_{gh} = -\partial^{\mu}\overline{c}\partial_{\mu}c - \xi g^2v^2\overline{c}c - \xi g^2 vh\overline{c}c\]
+We see from the second term that the ghost has acquired the same mass as the $b$ field.
+\\ \\
+Now let us examine the vector field. Including $\mathcal{L}_{gh}$, the terms that are quadratic in the vector field can be written as
+\[\mathcal{L}_0 = - \frac{1}{2}A_{\mu} \left[ \eta^{\mu\nu}(-\partial^2 + M^2) + (1 - \xi)\partial^{\mu}\partial^{\nu} \right] A_{\nu}\]
+The propagator for vector field is
+\[S_F(k) = \frac{-iP^{\mu\nu}}{k^2+M^2-i\epsilon} + \frac{\xi k^{\mu}k^{\nu}/k^2}{k^2+ \xi M^2-i\epsilon}\]
+where $P^{\mu\nu} = g^{\mu\nu} - k^{\mu}k^{\nu}/k^2$ projects onto the transverse subspace. We see that the transverse components of the vector field propagate with mass $M$, while the longitudinal component propagates with the same mass as the $b$ and ghost fields, $\sqrt{\xi}M$.
+\\ \\
+Since their masses depend on $\xi$, the ghosts, the $b$ field, and the longitudinal component of the vector field must all represent unphysical particles that do not appear in incoming or outgoing states. When $\xi \to \infty$, we can recover the unitary gauge. The details can be found in section 76 of \emph{Quantum Field Theory (Mark Srednichi)}.
 
+\subsection{Spontaneously broken nonabelian gauge theory}
+It will be convenient to work with real scalar fields. We
+therefore decompose any complex scalar fields into pairs of real ones, and organize all the real scalar fields into a big list $\phi_i$, $i = 1,\cdots,N$. 
+These real scalar fields form a (possibly reducible) representation $R$ of the gauge group. Let $T^a$ be the gauge-group generator matrices; they are linear combinations of the generators of the $SO(N)$ group that rotates all components of $\phi_i$ into each other. Because these generators are hermitian and antisymmetric, so are the  $T^A$s. The Lagrangian for our theory can now be written as
+\[\mathcal{L} = -\frac{1}{2}D^{\mu}\phi D_{\mu}\phi - V(\phi) - \frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu}\]
+where
+\[(D_{\mu}\phi)_i = \partial_{\mu}\phi_i - ig_aA^a_{\mu}T^a_{ij}\phi_j\]
+is the covariant derivative.
+\\
+Now we suppose that the potential is minimized when $\phi$ has a VEV
+\[\langle 0 | \phi_i | 0 \rangle = v_i\]
+A generator $T^a$ is unbroken if $T^a_{ij}v_j = 0$, and broken if $T^a_{ij}v_j \neq 0$.
+\\ \\
+Each broken generator results in a massless Goldstone boson. We note that the potential must be invariant under a global gauge transformation, so
+\[\frac{\partial V}{\partial \phi_j} T^a_{jk}\phi_k = 0\]
+We differentiate it with respect to $\phi_i$ to get
+\[\frac{\partial^2 V}{\partial \phi_i \partial \phi_j} T^a_{jk}\phi_k + \frac{\partial V}{\partial \phi_j} T^a_{ji} = 0 \]
+Now set $\phi_i = v_i$; then $\frac{\partial V}{\partial \phi_i}$ vanishes. Also, we can identify
+\[(m^2)_{ij} = \left. \frac{\partial^2 V}{\partial \phi_i \partial \phi_j} \right|_{\phi_i = v_i}\]
+as the mass-squared matrix for the scalars (after spontaneous symmetry breaking). Thus we have
+\[(m^2)_{ij} (T^av)_j = 0\]
+We see that if $T^av \neq 0$, then $T^av$ is an eigenvector of the mass-squared matrix with eigenvalue zero. So there is a zero eigenvalue for every linearly independent broken generator.
+\\ \\
+Let us write
+\[\phi_i(x) = v_i + \chi_i(x)\]
+The covariant derivative of becomes
+\[(D_{\mu}\phi)_i = \partial_{\mu}\chi_i - ig_aA^a_{\mu}T^a_{ij}(v+\chi)_j\]
+It is now convenient to define a set of real antisymmetric matrices
+\[\tau^a_{ij} \equiv ig_aT^a_{ij}\]
+and the real rectangular matrix
+\[F^a_{\phantom{i}i} \equiv \tau^a_{ij}v_j\]
+We can now write
+\[(D_{\mu}\phi)_i = \partial_{\mu}\chi_i - A^a_{\mu}(F^a+\tau^a\chi)_i\]
+The kinetic term for $\phi$ becomes
+\begin{eqnarray}
+-\frac{1}{2}D^{\mu}\phi D_{\mu}\phi = &-& \frac{1}{2}\partial_{\mu}\chi_i \partial^{\mu}\chi_i - \frac{1}{2}(F^a_{\phantom{i}i} F^b_{\phantom{i}i})A^{a\mu}A^b_{\mu} + F^a_{\phantom{i}i} A^a_{\mu}\partial^{\mu}\chi_i \nonumber \\
+&+& A^a_{\mu}\chi_i \tau^a_{ij}\partial^{\mu}\chi_j - A^{a\mu}A^b_{\mu} F^a_{\phantom{i}i} \tau^b_{ij} \chi_j - \frac{1}{2}A^{a\mu}A^b_{\mu}\chi_i (\tau^a \tau^b)_{ij}\chi_j \nonumber
+\end{eqnarray}
+We see that the mass-squared matrix for the vector fields is
+\[(M^2)^{ab} = F^a_{\phantom{i}i} F^b_{\phantom{i}i} = (FF^T)^{ab}\]
+A theorem of linear algebra states that every real rectangular matrix can be written as
+\[F^a_{\phantom{i}i} = S^{ac}(M^c\delta^c_{\phantom{i}j})R_{ji}\]
+where $S$ and $R$ are orthogonal matrices, and the diagonal entries $M^c$ are real and nonnegative. We see that these diagonal entries are the masses of the vector fields. The vector fields of definite mass are then given by $\widetilde{A}^{a}_{\mu} = S^{ba}A^b_{\mu}$.
+\\ \\
+Now we are ready to fix $R_{\xi}$ gauge. To do so, we add to $\mathcal{L}$ the gauge-fixing and ghost terms
+\[\mathcal{L}_{gf} + \mathcal{L}_{gh} = - \frac{G^aG^a}{2\xi} - \overline{c}^a\frac{\delta G^a}{\delta \theta^b} c^b \]
+where we choose
+\[G^a = \partial^{\mu}A^a_{\mu} - \xi F^a_{\phantom{i}i} 
+\chi_i\]
+Then we have
+\[\mathcal{L}_{gf} = -\frac{1}{2\xi} \partial^{\mu}A^a_{\mu} \partial^{\nu}A^a_{\nu} - F^a_{\phantom{i}i} A^a_{\mu}\partial^{\mu}\chi_i - \frac{1}{2}\xi (F^a_{\phantom{i}i} F^a_{\phantom{i}j})\chi_i\chi_j\]
+The last term makes a contribution to the mass-squared matrix for the $\chi$ fields,
+\[\xi(M^2)_{ij} = \xi F^a_{\phantom{i}i} F^a_{\phantom{i}j} = \xi(F^TF)_{ij}\]
+The eigenvalues of this matrix are $\sqrt{\xi}M^a$ , where
+$M^a$ are the vector-boson masses. The mass-squared matrix $\xi M^2$ should be added to the mass-squared matrix $m^2$ that we get from the potential. We can verify that
+\[(m^2)_{ij}(\xi M^2)_{jk} = 0\]
+Thus these two contributions to the mass-squared matrix of the scalar fields live in orthogonal subspaces. The $m^2$ subspace consists of the physical, massive scalars, and the $\xi M^2$ subspace consists of the unphysical Goldstone bosons; these are the fields that would be set to zero in unitary gauge.
+\\ \\
+Finally, we must evaluate $\mathcal{L}_{gh}$. Under an infinitesimal gauge transformation, we have
+\[ A^a_{\mu} \to A^a_{\mu} - D^{\mu}_{ab}\theta^b \quad \chi_i \to \chi_i - \theta^a \tau^a_{ij}(v+\chi)_j \]
+Thus we have
+\[\frac{\delta G^a}{\delta \theta^b} = - D^{\mu}_{ab} + \xi(M^2)^{ab} + \xi F^a_{\phantom{i}j} \tau^b_{jk}\chi_k \]
+and so the ghost lagrangian is
+\[\mathcal{L}_{gh} = -\partial^{\mu} \overline{c}^a D_{\mu}^{ab} c^b - \xi (M^2)^{ab}\overline{c}^a c^b - \xi F^a_{\phantom{i}j} \tau^b_{jk}\chi_k \overline{c}^a c^b\]
+The ghost fields of definite mass are $\widetilde{c}^a = S^{ba}c^b$ and  $\widetilde{\overline{c}}^a = S^{ba}\overline{c}^b$.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\section{The Standard Model}
+\subsection{Gauge and Higgs sector}
+We begin with the electroweak part of the gauge group, $SU(2)\times U(1)$, and the complex scalar field $\phi$, known as the Higgs field, in the representation $(2,-\frac{1}{2})$. The Higgs field acquires a nonzero VEV that spontaneously breaks $SU(2)\times U(1)$ to $U(1)$; the unbroken $U(1)$ is identified as electromagnetism.
+We begin with the covariant derivative of the Higgs field $\phi$,
+\[(D_{\mu}\phi)_i = \partial_{\mu}\phi_i - i[g_2 A^a_{\mu}T^a + g_1B_{\mu}Y]_{i}^{\phantom{i}j} \phi_j\] where $T^a = \frac{1}{2}\sigma^a$ and $Y = -\frac{1}{2}I$; $Y$ is the hypercharge generator. It will prove
+useful to write out $g_2 A^a_{\mu}T^a + g_1B_{\mu}Y$ in matrix form,
+\[ \frac{1}{2} \begin{pmatrix}
+g_2A^3_{\mu}-g_1B_{\mu} & g_2(A^1_{\mu} - iA^2_{\mu}) \\
+g_2(A^1_{\mu} + iA^2_{\mu}) & -g_2A^3_{\mu}-g_1B_{\mu}
+\end{pmatrix}\]
+Now suppose that $\phi$ has a potential
+\[V(\phi) = \frac{1}{4}\lambda (\phi^{\dagger}\phi - \frac{1}{2}v^2)^2\]
+This potential gives $\phi$ a nonzero VEV. We can make a global gauge transformation to bring this VEV entirely into the first component, and furthermore make it real, so that
+\[\langle 0 | \phi | 0 \rangle =  \frac{1}{\sqrt{2}}\begin{pmatrix}
+v \\ 0
+\end{pmatrix} \]
+The kinetic term for $\phi$ is $-(D_{\mu}\phi)^{\dagger}D_{\mu}\phi$. After replacing $\phi$ by its $VEV$, we find a mass term for the gauge fields,
+\[\mathcal{L}_{mass}  = - \frac{1}{8}v^2 \begin{pmatrix}
+1 & 0 \end{pmatrix} \begin{pmatrix}
+g_2A^3_{\mu}-g_1B_{\mu} & g_2(A^1_{\mu} - iA^2_{\mu}) \\
+g_2(A^1_{\mu} + iA^2_{\mu}) & -g_2A^3_{\mu}-g_1B_{\mu}
+\end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \]
+Define the weak mixing angle
+\[\theta_W \equiv \tan^{-1}(g_1/g_2)\]
+and the fields
+\begin{eqnarray}
+W^{\pm}_{\mu} &\equiv & \frac{1}{\sqrt{2}} (A^1_{\mu} \mp iA^2_{\mu}) \nonumber \\
+Z_{\mu}  &\equiv & c_w A^3_{\mu} - s_w B_{\mu} \nonumber \\
+A_{\mu}  &\equiv & s_w A^3_{\mu} + c_w B_{\mu} \nonumber
+\end{eqnarray}
+In terms of these fields, we have
+\[\mathcal{L}_{mass} = -M_W^2 W^{+\mu} W^{-}_{\mu} - \frac{1}{2}M_Z^2 Z^{\mu}Z_{\mu}\]
+where we have identified
+\[M_W = \frac{g_2v}{2} \quad M_Z = \frac{M_W}{\cos\theta_W}\]
+Note that the $A_{\mu}$ field remains massless; this signifies that there is an unbroken $U(1)$ subgroup. We will identify this unbroken $U(1)$ with the gauge
+group of electromagnetism.
+\\ \\
+The two complex components of the $\phi$ field yield four real scalar fields; three of these become the longitudinal components of the $W^{\pm}$ and $Z^0$. The remaining scalar field must be able to account for shifts in the overall scale of $\phi$. Thus we can write, in unitary gauge,
+\[\phi(x) = \frac{1}{\sqrt{2}} \begin{pmatrix}
+v + H(x) \\ 0
+\end{pmatrix}\]
+where $H$ is a real scalar field; the corresponding particle is the Higgs boson. The potential now reads
+\[V = \frac{1}{4}\lambda v^2H^2 + \frac{1}{4}\lambda v H^3 + \frac{1}{16}\lambda H^4\]
+We see that the mass of the Higgs boson is given by $m_H^2 = \frac{1}{2}\lambda v^2$. The kinetic term for $H$ comes from the kinetic term for $\phi$, and is the usual one for a real scalar field, $-\frac{1}{2}\partial_{\mu}H \partial^{\mu}H$. Finally, recall that the mass term for the gauge fields is proportional to $v^2$. Hence it should be multiplied by a factor of $(1 + \frac{H}{v})^2$.
+\\ \\
+Now we have to work out the kinetic terms for the gauge fields. We have
+\[\mathcal{L} = -\frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu} - \frac{1}{4}B^{\mu\nu}B_{\mu\nu}\]
+We find
+\[\frac{1}{\sqrt{2}} (F^1_{\mu\nu} - iF^2_{\mu\nu}) = D_{\mu} W^+_{\nu} - D_{\nu}W^+_{\mu}\]
+\[\frac{1}{\sqrt{2}} (F^1_{\mu\nu} + iF^2_{\mu\nu}) = D_{\mu} W^-_{\nu} - D_{\nu}W^-_{\mu}\]
+where we have defined a covariant derivative that acts on
+$W^+$,
+\[D_{\mu} \equiv \partial_{\mu} - ig_2A^3_{\mu} = \partial_{\mu} - ig_2(s_WA_{\mu} + c_W Z_{\mu})\]
+If we identify $A_{\mu}$ as the electromagnetic vector potential, and assign electric charge $Q = +1$ (in units of the proton charge) to the $W^+$, then we must identify the electromagnetic coupling constant $e$ as
+\[e = g_2 \sin\theta_W\]
+Here we are adopting the convention that $e$ is positive. (In our treatment of quantum electrodynamics, we used the convention that $e$ is negative, but that is less convenient in the present context.)
+We also have
+\[F^3_{\mu\nu} = s_WF_{\mu\nu} + c_W Z_{\mu\nu} -ig_2(W_{\mu}^+ W_{\nu}^- - W_{\nu}^+ W_{\mu}^-)\]
+\[B_{\mu\nu} = c_WF_{\mu\nu} - s_W Z_{\mu\nu}\]
+where $F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}$ is the usual electromagnetic field strength, and
+\[Z_{\mu\nu} \equiv \partial_{\mu}Z_{\nu} - \partial_{\nu}Z_{\mu}\]
+is the abelian field strength associated with the $Z_{\mu}$ field.
+\\ \\
+Now we can assemble all of this into the complete Lagrangian for the electroweak gauge fields and the Higgs boson in unitary gauge. We will express $g_2$ in terms of $e$ and $\theta_W$, and $\lambda$ in terms of $m_H$ and
+$v$. We ultimately get
+\begin{eqnarray}
+\mathcal{L} = &-& \frac{1}{4} F_{\mu\nu}F^{\mu\nu} - \frac{1}{4} Z_{\mu\nu}Z^{\mu\nu} - D^{\dagger\mu}W^{-\nu}D_{\mu}W^{+}_{\nu} + D^{\dagger\mu}W^{-\nu}D_{\nu}W^{+}_{\mu} \nonumber \\
+&+& ie(F^{\mu\nu} + \cot\theta_W Z^{\mu\nu})W_{\mu}^+ W_{\nu}^- \nonumber \\
+&-& \frac{1}{2} \frac{e^2}{\sin^2\theta_W} (W^{+\mu}W_{\mu}^{-}W^{+\nu}W_{\nu}^{-} -W^{+\mu}W_{\mu}^{+}W^{-\nu}W_{\nu}^{-} ) \nonumber \\
+&-& (M_W^2 W^{+\mu} W^{-}_{\mu} + \frac{1}{2}M_Z^2 Z^{\mu}Z_{\mu})(1 + \frac{H}{v})^2 \nonumber \\
+&-& \frac{1}{2}\partial_{\mu}H \partial^{\mu}H  - \frac{1}{2}m_H^2 H^2  - \frac{1}{2}m_H^2 v^{-1} H^3 -  \frac{1}{8}m_H^2 v^{-2}H^4 \nonumber
+\end{eqnarray}
+where
+\[D_{\mu} = \partial_{\mu} -ie(A_{\mu} + \cot\theta_WZ_{\mu})\]
 
 
 
