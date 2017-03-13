@@ -114,15 +114,20 @@ Using the above convention, we can derive
 
 \section{Lagrangians for spinor fields}
 \subsubsection{Weyl field}
-\[\mathcal{L} = i \psi^{\dagger} \overline{\sigma}^{\mu} \partial_{\mu} \psi - \frac{1}{2}m \psi \psi - \frac{1}{2}m \psi^{\dagger} \psi^{\dagger}\]
+\[\mathcal{L} = i \psi^{\dagger} \overline{\sigma}^{\mu} \partial_{\mu} \psi \]
 \begin{note}
 \[(i \psi^{\dagger} \overline{\sigma}^{\mu} \partial_{\mu} \psi)^{\dagger} = i \psi^{\dagger} \overline{\sigma}^{\mu} \partial_{\mu} \psi - \partial_{\mu}(i \psi^{\dagger} \overline{\sigma}^{\mu} \psi)\]
 The second term is a total divergence, and vanishes (with suitable boundary conditions on the fields at infinity) when we integrate it over $d^4 x$ to get the action $S$. Thus $i \psi^{\dagger} \overline{\sigma}^{\mu} \partial_{\mu} \psi$  has the hermiticity properties necessary for a term in $\mathcal{L}$.
 \end{note}
 \noindent
 We can derive the equation of motion from Hamilton principle,
-\[-i\overline{\sigma}^{\mu} \partial_{\mu} \psi + m \psi^{\dagger} = 0\]
-\[-i\sigma^{\mu} \partial_{\mu} \psi^{\dagger} + m \psi = 0\]
+\[\overline{\sigma}^{\mu} \partial_{\mu} \psi = 0\]
+
+\subsubsection{Majorana field}
+If we add mass terms to the Lagrangian, we have
+\[\mathcal{L} = i \psi^{\dagger} \overline{\sigma}^{\mu} \partial_{\mu} \psi - \frac{1}{2}m \psi \psi - \frac{1}{2}m \psi^{\dagger} \psi^{\dagger}\]
+The equation of motion is
+\[-i\overline{\sigma}^{\mu} \partial_{\mu} \psi + m \psi^{\dagger} = 0 \quad -i\sigma^{\mu} \partial_{\mu} \psi^{\dagger} + m \psi = 0 \]
 Define gamma matrix as
 \[\gamma^{\mu} \equiv \left[ \begin{matrix} 0& \sigma^{\mu}_{a\dot{c}}\\ \overline{\sigma}^{\mu\dot{a}c}& 0\end{matrix} \right] \]
 We can prove that
@@ -402,7 +407,7 @@ Generally, we have
 \[C^{-1}(\overline{\Psi} A \Psi )C = \overline{\Psi} (\mathcal{C}^{-1} A^T \mathcal{C})\Psi\]
 
 \subsubsection{Summary}
-The transformation properties of the various fermion bilinears under $C$,$P$ and $T$ are summarized in the table below. Here we use the shorthand $(-1)^{\mu} \equiv = 1$ for $\mu =0$ and $(-1)^{\mu} \equiv = -1$ for $\mu=1,2,3$.
+The transformation properties of the various fermion bilinears under $C$,$P$ and $T$ are summarized in the table below. Here we use the shorthand $(-1)^{\mu} \equiv 1$ for $\mu =0$ and $(-1)^{\mu} \equiv  -1$ for $\mu=1,2,3$.
 
 \begin{figure}[!h]
 \centering
