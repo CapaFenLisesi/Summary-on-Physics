@@ -1,4 +1,3 @@
-- [ ] Introduction to gauge field theory [73, 75, 76, 77, 84, 87, 88, 89 (29, 82, 83, 90)]
 - [ ] Weak Gravitational Fields
 - [ ] Mass and Angular Momentum of A Gravitating System
 - [ ] Conservation Laws for 4-momentum and Angular Momentum
