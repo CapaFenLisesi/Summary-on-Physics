@@ -1,17 +1,420 @@
 \chapter{Thermodynamics}
+\section{Introduction to thermodynamics}
+A thermodynamic system is a macroscopic system whose behaviour is identified thanks to a small and finite number of quantities - the thermodynamic properties.
+\\
+There is a certain degree of circularity in the definition of thermodynamic parameters, which is resolved by experiment. One considers only a restricted set of manipulations on thermodynamic systems. In practice, one allows them to be put in contact with one another, or one acts upon them by changing a few macroscopic properties such as their volume or the electric or magnetic field in which they are immersed. One then identifies a number of properties such that, if they are known before the manipulation, their values after the manipulation can be predicted. The smallest set of properties that allows one to successfully perform such a prediction can be selected as the basis for a thermodynamic description of the system.
+\\ \\
+If the state of a thermodynamic system can be fully characterized by the values of the thermodynamic variables, and if these values are invariant over time, one says that it is in a state of thermodynamic equilibrium. Thermodynamic equilibrium occurs when all fast processes have already occurred, while the slow ones have yet to take place. Clearly the distinction between fast and slow processes is dependent on the observation time $\tau$ that is being considered.
+\\ \\
+A system can be shown to be in equilibrium if the observation time is fairly short, while it is no longer possible to consider it in equilibrium for longer observation times. A more curious situation is that the same system can be considered in equilibrium, but with different properties, for different observation times.
+\\ \\
+Let us consider two thermodynamic systems, 1 and 2, that can be made to interact with one another. Variables like the volume $V$, the number of particles $N$, and the internal energy $U$, whose value (relative to the total system) is equal to the sum of the values they assume in the single systems, are called additive or extensive.
+Strictly speaking, internal energy is not extensive, unless the interaction between 1 and 2 can be neglected.
+\\ \\
+\textbf{The fundamental hypothesis of thermodynamics is that it should be possible to characterize the state of a thermodynamic system by specifying the values of a certain set $(X_0, X_1, \cdots, X_r)$ of extensive variables. For example, $X_0$ could be the internal energy $U$, $X_1$ the number of particles $N$, $X_2$ the volume $V$ of the system, and so on.}
+\\
+The central problem of thermodynamics is that \textbf{given the initial state of equilibrium of several thermodynamic systems that are allowed to interact, determine the final thermodynamic state of equilibrium}.
+\\ \\
+The interaction between thermodynamic systems is usually represented by idealized walls that allow the passage of one (or more) extensive quantities from one system to the other.
+Among the various possibilities, the following are usually considered:
+\begin{itemize}
+\item \textbf{Thermally conductive walls} These allow the passage of energy, but not of volume or particles. 
+\item \textbf{ Semipermeable walls} These allow the passage of particles belonging to a given chemical species (and consequently also of energy)
+\end{itemize}
+The space of possible states of equilibrium (compatible with constraints and initial conditions) is called the space of virtual states. The initial state is obviously a (specific) virtual state. The central problem of thermodynamics can obviously be restated as follows:
+\\
+\textbf{Characterize the actual state of equilibrium among all virtual states.}
+
+\section{Entropy formulation of thermodynamics}
+\subsection{Property of entropy function}
+There exists a function S of the extensive variables $(X_0, X_1, \cdots, X_r)$, called the entropy, that assumes the maximum value for a state of equilibrium among all virtual states and that possesses the following properties:
+\begin{enumerate}
+\item \textbf{Extensivity}: If 1 and 2 are thermodynamic systems, then 
+\[ S^{(1 \cup 2)} = S^{(1)} + S^{(2)} \]
+\item \textbf{Convexity}: If $ X^1 = (X_0^1, X_1^1, \cdots, X_r^1)$ and $X^2 = (X_0^2, X_1^2, \cdots, X_r^2)$ are two thermodynamic states of the same system, then for any a between 0 and 1, one obtains
+\[ S[(1-\alpha)X^1 + \alpha X^2] \geq (1 - \alpha)S(X^1) + \alpha S(X^2) \]
+From this expression, if we take the derivative with respect to $\alpha$ at $\alpha = 0$, we obtain
+\[\left. \sum_{i=0}^{r} \frac{\partial S}{\partial X_i} \right|_{X^1} (X_i^2 - X_i^1) \geq S(X^2) - S(X^1) \]
+which expresses the fact that the surface $S(X_0, X_1, \cdots, X_r)$ is always below the plane that
+is tangent to each of its points. (We adpot the convention that convex means upper convex).
+\item \textbf{Monotonicity}: $S(U, X_1, \cdots, X_r)$ is a monotonically increasing function of the internal energy $U$:
+\[\left. \frac{\partial S}{\partial U} \right|_{X_1,\cdots,X_r} = \frac{1}{T} > 0\]
+\end{enumerate}
+The entropy postulate allows one to solve the central problem of thermodynamics, by referring it back to the solution of a constrained extremum problem:
+\textbf{The equilibrium state corresponds to the maximum entropy compatible with the constraints.}
+
+\subsection{Simple problems}
+\subsubsection{Thermal Contact}
+Let us consider two systems, 1 and 2, that are in contact by means of a thermally conductive wall. The virtual state space is therefore defined by the relations:
+\[U^{(1)} + U^{(2)} = U = \mathrm{const.}\]
+\[X^{(1)}_{i} = \mathrm{const}. \quad X^{(2)}_{i} = \mathrm{const.}. \quad r = 1,\cdots,r \quad \]
+Let us look for the maximum of $S$ as a function of $U^{(1)}$:
+\[\frac{\partial S}{\partial U^{(1)}} = \left. \frac{\partial S^{(1)}}{\partial U^{(1)}} \right|_{U^{(1)}} -  \left. \frac{\partial S^{(2)}}{\partial U^{(2)}} \right|_{U-U^{(1)}}\]
+If we denote the value of $U^{(1)}$ at equilibrium by $U^{(1)}_{\mathrm{eq}}$, then we have
+\[\left. \frac{\partial S^{(1)}}{\partial U^{(1)}} \right|_{U^{(1)}_{\mathrm{eq}}} =  \left. \frac{\partial S^{(2)}}{\partial U^{(2)}} \right|_{U^{(2)}_{\mathrm{eq}}}\]
+Due to entropy's convexity, we can futher derive that
+\[\left[ \left. \frac{\partial S^{(1)}}{\partial U^{(1)}} \right|_{U^{(1)}_{\mathrm{in}}} -  \left. \frac{\partial S^{(2)}}{\partial U^{(2)}} \right|_{U^{(2)}_{\mathrm{in}}}\right] (U^{(1)}_{\mathrm{eq}} - U^{(1)}_{\mathrm{in}}) \geq 0\]
+Let us introduce the quantity
+\[T = \left( \frac{\partial S}{\partial U} \right)^{-1}\]
+According to our hypotheses, this quantity is positive. We obtained the following results:
+\begin{itemize}
+\item At equilibrium, $T$ is the same in all subsystems that are in reciprocal contact by means of thermally conductive walls.
+\item In order to reach equilibrium, energy shifts from systems with higher values of $T$ toward systems with lower values of $T$.
+\end{itemize}
+Later, we will show that $T$ is the temperature of the system.
+
+\subsubsection{A Thermally Conductive and Mobile Wall}
+In this case, the two systems can also exchange volume $V$, in addition to internal energy $U$. If we introduce the quantity $p$ by
+\[\frac{p}{T} =  \frac{\partial S}{\partial V} \]
+The two equilibrium conditions are
+\[T^{(1)} = T^{(2)} \quad p^{(1)} = p^{(2)}\]
+One can easily prove that between two systems, both initially at the same temperature, volume is initially released by the system in which $p$ is lower to the system in which $p$ is higher. Later, we will show that $p$ is the pressure of the system.
+
+\subsubsection{A Semipermeable Wall}
+Let us consider a system composed of several chemical species, and let us introduce the number of molecules $N_1, \cdots, N_{r}$ belonging to the chemical species that constitute it as part of the thermodynamic variables. Let us suppose that two systems of this type are separated by a wall that only allows the $k$-th chemical species to pass. Clearly, it is impossible for the exchange of molecules to occur without an exchange of energy. If we introduce the quantity $\mu_i$ by
+\[\frac{\mu_i}{T} =  \frac{\partial S}{\partial N_i} \]
+The equilibrium conditions will therefore be
+\[T^{(1)} = T^{(2)} \quad \mu^{(1)} = \mu^{(2)}\]
+We will define $\mu_i$ as the chemical potential of the specie $i$.
+
+\subsection{Heat and Work}
+From mechanics (and from electromagnetism), we can derive an expression for the infinitesimal mechanical work performed on the system by varying the extensive quantities. One usually adopts a sign convention according to which work is considered positive if the system performs work on the outside. Following this convention, the expression of infinitesimal work is given by
+\[\delta W  =  -\sum_{i = 1}^{r} f_i dX_i\]
+On the one hand, we have
+\[dS = \frac{dU}{T} + \sum_{i = 1}^{r} \left. \frac{\partial S}{\partial X_i} \right|_{U,\cdots,X_r} dX_i\]
+It can be written as
+\[dU = TdS - \sum_{i = 1}^{r} \left. T \frac{\partial S}{\partial X_i} \right|_{U,\cdots,X_r} dX_i\]
+On the other hand, we have
+\[dU = \delta Q - \delta W\]
+So we can get
+\[\delta Q = TdS \quad \left. \frac{\partial S}{\partial X_i} \right|_{U,\cdots,X_r} = - \frac{f_i}{T}\]
+
+\subsubsection{Temperature}
+Let us consider a system made up of a thermal engine and two heat reservoirs with $T_1 > T_2$. A heat reservoir is a system for which $T$ is independent of $U$. The whole compound system is enclosed in a container that allows it to exchange energy with the environment only in a purely mechanical way. 
+\\
+Let the system evolve from an initial equilibrium condition, in which the first heat reservoir has internal energy $U_1$, the second has internal energy $U_2$ , and the thermal engine is in some equilibrium state, to a final equilibrium state in which the first heat reservoir has internal energy $U'_1$, the second has $U'_2$. So $W = (U_1 + U_2 ) - (U'_1 + U'_2)$, and the thermal engine is back to its initial state. By definition, the efficiency of the engine is given by $\eta = \frac{W}{U_1 - U'_1}$.
+\\
+In a transformation of this kind, the total entropy of the compound system cannot become smaller. Thus, we have
+\[S^{(1)}(U_1) + S^{(2)}(U_2) \leq S^{(1)}(U'_1) + S^{(2)}(U'_2)\]
+On the other hand, since we are dealing with heat reservoirs, we have
+\[S^{(i)}(U'_i) = S^{(i)}(U_i) + \frac{U'_i - U_i}{T_i} \quad i = 1,2\]
+Thus, we have
+\[\frac{U_1 - U'_1}{T_1} \leq \frac{U'_2 - U_2}{T_2}\]
+Therefore,
+\[\eta \leq 1 - \frac{T_2}{T_1}\]
+Compared with the maximum efficiency evaluated in elementary thermodynamics, we can conclude that $T$ is the absolute temperature, up to an overall factor, which can be fixed to $1$ by rescaling the $S$. 
+
+\subsubsection{Pressure}
+Let us consider an infinitesimal variation of $V$. In this case, mechanics tells us that the work performed by the system is given by $\delta W = PdV$. So we have
+\[\left. \frac{\partial S}{\partial V} \right|_{U,\cdots,X_r} = \frac{P}{T}\]
+This allows us to identify the pressure $P$ with the quantity $p$ we defined previousl.
+
+
+\subsubsection{The Fundamental Equation}
+The equation
+\[S = S(X_0 = U, X_1, \cdots, X_r)\]
+is called the fundamental equation, and it represents a complete description of the thermodynamics of the system being considered.
+
+\section{Thermodynamic potential}
+\subsection{Energy Scheme}
+We can also use a different (but equivalent) formulation of the fundamental principle of thermodynamics, in which entropy assumes the role of an independent variable, while energy becomes a dependent variable that satisfies a variational principle. This formalism is known as the energy scheme. In this formalism, the maximum entropy principle is replaced by the principle of minimum internal energy:
+\\ 
+\textbf{Among all states with a specific entropy value, the state of equilibrium is that in which internal energy is minimal.}
+\\ \\
+Let $\Delta X$ be a virtual variation of the extensive variables (excluding internal energy $U$) with respect to the equilibrium value $X_{\mathrm{eq}}$. Then
+\[\Delta S = S(U,X_{\mathrm{eq}} + \Delta X) - S(U,X_{\mathrm{eq}} ) \leq 0\]
+Since $S$ is a monotonically increasing function of $U$, there exists a value $U' > U$ such that $S(U',X_{\mathrm{eq}} + \Delta X) = S(U, X_{\mathrm{eq}})$. Therefore, if $S$ is kept constant, as the system moves out of equilibrium, $U$ cannot but increase. This is what we wanted to prove.
+\\
+Therefore, the fundamental equation in the energy scheme is
+\[U = U(S,X_1,\cdots,X_r)\]
+$U$'s differential assumes the form
+\[dU = TdS + \sum_{i=1}^r f_i dX_i\]
+Further more, we can derive that
+\[ U[(1-\alpha)Y^1 + \alpha Y^2] \leq (1 - \alpha)U(Y^1) + \alpha U(Y^2) \]
+which implies that the internal energy function is concave.
+
+\subsection{Intensive Variables and Thermodynamic Potentials}
+The derivatives $f_i = \frac{\partial U}{\partial X_i}$ of the internal energy $U$ with respect to extensive quantities $S$, $\{X_i\}$ are called intensive quantities. For uniformity's sake, we define $f_0 \equiv \frac{\partial U}{\partial X_i} = T$. A given quantity $f_i$ is called the conjugate of the corresponding variable $X_i$, and vice versa. The temperature $T$ and entropy $S$ are therefore conjugates, as are the pressure (with the opposite sign) $-P$ and the volume $V$.
+\\ \\
+Since both $U$ and $X_i$ are extensive, in a homogeneous system, intensive variables are not dependent on system size. Moreover, if a system is composed of several subsystems that can exchange the extensive quantity $X_i$, the corresponding intensive variable $f_i$ assumes the same value in those subsystems that are in contact at equilibrium.
+\\
+We now want to identify the state of equilibrium among all states that exhibit a given value of an intensive variable $f_i$. Specifically, for $i = 0$, we are confronted with the case of system with a fixed temperature, i.e. heat reservoir.
+\\ \\
+Let us now define the Helmholtz free energy $F(T,X) $ by the relation
+\[F(T,X) = U(S(T,X),X) - TS(T,X)\]
+where $X = \{ X_1,\cdots,X_r\}$.
+We can then show that the thermodynamical equilibrium in these conditions is characterized by the following variational principle:
+\\
+\textbf{The value of the Helmholtz free energy is minimal for the equilibrium state among all virtual states at the given temperature $T$.}
+\\ \\
+Let us now consider more generally the Legendre transform of the internal energy $U$ with respect to the intensive variable $f_i$:
+\[\Phi(S,f_1,X_2,\cdots,X_r) = U(S,X_1(S,f_1,X_2,\cdots,X_r),X_2,\cdots,X_r) - f_1 X_1 (S,f_1,X_2,\cdots,X_r)\]
+where $X_1(S,f_1,X_2,\cdots,X_r),X_2,\cdots,X_r)$ is determined by the condition
+\[f_1 =\left. \frac{\partial U}{\partial X_1} \right |_{S,X_2,\cdots,X_r}\]
+Then, the state of equilibrium is specified by the following criterion:
+\\
+\textbf{Among all the states that have the same value as $f_1$, the state of equilibrium is that which corresponds to the minimum value of $\Phi$.}
+\\ \\
+Let us observe that the partial derivative of $\Phi$, performed with respect to $f_1$, with the other extensive variables kept fixed, yields the value of the extensive variable $X_1$:
+\[ \left. \frac{\partial \Phi}{\partial f_1} \right|_{S,X_2,\cdots,X_r} = -X_1(S,f_1,X_2,\cdots,X_r)\]
+\\ \\
+Nothing prevents us from considering two or more intensive variables as fixed—for example, $f_0 = T$ and $f_1$. Similar considerations will then lead us to introduce the thermodynamic potential $\Phi(T,f_1,X_2,\cdots,X_r)$, obtained as a Legendre transform of $U$ with respect to $S$ and $X_1$:
+\[\Phi(T,f_1,X_2,\cdots,X_r) = U - TS - f_1X_1\]
+\\
+This thermodynamic potential assumes at equilibrium the minimum value among all the states with the same values of $T$ and $f_1$. We can therefore obtain a whole series of thermodynamic potentials, by using a Legendre transform with respect to the extensive variables $X_i$. We cannot however eliminate all extensive variables in this manner. We will see later that if we did this, the resulting thermodynamic potential would identically vanish. For the time being, it is sufficient to observe that the $\Phi$ potentials are extensive quantities, and one cannot see how they could be a function only of intensive quantities like the $f_i$.
+\\
+A general thermodynamic potential
+\[\Phi(S,f_1,\cdots,f_k,X_{k+1},\cdots,X_r) = U - \sum_{i = 1}^{k} f_i X_i\]
+is concave as a function of the remaining extensive variables, for fixed values of the intensive variables $f_1,\cdots,f_k$.
+$\Phi$ on the other hand is convex as a function of the intensive variables $f_i$s, when the extensive variables are fixed.
+
+\subsection{Free Energy and Maxwell Relations}
+The natural variables of $F$ are the temperature $T$ and the extensive variables $X_1,\cdots,X_r$, entropy excluded. Entropy can be obtained by taking the derivative of $F$ with respect to $T$. The expression for the differential of $F$ is
+\[dF = -SdT + \sum_{i = 1}^{r} f_i dX_i\]
+More specifically, by setting $X_1 = V$, one has
+\[-P =\left. \frac{\partial F}{\partial V} \right|_{T,X_2,\cdots,X_r}\]
+If we now take this equation's derivative with respect to $T$ and we use the theorem of the equality of mixed derivatives, we obtain
+\[\left. -\frac{\partial P}{\partial T} \right|_{V,X_2,\cdots,X_r} = -\frac{\partial^2 F}{\partial T \partial V} = \left. -\frac{\partial S}{\partial V} \right|_{T,X_2,\cdots,X_r}\]
+These relations between thermodynamic derivatives that derive from the equality of mixed derivatives of thermodynamic potentials are called Maxwell relations.
+\\
+The free energy designation is derived from the following property. If a system is put in contact with a reservoir at temperature $T$, we can prove the maximum quantity of work $W_{\mathrm{max}}$ that it can perform on its environment is equal to the variation in free energy between the initial and final states. In other words, one has
+\[W \leq F_{\mathrm{in}} - F_{\mathrm{fin}}\]
+
+\subsection{Gibbs Free Energy and Enthalpy}
+Transforming $F$ according to Legendre with respect to $V$, we obtain a new thermodynamic potential, called the Gibbs free energy:
+\[G(T,P,X_2,\cdots,X_r) = F + PV = U - TS - PV\]
+The variational principle satisfied by the Gibbs free
+energy is the following:
+\\
+\textbf{Among all states that have the same temperature and pressure values, the state of equilibrium is that in which the Gibbs free energy assumes the minimum value.}
+\\
+$G$'s differential is expressed as follows:
+\[dG = -SdT + VdP + \sum_{i=2}^r f_i dX_i \]
+We can prove that if a system is brought toward equilibrium while temperature and pressure are kept constant, the maximum work that can be performed on its environment is given precisely by the difference between the initial and final values of $G$.
+\\ \\
+If on the other hand, we Legendre transform the internal energy $U$ with respect to $V$, we obtain a new thermodynamic potential, usually denoted by H and called enthalpy:
+\[H(S,P,X_2,\cdots,X_r) = U + PV\]
+Enthalpy governs the equilibrium of adiabatic processes that occur while pressure is constant:
+\\
+\textbf{Among all states that have the same entropy and pressure values, the state of equilibrium is the one that corresponds to the minimum value of enthalpy.}
+\\ \\
+If a system relaxes toward equilibrium while the pressure is kept constant, the maximum heat that can be produced by the system is equal to its variation in enthalpy. For this reason, enthalpy it is also called free heat.
+The differential of $H$ is given by
+$dH = TdS + VdP + \sum_{i=2}^r f_i dX_i$
+\\ \\
+The equality of the mixed derivatives of $G$ and $H$ yield two more Maxwell relations:
+\[\left. -\frac{\partial S}{\partial P} \right|_{T,X_2,\cdots,X_r} = \left. \frac{\partial V}{\partial T} \right|_{P,X_2,\cdots,X_r}\]
+
+\[\left. \frac{\partial T}{\partial P} \right|_{S,X_2,\cdots,X_r} = \left. \frac{\partial V}{\partial S} \right|_{P,X_2,\cdots,X_r}\]
+
+\subsection{Other Thermodynamic Potentials}
+The Legendre transform of $F$ with respect to $N$ produces a thermodynamic potential (often written as $\Omega$) that depends on $T$, on volume $V$, on chemical potential $\mu$, and on the other extensive variables:
+\[\Omega(T,V,\mu) = F - \mu N\]
+Its differential is expressed as follows:
+\[d\Omega = -SdT - PdV - Nd\mu\]
+If one transforms $U$ instead, one obtains a rarely used potential that depends on $S$, $V$, and $\mu$, which we will designate as $\Phi$:
+\[\Phi(S,V,\mu) = U - \mu N\]
+Its differential is given by
+\[d\Phi = TdS - PdV - Nd\mu\]
+We have the following Maxwell relations
+\[\left. \frac{\partial S}{\partial \mu} \right|_{T,V} = \left. \frac{\partial N}{\partial T} \right|_{\mu,V}\]
+\[\left. \frac{\partial S}{\partial N} \right|_{T,V} = - \left. \frac{\partial \mu}{\partial T} \right|_{N,V}\]
+
+\section{The Euler and Gibbs-­Duhem Equations}
+\[U(\lambda S, \lambda X_1, \cdots, \lambda X_r) = \lambda U(S,X_1,\cdots,X_r)\]
+By taking the derivative of this equation with respect to $\lambda$ and setting $\lambda = 1$, we obtain the Euler equation
+\[TS + \sum_{i=1}^{r} f_i X_i = U\]
+More particularly, for simple fluids, one obtains
+\[U = TS - PV + \mu N\]
+which among other things implies that
+\[\mu = (U - TS + PV)/N = G/N\]
+\[\Omega = U - TS - \mu N = -PV\]
+More particularly, from the Euler equation, it follows that the Legendre transform of $U$ with respect to all extensive variables vanishes identically. Let us note that the interpretation of the chemical potential as a per particle density of Gibbs free energy is valid only in the case of simple fluids—in the case of a mixture of several chemical species, it is no longer valid.
+If we take the Euler equation's differential, we obtain
+\[dU = TdS + SdT + \sum_{i=1}^r f_idX_i + X_i df_i\]
+By subtracting both sides of this equation from the usual expression of $dU$, we obtain the Gibbs-­Duhem equation:
+\[SdT + \sum_{i=1}^{r}X_idf_i = 0\]
+In the case of simple fluids, for example, one arrives at
+\[SdT -VdP + Nd\mu = 0\]
+By dividing with respect to the number of particles $N$, one obtains the Gibbs-­Duhem equation in the form
+\[d\mu = vdP -sdT\]
+where $v$ represents volume per particle and $s$ entropy per particle.
+\\ \\
+Relations between the densities and the intensive variables obtained by deriving the fundamental equation are called equations of state.
+If, for example, we consider the Gibbs free energy for a simple fluid, we arrive at
+\[ V = \left. \frac{\partial G}{\partial P} \right|_{T,N}\]
+from which we obtain
+\[v = \frac{V}{N} = v(P,T)\]
+where we have made use of the fact that $G$ is extensive, and therefore proportional to $N$.
+In the case of the simple fluid, we have another independent equation of state:
+\[s = \frac{S}{N} = -\frac{1}{N}  \left. \frac{\partial G}{\partial T} \right|_{P}\]
+which expresses the entropy per particle $s$ as a function of $P$ and $T$. In reality, the two equations of state are not completely independent, because of the Maxwell relations:
+\[\left. -\frac{\partial s}{\partial P} \right|_{T} = \left. \frac{\partial v}{\partial T} \right|_{P}\]
+The ideal gas is a simple fluid that satisfies the equation of state
+\[P = \frac{NT}{V}\]
+Maxwell relations allow us to prove that in an ideal gas, the internal energy only depends on $N$ and $T$ (and not on the volume $V$). Moreover, entropy is the sum of a term that depends only on $T$ with one that depends only
+on $V$.
+
+\section{Thermodynamic systems with multi-components}
+\subsection{Chemical Reactions}
+Let us now consider a mixture of $r$ chemical species, $A_1,\cdots,A_r$ , which can be transformed into one other by a reaction of the following type:
+\[\nu_1A_1+\cdots+\nu_kA_k　\leftrightarrows　\nu_{k+1}A_{k+1}+\cdots+\nu_rA_r\]
+We can conventionally assign negative stoichiometric coefficients to the products, so as to write this formula as a formal equation:
+\[\sum_{i=1}^r \nu_iA_i = 0\]
+If temperature and pressure are kept fixed, we can calculate the variation of Gibbs free energy for a certain variation in the number of particles due to the reaction
+\[\delta G = \sum_i \left. \frac{\partial G}{\partial N_i} \right|_{P,T} \delta N_i \propto \sum_i \left. \frac{\partial G}{\partial N_i} \right|_{P,T} \nu_i = \sum_{i} \mu_i\nu_i\]
+Since at equilibrium one must have $\delta G = 0$ for any virtual variation of the $N_i$, one will have
+\[\sum_{i} \mu_i\nu_i = 0\]
+where the stoichiometric coefficients $\nu_i$ are taken with their corresponding signs.
+
+\subsection{Phase Coexistence}
+It frequently happens that two systems characterized by different thermodynamic density values can maintain thermodynamic equilibrium even in the absence of constraints on the mutual exchange of extensive quantities. This situation is called phase coexistence.
+\\
+In the case of a simple fluid, it is realized, for example, when a liquid coexists with its vapor inside a container. In this case, the intensive variables assume the same value in both systems, while densities assume different values. In these cases, we refer to each of the coexisting homogeneous systems as a phase.
+\\
+One can describe phase coexistence by saying that the equation of state
+\[v = v(P,T)\]
+does not admit of a unique solution, but instead allows for at least the two solutions $v = v_{\mathrm{liq}}$ and $v = v_{\mathrm{vap}}$ which correspond to the liquid and vapor, respectively.
+\\
+Since the liquid and vapor coexist and can exchange particles, the chemical potential of the liquid has to be equal to that of the vapor:
+\[\mu_{\mathrm{liq}}(P,T) = \mu_{\mathrm{vap}}(P,T)\]
+On the other hand, we know that for a simple fluid, the chemical potential is equal to the Gibbs free energy per particle. We can verify that the Gibbs free energy in the total system does not depend on the number of particles that make up the liquid and the vapor system:
+\[G= G_{\mathrm{liq}} + G_{\mathrm{vap}} = N_{\mathrm{liq}}\mu_{\mathrm{liq}} + N_{\mathrm{vap}}\mu_{\mathrm{vap}} = (N_{\mathrm{liq}}+N_{\mathrm{vap}})\mu = N\mu\]
+The volume per particle of the system is given by
+\[v = \frac{V_{\mathrm{liq}}+V_{\mathrm{vap}}}{N} = \frac{N_{\mathrm{liq}}v_{\mathrm{liq}} + N_{\mathrm{vap}}v_{\mathrm{vap}}}{N} = x_{\mathrm{liq}}v_{\mathrm{liq}}+x_{\mathrm{vap}}v_{\mathrm{vap}}\]
+where $x_{\mathrm{liq}}$ is the fraction of particles in the liquid and $x_{\mathrm{vap}} = 1 - x_{\mathrm{liq}}$ that of the particles in the vapor. As a consequence, the value of $v$ lies somewhere between $v_{\mathrm{liq}}$ and $v_{\mathrm{vap}}$.
+
+\subsection{The Clausius-­Clapeyron Equation}
+If we consider a thermodynamic system as a function of its intensive variables, we can identify some regions in which the thermodynamic properties vary regularly with variations of their values. These regions represent thermodynamically stable phases and are limited by curves that represent phase transitions. The phase transitions can be discontinuous, like the phase coexistence we just discussed, or continuous. In the first case, the densities present a discontinuity at the transition, while in the second, they vary with continuity, even though their derivatives can exhibit some singularities. One often also employs the following terminology: discontinuous transitions are called first order transitions, while continuous ones are called second order transitions.
+\\
+In the case of a simple fluid, it is possible to identify the transition curve within the plane of the intensive variables $(P,T)$ - in other words, the curve $P= P_t(T)$ - from the condition of equality of the chemical potential $\mu$ between the two coexisting phases:
+\[\mu_{\mathrm{liq}}(P_t(T),T) = \mu_{\mathrm{vap}}(P_t(T),T)\]
+The pressure $P_t(T)$ at which the transition occurs is also called vapor pressure. It is possible to relate this curve locally with the discontinuity of densities at transition. To obtain this relation, let us take the total derivative of this equation with respect to $T$, along the transition line $P_t(T)$. We obtain
+\[\left. \frac{\partial \mu_{\mathrm{liq}}}{\partial P} \right|_{T} \frac{dP_t}{dT} + \left. \frac{\partial \mu_{\mathrm{liq}}}{\partial T} \right|_{P} = \left. \frac{\partial \mu_{\mathrm{vap}}}{\partial P} \right|_{T} \frac{dP_t}{dT} + \left. \frac{\partial \mu_{\mathrm{vap}}}{\partial T} \right|_{P}\]
+Therefore,
+\[\frac{dP_t}{dT} = \frac{s_{\mathrm{vap}}-s_{\mathrm{liq}}}{v_{\mathrm{vap}}-v_{\mathrm{liq}}}\]
+This equation, which can be applied to each case of phase coexistence, is called the Clausius - Clapeyron equation.
+
+\subsection{The Coexistence Curve}
+We can represent the phase diagram in the plane $(v,T)$, in which the intensive variable $T$ is accompanied by the density $v$, the volume per particle. In this manner, phase coexistence is represented by the existence of a forbidden region $v_{\mathrm{liq}}(T) < v < v_{\mathrm{vap}}(T)$ in the plane. Outside this region, it is possible to obtain any given value of $v$ in a homogeneous system. Within this region, instead, the system separates into a liquid and a vapor phase. The $x_{\mathrm{liq}}$ fraction of particles in the liquid phase (and the analogous fraction in the vapor phase) are determined by the condition that the entire system's volume per particle be equal to $v$. One thus obtains
+\[x_{\mathrm{liq}} = \frac{v_{\mathrm{vap}}-v}{v_{\mathrm{vap}}-v_{\mathrm{liq}}}\]
+This result is known as the lever rule.
+
+\subsection{Coexistence of Several Phases}
+Let us now consider a mixture of particles belonging to $r$ different chemical species. Let us suppose that we are looking for the coexistence of $q$ phases. At equilibrium, all the intensive variables must assume the same value in the coexisting phases. We will therefore have a specific value for the pressure and the temperature, and in addition the chemical potential of each species will have to assume the same value in all the different phases. If we denote the chemical potential of species $i$ in phase $\alpha$ as $\mu_i^{\alpha}$ , we will then have
+\[\mu_{i}^{\alpha} = \mu_i \quad i = 1,\cdots,r \quad \alpha = 1,\cdots,\]
+In this equation, $\mu_i$ is the shared value taken by the chemical potential of species $i$. We
+thus obtain $r(q-1)$ equations for $q(r-1)+2$ unknown values. These unknown values are $P$, $T$, and the $q(r-1)$ independent densities $x_i^{\alpha}$ of species $i$ in phase $\alpha$. Generically speaking, therefore, $f = 2 - q + r$ free parameters remain. For $f = 0$, coexistence will occur in isolated points of the phase diagram, for $f = 1$, along a line, and so on. The quantity $f$ is called variance.  It is called the Gibbs phase rule.
+
+\subsection{The Critical Point}
+Let us once again consider the simple fluid and observe that the coexistence of liquid and vapour cannot be obtained for temperatures higher than a certain temperature $T_c$, called the critical temperature. To be more precise, the transition curve ends at a point $(P_c,T_c)$, where $P_c$ is the critical pressure. For $T < T_c$, the difference $v_{\mathrm{vap}}-v_{\mathrm{liq}}$ tends continuously toward zero when $T$ gets close to $T_c$ - the discontinuity of thermodynamic densities tends to vanish, or in other words, the transition goes from being discontinuous to being continuous (and finally to disappear at higher temperatures).
+\\
+The critical point is a thermodynamic state with exceptional properties. For example, since for $T < T_c$ and $P = P_t(T)$ one gets $\partial P / \partial V |_{T} = 0$ (within the coexistence curve), this relation must ultimately be valid also at the critical point - in other words, the system's compressibility diverges:
+\[\chi = - \frac{1}{V} \left. \frac{\partial V}{\partial P} \right|_{T} \to \infty \mbox{ for } T \to T_c \]
+Various thermodynamic properties exhibit analogous singularities.
 
 \chapter{Principles of Statistical Mechanics and Ensembles}
 \section{Density matrix}
-\section{Micro-canonical ensemble}
-\section{Canonical ensemble}
-\section{Grand-canonical ensemble}
-\section{Quantum statistics and Classical statistics}
+In quantum mechanics, the state of a system is a vector in Hilbert space, denoted as $|\psi\rangle$. A physical observable is an operator on this Hilbert space, denoted as $O$. The expectation value of the measurement of the observable is $\langle \psi | O | \psi \rangle$. It is easy to verify that
+\[\langle \psi | O | \psi \rangle = \mathrm{Tr}(| \psi \rangle \langle \psi | O)\]
+Now, consider a system whose space of states is the direct product of two subspace, i.e.
+\[\mathcal{H} = \mathcal{H}_A \otimes \mathcal{H}_B\]
+An arbitrary state can be decomposed as
+\[|\psi\rangle = C_{iI}|i\rangle_A \otimes |I\rangle_B\]
+So, we have
+\[| \psi \rangle \langle \psi | = C_{iI}C^*_{jJ} |i,I\rangle \langle j,J |\]
+We define the partial trace of $| \psi \rangle \langle \psi |$ on B as
+\[\mathrm{Tr}_B (| \psi \rangle \langle \psi |) \equiv \sum_{I} C_{iI}C^*_{jI} |i\rangle \langle j |\]
+It is an operator on $\mathcal{H}_A$. 
+Now, suppose there is an observable which measures only on A, i.e.
+\[\langle i,I | O | j,I \rangle = \delta_{IJ} \langle i | O_A | j \rangle\]
+where $O_A$ is an operator on $\mathcal{H}_A$. We can verify that
+\[\langle \psi | O | \psi \rangle = \mathrm{Tr}(| \psi \rangle \langle \psi | O) = \mathrm{Tr}_A \left[\mathrm{Tr}_B (| \psi \rangle \langle \psi |) O_A   \right]\]
+Now, if we take A as the system and B the environment, a piratical observable measures only on system. For any system which is coupled to environment, its state can be described by an operator
+\[\rho = \mathrm{Tr}_{\mathrm{env}} (| \psi \rangle \langle \psi |)\]
+So the expectation value of the measurement on the system is
+\[\mathrm{Tr}[\rho O_{\mathrm{sys}}]\]
+We can verify that
+\[\mathrm{Tr}\rho = 1 ,\quad \rho^{\dagger} = \rho\]
+and any eigenvalue of $\rho$ must lie between $0$ and $1$. 
+Suppose $rho$ can be diagonalized as
+\[\rho = \sum_i p_i |i\rangle\langle i |\]
+We have
+\[\mathrm{Tr}[\rho O] = p_i \langle i | O | i \rangle\]
+So it is reasonable to assume $p_i$ as the (classical) probability of the system in (pure) state $|i\rangle$.
+One fundamental postulate of statistical mechanics is that the entropy operator of the system is
+\[\hat{S} = -\ln \rho\]
+So, the expectation value of entropy is
+\[S = \mathrm{Tr}[-\rho\ln\rho]\]
 
-\chapter{Ideal Gas}
+\section{Statistical ensemble}
+\subsection{Micro-canonical ensemble}
+Micro-canonical ensemble describes a system which is weakly coupled to the environment. The volume $V$ and the number of the particles $N$ are fixed. The energy of the system lies in a narrow range between $E-\Delta E$ and $E + \Delta E$. The total number of distinct microstates accessible to a system is then denoted by the symbol $\Gamma(V,N,E;\Delta)$ and, by assumption, any one of these microstates is as likely to occur as any other. 
+\\
+Accordingly, the density matrix in the energy representation will be of the form
+\[\rho_{mn} = \rho_m \delta_{mn}\]
+with
+\[\rho_n = \begin{cases} 1/\Gamma \mbox{ for each of the accessible states} \\ 0 \mbox{ for all other states} \end{cases}\]
+The entropy of the system is
+\[S = \ln \Gamma\]
 
-\chapter{Interaction}
-\section{Cluster expansion}
-\section{Quantum field theory formulation}
-\section{Path integrals}
+\subsection{Canonical ensemble}
+Canonical ensemble describes a system which can exchange energy with the environment. The density matrix of the system is
+\[\rho = \frac{e^{-\beta H}}{\mathrm{Tr}[e^{-\beta H}]}\]
+Now, we define
+\[Z(\beta,V,N) \equiv \mathrm{Tr}[e^{-\beta H}] \quad F(\beta,V,N) \equiv -\ln Z/\beta\]
+The energy of the system is
+\[U = \mathrm{Tr}[\rho H] = -\left. \frac{\partial \ln Z}{\partial \beta} \right|_{V,N}\]
+If we further define $T \equiv 1/\beta$, we have
+\[U = F - T \left. \frac{\partial F}{\partial T} \right|_{V,N}\]
+The entropy of the system is
+\[S = \mathrm{Tr}[-\rho\ln\rho] = \frac{U-F}{T}\]
+We can further derive that
+\[\left. \frac{\partial U}{\partial S}\right|_{V,N} = T\]
+Now, we can identify $T$ as the absolute temperature and $F$ as free energy in thermodynamics.
+
+\subsection{Grand-canonical ensemble}
+Grand canonical ensemble describes a system which can exchange energy and particles with the environment. The density matrix of the system is
+\[\rho = \frac{e^{-\beta (H - \mu N)}}{\mathrm{Tr}[e^{-\beta (H - \mu N)}]}\]
+Now, we define
+\[Z_{\Omega}(\beta,V,\mu) \equiv \mathrm{Tr}[e^{-\beta (H-\mu N)}] \quad \Omega(\beta,V,N) \equiv -\ln Z_{\Omega}/\beta\]
+The particle number of the system is
+\[N = \mathrm{Tr}[\rho N] = \frac{1}{\beta}\left. \frac{\partial \ln Z_{\Omega}}{\partial \mu} \right|_{V,\beta} = -\left. \frac{\partial \Omega}{\partial \mu} \right|_{V,T}\]
+We also have
+\[U - \mu N = -\left. \frac{\partial \ln Z_{\Omega}}{\partial \beta} \right|_{V,\mu} = \Omega - T\left. \frac{\partial \Omega}{\partial T} \right|_{V,\mu} \]
+The entropy of the system is
+\[S = \mathrm{Tr}[-\rho\ln\rho] = \frac{U-\mu N - \Omega}{T}\]
+We can further derive that
+\[\left. \frac{\partial U}{\partial N}\right|_{V,S} = \mu\]
+Now, we can identify $\mu$ as the chemical potential and $\Omega$ as grand canonical potential in thermodynamics.
+
+\section{Fluctuations}
+\subsection{Canonical Ensemble}
+The density matrix for canonical ensemble is
+\[\rho = \frac{e^{-\beta H}}{\mathrm{Tr}[e^{-\beta H}]}\]
+We have
+\[\left. \frac{\partial \rho}{\partial \beta} \right|_{N,V} = -\rho H + \rho \mathrm{Tr}[\rho H]\]
+Since $U = \mathrm{Tr}[\rho H]$, we can derive that
+\[\left. \frac{\partial U}{\partial \beta} \right|_{N,V} = -\mathrm{Tr}[\rho H^2] + (\mathrm{Tr}[\rho H])^2 = -\langle E^2 \rangle + \langle E \rangle^2 = -\langle (\Delta E)^2 \rangle\]
+So, the relative fluctuation of energy in canonical ensemble is
+\[\frac{\sqrt{\langle (\Delta E)^2 \rangle}}{\langle E \rangle} = \frac{T}{U}\sqrt{\left. \frac{\partial U}{\partial T} \right|_{N,V}} = T \frac{\sqrt{C_V}}{T} \sim O(N^{-1/2})\]
+For large $N$ (which is true for every statistical system) the relative r.m.s. fluctuation in the values of $E$ is quite negligible.
+
+\subsection{Grand canonical ensemble}
+Density and energy fluctuations in the grand canonical ensemble is much more complicated. The detailed discussion can be found in section 4.5 of \emph{Statistical Mechanics (R.K.Pathria \& Paul D.Beale)}. 
+\\
+The density fluctuation is
+\[\frac{\langle (\Delta n)^2 \rangle}{\langle n \rangle^2} = \frac{T}{V}\kappa_T\]
+where $ n = \frac{N}{V}$ is the number density and $\kappa_T = -\frac{1}{v} \left. \frac{\partial v}{\partial P} \right|_{T}$ is the isothermal compressibility of the system.
+\\ \\
+Thus, the relative root-mean-square fluctuation in the particle density of the given system is ordinarily $O(N^{-1/2})$ and, hence, negligible. However, there are exceptions, like the ones met with in situations accompanying phase transitions. In those situations, the compressibility of a given system can become excessively large, as is evidenced by an almost "flattening" of the isotherms. In the region of phase transitions, especially at the critical points, we encounter unusually large fluctuations in the particle density of the system. Such fluctuations indeed exist and account for phenomena like critical opalescence. It is clear that under these circumstances the formalism of the grand canonical ensemble could, in principle, lead to results that are not necessarily identical to the ones following from the corresponding canonical ensemble. In such cases, it is the formalism of the grand canonical ensemble that will have to be preferred because only this one will provide a correct picture of the actual physical situation.
+\\ \\
+The energy fluctuation in grand canonical ensemble is 
+\[\langle (\Delta E)^2 \rangle = T^2C_V + \left(\left. \frac{\partial U}{\partial N} \right|_{T,V} \right)^2 \langle (\Delta N)^2 \rangle\]
+The mean-square fluctuation in the energy of a system in the grand canonical ensemble is equal to the value it would have in the canonical ensemble plus a contribution arising from the fact that now the particle number $N$ is also fluctuating. Again, under ordinary circumstances, the relative root-mean-square fluctuation in the energy density of the system would be practically negligible. However, in the region of phase transitions, unusually large fluctuations in the value of this variable can arise by virtue of the second term in the formula.
+
+\chapter{Interaction-­Free Systems}
+
+\chapter{Quantum field theory approach}
 
 \chapter{Phase Transitions and the Renormalization Group}
