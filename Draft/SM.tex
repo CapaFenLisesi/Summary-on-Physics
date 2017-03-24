@@ -594,6 +594,94 @@ Rigorously speaking, these four modes of excitation mutually interact; in many c
 with the result that the net contribution made by the internal motions to the various thermodynamic properties of the system is given by a simple sum of the four respective contributions.
 \\
 A detailed discussion on gaseous systems composed of molecules with internal motion can be found in section 6.5 from \emph{Statistical Mechanics (R.K.Pathria \& Paul D.Beale)}.
+
+\section{Ideal Bose Systems}
+\subsubsection{Bose-Einstein condensation}
+For an ideal Bose gas, we have
+$$\ln Z_{\Omega} = \frac{PV}{T} = - \sum_i \ln (1 - ze^{-\beta \epsilon_i})$$ 
+and 
+$$N =\sum_i \frac{1}{z^{-1}e^{\beta \epsilon_i}-1}$$
+In view of the fact that, for large $V$, the spectrum of the single-particle states is almost a continuous one, the summations may be replaced by integrations. 
+\\
+We note that by replacing summation by integration we are inadvertently giving a weight zero to the energy level $\epsilon = 0$. This is wrong because in a quantum mechanical treatment we must give a statistical weight unity to each non-degenerate single-particle state in the system. It is, therefore, advisable to take this particular state out of the sum in question before carrying out the integration; a rigorous justification of this unusual step can be found in Appendix F from \emph{Statistical Mechanics (R.K.Pathria \& Paul D.Beale)}
+\\
+We thus obtain
+$$\frac{P}{T} = -\frac{2\pi}{(2\pi)^3}(2m)^{3/2}\int_0^{\infty} \epsilon^{1/2} \ln (1 - ze^{-\beta \epsilon}) d\epsilon  - \frac{1}{V}\ln(1-z)$$
+and
+$$\frac{N}{V} = \frac{2\pi}{(2\pi)^3}(2m)^{3/2}\int_0^{\infty} \frac{\epsilon^{1/2}  d\epsilon}{z^{-1}e^{\beta \epsilon}-1} +  \frac{1}{V}\frac{z}{1-z} $$
+For $z \ll 1$, which corresponds to situations not far removed from the classical limit, the last term of each equation is of order $1/N$ and, therefore, negligible. 
+\\
+However, as $z$ increases and assumes values close to unity, the term $V^{-1}z/(1-z)$, which is identically equal to $N_0/V$ ($N_0$ being the number of particles in the ground state), can well become a significant fraction of the quantity $N/V$ ; this accumulation of a macroscopic fraction of the particles into a single state leads to the phenomenon of Bose-Einstein condensation. 
+\\
+Nevertheless, since $z = N_0/(N_0+1)$, the term $-V^{-1}\ln (1-z)$ is equal to $V^{-1}\ln(N_0+1)$, which is at most $O(N^{-1}\ln(N+1))$; this term is, therefore, negligible for all values of $z$ and hence may be dropped altogether.
+\\ \\
+At last, we have
+$$\frac{P}{T} = \frac{1}{\lambda^3}g_{5/2}(z)$$
+and
+$$\frac{N-N_0}{V} = \frac{1}{\lambda^3} g_{3/2}(z)$$ 
+where $g_{\nu}(z)$ are Bose-Einstein functions defined by
+$$g_{\nu}(z) \equiv \frac{1}{\Gamma(\nu)} \int_{0}^{\infty} \frac{x^{\nu-1}dx}{z^{-1}e^x -1} = z + \frac{z^2}{2^{\nu}} + \cdots$$
+The internal energy of this system is given by
+$$U = - \left. \frac{\partial \ln Z_{\Omega}}{\partial \beta} \right|_{z,V} = \frac{3T}{2} \frac{V}{\lambda^3} g_{5/2}(z)$$
+Thus, quite generally, our system satisfies the relationship
+$$U = \frac{3}{2}PV$$
+When the fugacity of the system is close to $1$, we have 
+$$1 \ll N_0$$
+and
+$$\frac{N - N_0}{V} = \frac{1}{\lambda^3}\zeta(3/2) $$ where $\xi(\nu) = g_{\nu}(1)$.
+This curious phenomenon of a macroscopically large number of particles accumulating in a single quantum state is generally referred to as the phenomenon of Bose-Einstein condensation.
+\\
+The condition for the onset of Bose-Einstein condensation is
+$$T < T_c \equiv \frac{2\pi}{m} \left\{ \frac{N}{V\zeta(3/2)} \right\}^{2/3}$$
+Here, $T_c$ denotes a characteristic temperature that depends on the particle mass $m$ and the particle density $N/V$ in the system. Accordingly, for $T < T_c$, the system may be looked on as a mixture of two "phases":
+\begin{itemize}
+\item a normal phase, consisting of $N_e = N(T/T_c)^{3/2}$ particles distributed over the excited states
+\item a condensed phase, consisting of $N_0 = N - N_e$ particles accumulated in the ground state
+\end{itemize}
+
+\subsubsection{Pressure}
+Next, we examine the variation of $P$ with $T$, keeping $\nu$ fixed. Now, for $T < T_c$, the pressure is given by
+$$P = \frac{T}{\lambda^3}\zeta(5/2)$$
+which is proportional to $T^{5/2}$ and is independent of $v$ - implying infinite compressibility.
+At the transition point the value of the pressure is
+$$P(T_c) = \frac{\zeta(5/2)}{\zeta(3/2)} \frac{NT_c}{V} \approx 0.5134 \frac{NT_c}{V}$$
+Thus, the pressure exerted by the particles of an ideal Bose gas at the transition temperature is about one-half of that exerted by the particles of an equivalent Boltzmannian gas. For $T > T_c$, the pressure is given by
+$$P = \frac{N}{V}T \frac{g_{5/2}(z)}{g_{3/2}(z)}$$
+As $T \to \infty$, the pressure approaches the classical value.
+
+\subsubsection{Specific heat}
+For $T < T_c$, the specific heat is
+$$\frac{C_V}{N} = \frac{3}{2}\frac{V}{N} \zeta(5/2) \frac{d}{dT} (\frac{T}{\lambda^3}) = \frac{15}{4}\zeta(5/2) \frac{v}{\lambda^3}$$
+which is proportional to $T^{3/2}$. At $T = T_c$, we have $C_V (T_c) \approx 1.925N$, which is significantly higher than the classical value $1.5$. For $T > T_c$ , we obtain an implicit formula. First of all,
+$$\frac{C_V}{N} = \left[ \frac{\partial }{\partial T} \left( \frac{3}{2} T \frac{g_{5/2}(z)}{g_{3/2}(z)} \right) \right]_{v}$$
+Note the recurrence relation of Bose-Einstein function
+$$z\frac{\partial g_{\nu}(z)}{\partial z} = g_{v-1}(z)$$
+and recall that $g_{3/2}(z) = \lambda^3/v$, it is easy to get
+$$\frac{1}{z} \left(\frac{\partial z}{\partial T} \right)_v = -\frac{3}{2T} \frac{g_{3/2}(z)}{g_{1/2}(z)}$$
+At last, we have
+$$\frac{C_V}{N} = \frac{15}{4} \frac{g_{5/2}(z)}{g_{3/2}(z)} -\frac{9}{4} \frac{g_{3/2}(z)}{g_{1/2}(z)} $$
+In the limit $z \to 1$, the second term vanishes because of the divergence of $g_{1/2}(z)$, while the first term gives exactly the the same result as in the case where $T \to T_c$ from below. The specific heat is, therefore, continuous at the transition point.
+\\ 
+Its derivative is, however, discontinuous, the magnitude of the discontinuity being
+$$ \left. \frac{\partial C_V}{\partial T} \right|_{T = T_c-0} -\left. \frac{\partial C_V}{\partial T} \right|_{T = T_c+0} = \frac{27N}{16\pi T_c}\zeta(3/2)^2 \approx 3.665 \frac{N}{T_c}$$
+
+\subsubsection{Entropy}
+Finally, we examine the adiabats of the ideal Bose gas. For this, we need an expression for the entropy of the system. Making use of the thermodynamic formula $U - TS + PV = N\mu$, we get
+$$s = \begin{cases}\frac{5}{2}\frac{g_{5/2}(z)}{g_{3/2}(z)} -\ln z \quad T>T_c \\\frac{5}{2} \frac{v}{\lambda^3}\zeta(5/2) \quad T < T_c  \end{cases}$$
+Now, a reversible adiabatic process implies the constancy of $s$. For $T > T_c$ , this implies the constancy of $z$ as well and in turn the constancy of $v/lambda^3$. For $T \leq T_c$ , it again implies the same. We thus obtain, quite generally, the following relationship between the volume and the temperature of the system when it undergoes a reversible adiabatic process:
+$$vT^{3/2} = \mbox{ const. }$$
+The corresponding relationship between the pressure and the temperature is
+$$P/T^{5/2} = \mbox{ const. }$$
+Eliminating $T$, we obtain
+$$Pv^{5/3} = \mbox{ const. }$$
+as the equation for an adiabat of the ideal Bose gas.
+\begin{note}
+Incidentally, the foregoing results are exactly the same as for an ideal classical gas. There is, however, a significant difference between the two cases; that is, while the exponent $5/3$ is identically equal to the ratio of the specific heats $C_P$ and $C_V$ in the case of the ideal classical gas, it is not so in the case of the ideal Bose gas.
+\end{note}
+\noindent
+In the mixed-phase region, the entropy of the gas may be written as
+$$S = N_e \frac{5}{2} \frac{\zeta(5/2)}{\zeta(3/2)}$$
+As expected, the $N_0$ particles that constitute the condensate do not contribute toward the entropy of the system, while the $N_e$ particles that constitute the normal part contribute an amount of $\frac{5}{2} \frac{\zeta(5/2)}{\zeta(3/2)}$ per particle.
 \chapter{Quantum field theory approach}
 
 \chapter{Phase Transitions and the Renormalization Group}
