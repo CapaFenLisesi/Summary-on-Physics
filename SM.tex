@@ -642,7 +642,86 @@ In the mixed-phase region, the entropy of the gas may be written as
 $$S = N_e \frac{5}{2} \frac{\zeta(5/2)}{\zeta(3/2)}$$
 As expected, the $N_0$ particles that constitute the condensate do not contribute toward the entropy of the system, while the $N_e$ particles that constitute the normal part contribute an amount of $\frac{5}{2} \frac{\zeta(5/2)}{\zeta(3/2)}$ per particle.
 
+\section{Ideal Fermi systems}
+\subsubsection{General properties of ideal Fermi systems}
+For an ideal Fermi gas, we have
+\[\frac{PV}{T} = \ln Z_{\Omega} = \sum_i \ln(1+ze^{-\beta\epsilon_i})\]
+and
+\[N = \sum_i \frac{1}{e^{\beta\epsilon_i}z^{-1} + 1}\]
+Unlike the Bose case, the parameter $z$ in the Fermi case can take on unrestricted values. Moreover, in view of the Pauli exclusion principle, the question of a large number of particles occupying a single energy state does not even arise in this case.  We can replace summations by corresponding integrations. We thus obtain
+\[\frac{P}{T} = \frac{g}{\lambda^3}f_{5/2}(z)\]
+and
+\[\frac{N}{V} =  \frac{g}{\lambda^3}f_{3/2}(z)\]
+where $g$ is a weight factor arising from the internal structure of the particles and $f_{\nu}(z)$ are Fermi-Dirac functions defined by
+\[f_{\nu}(z) \equiv \frac{1}{\Gamma(\nu)} \int_{0}^{\infty} \frac{x^{\nu-1}dx}{z^{-1}e^x + 1} = z - \frac{z^2}{2^{\nu}} + \frac{z^3}{3^{\nu}} - \cdots\]
+The internal energy of the Fermi gas is given by
+\[U = - \left. \frac{\partial \ln Z_{\Omega}}{\partial \beta} \right|_{z,V} = \frac{3T}{2} \frac{gV}{\lambda^3} f_{5/2}(z)\]
+thus, quite generally, this system satisfies the relationship
+\[U = \frac{3}{2}PV\]
+Similarly, note the recurrence relation of Fermi-Dirac function
+\[z\frac{\partial f_{\nu}(z)}{\partial z} = f_{v-1}(z)\]
+it is easy to get the specific heat of the gas:
+\[\frac{C_V}{N} = \frac{15}{4} \frac{f_{5/2}(z)}{f_{3/2}(z)} -\frac{9}{4} \frac{f_{3/2}(z)}{f_{1/2}(z)}\]
+For the Helmholtz free energy of the gas, we get
+\[F = N\mu - PV = NT \left\{ \ln z - \frac{f_{5/2}(z)}{f_{3/2}(z)} \right\}\]
+and for the entropy
+\[S = \frac{U-F}{T} = N \left\{ \frac{5}{2} \frac{f_{5/2}(z)}{f_{3/2}(z)} - \ln z \right\}\]
+In order to determine the various properties of the Fermi gas in terms of the particle density $n$ and the temperature $T$, we need to know the functional dependence of the parameter $z$ on $n$ and $T$; this information is formally contained in the implicit relationship $g f_{3/2}(z) = n\lambda^3$. 
+\\
+Now, if the density of the gas is very low and/or its temperature very high, then the situation might correspond to $f_{3/2}(z) \ll 1$; we then speak of the gas as being non-degenerate and, therefore, equivalent to a classical ideal gas.
+\\
+If the parameter $z$ is small in comparison with unity but not very small, then we should obtain an expansion for $z$ in powers of $n\lambda^3/g$ and then substitute this expansion into the
+\[\frac{PV}{NT} = \frac{f_{5/2}(z)}{f_{3/2}(z)}\]
+\\
+If the density and the temperature are such that the parameter $(n\lambda^3/g)$ is of order unity, the foregoing expansions cannot be of much use. In that case, one may have to make recourse to numerical calculation.
+\\
+If $(n\lambda^3/g) \gg 1$, the functions involved can be expressed as asymptotic expansions in powers of $(\ln z)^{-1}$; we then speak of the gas as being degenerate.
+\\
+As $(n\lambda^3/g) \to \infty$, our functions assume a closed form, with the result that the expressions for the various thermodynamic quantities pertaining to the system become highly simplified; we then speak of the gas as being completely degenerate.
 
+\subsubsection{Completely degenerate case}
+In the limit $T \to 0$, which implies $(n\lambda^3/g) \to \infty$, the mean occupation numbers of the single-particle state become
+\[\langle n_i \rangle = \frac{1}{e^{\beta(\epsilon_i - \mu)} + 1} = \begin{cases}1 \mbox{ for } \epsilon_i < \mu_0 \\   0 \mbox{ for } \epsilon_i > \mu_0 \end{cases}\]
+where $\mu_0$ is the chemical potential of the system at $T = 0$.
+\\
+Thus, at $T = 0$, all single-particle states up to $\mu_0$ are "completely" filled, with one particle per state, while all single-particle states with $\epsilon_i > \mu_0$ are empty. 
+The limiting energy $\mu_0$ is generally referred to as the Fermi energy of the system and is denoted by the symbol $\epsilon_F$ ; the corresponding value of the single-particle momentum is referred to as the Fermi momentum and is denoted by the symbol $p_F$. The defining equation for these parameters is
+\[\int_0^{\epsilon_F} = a(\epsilon)d\epsilon\]
+where $a(\epsilon)$ denotes the density of states of the system and is given by the general expression
+\[a(\epsilon) = \frac{gV}{(2\pi)^3} 4\pi p^2 \frac{dp}{d\epsilon}\]
+We readily obtain
+\[N = \frac{gV}{6\pi^2} p_F^3\]
+which gives
+\[p_F = \left( \frac{6\pi^2N}{gV} \right)^{1/3} \quad \epsilon_F = \frac{1}{2m}\left( \frac{6\pi^2n}{g} \right)^{2/3}\]
+The ground-state, or zero-point, energy of the system is then given by
+\[U_0 = \frac{4\pi gV}{(2\pi)^3} \int_0^{p_F} \frac{p^2}{2m} p^2 dp = \frac{gVp_F^5}{20\pi^2m} = \frac{3}{5}N\epsilon_F\]
+The ground-state pressure of the system is in turn given by
+\[P_0 = \frac{2U_0}{3V} = \frac{2}{5}n\epsilon_F \propto n^{5/3}\]
+
+\subsubsection{Degenerate case}
+For an analytical study of the Fermi gas at finite, but low, temperatures, we observe that the value of $z$, which was infinitely large at absolute zero, is now finite, though still large in comparison with unity. 
+The functions $f_{\nu}(z)$ can, therefore, be expressed as asymptotic expansions in powers of $(\ln z)^{-1}$.
+For the values of $\nu$ we are presently interested in, we have to the first approximation
+\begin{eqnarray}
+f_{5/2}(z) &=& \frac{8}{15\pi^{1/2}} (\ln z)^{5/2} \left[ 1 + \frac{5\pi^2}{8}(\ln z)^{-2} + \cdots \right] \nonumber \\
+f_{3/2}(z) &=& \frac{4}{3\pi^{1/2}} (\ln z)^{3/2} \left[ 1 + \frac{\pi^2}{8}(\ln z)^{-2} + \cdots \right] \nonumber \\
+f_{1/2}(z) &=& \frac{2}{\pi^{1/2}} (\ln z)^{1/2} \left[ 1 - \frac{\pi^2}{24}(\ln z)^{-2} + \cdots \right] \nonumber
+\end{eqnarray}
+Thus, we obtain
+\[\frac{N}{V} = \frac{g(2m)^{3/2}}{6\pi^2} (T\ln z)^{3/2} \left[ 1 + \frac{\pi^2}{8}(\ln z)^{-2} + \cdots \right] \]
+In the first order approximation, we obtain
+\[\mu = T\ln z \approx \epsilon_F \left[ 1 - \frac{\pi^2}{12} \left( \frac{T}{\epsilon_F} \right)^2 \right]\]
+So, we have
+\[\frac{U}{N} = \frac{3}{5} (\ln z T) \left[ 1 + \frac{\pi^2}{2}(\ln z)^{-2} + \cdots \right] = \frac{3}{5}\epsilon_F \left[ 1 + \frac{5\pi^2}{12}\left( \frac{T}{\epsilon_F} \right)^2 + \cdots \right]\]
+The pressure of the gas is then given by
+\[P = \frac{2U}{3V} = \frac{2}{5}n\epsilon_F\left[ 1 + \frac{5\pi^2}{12}\left( \frac{T}{\epsilon_F} \right)^2 + \cdots \right] \]
+For the low temperature specific heat of the gas is
+\[\frac{C_V}{N} = \frac{\pi^2}{2} \frac{T}{\epsilon_F} + \cdots\]
+The Helmholtz free energy of the system is
+\[\frac{F}{N} = \mu - \frac{PV}{N} = \frac{3}{5}\epsilon_F\left[ 1 - \frac{5\pi^2}{12}\left( \frac{T}{\epsilon_F} \right)^2 + \cdots \right] \]
+which gives
+\[\frac{S}{N} = \frac{\pi^2}{2}\frac{T}{\epsilon_F} + \cdots\]
+Thus, as $T \to 0$, $S \to 0$ in accordance with the third law of thermodynamics.
 \chapter{Quantum field theory approach}
 
 \chapter{Phase Transitions and the Renormalization Group}
