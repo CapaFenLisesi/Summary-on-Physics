@@ -722,6 +722,143 @@ The Helmholtz free energy of the system is
 which gives
 \[\frac{S}{N} = \frac{\pi^2}{2}\frac{T}{\epsilon_F} + \cdots\]
 Thus, as $T \to 0$, $S \to 0$ in accordance with the third law of thermodynamics.
-\chapter{Quantum field theory approach}
+
+\section{Thermodynamics of the blackbody radiation}
+We consider a radiation cavity of volume $V$ at temperature $T$. The system can be looked as a gas of identical and indistinguishable quanta - the so-called photons. 
+Because the number of photons is not conserved, the chemical potential of photon gas in equilibrium must be zero. Since zero chemical potential means that the ensemble is not allowed to punish states with different values of $N$. 
+So, we have
+\[\langle n_i \rangle = \frac{1}{e^{\beta \epsilon_i} - 1}\]
+The internal energy of the system is
+\[ U = \sum_i \frac{\epsilon_i}{e^{\beta \epsilon_i} - 1}\]
+The summation can be approximated by an integral. Note the spin of a photon can take two distinct values, we have
+\[U = \frac{VT^4}{\pi^2} \int_0^{\infty} \frac{x^3dx}{e^x - 1} = \frac{VT^4}{\pi^2} \Gamma(4)\zeta(4) = \frac{\pi^2VT^4}{15}\]
+If there is a small opening in the walls of the cavity, the photons will "effuse" through it. The net rate of flow of the radiation, per unit area of the opening, will be
+\[I = \frac{1}{2} \int \frac{U}{V} \cos^2\theta d\theta = \frac{U}{4V} = \frac{\pi^2}{60}T^4\]
+It is the so-called Stefan-Boltzmann law of blackbody radiation.
+\\ \\
+For further study of thermodynamics, we evaluate the grand partition function of the photon gas:
+\[\frac{PV}{T} = -\frac{VT^3}{\pi^2} \int_0^{\infty} \ln(1-e^{-x}) x^2 dx = \frac{VT^3}{3\pi^2} \int_0^{\infty} \frac{x^3dx}{e^x - 1}\]
+So, we have 
+\[PV = \frac{1}{3}U\]
+Next, since the chemical potential of the system is zero, the Helmholtz free energy is equal to $-PV$; therefore the entropy is given by
+\[S = \frac{U-F}{T} = \frac{4U}{3T} \propto VT^3\]
+and
+\[C_V = T \left. \frac{\partial S}{\partial T} \right|_T = 3S\]
+Finally, we derive an expression for the equilibrium number $N$ of photons in the radiation cavity. We obtain
+\[N = V\frac{2\xi(3)T^3}{\pi^2} \propto VT^3\]
+Instructive though it may be, formula above cannot be taken at its face value because in the present problem the magnitude of the fluctuations in the variable $N$, which is determined by the quantity $\left(\frac{\partial P}{\partial V} \right)^{-1}$, is infinitely large.
+
+\chapter{Systems with Interaction and Quantum Field Theory}
+\section{Superfluidity}
+\subsection{Experimental facts of Helium at low temperatures}
+Helium is the only element which remains a liquid at zero temperature and atmospheric pressure.
+Experimentally the phase diagram of \ce{^{4}He} is shown in Figure below.
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.15]{SM/He1.png}
+\caption{The phase structure of \ce{^{4}He} at low temperature}
+\end{figure}
+Helium I is a normal fluid and has a normal gas-liquid critical point. Helium II is a mixture of a normal fluid and a superfluid. 
+The superfluid is characterized by the vanishing of its viscosity. Helium I and helium II are separated by a line known as the $\lambda$-transition line.  At $T_{\lambda} = 2.18\mathrm{K}$, $P_{\lambda} = 2.29\mathrm{Pa}$, helium I, helium II, and helium gas coexist. 
+The specific heat of liquid helium along the vapour transition line forms a logarithmic discontinuity. The form of this diagram resembles the Greek letter $\lambda$ and is the reason for calling the transition a $\lambda$ transition.
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.12]{SM/He2.png}
+\caption{The specific heat of helium as a function of temperature}
+\end{figure}
+\\
+The excitation spectrum of helium II can be measured experimentally through elastic neutron scattering. It is found to consist of two parts, the phonon region
+\[E(\bm{p}) = c|\bm{p}| \quad \mbox{ when } |\bm{p}| \ll |\bm{p}_0|\]
+and the roton region
+\[E(\bm{p}) = \Delta + \frac{1}{2\mu} |\bm{p} - \bm{p}_0|^2 \quad \mbox{ when } |\bm{p}| \sim |\bm{p}_0|\]
+where $c = 226 \mathrm{m/s}$ is the velocity of sound, $\Delta/k_B = 9\mathrm{K}$ are the roton parameters, and $\mu = 0.25m_{He}$. 
+There is another velocity parameter known as the critical velocity $v_0$. It is only when helium II moves with velocity greater than $v_0$ that viscous effects arise. At low temperature the roton excitations are damped by the Boltzmann factor $\exp(-\beta \Delta)$.
+
+\subsection{Quantum field theory formulation}
+Recall the non-relativistic quantum field theory we develop in quantum mechanics.
+The Hamiltonian of a system of \ce{^{4}He} in momentum space is
+\[H = \sum_{\bm{k}} \frac{|\bm{k}|^2}{2m} a_{\bm{k}}^{\dagger} a_{\bm{k}} + \frac{1}{2V} \sum_{\bm{k}_1,\bm{k}_2,\bm{q}} \tilde{V}(\bm{q}) a^{\dagger}_{\bm{k}_1 + \bm{q}} a^{\dagger}_{\bm{k}_2-\bm{q}} a_{\bm{k}_1} a_{\bm{k}_2}\]
+where
+\[a_{\bm{k}} = \frac{1}{\sqrt{V}} \int d\bm{x}\psi(\bm{x}) e^{-i\bm{p}\cdot\bm{x}}\]
+and
+\[\tilde{V}(\bm{q}) = \int d\bm{x} V(\bm{x}) e^{-i\bm{q}\cdot\bm{x}}\]
+Here we adopt box normalization to make momentum of the particle discrete. It is easy to verify that
+\[[a_{\bm{p}},a_{\bm{q}}^{\dagger}] = \delta_{\bm{p},\bm{q}} \quad [a_{\bm{p}},a_{\bm{q}}] = 0 \quad [a^{\dagger}_{\bm{p}},a^{\dagger}_{\bm{q}}] = 0\]
+The partition canonical partition function is
+\[Z = \mathrm{Tr}[e^{-\beta H}]\]
+At low temperature, states with low energy value become dominant. These are expected to be states with low values of momentum. 
+Let us consider the system close to $T \approx 0$. 
+We can then assume that the state of lowest energy corresponds to atoms of low momentum with a sizable fraction of molecules in the zero momenta state, leading to Bose-Einstein condensation. 
+Thus if the system has on average $N$ atoms then a significant number $N_0$ of the atoms are in the lowest energy state. More precisely we suppose that the ratio $N_0 / N$ converges to a constant in the limit $N \to \infty$. 
+Let us suppose that $|C;N,N_0\rangle$ is a superfluid state with a total of $N$ helium atoms, $N_0$ of which are in the zero momentum plane wave state. 
+If $a_0^{\dagger}$ and $a_0$ are creation and destruction operators for a state of zero momentum, we have
+\[a_0^{\dagger}a_0 |C;N,N_0\rangle = N_0 |C;N,N_0\rangle\]
+and
+\[a_0a_0^{\dagger} |C;N,N_0\rangle = (N_0+1) |C;N,N_0\rangle\]
+For large $N_0$ we can approximate $N_0 + 1$ by $N_0$ so that on the state $|C;N,N_0\rangle$ we can replace both the operators $a_0^{\dagger}a_0$ and $a_0^{\dagger}a_0$ by a single c-number, $N_0$.
+
+\subsection{The quasi-particle approach}
+For $|C;N,N_0\rangle$, the particle number operator $\hat{N}$ can be written as
+\[\hat{N} = N_0 + \sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \]
+Neglecting terms of order $O(N_0^0)$, we have
+\[N^2 \approx N_0^2 + 2N_0\sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \]
+We next examine the interaction part of $H$ when restricted to $|C\rangle$. When all four operators in H I have zero momentum, we have the term
+\[H_I^0 = \frac{1}{2V} \tilde{V}(0) a^{\dagger}_{0} a^{\dagger}_{0} a_{0} a_{0} = \frac{1}{2V}\tilde{V}(0)N_0^2 \approx  \frac{1}{2V}\tilde{V}(0) \left[\hat{N}^2-2N_0\sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \right]\]
+The next term is of order $N_0$ and is the part of $H_I$ containing two operators (carrying zero momentum). There are six ways in which this can happen. If we make an additional assumption that, for $|\bm{k}|$ small, $\tilde{V}(\bm{k}) = \tilde{V}(0)$. 
+Since at low temperature we expect only small momenta excitations to be important we replace $\tilde{V}(\bm{k})$ by $\tilde{V}(0)$ in $H_I$. Therefore, on the state , the interacting Hamiltonian, keeping terms of $O(N_0)$ is given by
+\[H_I \approx \tilde{V}(0) \left\{ \frac{1}{2V}\left[N^2-2N_0\sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \right]  +\frac{N_0}{2V}\sum_{\bm{k}\neq 0} [a^{\dagger}_{\bm{k}} a^{\dagger}_{-\bm{k}} + a_{\bm{k}} a_{-\bm{k}}] +\frac{2N_0}{V} \sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \right\} \equiv H_I^B \] 
+and the total Hamiltonian can be approximated by the Bogoliubov Hamiltonian $H_B$ given by
+\[H^B = \sum_{\bm{k}} \frac{|\bm{k}|^2}{2m} a_{\bm{k}}^{\dagger} a_{\bm{k}} + H_I^B = \sum_{\bm{k}\neq 0} \left(\frac{|\bm{k}|^2}{2m} + \frac{\tilde{V(0)}}{V}N_0 \right)a_{\bm{k}}^{\dagger} a_{\bm{k}}  + \frac{\tilde{V}(0)N_0}{2V} \sum_{\bm{k}\neq 0} [a^{\dagger}_{\bm{k}} a^{\dagger}_{-\bm{k}} + a_{\bm{k}} a_{-\bm{k}}]\]
+\\
+We turn next to the problem of determining the energy eigenvalues of this Hamiltonian. This we do by using the method of the Bogoliubov–Valatin transform. 
+The idea is this: $H_B$ is a quadratic function of the operators $a_{\bm{k}}$ and $a^{\dagger}_{\bm{k}}$. 
+By taking appropriate linear combinations of these operators we can form new operators $b_{\bm{k}}$ and $b^{\dagger}_{\bm{k}}$ which "diagonalize" $H^B$, i.e. which lead to
+\[H^B = \sum_{\bm{q} \neq 0} \mathcal{E}(\bm{k})b^{\dagger}_{\bm{k}} b_{\bm{k}} \]
+The function $\mathcal{E}(\bm{k})$  will then determine the different excitations of the system while $b_{\bm{k}}$ and $b^{\dagger}_{\bm{k}}$ will be destruction and creation operators for these excitations or "quasi-particles", provided they satisfy the commutation rules
+\[[b_{\bm{p}},b_{\bm{q}}^{\dagger}] = \delta_{\bm{p},\bm{q}}\]
+We write
+\[b_{\bm{k}} = \alpha(\bm{k})a_{\bm{k}} - \beta(\bm{k})a^{\dagger}_{-\bm{k}} \quad b^{\dagger}_{\bm{k}} = \alpha(\bm{k})a^{\dagger}_{\bm{k}} - \beta(\bm{k})a_{-\bm{k}} \]
+And we have the constraint
+\[\alpha(\bm{k})^2 - \beta(\bm{k})^2 = 1\]
+Substituting $a$ and $a^{\dagger}$ with $b$ and $b^{\dagger}$ in $H^B$ and comparing it with the $\sum_{\bm{q} \neq 0} \mathcal{E}(\bm{k})b^{\dagger}_{\bm{k}} b_{\bm{k}}$, we can can a set of equations of $\alpha(\bm{k})$ and $\beta(\bm{k})$. Finally, we have
+\[\mathcal{E}(\bm{k}) = \sqrt{\frac{\bm{k}^2}{2m} \left(\frac{\bm{k}^2}{2m} + \frac{2N_0\tilde{V}(0)}{V} \right) }\]
+The energy $\mathcal{E}(\bm{k})$ is called the quasi-particle energy and the operators $b_{\bm{k}}$ and $b^{\dagger}_{\bm{k}}$ are quasi-particle destruction and creation operators. 
+For small values of $\bm{k}$ we have
+\[\mathcal{E}(\bm{k}) = \frac{|\bm{p}|}{m} \sqrt{\frac{N_0}{V}\tilde{V}(0)m}\]
+Observe that for $\mathcal{E}(\bm{k})$ to be real we must have $\tilde{V}(0) > 0$. This implies there is a repulsive region for $V(x)$ which must dominate the integral $\int dx V(x)$. Observe also that $|\bm{k}|/m = \bm{v}$ is a velocity, and $N_0m/V = \rho$, is the density of the superfluid helium so that the quasi-particle energy can be written as 
+\[\mathcal{E}(\bm{p} = m\bm{v}) \approx |\bm{v}|\sqrt{\rho\tilde{V}(0)}\]
+\\
+We now show that a system with such an energy spectrum represents a superfluid, i.e. a system with no friction.
+Friction in a system represents dissipation of energy.
+Consider a molecule of mass $M_A$ moving in a medium. If this molecule can change its energy through collisions with the excitations of the medium, then the system has friction. 
+We will find that a molecule of mass $M_A$ and velocity $\bm{V}_A$ moving through a system consisting of quasi-particles of energy $\mathcal{E}(\bm{k})$ cannot change its energy by scattering off quasi-particles if $|\bm{V}_A| < |\bm{v}_0|$ where $|\bm{v}_0|$ is a critical velocity determined by $\tilde{V}(0)$ and $\rho$. 
+Thus for $|\bm{V}_A| < |\bm{v}_0|$ the system of quasi-particles behaves as a frictionless superfluid.
+\\
+To see this, let us consider the collision of a molecule of mass $M_A$ and velocity $\bm{V}_A$ with a quasi-particle at rest. If the final momentum of the molecule is $\bm{Q}_A$ and that of the quasi-particle is $\bm{k}$, we have, from momentum conservation,
+\[|\bm{Q}_A|^2 = |\bm{P}_A|^2 + |\bm{k}|^2 - 2|\bm{P}_A||\bm{k}|\cos\theta\]
+We then have
+\[\frac{|\bm{P}_A|^2-|\bm{Q}_A|^2}{2|\bm{P}_A| |\bm{k}|} \leq \frac{|\bm{P}_A|^2-|\bm{Q}_A|^2 + |\bm{k}|^2}{2|\bm{P}_A| |\bm{k}|} = \cos\theta \leq 1\]
+Combining this with the energy conservation condition
+\[\frac{|\bm{Q}_A|^2}{2M_A} = \frac{|\bm{P}_A|^2}{2M_A} + \mathcal{E}(\bm{p})\]
+we end up with
+\[\frac{M_A\mathcal{E}(\bm{k})}{|\bm{P}_A| |\bm{k}|} = \frac{1}{m}\sqrt{\frac{\tilde{V}(0)N_0m}{V}} \frac{1}{V_A} \leq 1\]
+Thus the process of changing energy for the molecule is not allowed if $V_A \leq v_0 = \frac{1}{m}\sqrt{\frac{\tilde{V}(0)N_0m}{V}} $ and the system of quasi-particles behaves like a superfluid.
+
+\section{Finite temperature perturbation theory}
+In this section we develop a perturbative formalism for the computation of the grand canonical partition function. This proceeds in close analogy with the perturbative evaluation of the evolution operator. The grand canonical partition sum 
+\[Z_{\Omega} = \mathrm{Tr}e^{-\beta K}\]
+where
+\[K \equiv K_0 + H_{\mathrm{int}} \equiv H_0 + H_{\mathrm{int}} -\mu N\]
+Define
+\[U(\beta) \equiv \exp(-\beta K) \quad U_0(\beta) \equiv \exp(-\beta K_0) \quad W(\beta) = U_0^{\dagger}(\beta)U(\beta)\]
+Similar to the time-dependent perturbation theory in quantum mechanics, we can get
+\[\frac{\partial W}{\partial \beta} = -H_I(\beta)W(\beta)\]
+where
+\[H_I(\beta) = U_0^{\dagger}(\beta)H_{\mathrm{int}}U_0(\beta)\]
+The solution of the equation above can be represented by Dyson series
+\[W(\beta) = \sum_{n \geq 0} \frac{(-1)^n}{n!} \int_0^{\beta}d\tau_1 \cdots \int_0^{\beta} d\tau_n T[H_I(\tau_1)\cdots H_I(\tau_n)]\]
+Note that $T$ is now the ordering with respect to $\tau$ (or imaginary time). Finally, upon substitution of this last expression into the grand canonical partition sum
+\[Z_{\Omega} = \mathrm{Tr} e^{-\beta K_0}W(\beta)\]
+we obtain a perturbative expansion of the partition sum in analogy with that of the evolution operator. Before we can apply this formalism to the computation of $Z_{\Omega}$ we need to analyze the finite temperature versions of the time-ordered Green functions and Wick's theorem. The detailed discussion can be found in section 9.8 from \emph{Elements Of Statistical Mechanics (ivo Sachs, Siddhartha Sen, James Sexton)}.
 
 \chapter{Phase Transitions and the Renormalization Group}
