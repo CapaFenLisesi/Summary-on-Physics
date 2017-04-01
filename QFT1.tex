@@ -1107,6 +1107,64 @@ We can verify that
 \[C_n = \frac{1}{2n} \mathrm{Tr} G_n\]
 So, the function determinant method is valid.
 
+\section{Optical theorem and unstable particles}
+The optical theorem is a straightforward consequence of the unitarity of the $S$ -matrix: $S^{\dagger}S = 1$. 
+Inserting $S = 1 + iT$, we have
+\[-i(T - T^{\dagger}) = T^{\dagger}T\]
+Recall that
+\[\langle f | iT | i \rangle = i\mathcal{M}(2\pi)^4\delta(\sum p_f - \sum p_i)\]
+We have
+\[\langle f | T^{\dagger}T | i \rangle = \sum_n \prod_{k=1}^n \int \frac{d^3q_k}{(2\pi)^3 2E_k} \langle f | T^{\dagger} | \{\bm{q}_k\} \rangle \langle \{\bm{q}_k\} | T | i \rangle\]
+So, we have
+\[-i[\mathcal{M}(i \to f) - \mathcal{M}^{*}(f \to i)] =  \sum_n \prod_{k=1}^n \int \frac{d^3q_k}{(2\pi)^3 2E_k} \mathcal{M}(i \to \{\bm{q}_k\}) \mathcal{M}^{*}(f \to \{\bm{q}_k\}) (2\pi)^4 \delta(\sum p_f- \sum_k q_k)\]
+Let us abbreviate this identity as
+\[-i[\mathcal{M}(i \to f) - \mathcal{M}^{*}(f \to i)] = \sum_m \int d\Pi_{m} \mathcal{M}(i \to m\}) \mathcal{M}^{*}(f \to m)\]
+where the sum runs over all possible sets of particles and $i$ and $f$ are could be one-particle or multi-particle asymptotic states.
+\\
+If $i$ and $f$ are the same state, we have
+\[\mathrm{Im} \mathcal{M}(i \to i) = \sum_m \int d\Pi_{m} |\mathcal{M}(i \to \mbox{ anything })|^2\]
+Particularly, if $i$ is two particle state, we have
+\[\mathrm{Im} \mathcal{M}(k_1k_2 \to k_1k_2) = 2E_{\mathrm{cm}}p_{\mathrm{cm}}\sigma_{\mathrm{tot}}(k_1k_2 \to \mbox{ anything })\]
+If $i$ is one particle state, we have
+\[\mathrm{Im} \mathcal{M}(k \to k) = 2E_{k}\Gamma_{\mathrm{tot}}(k \to \mbox{ anything })\]
+It can be represented in terms of propagator as
+\[\mathrm{Im} M^2(k^2) = -2E_{k}\Gamma_{\mathrm{tot}}(k \to \mbox{ anything })\]
+where $M^2(k^2)$ is defined as
+\[G(k) = \frac{-i}{k^2+m^2+M^2(k^2)}\]
+\\ \\
+Consider a theory of two real scalar fields, $\phi$ and $\chi$, with Lagrangian
+\[\mathcal{L} = -\frac{1}{2}\partial_{\mu}\phi \partial^{\mu}\phi - \frac{1}{2}m_{\phi}^2\phi^2 -\frac{1}{2}\partial_{\mu}\chi \partial^{\mu}\chi - \frac{1}{2}m_{\chi}^2\chi^2 + \frac{1}{2}g\phi\chi^2 + \frac{1}{6}h\phi^3\]
+This theory is renormalizable in six dimensions, where g and h are dimensionless coupling constants. Let us assume that $m_{\phi} > 2m_{\chi}$ . Then it is kinematically possible for a $\phi$ particle at rest to decay into two $\chi$ particles.
+The amplitude for this process is given at one loop level as
+\[\Gamma = \frac{1}{2} \frac{1}{2m_{\phi}} \int d\Pi_m |\mathcal{M}|^2 = \frac{1}{12} \pi \alpha (1 - 4m_{\chi}^2/m_{\phi}^2)^{3/2}m_{\phi}\]
+where $\alpha = g^2/(4\pi)^3$.
+Note that the extra factor $1/2$ is due to the presence of two identical particles in the final state.
+\\
+Let us, then, compute the correction to the $\phi$ propagator from a loop of $\chi$ particles. (There is also a contribution from a loop of $\phi$ particles, but we can ignore it if we assume that $h \ll g$.) We have
+\[M^2(k^2) = -\frac{1}{2}\alpha \int_0^1 dx D\ln D + A'k^2 + B'm_{\phi}^2\]
+where
+\[D = x(1-x)k^2 - m_{\phi}^2 - i\epsilon\]
+and $A'$ and $B'$ are the finite counterterm coefficients that remain after the infinities have been absorbed. 
+We now try to fix $A'$ and $B'$ by imposing the usual on-shell conditions $M^2(-m_{\phi}^2) = 0$ and $d M^2 / d(k^2)|_{k^2=-m_{\phi}^2} = 0$.
+\\
+But, we have a problem. For $k^2 = -m_{\phi}^2$ and $m_{\phi} > 2m_{\chi}$, $D$ is negative for part of the range of $x$. Therefore $\ln D$ has an imaginary part. 
+This imaginary part cannot be cancelled by $A'$ and $B'$, since $A'$ and $B'$ must be real: they are coefficients of hermitian operators in the Lagrangian. 
+The best we can do is $\mathrm{Re}[M^2(-m_{\phi}^2)] = 0$ and $\mathrm{Re}[(M^2)'(-m_{\phi}^2)] = 0$. Imposing these gives
+\[M^2(k^2) = -\frac{1}{12}\alpha \int_0^1 dx \ln(D/|D_0|) + \frac{1}{12}\alpha(m_{\phi}^2 + k^2)\]
+where
+\[D_0 = -x(1-x)m_{\phi}^2 + m_{\chi}^2\]
+Now let us compute the imaginary part of $M^2$. 
+This arises from the integration range $x_- < x < x_+$, where $x_{\pm}$ are the roots of $D = 0$ when $k^2 < -4m_{\chi}^2$. 
+In this range, $\mathrm{Im} \ln D = -i \pi$; the minus sign
+arises because $D$ has a small negative imaginary part. Finally, we have
+\[\mathrm{Im} M^2(-m_{\phi}^2) = -m_{\phi} \Gamma\]
+\\ \\
+To get a more physical understanding of this result, recall that in non-relativistic quantum mechanics, a metastable state with energy $E_0$ and angular momentum quantum number shows up as a resonance in the partial-wave scattering amplitude,
+\[f_l \sim \frac{1}{E - E_0 + i\Gamma/2}\]
+If we imagine convolving this amplitude with a wave packet $\tilde{\psi}(E)e^{-iEt}$ will find a time dependence
+\[\psi(t) \sim \int dE \frac{1}{E-E_0+i\Gamma/2} \tilde{\psi}(E)e^{-iEt} \sim e^{-iE_0 t - \Gamma t /2}\]
+Therefore $|\psi(t)|^2 \sim e^{-\Gamma t}$, and we identify $\Gamma$ as the inverse lifetime of the metastable state.
+
 \section{Non-relativistic limit}
 \subsection{Complex Klein-Gordon field}
 The Lagrangian of complex Klein-Gordon field is
