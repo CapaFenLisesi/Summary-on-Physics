@@ -33,7 +33,7 @@ The equation of motion will be
 \section{Symmetry and Conservation Laws(1)}
 \begin{newthem}[Nother's theorem]
 For $q_i \to q_i+\delta q_i$ and $L \to L+\delta L$, if $\delta L= \frac{d f(q,\dot{q},t)}{dt}$,then we get
-\[\frac{d}{dt}(\sum_i p^i \delta q_i-f)=0 \ \ \ (p^i=\frac{\partial L}{\partial \dot{q_i}})\]
+\[\frac{d}{dt}(\sum_i p^i \delta q_i-f)=0 \ \ \ (p^i  \equiv  \frac{\partial L}{\partial \dot{q_i}})\]
 \end{newthem}
 \begin{example}
 For an isolated system of particles in inertial frame,\\ 
@@ -63,10 +63,10 @@ First, we assume the bracket operation has the following properties:
 \[ \left[f,g\right]=-\left[g,f\right] \]
 \[\left[\alpha_1 f_1+\alpha_2 f_2,\beta_1 g_1+\beta_2 g_2\right]=\alpha_1 \beta_1\left[f_1,g_1\right]
 +\alpha_1 \beta_2\left[f_1,g_2\right]+\alpha_2 \beta_1\left[f_2,g_1\right]+\alpha_2 \beta_2\left[f_2,g_2\right]\]
-\[\left[f_1 f_2,g_1 g_2\right]=f_1\left[f_2,g_1\right]g_2+f_1 g_1\left[f_2,g_2\right]+g_1\left[f_1,g_2\right]f_2 +\left[f_1,g_1\right]g_2 f_2 \]
+\[\left[f_1 f_2,g_1 g_2\right]=f_1\left[f_2,g_1\right]g_2+g_1 f_1\left[f_2,g_2\right]+g_1\left[f_1,g_2\right]f_2 +\left[f_1,g_1\right]g_2 f_2 \]
 \[\left[f,\left[g,h\right]\right]+\left[g,\left[h,f\right]\right]+\left[h,\left[f,g\right]\right]=0\]
 Here, $f,g,h$ are functions of $p^i,q_i,t$.
-Then, we assume that
+If we assume that
 \[\left [q_i,p^k\right ]=\delta^{k}_{i}\]
 we can derive that 
 \[ \left[f,g\right]=\sum_k(\frac{\partial f}{\partial q_k} \frac{\partial g}{\partial p^k} - \frac{\partial f}{\partial p^k} \frac{\partial g}{\partial q_k}  )\]
@@ -87,7 +87,7 @@ In Hamiltonian mechanics, a canonical transformation is a change of canonical co
 \[\dot{Q}_i = \frac{\partial H'}{\partial P_i} \quad \dot{P}_i = -\frac{\partial H'}{\partial Q_i}\]
 
 \begin{newprop}[Canonical condition]
-If $(q_i,p^i,H) \to (Q_i,P^i,H)$ is a canonical transformation, then there exists a generating function $F(q_i,Q_i,t)$ satisfying that
+If $(q_i,p^i,H) \to (Q_i,P^i,H')$ is a canonical transformation, then there exists a generating function $F(q_i,Q_i,t)$ satisfying that
 \[\sum_i p^i\dot{q}_i-H(p^i,q_i) = \sum_i P^i\dot{Q_i} - H'(Q_i,P^i) + \frac{dF}{dt}\]
 \end{newprop}
 
@@ -188,7 +188,7 @@ Let $\bm{r} \equiv \bm{r}_1 -\bm{r}_2 $ be the relative position vector and let 
 Then, we have
 \[L = \frac{1}{2} m \dot{\bm{r}}^2 - U(r)\]
 where
-\[m = \frac{m_1m_2}{m_1+m_2}\]
+\[m \equiv \frac{m_1m_2}{m_1+m_2}\]
 is called reduced mass.The Lagrangian is formally identical with the Lagrangian of a particle of mass $m$ moving in an external field $U(r)$ which is symmetrical about a fixed origin. \\ \\
 $L$ is isotropic, so angular momentum is conserved, i.e. $\bm{M} = \bm{r} \times \bm{p} = \mbox{ const }$. Since $\bm{r}$ is always perpendicular to $\bm{M}$, the path of the particle lies in one plane. Using polar coordinates, we have
 \[L = \frac{1}{2}m(\dot{r}^2 + r^2 \dot{\phi}^2)-U(r)\]
@@ -198,13 +198,13 @@ So,
 \[\frac{dr}{dt} = \sqrt{\frac{2(E-U(r))}{m} - \frac{M^2}{m^2r^2}}\]
 \[\frac{d\phi}{dr} = \frac{M}{r^2 \sqrt{2m(E-U(r))-M^2/r^2}}\]
 The radial part of the motion can be regarded as taking place in one dimension in a field where the effective potential energy is
-\[U_{eff} = U(r) + \frac{M^2}{2mr^2}\]
+\[U_{\mathrm{eff}} = U(r) + \frac{M^2}{2mr^2}\]
 The values of $r$ for which
 \[U(r) + \frac{M^2}{2mr^2} = E\]
 determine the limits of the motion as regards distance from the centre. When equation above is satisfied, the radial velocity $\dot{r}$ is zero. This does not mean that the particle comes to rest as in true one-dimensional motion, since the angular velocity is not zero. The value $\dot{r} = 0$ indicates a turning point of the path, where $r(t)$ begins to decrease instead of increasing, or vice versa.\\ 
-If the range in which $r$ may vary is limited only by the condition $r \ge r_{min}$, the motion is infinite: the particle comes from, and returns to, infinity.
-If the range of r has two limits $r_{min}$ and $r_{max}$, the motion is finite and the path lies entirely within the annulus bounded by the circles $r = r_{min}$ and $r = r_{max}$. This does not mean that the path must be a closed curve. During the time in which $r$ varies from $r_{min}$ to $r_{max}$ and back, the radius vector turns through an angle
-\[\Delta \phi = 2 \int_{r_{min}}^{r_{max}} \frac{M}{r^2 \sqrt{2m(E-U(r))-M^2/r^2}} dr\]
+If the range in which $r$ may vary is limited only by the condition $r \ge r_{\mathrm{min}}$, the motion is infinite: the particle comes from, and returns to, infinity.
+If the range of r has two limits $r_{\mathrm{min}}$ and $r_{\mathrm{max}}$, the motion is finite and the path lies entirely within the annulus bounded by the circles $r = r_{\mathrm{min}}$ and $r = r_{\mathrm{max}}$. This does not mean that the path must be a closed curve. During the time in which $r$ varies from $r_{\mathrm{min}}$ to $r_{\mathrm{max}}$ and back, the radius vector turns through an angle
+\[\Delta \phi = 2 \int_{r_{\mathrm{min}}}^{r_{\mathrm{max}}} \frac{M}{r^2 \sqrt{2m(E-U(r))-M^2/r^2}} dr\]
 The condition for the path to be closed is that this angle should be a rational fraction of $2\pi$. There are only two types of central field in which all finite motions take place in closed paths. They are those in which the potential energy of the particle varies as $\frac{1}{r}$ or as $r^2$.\\
 The presence of the centrifugal energy when $M \neq 0$, which becomes infinite as $\frac{1}{r^2}$ when $r \to 0$, generally renders it impossible for the particle to reach the centre of the field, even if the field is an attractive one. 
 A fall of the particle to the centre is possible only if the potential energy tends sufficiently rapidly to $-\infty$ as $r \to 0$. From the inequality
@@ -217,9 +217,9 @@ An important class of central fields is formed by those in which the potential e
 Let us first consider an attractive field, where
 \[U = -\frac{\alpha}{r}\]
 with $\alpha$ a positive constant. The effective potential energy
-\[U_{eff} = -\frac{\alpha}{r} + \frac{M^2}{2mr^2}\]
-As $r \to 0$, $U_{eff}$ tends to $+\infty$, and as $r \to \infty$ it tends to zero from negative values; for $r = \frac{M^2}{m\alpha}$ it has a minimum value
-\[U_{eff,min} = -\frac{m\alpha^2}{2M^2}\]
+\[U_{\mathrm{eff}} = -\frac{\alpha}{r} + \frac{M^2}{2mr^2}\]
+As $r \to 0$, $U_{\mathrm{eff}}$ tends to $+\infty$, and as $r \to \infty$ it tends to zero from negative values; for $r = \frac{M^2}{m\alpha}$ it has a minimum value
+\[U_{\mathrm{eff},\mathrm{min}} = -\frac{m\alpha^2}{2M^2}\]
 The motion is finite for $-\frac{m\alpha^2}{2M^2} \leq E < 0$ and infinite for $E \ge 0$.\\
 The shape of path is
 \[\frac{p}{r} = 1 + e \cos \phi\]
@@ -235,7 +235,7 @@ If $E < 0$,  the orbit is an ellipse and the motion is finite.
 The major and minor semi-axes of the ellipse are
 \[a = \frac{p}{1-e^2} = \frac{\alpha}{2|E|} \quad b = \frac{p}{\sqrt{1-e^2}} = \frac{M}{\sqrt{2m|E|}}\]
 The least and greatest distances from the centre of the field (the focus of the ellipse) are
-\[r_{min} = \frac{p}{1+e} = a(1-e) \quad r_{max} = \frac{p}{1-e} = a(1+e)\]
+\[r_{\mathrm{min}} = \frac{p}{1+e} = a(1-e) \quad r_{\mathrm{max}} = \frac{p}{1-e} = a(1+e)\]
 The period of revolution in an elliptical orbit is
 \[T = \frac{\pi a b}{\frac{1}{2}r^2 \dot{\phi}} = 2\pi a^{3/2}\sqrt{\frac{m}{\alpha}} = \pi \alpha \sqrt{\frac{m}{2|E|^3}}\]
 If $E > 0$, the path is a hyperbola with the origin as internal focus. 
@@ -245,14 +245,14 @@ If $E > 0$, the path is a hyperbola with the origin as internal focus.
 	\caption{Attractive Kepler orbit with $e > 1$}
 \end{figure}\\
 The distance of the perihelion from the focus is
-\[r_{min} = \frac{p}{1+e} = a(1-e)\]
+\[r_{\mathrm{min}} = \frac{p}{1+e} = a(1-e)\]
 where $a = \frac{p}{(1-e^2)^2} = \frac{\alpha}{2E}$ is the semiaxis of the hyperbola.\\
-If $E = 0$, the eccentricity $e = 1$, and the particle moves in a parabola with perihelion distance $r_{min} = \frac{p}{2}$. This case occurs if the particle starts from rest
+If $E = 0$, the eccentricity $e = 1$, and the particle moves in a parabola with perihelion distance $r_{\mathrm{min}} = \frac{p}{2}$. This case occurs if the particle starts from rest
 at infinity.\\ \\
 Let us now consider motion in a repulsive field, where
 \[U= \frac{\alpha}{r} \quad (\alpha > 0)\]
 Here the effective potential energy is
-\[U_{eff} = \frac{\alpha}{r} + \frac{M^2}{2mr^2}\]
+\[U_{\mathrm{eff}} = \frac{\alpha}{r} + \frac{M^2}{2mr^2}\]
 and decreases monotonically from $+\infty$ to zero as $r$ varies from zero to infinity. 
 The energy of the particle must be positive, and the motion is always infinite. The calculations are exactly similar to those for the attractive field.
 The path is a hyperbola:
@@ -263,7 +263,7 @@ The path is a hyperbola:
 	\caption{Repulsive Kepler orbit}
 \end{figure}\\
 The perihelion distance is
-\[r_{min} = \frac{p}{-1+e} = a(1+e)\]\\
+\[r_{\mathrm{min}} = \frac{p}{-1+e} = a(1+e)\]\\
 There is an integral of the motion which exists only in fields $U = \frac{\alpha}{r}$. It is easy to verify by direct calculation that the quantity
 \[\bm{v}\times\bm{M} + \frac{\alpha \bm{r}}{r}\]
 is constant. The direction of the conserved vector is along the major axis from the focus to the perihelion, and its magnitude is $\alpha e$. This is most simply seen by considering its value at perihelion.
@@ -299,7 +299,7 @@ So the distribution with respect to the angle $\theta_0$ is
 The corresponding distributions in the L system are obtained by an appropriate transformation. For example, let us calculate the kinetic energy distribution in the L system.
 Since
 \[v^2 = V^2 + v_0^2 + 2Vv_0\cos\theta_0\] 
-we have $d(v^2) = d\cos\theta_0$. So the kinetic energy can distributed uniformly over between $T_{min} = \frac{1}{2}(v_0-V)^2$ and $T_{max}= \frac{1}{2}m(v_0+V)^2$.\\ \\
+we have $d(v^2) = d\cos\theta_0$. So the kinetic energy can distributed uniformly over between $T_{\mathrm{min}} = \frac{1}{2}(v_0-V)^2$ and $T_{\mathrm{max}}= \frac{1}{2}m(v_0+V)^2$.\\ \\
 A collision between two particles is said to be elastic if it involves no change in their internal state. The collision is most simply described in the C system.The velocities of the particles before the collision are related to their velocities $\bm{v}_1$ and
 $\bm{v}_2$ in the L system by $\bm{v}_{10} = m_2\bm{v}/(m_1+m_2)$, $\bm{v}_{20} = -m_1\bm{v}/(m_1+m_2)$,
 where $\bm{v} = \bm{v}_1-\bm{v}_2$.\\
@@ -328,8 +328,8 @@ $\theta_1$ and $\theta_2$ can be expressed in terms of $\chi$ by
 The magnitudes of the velocities of the two particles after the collision in terms of $\chi$ are
 \[v'_1 = \frac{\sqrt{m_1^2 + m_2^2 + 2m_1m_2\cos\chi}}{m_1+m_2}v \quad v'_2 = \frac{2m_1v}{m_1+m_2}\sin\frac{1}{2}\chi\]
 If $m_1 < m_2$, the velocity of $m_1$ after the collision can have any direction.
-If $m_1 > m_2$, this particle can be deflected only through an angle not exceeding $\theta_max$ from its original direction. Evidently
-\[\sin\theta_{max} = \frac{m_2}{m_1}\]
+If $m_1 > m_2$, this particle can be deflected only through an angle not exceeding $\theta_\mathrm{max}$ from its original direction. Evidently
+\[\sin\theta_{\mathrm{max}} = \frac{m_2}{m_1}\]
 The collision of two particles of equal mass, of which one is initially at rest, is especially simple. In this case both B and A lie on the circle, so
 \begin{figure}[!h]
 	\centering
@@ -352,7 +352,7 @@ Here, the incident flux are measured in the frame of target particle. Recall tha
 	\caption{Scattering in central field}
 \end{figure}\\
 And we have
-\[\phi_0 = \int_{r_{min}}^{\infty} \frac{M}{r^2 \sqrt{2m(E-U(r))-\frac{M^2}{r^2}}} \quad \chi = |\pi - 2\phi_0|\]
+\[\phi_0 = \int_{r_{\mathrm{min}}}^{\infty} \frac{Mdr}{r^2 \sqrt{2m(E-U(r))-\frac{M^2}{r^2}}} \quad \chi = |\pi - 2\phi_0|\]
 Since
 \[E = \frac{1}{2}m v_{\infty}^2 \quad M = m\rho v_{\infty},\]
 we can get the relation between  $\chi$ and $\rho$. Suppose the number density of the particles is $n$, then the incident flux is $nv_{\infty}$, number of events that particles are scattered into the solid angle $do = \sin\chi d\chi d\phi$ at $(\chi,\phi)$ in time $T$ is
@@ -376,7 +376,7 @@ For particles initially at rest, we have
 \[d\sigma_2 = \left ( \frac{\alpha}{mv^2_{\infty}} \right )^2 \frac{do_2}{\cos^3 \theta_2}\]
 The same transformation for the incident particles leads, in general, to a very complex formula, and we shall merely note two particular cases.\\
 If the mass $m_2$ of the scattering particle is large compared with the mass $m_1$ of the scattered particle, then $\chi = \theta_1$ and $m = m_1$, so that
-\[d\sigma_1 = \left ( \frac{\alpha}{4E_1}\right )^2 \frac{do_1}{\sin^2 (\frac{1}{2}\theta_1)}\]
+\[d\sigma_1 = \left ( \frac{\alpha}{4E_1}\right )^2 \frac{do_1}{\sin^4 (\frac{1}{2}\theta_1)}\]
 here $E_1 = \frac{1}{2}m_1v^2_{\infty}$ is the energy of the incident particle.\\
 If the masses of the two particles are equal, then by $\theta_1 = \frac{\chi}{2}$, we have
 \[d\sigma_1 =  \left ( \frac{\alpha}{E_1}\right )^2 \frac{\cos\theta_1}{\sin^4\theta_1} do_1\]
@@ -390,7 +390,7 @@ The energy acquired by 2 and lost by 1 is therefore
 \[\epsilon = \frac{2m^2}{m_2} v_{\infty}^2 \sin^2 \frac{\chi}{2} \]
 Expressing $\sin \frac{\chi}{2}$ in terms of $\epsilon$, we obtain
 \[d\sigma = 2\pi \frac{\alpha^2}{m_2 v^2_{\infty}} \frac{d\epsilon}{\epsilon^2}\]
-This is the required formula: it gives the effective cross-section as a function, of the energy loss $\epsilon$, which takes values from zero to $\epsilon_{max} = 2m^2 v_{\infty}^2 /m_2$.
+This is the required formula: it gives the effective cross-section as a function, of the energy loss $\epsilon$, which takes values from zero to $\epsilon_{\mathrm{max}} = 2m^2 v_{\infty}^2 /m_2$.
 
 \chapter{Small Oscillation}
 \section{Small oscillation in one dimensional}
@@ -442,7 +442,7 @@ Here
 When
 \[\Omega = \sqrt{\omega_0^2 - \frac{1}{2Q^2}}\]
 we have
-\[q_{max} = \frac{QF_0}{\omega}\]
+\[q_{\mathrm{max}} = \frac{QF_0}{\omega}\]
 It is called resonance. 
 
 \section{Non-linear oscillation and perturbation theory}
@@ -530,22 +530,22 @@ This equation only has a solution is $\det {\vec {\vec {A}}}=0$. This gives a $n
 
 \chapter{Motion of a Rigid Body}
 \section{Angular velocity}
-Suppose there are two coordinate frames. The frame 2 is rotating relatively to frame 1. If the coordinates of the particles in frame 2 is $r_2=(x_2,y_2,z_2)$.
-The the coordinates of the particle in frame 1 is
+Suppose there are two coordinate frames. The frame 2 is rotating with respect to frame 1. If the coordinates of a particle in frame 2 are $r_2=(x_2,y_2,z_2)$.
+Then the coordinates of the particle in frame 1 are
 \[r_1 = O(t)r_2\]
 and we have
 \[O^TO=I\]
-So, we can derive that
+Note that
 \[\Omega + \Omega^T= 0 \quad \Omega \equiv O^T\frac{dO}{dt}\]
-It is easy to verify that
-\[\frac{dr_1}{dt} = \frac{dO}{dt}r_2 + O\frac{dr_2}{dt} = OO^T \frac{dO}{dt}r_2 + Ov_2  = O (\Omega r_2 + v_2)\]
+It is easy to derive that
+\[\frac{dr_1}{dt} = \frac{dO}{dt}r_2 + O\frac{dr_2}{dt} = OO^T \frac{dO}{dt}r_2 + Ov_2  = O (\Omega r_2 + v_2) \quad v_2 \equiv \frac{dr_2}{dt}\]
 Suppose
 \[\Omega = \left[ \begin{matrix} 0& -\omega_{2z}& \omega_{2y}\\ \omega_{2z}& 0& -\omega_{2x}\\ -\omega_{2y}& \omega_{2x}& 0\end{matrix} \right] \]
-So, we have
-\[v_1 = O(\omega_2 \times r_2 + v_2) \]
+We can get
+\[v_1 \equiv \frac{dr_1}{dt}  = O(\omega_2 \times r_2 + v_2) \]
 Now, we define
 \[\omega_1 \equiv O\omega_2\]
-We can derive that
+We can verify that
 \[O \Omega O^T = \left[ \begin{matrix} 0& -\omega_{1z}& \omega_{1y}\\ \omega_{1z}& 0& -\omega_{1x}\\ -\omega_{1y}& \omega_{1x}& 0\end{matrix} \right] \]
 So, we have
 \[v_1 = \omega_1 \times r_1 + Ov_2\]
