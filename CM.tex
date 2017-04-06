@@ -431,7 +431,7 @@ Then we have
 \[q_s = \int_{-\infty}^{\infty} F(t')G(t-t')dt'\]
 For under damped oscillation, we have
 \[G(t,t') = \begin{cases} \frac{e^{-\frac{t-t'}{2Q}}}{\omega} \sin\omega(t-t') \quad t>t'\\ 0 \quad t<t'\end{cases} \]
-And we can verify that
+and so
 \[q_s = \int_{0}^{\infty} F(t-t') \frac{e^{-\frac{t'}{2Q}}}{\omega} \sin\omega t' dt'\]
 A special case is that
 \[F(t) = F_0 \cos\Omega t\]
@@ -515,7 +515,7 @@ The first term is a constant with respect to $\eta_i$ and constant terms do not 
 where
 \[T_{ij}=T_{ij}\left(q_{0,1},\ldots q_{0,n}\right) \quad V_{ij}=\left({\frac {\partial ^{2}V}{\partial q_{i}\partial q_{j}}}\right)_{q_{0,i}}\]
 yielding the equations of motion
-\[\sum _{j}\left(T_{ij}{\ddot {\eta }}_{j}-V_{ij}\eta _{j}\right)=0\]
+\[\sum _{j}\left(T_{ij}{\ddot {\eta }}_{j} + V_{ij}\eta _{j}\right)=0\]
 This is a linear differential equation with constant coefficients. We can try the solution
 \[\eta _{i}=Ca_{i}e^{-i\omega t}\]
 so we have
@@ -610,7 +610,7 @@ Although $\bm{F}$ has been defined as the sum of all the forces $\bm{f}$ acting 
 Let us now derive the second equation of motion, which gives the time derivative of the angular momentum $\bm{M}$. 
 To simplify the derivation, it is convenient to choose the fixed (inertial) frame of reference in such a way that the centre of mass is at rest in that frame at the instant considered. We have
 \[\dot{\bm{M}} = \frac{d}{dt} \sum \bm{r} \times \bm{p} = \sum \bm{\dot{r}} \times \bm{p} + \sum \bm{r} \times \dot{\bm{p}}\]
-Our choice of the frame of reference (with $\bm{V} = 0$) means that the vectors $\dot{r}$ and $\bm{p} = m\bm{v}$ are parallel, so $\dot{\bm{r}} \times \bm{p} = 0$. We have finally
+Our choice of the frame of reference (with $\bm{V} = 0$) means that the vectors $\dot{\bm{r}}$ and $\bm{p} = m\bm{v}$ are parallel, so $\dot{\bm{r}} \times \bm{p} = 0$. We have finally
 \[\frac{d\bm{M}}{dt} = \bm{K}\]
 where
 \[\bm{K} = \sum \bm{r} \times \bm{f}\]
