@@ -1,7 +1,7 @@
 \chapter{Special relativity}
 \section{The principle of relativity}
 First, we assume there is an upper limit of velocity of propagation of interaction $c$. Second, we assume that inertial reference frame are all the same in describing the law of physics. Then, we can find the invariant intervals when transforming from one inertial reference frame to another, $ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2$. 
-(In the following, we assume that $c=1$.)This transformation is called Lorentz transformation, which can be written as
+(In the following, we adopt the unit system in which $c$ equals $1$.) The transformation between different inertial frame preserving the intervals is called Lorentz transformation, which can be written as
 \[\overline{x}^{\mu} = \Lambda^{\mu}_{\phantom{\mu}\nu} x^{\nu}\]
 The invariant symbol of the vector representation of Lorentz transformation is $\eta^{\mu \nu}$
 \[\Lambda^{\mu}_{\phantom{\mu}\rho}  \Lambda^{\nu}_{\phantom{\nu}\sigma}  \eta^{\rho \sigma} = \eta^{\mu \nu},\]
@@ -25,60 +25,64 @@ The inverse matrix of $\eta^{\mu \nu}$ is
 \right]\]
 We can use $\eta^{\mu \nu}$ and and its inverse $\eta_{\mu \nu}$ to raise and lower vector indices, 
 \[x_{\mu} \equiv \eta_{\mu \nu} x^{\nu}\]
-And we can verify the following equations,
-\[\Lambda^{\mu}_{\phantom{\rho}\rho} \Lambda_{\nu}^{\phantom{\rho}\rho} = \delta^{\nu}_{\mu} \]
+And we can verify the following identities,
+\[\Lambda^{\mu}_{\phantom{\rho}\rho} \Lambda_{\nu}^{\phantom{\rho}\rho} = \delta^{\mu}_{\nu} \]
 \[x^{\mu} = \eta^{\mu \nu} x_{\nu}\]
 \[\overline{x}_{\mu} = \Lambda_{\mu}^{\phantom{\mu}\nu} x_{\nu}\]
 \[\Lambda_{\mu}^{\phantom{\mu}\rho}  \Lambda_{\nu}^{\phantom{\nu}\sigma}  \eta_{\rho \sigma} = \eta_{\mu \nu},\]
-In a special case when the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
+In a special case where the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
 \[\overline{x}^{0} = \gamma x^0 - \gamma \beta x^1\]
 \[\overline{x}^{1} = -\gamma \beta x^0 + \gamma x^1\]
+where $\gamma \equiv (1-\beta^2)^{-1/2}$.
+\\ \\
 Some physical quantity will behave like a tensor (vector,scalar) when transforming form one inertial frame to another. For example,
 \paragraph{scalar} proper time: $d \tau$, mass: $m$, electrical charge $e$
-\paragraph{vector} four velocity: $u^{\mu} = \frac{dx^{\mu}}{d \tau}$, four momentum: $p^{\mu} = m u^{\mu}$, four acceleration: $a^{\mu} = \frac{du^{\mu}}{d \tau}$, four force: $f^{\mu} = m a^{\mu}$.\\ \\
+\paragraph{vector} four velocity: $u^{\mu} \equiv \frac{dx^{\mu}}{d \tau}$, four momentum: $p^{\mu} \equiv m u^{\mu}$, four acceleration: $a^{\mu} \equiv \frac{du^{\mu}}{d \tau}$, four force: $f^{\mu} \equiv m a^{\mu}$.\\ \\
 We can also define the corresponding three vector.
-\paragraph{three velocity}: $\hat{v}^{i} = \frac{dx^i}{dt}$
+\paragraph{three velocity}: $\hat{v}^{i} \equiv \frac{dx^i}{dt}$
 \[u^0 = \gamma_v, u^i = \gamma \hat{v}^i\]
-When the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
+If the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
 \[\overline{\hat{v}}^1 = \frac{\hat{v}^1 - \beta}{1-\hat{v}^1 \beta}\]
 \[\overline{\hat{v}}^2 = \frac{\hat{v}^2}{\gamma(1-\hat{v}^2 \beta)}\]
 \[\overline{\hat{v}}^3 = \frac{\hat{v}^3}{\gamma(1-\hat{v}^3 \beta)}\]
-\paragraph{three momentum}: $\hat{p}^{i} = p^i$
-\paragraph{three acceleration}: $\hat{a}^{i} = \frac{dv^i}{dt}$
-\paragraph{three force}: $\hat{f}^i = \frac{d\hat{p}^i}{dt}$
+\paragraph{three momentum}: $\hat{p}^{i} \equiv p^i$
+\paragraph{three acceleration}: $\hat{a}^{i} \equiv \frac{dv^i}{dt}$
+\paragraph{three force}: $\hat{f}^i \equiv \frac{d\hat{p}^i}{dt}$
 \[f^i = \gamma_v \hat{f}^i\]
 
 \section{Relativistic Mechanics}
-For a free particle, we have
+For a free particle, we have following equations of motion:
 \[\frac{dp^{\mu}}{d\tau} = 0\]
 It can be formulated in several ways
 \subsubsection{Lagrangian formulation}
 \[S=-m\int_{a}^{b} d\tau, \ \ \ \ \delta x^{\mu}(a) = \delta x^{\mu}(b) = 0\]
 \[\delta S = 0 \Rightarrow m\frac{du^{\mu}}{d\tau} = 0\]
 \subsubsection{Hamiltonian formulation}
-\[S = -m \int_{t_1}^{t_2} \sqrt{1-\dot{x}_i\dot{x}^i} dt\]
-\[L = - m \sqrt{1-\dot{x}_i\dot{x}^i}\]
+\[S = \int_{t_1}^{t_2} L dt \quad L = - m \sqrt{1-\dot{x}_i\dot{x}^i}\]
 \[\pi^i = \frac{\partial L}{\partial \dot{x}_i} = \gamma m \eta^{ij}\dot{x}_j\]
 \[H = \pi^i \dot{x}_i - L = \gamma m = \sqrt{m^2 + \pi^i \pi_i}\]
 So, the Hamiltonian equations are
 \[\dot{\pi}^i = 0, \ \ \ \ \dot{x_i} = \eta_{ij}\frac{\pi^j}{\sqrt{m^2 + \pi^k \pi_k}}\]
 \subsubsection{Hamiltonian-Jacobi equation}
 \[H = -\frac{\partial S}{\partial t}, \ \ \ \ \pi^i = \frac{\partial S}{\partial x_i}\]
-If we define $p^0 = H$, $p^i = \pi^i$, then we can verify that $p^{\mu} = \frac{\partial S}{\partial x_{\mu}}$. So, $p^{\mu}$ is a vector under Lorentz transformation. The Hamiltonian-Jacobi equation can be written as
-\[(\frac{\partial S}{\partial t})^2 = m^2 + (\frac{\partial S}{\partial x})^2 + (\frac{\partial S}{\partial y})^2 + (\frac{\partial S}{\partial z})^2\]\\ \\
+Note that $p^0 = H$, $p^i = \pi^i$, we have $p^{\mu} = \frac{\partial S}{\partial x_{\mu}}$. So, we can see that $p^{\mu}$ is a vector under Lorentz transformation. The Hamiltonian-Jacobi equation can be written as
+\[(\frac{\partial S}{\partial t})^2 = m^2 + (\frac{\partial S}{\partial x})^2 + (\frac{\partial S}{\partial y})^2 + (\frac{\partial S}{\partial z})^2\]
+\\ \\
 For a non-free particle, we have the revised newton's second law:
 \[f^{\mu} = \frac{dp^{\mu}}{d\tau}\]
 The formula is the definition of the four force. It can also be written in three vector as
-\[\hat{f}^i = \gamma_v m \hat{a}^i + \gamma_v^3 (\hat{a}^j \hat{v}_j) m \hat{v}^i\]\\ \\
-If the system consists of more than one particles interacting with each other. We can derive the conservation laws from the symmetry.
+\[\hat{f}^i = \gamma_v m \hat{a}^i + \gamma_v^3 (\hat{a}^j \hat{v}_j) m \hat{v}^i\]
+\\ \\
+If the system consists of more than one particles interacting with each other. We have the conservation laws from the symmetry.
 \subsubsection{Translational symmetry and conservation of momentum}
 \[\overline{x}^{\mu} = x^{\mu} + \delta x^{\mu}\]
-\[\delta S = \sum mu_{\mu} \delta x^{\mu}|_a^b = 0 \]
+\[\delta S = \sum p_{\mu} \delta x^{\mu}|_a^b = 0 \]
 $\sum p^{\mu}$ is conserved.
 \subsubsection{Rotational symmetry and conservation of angular momentum}
-\[\overline{x}^{\mu} = x^{\mu} + x_{\nu}\delta \Omega^{\mu \nu}\]
-\[\delta S = \sum mu^{\mu} x^{\nu} \delta \Omega_{\mu \nu}|_a^b = 0 \]
-$\sum M^{\mu \nu} $ is conserved, where $M^{\mu \nu} = x^{\mu}p^{\nu} - x^{\nu}p^{\mu}$.
+\[\overline{x}^{\mu} = x^{\mu} + x_{\nu}\delta \omega^{\mu \nu}\]
+where $I+\delta \omega$ is the infinitesimal Lorentz transformation.
+\[\delta S = \sum p^{\mu} x^{\nu} \delta \Omega_{\mu \nu}|_a^b = 0 \]
+Since $\delta \omega$ is anti symmetric, $\sum M^{\mu \nu} $ is conserved, where $M^{\mu \nu} \equiv x^{\mu}p^{\nu} - x^{\nu}p^{\mu}$.
 
 \section{Relativistic Scattering}
 \subsection{Distribution function}
@@ -125,23 +129,26 @@ In lab frame (L frame),
 By the conservation of momentum, we can derive that
 \[\cos \theta_1 = \frac{E_1'(E_1+m_2)-E_1 m_2 - m_1^2}{p_1 p_1'}\]
 \[\cos \theta_2 = \frac{(E_1+m_2)(E_2'-m_2)}{p_1 p_2'}\]
-Here $\theta_1(\theta_2)$ is the angle between $\bm{p}_1'(\bm{p}_2')$ with $\bm{p}_1$.
+where $\theta_1(\theta_2)$ is the angle between $\bm{p}_1'(\bm{p}_2')$ with $\bm{p}_1$.
 In a special case where $m_1 =0$, we have
 \[E_1' = \frac{m_2}{1-\cos\theta_1 + \frac{m_2}{E_1}}\]
-Suppose in the center of mass frame (C frame), the scattering angle is $\chi$,then we can derive that
-\[E_1' = E_1 - \Delta E \quad E_2' = m_2 + \Delta E\]
-Here,
-\[\Delta E = \frac{m_2(E_1^2-m_1^2)}{m_1^2 + m_2^2 + 2m_2E_1}(1-\cos\chi)\]
-Next, suppose in L frame, let $x = p_1'\cos\theta_1$,$y = p_1'\sin\theta_1$,we can get that
+Let $x \equiv p_1'\cos\theta_1$,$y \equiv p_1'\sin\theta_1$,we can get that
 \[\frac{(x-c)^2}{a^2}+\frac{y^2}{b^2}=1\]
-Here,
-\[a = \frac{p_1(E_1m_2+m_2^2)}{m_1^2 + m_2^2 + 2m_2 E_1} = \frac{m_2V}{\sqrt{1-V^2}} \quad b = \frac{m_2 p_1}{\sqrt{m_1^2 + m_2^2 + 2m_2 E_1}} = \frac{a}{\sqrt{1-V^2}} \quad c = \frac{ p_1(E_1m_2+m_1^2)}{m_1^2 + m_2^2 + 2m_2 E_1}\]
-Here $V = \frac{p_1}{E_1 + m_2}$ is the velocity of particle 2 before scattering in C frame. And it is easy to see that $a + c = p_1$. The result above can be represented by a picture.
+where
+\[a \equiv \frac{p_1(E_1m_2+m_2^2)}{m_1^2 + m_2^2 + 2m_2 E_1} = \frac{m_2V}{\sqrt{1-V^2}} \quad b \equiv \frac{m_2 p_1}{\sqrt{m_1^2 + m_2^2 + 2m_2 E_1}} = \frac{a}{\sqrt{1-V^2}} \quad c \equiv \frac{ p_1(E_1m_2+m_1^2)}{m_1^2 + m_2^2 + 2m_2 E_1}\]
+where $V \equiv \frac{p_1}{E_1 + m_2}$ is the velocity of particle 2 before scattering in C frame. 
+And it is easy to see that $a + c = p_1$. 
+The result above can be represented by a picture.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[height=3.4cm ,width=15.98cm]{CFT/scattering.png}
 	\caption{Relativistic scattering}
 \end{figure}
+\noindent
+Next, suppose in the center of mass frame (C frame), the scattering angle is $\chi$,then we can derive that
+\[E_1' = E_1 - \Delta E \quad E_2' = m_2 + \Delta E\]
+Here,
+\[\Delta E = \frac{m_2(E_1^2-m_1^2)}{m_1^2 + m_2^2 + 2m_2E_1}(1-\cos\chi)\]
 
 \chapter{Classical field theory}
 \section{Lagrangian formulation}
@@ -157,7 +164,7 @@ Vector fields:
 \[\overline{A}^{\mu}(x) = \Lambda^{\mu}_{\phantom{\mu}\nu} A^{\nu}(\Lambda^{-1}x)\]
 \[\overline{A}_{\mu}(x) = (\Lambda^{-1})^{\nu}_{\phantom{\mu}\mu} A_{\nu}(\Lambda^{-1}x) = \Lambda_{\mu}^{\phantom{\mu}\nu}A_{\nu}(\Lambda^{-1}x)\]
 \[\overline{\partial_{\mu}\phi}(x) = (\Lambda^{-1})^{\nu}_{\phantom{\mu}\mu} \partial_{\nu} \phi (\Lambda^{-1}x) = \Lambda_{\mu}^{\phantom{\mu}\nu} \partial_{\nu} \phi (\Lambda^{-1}x)\]
-Lagrangian is a scalar, or more loosely, action is invariant under Lorentz transformation.
+Lagrangian must be a scalar, or more loosely, action must be invariant under Lorentz transformation.
 
 \section{Symmetry and conservation law}
 \begin{newthem}[Noether's theorem]
@@ -176,8 +183,7 @@ $\overline{x} = x - a$
 If we define $P^{\mu} \equiv \int T^{0 \mu} d^3 x$,then we have the law of momentum conservation:
 \[\frac{d P^{\mu}}{dt} = 0\]
 
-\subsubsection{Lorentz Transformation} 
-
+\subsubsection{Lorentz Transformation}
 $\overline{x}^{\mu} = x^{\mu} + \delta \omega^{\mu}_{\phantom{\mu}\nu} x^{\nu}$\\
 The infinitesimal Lorentz transformation can be written as $I+\delta \omega^{\mu}_{\phantom{\mu}\nu}$
 \[\delta \omega^{\mu}_{\phantom{\mu}\nu} = \left[ 
@@ -188,10 +194,11 @@ The infinitesimal Lorentz transformation can be written as $I+\delta \omega^{\mu
 \beta_3 & -\theta_2 & \theta_1  & 0
 \end{matrix} 
 \right]\]
-This time, we assume that
+We assume that
 \[\overline{\phi}_a(x) = \mathcal{S}_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
 In the limit of infinitesimal Lorentz transformation, we have
 \[\mathcal{S}_{a}^{\phantom{a}b} = \delta_{a}^{\phantom{a}b}+\frac{1}{2} \delta \omega_{\alpha \beta} (\Sigma^{\alpha \beta})_{a}^{\phantom{a}b} \]
+So, we have
 \[j^{\mu} = \frac{1}{2} M^{\mu \nu \rho}  \delta \omega_{\nu \rho}\]
 \[M^{\mu \nu \rho} \equiv x^{\nu}T^{\mu \rho} - x^{\rho} T^{\mu \nu} - \frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi_a)}(\Sigma^{\nu \rho})_{a}^{\phantom{a}b}\phi_b\]
 If we define $M^{\nu \rho} \equiv \int M^{0 \nu \rho} d^3 x$, then we have the law of angular momentum conservation:
@@ -205,6 +212,7 @@ If we define $M^{\nu \rho} \equiv \int M^{0 \nu \rho} d^3 x$, then we have the l
 	\[{\begin{aligned}\int {\frac {\delta F}{\delta \rho }}(x)\phi (x)\;dx&=\lim _{\varepsilon \to 0}{\frac {F[\rho +\varepsilon \phi ]-F[\rho ]}{\varepsilon }}\\&=\left[{\frac {d}{d\epsilon }}F[\rho +\epsilon \phi ]\right]_{\epsilon =0},\end{aligned}}\]
 	where $\phi$ is an arbitrary function. The quantity $\epsilon \phi$ is called the variation of $\rho$. 
 \end{newdef}
+\noindent
 Like the derivative of a function, the functional derivative satisfies the following properties, where $F[\rho]$ and $G[\rho]$ are functionals:\\
 Linearity:
 \[{\frac {\delta (\lambda F+\mu G)[\rho ]}{\delta \rho (x)}}=\lambda {\frac {\delta F[\rho ]}{\delta \rho (x)}}+\mu {\frac {\delta G[\rho ]}{\delta \rho (x)}},\]
@@ -232,12 +240,12 @@ Now, we can get the Hamilton equation form $\delta S =0$,
 \[\dot{\phi_a}(\bm{x},t) = \frac{\delta}{\delta \pi^a(\bm{x},t)} H = \frac{\partial \mathcal{H}}{\partial \pi^a}\]
 \[\dot{\pi^a}(\bm{x},t) = -\frac{\delta}{\delta \phi_a(\bm{x},t)} H = - \frac{\partial \mathcal{H}}{\partial \phi_a} + \left(\frac{\partial \mathcal{H}}{\partial \phi_{a,b}}\right)_{,b}\]
 
-\subsection{Poission bracket}
+\subsection{Poisson bracket}
 
 First, we define that
 \[[\phi_a(\bm{x}),\phi_b(\bm{y})] \equiv [\pi^a(\bm{x}),\pi^b(\bm{y})] \equiv 0\]
 \[[\phi_a(\bm{x}),\pi^b(\bm{y})] \equiv \delta^{b}_{a} \delta(\bm{x}-\bm{y})\]
-then, we demand that the bracket operation has the same properties as the Poission bracket in classical mechanics. And we also demand that
+then, we demand that the bracket operation has the same properties as the Poisson bracket in classical mechanics. And we also demand that
 \[[\partial_x A(\bm{x}),B(\bm{y})] = \partial_x [A(\bm{x}),B(\bm{y})]\]
 and
 \[\left[\int d^3 x A(\bm{x}),B(\bm{y})\right] = \int d^3 x [A(\bm{x}),B(\bm{y})]\]
@@ -282,7 +290,7 @@ Since we can prove that
 \[L^{\mu \nu}L^{\rho \sigma}-L^{\rho \sigma}L^{\mu \nu} = -\eta^{\nu \rho}L^{\mu \sigma} + \eta^{\sigma \mu}L^{\rho \nu} + \eta^{\mu \rho}L^{\nu \sigma} - \eta^{\sigma \nu}L^{\rho \mu}\]
 if we demand that
 \[S^{\mu \nu}S^{\rho \sigma}-S^{\rho \sigma}S^{\mu \nu} = -\eta^{\nu \rho}S^{\mu \sigma} + \eta^{\sigma \mu}S^{\rho \nu} + \eta^{\mu \rho}S^{\nu \sigma} - \eta^{\sigma \nu}S^{\rho \mu}\]
-We will get get the Poisson bracket of the $M^{\mu \nu}$,
+we will get get the Poisson bracket of the $M^{\mu \nu}$,
 \[[M^{\mu \nu},M^{\rho \sigma}] = -\eta^{\nu \rho}M^{\mu \sigma} + \eta^{\sigma \mu}M^{\rho \nu} + \eta^{\mu \rho}M^{\nu \sigma} - \eta^{\sigma \nu}M^{\rho \mu}\]
 up to the possibility of a term on the right-hand side that commutes with $\phi(x)$ and its derivatives.\\ \\
 We now define $J_i \equiv \frac{1}{2} \epsilon_{ijk} M^{jk}$ and $K_i \equiv M^{i0}$, so we have
