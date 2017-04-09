@@ -336,101 +336,103 @@ we can demonstrate that
 \chapter{Classical Electrodynamics}
 \section{The formulation of classical electrodynamics}
 \subsection{Maxwell equations and Lorentz force}
-
 The Lagrangian of the EM field $A^{\mu}$ when coupling with current is
 \[\mathcal{L} = -\frac{1}{4}F^{\mu\nu}F_{\mu\nu} + j^{\mu} A_{\mu}\]
-Here
-\[F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu} \quad j^{\mu} = \rho_{e0} u^{\mu}\]
-$\rho_{e0}$ is the charge density measured in the frame of charge.
-Then we can derive the Euler-Lagrange equation of EM field:
+where
+\[F_{\mu\nu} \equiv \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu} \quad j^{\mu} \equiv \rho_{e0} u^{\mu}\]
+and $\rho_{e0}$ is the charge density measured in the frame of charge.
+The Euler-Lagrange equation of EM field is
 \[\partial_{\nu} F^{\mu\nu} = j^{\mu}\]
-And we can derive the charge conservation equation
-\[\partial_{\mu} j^{\mu} = 0\]
-For a charged particle moving in EM field with orbit $x^{\mu}(\tau)$, we have
+The charge conservation equation then follows directly from field equation,
+\[\partial_{\mu} j^{\mu} = \partial_{\mu} \partial_{\nu} F^{\mu\nu} = 0\]
+For a charged particle moving in EM field with trajectory $x^{\mu}(\tau)$, we have
 \[j^{\mu} =  e_a \delta(\bm{r}-\bm{r}_a(t)) \sqrt{1-\bm{v}_a^2} u_a^\mu \]
-Then we can derive that
-\[\int dV dt j^{\mu} A_{\mu} = \int dx^{\mu} e A_{\mu}\]
-So, the action for a charged particle when coupling with EM field is
-\[S = - m \int d\tau + e\int dx^{\mu} A_{\mu}\]
+it follows that
+\[\int dV dt j^{\mu} A_{\mu} = \int dx^{\mu} e_a A_{\mu}(x^{\mu}(\tau))\]
+so the action for a charged particle when coupling with EM field is
+\[S = - m \int d\tau + e\int dx^{\mu} A_{\mu}(x^{\mu}(\tau))\]
 We can derive the Euler-Lagrangian equation of the particle:
 \[ma_{\mu} = eF_{\mu \nu}u^{\nu}\]
-The Hamiltonian formulation of electrodynamics will be discussed in detail in the Hamiltonian formulation of general relativity and canonical quantization formulation of quantum electrodynamics.\\
+\begin{note}
+The Hamiltonian formulation of electrodynamics will be discussed in detail in the Hamiltonian formulation of general relativity and canonical quantization formulation of quantum electrodynamics.
+\end{note}
 We now define the electric field and magnetic field as follows,
 \[E^i \equiv F^{0i} = -\dot{A}^i - \nabla^i A^0 \quad B^i \equiv \epsilon_{ijk} \nabla^j A^k\]
 We also define $\rho_e \equiv j^0$ and $J^i \equiv j^i$,so
-the field equation can then be written
+the field equation can then be written as so-called Maxwell equations:
 \begin{eqnarray}
 	\bm{\nabla} \times  \bm{B} &=& \frac{\partial \bm{E}}{\partial t} +  \bm{J} \nonumber \\
 	\bm{\nabla} \times \bm{E} &=& -\frac{\partial \bm{B}}{\partial t} \nonumber \\
 	\bm{\nabla} \cdot \bm{E} &=& \rho_e \nonumber \\
 	\bm{\nabla} \cdot \bm{B} &=& 0 \nonumber
 \end{eqnarray}
-That is the so-called Maxwell equation.\\
-The equation of motion of the charged particle can be written as
+The equation of motion of the charged particle can be written as so-called Lorentz force equations:
 \[\frac{d\bm{p}}{dt} = e(\bm{E} + \bm{v} \times \bm{B}) \quad \frac{d \mathcal{E}}{dt} = e \bm{E} \cdot \bm{v}\]
-That is the so-called Lorentz force.\\
-We note that the Field $A$ cannot be completely determined by Maxwell and Lorentz equation. If we make the transformation $A_{\mu} \to A_{\mu} + \partial_{\mu} \xi(x)$, $\mathcal{L}$ and $F^{\mu\nu}$ would be invariant, and the Maxwell and Lorentz equation is still valid. This arbitrariness of $\xi$ is called gauge invariance. The topic will be discussed in detail in QED.
+\\
+We also note that the Field $A$ cannot be completely determined by Maxwell and Lorentz equation. If we make the transformation $A_{\mu} \to A_{\mu} + \partial_{\mu} \xi(x)$, $\mathcal{L}$ and $F^{\mu\nu}$ would be invariant, and the Maxwell and Lorentz equation is still valid. This arbitrariness of $\xi$ is called gauge invariance. The topic will be discussed in detail in QED.
 
 \subsection{Lorentz transformation of fields}
-
-In the new coordinate system $\overline{x}^{\mu} = \Lambda^{\mu}_{\phantom{\mu}\nu}x^{\nu}$, we have
+Suppose the new coordinates satisfy that $\overline{x}^{\mu} = \Lambda^{\mu}_{\phantom{\mu}\nu}x^{\nu}$ after Lorentz transformation, then we have
 \[\overline{A}^{\mu}(\overline{x}) = \Lambda^{\mu}_{\phantom{\mu}\nu}A^{\nu}(\Lambda^{-1}\overline{x})\]
-In a special case when the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
+In a special case where the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
 \[\overline{x}^{0} = \gamma x^0 - \gamma \beta x^1 \quad \overline{x}^{1} = -\gamma \beta x^0 + \gamma x^1\]
-So, we have
+Similarly, we have
 \[\overline{A}^{0} = \gamma A^0 - \gamma \beta A^1 \quad \overline{A}^{1} = -\gamma \beta A^0 + \gamma A^1\]
-We can further derive that
+It can be further written in terms of electric and magnetic field as
 \[\overline{E}_1 = E_1 \quad \overline{E}_2 = \gamma E_2 - \gamma \beta B_3 \quad \overline{E}_3 = \gamma E_3 + \gamma \beta B_2\]
 \[\overline{B}_1 = B_1 \quad \overline{B}_2 = \gamma B_2 + \gamma \beta E_3 \quad \overline{B}_3 = \gamma B_3 - \gamma \beta E_2\]
-It can be written in the three vector form as
+or more generally as
 \[\bm{\overline{E}} = \gamma(\bm{E}_{\perp} + \bm{\beta} \times \bm{B}) + \bm{E}_{\parallel}\]
 \[\bm{\overline{B}} = \gamma(\bm{B}_{\perp} - \bm{\beta} \times \bm{E}) + \bm{B}_{\parallel}\]
-If $\beta \ll 1$, neglect the higher order of $\beta^2$, we have
+If $\beta \ll 1$, we can neglect the higher order of $\beta^2$. So, we have
 \[\bm{\overline{E}} = \bm{E} + \bm{\beta} \times \bm{B}\]
 \[\bm{\overline{B}} = \bm{B} - \bm{\beta} \times \bm{E}\]
 We also note that $F_{\mu\nu}F^{\mu\nu}$ and $\epsilon_{\mu\nu\rho\sigma}F^{\mu\nu}F^{\rho\sigma}$ is invariant under Lorentz transformation. It can be represented by the electric and magnetic field as
 \[E^2 - B^2 = \mbox{ inv } \quad \bm{E} \cdot \bm{B} = \mbox{ inv }\]
 
 \subsection{Energy-momentum tensor}
-
 For a free EM field, the energy-momentum tensor is
 \[T_f^{\mu \nu} \equiv -\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}A_{\rho})} \partial^{\nu} A_{\rho} + \eta^{\mu \nu} \mathcal{L} = \partial^{\nu}A^{\rho} F^{\mu}_{\phantom{\rho}\rho}-\frac{1}{4}\eta^{\mu\nu}F_{\rho\sigma}F^{\rho\sigma}\]
 We note that the energy-momentum tensor defined above is not symmetric, so we define a modified energy-momentum tensor by adding a term $-\partial^{\rho}A^{\nu}F^{\mu}_{\phantom{\rho}\rho}$,so
 \[T_e'^{\mu\nu} = F^{\nu\rho}F^{\mu}_{\phantom{\rho}\rho}-\frac{1}{4}\eta^{\mu\nu}F_{\rho\sigma}F^{\rho\sigma}\]
-Note that for free EM field, $\partial^{\rho}A^{\nu}F^{\mu}_{\phantom{\rho}\rho} = \partial^{\rho}\left(A^{\nu}F^{\mu}_{\phantom{\rho}\rho}\right)$.So,
-we can get that
+For free EM field, we have $\partial^{\rho}A^{\nu}F^{\mu}_{\phantom{\rho}\rho} = \partial^{\rho}\left(A^{\nu}F^{\mu}_{\phantom{\rho}\rho}\right)$.So,
+So,
 \[\partial_{\mu}T_f'^{\mu\nu} = 0 \quad P_f'^{\mu} = P_f^{\mu}\]
-So, from now on, we will use $T_f'$ as the energy-momentum tensor of EM field and omit the prime of $T_f'$ for simplicity.
+From now on, we will use $T_f'$ as the energy-momentum tensor of EM field and omit the prime for simplicity.
 The momentum of the free EM field is
-\[P_f^{0} = \int dV \frac{1}{2}(\bm{E}^2+\bm{B}^2) \equiv \int dV w \quad P_f^{i} = \int dV \bm{E} \times \bm{B} \equiv \int dV \bm{S}\]\\
+\[P_f^{0} = \int dV \frac{1}{2}(\bm{E}^2+\bm{B}^2) \equiv \int dV w \quad P_f^{i} = \int dV \bm{E} \times \bm{B} \equiv \int dV \bm{S}\]
+\\ \\
 If there also exists charged particles in the system, i.e. the source of EM field, we must also include the energy-momentum tensor of the particles to get the right conservation equation. The energy-momentum tensor of particles is defined as
 \[T_p^{\mu\nu} \equiv \sum_a m_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2} u_a^\mu u_a^{\nu}\]
-In this definition, we have
+From this definition, we can get
 \[P_p^0 = \sum_a \frac{m_a}{\sqrt{1-\bm{v}_a^2}} \quad \bm{P}_p =  \sum_a \frac{m_a}{\sqrt{1-\bm{v}_a^2}} \bm{v}_a\]
-So, our definition is consistent with the definition of four momentum in previous chapter.
 Recall that
 \[j^{\mu}_e = \sum_a e_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2} u_a^\mu \]
-We can define the mass current as
+We can also define the mass current as
 \[j^{\mu}_m \equiv \sum_a m_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2} u_a^\mu \]
-If there is no particle creation and annihilation, and the mass of the particle is constant during the motion, we would have
+If there is no creation and annihilation of charged particles, and the mass of the particles is constant during the motion, we would have mass conservation equation
 \[\partial_{\mu} j^{\mu}_{ma} = 0\]
 Recall the Lorentz force equation $m a_{\mu} = eF_{\mu\nu}u^{\nu}$, it can be rewritten as
 \[\rho_{m0a} \frac{du_{\mu}}{d\tau} = F_{\mu\nu}j_{ea}^{\nu}\]
-Here, $\rho_{m0a} \equiv m_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2}$ is the mass density measured in the rest frame of the particle. Then, on the one hand, we have
+where $\rho_{m0a} \equiv m_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2}$ is the mass density measured in the rest frame of the particle.
+\\
+On the one hand, we have
 \[\partial_{\mu} T_p^{\mu\nu} = \sum_a \rho_{m0a}u^{\mu} \frac{\partial u_a^{\nu}}{\partial x^{\mu}} = \sum_a \rho_{m0a} \frac{d u_a^{\nu}}{d \tau} = F^{\nu}_{\phantom{\nu}\mu}j_e^{\mu}\]
 On the other hand, we can derive that
 \[\partial_{\mu} T_f^{\mu\nu} = - F^{\nu}_{\phantom{\nu}\mu}j_e^{\mu}\]
 by implementing Maxwell equation.
+\\
 Define
 \[T^{\mu \nu} \equiv T_f^{\mu\nu} + T_p^{\mu\nu}\]
 We have
 \[\partial_{\mu} T^{\mu\nu} = 0\]
 We define the Maxwell stress tensor as
 \[f^{ij} \equiv -T_f^{ij} = E^{i}E^{j} + B^{i}B^{j} - w\delta^{ij}\]
-Then, we can write down the conservation law of energy and momentum as
+Then, we can write down the conservation laws of energy and momentum as
 \[\frac{d}{dt}\left(P_p^0 + \int w dV \right) = -\oint \bm{S}\cdot d\bm{\sigma}\]
 \[\frac{d}{dt}\left(\bm{P}_p + \int \bm{S} dV \right) = \oint \bm{f}\cdot d\bm{\sigma}\]
-We assume there is no particle cross the boundary.\\
+We assume there is no particle cross the boundary.
+\\
 At last, because $T^{\mu\nu} = T^{\nu\mu}$, we have
 \[\partial_{\mu}(x^{\nu}T^{\mu\rho}-x^{\rho}T^{\mu\nu}) = 0\]
 It is easy to write down the conservation law of angular momentum as
@@ -447,39 +449,42 @@ The canonical momentum is
 \[\bm{\pi} = \frac{\partial L}{\partial \bm{v}} = \gamma m \bm{v} + e \bm{A}\]
 The Hamiltonian is therefore
 \[H = \bm{\pi} \cdot \bm{v} - L = \gamma m + e \phi = \sqrt{m^2+(\bm{\pi}-e\bm{A})^2}+e\phi\]
-If $v \ll 1$, we would have
+If $v \ll 1$, we have
 \[L = \frac{mv^2}{2} + e\bm{A}\cdot\bm{v}-e\phi \quad \bm{\pi} =  m \bm{v} + e \bm{A} \quad H = \frac{(\bm{\pi}-e\bm{A})^2}{2m}+e\phi\]
 If the EM field is constant in time, we have
 \[\bm{\nabla} \times \bm{E} = 0\]
-we would choose the gauge that
+and we could choose the gauge that
 \[\dot{\bm{A}} = 0 \quad \bm{E} = -\bm{\nabla} \phi\]
-Because $\frac{\partial L}{\partial t}=0$, we can know that $\gamma m + e\phi$ is a constant.\\
-Now we would list some special case.
+Because $\frac{\partial L}{\partial t}=0$, $\gamma m + e\phi$ is a constant.
+
 \subsubsection{Motion in a uniform and constant electric field}
 Suppose the the direction of electric field is  $\hat{x}$, the orbit is in the $x-y$ plane. So, the equation of motion is
 \[\dot{p}_x = eE \quad \dot{p}_y = 0\]
 The final solution is
 \[x = \frac{1}{eE}\sqrt{\mathcal{E}_0^2 + (eEt)^2} \quad y = \frac{p_0}{eE} \mathrm{arcsinh} \frac{eEt}{\mathcal{E}_0}\]
-Here, we assume when $t=0$, $p_x = 0$,$p_y=p_0$.
-The orbit function is
+Here, we assume $p_x = 0$, $p_y=p_0$ at $t = 0$.
+The trajectory of the particle is
 \[x = \frac{\mathcal{E}_0}{eE}\cosh \frac{eEy}{p_0}\]
+
 \subsubsection{Motion in a uniform and constant magnetic field}
 Suppose the direction of magnetic field is $\hat{z}$. Note that particle's kinetic energy $\mathcal{E} = \gamma m$ is constant if there are no electric field, we can derive the equation of motion
 \[\dot{v}_x = \omega v_y \quad \dot{v}_y = -\omega v_x \quad \dot{v}_z = 0\]
 Here, $\omega = \frac{eB}{\gamma m}$. The final solution is
 \[x = x_0 + r\sin(\omega t + \alpha) \quad y = y_0 + r\cos(\omega t + \alpha) \quad z = z_0 + v_{0z}t\]
 Here, $x_0,y_0,z_0,r,\alpha,v_{0z}$ should be determined by initial condition.
+
 \subsubsection{Motion in a uniform and constant EM field}
-We only focus on the case that the velocity of particle is much smaller the velocity of light. Suppose the direction of magnetic field is $\hat{z}$, the direction of electric field is within $y-z$ plane. The equation of motion is
+We only focus on the case where the velocity of particle is much smaller than the velocity of light. 
+Suppose the direction of magnetic field is $\hat{z}$, the direction of electric field is within $y-z$ plane. The equation of motion is
 \[m\ddot{x} = eB\dot{y} \quad m\ddot{y} =eE_y - eB\dot{x} \quad m\ddot{z}=eE_z\]
 The solution is
-\[\dot{x} = a \cos \omega t + \frac{E_y}{B} \quad \dot{y} = -a\sin \omega t \quad \dot{z} = v_{0z} + \frac{eE}{m}t\]
+\[\dot{x} = a \cos \omega t + \frac{E_y}{B} \quad \dot{y} = -a\sin \omega t \quad \dot{z} = v_{0z} + \frac{eE_z}{m}t\]
 Here, $\omega = \frac{eB}{m}$ , $a,v_{z0}$ is determined by initial condition. As we suppose that $v \ll 1$ is satisfied,we must have that
-\[a \ll 1 \quad v_{0z} \ll 1 \quad \frac{eE_z t}{m} \ll 1 \quad E_y \ll B\]
+\[a \ll 1 \quad v_{0z} \ll 1 \quad \frac{eE_z t}{m} \ll 1 \quad \frac{E_y}{B} \ll 1\]
 
 \section{Constant electromagnetic field}
 \subsection{Coulomb' law}
-For constant electric field, the Maxwell equation take the form 
+For constant electric field, Maxwell equations take the form 
 \[\bm{\nabla} \cdot \bm{E} = \rho_e \quad \bm{\nabla} \times \bm{E} = 0\]
 So, we have
 \[\bm{E} = -\bm{\nabla} \phi \quad \nabla^2 \phi = -\rho_e \]
@@ -506,7 +511,7 @@ So,we have
 Here,
 \[\phi^{(l)} = \frac{1}{4\pi R^{l+1}} \sum_{m=-l}^{l} \sqrt{\frac{4\pi}{2l+1}} Q_{m}^{(l)} Y^*_{lm}(\Theta,\Phi)\]
 \[Q_m^{(l)} =\sum_a e_a r_a^l \sqrt{\frac{4\pi}{2l+1}} Y_{lm}(\theta_a,\phi_a)\]
-Special case: 
+Leading terms: 
 \[\phi^{(0)} = \frac{Q}{4\pi R} \quad E^{(0)} = \frac{Q\bm{n}}{4\pi R^2} \quad Q = \sum_a e_a\]
 \[\phi^{(1)} = \frac{\bm{d} \cdot \bm{n}}{4\pi R^2}  \quad E^{(1)} = \frac{3(\bm{d}\cdot\bm{n})\bm{n}-\bm{d}}{4\pi R^3} \quad \bm{d} = \sum_a e_a \bm{r}_a\]
 \[\phi^{(2)} = \frac{\bm{n} \cdot \bm{D} \cdot \bm{n}}{8\pi R^3} \quad E^{(2)} = \frac{5(\bm{n} \cdot \bm{D} \cdot \bm{n})\bm{n} - (\bm{n} \cdot \bm{D} + \bm{D} \cdot \bm{n})}{8\pi R^4} \quad D_{ij} = \sum e(3x_ix_j-r^2\delta_{ij})\]
@@ -514,13 +519,13 @@ For a system of charged particles in the electric field $\phi(\bm{r})$, if all t
 \[\phi(\bm{r}) = \sum_{l=0}^{\infty} r^l \sum_{m=-l}^{m=l} a_{lm} \sqrt{\frac{4\pi}{2l+1}} Y_{lm}(\theta,\phi)\]
 So
 \[U = \sum_{l=0}^{\infty} U^{(l)} \quad U^{(l)} = \sum_{m=-l}^{l} a_{lm}Q^{(l)}_m\]
-Special case:
+Leading terms: 
 \[U^{(0)} = Q\phi_0 \quad F^{(0)} = Q\bm{E}_0\]
 \[U^{(1)} = -\bm{d}\cdot \bm{E}_0 \quad F^{(1)} = \bm{d}\cdot \bm{\nabla}\bm{E}_0 \quad M^{(1)} = \bm{d} \times \bm{E}_0\]
 \[U^{(2)} = -\frac{1}{6}\bm{D}\cdot \bm{\nabla}\bm{E}_0 \quad F^{(2)} = \frac{1}{6} \bm{D}\cdot \bm{\nabla}\bm{\nabla}\bm{E}_0 \quad M^{(2)} = \frac{1}{3} \bm{\nabla} \cdot (\bm{D} \times \bm{E}_0)\]
 
 \subsection{Biot-Savart law}
-Let us consider the magnetic field produced by charges which perform a finite motion, in which the particles are always within a finite region of space and the momenta also always remain finite. Consider the time average magnetic field $\overline{\bm{B}}$ , produced by the charges; this field will now be a function only of the coordinates and not of the time. We take the time average of the Maxwell equations
+Let us consider the magnetic field produced by charges which perform a finite motion, in which the particles are always within a finite region of space and the momenta also always remains finite. Consider the time average magnetic field $\overline{\bm{B}}$ , produced by the charges; this field will now be a function only of the coordinates and not of the time. We take the time average of the Maxwell equations
 \[\bm{\nabla} \cdot \bm{B} = 0 \quad \bm{\nabla} \times \bm{B} = \frac{\partial \bm{E}}{\partial t} + \bm{j}\] 
 Note that the average value of the derivative $\partial \bm{E} / \partial t$, like the derivative of any quantity which varies over a finite range, is zero. We can get
 \[\bm{\nabla} \cdot \overline{\bm{B}} = 0 \quad \bm{\nabla} \times \overline{\bm{B}} =  \overline{\bm{j}}\]
@@ -559,19 +564,18 @@ Let us consider the change in the average angular momentum $\overline{\bm{M}}$ o
 If the charge-mass ratio is the same for all particles of the system, the angular momentum and magnetic moment are proportional to one another, and we find:
 \[\frac{d \overline{\bm{M}}}{dt} = - \bm{\Omega} \times \overline{\bm{M}} \quad \bm{\Omega} = \frac{e}{2m} \bm{B}\]
 This equation states that the vector $\overline{\bm{M}}$ rotates with angular velocity $-\bm{\Omega}$ around the direction of the field, while its absolute magnitude and the angle which it makes with this direction remain fixed. This motion is called the Larmor precession.
-Let us consider the Lagrangian for a system of charges in an external constant uniform magnetic field, it contains the additional term
-\[L_H = \sum e \bm{A} = \sum e (\bm{B} \times \bm{r}) \cdot \bm{v} = \sum e (\bm{r} \times \bm{v}) \cdot \bm{B} = \bm{m} \cdot \bm{B}\]
 
 \section{Electromagnetic waves}
 \subsection{Electromagnetic waves}
-electromagnetic fields occurring in vacuum in the absence of  charges are called electromagnetic waves. We choose the Coulomb's Gauge, i.e.
+Electromagnetic fields occurring in vacuum in the absence of  charges are called electromagnetic waves. We choose the Coulomb's Gauge, i.e.
 \[ \phi = 0 \quad \bm{\nabla} \cdot \bm{A} = 0\]
 So,
-\[\bm{E} = -\frac{\partial A}{\partial t} \quad \bm{B} = \bm{\nabla} \times \bm{A}\]
-Then,from Maxwell equation we can derive that
+\[\bm{E} = -\frac{\partial bm{A}}{\partial t} \quad \bm{B} = \bm{\nabla} \times \bm{A}\]
+From Maxwell equations we can derive that
 \[\nabla^2 \bm{A} - \frac{\partial^2 \bm{A}}{\partial t^2} = 0\]
-This is the equation which determines the potentials of electromagnetic waves. It is called the d'Alembert equation, or the wave equation. We can verify that the electric and magnetic fields $\bm{E}$ and $\bm{H}$ satisfy the same wave equation.\\ \\
-We consider the special case of electromagnetic waves in which the fields depends only on one coordinates,say $x$,Such waves are said to be plane. In this case the equation for the field becomes
+This is the equation which determines the potentials of electromagnetic waves. It is called the d'Alembert equation, or the wave equation. We can verify that the electric and magnetic fields $\bm{E}$ and $\bm{H}$ satisfy the same wave equation.
+\\ \\
+We consider the special case of electromagnetic waves in which the fields depends only on one coordinates,say $x$. Such waves are said to be plane. In this case the equation of the field becomes
 \[\frac{\partial^2 f}{\partial t^2}  - \frac{\partial^2 f}{\partial x^2} = 0\]
 The solution is
 \[f(t,x) = f_1(t-x) + f_2(t+x)\]
@@ -591,7 +595,8 @@ The time average of the product of field intensity can be calculated as
 \[\overline{\bm{A}\bm{B}} = \frac{1}{2}\mathrm{Re}\left\{ \bm{A}_0 \bm{B}_0^*\right\}\]
 The electric and magnetic field are
 \[\bm{E} = ik\bm{A} \quad \bm{B} = i\bm{k}\times\bm{A}\]
-And we can verify that $(\omega,\bm{k})$ transform like a four-vector.\\ \\
+And we can verify that $(\omega,\bm{k})$ transforms like a four-vector.
+\\ \\
 Generally, the electric field can be  written as
 \[E_y = A\cos(\phi) \quad E_z = B\cos(\phi + \delta) \quad \phi= kx -\omega t   \quad -\pi < \delta \leq \pi\]
 The end of the vector $\bm{E}$ in $y-z$ plane will form an ellipse. The magnitudes of the semiaxes of the polarized ellipse are
@@ -662,7 +667,7 @@ U&\equiv& \langle E_{a}^{2}\rangle -\langle E_{b}^{2}\rangle \nonumber \\
 V&\equiv& \langle E_{l}^{2}\rangle -\langle E_{r}^{2}\rangle \nonumber
 \end{eqnarray}
 where the subscripts refer to three different bases of the space of Jones vectors: the standard Cartesian basis ${\hat {x}},{\hat {y}}$, a Cartesian basis rotated by 45° ${\hat {a}},{\hat {b}}$, and a circular basis ${\hat {l}},{\hat {r}}$. The symbols $\langle \cdot \rangle$ represent expectation values. The light can be viewed as a random variable taking values in the space $C^2$ of Jones vectors $(E_1,E_2)$. It is easy to verify that
-\[Q = Ip_3 \quad U = Ip_2 \quad V = Ip_1\]
+\[Q = Ip_3 \quad U = Ip_1 \quad V = Ip_2\]
 
 \section{The field of moving charges}
 \subsection{Retarded potential}
