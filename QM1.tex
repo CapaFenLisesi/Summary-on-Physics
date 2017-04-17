@@ -33,7 +33,7 @@ It must satisfy the following properties:
 \item $(\phi,\psi) = $ a complex number
 \item $(\phi,\psi) = (\psi,\phi)^*$
 \item $(\phi,c_1\psi_1 + c_2\psi_2) = c_1(\phi,\psi_1) + c_2(\phi,\psi_2)$
-\item $(\phi,\phi) geq 0$,with equality holding if and only if $\phi=0$
+\item $(\phi,\phi) \geq 0$,with equality holding if and only if $\phi=0$
 \end{enumerate}
 \end{newdef}
 
@@ -48,7 +48,7 @@ where $w(x)$ is some non-negative weight function.
 \end{example}
 
 \begin{newdef}[Norm]
-\[|| \phi || = (\phi,\phi)^{\frac{1}{2}}\]
+\[|| \phi || \equiv (\phi,\phi)^{\frac{1}{2}}\]
 \end{newdef}
 
 \begin{newthem}[Schwarz's inequality]
@@ -68,7 +68,7 @@ A set of vectors $\{\phi_n\}$ is said to be orthonormal if the vectors are pairw
 Corresponding to any linear vector space $V$ there exists the dual space of linear functionals on $V$ . A linear functional $F$ assigns a scalar $F(\phi)$ to each vector $\phi$, such that
 \[F(a\phi+b\psi) = aF(\phi) + bF(\psi)\]
 for any vectors for $\phi$ and $\psi$, and any scalars $a$ and $b$. The set of linear functionals may itself be regarded as forming a linear space $V'$ if we define the sum of two functionals as
-\[(F_1+F_2)(\phi) = F_1(\phi) + F_2(\phi)\]
+\[(F_1+F_2)(\phi) \equiv F_1(\phi) + F_2(\phi)\]
 \end{newdef}
 
 \begin{newthem}[Riesz theorem] 
@@ -79,9 +79,9 @@ $f$ being a fixed vector, and $\phi$ being an arbitrary vector. Thus the spaces 
 
 \subsection{Dirac's bra and ket notation}
 \noindent
-In Dirac’s notation, which is very popular in quantum mechanics, the vectors in $V$ are called ket vectors, and are denoted as $|\phi \rangle$. The linear functionals in the dual space $V'$ are called bra vectors, and are denoted as $\langle F |$. The numerical value of the functional is denoted as
+In Dirac's notation, which is very popular in quantum mechanics, the vectors in $V$ are called ket vectors, and are denoted as $|\phi \rangle$. The linear functionals in the dual space $V'$ are called bra vectors, and are denoted as $\langle F |$. The numerical value of the functional is denoted as
 \[F(\phi) = \langle F | \phi \rangle\]
-According to the Riesz theorem, there is a one-to-one correspondence between bras and kets. Therefore we can use the same alphabetic character for the functional (a member of $V'$) and the vector (in $V$ ) to which it corresponds, relying on the bra, $\langle F |$, or ket, $|F\rangle$, notation to determine which space is referred to.So
+According to the Riesz theorem, there is a one-to-one correspondence between bras and kets. Therefore we can use the same alphabetic character for the functional (a member of $V'$) and the vector (in $V$ ) to which it corresponds, relying on the bra, $\langle F |$, or ket, $|F\rangle$, notation to determine which space is referred to. So
 \[\langle F | \phi \rangle = (F,\phi)\]
 Note that the Riesz theorem establishes, by construction, an antilinear correspondence between bras and kets. If $\langle F | \leftrightarrow  |F\rangle$, then
 \[c_1^* \langle F_1 | + c_2^* \langle F_2 | \leftrightarrow  c_1 |F_1\rangle + c_2|F_2\rangle\]
@@ -93,13 +93,13 @@ A linear operator satisfies
 \[A (c_1 \psi_1 + c_2 \psi_2) = c_1 A(\psi_1) + c_2 A(\psi_2)\]
 Define the sum and product of operators,
 \begin{eqnarray}
-(A+B)\psi &=& A\psi + B\psi \nonumber \\
-A B \psi &=& A (B\psi) \nonumber
+(A+B)\psi &\equiv & A\psi + B\psi \nonumber \\
+A B \psi &\equiv & A (B\psi) \nonumber
 \end{eqnarray}
 Define their action to the left on bra vectors as
-\[(\langle \phi | A ) \psi \rangle = \langle \phi | ( A | \psi \rangle )\]
+\[(\langle \phi | A ) \psi \rangle \equiv \langle \phi | ( A | \psi \rangle )\]
 So we may define the operation of $A$ on the bra space of functionals as
-\[A F_{\phi} (\psi) = F_{\phi}(A\psi)\]
+\[A F_{\phi} (\psi) \equiv F_{\phi}(A\psi)\]
 According to the Riesz theorem there must exist a ket vector $\chi$ such that
 \[AF_{\phi}(\psi) = (\chi, \psi) = F_{\chi}(\psi)\]
 Define operator $A^{\dagger}$ as
@@ -138,7 +138,7 @@ and that the domain of $A$ coincides with the domain of $A^{\dagger}$. An operat
 If $\langle \psi | A | \psi \rangle  = \langle \psi | A | \psi \rangle^*$ for all $| \psi \rangle$, then it follows that $\langle \phi_1 | A | \phi_2 \rangle  = \langle \phi_2 | A | \phi_1 \rangle^*$ for all $|\phi_1\rangle$ and $|\phi_2\rangle$, and hence that $A = A^{\dagger}$.\\
 If an operator acting on a certain vector produces a scalar multiple of that same vector,
 \[ A |\phi \rangle = a |\phi \rangle\]
-we call the vector $| \phi \rangle$ an eigenvector and the scalar a an eigenvalue of the operator $A$. The antilinear correspondence between bras and kets, and the definition of the adjoint operator $A^{\dagger}$, imply that the left-handed eigenvalue equation
+we call the vector $| \phi \rangle$ an eigenvector and the scalar an eigenvalue of the operator $A$. The antilinear correspondence between bras and kets, and the definition of the adjoint operator $A^{\dagger}$, imply that the left-handed eigenvalue equation
 \[\langle \phi | A^{\dagger} = a^{*} \langle \phi |\]
 \end{newthem}
 
@@ -175,7 +175,7 @@ To each self-adjoint operator $A$ there corresponds a unique family of projectio
 \noindent
 We can define a function of an operator
 \[f(A) = \int_{-\infty}^{\infty} f(\lambda) dE(\lambda)\]
-Following Dirac’s pioneering formulation, it has become customary in
+Following Dirac's pioneering formulation, it has become customary in
 quantum mechanics to write a formal eigenvalue equation for an operator such as $Q$ that has a continuous spectrum,
 \[Q |q\rangle = q|q\rangle\]
 The orthonormality condition for the continuous case takes the form
@@ -183,16 +183,18 @@ The orthonormality condition for the continuous case takes the form
 Evidently the norm of these formal eigenvectors is infinite, since 
 $\langle q | q \rangle \to \infty$. Instead of the spectral theorem for $Q$, Dirac would write
 \[Q = \int_{-\infty}^{\infty} q |q\rangle\langle q| dq\]
-Dirac’s formulation does not fit into the mathematical theory of Hilbert space, which admits only vectors of finite norm. The projection operator formally given by
+Dirac's formulation does not fit into the mathematical theory of Hilbert space, which admits only vectors of finite norm. The projection operator formally given by
 \[E(\lambda) = \int_{-\infty}^{\lambda}  |q\rangle\langle q| dq\]
-is is well defined in Hilbert space, but its derivative does not
-exist within the Hilbert space framework.
+is is well defined in Hilbert space, but its derivative does not exist within the Hilbert space framework.\\
+
 
 \begin{newthem}
- If $A$ and $B$ are self-adjoint operators, each of which possesses a complete set of eigenvectors, and if $AB =BA$, then there exists a complete set of vectors which are eigenvectors of both $A$ and $B$.
+If $A$ and $B$ are self-adjoint operators, each of which possesses a complete set of eigenvectors, and if $AB =BA$, then there exists a complete set of vectors which are eigenvectors of both $A$ and $B$.
 \end{newthem}
 
-Let $(A, B, \cdots)$ be a set of mutually commutative operators that possess a complete set of common eigenvectors. Corresponding to a particular eigenvalue for each operator, there may be more than one eigenvector. If, however, there is no more than one eigenvector (apart from the arbitrary phase and normalization) for each set of eigenvalues $(a_n, b_m, \cdots)$, then the operators $(A, B, \cdots)$ are said to be a complete commuting set of operators.
+\noindent
+Let $(A, B, \cdots)$ be a set of mutually commutative operators that possess a complete set of common eigenvectors. Corresponding to a particular eigenvalue for each operator, there may be more than one eigenvector. If, however, there is no more than one eigenvector (apart from the arbitrary phase and normalization) for each set of eigenvalues $(a_n, b_m, \cdots)$, then the operators $(A, B, \cdots)$ are said to be a complete commuting set of operators.\\
+
 
 \begin{newthem}
 Any operator that commutes with all members of a complete commuting set must be a function of the operators in that set.
@@ -208,15 +210,17 @@ For any $\phi \in \Phi$, $F \in \Phi^X$,we define
 Now by applying the Riesz representation theorem we can identify $\mathcal{H}^X$ with $\mathcal{H}$. Therefore, the definition of rigged Hilbert space is in terms of a sandwich:
 \[\Phi \subseteq \mathcal{H} \subseteq \Phi^X\]
 \end{newdef}
-There may or may not exist any solutions to the eigenvalue equation $A|a_n\rangle = a_n |a_n\rangle$ for a self-adjoint operator $A$ on an infinite-dimensional vector space. However, the generalized spectral theorem asserts that if $A$ is self-adjoint in $\mathcal{H}$ then a complete set of eigenvectors exists in the extended space $\Phi^X$. The precise conditions for the proof of this theorem are rather technical, so the interested reader is referred to \emph{Gel'fand and Vilenkin (1964)} for further details.
 
+\noindent
+There may or may not exist any solutions to the eigenvalue equation $A|a_n\rangle = a_n |a_n\rangle$ for a self-adjoint operator $A$ on an infinite-dimensional vector space. However, the generalized spectral theorem asserts that if $A$ is self-adjoint in $\mathcal{H}$ then a complete set of eigenvectors exists in the extended space $\Phi^X$. The precise conditions for the proof of this theorem are rather technical, so the interested reader is referred to \emph{Gel'fand and Vilenkin (1964)} for further details.
+\\
 There are many examples of rigged-Hilbert-space triplets. A Hilbert space $\mathcal{H}$ is formed by those functions that are square-integrable. That is, $\mathcal{H}$ consists of those functions $\psi(x)$ for which
 \[\langle \psi | \psi \rangle = \int_{-\infty}^{\infty} |\psi(x)|^2 dx \mbox{ is finite }\]
 A nuclear space $\Phi$ is made up of functions $\psi(x)$ which satisfy the infinite set of conditions,
 \[\ \int_{-\infty}^{\infty} |\psi(x)|^2(1+|x|)^m dx \mbox{ is finite for } m = 0,1,2,\cdots\]
 The functions $\psi(x)$) which make up $\Phi$ must vanish more rapidly than any inverse power of $x$ in the limit $|x| \to \infty$. The extended space $\Phi^X$, which is conjugate to $\Phi$, consists of those functions $\chi(x)$ for which
 \[\langle \chi | \psi \rangle = \int_{-\infty}^{\infty} \chi^*(x)\psi(x) dx \mbox{ is finite for any } \psi \mbox{ in } \Phi\]
-
+\\
 In addition to the functions of finite norm, which also lie in $\mathcal{H}$, $\Phi^X$ will contain functions that are unbounded at infinity provided the divergence is no worse than a power of $x$. Hence $\Phi^X$ contains $e^{ikx}$, which is an eigenfunction
 of the operator $D = i \frac{d}{dx}$. It also contains the Dirac delta function, $\delta(x-\lambda)$, which is an eigenfunction of the operator $X$, defined by $X\psi(x) = x\psi(x)$.
 These two examples suffice to show that rigged Hilbert space seems to be a more natural mathematical setting for quantum mechanics than is Hilbert space.
@@ -254,7 +258,7 @@ for all $x$ and $y$ y in $H_{1}$, where the horizontal bar represents the comple
 \item For unitary operator $V$ the operator $VK$, where $K$ is complex conjugate operator, is antiunitary. The reverse is also true, for antiunitary $U$ the operator $UK$ is unitary.
 \item For antiunitary $U$ the definition of the adjoint operator $U^{*}$ is changed into
 \[\langle U^{*}x,y\rangle =\overline {\langle x,Uy\rangle }\]
-\item The adjoint of an antiunitary $U$ is also antiunitary and $UU^{*}=U^{*}U=1$.
+\item The adjoint of an antiunitary $U$ is also antiunitary and $UU^{*}=U^{*}U=I$.
 \end{enumerate}
 \end{newprop}
 
