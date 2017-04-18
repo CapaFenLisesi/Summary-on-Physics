@@ -266,7 +266,7 @@ for all $x$ and $y$ y in $H_{1}$, where the horizontal bar represents the comple
 \section{Axioms of quantum mechanics}
 \begin{enumerate}
 \item  The properties of a quantum system are completely defined by specification of its state vector $|\psi\rangle$. The state vector is an element of a complex Hilbert space $\mathcal{H}$ called the space of states.
-\item With every physical property $A$ (energy, position, momentum, angular momentum, ...) there exists an associated linear, Hermitian operator $A$ (usually called observable), which acts in the space of states. The eigenvalues of the operator are the possible values of the physical properties.
+\item With every physical property (energy, position, momentum, angular momentum, ...) there exists an associated linear, Hermitian operator $A$ (usually called observable), which acts in the space of states. The eigenvalues of the operator are the possible values of the physical properties.
 \item 
 \begin{itemize}
 \item  If $|\psi\rangle$ is the vector representing the state of a system and if $|\phi\rangle$ represents another physical state, there exists a probability $P(|\psi\rangle,|\phi\rangle)$ of finding $|\psi\rangle$ in state $|\phi\rangle$, which is given by the squared modulus of the scalar product on $\mathcal{H}: \, P(|\psi\rangle,|\phi\rangle) = |\langle \psi | \phi \rangle|^2$ (Born Rule)
@@ -290,9 +290,9 @@ Only linear operators can describe continuous transformations because every cont
 \noindent
 For an observable $Q$, 
 \[\langle \phi' | Q | \phi' \rangle = \langle \phi | U^{-1}QU | \phi \rangle \]
-If $U(\tau)^{-1}QU(\tau) = \tau Q$, we can prove that
-\[U|q\rangle = |\tau q\rangle\]
-Here, $|q\rangle$ is the eigenvector of $Q$ with eigenvalue $q$. 
+If $U_{\tau}^{-1}QU_{\tau} = Q_{\tau}$, we can prove that
+\[U|q\rangle = | q_{\tau}\rangle\]
+where $|q\rangle$ is the eigenvector of $Q$ with eigenvalue $q$.
 
 
 \section{Schr\"{o}dinger equation}
@@ -324,7 +324,7 @@ It describes a particle posited in $\bm{x}$ with internal state $s$. And we will
 
 \section{Momentum operators and canonical quantization}
 \noindent
-Since $\bm{X}$ plus some other observables $S$'s form a complete commuting set of operators. So, the momentum operators can not be independent of them. Numerous experiments shows that the position and momentum of particles can not be measured simultaneously. So, we expect $[X,P] \neq 0$.
+Since $\bm{X}$ plus some other observables $S$s form a complete commuting set of operators. So, the momentum operators can not be independent of them. Numerous experiments shows that the position and momentum of particles can not be measured simultaneously. So, we expect $[X,P] \neq 0$.
 \paragraph{Guess} 
 For a system which has a classical correspondence, the classical equation of motion of a particle is
 \begin{eqnarray}
@@ -338,11 +338,11 @@ $[\quad]_C$ is the Poisson bracket in classical mechanics. In quantum mechanics,
 \end{eqnarray}
 If we assume that the classical equation of motion of a particle is an approximation of quantum mechanics, we may expect
 \[[\quad] = i [\quad]_C \]
-Since the Poisson bracket in classical mechanics and commutation bracket in quantum mechanics have the same algebra structure. To get the right classical equation of motion of the particle, we demand that
+Since the Poisson bracket in classical mechanics and commutation bracket in quantum mechanics have the same algebra structure, we only need to demand that
 \[[X_i,X_j] = 0 \quad [X_i,X_j] = 0 \quad [X_i,P_j] = i \delta_{ij}\]
 and
 \[H = H_C(X,P,t)\]
-For a general system, we formally define momentum operator $\bm{P}$ by 
+For a more general system, we now define momentum operator $\bm{P}$ by 
 \[[X_i,P_j] = i \delta_{ij}\]
 The form of $H$ can not be given as a priori, which can be specified only by the hints from classical theory and experiments.
 
