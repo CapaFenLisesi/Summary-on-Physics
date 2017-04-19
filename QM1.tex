@@ -476,7 +476,7 @@ Consider next the behavior at a singular point, assumed for convenience to be th
 Suppose that $\psi = \frac{u}{r^{\alpha}}$, where $u$ is a smooth function that does not vanish at $r=0$. Then we must have $|\psi|^2 r^3$ convergent at the origin, which implies that $\alpha < \frac{3}{2}$.\\
 The net outward flow through the surface $S$ is $F = \oint_{S} J \cdot dS$. It must vanish in the limit $r \to 0$, since otherwise the origin would be a point source or sink.
 One has $\frac{\partial \psi}{\partial r} = r^{-\alpha} \frac{\partial u}{\partial r} - \alpha u r^{-\alpha-1}$. The second term does not contribute to the flux, so we obtain
-\[F \propto r^{2-2\alpha}\]
+\[F = r^{2-2\alpha} \left( \frac{-i}{2m} \right) \oint \left( u^* \frac{\partial u}{\partial r} - u\frac{\partial u^*}{\partial r} \right) d\Omega\]
 where the integration is over solid angle. If the integral does not vanish, then we must have $\alpha <1$ in order for $F$ to vanish in the limit $r \to 0$. This is a stronger condition than that derived from the probability density. \\
 Since $|\psi|^2$ is a probability density, it must vanish sufficiently rapidly at infinity so that its integral over all configuration space is convergent and equal to 1. \\
 The conditions that we have discussed apply to wave functions $\psi(x)$ which represent physically realizable states, but they need not apply to the eigenfunctions of operators that represent observables. Those eigenfunctions, $\chi(x)$, which play the role of filter functions in computing probabilities, are only required to lie in the extended space, $\Phi^X$, of the rigged-Hilbert-space triplet. It has been suggested that $\psi(x)$ be restricted to the nuclear space $\Phi$, rather than merely to the Hilbert space $\mathcal{H}$. In many cases this would amount to requiring that $\psi(x)$ should vanish at infinity more rapidly than any inverse power of the distance. 
@@ -488,19 +488,19 @@ The conditions that we have discussed apply to wave functions $\psi(x)$ which re
 The time evolution of a quantum state vector, $|\psi(t)\rangle = U(t,t_0)| \psi(t_0)\rangle$, can be regarded as the propagation of an amplitude in configuration space,
 \[\psi(x,t) = \int G(x,t;x',t_0) \psi(x',t_0)dx'\]
 where
-\[G(x,t;x',t_0) = \langle x,t | U(t,t_0) | x',t_0 \rangle\]
+\[G(x,t;x',t_0) = \langle x | U(t,t_0) | x' \rangle\]
 is often called the propagator. \\
 Making use of the multiplicative property of the time development operator, it follows that the propagator can be written as
 \[G(x,t;x_0,t_0) = \int \cdots \int G(x,t;x_N,t_N) \cdots G(x_1,t_1;x_0,t_0) dx_N \cdots dx_1\]
 The N-fold integration is equivalent to a sum over zigzag paths that connect the initial point $(x_0,t_0)$ to the final point $(x,t)$. If we now pass to the limit of $N \to \infty$ and $\Delta t = t_i - t_{i-1} \to 0$, we will have the propagator expressed as a sum (or, rather, as an integral) over all paths
 that connect the initial point to the final point.
 We can show that
-\[\langle x | e^{-iH \Delta t} | x' \rangle = \sqrt{\frac{m}{2i\pi\Delta t}} \exp \left\{ i\left[ \frac{m(x-x')^2}{2\Delta t^2}   -V(x') \right] \Delta t \right\} \quad \Delta t \to 0 \]
+\[\langle x | e^{-iH \Delta t} | x' \rangle = \sqrt{\frac{m}{2i\pi\Delta t}} \exp \left\{ i\left[ \frac{m(x-x')^2}{2\Delta t^2}   -V(x) \right] \Delta t \right\} \quad \Delta t \to 0 \]
 So,
 \[G(x,t;x_0,t_0) = \lim_{N \to \infty} \int \cdots \int \left(\frac{m}{2i\pi\Delta t}\right)^{\frac{N+1}{2}} \exp \left\{ i \sum_{j=0}^{N}\left[ \frac{m(x_{j+1}-x_{j})^2}{2\Delta t^2}   -V(x_{j+1}) \right] \Delta t \right\} dx_1 \cdots dx_N\]
 The final result can be expressed as
 \[G(x,t;x_0,t_0) = \int \mathcal{D}[x(\tau)] e^{iS[x(\tau)]}\]
-Here, $S[x(\tau)]$ is the action associated with the path
+Here, $S[x(\tau)]$ is the action associated with the path.
 \[S[x(\tau)] = \int_{x(\tau)} L(x,\dot{x}) d\tau\]
 The integral is a functional integration over all paths $x(\tau)$ which connect the initial point $(x_0,t_0)$ to the final point $(x,t)$.\\
 To conclude this section, let us generalize our path-integral formula to a more complicated systems. Consider a very general quantum system, described by arbitrary set of of coordinates $q_i$, conjugate momentum $p^i$, and Hamiltonian $H(q,p)$. 
@@ -531,10 +531,10 @@ where $n_1$, $n_2$ and $n_3$ are integers, and $\bm{a}_1$, $\bm{a}_2$ and $\bm{a
 These unitary operators for translations commute with each other, as well as with $H$, so there must exist a complete set of common eigenvectors for all of these operators,
 \[H|\psi\rangle = E|\psi\rangle \quad U(\bm{R}_n)|\psi\rangle = c(\bm{R}_n)|\psi\rangle\]
 By the composition relation of the translation operators, we can deduce that
-\[c(\bm{R}_n) = \exp(-i\bm{p}\cdot\bm{R}_n)\]
+\[c(\bm{R}_n) = \exp(-i\bm{k}\cdot\bm{R}_n)\]
 So, in coordinate representation, we have
-\[\psi(\bm{x} - \bm{R}_n) = U(\bm{R}_n) \psi(\bm{x}) = \exp(-i\bm{p}\cdot\bm{R}_n) \psi(\bm{x})\]
-The vector $\bm{p}$ is called the Bloch wave vector of the state. If we expand a function of the Bloch form in a series of plane waves, 
+\[\psi(\bm{x} - \bm{R}_n) = U(\bm{R}_n) \psi(\bm{x}) = \exp(-i\bm{k}\cdot\bm{R}_n) \psi(\bm{x})\]
+The vector $\bm{k}$ is called the Bloch wave vector of the state. If we expand a function of the Bloch form in a series of plane waves, 
 \[\psi(\bm{x}) = \sum_{\bm{k}'} a(\bm{k}') e^{i\bm{k}'\cdot \bm{x}}\]
 we can show that for all $\bm{R}_n$
 \[\exp(i(\bm{k}' - \bm{k})\cdot \bm{R}_n) = 1 \]
@@ -559,8 +559,8 @@ We further define
 We can verify that
 \[[a,a^{\dagger}] = 1 \quad H = \frac{1}{2}\omega(aa^{\dagger}+a^{\dagger}a) = \omega(aa^{\dagger}-\frac{1}{2}) = \omega(a^{\dagger}a+\frac{1}{2})\]
 Introduce $N \equiv a^{\dagger}a$, we have
-\[[N,a] = -a \quad [N,a^{\dagger} = a^{\dagger}]\]
-Let $N|\nu\rangle = \nu|\nu\rangle $, with $\langle \nu | \nu \rangle \neq 1$. We have
+\[[N,a] = -a \quad [N,a^{\dagger}] = a^{\dagger}\]
+Let $N|\nu\rangle = \nu|\nu\rangle $, with $\langle \nu | \nu \rangle = 1$. We have
 \[Na|\nu\rangle = a(N-1)|\nu\rangle = (\nu-1)a|\nu\rangle\]
 If $\nu \neq 0$, then $a|\nu\rangle$ cannot be $0$, $a|\nu\rangle$ must be an eigenvector of $N$ with eigenvalue $\nu - 1$.
 On the other hand, we have
@@ -608,7 +608,7 @@ where
 Suppose $x_c(t)$ is the classical path of harmonic oscillator and we define
 \[\delta x(t) \equiv x(t) - x_c(t)\]
 Substitute it into the equation above, the terms which is linear in $\delta x$ can be dropped, because
-\[\frac{\delta S}{\delta x} |_{x(t) = x_c(t)}\]
+\[\left. \frac{\delta S}{\delta x} \right|_{x(t) = x_c(t)}\]
 And since $x_c(t_a) = x_a$, $x_c(t_b) = x_b$, we have
 \[\delta x_{0} = \delta x_{N+1} = 0\]
 At last, we have
@@ -624,28 +624,31 @@ In the limit $\omega \to 0$, we have
 \[G(x_b,t;x_a,0) = \left ( \frac{m}{2\pi i t} \right )^{1/2}\exp \left [ \frac{im}{2t} \left ( x_b-x_a\right)^2 \right ]\]
 This is just the propagator of free particle.
 
-\section{Quantum-mechanical particles in classical electromagnetic field}
+\section{Quantum mechanics in classical electromagnetic field}
 \subsection{General discussion}
-In classical electrodynamics, if the velocity of the charged particle is much smaller than that of light, then the Hamiltonian of charged particles in a given EM field is
+In classical electrodynamics, if the velocity of a charged particle is much smaller than that of light, the Hamiltonian of the charged particle in a given EM field is
 \[H = \frac{(\bm{\pi}-e\bm{A})^2}{2m} + e\phi\]
 In corresponding quantum theory, we will suppose the Hamiltonian operator to be
 \[H = \frac{[\bm{P}-e\bm{A}(\bm{X})]^2}{2M} + e\phi(\bm{X})\]
-The corresponding field operators are
-\[\bm{E} = -\nabla\phi - \frac{\partial \bm{A}}{\partial t} \quad \bm{B} = \bm{\nabla}\times\bm{A}\]\\
-In Heisenberg picture, we have
+and we have
+\[\bm{E} = -\nabla\phi - \frac{\partial \bm{A}}{\partial t} \quad \bm{B} = \bm{\nabla}\times\bm{A}\]
+\\
+In Heisenberg picture, the equation of motion is
 \[\frac{d\bm{X}}{dt} = -i[\bm{X},H] = \frac{1}{M}(\bm{P}-e\bm{A})\]
 Define kinetic momentum $\bm{K}$ by
-\[\bm{K} = \bm{P}-e\bm{A}\]
+\[\bm{K} \equiv \bm{P}-e\bm{A}\]
 We have
 \[[K_i,K_j] = ie(\partial_i A_j-\partial_j A_i) = ie\epsilon_{ijk}B_k\]
 So
-\[M \frac{d^2\bm{X}}{dt^2} = -i[\bm{K},H] + \frac{\partial \bm{K}}{\partial t} = e \left[ \bm{E}+ \frac{1}{2} \left( \frac{d\bm{X}}{dt} \times \bm{B} - \bm{B}\times\frac{d\bm{X}}{dt} \right) \right]\]\\
-In coordinate representation of Schrödinger picture, we have
+\[M \frac{d^2\bm{X}}{dt^2} = -i[\bm{K},H] + \frac{\partial \bm{K}}{\partial t} = e \left[ \bm{E}+ \frac{1}{2} \left( \frac{d\bm{X}}{dt} \times \bm{B} - \bm{B}\times\frac{d\bm{X}}{dt} \right) \right]\]
+\\
+In coordinate representation of Schrödinger picture, the equation of motion is
 \[\frac{1}{2M} \left[ -i\bm{\nabla}-e\bm{A} \right] \cdot \left[ -i\bm{\nabla}-e\bm{A} \right] \psi(\bm{x},t) + e\phi(\bm{x})\psi(\bm{x},t) = i \frac{\partial \psi(\bm{x},t)}{\partial t}\]
 Define probability current $\bm{j}$ as
 \[\bm{j} \equiv \frac{1}{M} \mathrm{Im}(\psi^{*}\bm{\nabla}\psi) - \frac{e}{M}\bm{A}|\psi|^2\]
 we can verify that
-\[\bm{\nabla}\cdot\bm{j} + \frac{\partial \rho}{\partial t} = 0\]\\
+\[\bm{\nabla}\cdot\bm{j} + \frac{\partial \rho}{\partial t} = 0\]
+\\
 Transformation
 \[\phi \to \phi - \frac{\partial \Lambda}{\partial t} \quad \bm{A} \to \bm{A} + \bm{\nabla}\Lambda\]
 will leave $\bm{E}$ and $\bm{B}$ unchanged. The transformation is called gauged transformation. In classical electrodynamics, gauge transformation will not change the trajectory of particles, (which is the only thing we can observed in experiment). In quantum theory, suppose the state vector $|\psi\rangle$ will transform as 
@@ -665,8 +668,10 @@ If $\phi_0$ is a constant, then
 \[O(t) = \exp \left[ -ie\phi_0(t-t_0) \right]\]
 
 \subsection{Motion in a uniform static magnetic field} 
-Suppose that the magnetic field be of magnitude $B$ in the $z$ direction. The Hamiltonian $H = H_{xy}+H_z$ with $H_{xy} = \frac{K_x^2+K_y^2}{2m}$ and $H_z = \frac{P_z^2}{2m}$. Since $B_x = B_y = 0$ , then $P_z$ commutes with $P_x$ and $P_y$. Hence the operators $H_{xy}$ and $H_z$ are commutative, and every eigenvalue of $H$ is just
-the sum of an eigenvalue of $H_{xy}$ and an eigenvalue of $H_z$. \\
+Suppose that the magnetic field be of magnitude $B$ in the $z$ direction. The Hamiltonian $H = H_{xy}+H_z$ with $H_{xy} = \frac{K_x^2+K_y^2}{2m}$ and $H_z = \frac{K_z^2}{2m}$. 
+Since $B_x = B_y = 0$ , then $K_z$ commutes with $K_x$ and $K_y$. Hence the operators $H_{xy}$ and $H_z$ are commutative, and every eigenvalue of $H$ is justwe have
+the sum of an eigenvalue of $H_{xy}$ and an eigenvalue of $H_z$. 
+\\
 Define
 \[Q' \equiv \frac{K_x}{\gamma} \quad P' \equiv \frac{K_y}{\gamma} \quad \gamma \equiv \sqrt{|eB|} \]
 Then we have
@@ -691,7 +696,8 @@ where $\omega_c = \frac{eB}{m}$ is the classical cyclotron frequency, and $E'=E-
 \[\psi = \exp(ik_xx+ik_zz) H_n[\alpha(y-y_0)]\exp[-\frac{1}{2}\alpha^2 (y-y_0)^2]\]
 with $\alpha = \sqrt{m\omega} = \sqrt{|eB|}$, and $y_0 = - \frac{k_x}{eB}$.\\
 For fixed $n$ and $k_z$, the energy eigenvalue is highly degenerate. For convenience, we assume that the system is confined to a rectangle of dimension $D_x\times D_y$ and subject to periodic boundary conditions. The allowed
-values of $k_x$ are $k_x = \frac{2\pi n_x}{D_x}$, with $n_x = 0,\pm1,\cdots$.The orbit center coordinate $y_0 = -\frac{2\pi n_x}{D_xeB}$ must lie in the range $[0,D_y]$. In the limit as $D_x$ and $D_y$ become large, we may ignore problems associated with orbits lying near the boundary, since they will be a negligible fraction of the total. In this limit the number of degenerate states corresponding to fixed $n$ and $k_z$ will be $\frac{D_xD_y |eB|}{2\pi}$.
+values of $k_x$ are $k_x = \frac{2\pi n_x}{D_x}$, with $n_x = 0,\pm1,\cdots$.The orbit center coordinate $y_0 = -\frac{2\pi n_x}{D_xeB}$ must lie in the range $[0,D_y]$. In the limit as $D_x$ and $D_y$ become large, we may ignore problems associated with orbits lying near the boundary, since they will be a negligible fraction of the total. In this limit the number of degenerate states corresponding to fixed $n$ and $k_z$ will be
+\[\frac{D_xD_y |eB|}{2\pi} = \left| \frac{e}{2\pi} \Phi \right|\]
 
 \subsection{The Aharonov-Bohm effect}
 A long solenoid is placed perpendicular to the plane of the figure, so that a magnetic field can be created inside the solenoid while the region external to the solenoid remains field-free. The solenoid is located in the unilluminated shadow region so that no particles will reach it, and moreover it may be surrounded by a cylindrical shield that is impenetrable to the charged particles. Nevertheless it can be shown that the interference pattern depends upon the magnetic flux through the cylinder.\\
@@ -703,11 +709,12 @@ A long solenoid is placed perpendicular to the plane of the figure, so that a ma
 Let $\Psi^{(0)}(\bm{x},t)$ be the solution of the Schrödinger equation and boundary conditions of this problem for the case in which the vector potential is everywhere zero. Now let us consider the case in which the magnetic field is non-zero inside the cylinder but zero outside of it. The vector potential $\bm{A}$ will not vanish everywhere in the exterior region, even though $\bm{B}=\bm{\nabla}\times\bm{A}=0$
 outside of the cylinder. This follows by applying Stokes's theorem to any path surrounding the cylinder
 \[\oint \bm{A}\cdot d\bm{x} = \int\int (\bm{\nabla}\times\bm{A})\cdot d\bm{S} = \int\int \bm{B}\cdot d\bm{S} = \Phi\]
-If the flux through the cylinder is not zero, then the vector potential must be nonzero on every path that encloses the cylinder. However in any simply connected region outside of the cylinder, it is possible to express the vector potential as the gradient of a scalar, from the zero potential solution by means of a gauge transformation, $\Psi = \Psi^{(0)}\exp(ie\Lambda)$.\\
-In region $L$, which contains the slit on the left, the wave function can be written as $\Psi_L = \Psi_L\exp(ie\Lambda_1)$, where $\Psi_L$ is the zero potential solution in region $L$, and $\Lambda_1(\bm{x},t) = \int \bm{A}\cdot d\bm{x}$, with the integral taken along a path within region L. A similar form can be written for the wave function in the region R, which contains the slit on the right. \\
+If the flux through the cylinder is not zero, then the vector potential must be nonzero on every path that encloses the cylinder. However in any simply connected region outside of the cylinder, it is possible to express the vector potential as the gradient of a scalar, from the zero potential solution by means of a gauge transformation, $\Psi = \Psi^{(0)}\exp(ie\Lambda)$.
+\\
+In region L, which contains the slit on the left, the wave function can be written as $\Psi_L = \Psi_L\exp(ie\Lambda_1)$, where $\Psi_L$ is the zero potential solution in region L, and $\Lambda_1(\bm{x},t) = \int \bm{A}\cdot d\bm{x}$, with the integral taken along a path within region L. A similar form can be written for the wave function in the region R, which contains the slit on the right. \\
 At the point b, in the overlap of regions L and R, the wave function is a superposition of contributions from both slits. Hence we have
 \[\Psi(\bm{b}) = \Psi_L\exp(ie\Lambda_1) + \Psi_R\exp(ie\Lambda_2)\]
-The interference pattern depends $\exp(ie(\Lambda1-\Lambda_2)) = \exp(ie\Phi)$. 
+The interference pattern depends $\exp(ie(\Lambda_1-\Lambda_2)) = \exp(ie\Phi)$. 
 Therefore the interference pattern is sensitive to the magnetic flux inside of the cylinder, even though the particles never pass through the region in which the magnetic field is nonzero. 
 The AB effect is a topological effect, in that the effect depends on the flux encircled by the paths available to the particle, even though the paths may never approach the region of the flux. \\
 At last, we conclude that in quantum theory, the potentials themselves are physically significant; however, they are subject to the requirement that all observable effects be invariant under gauge transformations.
