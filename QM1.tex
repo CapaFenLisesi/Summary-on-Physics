@@ -721,16 +721,16 @@ At last, we conclude that in quantum theory, the potentials themselves are physi
 
 \chapter{Angular Momentum}
 \section{Eigenvalues of angular momentum operator}
-The commutation relations among the angular momentum operators are
+Commutation relations among the angular momentum operators are
 \[[J_i,J_j] = \epsilon_{ijk} J_k\]
-And these three operators are self-adjoint. We first introduce the operator $J^2 = J_x^2 + J_y^2 + J_z^2$. We can verify that $[J^2,\bm{J}] = 0$. Thus there exists a complete set of common eigenvectors of $J^2$ and any one component of $\bm{J}$. Particularly, we have the pair of eigenvalue equations
+And these three operators are self-adjoint. We first introduce the operator $J^2 \equiv J_x^2 + J_y^2 + J_z^2$. We can verify that $[J^2,\bm{J}] = 0$. Thus there exists a complete set of common eigenvectors of $J^2$ and any one component of $\bm{J}$. Particularly, we have the pair of eigenvalue equations
 \[J^2 | \beta,m\rangle = \beta | \beta,m\rangle \quad J_z | \beta,m\rangle = m | \beta,m\rangle\]
 Since
 \[\langle \beta,m | J^2 | \beta,m \rangle = \langle \beta,m | J_x^2 | \beta,m \rangle + \langle \beta,m | J_y^2 | \beta,m \rangle + \langle \beta,m | J_z^2 | \beta,m \rangle\]
 we have $m^2 \leq \beta$. Thus for a fixed value of $\beta$ there must be maximum and minimum values for $m$.\\
 Define
 \[J_+ \equiv J_x + iJ_y \quad J_- \equiv J_x - iJ_y\]
-we have the commutation relations
+we have commutation relations
 \[[J_z,J_+] = J_+ \quad [J_z,J_-] = -J_- \quad [J_+,J_-] = 2J_z\]
 So
 \[J_z J_+ | \beta,m\rangle = J_+(J_z + 1)| \beta,m\rangle = (m+1)J_+| \beta,m\rangle\]
@@ -739,7 +739,8 @@ Therefore, either $J_+ | \beta,m\rangle$ is an eigenvector of $J_z$ with the rai
 Since
 \[J_- J_+ = J^2 - J_z^2 - J_z\]
 it is obvious that $\beta = j(j+1)$. By similar method, we can show the minimum eigenvalue of $J_z$ for fixed $\beta$ satisfy that $\beta = k(k-1)$. So, we have $k = -j$. \\
-We have thus shown the existence of a set of eigenvectors corresponding to integer spaced $m$ values in the range $-j \leq m \leq j$. Since the difference between the maximum value $j$ and the minimum value $-j$ must be an integer, it follows that $j = \mbox{ integer} / 2$. Henceforth we shall adopt the common and more convenient notation of labeling the eigenvectors by $j$ instead of by $\beta$. Thus the vector that was previously denoted as $|\beta,m\rangle$ will now be denoted as $|j,m\rangle$. \\ \\
+We have thus shown the existence of a set of eigenvectors corresponding to integer spaced $m$ values in the range $-j \leq m \leq j$. Since the difference between the maximum value $j$ and the minimum value $-j$ must be an integer, it follows that $j = \mbox{ integer} / 2$. Henceforth we shall adopt the common and more convenient notation of labeling the eigenvectors by $j$ instead of by $\beta$. Thus the vector that was previously denoted as $|\beta,m\rangle$ will now be denoted as $|j,m\rangle$. 
+\\ \\
 To find the matrix element of angular momentum operator, we notice that
 \[\langle j,m| J_-J_+|j,m\rangle = j(j+1)-m(m+1)\]
 so, we can get
@@ -818,9 +819,9 @@ Since $J_u = \bm{R}_z(\alpha) J_y \bm{R}_z(-\alpha)$, we have $\bm{R}_u(\beta) =
 The matrix representation of the rotation operator in the basis $|j,m\rangle$
 \[\langle j',m' | \bm{R}(\alpha,\beta,\gamma) | j,m \rangle = \delta_{jj'} D_{m'm}^{(j)}(\alpha,\beta,\gamma)\]
 gives rise to the rotation matrices,
-\[D_{m'm}^{(j)}(\alpha,\beta,\gamma) = \langle j',m' | e^{-i\alpha J_{z}} e^{-i\beta J_{y}} e^{-i\gamma J_{z}} | j,m \rangle = e^{-i(\alpha m' + \gamma m)} d_{mm'}^{(j)}(\beta)\]
+\[D_{m'm}^{(j)}(\alpha,\beta,\gamma) \equiv \langle j,m' | e^{-i\alpha J_{z}} e^{-i\beta J_{y}} e^{-i\gamma J_{z}} | j,m \rangle = e^{-i(\alpha m' + \gamma m)} d_{mm'}^{(j)}(\beta)\]
 where
-\[ d_{mm'}^{(j)}(\beta) = \langle j',m' | e^{-i\beta J_{y}} | j,m \rangle\]
+\[ d_{m'm}^{(j)}(\beta) \equiv \langle j,m' | e^{-i\beta J_{y}} | j,m \rangle\]
 For the case of $j = \frac{1}{2}$, we have $J_y = \frac{1}{2}\sigma_y$ and $\sigma_y^2 = I$. We can obtain
 \[d^{(1/2)}(\beta) = \left[ \begin{matrix} \cos \frac{\beta}{2} & -\sin \frac{\beta}{2} \\ \cos \frac{\beta}{2}& \sin \frac{\beta}{2}\end{matrix} \right] \]
 Notice that this matrix is periodic in $\beta$ with period $4\pi$, but it changes sign when $2\pi$ is added to $\beta$. This double-valuedness under rotation by $2\pi$ is a characteristic of the full rotation matrix whenever $j$ is a half odd-integer. The matrix is single-valued under rotation by $2\pi$ whenever $j$ is an integer.\\
@@ -834,8 +835,8 @@ Setting $\phi=0$ then yields
 \[Y_l^m(\theta,\alpha) = e^{i\alpha m} Y_{l}^{m}(\theta,0)\]
 Since the direction $\theta = 0$ is the polar axis, continuity of the spherical harmonic requires that $Y_l^m(0,\alpha)$ be independent of $\alpha$. Therefore we must
 have $Y_l^m(0,0) = 0$ for $m \neq 0$, and so we can write\\
-\[Y_{l}^{m}(\theta,0) = c_{l}\delta{m0}\]
-The we have
+\[Y_{l}^{m}(0,0) = c_{l}\delta{m0}\]
+Then we have
 \[Y_l^m(\theta,\phi) = \sum_{m'} Y_{l}^{m'}(0,0) [D_{mm'}^{(j)}((\phi,\theta,\gamma))]^* = c_l [D_{m0}^{(j)}((\phi,\theta,\gamma))]^*\]
 for arbitrary $\gamma$, thus obtaining a simple relation between the spherical harmonics and the rotation matrices. Conventional normalization is obtained if we put
 \[c_l = \left( \frac{2l+1}{4\pi} \right) ^{1/2}\]
@@ -846,7 +847,7 @@ along the unit vector $\bm{n}$ is $\bm{R}_n(2\pi) = e^{-2\pi i\bm{n}\cdot\bm{J}}
 We assume a rotation through $2\pi$ as a trivial operation that leaves everything unchanged, i.e. all dynamical variables are invariant under $2\pi$ rotation:
 \[\bm{R}(2\pi) A \bm{R}^{-1}(2\pi) = A\]
 where $A$ may represent any physical observable. \\
-the operator $\bm{R}_{2\pi}$ divides the vector space into two subspaces. A typical vector in the first subspace,
+The operator $\bm{R}_{2\pi}$ divides the vector space into two subspaces. A typical vector in the first subspace,
 denoted as $|+\rangle$, has the property $\bm{R}(2\pi)|+\rangle = |+\rangle$, whereas a typical vector in the second subspace, denoted as $|-\rangle$, has the property $\bm{R}(2\pi)|-\rangle = -|-\rangle$. Now, if $A$ represents any physical observable, we have $\langle + | \bm{R}(2\pi) A| - \rangle = \langle + | A\bm{R}(2\pi)| - \rangle$, leading to 
 \[\langle + | A | - \rangle = 0\] 
 No physical observable can have nonvanishing matrix elements between states with integer angular momentum and states with half odd-integer angular momentum. This fact forms the basis of a superselection rule: There is no observable distinction among the state vectors of the form\\
@@ -867,7 +868,7 @@ Now the $2J+1$ vectors $|\alpha, J, M \rangle$, with $M$ in the range $-J \leq M
 Therefore if the vector $|\alpha, J, M \rangle$, for a particular value of $M$, can be constructed in the space under consideration, then so can the entire set of $2J+1$
 such vectors with $M$ in the range $-J \leq M \leq J$.
 For a particular value of $J$, it might be possible to construct one such set of vectors, two or more linearly independent sets, or none at all. \\
-Let $N(J)$ denote the number of independent sets that can be constructed. Let $n(M)$ be the degree of degeneracy, in this space, of the eigenvalue $M$ . The relation between these two quantities is
+Let $N(J)$ denotes the number of independent sets that can be constructed. Let $n(M)$ be the degree of degeneracy, in this space, of the eigenvalue $M$ . The relation between these two quantities is
 \[n(M) = \sum_{J \geq |M|} N(J)\]
 and hence
 \[N(J) = n(J) - n(J+1)\]
@@ -888,7 +889,7 @@ The coefficients of this transformation are called the Clebsch–Gordan coeffici
 The phases of the CG coefficients are not yet defined because of the indeterminacy of the relative phases of the vectors $|j_1,j_2,J,M\rangle$. For different values of $M$ but fixed $J$ we adopt the usual phase convention that led to
 \[J_+ |j_1,j_2,J,M\rangle = \sqrt{(J+M+1)(J-M)} |j_1,j_2,J,M+1\rangle\]
 This leaves one arbitrary phase for each $J$ value, which we fix by requiring that $(j_1,j_2,j_1,J-j_1|J,J)$ be real and positive. It can be shown that all of the CG coefficients are now real.\\
-We can also prove that the CG coefficient vanishes unless the following conditions are satisfied:
+We can also prove that CG coefficients vanishe unless following conditions are satisfied:
 \begin{itemize}
 \item $m_1+m_2=M$
 \item $|j_1-j_2| \leq J \leq |j_1+j_2|$
@@ -896,7 +897,7 @@ We can also prove that the CG coefficient vanishes unless the following conditio
 \end{itemize}
 It is possible to calculate the values of the CG coefficients by successive application of the raising or lowering operator to
 \[|j_1,j_2,J,M\rangle = \sum_{m_1,m_2} |j_1,j_2,m_1,m_2\rangle (j_1,j_2,m_1,m_2|J,M)\]
-The details of the calculation can be found in section 7.7 of \emph{Quantum mechanics - a modern development(Leslie E. Ballentine)}.And we have \href{https://en.wikipedia.org/wiki/Table_of_Clebsch-Gordan_coefficients}{Table of CG coefficients} and \href{http://www.wolframalpha.com/input/?i=CG+coefficient}{Calculator of CG coefficients} on the internet. A special case of angular momentum addition is spin–orbit coupling of spin $\frac{1}{2}$ particles, and we list the corresponding CG coefficients $(l,\frac{1}{2}, M-m_s, m_s|J,M)$ in the table 1.1.
+The details of the calculation can be found in section 7.7 of \emph{Quantum mechanics - a modern development(Leslie E. Ballentine)}.And we have \href{https://en.wikipedia.org/wiki/Table_of_Clebsch-Gordan_coefficients}{Table of CG coefficients} and \href{http://www.wolframalpha.com/input/?i=CG+coefficient}{Calculator of CG coefficients} on the internet. A special case of angular momentum addition is spin–orbit coupling of spin $\frac{1}{2}$ particles, and we list the corresponding CG coefficients $(l,\frac{1}{2}, M-m_s, m_s|J,M)$ in the table 17.1.
 \begin{table}[!th]
 \centering
 \begin{tabular}{|c|c|c|}
@@ -957,18 +958,22 @@ Taking the case of infinitesimal rotation, we can derive that
 For example, spherical components of a vector operator $\bm{V}$, 
 \[V_{-1} = \frac{V_x - i V_y}{\sqrt{2}} \quad V_0 = V_z \quad V_{1} = -\frac{V_x + i V_y}{\sqrt{2}}\]
 satisfy the commutation relation above, so they are spherical tensor of rank $1$. Generally, if $\bm{V}$ is a vector operator, then $Y_l^m(\bm{V})$ is a spherical tensor of ranks $l$.\\
-Spherical tensors can be formed as products of other spherical  tensors, we have following theorem.\\
+Spherical tensors can be formed as products of other spherical  tensors, we have following theorem.
+\\
 
 \begin{newthem}
 Let $X^{(k_1)}_{q_1}$ and $Z^{(k_2)}_{q_2}$ be irreducible spherical tensors of rank $k_1$ and $k_2$. Then
-\[T^{(k)}_{q} = \sum_{q_1.q_2} (k_1,k_2,q_1,q_2|k,q) X^{(k_1)}_{q_1} Z^{(k_2)}_{q_2}\]
-is a irreducible spherical tensor of rank $k$. 
+\[T^{(k)}_{q} = \sum_{q_1,q_2} (k_1,k_2,q_1,q_2|k,q) X^{(k_1)}_{q_1} Z^{(k_2)}_{q_2}\]
+is an irreducible spherical tensor of rank $k$. 
 \end{newthem}
 \noindent
 The proof can be found in section 3.10 of \emph{Modern Quantum Mechanics(J.J.Sakurai)}.\\
-For example, suppose $\bm{V}$ and $\bm{U}$ are spherical tensor
-\[T^{(0)}_{0} = \sqrt{\frac{1}{3}} (U_{-1}V_{1} + U_{1}V_{-1}-U_{0}U_{0}) = - \sqrt{\frac{1}{3}} (U_x^2 + U_y^2 + U_z^2)\]
-is tensor of rank $1$, then is a spherical tensor of rank $0$. Another important theorem is Wigner-Eckart theorem.\\
+For example, suppose $\bm{V}$ and $\bm{U}$ are spherical tensor of rank $1$, then
+\[T^{(0)}_{0} = \sqrt{\frac{1}{3}} (U_{-1}V_{1} + U_{1}V_{-1}-U_{0}U_{0}) = - \sqrt{\frac{1}{3}} (U_xV_x + U_yV_y + U_zV_z)\]
+is a spherical tensor of rank $0$. 
+\\
+Another important theorem is Wigner-Eckart theorem.
+\\
 
 \begin{newthem}[Wigner-Eckart theorem]
 The matrix elements of tensor operators with respect to angular-momentum eigenstates satisfy
@@ -1018,7 +1023,7 @@ The corresponding momentum operators are
 We can verify that
 \[[Q_{c\alpha},P_{c\beta}] = [Q_{r\alpha},P_{r\beta}] = i\delta_{\alpha\beta} \quad [Q_{c\alpha},P_{r\beta}] = [Q_{r\alpha},P_{c\beta}] = 0\]
 The Hamiltonian becomes
-\[H = \frac{P_c^2}{2(m_e+m_p)} + \frac{p_r^2}{2\mu} - \frac{e^2}{4\pi|\bm{Q}_r|}\]
+\[H = \frac{P_c^2}{2(m_e+m_p)} + \frac{P_r^2}{2\mu} - \frac{e^2}{4\pi|\bm{Q}_r|}\]
 where $\mu$ is called the reduced mass, and is defined by $\mu \equiv \frac{m_em_p}{m_e+m_p}$.
 The center of mass behaves as a free particle, and its
 motion is not coupled to the relative coordinate. We shall confine our attention to the internal degrees of freedom described by the relative coordinate $\bm{Q}_r$. The energy eigenvalue equation in coordinate representation is
@@ -1041,6 +1046,7 @@ The degeneracy of an eigenvalue $E_n$ is
 \begin{note}
 The degeneracy of an energy level of a hydrogen atom is greater than this by a factor of $4$, which arises from the two-fold orientational degeneracies of the electron and proton spin states. This four-fold degeneracy is modified by the hyperfine interaction between the magnetic moments of the electron and the proton.
 \end{note}
+\noindent
 The orthonormal energy eigenfunctions for the hydrogen atom are
 \[\Psi_{nlm}(r,\theta,\phi) =  \left[ \frac{4(n-l-1)!}{(na_0)^3 n[(n+l)!]^3} \right]^{\frac{1}{2}} \rho^l L_{n-l-1}^{2l+1}(\rho) e^{-\rho/2} Y_l^m (\theta,\phi)\]
 where $\rho = \alpha r = \frac{2r}{na_0}$, and $a_0 \equiv \frac{4\pi}{\mu e^2}$ is a characteristic length for the
