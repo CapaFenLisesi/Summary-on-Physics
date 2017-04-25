@@ -365,23 +365,23 @@ Since $T^a_R$ is a hermitian matrix, $i\psi^{\dagger} \overline{\sigma}^{\mu} D_
 Now we focus on the simplest possible example: a $U(1)$ theory with a single Weyl field $\psi$ with charge $+1$. The Lagrangian is
 \[\mathcal{L} = i\psi^{\dagger} \overline{\sigma}^{\mu} (\partial_{\mu} - igA_{\mu}) \psi - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}\]
 We note that
-\[P_L \Psi = \begin{pmatrix}
+\[P_{\mathrm{L}} \Psi = \begin{pmatrix}
 \psi \\ 0
 \end{pmatrix}\]
 Then we can write
-\[\mathcal{L} = i\overline{\Psi} \gamma^{\mu} (\partial_{\mu} - igA_{\mu}) P_L\Psi - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}\]
+\[\mathcal{L} = i\overline{\Psi} \gamma^{\mu} (\partial_{\mu} - igA_{\mu}) P_{\mathrm{L}}\Psi - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}\]
 To better understand the physical consequences of the projection operator, consider the case of a free field. The mode expansion is
-\[P_L\Psi(x) = \sum_{s = \pm} \int \tilde{dp} [b_s(\bm{p})P_Lu_s(\bm{p})e^{ipx} + d_s^{\dagger}(\bm{p})P_L v_s(\bm{p}) e^{-ipx}]\]
-For a massless field, we have $P_L u_{+}(\bm{p}) = 0$ and $P_L v_-(\bm{p}) = 0$. Thus we can write as
-\[P_L\Psi(x) =  \int \tilde{dp} [b_-(\bm{p})u_-(\bm{p})e^{ipx} + d_+^{\dagger}(\bm{p}) v_+(\bm{p}) e^{-ipx}]\]
+\[P_{\mathrm{L}}\Psi(x) = \sum_{s = \pm} \int \tilde{dp} [b_s(\bm{p})P_{\mathrm{L}}u_s(\bm{p})e^{ipx} + d_s^{\dagger}(\bm{p})P_{\mathrm{L}} v_s(\bm{p}) e^{-ipx}]\]
+For a massless field, we have $P_{\mathrm{L}} u_{+}(\bm{p}) = 0$ and $P_{\mathrm{L}} v_-(\bm{p}) = 0$. Thus we can write as
+\[P_{\mathrm{L}}\Psi(x) =  \int \tilde{dp} [b_-(\bm{p})u_-(\bm{p})e^{ipx} + d_+^{\dagger}(\bm{p}) v_+(\bm{p}) e^{-ipx}]\]
 We can easily read the Feynman rules from the Lagrangian. In particular, the fermion propagator in momentum space is
-\[\frac{iP_L\slashed{p}}{p^2-i\epsilon}\]
+\[\frac{iP_{\mathrm{L}}\slashed{p}}{p^2-i\epsilon}\]
 and the fermion-fermion-photon vertex is
-\[ig\gamma^{\mu} P_L\]
+\[ig\gamma^{\mu} P_{\mathrm{L}}\]
 \\
 Now consider the correction to the photon propagator. Calculation shows that at the one-loop level, the contribution to $\Pi^{\mu\nu}(k)$ of a single charged Weyl field is half that of a Dirac field. This is physically reasonable, since a Dirac field is equivalent to two charged Weyl fields.
 \\
-Nothing interesting happens in the one-loop corrections to the fermion propagator, or the fermion-fermion-photon vertex. There is simply an extra factor of $P_L$ along the fermion line, which can be moved to the far right. Except for this factor, the results exactly duplicate those of spinor electrodynamics.
+Nothing interesting happens in the one-loop corrections to the fermion propagator, or the fermion-fermion-photon vertex. There is simply an extra factor of $P_{\mathrm{L}}$ along the fermion line, which can be moved to the far right. Except for this factor, the results exactly duplicate those of spinor electrodynamics.
 \\
 All of this implies that a single Weyl field makes half the contribution of a Dirac field to the leading term in the beta function for the gauge coupling.
 \\ \\
@@ -407,7 +407,7 @@ pairs with equal and opposite charges. But there are other possibilities as well
 \\ \\
 All of this has a straightforward generalization to nonabelian gauge theories. 
 Suppose we have a single Weyl field in a (possibly reducible) representation $R$ of the gauge group. Then we must attach an extra factor of $\mathrm{Tr}(T^a_R T^b_R T^c_R)$ to the first diagram, and a factor of $\mathrm{Tr}(T^a_R T^c_R T^b_R)$ to the second; here the group indices $a,b,c$ go along with the momenta $p,q,r$, respectively.
-Repeating our analysis shows that the diagrams with $P_L \to \frac{1}{2}$ come with an extra factor of $\frac{1}{2}\mathrm{Tr}([T^a_R, T^b_R] T^c_R)$; these contribute to the renormalization of the tree-level three-gluon vertex. Diagrams with $P_L \to - \frac{1}{2}\gamma_5$ come with an extra factor of
+Repeating our analysis shows that the diagrams with $P_{\mathrm{L}} \to \frac{1}{2}$ come with an extra factor of $\frac{1}{2}\mathrm{Tr}([T^a_R, T^b_R] T^c_R)$; these contribute to the renormalization of the tree-level three-gluon vertex. Diagrams with $P_{\mathrm{L}} \to - \frac{1}{2}\gamma_5$ come with an extra factor of
 \[\frac{1}{2}\mathrm{Tr}(\{T^a_R, T^b_R\} T^c_R) = A(R)d^{abc}\]
 Here $d^{abc}$ is a completely symmetric tensor that is independent of the representation, and $A(R)$ is the anomaly coefficient of $R$. In order for this theory to exist, we must have $A(R) = 0$. 
 Since $A(R) + A(\overline{R}) = 0$; thus a theory whose left-handed Weyl fields come in $R \oplus \overline{R}$ pairs is automatically anomaly free (as is one whose Weyl fields are all in real representations). Otherwise, we must arrange the cancellation by hand. 
@@ -441,7 +441,7 @@ Then we have
 \[\langle p,q | j^{\rho}_A(z) |  0 \rangle = -g^2 \epsilon_{\mu} \epsilon'_{\nu} \left. C^{\mu\nu\rho}(p,q,r) e^{irz} \right|_{r=-q-p}\]
 Taking the divergence of the current yields
 \[\langle p,q | \partial_{\rho} j^{\rho}_A(z) |  0 \rangle = -ig^2 \epsilon_{\mu} \epsilon'_{\nu} r_{\rho} \left. C^{\mu\nu\rho}(p,q,r) e^{irz} \right|_{r=-q-p}\]
-We compute $C^{\mu\nu\rho}(p,q,r)$ with Feynman diagrams. At the one-loop level, the contributing diagrams are exactly those we computed in previous subsection, except that the three vertex factors are now $\gamma^{\mu}$, $\gamma^{\nu}$ and $\gamma^{\rho}\gamma_5$ instead of $ig\gamma^{\mu}P_L$, $ig\gamma^{\nu}P_L$ and $ig\gamma^{\rho}P_L$. But, as we saw, the three $P_L$s can be combined into just one at the last vertex, and then this one can be replaced by $-\frac{1}{2}\gamma_5$ . Thus, the vertex function $iV^{\mu\nu\rho}(p,q,r)$ is related to $C^{\mu\nu\rho}(p,q,r)$ by
+We compute $C^{\mu\nu\rho}(p,q,r)$ with Feynman diagrams. At the one-loop level, the contributing diagrams are exactly those we computed in previous subsection, except that the three vertex factors are now $\gamma^{\mu}$, $\gamma^{\nu}$ and $\gamma^{\rho}\gamma_5$ instead of $ig\gamma^{\mu}P_{\mathrm{L}}$, $ig\gamma^{\nu}P_{\mathrm{L}}$ and $ig\gamma^{\rho}P_{\mathrm{L}}$. But, as we saw, the three $P_{\mathrm{L}}$s can be combined into just one at the last vertex, and then this one can be replaced by $-\frac{1}{2}\gamma_5$ . Thus, the vertex function $iV^{\mu\nu\rho}(p,q,r)$ is related to $C^{\mu\nu\rho}(p,q,r)$ by
 \[iV^{\mu\nu\rho}(p,q,r) = -\frac{1}{2}(ig)^3 C^{\mu\nu\rho}(p,q,r) + O(g^5)\]
 We could choose a regularization scheme that
 preserved $p_{\mu}C^{\mu\nu\rho}(p,q,r) = 0$ and $q_{\nu}C^{\mu\nu\rho}(p,q,r) = 0$ but not also $r_{\rho}C^{\mu\nu\rho}(p,q,r) = 0$. This results in
@@ -659,7 +659,7 @@ The ghost fields of definite mass are $\widetilde{c}^a = S^{ba}c^b$ and  $\widet
 
 \section{The Standard Model}
 \subsection{Gauge and Higgs sector}
-We begin with the electroweak part of the gauge group, $SU(2)\times U(1)$, and the complex scalar field $\phi$, known as the Higgs field, in the representation $(2,-\frac{1}{2})$. The Higgs field acquires a nonzero VEV that spontaneously breaks $SU(2)\times U(1)$ to $U(1)$; the unbroken $U(1)$ is identified as electromagnetism.
+We begin with the electroweak part of the gauge group, $SU(2)\times U(1)$, and the complex scalar field $\phi$, known as the Higgs field, in the representation $(2,-\frac{1}{2})$. The Higgs field acquires a non-zero VEV that spontaneously breaks $SU(2)\times U(1)$ to $U(1)$; the unbroken $U(1)$ is identified as electromagnetism.
 We begin with the covariant derivative of the Higgs field $\phi$,
 \[(D_{\mu}\phi)_i = \partial_{\mu}\phi_i - i[g_2 A^a_{\mu}T^a + g_1B_{\mu}Y]_{i}^{\phantom{i}j} \phi_j\] where $T^a = \frac{1}{2}\sigma^a$ and $Y = -\frac{1}{2}I$; $Y$ is the hypercharge generator. It will prove
 useful to write out $g_2 A^a_{\mu}T^a + g_1B_{\mu}Y$ in matrix form,
@@ -669,28 +669,29 @@ g_2(A^1_{\mu} + iA^2_{\mu}) & -g_2A^3_{\mu}-g_1B_{\mu}
 \end{pmatrix}\]
 Now suppose that $\phi$ has a potential
 \[V(\phi) = \frac{1}{4}\lambda (\phi^{\dagger}\phi - \frac{1}{2}v^2)^2\]
-This potential gives $\phi$ a nonzero VEV. We can make a global gauge transformation to bring this VEV entirely into the first component, and furthermore make it real, so that
+This potential gives $\phi$ a non-zero VEV. We can make a global gauge transformation to bring this VEV entirely into the first component, and furthermore make it real, so that
 \[\langle 0 | \phi | 0 \rangle =  \frac{1}{\sqrt{2}}\begin{pmatrix}
 v \\ 0
 \end{pmatrix} \]
-The kinetic term for $\phi$ is $-(D_{\mu}\phi)^{\dagger}D_{\mu}\phi$. After replacing $\phi$ by its $VEV$, we find a mass term for the gauge fields,
-\[\mathcal{L}_{mass}  = - \frac{1}{8}v^2 \begin{pmatrix}
+The kinetic term for $\phi$ is $-(D_{\mu}\phi)^{\dagger}D_{\mu}\phi$. After replacing $\phi$ by its VEV, we find a mass term for the gauge fields,
+\[\mathcal{L}_{\mathrm{mass}}  = - \frac{1}{8}v^2 \begin{pmatrix}
 1 & 0 \end{pmatrix} \begin{pmatrix}
 g_2A^3_{\mu}-g_1B_{\mu} & g_2(A^1_{\mu} - iA^2_{\mu}) \\
 g_2(A^1_{\mu} + iA^2_{\mu}) & -g_2A^3_{\mu}-g_1B_{\mu}
-\end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \]
+\end{pmatrix}^2 \begin{pmatrix} 1 \\ 0 \end{pmatrix} \]
 Define the weak mixing angle
-\[\theta_W \equiv \tan^{-1}(g_1/g_2)\]
+\[\theta_{\mathrm{W}} \equiv \tan^{-1}(g_1/g_2)\]
 and the fields
 \begin{eqnarray}
 W^{\pm}_{\mu} &\equiv & \frac{1}{\sqrt{2}} (A^1_{\mu} \mp iA^2_{\mu}) \nonumber \\
-Z_{\mu}  &\equiv & c_w A^3_{\mu} - s_w B_{\mu} \nonumber \\
-A_{\mu}  &\equiv & s_w A^3_{\mu} + c_w B_{\mu} \nonumber
+Z_{\mu}  &\equiv & c_{\mathrm{W}} A^3_{\mu} - s_{\mathrm{W}} B_{\mu} \nonumber \\
+A_{\mu}  &\equiv & s_{\mathrm{W}} A^3_{\mu} + c_{\mathrm{W}} B_{\mu} \nonumber
 \end{eqnarray}
+where $c_{\mathrm{W}} \equiv \cos \theta_{\mathrm{W}}$ and $s_{\mathrm{W}} \equiv \sin \theta_{\mathrm{W}}$. 
 In terms of these fields, we have
-\[\mathcal{L}_{mass} = -M_W^2 W^{+\mu} W^{-}_{\mu} - \frac{1}{2}M_Z^2 Z^{\mu}Z_{\mu}\]
+\[\mathcal{L}_{\mathrm{mass}} = -M_{\mathrm{W}}^2 W^{+\mu} W^{-}_{\mu} - \frac{1}{2}M_{\mathrm{Z}}^2 Z^{\mu}Z_{\mu}\]
 where we have identified
-\[M_W = \frac{g_2v}{2} \quad M_Z = \frac{M_W}{\cos\theta_W}\]
+\[M_{\mathrm{W}} \equiv \frac{g_2v}{2} \quad M_{\mathrm{Z}} \equiv \frac{M_{\mathrm{W}}}{\cos\theta_{\mathrm{W}}}\]
 Note that the $A_{\mu}$ field remains massless; this signifies that there is an unbroken $U(1)$ subgroup. We will identify this unbroken $U(1)$ with the gauge
 group of electromagnetism.
 \\ \\
@@ -700,7 +701,7 @@ v + H(x) \\ 0
 \end{pmatrix}\]
 where $H$ is a real scalar field; the corresponding particle is the Higgs boson. The potential now reads
 \[V = \frac{1}{4}\lambda v^2H^2 + \frac{1}{4}\lambda v H^3 + \frac{1}{16}\lambda H^4\]
-We see that the mass of the Higgs boson is given by $m_H^2 = \frac{1}{2}\lambda v^2$. The kinetic term for $H$ comes from the kinetic term for $\phi$, and is the usual one for a real scalar field, $-\frac{1}{2}\partial_{\mu}H \partial^{\mu}H$. Finally, recall that the mass term for the gauge fields is proportional to $v^2$. Hence it should be multiplied by a factor of $(1 + \frac{H}{v})^2$.
+We see that the mass of the Higgs boson is given by $m_{\mathrm{H}}^2 = \frac{1}{2}\lambda v^2$. The kinetic term for $H$ comes from the kinetic term for $\phi$, and is the usual one for a real scalar field, $-\frac{1}{2}\partial_{\mu}H \partial^{\mu}H$. Finally, recall that the mass term for the gauge fields is proportional to $v^2$. Hence it should be multiplied by a factor of $(1 + \frac{H}{v})^2$.
 \\ \\
 Now we have to work out the kinetic terms for the gauge fields. We have
 \[\mathcal{L} = -\frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu} - \frac{1}{4}B^{\mu\nu}B_{\mu\nu}\]
@@ -709,28 +710,28 @@ We find
 \[\frac{1}{\sqrt{2}} (F^1_{\mu\nu} + iF^2_{\mu\nu}) = D_{\mu} W^-_{\nu} - D_{\nu}W^-_{\mu}\]
 where we have defined a covariant derivative that acts on
 $W^+$,
-\[D_{\mu} \equiv \partial_{\mu} - ig_2A^3_{\mu} = \partial_{\mu} - ig_2(s_WA_{\mu} + c_W Z_{\mu})\]
+\[D_{\mu} \equiv \partial_{\mu} - ig_2A^3_{\mu} = \partial_{\mu} - ig_2(s_{\mathrm{W}}A_{\mu} + c_{\mathrm{W}} Z_{\mu})\]
 If we identify $A_{\mu}$ as the electromagnetic vector potential, and assign electric charge $Q = +1$ (in units of the proton charge) to the $W^+$, then we must identify the electromagnetic coupling constant $e$ as
-\[e = g_2 \sin\theta_W\]
+\[e \equiv g_2 s_{\mathrm{W}}\]
 Here we are adopting the convention that $e$ is positive. (In our treatment of quantum electrodynamics, we used the convention that $e$ is negative, but that is less convenient in the present context.)
 We also have
-\[F^3_{\mu\nu} = s_WF_{\mu\nu} + c_W Z_{\mu\nu} -ig_2(W_{\mu}^+ W_{\nu}^- - W_{\nu}^+ W_{\mu}^-)\]
-\[B_{\mu\nu} = c_WF_{\mu\nu} - s_W Z_{\mu\nu}\]
+\[F^3_{\mu\nu} = s_{\mathrm{W}}F_{\mu\nu} + c_{\mathrm{W}} Z_{\mu\nu} -ig_2(W_{\mu}^+ W_{\nu}^- - W_{\nu}^+ W_{\mu}^-)\]
+\[B_{\mu\nu} = c_{\mathrm{W}}F_{\mu\nu} - s_{\mathrm{W}} Z_{\mu\nu}\]
 where $F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}$ is the usual electromagnetic field strength, and
 \[Z_{\mu\nu} \equiv \partial_{\mu}Z_{\nu} - \partial_{\nu}Z_{\mu}\]
 is the abelian field strength associated with the $Z_{\mu}$ field.
 \\ \\
-Now we can assemble all of this into the complete Lagrangian for the electroweak gauge fields and the Higgs boson in unitary gauge. We will express $g_2$ in terms of $e$ and $\theta_W$, and $\lambda$ in terms of $m_H$ and
+Now we can assemble all of this into the complete Lagrangian for the electroweak gauge fields and the Higgs boson in unitary gauge. We will express $g_2$ in terms of $e$ and $\theta_{\mathrm{W}}$, and $\lambda$ in terms of $m_{\mathrm{H}}$ and
 $v$. We ultimately get
 \begin{eqnarray}
 \mathcal{L} = &-& \frac{1}{4} F_{\mu\nu}F^{\mu\nu} - \frac{1}{4} Z_{\mu\nu}Z^{\mu\nu} - D^{\dagger\mu}W^{-\nu}D_{\mu}W^{+}_{\nu} + D^{\dagger\mu}W^{-\nu}D_{\nu}W^{+}_{\mu} \nonumber \\
-&+& ie(F^{\mu\nu} + \cot\theta_W Z^{\mu\nu})W_{\mu}^+ W_{\nu}^- \nonumber \\
-&-& \frac{1}{2} \frac{e^2}{\sin^2\theta_W} (W^{+\mu}W_{\mu}^{-}W^{+\nu}W_{\nu}^{-} -W^{+\mu}W_{\mu}^{+}W^{-\nu}W_{\nu}^{-} ) \nonumber \\
-&-& (M_W^2 W^{+\mu} W^{-}_{\mu} + \frac{1}{2}M_Z^2 Z^{\mu}Z_{\mu})(1 + \frac{H}{v})^2 \nonumber \\
-&-& \frac{1}{2}\partial_{\mu}H \partial^{\mu}H  - \frac{1}{2}m_H^2 H^2  - \frac{1}{2}m_H^2 v^{-1} H^3 -  \frac{1}{8}m_H^2 v^{-2}H^4 \nonumber
+&+& ie(F^{\mu\nu} + \cot\theta_{\mathrm{W}} Z^{\mu\nu})W_{\mu}^+ W_{\nu}^- \nonumber \\
+&-& \frac{1}{2} \frac{e^2}{\sin^2\theta_{\mathrm{W}}} (W^{+\mu}W_{\mu}^{-}W^{+\nu}W_{\nu}^{-} -W^{+\mu}W_{\mu}^{+}W^{-\nu}W_{\nu}^{-} ) \nonumber \\
+&-& (M_{\mathrm{W}}^2 W^{+\mu} W^{-}_{\mu} + \frac{1}{2}M_{\mathrm{Z}}^2 Z^{\mu}Z_{\mu})(1 + \frac{H}{v})^2 \nonumber \\
+&-& \frac{1}{2}\partial_{\mu}H \partial^{\mu}H  - \frac{1}{2}m_{\mathrm{H}}^2 H^2  - \frac{1}{2}m_{\mathrm{H}}^2 v^{-1} H^3 -  \frac{1}{8}m_{\mathrm{H}}^2 v^{-2}H^4 \nonumber
 \end{eqnarray}
 where
-\[D_{\mu} = \partial_{\mu} -ie(A_{\mu} + \cot\theta_WZ_{\mu})\]
+\[D_{\mu} = \partial_{\mu} -ie(A_{\mu} + \cot\theta_{\mathrm{W}}Z_{\mu})\]
 
 \subsection{Lepton sector}
 Leptons are spin-one-half particles that are singlets of the color group. There are six different flavours of lepton. The six flavours are naturally grouped into three families or generations: $e$ and $\nu_e$, $\mu$ and $\nu_{\mu}$, $\tau$ and $\nu_{\tau}$.
@@ -740,67 +741,67 @@ Here the bar over the $e$ in the field $\bar{e}$ is part of the name of the fiel
 \[(D_{\mu}l)_i = \partial_{\mu}l_i - ig_2A^a_{\mu}(T^a)_{i}^{\phantom{j}j}l_j - ig_1(-\frac{1}{2})B_{\mu}l_i\]
 \[D_{\mu}\bar{e} = \partial_{\mu}\bar{e} - ig_1(+1)B_{\mu}\bar{e}\]
 and their kinetic terms are
-\[\mathcal{L}_{kin} = il^{\dagger i} \overline{\sigma}^{\mu}(D_{\mu}l)_i + i\bar{e}^{\dagger}\overline{\sigma}^{\mu}D_{\mu}\bar{e}\]
-We cannot write down a mass term involving $l$ and/or $\bar{e}$ because there is no gauge-group singlet contained in any of the products
+\[\mathcal{L}_{\mathrm{kin}} = il^{\dagger i} \overline{\sigma}^{\mu}(D_{\mu}l)_i + i\bar{e}^{\dagger}\overline{\sigma}^{\mu}D_{\mu}\bar{e}\]
+We cannot write down a mass term involving $l$ and(or) $\bar{e}$ because there is no gauge-group singlet contained in any of the products
 \[(2,-\frac{1}{2}) \otimes (2,-\frac{1}{2}) \quad (2,-\frac{1}{2}) \otimes (1, +1) \quad (1, +1) \otimes (1, +1)\]
 However, we are able to write down a Yukawa coupling of the form
-\[\mathcal{L}_{Yuk} = -y\epsilon^{ij}\phi_i l_j \bar{e} + \mathrm{h.c.}\]
+\[\mathcal{L}_{\mathrm{Yuk}} \equiv -y\epsilon^{ij}\phi_i l_j \bar{e} + \mathrm{h.c.}\]
 where $\phi$ is the Higgs field in the $(2,-\frac{1}{2})$ representation, and $y$ is the Yukawa coupling constant. A gauge-invariant Yukawa coupling is possible because there is a singlet on the right-hand side of
 \[(2,-\frac{1}{2}) \otimes (2,-\frac{1}{2}) \otimes (1,+1) = (1,0) \oplus (3,0)\]
 In unitary gauge, we replace $\phi_1$ with $\frac{1}{\sqrt{2}}(v+H)$, where $H$ is the real scalar field representing the physical Higgs boson, and $\phi_2$ with zero. The Yukawa term becomes
-\[\mathcal{L}_{Yuk} = -\frac{1}{\sqrt{2}}y(v+H)(l_2\bar{e} + \mathrm{h.c.})\]
+\[\mathcal{L}_{\mathrm{Yuk}} = -\frac{1}{\sqrt{2}}y(v+H)(l_2\bar{e} + \mathrm{h.c.})\]
 It is now convenient to assign new names to the $SU(2)$ components of $l$,
 \[l = \begin{pmatrix}
 \nu \\ e
 \end{pmatrix} \]
 So, we have
-\[\mathcal{L}_{Yuk} = -\frac{1}{\sqrt{2}}y(v+H)\overline{\mathcal{E}}\mathcal{E}\]
+\[\mathcal{L}_{\mathrm{Yuk}} = -\frac{1}{\sqrt{2}}y(v+H)\overline{\mathcal{E}}\mathcal{E}\]
 where we have defined a Dirac field for the electron
 \[\mathcal{E} \equiv \begin{pmatrix}
 e \\ \bar{e}^{\dagger}
 \end{pmatrix} \]
-We see that the electron has acquired a mass $m_e = \frac{yv}{\sqrt{2}}$, while neutrino has remained massless.
+We see that the electron has acquired a mass $m_e \equiv \frac{yv}{\sqrt{2}}$, while neutrino has remained massless.
 We can describe the neutrino with a Majorana field
 \[\mathcal{N} \equiv \begin{pmatrix}
 \nu \\ \nu^{\dagger}
 \end{pmatrix}\]
 However, it is often more convenient to work with
-\[\mathcal{N}_L \equiv P_L \mathcal{N} = \begin{pmatrix}
+\[\mathcal{N}_{\mathrm{L}} \equiv P_{\mathrm{L}} \mathcal{N} = \begin{pmatrix}
 \nu \\ 0
 \end{pmatrix}\]
-We can think of $\mathcal{N}_L$ as a Dirac field; for example, the neutrino kinetic term can be written as $i\overline{\mathcal{N}_L} \slashed{\partial} \mathcal{N}_L$.
+We can think of $\mathcal{N}_{\mathrm{L}}$ as a Dirac field; for example, the neutrino kinetic term can be written as $i\overline{\mathcal{N}_{\mathrm{L}}} \slashed{\partial} \mathcal{N}_{\mathrm{L}}$.
 \\ \\
 Now we express the covariant derivatives in terms of the $W_{\mu}^{\pm}$ , $Z_{\mu}$ , and $A_{\mu}$ fields. We have
 \[g_2 A^1_{\mu}T^1 + g_2 A^2_{\mu}T^2 = \frac{g_2}{\sqrt{2}} \begin{pmatrix}
 0 & W_{\mu}^+ \\ W^{-}_{\mu} & 0
 \end{pmatrix} \]
 and
-\[g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y = e(T^3+Y)A_{\mu} + e(\cot\theta_W T^3 - \tan\theta_W Y)Z_{\mu}\]
-Since we identify $A_{\mu}$ as the electromagnetic field and e as the electromagnetic coupling constant (with the convention that $e$ is positive), we identify
+\[g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y = e(T^3+Y)A_{\mu} + e(\cot\theta_{\mathrm{W}} T^3 - \tan\theta_{\mathrm{W}} Y)Z_{\mu}\]
+Since we identify $A_{\mu}$ as the electromagnetic field and $e$ as the electromagnetic coupling constant (with the convention that $e$ is positive), we identify
 \[Q = T^3 + Y\]
 as the generator of electric charge. Then we have
 \[Q\nu = 0 \quad Qe = -e \quad Q\bar{e} = +\bar{e}\]
 It is convenient to replace $Y$ with $Q - T^3$. We find
-\[g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y = eQA_{\mu} + \frac{e}{s_W c_W}( T^3 -  s_W^2Q)Z_{\mu}\]
+\[g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y = eQA_{\mu} + \frac{e}{s_{\mathrm{W}} c_{\mathrm{W}}}( T^3 -  s_{\mathrm{W}}^2Q)Z_{\mu}\]
 In terms of the four-component fields, we have
-\[(g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y) \mathcal{E} = \left[-eA_{\mu} + \frac{e}{s_W c_W}( -\frac{1}{2}P_L +  s_W^2)Z_{\mu} \right] \mathcal{E}\]
-\[(g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y) \mathcal{N}_L = \frac{e}{s_W c_W} (+\frac{1}{2}) Z_{\mu}\mathcal{N}_L \]
+\[(g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y) \mathcal{E} = \left[-eA_{\mu} + \frac{e}{s_{\mathrm{W}} c_{\mathrm{W}}}( -\frac{1}{2}P_{\mathrm{L}} +  s_{\mathrm{W}}^2)Z_{\mu} \right] \mathcal{E}\]
+\[(g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y) \mathcal{N}_{\mathrm{L}} = \frac{e}{s_{\mathrm{W}} c_{\mathrm{W}}} (+\frac{1}{2}) Z_{\mu}\mathcal{N}_{\mathrm{L}} \]
 The couplings of the gauge fields to the leptons can be written as
-\[\mathcal{L}_{int} = \frac{1}{\sqrt{2}}g_2W_{\mu}^{+} J^{-\mu} + \frac{1}{\sqrt{2}}g_2W_{\mu}^{-} J^{+\mu} +  \frac{e}{s_W c_W} Z_{\mu}J_Z^{\mu} + eA_{\mu}J^{\mu}_{EM}\] 
+\[\mathcal{L}_{\mathrm{int}} = \frac{1}{\sqrt{2}}g_2W_{\mu}^{+} J^{-\mu} + \frac{1}{\sqrt{2}}g_2W_{\mu}^{-} J^{+\mu} +  \frac{e}{s_{\mathrm{W}} c_{\mathrm{W}}} Z_{\mu}J_{\mathrm{Z}}^{\mu} + eA_{\mu}J^{\mu}_{\mathrm{EM}}\] 
 where
 \begin{eqnarray}
-J^{+\mu} &\equiv & \overline{\mathcal{E}}_L \gamma^{\mu} \mathcal{N}_L \nonumber \\
-J^{-\mu} &\equiv & \overline{\mathcal{N}}_L \gamma^{\mu} \mathcal{E}_L \nonumber \\
-J_Z^{\mu} &\equiv & J_3^{\mu} - s_W^2 J^{\mu}_{EM} \nonumber \\
-J_3^{\mu} &\equiv & \frac{1}{2}\overline{\mathcal{N}}_L \gamma^{\mu} \mathcal{N}_L - \frac{1}{2}\overline{\mathcal{E}}_L \gamma^{\mu} \mathcal{E}_L \nonumber \\
-J^{\mu}_{EM} &\equiv &  -\overline{\mathcal{E}} \gamma^{\mu} \mathcal{E}_L \nonumber
+J^{+\mu} &\equiv & \overline{\mathcal{E}}_{\mathrm{L}} \gamma^{\mu} \mathcal{N}_{\mathrm{L}} \nonumber \\
+J^{-\mu} &\equiv & \overline{\mathcal{N}}_{\mathrm{L}} \gamma^{\mu} \mathcal{E}_{\mathrm{L}} \nonumber \\
+J_{\mathrm{Z}}^{\mu} &\equiv & J_3^{\mu} - s_{\mathrm{W}}^2 J^{\mu}_{\mathrm{EM}} \nonumber \\
+J_3^{\mu} &\equiv & \frac{1}{2}\overline{\mathcal{N}}_{\mathrm{L}} \gamma^{\mu} \mathcal{N}_{\mathrm{L}} - \frac{1}{2}\overline{\mathcal{E}}_{\mathrm{L}} \gamma^{\mu} \mathcal{E}_{\mathrm{L}} \nonumber \\
+J^{\mu}_{\mathrm{EM}} &\equiv &  -\overline{\mathcal{E}} \gamma^{\mu} \mathcal{E}_{\mathrm{L}} \nonumber
 \end{eqnarray}
 \\ \\
 Having worked out the interactions of a single lepton generation, we now examine what happens when there is more than one of them. 
 Let us consider the fields $l_{iI}$ and $\bar{e}_{I}$, where $I=1,2,3$ is a generation index. The kinetic term for all these fields is
-\[\mathcal{L}_{kin} = il^{\dagger i}_I \overline{\sigma}^{\mu}(D_{\mu})_{i}^{\phantom{i}j} l_{jI} + i\bar{e}_I^{\dagger}\overline{\sigma}^{\mu}D_{\mu}\bar{e}_I\]
+\[\mathcal{L}_{\mathrm{kin}} = il^{\dagger i}_I \overline{\sigma}^{\mu}(D_{\mu})_{i}^{\phantom{i}j} l_{jI} + i\bar{e}_I^{\dagger}\overline{\sigma}^{\mu}D_{\mu}\bar{e}_I\]
 where the repeated generation index is summed. The most general Yukawa term we can write down now reads
-\[\mathcal{L}_{Yuk} = -\epsilon^{ij}\phi_i l_{jI}y_{IJ} \bar{e}_{J} + \mathrm{h.c.}\]
+\[\mathcal{L}_{\mathrm{Yuk}} = -\epsilon^{ij}\phi_i l_{jI}y_{IJ} \bar{e}_{J} + \mathrm{h.c.}\]
 where $y_{IJ}$ is a complex $3 \times 3$ matrix, and the generation indices are summed.
 We can make unitary transformations in generation space on the fields: $l_I \to L_{IJ} l_J$ and $\bar{e}_I \to \overline{E}_{IJ}\bar{e}_J$ , where $L$ and $\overline{E}$ are independent unitary matrices.
 The kinetic terms are unchanged, and the Yukawa matrix $y$ is replaced with $L^T y \overline{E} $. We can choose $L$ and $\overline{E}$ so that $L^T y \overline{E}$ is diagonal with positive real entries $y_I$. The charged leptons then have masses $m_{eI} = \frac{y_Iv}{\sqrt{2}}$, and the neutrinos remain massless. In the currents, we simply add a generation index $I$ to each field, and sum over it.
@@ -821,20 +822,20 @@ The covariant derivatives of these fields are
 \nonumber
 \end{eqnarray}
 We rely on context to distinguish the $SU(3)$ gauge fields from the $SU(2)$ gauge fields. The kinetic terms for $q$, $\bar{u}$, and $\bar{d}$ are
-\[\mathcal{L}_{kin} = iq^{\dagger \alpha i} \overline{\sigma}^{\mu} (D_{\mu}q)_{\alpha i} + i\bar{u}^{\dagger}_{\alpha}\overline{\sigma}^{\mu}(D_{\mu}\bar{u})^{\alpha} + i\bar{d}^{\dagger}_{\alpha}\overline{\sigma}^{\mu}(D_{\mu}\bar{d})^{\alpha}\]
+\[\mathcal{L}_{\mathrm{kin}} = iq^{\dagger \alpha i} \overline{\sigma}^{\mu} (D_{\mu}q)_{\alpha i} + i\bar{u}^{\dagger}_{\alpha}\overline{\sigma}^{\mu}(D_{\mu}\bar{u})^{\alpha} + i\bar{d}^{\dagger}_{\alpha}\overline{\sigma}^{\mu}(D_{\mu}\bar{d})^{\alpha}\]
 We cannot write down a mass term involving $q$, $\bar{u}$, and/or $\bar{d}$ because there is no gauge-group singlet contained in any of the products of their representations. But we are able to write down Yukawa couplings of the form
-\[\mathcal{L}_{Yuk} = -y'\epsilon^{ij}\phi_i q_{\alpha j} \bar{d}^{\alpha} - y" \phi^{\dagger i}q_{\alpha i} \bar{u}^{\alpha} + \mathrm{h.c.}\]
-where $\phi$ is the Higgs field in the $(1,2,-\frac{1}{2})$ representation, and $y'$ and $y"$ are the Yukawa coupling constants. These gauge invariant Yukawa couplings are possible because there are singlets on the right-hand sides of
+\[\mathcal{L}_{\mathrm{Yuk}} = -y'\epsilon^{ij}\phi_i q_{\alpha j} \bar{d}^{\alpha} - y'' \phi^{\dagger i}q_{\alpha i} \bar{u}^{\alpha} + \mathrm{h.c.}\]
+where $\phi$ is the Higgs field in the $(1,2,-\frac{1}{2})$ representation, and $y'$ and $y''$ are the Yukawa coupling constants. These gauge invariant Yukawa couplings are possible because there are singlets on the right-hand sides of
 \[(1,2,-\frac{1}{2}) \otimes (3, 2, +\frac{1}{6}) \otimes (\bar{3}, 1, +\frac{1}{3}) = (1,1,0) \oplus\]
 \[(1,2, \frac{1}{2}) \otimes (3, 2, +\frac{1}{6}) \otimes (\bar{3}, 1, -\frac{2}{3}) = (1,1,0) \oplus\]
 In unitary gauge, we replace $\phi_1$ with $\frac{1}{\sqrt{2}}(v+H)$, where $H$ is the real scalar field representing the physical Higgs boson, and $\phi_2$ with zero. The Yukawa term becomes
-\[\mathcal{L}_{Yuk} = -\frac{1}{\sqrt{2}}y'(v+H)q_{\alpha 2}\bar{d}^{\alpha} - \frac{1}{\sqrt{2}}y''(v+H)q_{\alpha 1}\bar{u}^{\alpha} + \mathrm{h.c.}\]
+\[\mathcal{L}_{\mathrm{Yuk}} = -\frac{1}{\sqrt{2}}y'(v+H)q_{\alpha 2}\bar{d}^{\alpha} - \frac{1}{\sqrt{2}}y''(v+H)q_{\alpha 1}\bar{u}^{\alpha} + \mathrm{h.c.}\]
 It is now convenient to assign new names to the $SU(2)$ components of $q$,
 \[q = \begin{pmatrix}
-u \\ q
+u \\ d
 \end{pmatrix} \]
 Then we have
-\[\mathcal{L}_{Yuk} = -\frac{1}{\sqrt{2}}y'(v+H) \overline{\mathcal{D}}_{\alpha}\mathcal{D}_{\alpha} -\frac{1}{\sqrt{2}}y''(v+H) \overline{\mathcal{U}}_{\alpha}\mathcal{U}_{\alpha}\]
+\[\mathcal{L}_{\mathrm{Yuk}} = -\frac{1}{\sqrt{2}}y'(v+H) \overline{\mathcal{D}}_{\alpha}\mathcal{D}_{\alpha} -\frac{1}{\sqrt{2}}y''(v+H) \overline{\mathcal{U}}_{\alpha}\mathcal{U}_{\alpha}\]
 where we have defined Dirac fields for the down and up quarks
 \[\mathcal{D}_{\alpha} \equiv \begin{pmatrix}
 d_{\alpha} \\ \bar{d}^{\dagger}_{\alpha}
@@ -842,44 +843,44 @@ d_{\alpha} \\ \bar{d}^{\dagger}_{\alpha}
 u_{\alpha} \\ \bar{u}^{\dagger}_{\alpha}
 \end{pmatrix}\]
 We see  that the up and down quarks have acquired masses
-\[m_d = \frac{y'v}{\sqrt{2}} \quad m_u = \frac{y''v}{\sqrt{2}}\]
+\[m_d \equiv \frac{y'v}{\sqrt{2}} \quad m_u \equiv \frac{y''v}{\sqrt{2}}\]
 Now we express the covariant derivatives in terms of the $W_{\mu}^{\pm}$ , $Z_{\mu}$ , and $A_{\mu}$ fields. We have
 \[g_2 A^1_{\mu}T^1 + g_2 A^2_{\mu}T^2 = \frac{g_2}{\sqrt{2}} \begin{pmatrix}
 0 & W_{\mu}^+ \\ W^{-}_{\mu} & 0
 \end{pmatrix} \]
-\[g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y = e(T^3+Y)A_{\mu} + e(\cot\theta_W T^3 - \tan\theta_W Y)Z_{\mu}\]
+\[g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y = e(T^3+Y)A_{\mu} + e(\cot\theta_{\mathrm{W}} T^3 - \tan\theta_{\mathrm{W}} Y)Z_{\mu}\]
 and
 \[Q = T^3 + Y\]
 We see that
 \[Qu = +\frac{2}{3}u \quad Qd = -\frac{1}{3}d \quad Q\bar{u} = -\frac{2}{3}\bar{u} \quad Q\bar{d} = +\frac{1}{3}\bar{d}\]
 This is just the set of electric charge assignments that we expect for the up and down quarks. In terms of the four-component fields, we have
-\[(g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y) \mathcal{U} = \left[ + \frac{2}{3}eA_{\mu} + \frac{e}{s_W c_W}( \frac{1}{2}P_L -\frac{2}{3}  s_W^2)Z_{\mu} \right] \mathcal{U}\]
-\[(g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y) \mathcal{U} = \left[ - \frac{1}{3}eA_{\mu} + \frac{e}{s_W c_W}( -\frac{1}{2}P_L +\frac{1}{3}  s_W^2)Z_{\mu} \right] \mathcal{U}\]
-The coupings of the electroweak gauge fields to the quarks is
-\[\mathcal{L}_{int} = \frac{1}{\sqrt{2}}g_2W_{\mu}^{+} J^{-\mu} + \frac{1}{\sqrt{2}}g_2W_{\mu}^{-} J^{+\mu} +  \frac{e}{s_W c_W} Z_{\mu}J_Z^{\mu} + eA_{\mu}J^{\mu}_{EM}\] 
+\[(g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y) \mathcal{U} = \left[ + \frac{2}{3}eA_{\mu} + \frac{e}{s_{\mathrm{W}} c_{\mathrm{W}}}( \frac{1}{2}P_{\mathrm{L}} -\frac{2}{3}  s_{\mathrm{W}}^2)Z_{\mu} \right] \mathcal{U}\]
+\[(g_2A^3_{\mu}T^3 + g_1 B_{\mu} Y) \mathcal{U} = \left[ - \frac{1}{3}eA_{\mu} + \frac{e}{s_{\mathrm{W}} c_{\mathrm{W}}}( -\frac{1}{2}P_{\mathrm{L}} +\frac{1}{3}  s_{\mathrm{W}}^2)Z_{\mu} \right] \mathcal{U}\]
+The couplings of the electroweak gauge fields to the quarks is
+\[\mathcal{L}_{\mathrm{int}} = \frac{1}{\sqrt{2}}g_2W_{\mu}^{+} J^{-\mu} + \frac{1}{\sqrt{2}}g_2W_{\mu}^{-} J^{+\mu} +  \frac{e}{s_{\mathrm{W}} c_{\mathrm{W}}} Z_{\mu}J_{\mathrm{Z}}^{\mu} + eA_{\mu}J^{\mu}_{\mathrm{EM}}\] 
 where we have defined the currents
 \begin{eqnarray}
-J^{+\mu} &\equiv & \overline{\mathcal{D}}_L \gamma^{\mu} \mathcal{U}_L \nonumber \\
-J^{-\mu} &\equiv & \overline{\mathcal{U}}_L \gamma^{\mu} \mathcal{U}_L \nonumber \\
-J_Z^{\mu} &\equiv & J_3^{\mu} - s_W^2 J^{\mu}_{EM} \nonumber \\
-J_3^{\mu} &\equiv & \frac{1}{2}\overline{\mathcal{U}}_L \gamma^{\mu} \mathcal{U}_L - \frac{1}{2}\overline{\mathcal{D}}_L \gamma^{\mu} \mathcal{D}_L \nonumber \\
-J^{\mu}_{EM} &\equiv &  +\frac{2}{3}\overline{\mathcal{U}} \gamma^{\mu} \mathcal{U}_L - \frac{1}{3}\overline{\mathcal{D}} \gamma^{\mu} \mathcal{D}_L \nonumber
+J^{+\mu} &\equiv & \overline{\mathcal{D}}_{\mathrm{L}} \gamma^{\mu} \mathcal{U}_{\mathrm{L}} \nonumber \\
+J^{-\mu} &\equiv & \overline{\mathcal{U}}_{\mathrm{L}} \gamma^{\mu} \mathcal{D}_{\mathrm{L}} \nonumber \\
+J_{\mathrm{Z}}^{\mu} &\equiv & J_3^{\mu} - s_{\mathrm{W}}^2 J^{\mu}_{\mathrm{EM}} \nonumber \\
+J_3^{\mu} &\equiv & \frac{1}{2}\overline{\mathcal{U}}_{\mathrm{L}} \gamma^{\mu} \mathcal{U}_{\mathrm{L}} - \frac{1}{2}\overline{\mathcal{D}}_{\mathrm{L}} \gamma^{\mu} \mathcal{D}_{\mathrm{L}} \nonumber \\
+J^{\mu}_{\mathrm{EM}} &\equiv &  +\frac{2}{3}\overline{\mathcal{U}} \gamma^{\mu} \mathcal{U}_{\mathrm{L}} - \frac{1}{3}\overline{\mathcal{D}} \gamma^{\mu} \mathcal{D}_{\mathrm{L}} \nonumber
 \end{eqnarray}
 Having worked out the interactions of a single quark generation, we now examine what happens when there is more than one of them.
 Let us consider the fields $q_{\alpha iI}$, $\bar{u}_{I}$ and $\bar{d}_{I}$, where $I=1,2,3$ is a generation index. The kinetic term for all these fields is
-\[\mathcal{L}_{kin} = iq^{\dagger\alpha i I} \overline{\sigma}^{\mu}(D_{\mu})_{\alpha i}^{\phantom{\alpha i}\beta j} q_{\beta jI} + i\bar{u}_{\alpha I}^{\dagger}\overline{\sigma}^{\mu} (D_{\mu})^{\alpha}_{\phantom{\alpha}\beta}\bar{u}_I^{\beta} + i\bar{d}_{\alpha I}^{\dagger}\overline{\sigma}^{\mu} (D_{\mu})^{\alpha}_{\phantom{\alpha}\beta}\bar{d}_I^{\beta}\]
+\[\mathcal{L}_{\mathrm{kin}} = iq^{\dagger\alpha i I} \overline{\sigma}^{\mu}(D_{\mu})_{\alpha i}^{\phantom{\alpha i}\beta j} q_{\beta jI} + i\bar{u}_{\alpha I}^{\dagger}\overline{\sigma}^{\mu} (D_{\mu})^{\alpha}_{\phantom{\alpha}\beta}\bar{u}_I^{\beta} + i\bar{d}_{\alpha I}^{\dagger}\overline{\sigma}^{\mu} (D_{\mu})^{\alpha}_{\phantom{\alpha}\beta}\bar{d}_I^{\beta}\]
 where the repeated generation index is summed. The most general Yukawa term we can write down now reads
-\[\mathcal{L}_{Yuk} = -\epsilon^{ij}\phi_i q_{\alpha jI}y'_{IJ} \bar{d}^{\alpha}_{J} -\phi^{\dagger i} q_{\alpha jI}y''_{IJ} \bar{u}^{\alpha}_{J} + \mathrm{h.c.}\]
+\[\mathcal{L}_{\mathrm{Yuk}} = -\epsilon^{ij}\phi_i q_{\alpha jI}y'_{IJ} \bar{d}^{\alpha}_{J} -\phi^{\dagger i} q_{\alpha jI}y''_{IJ} \bar{u}^{\alpha}_{J} + \mathrm{h.c.}\]
 $y'$ and $y''$ are complex $3 \times 3$ matrices. In unitary gauge, this becomes
-\[\mathcal{L}_{Yuk} = -\frac{1}{\sqrt{2}}(v+H) d_{\alpha I}y'_{IJ} \bar{d}^{\alpha}_{J} -\frac{1}{\sqrt{2}}(v+H) u_{\alpha I}y''_{IJ} \bar{u}^{\alpha}_{J} + \mathrm{h.c.}\]
+\[\mathcal{L}_{\mathrm{Yuk}} = -\frac{1}{\sqrt{2}}(v+H) d_{\alpha I}y'_{IJ} \bar{d}^{\alpha}_{J} -\frac{1}{\sqrt{2}}(v+H) u_{\alpha I}y''_{IJ} \bar{u}^{\alpha}_{J} + \mathrm{h.c.}\]
 We can make unitary transformations in generation space on the fields: $d_I \to D_{IJ}d_J $, $\bar{d}_I \to \overline{D}_{IJ}\bar{d}_J$, $u_I \to U_{IJ}u_J $ and $\bar{u}_I \to \overline{U}_{IJ}\bar{u}_J$, where $U$, $\overline{U}$, $D$, $\overline{D}$ are independent unitary matrices. 
 The kinetic terms are unchanged (except for the couplings to the $W^{\pm}$, as we will discuss momentarily), and the Yukawa matrices $y'$ and $y''$ are replaced with $D^T y' \overline{D}$  and $U^T y'' \overline{U}$ . We can choose
 $U$, $\overline{U}$, $D$, $\overline{D}$ so that $D^T y' \overline{D}$  and $U^T y'' \overline{U}$ are diagonal with positive real entries $y'_I$ and $y"_I$. The down quarks $D_I$ then have masses $m_{dI} = \frac{y'_I v}{\sqrt{2}}$,
 and the up quarks $u_I$ have masses $m_{uI} = \frac{y''_I v}{\sqrt{2}}$. In the neutral currents, we simply add a generation index $I$ to each field, and sum over it. 
 The charged currents are more complicated, however; they become 
-\[J^{+\mu} = \overline{\mathcal{D}}_{LI} (V^{\dagger})_{IJ} \gamma^{\mu} \mathcal{U}_{LJ}\]
-\[J^{-\mu} = \overline{\mathcal{U}}_{LI} V_{IJ} \gamma^{\mu} \mathcal{D}_{LJ}\]
-where $V \equiv U^{\dagger} D$ is the Cabibbo–Kobayasi–Maskawa matrix (or CKM matrix for short).
+\[J^{+\mu} = \overline{\mathcal{D}}_{\mathrm{L}I} (V^{\dagger})_{IJ} \gamma^{\mu} \mathcal{U}_{\mathrm{L}J}\]
+\[J^{-\mu} = \overline{\mathcal{U}}_{\mathrm{L}I} V_{IJ} \gamma^{\mu} \mathcal{D}_{\mathrm{L}J}\]
+where $V \equiv U^{\dagger} D$ is the Cabibbo-Kobayasi-Maskawa matrix (or CKM matrix for short).
 \\
 A $3 \times 3$ unitary matrix has nine real parameters. However, we are still free to make the independent phase rotations $\mathcal{D}_I = e^{i\alpha_I} \mathcal{D}_I$ and $\mathcal{U}_I = e^{i\beta_I} \mathcal{U}_I$ , as
 these leave the kinetic and mass terms invariant. These phase changes allow us to make the first row and column of $V_{IJ}$ real, eliminating five of the nine parameters. The remaining four can be chosen as $\theta_1$ (the Cabibbo angle),$\theta_2$ ,$\theta_3$ , and $\delta$, where
@@ -889,5 +890,5 @@ c_1 & +s_1c_3 & +s_1s_3 \\
 -s_1s_2 & c_1s_2c_3 + c_2s_3e^{i\delta} & c_1s_2s_3- c_2c_3 e^{i\delta}
 \end{pmatrix} \]
 and $c_i = \cos\theta_i$ and $s_i = \sin\theta_i$. The measured values of these angles are $s_1=0.224$, $s_2 = 0.041$, $s_3 = 0.016$ , and $\delta = 40^{\circ}$. Note that the charged currents now have some terms with a phase factor $e^{i\delta}$, and some without. 
-Since the time-reversal operator T is antiunitary, the charged currents do not transform in a simple way under time reversal. This implies that the charged current terms in $\mathcal{L}_{int}$ are not time-reversal invariant; hence the electroweak interactions violate time-reversal symmetry.
+Since the time-reversal operator T is antiunitary, the charged currents do not transform in a simple way under time reversal. This implies that the charged current terms in $\mathcal{L}_{\mathrm{int}}$ are not time-reversal invariant; hence the electroweak interactions violate time-reversal symmetry.
 Since $CPT$ is always a good symmetry, time-reversal violation is equivalent to $CP$ violation; $\delta$ is therefore sometimes called the $CP$ violating phase.
