@@ -104,17 +104,17 @@ Recall the definition of cross section
 Here, the incident flux and time are measured in the frame of target particle.\\
 Suppose that we have two colliding beams; we denote by $n_1$ and $n_2$ the particle densities in them and by $\bm{v}_1$ and $\bm{v_2}$ the velocities of the particles. In the reference system in which particle 2 is at rest, we are dealing with the collision of the beam of particles 1 with a stationary target. Then according to the usual definition of the cross-section $\sigma$, the number of collisions occurring in volume $dV$ in time $dt$ is 
 \[dN = \sigma v_{rel} n_1 n_2 dV dt\]
-,where $v_{rel}$ is the velocity of particle 1 in the rest system of particle 2 (which is just the definition of the relative velocity of two particles in relativistic mechanics). \\
+,where $v_{\mathrm{rel}}$ is the velocity of particle 1 in the rest system of particle 2 (which is just the definition of the relative velocity of two particles in relativistic mechanics). \\
 The number $dN$ is by its very nature an invariant quantity. We would like to express it in a form which is applicable in any reference system: 
 \[dN = A n_1 n_2 dV dt\] 
-where $A$ is a number to be determined, for which we know that its value in the rest frame of one of the particles is $v_{rel} \sigma$. We shall always mean by $\sigma$ precisely the cross-section in the rest frame of one of the particles, i.e. by definition, an invariant quantity. From its definition, the relative velocity $v_{rel}$ is also invariant. The product dVdt is an invariant. Therefore the product $A n_1 n_2$ must also be an invariant. The law of transformation of the particle density n is
+where $A$ is a number to be determined, for which we know that its value in the rest frame of one of the particles is $v_{\mathrm{rel}} \sigma$. We shall always mean by $\sigma$ precisely the cross-section in the rest frame of one of the particles, i.e. by definition, an invariant quantity. From its definition, the relative velocity $v_{\mathrm{rel}}$ is also invariant. The product dVdt is an invariant. Therefore the product $A n_1 n_2$ must also be an invariant. The law of transformation of the particle density n is
 \[n = \frac{n_0}{\sqrt{1-v^2}} = n_0 E/m\]
 so we can construct $A$ in an arbitrary frame as
-\[A = -\sigma v_{rel} \frac{p_1^{\mu}p_{2\mu}}{E_1 E_2}\]
+\[A = -\sigma v_{\mathrm{rel}} \frac{p_1^{\mu}p_{2\mu}}{E_1 E_2}\]
 Note that
-\[-p_1^{\mu}p_{2\mu} = \frac{m_1}{\sqrt{1-v_{rel}^2}}m_2 = m_1 m_2 \frac{1-\bm{v}_1\cdot\bm{v}_2}{\sqrt{(1-\bm{v}_1^2)\cdot(1-\bm{v}_2^2)}}\]
-we can get the following expression for $v_{rel}$:
-\[v_{rel} = \frac{\sqrt{(\bm{v}_1-\bm{v}_2)^2-(\bm{v}_1\times\bm{v}_2)^2}}{1-\bm{v}_1\cdot\bm{v}_2}\]
+\[-p_1^{\mu}p_{2\mu} = \frac{m_1}{\sqrt{1-v_{\mathrm{rel}}^2}}m_2 = m_1 m_2 \frac{1-\bm{v}_1\cdot\bm{v}_2}{\sqrt{(1-\bm{v}_1^2)\cdot(1-\bm{v}_2^2)}}\]
+we can get the following expression for $v_{\mathrm{rel}}$:
+\[v_{\mathrm{rel}} = \frac{\sqrt{(\bm{v}_1-\bm{v}_2)^2-(\bm{v}_1\times\bm{v}_2)^2}}{1-\bm{v}_1\cdot\bm{v}_2}\]
 Finally, we have
 \[dN = \sigma \sqrt{(\bm{v}_1-\bm{v}_2)^2-(\bm{v}_1\times\bm{v}_2)^2} n_1 n_2 dV dt\]
 If the velocities $v_1$ and $v_2$ are collinear, then we have
@@ -339,8 +339,8 @@ we can demonstrate that
 The Lagrangian of the EM field $A^{\mu}$ when coupling with current is
 \[\mathcal{L} = -\frac{1}{4}F^{\mu\nu}F_{\mu\nu} + j^{\mu} A_{\mu}\]
 where
-\[F_{\mu\nu} \equiv \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu} \quad j^{\mu} \equiv \rho_{e0} u^{\mu}\]
-and $\rho_{e0}$ is the charge density measured in the frame of charge.
+\[F_{\mu\nu} \equiv \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu} \quad j^{\mu} \equiv \rho_{\mathrm{e}0} u^{\mu}\]
+and $\rho_{\mathrm{e}0}$ is the charge density measured in the frame of charge.
 The Euler-Lagrange equation of EM field is
 \[\partial_{\nu} F^{\mu\nu} = j^{\mu}\]
 The charge conservation equation then follows directly from field equations,
@@ -359,12 +359,12 @@ The Hamiltonian formulation of electrodynamics will be discussed in detail in th
 \noindent
 We now define the electric field and magnetic field as follows,
 \[E^i \equiv F^{0i} = -\dot{A}^i - \nabla^i A^0 \quad B^i \equiv \epsilon_{ijk} \nabla^j A^k\]
-We also define $\rho_e \equiv j^0$ and $J^i \equiv j^i$,so
+We also define $\rho_{\mathrm{e}} \equiv j^0$ and $J^i \equiv j^i$,so
 the field equations can then be written as so-called Maxwell equations:
 \begin{eqnarray}
 	\bm{\nabla} \times  \bm{B} &=& \frac{\partial \bm{E}}{\partial t} +  \bm{J} \nonumber \\
 	\bm{\nabla} \times \bm{E} &=& -\frac{\partial \bm{B}}{\partial t} \nonumber \\
-	\bm{\nabla} \cdot \bm{E} &=& \rho_e \nonumber \\
+	\bm{\nabla} \cdot \bm{E} &=& \rho_{\mathrm{e}} \nonumber \\
 	\bm{\nabla} \cdot \bm{B} &=& 0 \nonumber
 \end{eqnarray}
 The equations of motion of the charged particle can be written as so-called Lorentz force equations:
@@ -393,53 +393,53 @@ We also note that $F_{\mu\nu}F^{\mu\nu}$ and $\epsilon_{\mu\nu\rho\sigma}F^{\mu\
 
 \subsection{Energy-momentum tensor}
 For a free EM field, the energy-momentum tensor is
-\[T_f^{\mu \nu} \equiv -\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}A_{\rho})} \partial^{\nu} A_{\rho} + \eta^{\mu \nu} \mathcal{L} = \partial^{\nu}A^{\rho} F^{\mu}_{\phantom{\rho}\rho}-\frac{1}{4}\eta^{\mu\nu}F_{\rho\sigma}F^{\rho\sigma}\]
+\[T_{\mathrm{f}}^{\mu \nu} \equiv -\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}A_{\rho})} \partial^{\nu} A_{\rho} + \eta^{\mu \nu} \mathcal{L} = \partial^{\nu}A^{\rho} F^{\mu}_{\phantom{\rho}\rho}-\frac{1}{4}\eta^{\mu\nu}F_{\rho\sigma}F^{\rho\sigma}\]
 We note that the energy-momentum tensor defined above is not symmetric, so we define a modified energy-momentum tensor by adding a term $-\partial^{\rho}A^{\nu}F^{\mu}_{\phantom{\rho}\rho}$,i.e.
-\[T_e'^{\mu\nu} = F^{\nu\rho}F^{\mu}_{\phantom{\rho}\rho}-\frac{1}{4}\eta^{\mu\nu}F_{\rho\sigma}F^{\rho\sigma}\]
+\[T_{\mathrm{f}'}^{\mu\nu} = F^{\nu\rho}F^{\mu}_{\phantom{\rho}\rho}-\frac{1}{4}\eta^{\mu\nu}F_{\rho\sigma}F^{\rho\sigma}\]
 For free EM field, we have $\partial^{\rho}A^{\nu}F^{\mu}_{\phantom{\rho}\rho} = \partial^{\rho}\left(A^{\nu} F^{\mu}_{\phantom{\rho}\rho}\right)$.
 So,
-\[\partial_{\mu}T_f'^{\mu\nu} = 0 \quad P_f'^{\mu} = P_f^{\mu}\]
-From now on, we will use $T_f'$ as the energy-momentum tensor of EM field and omit the prime for simplicity.
+\[\partial_{\mu}T_{\mathrm{f}'}^{\mu\nu} = 0 \quad P_{\mathrm{f}'}^{\mu} = P_{\mathrm{f}}^{\mu}\]
+From now on, we will use $T_{\mathrm{f}'}$ as the energy-momentum tensor of EM field and omit the prime for simplicity.
 The momentum of the free EM field is
-\[P_f^{0} = \int dV \frac{1}{2}(\bm{E}^2+\bm{B}^2) \equiv \int dV w \quad P_f^{i} = \int dV \bm{E} \times \bm{B} \equiv \int dV \bm{S}\]
+\[P_{\mathrm{f}}^{0} = \int dV \frac{1}{2}(\bm{E}^2+\bm{B}^2) \equiv \int dV w \quad P_{\mathrm{f}}^{i} = \int dV \bm{E} \times \bm{B} \equiv \int dV \bm{S}\]
 \\ \\
 If there also exists charged particles in the system, i.e. the source of EM field, we must also include the energy-momentum tensor of the particles to get the right conservation equation. The energy-momentum tensor of particles is defined as
-\[T_p^{\mu\nu} \equiv \sum_a m_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2} u_a^\mu u_a^{\nu}\]
+\[T_{\mathrm{p}}^{\mu\nu} \equiv \sum_a m_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2} u_a^\mu u_a^{\nu}\]
 From this definition, we can get
-\[P_p^0 = \sum_a \frac{m_a}{\sqrt{1-\bm{v}_a^2}} \quad \bm{P}_p =  \sum_a \frac{m_a}{\sqrt{1-\bm{v}_a^2}} \bm{v}_a\]
+\[P_{\mathrm{p}}^0 = \sum_a \frac{m_a}{\sqrt{1-\bm{v}_a^2}} \quad \bm{P}_{\mathrm{p}} =  \sum_a \frac{m_a}{\sqrt{1-\bm{v}_a^2}} \bm{v}_a\]
 Recall that
-\[j^{\mu}_e = \sum_a e_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2} u_a^\mu \]
+\[j^{\mu}_{\mathrm{e}} = \sum_a e_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2} u_a^\mu \]
 We can also define the mass current as
-\[j^{\mu}_m \equiv \sum_a m_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2} u_a^\mu \]
+\[j^{\mu}_{\mathrm{m}} \equiv \sum_a m_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2} u_a^\mu \]
 If there is no creation and annihilation of charged particles, and the mass of the particles is constant during the motion, we would have mass conservation equation
-\[\partial_{\mu} j^{\mu}_{ma} = 0\]
+\[\partial_{\mu} j^{\mu}_{\mathrm{m}a} = 0\]
 Recall the Lorentz force equation $m a_{\mu} = eF_{\mu\nu}u^{\nu}$, it can be rewritten as
-\[\rho_{m0a} \frac{du_{\mu}}{d\tau} = F_{\mu\nu}j_{ea}^{\nu}\]
-where $\rho_{m0a} \equiv m_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2}$ is the mass density measured in the rest frame of the particle.
+\[\rho_{\mathrm{m}0a} \frac{du_{\mu}}{d\tau} = F_{\mu\nu}j_{\mathrm{e}a}^{\nu}\]
+where $\rho_{\mathrm{m}0a} \equiv m_a \delta(\bm{r}-\bm{r}_a) \sqrt{1-\bm{v}_a^2}$ is the mass density measured in the rest frame of the particle.
 \\
 On the one hand, we have
-\[\partial_{\mu} T_p^{\mu\nu} = \sum_a \rho_{m0a}u^{\mu} \frac{\partial u_a^{\nu}}{\partial x^{\mu}} = \sum_a \rho_{m0a} \frac{d u_a^{\nu}}{d \tau} = F^{\nu}_{\phantom{\nu}\mu}j_e^{\mu}\]
+\[\partial_{\mu} T_{\mathrm{p}}^{\mu\nu} = \sum_a \rho_{\mathrm{m}0a}u^{\mu} \frac{\partial u_a^{\nu}}{\partial x^{\mu}} = \sum_a \rho_{\mathrm{m}0a} \frac{d u_a^{\nu}}{d \tau} = F^{\nu}_{\phantom{\nu}\mu}j_{\mathrm{e}}^{\mu}\]
 On the other hand, we can derive that
-\[\partial_{\mu} T_f^{\mu\nu} = - F^{\nu}_{\phantom{\nu}\mu}j_e^{\mu}\]
+\[\partial_{\mu} T_{\mathrm{f}}^{\mu\nu} = - F^{\nu}_{\phantom{\nu}\mu}j_{\mathrm{e}}^{\mu}\]
 by implementing Maxwell equations.
 \\
 Define
-\[T^{\mu \nu} \equiv T_f^{\mu\nu} + T_p^{\mu\nu}\]
+\[T^{\mu \nu} \equiv T_{\mathrm{f}}^{\mu\nu} + T_{\mathrm{p}}^{\mu\nu}\]
 We have
 \[\partial_{\mu} T^{\mu\nu} = 0\]
 We define the Maxwell stress tensor as
-\[f^{ij} \equiv -T_f^{ij} = E^{i}E^{j} + B^{i}B^{j} - w\delta^{ij}\]
+\[f^{ij} \equiv -T_{\mathrm{f}}^{ij} = E^{i}E^{j} + B^{i}B^{j} - w\delta^{ij}\]
 Then, we can write down the conservation laws of energy and momentum as
-\[\frac{d}{dt}\left(P_p^0 + \int w dV \right) = -\oint \bm{S}\cdot d\bm{\sigma}\]
-\[\frac{d}{dt}\left(\bm{P}_p + \int \bm{S} dV \right) = \oint \bm{f}\cdot d\bm{\sigma}\]
+\[\frac{d}{dt}\left(P_{\mathrm{p}}^0 + \int w dV \right) = -\oint \bm{S}\cdot d\bm{\sigma}\]
+\[\frac{d}{dt}\left(\bm{P}_{\mathrm{p}} + \int \bm{S} dV \right) = \oint \bm{f}\cdot d\bm{\sigma}\]
 We assume there is no particle cross the boundary.
 \\
 At last, because $T^{\mu\nu} = T^{\nu\mu}$, we have
 \[\partial_{\mu}(x^{\nu}T^{\mu\rho}-x^{\rho}T^{\mu\nu}) = 0\]
 It is easy to write down the conservation law of angular momentum as
-\[\frac{d}{dt}\left(\bm{L}_p + \int \bm{r} \times \bm{S} dV \right) = \oint \bm{r} \times \bm{f}\cdot d\bm{\sigma}\]
+\[\frac{d}{dt}\left(\bm{L}_{\mathrm{p}} + \int \bm{r} \times \bm{S} dV \right) = \oint \bm{r} \times \bm{f}\cdot d\bm{\sigma}\]
 where
-\[\bm{L}_p \equiv \sum_a \frac{m_a}{\sqrt{1-\bm{v}_a^2}} \bm{r}_a  \times \bm{v}_a \]
+\[\bm{L}_{\mathrm{p}} \equiv \sum_a \frac{m_a}{\sqrt{1-\bm{v}_a^2}} \bm{r}_a  \times \bm{v}_a \]
 
 \subsection{Charged particles in a given EM field}
 Now we suppose the EM field is given, i.e. we will neglect the EM field generated by the test charged particles. Then we have
@@ -486,17 +486,17 @@ where $\omega = \frac{eB}{m}$ , $a,v_{z0}$ is determined by initial condition. A
 \section{Constant electromagnetic field}
 \subsection{Coulomb' law}
 For constant electric field, Maxwell equations take the form 
-\[\bm{\nabla} \cdot \bm{E} = \rho_e \quad \bm{\nabla} \times \bm{E} = 0\]
+\[\bm{\nabla} \cdot \bm{E} = \rho_{\mathrm{e}} \quad \bm{\nabla} \times \bm{E} = 0\]
 So, we have
-\[\bm{E} = -\bm{\nabla} \phi \quad \nabla^2 \phi = -\rho_e \]
+\[\bm{E} = -\bm{\nabla} \phi \quad \nabla^2 \phi = -\rho_{\mathrm{e}} \]
 The solution is
-\[\phi(\bm{r}) = \int  \frac{\rho_e(\bm{r}')}{4\pi|\bm{r}-\bm{r}'|} dV'\]
-If $\rho_e(\bm{r}') = Q \delta(\bm{r}')$, we have
+\[\phi(\bm{r}) = \int  \frac{\rho_{\mathrm{e}}(\bm{r}')}{4\pi|\bm{r}-\bm{r}'|} dV'\]
+If $\rho_{\mathrm{e}}(\bm{r}') = Q \delta(\bm{r}')$, we have
 \[\phi(\bm{r}) =  \frac{Q}{4\pi|\bm{r}|} \quad E(\bm{r}) = \frac{Q\bm{r}}{4\pi|\bm{r}|^3}\]
 For a system of static charged particles, the total energy is
 \[U = \frac{1}{2}\int E^2 dV = \frac{1}{2} \int \rho \phi dV = \frac{1}{2} \sum e_a \phi_a + \frac{1}{2}\sum e_a \Phi_a\]
-Here, $\phi_a$ is the electric potential at the point where $e_a$ is located, produced by $e_a$ itself, while  $\Phi_a$ is the potential produced by other charges. It is obvious that $U_{self} = \frac{1}{2} e_a \phi_a$ is infinite, indicating that classical electrodynamics is no more valid in small distance. This problem will be solved in quantum electrodynamics: the mass of charged particle we measured is already renormalized to include the electromagnetic self energy. So, actually, we have
-\[U = \frac{1}{2}\int E^2 dV - U_{self} = \frac{1}{2}\sum_{a \ne b} \frac{e_a e_b}{4\pi R_{ab}}\]
+Here, $\phi_a$ is the electric potential at the point where $e_a$ is located, produced by $e_a$ itself, while  $\Phi_a$ is the potential produced by other charges. It is obvious that $U_{\mathrm{self}} = \frac{1}{2} e_a \phi_a$ is infinite, indicating that classical electrodynamics is no more valid in small distance. This problem will be solved in quantum electrodynamics: the mass of charged particle we measured is already renormalized to include the electromagnetic self energy. So, actually, we have
+\[U = \frac{1}{2}\int E^2 dV - U_{\mathrm{self}} = \frac{1}{2}\sum_{a \ne b} \frac{e_a e_b}{4\pi R_{ab}}\]
 If the charged particle is moving with a constant velocity, we can derive the electric field it produced by Lorentz transformation, the final result is that
 \[\bm{E} = \frac{e\bm{R}}{4\pi R^3} \frac{1-V^2}{(1-V^2\sin^2\theta)^{3/2}} \quad \bm{B} = \bm{V} \times \bm{E}\]
 where $\bm{R}$ is the vector point from the particle to the point we measure the electric field, and $\theta$ is the angle between $\bm{V}$ and $\bm{R}$.If $V \sim 1$, the electric field will be concentrated in the direction perpendicular to the $\bm{V}$. If $\bm{V} \ll 1$, we have
@@ -571,7 +571,7 @@ This equation states that the vector $\overline{\bm{M}}$ rotates with angular ve
 Electromagnetic fields occurring in vacuum in the absence of  charges are called electromagnetic waves. We choose the Coulomb's Gauge, i.e.
 \[ \phi = 0 \quad \bm{\nabla} \cdot \bm{A} = 0\]
 So,
-\[\bm{E} = -\frac{\partial bm{A}}{\partial t} \quad \bm{B} = \bm{\nabla} \times \bm{A}\]
+\[\bm{E} = -\frac{\partial \bm{A}}{\partial t} \quad \bm{B} = \bm{\nabla} \times \bm{A}\]
 From Maxwell equations we can derive that
 \[\nabla^2 \bm{A} - \frac{\partial^2 \bm{A}}{\partial t^2} = 0\]
 This is the equation which determines the potentials of electromagnetic waves. It is called the d'Alembert equation, or the wave equation. We can verify that the electric and magnetic fields $\bm{E}$ and $\bm{H}$ satisfy the same wave equation.
@@ -650,7 +650,7 @@ where
 For a totally polarized light with polarization state$ | E\rangle = (\cos \frac{\theta}{2} e^{-i\frac{\phi}{2}} , \sin \frac{\theta}{2} e^{i\frac{\phi}{2}})$, the polarization tensor $\rho = |E\rangle \langle E|$. We can verify that
 \[P = 1 \quad \bm{n} = (\sin\theta \cos\phi, \sin\theta \sin\phi, \cos \theta)\]
 So, for an arbitrary light,
-\[\rho = (1-P)\rho_{n} + P \rho_{p} \quad \rho_n = \frac{1}{2}I \quad \rho_p = \frac{1}{2}(I + \bm{n} \cdot \bm{\sigma})\]
+\[\rho = (1-P)\rho_{\mathrm{n}} + P \rho_{\mathrm{p}} \quad \rho_{\mathrm{n}} = \frac{1}{2}I \quad \rho_{\mathrm{p}} = \frac{1}{2}(I + \bm{n} \cdot \bm{\sigma})\]
 Thus, we call $P$ the Polarization degree. \\ \\
 Suppose there is a polarizing filter,  which allow the light with polarization state
 \[| D \rangle = (\cos \frac{\theta}{2} e^{-i\frac{\phi}{2}} , \sin \frac{\theta}{2} e^{i\frac{\phi}{2}})\]
@@ -836,11 +836,11 @@ The fields of a moving point charge are
 where,$\bm{u}^* = \frac{\bm{R}^*}{R^*}-v^*$.
 It is only those terms that go as $\frac{1}{R}$ that contribute to radiation energy. The other term falls off as $\frac{1}{R^2}$ so contributes nothing to the integral of the Poynting vector over a large sphere. This term is called the velocity field and, although it doesn't contribute to the energy radiated away by the EM field, it does store energy, so some of the energy imparted by the force that gets the charge moving must be siphoned off to create these velocity fields. These velocity fields are curious beasts, however, for they contain energy that is never actually lost to the charge. If a charge is accelerated to some velocity, the velocity fields are constructed around the moving charge, but if the charge is then decelerated to rest again, the velocity fields disappear without having radiated away any energy. It would seem to be reabsorbed by the charge as it slows down. \\
 If we look at a charged particle that starts off in some state, then goes through an acceleration followed by a deceleration, and finally ends up in the same state that it started from, what we can say is that the velocity fields are the same at the end as they were at the start, so over this period, the only energy that is truly lost from the particle is the energy that is radiated away. In non-relativistic case,
-\[\int_{t_{1}}^{t_{2}}\bm{F}_{rad}\cdot\bm{v}dt = -\int_{t_{1}}^{t_{2}}Pdt = -\frac{e^{2}}{6\pi }\int_{t_{1}}^{t_{2}}a^{2}dt \]
+\[\int_{t_{1}}^{t_{2}}\bm{F}_{\mathrm{rad}}\cdot\bm{v}dt = -\int_{t_{1}}^{t_{2}}Pdt = -\frac{e^{2}}{6\pi }\int_{t_{1}}^{t_{2}}a^{2}dt \]
 Since
 \[\int_{t_{1}}^{t_{2}}a^{2}dt = \int_{t_{1}}^{t_{2}}\dot{\bm{v}}\cdot\dot{\bm{v}}dt = \bm{v}\cdot\dot{\bm{v}}|_{t_{1}}^{t_{2}}-\int_{t_{1}}^{t_{2}}\bm{v} \cdot\ddot{\bm{v}}dt = -\int_{t_{1}}^{t_{2}}\bm{v} \cdot\ddot{\bm{v}}dt\]
 So,we have
-\[\bm{F}_{rad} = \frac{e^2}{6\pi} \dot{\bm{a}}\]
+\[\bm{F}_{\mathrm{rad}} = \frac{e^2}{6\pi} \dot{\bm{a}}\]
 This is known as the Abraham-Lorentz formula for radiation reaction. This equation can only be applied when the frequency and intensity of the EM field is not very big, i.e.
 \[\lambda \gg \frac{e^2}{m} \quad H \ll \frac{m^2}{e^3}\]
 The details can be found in section 75 of \emph{The classical theory of fields (L.D.Landau \& E.M.Lifshitz)}.

@@ -203,25 +203,25 @@ Any operator that commutes with all members of a complete commuting set must be 
 \section{Rigged Hilbert space}
 \begin{newdef}[Rigged Hilbert spece]
 Formally, a rigged Hilbert space consists of a Hilbert space $\mathcal{H}$, together with a subspace $\Phi$ which carries a finer topology, that is one for which the natural inclusion $\Phi \subseteq \mathcal{H}$ is continuous. 
-It is no loss to assume that $\Phi$ is dense in $\mathcal{H}$ for the Hilbert norm. We consider the inclusion of conjugate space $\mathcal{H}^X$ in $\Phi^X$. $\Phi^X$ is the space of $\tau_{\Phi}$ continuous antilinear functional on $\Phi$.\\
-For any $\phi \in \Phi$, $F \in \Phi^X$,we define
+It is no loss to assume that $\Phi$ is dense in $\mathcal{H}$ for the Hilbert norm. We consider the inclusion of conjugate space $\mathcal{H}^{\mathrm{X}}$ in $\Phi^{\mathrm{X}}$. $\Phi^{\mathrm{X}}$ is the space of $\tau_{\Phi}$ continuous antilinear functional on $\Phi$.\\
+For any $\phi \in \Phi$, $F \in \Phi^{\mathrm{X}}$,we define
 \[\langle \phi | F \rangle \equiv F(\phi)\]
 \[\langle F | \phi \rangle \equiv [F(\phi)]^*\]
-Now by applying the Riesz representation theorem we can identify $\mathcal{H}^X$ with $\mathcal{H}$. Therefore, the definition of rigged Hilbert space is in terms of a sandwich:
-\[\Phi \subseteq \mathcal{H} \subseteq \Phi^X\]
+Now by applying the Riesz representation theorem we can identify $\mathcal{H}^{\mathrm{X}}$ with $\mathcal{H}$. Therefore, the definition of rigged Hilbert space is in terms of a sandwich:
+\[\Phi \subseteq \mathcal{H} \subseteq \Phi^{\mathrm{X}}\]
 \end{newdef}
 
 \noindent
-There may or may not exist any solutions to the eigenvalue equation $A|a_n\rangle = a_n |a_n\rangle$ for a self-adjoint operator $A$ on an infinite-dimensional vector space. However, the generalized spectral theorem asserts that if $A$ is self-adjoint in $\mathcal{H}$ then a complete set of eigenvectors exists in the extended space $\Phi^X$. The precise conditions for the proof of this theorem are rather technical, so the interested reader is referred to \emph{Gel'fand and Vilenkin (1964)} for further details.
+There may or may not exist any solutions to the eigenvalue equation $A|a_n\rangle = a_n |a_n\rangle$ for a self-adjoint operator $A$ on an infinite-dimensional vector space. However, the generalized spectral theorem asserts that if $A$ is self-adjoint in $\mathcal{H}$ then a complete set of eigenvectors exists in the extended space $\Phi^{\mathrm{X}}$. The precise conditions for the proof of this theorem are rather technical, so the interested reader is referred to \emph{Gel'fand and Vilenkin (1964)} for further details.
 \\
 There are many examples of rigged-Hilbert-space triplets. A Hilbert space $\mathcal{H}$ is formed by those functions that are square-integrable. That is, $\mathcal{H}$ consists of those functions $\psi(x)$ for which
 \[\langle \psi | \psi \rangle = \int_{-\infty}^{\infty} |\psi(x)|^2 dx \mbox{ is finite }\]
 A nuclear space $\Phi$ is made up of functions $\psi(x)$ which satisfy the infinite set of conditions,
 \[\ \int_{-\infty}^{\infty} |\psi(x)|^2(1+|x|)^m dx \mbox{ is finite for } m = 0,1,2,\cdots\]
-The functions $\psi(x)$) which make up $\Phi$ must vanish more rapidly than any inverse power of $x$ in the limit $|x| \to \infty$. The extended space $\Phi^X$, which is conjugate to $\Phi$, consists of those functions $\chi(x)$ for which
+The functions $\psi(x)$) which make up $\Phi$ must vanish more rapidly than any inverse power of $x$ in the limit $|x| \to \infty$. The extended space $\Phi^{\mathrm{X}}$, which is conjugate to $\Phi$, consists of those functions $\chi(x)$ for which
 \[\langle \chi | \psi \rangle = \int_{-\infty}^{\infty} \chi^*(x)\psi(x) dx \mbox{ is finite for any } \psi \mbox{ in } \Phi\]
 \\
-In addition to the functions of finite norm, which also lie in $\mathcal{H}$, $\Phi^X$ will contain functions that are unbounded at infinity provided the divergence is no worse than a power of $x$. Hence $\Phi^X$ contains $e^{ikx}$, which is an eigenfunction
+In addition to the functions of finite norm, which also lie in $\mathcal{H}$, $\Phi^{\mathrm{X}}$ will contain functions that are unbounded at infinity provided the divergence is no worse than a power of $x$. Hence $\Phi^{\mathrm{X}}$ contains $e^{ikx}$, which is an eigenfunction
 of the operator $D = i \frac{d}{dx}$. It also contains the Dirac delta function, $\delta(x-\lambda)$, which is an eigenfunction of the operator $X$, defined by $X\psi(x) = x\psi(x)$.
 These two examples suffice to show that rigged Hilbert space seems to be a more natural mathematical setting for quantum mechanics than is Hilbert space.
 
@@ -328,20 +328,20 @@ Since $\bm{X}$ plus some other observables $S$s form a complete commuting set of
 \paragraph{Guess} 
 For a system which has a classical correspondence, the classical equation of motion of a particle is
 \begin{eqnarray}
-\dot{x} &=& [x,H_C(x,p,t)]_C \nonumber \\
-\dot{p} &=& [p,H_C(x,p,t)]_C \nonumber
+\dot{x} &=& [x,H_{\mathrm{C}}(x,p,t)]_{\mathrm{C}} \nonumber \\
+\dot{p} &=& [p,H_{\mathrm{C}}(x,p,t)]_{\mathrm{C}} \nonumber
 \end{eqnarray}
-$[\quad]_C$ is the Poisson bracket in classical mechanics. In quantum mechanics,
+$[\quad]_{\mathrm{C}}$ is the Poisson bracket in classical mechanics. In quantum mechanics,
 \begin{eqnarray}
 \frac{d\langle X \rangle}{dt} &=& -i \langle [X,H] \rangle \nonumber \\
 \frac{d\langle P \rangle}{dt} &=& -i \langle [P,H] \rangle \nonumber
 \end{eqnarray}
 If we assume that the classical equation of motion of a particle is an approximation of quantum mechanics, we may expect
-\[[\quad] = i [\quad]_C \]
+\[[\quad] = i [\quad]_{\mathrm{C}} \]
 Since the Poisson bracket in classical mechanics and commutation bracket in quantum mechanics have the same algebra structure, we only need to demand that
 \[[X_i,X_j] = 0 \quad [X_i,X_j] = 0 \quad [X_i,P_j] = i \delta_{ij}\]
 and
-\[H = H_C(X,P,t)\]
+\[H = H_{\mathrm{C}}(X,P,t)\]
 For a more general system, we now define momentum operator $\bm{P}$ by 
 \[[X_i,P_j] = i \delta_{ij}\]
 The form of $H$ can not be given as a priori, which can be specified only by the hints from classical theory and experiments.
@@ -388,14 +388,14 @@ It is the generator of the rotation of the entire system, which is equivalent to
 \section{Heisenberg picture}
 \noindent
 Define
-\[Q_H = U^{\dagger}(t,t_0)QU(t,t_0)\]
+\[Q_{\mathrm{H}} = U^{\dagger}(t,t_0)QU(t,t_0)\]
 We can derive that
-\[\frac{dQ_H(t)}{dt} = -i[Q_H(t),H_H(t)] + \left(\frac{\partial Q}{\partial t}\right)_H \]
-Here, $H_H(t) = U^{\dagger}(t,t_0) H(t) U(t,t_0)$
+\[\frac{dQ_{\mathrm{H}}(t)}{dt} = -i[Q_{\mathrm{H}}(t),H_{\mathrm{H}}(t)] + \left(\frac{\partial Q}{\partial t}\right)_{\mathrm{H}} \]
+Here, $H_{\mathrm{H}}(t) = U^{\dagger}(t,t_0) H(t) U(t,t_0)$
 If the state of the system at $t_0$ is $|\phi_0\rangle$, then
-\[\langle Q \rangle_t = \langle \phi(t) | Q | \phi(t) \rangle = \langle \phi_0 | Q_H(t) | \phi_0 \rangle\]
-If the state $|q\rangle$ is the eigenstate of the $Q$ with the eigenvalue $q$, then $U^{\dagger}(t,t_0)|q\rangle$ is the eigenstate of the $Q_H$ with eigenvalue $q$, which can be denoted by $|q_H(t)\rangle$, so we have
-\[\langle q | \phi(t) \rangle = \langle q_H(t) | \phi_0 \rangle\]
+\[\langle Q \rangle_t = \langle \phi(t) | Q | \phi(t) \rangle = \langle \phi_0 | Q_{\mathrm{H}}(t) | \phi_0 \rangle\]
+If the state $|q\rangle$ is the eigenstate of the $Q$ with the eigenvalue $q$, then $U^{\dagger}(t,t_0)|q\rangle$ is the eigenstate of the $Q_{\mathrm{H}}$ with eigenvalue $q$, which can be denoted by $|q_{\mathrm{H}}(t)\rangle$, so we have
+\[\langle q | \phi(t) \rangle = \langle q_{\mathrm{H}}(t) | \phi_0 \rangle\]
 
 \section{Symmetries and conservation laws}
 \noindent
@@ -405,7 +405,7 @@ operator $H$ is invariant under this transformation means that
 Then we can deduce that
 \[[K,H(t)] = 0\]
 Usually, $K$ does not depend on time explicitly. If the above equation hold for all $t$, then in Heisenberg picture, 
-\[K_H(t) = K \quad |k_H(t) \rangle = | k \rangle\]
+\[K_{\mathrm{H}}(t) = K \quad |k_{\mathrm{H}}(t) \rangle = | k \rangle\]
 So, 
 \[\langle K \rangle_t = \langle K \rangle_{t_0} \quad \langle k | \phi(t) \rangle = \langle k | \phi_0 \rangle\]
 The probability distribution of the measurement of the observable $K$ will not change with time for an arbitrary initial state. We can assume that the $K$ is a constant of motion.
@@ -479,7 +479,7 @@ One has $\frac{\partial \psi}{\partial r} = r^{-\alpha} \frac{\partial u}{\parti
 \[F = r^{2-2\alpha} \left( \frac{-i}{2m} \right) \oint \left( u^* \frac{\partial u}{\partial r} - u\frac{\partial u^*}{\partial r} \right) d\Omega\]
 where the integration is over solid angle. If the integral does not vanish, then we must have $\alpha <1$ in order for $F$ to vanish in the limit $r \to 0$. This is a stronger condition than that derived from the probability density. \\
 Since $|\psi|^2$ is a probability density, it must vanish sufficiently rapidly at infinity so that its integral over all configuration space is convergent and equal to 1. \\
-The conditions that we have discussed apply to wave functions $\psi(x)$ which represent physically realizable states, but they need not apply to the eigenfunctions of operators that represent observables. Those eigenfunctions, $\chi(x)$, which play the role of filter functions in computing probabilities, are only required to lie in the extended space, $\Phi^X$, of the rigged-Hilbert-space triplet. It has been suggested that $\psi(x)$ be restricted to the nuclear space $\Phi$, rather than merely to the Hilbert space $\mathcal{H}$. In many cases this would amount to requiring that $\psi(x)$ should vanish at infinity more rapidly than any inverse power of the distance. 
+The conditions that we have discussed apply to wave functions $\psi(x)$ which represent physically realizable states, but they need not apply to the eigenfunctions of operators that represent observables. Those eigenfunctions, $\chi(x)$, which play the role of filter functions in computing probabilities, are only required to lie in the extended space, $\Phi^{\mathrm{X}}$, of the rigged-Hilbert-space triplet. It has been suggested that $\psi(x)$ be restricted to the nuclear space $\Phi$, rather than merely to the Hilbert space $\mathcal{H}$. In many cases this would amount to requiring that $\psi(x)$ should vanish at infinity more rapidly than any inverse power of the distance. 
 
 \section{Path integrals}
 \begin{newthem}[Gaussian integration]
@@ -605,16 +605,16 @@ G(x_b,t_b;x_a,t_a) &=& \int \mathcal{D}[x(t)] e^{i\int_{t_a}^{t_b} (\frac{1}{2}m
 \end{eqnarray}
 where
 \[x_0 = x_a \quad x_{N+1} = x_b \quad \Delta t = \frac{t_b-t_a}{N+1}\]
-Suppose $x_c(t)$ is the classical path of harmonic oscillator and we define
-\[\delta x(t) \equiv x(t) - x_c(t)\]
+Suppose $x_{\mathrm{c}}(t)$ is the classical path of harmonic oscillator and we define
+\[\delta x(t) \equiv x(t) - x_{\mathrm{c}}(t)\]
 Substitute it into the equation above, the terms which is linear in $\delta x$ can be dropped, because
-\[\left. \frac{\delta S}{\delta x} \right|_{x(t) = x_c(t)}\]
-And since $x_c(t_a) = x_a$, $x_c(t_b) = x_b$, we have
+\[\left. \frac{\delta S}{\delta x} \right|_{x(t) = x_{\mathrm{c}}(t)} = 0\]
+And since $x_{\mathrm{c}}(t_a) = x_a$, $x_{\mathrm{c}}(t_b) = x_b$, we have
 \[\delta x_{0} = \delta x_{N+1} = 0\]
 At last, we have
 \begin{eqnarray}
-G(x_b,t_b;x_a,t_a) &=& e^{iS_c} \lim_{N \to \infty} \int \left(\frac{m}{2i\pi\Delta t}\right)^{\frac{N+1}{2}} \exp \left\{ i \sum_{j=1,k=1}^{N} \delta x_j S_{jk} \delta x_k\right\} d\delta x_1 \cdots d\delta x_N \nonumber \\
-&=& e^{iS_c} \lim_{N \to \infty} \left(\frac{m}{2i\pi\Delta t}\right)^{\frac{N+1}{2}} \sqrt{\frac{\pi^N}{\det (-iS)}}
+G(x_b,t_b;x_a,t_a) &=& e^{iS_{\mathrm{c}}} \lim_{N \to \infty} \int \left(\frac{m}{2i\pi\Delta t}\right)^{\frac{N+1}{2}} \exp \left\{ i \sum_{j=1,k=1}^{N} \delta x_j S_{jk} \delta x_k\right\} d\delta x_1 \cdots d\delta x_N \nonumber \\
+&=& e^{iS_{\mathrm{c}}} \lim_{N \to \infty} \left(\frac{m}{2i\pi\Delta t}\right)^{\frac{N+1}{2}} \sqrt{\frac{\pi^N}{\det (-iS)}}
 \end{eqnarray}
 where
 \[-iS = \frac{m}{2i\Delta t} \left( \begin{matrix} 2-\omega^2\Delta t^2 & -1& 0& \ldots \\ -1& 2-\omega^2\Delta t^2& -1& \ldots \\ 0& -1& 2-\omega^2\Delta t^2& \ldots \\ \vdots & \vdots & \vdots & \end{matrix} \right)\]
@@ -683,7 +683,7 @@ continuous from $-\infty$ to $\infty$, like that of $P_z$.\\
 Thus the energy eigenvalues for a charged particle in a uniform static magnetic field $B$ are
 \[E_n(p_z) = \frac{(n+\frac{1}{2})|eB|}{m} + \frac{p_z^2}{2m}\]
 The motion parallel to the magnetic field is not coupled to the transverse motion, and is unaffected by the field. The classical motion in the plane perpendicular to the field is
-in a circular orbit with angular frequency $\omega_c = \frac{eB}{m}$, and it is well known that periodic motions correspond to discrete energy levels whose separation is $\omega_c$.\\ \\
+in a circular orbit with angular frequency $\omega_{\mathrm{c}} = \frac{eB}{m}$, and it is well known that periodic motions correspond to discrete energy levels whose separation is $\omega_{\mathrm{c}}$.\\ \\
 Now let us choose the vector potential to be $A_x=-yB$,$A_y=A_z=0$. The Hamiltonian now becomes
 \[H = \frac{(P_x+yeB)^2 + P_y^2 + P_z^2}{2m}\]
 $P_x$ and $P_z$ commute with $H$, so it is possible to construct a complete set of common eigenvectors of $H$, $P_x$ and $P_z$. In coordinate representation, the eigenvalue equation now takes the form
@@ -691,8 +691,8 @@ $P_x$ and $P_z$ commute with $H$, so it is possible to construct a complete set 
 Substitute
 \[\psi(x,y,z) = \exp(ik_xx+ik_zz)\phi(y)\]
 The equation then takes the form
-\[-\frac{1}{2m} \frac{d^2\phi(y)}{dy^2} + \left[ \frac{m\omega_c^2}{2}(y-y_0)^2-E' \right]\phi(y) = 0\]
-where $\omega_c = \frac{eB}{m}$ is the classical cyclotron frequency, and $E'=E-\frac{k_z^2}{2m}$ is the energy associated with motion in the $xy$ plane. This is just the energy eigenvalue equation for a simple harmonic oscillator with angular frequency $\omega = |\omega_c|$, whose eigenvalues are $E' = (n+1/2)\omega$. Thus the energies for the charged particle in the magnetic field must be $E = (n+1/2)|\omega_c|+\frac{k_z^2}{2m}$. Apart from a normalization constant, the eigenfunction will be
+\[-\frac{1}{2m} \frac{d^2\phi(y)}{dy^2} + \left[ \frac{m\omega_{\mathrm{c}}^2}{2}(y-y_0)^2-E' \right]\phi(y) = 0\]
+where $\omega_{\mathrm{c}} = \frac{eB}{m}$ is the classical cyclotron frequency, and $E'=E-\frac{k_z^2}{2m}$ is the energy associated with motion in the $xy$ plane. This is just the energy eigenvalue equation for a simple harmonic oscillator with angular frequency $\omega = |\omega_{\mathrm{c}}|$, whose eigenvalues are $E' = (n+1/2)\omega$. Thus the energies for the charged particle in the magnetic field must be $E = (n+1/2)|\omega_{\mathrm{c}}|+\frac{k_z^2}{2m}$. Apart from a normalization constant, the eigenfunction will be
 \[\psi = \exp(ik_xx+ik_zz) H_n[\alpha(y-y_0)]\exp[-\frac{1}{2}\alpha^2 (y-y_0)^2]\]
 with $\alpha = \sqrt{m\omega} = \sqrt{|eB|}$, and $y_0 = - \frac{k_x}{eB}$.\\
 For fixed $n$ and $k_z$, the energy eigenvalue is highly degenerate. For convenience, we assume that the system is confined to a rectangle of dimension $D_x\times D_y$ and subject to periodic boundary conditions. The allowed
@@ -711,9 +711,9 @@ outside of the cylinder. This follows by applying Stokes's theorem to any path s
 \[\oint \bm{A}\cdot d\bm{x} = \int\int (\bm{\nabla}\times\bm{A})\cdot d\bm{S} = \int\int \bm{B}\cdot d\bm{S} = \Phi\]
 If the flux through the cylinder is not zero, then the vector potential must be nonzero on every path that encloses the cylinder. However in any simply connected region outside of the cylinder, it is possible to express the vector potential as the gradient of a scalar, from the zero potential solution by means of a gauge transformation, $\Psi = \Psi^{(0)}\exp(ie\Lambda)$.
 \\
-In region L, which contains the slit on the left, the wave function can be written as $\Psi_L = \Psi_L\exp(ie\Lambda_1)$, where $\Psi_L$ is the zero potential solution in region L, and $\Lambda_1(\bm{x},t) = \int \bm{A}\cdot d\bm{x}$, with the integral taken along a path within region L. A similar form can be written for the wave function in the region R, which contains the slit on the right. \\
+In region L, which contains the slit on the left, the wave function can be written as $\Psi_{\mathrm{L}} = \Psi_{\mathrm{L}}\exp(ie\Lambda_1)$, where $\Psi_{\mathrm{L}}$ is the zero potential solution in region L, and $\Lambda_1(\bm{x},t) = \int \bm{A}\cdot d\bm{x}$, with the integral taken along a path within region L. A similar form can be written for the wave function in the region R, which contains the slit on the right. \\
 At the point b, in the overlap of regions L and R, the wave function is a superposition of contributions from both slits. Hence we have
-\[\Psi(\bm{b}) = \Psi_L\exp(ie\Lambda_1) + \Psi_R\exp(ie\Lambda_2)\]
+\[\Psi(\bm{b}) = \Psi_{\mathrm{L}}\exp(ie\Lambda_1) + \Psi_{\mathrm{R}}\exp(ie\Lambda_2)\]
 The interference pattern depends $\exp(ie(\Lambda_1-\Lambda_2)) = \exp(ie\Phi)$. 
 Therefore the interference pattern is sensitive to the magnetic flux inside of the cylinder, even though the particles never pass through the region in which the magnetic field is nonzero. 
 The AB effect is a topological effect, in that the effect depends on the flux encircled by the paths available to the particle, even though the paths may never approach the region of the flux. \\
@@ -879,7 +879,7 @@ The product vectors $|j_1,m_1\rangle |j_2,m_2\rangle$ are eigenvectors of the op
 	\caption{Possible values of $M=m_1+m_2$ , illustrated for $j_1=3$, $j_2=2$}
 \end{figure}
 Therefore,
-\[n(M)=\begin{cases} 0 \quad |M| > j_1 + j_2\\ j_1+j_2+1-|M|\quad |j_1-j_2| \leq M \leq |j_1+j_2|\\ 2j_{min}+1 \quad 0 \leq |M|\leq |j_1-j_2|\end{cases} \]
+\[n(M)=\begin{cases} 0 \quad |M| > j_1 + j_2\\ j_1+j_2+1-|M|\quad |j_1-j_2| \leq M \leq |j_1+j_2|\\ 2j_{\mathrm{min}}+1 \quad 0 \leq |M|\leq |j_1-j_2|\end{cases} \]
 It then follows that
 \[N(J)=\begin{cases} 1 \quad |j_1-j_2| \leq J \leq |j_1+j_2|\\ 0 \quad \mbox{otherwise}\end{cases} \]
 It has turned out that $N(J)$ is never greater that $1$, and so the vectors $|\alpha, J, M \rangle$ can be uniquely labelled by the eigenvalues of the four operators $\bm{J}^{(1)}\cdot\bm{J}^{(1)}$, $\bm{J}^{(2)}\cdot\bm{J}^{(2)}$, $\bm{J}\cdot\bm{J}$ and $\bm{J}_z$. Henceforth these total angular momentum
@@ -998,13 +998,13 @@ For $j=j'$, Wigner-Eckart theorem - when applied to the vector operator- takes a
 
 \begin{example}
 The magnetic moment operator for an atom has the form
-\[\bm{\mu} = \frac{-e}{2m_e } (g_L\bm{L} + g_s \bm{S})\]
-The parameters $g_L$ and $g_S$ have approximately the
-values $g_L = 1$ and $g_S = 2$. The former is an generalization of the magnetic moment we calculated in classical electrodynamics for a system of charged particles. The latter will be discussed in quantum field theory.
+\[\bm{\mu} = \frac{-e}{2m_{\mathrm{e}} } (g_{\mathrm{L}}\bm{L} + g_{\mathrm{S}} \bm{S})\]
+The parameters $g_{\mathrm{L}}$ and $g_{\mathrm{S}}$ have approximately the
+values $g_{\mathrm{L}} = 1$ and $g_{\mathrm{S}} = 2$. The former is an generalization of the magnetic moment we calculated in classical electrodynamics for a system of charged particles. The latter will be discussed in quantum field theory.
 We define the effective Lande factor as
-\[\langle \tau,J,M' | \bm{\mu} | \tau,J,M \rangle = \frac{-e}{2m_e } g_{eff} \langle J,M' | \bm{J} | J,M \rangle\]
+\[\langle \tau,J,M' | \bm{\mu} | \tau,J,M \rangle = \frac{-e}{2m_{\mathrm{e}} } g_{\mathrm{eff}} \langle J,M' | \bm{J} | J,M \rangle\]
 Then, we have
-\[g_{eff} = \frac{\langle \tau,J,M | g_L\bm{L}\cdot\bm{J} + g_s \bm{S}\cdot\bm{J} | \tau,J,M \rangle}{J(J+1)} = 1 + \frac{J(J+1)- L(L+1) + S(S+1)}{2J(J+1)}\]
+\[g_{\mathrm{eff}} = \frac{\langle \tau,J,M | g_{\mathrm{L}}\bm{L}\cdot\bm{J} + g_s \bm{S}\cdot\bm{J} | \tau,J,M \rangle}{J(J+1)} = 1 + \frac{J(J+1)- L(L+1) + S(S+1)}{2J(J+1)}\]
 \end{example}
 
 \section{Spherical potential well}
@@ -1023,18 +1023,18 @@ The radial function must satisfy the boundary condition $u(0) = 0$ since $\Psi(r
 
 \subsubsection{The hydrogen atom}
 The hydrogen atom is a two-particle system consisting of an electron and a proton. The Hamiltonian is
-\[H = \frac{P_e^2}{2m_e} + \frac{P_p^2}{2m_p} - \frac{e^2}{4\pi|\bm{Q}_e-\bm{Q}_p|}\]
+\[H = \frac{P_{\mathrm{e}}^2}{2m_{\mathrm{e}}} + \frac{P_{\mathrm{p}}^2}{2m_{\mathrm{p}}} - \frac{e^2}{4\pi|\bm{Q}_{\mathrm{e}}-\bm{Q}_{\mathrm{p}}|}\]
 We take as independent variables the center of mass and relative coordinates of the particles
-\[\bm{Q}_c = \frac{m_e\bm{Q}_e + m_p\bm{Q}_p}{m_e+m_p} \quad \bm{Q}_r = \bm{Q}_e-\bm{Q}_p\]
+\[\bm{Q}_{\mathrm{c}} = \frac{m_{\mathrm{e}}\bm{Q}_{\mathrm{e}} + m_{\mathrm{p}}\bm{Q}_{\mathrm{p}}}{m_{\mathrm{e}}+m_{\mathrm{p}}} \quad \bm{Q}_{\mathrm{r}} = \bm{Q}_{\mathrm{e}}-\bm{Q}_{\mathrm{p}}\]
 The corresponding momentum operators are
-\[\bm{P}_c = \bm{P}_e + \bm{P}_p \quad \bm{P}_r = \frac{m_p\bm{P}_e-m_e\bm{P}_p}{m_e + m_p}\]
+\[\bm{P}_{\mathrm{c}} = \bm{P}_{\mathrm{e}} + \bm{P}_{\mathrm{p}} \quad \bm{P}_{\mathrm{r}} = \frac{m_{\mathrm{p}}\bm{P}_{\mathrm{e}}-m_{\mathrm{e}}\bm{P}_{\mathrm{p}}}{m_{\mathrm{e}} + m_{\mathrm{p}}}\]
 We can verify that
-\[[Q_{c\alpha},P_{c\beta}] = [Q_{r\alpha},P_{r\beta}] = i\delta_{\alpha\beta} \quad [Q_{c\alpha},P_{r\beta}] = [Q_{r\alpha},P_{c\beta}] = 0\]
+\[[Q_{\mathrm{c}\alpha},P_{\mathrm{c}\beta}] = [Q_{\mathrm{r}\alpha},P_{\mathrm{r}\beta}] = i\delta_{\alpha\beta} \quad [Q_{\mathrm{c}\alpha},P_{\mathrm{r}\beta}] = [Q_{\mathrm{r}\alpha},P_{\mathrm{c}\beta}] = 0\]
 The Hamiltonian becomes
-\[H = \frac{P_c^2}{2(m_e+m_p)} + \frac{P_r^2}{2\mu} - \frac{e^2}{4\pi|\bm{Q}_r|}\]
-where $\mu$ is called the reduced mass, and is defined by $\mu \equiv \frac{m_em_p}{m_e+m_p}$.
+\[H = \frac{P_{\mathrm{c}}^2}{2(m_{\mathrm{e}}+m_{\mathrm{p}})} + \frac{P_{\mathrm{r}}^2}{2\mu} - \frac{e^2}{4\pi|\bm{Q}_{\mathrm{r}}|}\]
+where $\mu$ is called the reduced mass, and is defined by $\mu \equiv \frac{m_{\mathrm{e}}m_{\mathrm{p}}}{m_{\mathrm{e}}+m_{\mathrm{p}}}$.
 The center of mass behaves as a free particle, and its
-motion is not coupled to the relative coordinate. We shall confine our attention to the internal degrees of freedom described by the relative coordinate $\bm{Q}_r$. The energy eigenvalue equation in coordinate representation is
+motion is not coupled to the relative coordinate. We shall confine our attention to the internal degrees of freedom described by the relative coordinate $\bm{Q}_{\mathrm{r}}$. The energy eigenvalue equation in coordinate representation is
 \[-\frac{1}{2\mu}\nabla^2 \Psi(\bm{r})  -\frac{e^2}{4\pi r} \Psi(\bm{r}) = E\Psi(\bm{r})\]
 Suppose $\Psi(r,\theta,\phi) = Y_l^m(\theta,\phi) \frac{u(r)}{r}$, we have
 \[-\frac{1}{2\mu} \frac{d^2 u(r)}{dr^2} + \left[ \frac{l(l+1)}{2\mu r^2} - \frac{e^2}{4\pi r}\right]u(r) = Eu(r)\]
@@ -1081,7 +1081,7 @@ Further more, we can derive that
 \[P|\bm{x}\rangle = |-\bm{x}\rangle\]
 So the effect of $P$ on a wave function is
 \[P\psi(\bm{x}) \equiv \langle \bm{x} | P | \psi\rangle = \langle -\bm{x} | \psi\rangle = \psi(-\bm{x})\]
-From the fact the $P^2=1$, it follows that $P$ has eigenvalues $\pm 1$. Any even function, $\psi_e(\bm{x}) = \psi_e(-\bm{x})$, is an eigenfunction on $P$ with eigenvalue $1$, and any odd function, $\psi_o(\bm{x}) = -\psi_o(-\bm{x})$, is an eigenfunction of $P$ with eigenvalue $-1$.
+From the fact the $P^2=1$, it follows that $P$ has eigenvalues $\pm 1$. Any even function, $\psi_{\mathrm{e}}(\bm{x}) = \psi_{\mathrm{e}}(-\bm{x})$, is an eigenfunction on $P$ with eigenvalue $1$, and any odd function, $\psi_{\mathrm{o}}(\bm{x}) = -\psi_{\mathrm{o}}(-\bm{x})$, is an eigenfunction of $P$ with eigenvalue $-1$.
 A function corresponding to parity $+1$ is also said to be of even parity, and a function corresponding to parity $-1$ is said to be of odd parity.
 \\
 If the parity of operator $K$ is $p$, i.e. 

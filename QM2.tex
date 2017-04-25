@@ -246,7 +246,7 @@ The expressions  for $\bm{A}$ and $\bm{B}$ are are given above and $\bm{\mu}$ in
 where $g_{\mathrm{p}}$ is g-factor of proton and $\mu_{\mathrm{p}} \equiv \frac{e}{2m_p}$. Thus, the Hamiltonian must be interpreted as an operator acting the total Hilbert space
 \[\mathcal{H} = \mathcal{H}_{\mathrm{elec}} \otimes \mathcal{H}_{\mathrm{nucl}}\]
 For $\mathcal{H}_{\mathrm{elec}}$ the obvious basis is $|nljm_j\rangle$ with energies $E_{nlj}$ when there is no hyperfine terms. In hydrogen energies depend on $l$ because of the Lamb shift. The obvious basis in $\mathcal{H}_{\mathrm{nucl}}$ is $|im_i\rangle$. Thus we define the basis states in $\mathcal{H}$ as $|nljm_jm_i\rangle$ (we suppress the index $i$ since it is a constant).It is called uncoupled basis. Now we expand the Hamiltonian and neglect the term $A^2$, writing the result as $H = H_0 + H_1$ , where
-\[H_0 = \frac{P^2}{2m} - \frac{e^2}{4\pi r}  + H_{\mathrm{FS}} + H_{\mathrm{Lamb}}\]
+\[H_0 = \frac{p^2}{2m} - \frac{e^2}{4\pi r}  + H_{\mathrm{FS}} + H_{\mathrm{Lamb}}\]
 and
 \[H_1 = 2\mu_{\mathrm{B}}(\bm{P}\cdot\bm{A} + \bm{S}\cdot\bm{B})\]
 Since
@@ -284,28 +284,28 @@ These operators satisfy the evolution equations
 \[i\frac{\partial U_0(t)}{\partial t} = H_0U_0(t) \quad i\frac{\partial U(t)}{\partial t} = HU(t)\]
 Since $H_0$ is independent of time, we have $U_0 = e^{-iH_0 t}$.\\ \\
 Suppose the state in Schrödinger picture is $|\psi_S(t)\rangle$, then we define the state in interaction picture as
-\[|\psi_I(t)\rangle \equiv U^{\dagger}_0(t) |\psi_S(t)\rangle\]
+\[|\psi_{\mathrm{I}}(t)\rangle \equiv U^{\dagger}_0(t) |\psi_{\mathrm{S}}(t)\rangle\]
 Similarly, we define the operator in interaction picture as
-\[A_I(t) \equiv U^{\dagger}_0(t) A_S(t) U_0(t)\]
+\[A_{\mathrm{I}}(t) \equiv U^{\dagger}_0(t) A_{\mathrm{S}}(t) U_0(t)\]
 Let us define $W(t)$ as the operator that evolves kets in the interaction picture forward from time $0$ to final time $t$, i.e.
-\[ |\psi_I(t)\rangle = W(t) |\psi_I(0)\rangle \]
+\[ |\psi_{\mathrm{I}}(t)\rangle = W(t) |\psi_{\mathrm{I}}(0)\rangle \]
 We can verify that
 \[W(t) = U^{\dagger}_0U(t)\]
 And we can get the time evolution of $W(t)$
-\[i\frac{\partial W}{\partial t} = H_{1I}(t)W(t)\]
+\[i\frac{\partial W}{\partial t} = H_{1\mathrm{I}}(t)W(t)\]
 The formal solution is
-\[W(t) = I + (-i)^n \sum_{n=1}^{\infty} \int_{0}^{t}dt_1 \int_{0}^{t_1}dt_2 \cdots \int_{0}^{t_{n-1}} dt_n H_{1I}(t_1)H_{1I}(t_2)\cdots H_{1I}(t_n)\]\\
+\[W(t) = I + (-i)^n \sum_{n=1}^{\infty} \int_{0}^{t}dt_1 \int_{0}^{t_1}dt_2 \cdots \int_{0}^{t_{n-1}} dt_n H_{1\mathrm{I}}(t_1)H_{1\mathrm{I}}(t_2)\cdots H_{1\mathrm{I}}(t_n)\]\\
 Let us assume for simplicity that $H_0$ has a discrete spectrum $H_0|n\rangle = E_n|n\rangle$. 
 We assume that the system is initially in an eigenstate of the unperturbed system, what we will call the "initial" state $|i\rangle$ with energy $E_i$. Then 
-\[|\psi_I(t)\rangle = W(t)|i\rangle\]
+\[|\psi_{\mathrm{I}}(t)\rangle = W(t)|i\rangle\]
 Let us expand the exact solution of the Schrödinger equation in the interaction picture in the unperturbed eigenstates
-\[|\psi_I(t)\rangle = \sum_n c_n(t) |n\rangle\]
+\[|\psi_{\mathrm{I}}(t)\rangle = \sum_n c_n(t) |n\rangle\]
 We then have
 \[c_n(t) = \langle n | W(t) | i\rangle = \langle n | U^{\dagger}_0U(t) | i\rangle = e^{iE_nt} \langle n | U(t) | i\rangle \]
 So the transition amplitudes in the interaction picture and those in the Schrödinger picture are related by a simple phase factor.The transition probabilities are the squares of the amplitudes and are the same in either case. The perturbation expansion of the transition amplitude $c_n(t)$ is
 \[c_n(t) = \delta_{ni} + c^{(1)}_n(t) + \cdots\]
 where
-\[c^{(1)}_n(t) = \frac{1}{i} \int_0^t dt' \langle n | H_{1I}(t')|i\rangle = \frac{1}{i} \int_0^t dt' e^{i(E_n-E_i)t'} \langle n | H_{1}(t')|i\rangle\]
+\[c^{(1)}_n(t) = \frac{1}{i} \int_0^t dt' \langle n | H_{1\mathrm{I}}(t')|i\rangle = \frac{1}{i} \int_0^t dt' e^{i(E_n-E_i)t'} \langle n | H_{1}(t')|i\rangle\]
 
 \subsubsection{Constant and harmonic perturbation}
 If $H_1$ is time-independent, we have
@@ -340,7 +340,7 @@ This width is of order $\frac{1}{t}$. This is an example of
 the energy-time uncertainty relation, $\Delta t \Delta E \sim 1$, indicating that a system that is isolated (not
 subjected to a measurement) over a time interval $\Delta t$ has an energy that is uncertain by an amount $\Delta E \sim \frac{1}{\Delta t}$.\\
 It is conventional to define the transition rate as the transition probability per unit time,i.e.
-\[\Gamma(i \to f) = \lim_{t \to \infty}{P(i \to f)}{t}\]
+\[\Gamma(i \to f) = \lim_{t \to \infty}\frac{P(i \to f)}{t}\]
 Up to the first order, we have
 \[\Gamma(i \to f) = 2\pi \delta(E_i - E_f) |V_{fi}|^2\]
 where $V_{fi} = \langle f | H_1 | i \rangle$.
@@ -348,19 +348,19 @@ where $V_{fi} = \langle f | H_1 | i \rangle$.
 \section{Atomic Radiation}
 We apply time-dependent perturbation theory to the interaction of atomic electron with the classical radiation field.
 The basic Hamiltonian, with $A^2$ omitted, is
-\[H = \frac{p^2}{2m} - e\phi(\bm{x}) + \frac{e}{m}\bm{A}\cdot\bm{p}\]
+\[H = \frac{p^2}{2m} - e\phi(\bm{x}) + \frac{e}{m}\bm{A}\cdot\bm{P}\]
 Specifically, we work with a linear polarized monochromatic field of the plane wave for
 \[\bm{A} = 2A_0\bm{\epsilon}\cos(\bm{k}\cdot\bm{x}-\omega t) = A_0\bm{\epsilon} [e^{i\bm{k}\cdot\bm{x}}e^{-i\omega t}  + e^{-i\bm{k}\cdot\bm{x}}e^{i\omega t} ]\]
-So, $\frac{e}{m}\bm{A}\cdot\bm{p}$ is a Harmonic perturbation with $K = \frac{eA_0}{m} e^{i\bm{k}\cdot\bm{x}} (\bm{\epsilon}\cdot\bm{p})$.
+So, $\frac{e}{m}\bm{A}\cdot\bm{P}$ is a Harmonic perturbation with $K = \frac{eA_0}{m} e^{i\bm{k}\cdot\bm{x}} (\bm{\epsilon}\cdot\bm{P})$.
 For example, take the case of absorption, the transition rate is
-\[\Gamma(i \to f) = 2\pi \frac{e^2|A_0|^2}{m^2} |\langle f |e^{i\bm{k}\cdot\bm{x}} (\bm{\epsilon}\cdot\bm{p}) |i \rangle|^2 \delta(E_f-E_i-\omega)\]
+\[\Gamma(i \to f) = 2\pi \frac{e^2|A_0|^2}{m^2} |\langle f |e^{i\bm{k}\cdot\bm{x}} (\bm{\epsilon}\cdot\bm{P}) |i \rangle|^2 \delta(E_f-E_i-\omega)\]
 The cross section can be calculated by the transition rate of absorption.\\ \\
 The electrical dipole approximation is based on the fact that the wavelength of radiation field is far longer than the atomic dimension, so that the series
-\[e^{i\bm{k}\cdot\bm{x}} = 1+ ii\bm{k}\cdot\bm{x}+\cdots\]
+\[e^{i\bm{k}\cdot\bm{x}} = 1+ i\bm{k}\cdot\bm{x}+\cdots\]
 can be approximated by its leading term, $1$. Suppose the direction of the EM is wave is $z$, we now have
-\[\langle f |e^{i\bm{k}\cdot\bm{x}} (\bm{\epsilon}\cdot\bm{p}) |i \rangle = \langle f | p_z |i \rangle = \frac{m}{i} \langle f |  [z,H_0] |i \rangle = im(E_n-E_i)\langle f | n |i \rangle  \]
+\[\langle f |e^{i\bm{k}\cdot\bm{x}} (\bm{\epsilon}\cdot\bm{P}) |i \rangle = \langle f | P_z |i \rangle = \frac{m}{i} \langle f |  [z,H_0] |i \rangle = im(E_n-E_i)\langle f | z |i \rangle  \]
 where $H_0 = \frac{p^2}{2m} - e\phi(\bm{x})$.\\
-Recall the Wigner-Eckart theorem, we have the selection rules: The matrix element would vanish unless $\Delta m = 0$ and $\Delta l = \pm 1$ ($\Delta l $ can be $0$ because parity consideration. Further more, if the EM wave is circular polarized, we would have $\Delta m = \pm 1$. If the fine structure is taken into account, we would have $\Delta j = 0,\pm 1$ and $\Delta l = \pm 1$. If the hyperfine structure is taken into account, we would have $\Delta f = 0,\pm 1$, $\Delta j = 0,\pm 1$ and $\Delta l = \pm 1$. 
+Recall the Wigner-Eckart theorem, we have the selection rules: The matrix element would vanish unless $\Delta m = 0$ and $\Delta l = \pm 1$ ($\Delta l $ can not be $0$ because parity consideration). Further more, if the EM wave is circular polarized, we would have $\Delta m = \pm 1$. If the fine structure is taken into account, we would have $\Delta j = 0,\pm 1$ and $\Delta l = \pm 1$. If the hyperfine structure is taken into account, we would have $\Delta f = 0,\pm 1$, $\Delta j = 0,\pm 1$ and $\Delta l = \pm 1$. 
 
 \section{Variational Method}
 Let $H$ be a Hamiltonian which is assumed to have some bound states. Let the discrete (bound state) energy eigenvalues be ordered $E_0 < E_1 < \cdots$. The eigenvalues are allowed to be degenerate. There may also be a continuous spectrum above some energy, as often happens in practice.\\

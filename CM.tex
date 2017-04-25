@@ -152,7 +152,7 @@ So if $H$ is invariant under the transformation, then $[H,g] = 0$, that means $\
 
 \section{Hamilton-Jacobi equation}
 We define
-\[S(q,t)=\left(\int_{q_0,t_0}^{q,t} L dt\right)|_{extremum}\]
+\[S(q,t)=\left. \int_{q_0,t_0}^{q,t} L dt\right|_{\mathrm{extremum}}\]
 We can prove that
 \[p = \frac{\partial S}{\partial q}, \ \ \ \ H = -\frac{\partial S}{\partial t}\]
 So, we have
@@ -423,16 +423,16 @@ It is called critical damped oscillation.
 The equation of motion for forced oscillation is
 \[\ddot{q} + \frac{1}{Q}\dot{q} + \omega_0^2 q = F(t)\]
 The form of solution is
-\[q = q_s + q_g\]
-and $q_g$ is the general solution of the homogeneous equation and $q_s$ is an arbitrary special solution of the equation. In order to get $q_s$, we consider the following equation
+\[q = q_{\mathrm{s}} + q_{\mathrm{g}}\]
+and $q_{\mathrm{g}}$ is the general solution of the homogeneous equation and $q_{\mathrm{s}}$ is an arbitrary special solution of the equation. In order to get $q_{\mathrm{s}}$, we consider the following equation
 \[\ddot{G} + \frac{1}{Q}\dot{G} + \omega_0^2 G = \delta(t-t')\]
 and its solution is $G(t,t')$.
 Then we have
-\[q_s = \int_{-\infty}^{\infty} F(t')G(t-t')dt'\]
+\[q_{\mathrm{s}} = \int_{-\infty}^{\infty} F(t')G(t-t')dt'\]
 For under damped oscillation, we have
 \[G(t,t') = \begin{cases} \frac{e^{-\frac{t-t'}{2Q}}}{\omega} \sin\omega(t-t') \quad t>t'\\ 0 \quad t<t'\end{cases} \]
 and so
-\[q_s = \int_{0}^{\infty} F(t-t') \frac{e^{-\frac{t'}{2Q}}}{\omega} \sin\omega t' dt'\]
+\[q_{\mathrm{s}} = \int_{0}^{\infty} F(t-t') \frac{e^{-\frac{t'}{2Q}}}{\omega} \sin\omega t' dt'\]
 A special case is that
 \[F(t) = F_0 \cos\Omega t\]
 and we have
