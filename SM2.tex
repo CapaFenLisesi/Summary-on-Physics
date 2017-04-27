@@ -62,9 +62,9 @@ and the total Hamiltonian can be approximated by the Bogoliubov Hamiltonian $H_B
 \\
 We turn next to the problem of determining the energy eigenvalues of this Hamiltonian. This we do by using the method of the Bogoliubov–Valatin transform. 
 The idea is this: $H_B$ is a quadratic function of the operators $a_{\bm{k}}$ and $a^{\dagger}_{\bm{k}}$. 
-By taking appropriate linear combinations of these operators we can form new operators $b_{\bm{k}}$ and $b^{\dagger}_{\bm{k}}$ which "diagonalize" $H^B$, i.e. which lead to
+By taking appropriate linear combinations of these operators we can form new operators $b_{\bm{k}}$ and $b^{\dagger}_{\bm{k}}$ which ``diagonalize'' $H^B$, i.e. which lead to
 \[H^B = \sum_{\bm{q} \neq 0} \mathcal{E}(\bm{k})b^{\dagger}_{\bm{k}} b_{\bm{k}} \]
-The function $\mathcal{E}(\bm{k})$  will then determine the different excitations of the system while $b_{\bm{k}}$ and $b^{\dagger}_{\bm{k}}$ will be destruction and creation operators for these excitations or "quasi-particles", provided they satisfy the commutation rules
+The function $\mathcal{E}(\bm{k})$  will then determine the different excitations of the system while $b_{\bm{k}}$ and $b^{\dagger}_{\bm{k}}$ will be destruction and creation operators for these excitations or ``quasi-particles'', provided they satisfy the commutation rules
 \[[b_{\bm{p}},b_{\bm{q}}^{\dagger}] = \delta_{\bm{p},\bm{q}}\]
 We write
 \[b_{\bm{k}} = \alpha(\bm{k})a_{\bm{k}} - \beta(\bm{k})a^{\dagger}_{-\bm{k}} \quad b^{\dagger}_{\bm{k}} = \alpha(\bm{k})a^{\dagger}_{\bm{k}} - \beta(\bm{k})a_{-\bm{k}} \]
@@ -176,7 +176,7 @@ In order to analyze this possibility we will need to consider the statistical me
 \\ \\
 Another approach to the problem is to suppose that the external magnetic field $B$ is changed to $B + \delta B(\bm{x})$, i.e. the change $\delta B$ is position dependent. We expect that a change at $\bm{x}$, $\delta B(\bm{x})$, will produce a change in the magnetization $\delta M$ not just at the point $\bm{x}$ but at other points as well. Indeed we might expect
 \[\delta M(\bm{y}) \propto C_T(|\bm{x}-\bm{y}|)\delta B(\bm{x})\]
-where $C_T$ is a "correlation function" which determines the effect at $\bm{x}$ on the magnetization due to a change in the external field $\delta B$ at $\bm{x}$. The total change
+where $C_T$ is a ``correlation function'' which determines the effect at $\bm{x}$ on the magnetization due to a change in the external field $\delta B$ at $\bm{x}$. The total change
 is then expected to be
 \[\delta M(\bm{y}) = \int d^3x C_T(|\bm{x}-\bm{y}|)\delta B(\bm{x})\]
 We have assumed that the correlation function depends only on temperature and on the distance between the points $\bm{x}$ and $\bm{y}$.
@@ -282,7 +282,7 @@ and
 e^{K+h} & e^{-K} \\ e^{-K} & e^{K-h}
 \end{pmatrix}\]
 Following the program outlined by Kadanoff's seminal work on the foundations of the RG, we will follow a strategy whereby this renormalization step may be effected by subdividing the spin chain into regular clusters of b neighbouring spins. We may then proceed to sum over the $2b$ sub-configurations of each cluster, thereby generating an effective functional describing the inter-cluster energy balance. 
-While it is clear that this energy functional exists, a far less obvious question to ask is whether it will again have the form of an effective Ising spin system. Remarkably, the answer is affirmative: the Ising model is said to be "renormalizable." 
+While it is clear that this energy functional exists, a far less obvious question to ask is whether it will again have the form of an effective Ising spin system. Remarkably, the answer is affirmative: the Ising model is said to be ``renormalizable.'' 
 The structural reproduction of the model implies that we can think of each cluster as some kind of meta-Ising spin, or block spin. More importantly, it guarantees that the renormalization step qualifies for iteration: in a second RG step, $b$ block spins are grouped to form a new cluster (now comprising $b^2$ of the microscopic spins) which are then traced out, etc. We have
 \[Z_{N}(K,h) = \mathrm{Tr} T^N = \mathrm{Tr} (T^b)^{N/b} =\mathrm{Tr} (T')^{N/b} = Z_{N/b}(K',b')\]
 Define $u \equiv e^{-K}$ and $v \equiv e^{-h}$, we can work out
@@ -297,7 +297,7 @@ f_1(u,v) \\ f_2(u,v)
 In one-dimensional Ising model, the map $f$ possesses two
 disjoint sets of fixed points $(u^*,v^*) = (0,1)$ and $(u^*,v^*) = (1,v)$.
 \\
-The set of fixed points represents the most important structural characteristic of an RG analysis. They organize the space of "flowing" coupling constants into sectors of qualitatively different behaviour. 
+The set of fixed points represents the most important structural characteristic of an RG analysis. They organize the space of ``flowing'' coupling constants into sectors of qualitatively different behaviour. 
 In particular, one may note that, at a fixed point, all characteristics of the model, including its correlation length $\xi$, remain invariant. 
 On the other hand, we noticed above that an RG step is tantamount to doubling the fundamental length scale of the system. Consistency requires that either $\xi = 0$ or $\xi = \infty$. 
 In the present case, the line of fixed points is identified with $u = \exp[-\beta J] = 1$, i.e. $\beta = 0$. 
@@ -326,7 +326,7 @@ The second part of the program is to actually integrate over short range fluctua
 In most cases, one will proceed by a so-called loop expansion, i.e. one organizes the integration over the fast field $\phi_f$ according to the number of independent momentum integrals -loops - that occur after the appropriate contractions.
 \\
 Following the procedure, an expansion over the fast degrees of freedom gives an action in which coupling constants of the remaining slow fields are altered. 
-Notice that the integration over fast field fluctuations may  lead to the generation of "new" operators, i.e. operators that have not been present in the bare action. In such cases one has to investigate whether the newly generated operators are "relevant" in their scaling behaviour. 
+Notice that the integration over fast field fluctuations may  lead to the generation of ``new'' operators, i.e. operators that have not been present in the bare action. In such cases one has to investigate whether the newly generated operators are ``relevant'' in their scaling behaviour. 
 If so, the appropriate way to proceed is to include these operators in the action from the very beginning (with an a priori undetermined coupling constant). One then verifies whether the augmented action represents a complete system, i.e. one that does not lead to the generation of operators beyond those that are already present. If necessary, one has to repeat this step until a closed system is obtained.
 
 \subsubsection{Rescaling}
@@ -334,8 +334,8 @@ One next rescales frequency/momentum so that the rescaled field amplitude $\phi'
 \[q \to bq \quad \omega \to b^z \omega\]
 Here, the frequency renormalization exponent or dynamical exponent $z$ depend on the effective dispersion relating
 frequency and momentum. 
-We finally note that the field $\phi$, as an integration variable, may be rescaled arbitrarily. Using this freedom, we select a term in the action which we believe governs the behaviour of the "free" theory - in a theory with elastic coupling this might be the leading-order gradient operator $\int d^d r (\nabla \phi)^2$ - and require that it be strictly invariant under the RG step. 
-To this end we designate a dimension $L^{d_{\phi}}$ for the field, chosen so as to compensate for the factor $b^x$ arising after the renormalization of the operator. The rescaling $\phi \to b^{d_{\phi}}$ is known as field renormalization. It renders the "leading" operator in the action scale invariant.
+We finally note that the field $\phi$, as an integration variable, may be rescaled arbitrarily. Using this freedom, we select a term in the action which we believe governs the behaviour of the ``free'' theory - in a theory with elastic coupling this might be the leading-order gradient operator $\int d^d r (\nabla \phi)^2$ - and require that it be strictly invariant under the RG step. 
+To this end we designate a dimension $L^{d_{\phi}}$ for the field, chosen so as to compensate for the factor $b^x$ arising after the renormalization of the operator. The rescaling $\phi \to b^{d_{\phi}}$ is known as field renormalization. It renders the ``leading'' operator in the action scale invariant.
 \\ \\
 As a result of all these manipulations, we obtain a renormalized action
 \[S[\phi] = \sum_a g'_a \mathcal{O}_a[\phi]\]
@@ -363,7 +363,7 @@ Alluding to the fact that they look the same no matter how large a magnifying gl
 \\
 Now, to each system, one can attribute at least one intrinsic length scale, namely the length $\xi$ determining the exponential decay of field correlations. 
 However, the existence of a finite, and pre-determined, intrinsic length scale clearly does not go together with invariance under scale transformations. We thus conclude that, at a fixed point, either $\xi = 0$ (not so interesting), or $\xi = \infty$. 
-However, a diverging correlation length $\xi \to \infty$ is a hallmark of a second-order phase transition. We thus tentatively identify fixed points of the RG flow as candidates for "transition points" of the physical system.
+However, a diverging correlation length $\xi \to \infty$ is a hallmark of a second-order phase transition. We thus tentatively identify fixed points of the RG flow as candidates for ``transition points'' of the physical system.
 \\
 This being so, it is natural to pay special attention to
 the behaviour of the flow in the immediate vicinity of the fixed-point manifolds. If the set of coupling constants, $g$, is only close enough to a fixed point, $g^*$, it will be sufficient to consider the linearized mapping
@@ -387,14 +387,14 @@ with this property are said to be irrelevant.
 The distinction of relevant/irrelevant/marginal scaling fields in turn implies a classification of different types of fixed points:
 \begin{itemize}
 \item Firstly, there are stable fixed points, i.e. fixed points whose scaling fields are all irrelevant or, at worst, marginal. 
-These points define what we might call "stable phases of
-matter": when you release a system somewhere in the parameter space surrounding any of these attractors, it will scale towards the fixed point and eventually sit there. Or,
+These points define what we might call ``stable phases of
+matter'': when you release a system somewhere in the parameter space surrounding any of these attractors, it will scale towards the fixed point and eventually sit there. Or,
 expressed in more physical terms, looking at the problem at larger and larger scales will make it more and more resemble the infinitely correlated self-similar fixed-point configuration. (Recall the example of the high-temperature fixed line of the one-dimensional Ising
 model encountered earlier.) 
 By construction, the fixed point is impervious to moderate
-variations in the microscopic morphology of the system, i.e. it genuinely represents what one might call a "state of matter."
+variations in the microscopic morphology of the system, i.e. it genuinely represents what one might call a ``state of matter.''
 \item Complementary to stable fixed points, there are unstable fixed points. Here, all scaling fields are relevant (the $T = 0$ fixed point of the 1-D Ising model). These fixed points represent the concept of a Platonic ideal: you can never get there and, even if you managed to approach it closely, the harsh conditions of reality will make you flow away from it.
-Although unstable fixed points do not correspond to realizable forms of matter, they are of importance inasmuch as they "orient" the global RG flow of the system.
+Although unstable fixed points do not correspond to realizable forms of matter, they are of importance inasmuch as they ``orient'' the global RG flow of the system.
 \item Finally, there is the generic class of fixed points with both relevant and irrelevant scaling fields. These points are of particular interest inasmuch as they can be associated with phase transitions. 
 To understand this point, we first note that the $r$ eigenvectors $\phi_{\alpha}$ associated with irrelevant scaling fields span the tangent space of an $r$-dimensional
 manifold known as the critical surface. 
@@ -445,7 +445,7 @@ The exponent $\eta$, commonly referred to as the anomalous dimension of the corr
 \subsubsection{Universality}
 In fact, the majority of critical systems can be classified into a relatively small number of universality classes. Crudely speaking, leaving apart more esoteric classes of phase transitions there are $\mathcal{O}(10)$ fundamentally different types of flow recurrently appearing in practical applications. This has to be compared with the near infinity of different physical systems that display critical phenomena. The origin of this universality can readily be understood from the concept of critical surfaces.
 \\ \\
-Imagine, then, an experimentalist exploring a system that is known to exhibit a phase transition. Motivated by the critical phenomena that accompany phase transitions, the available control parameters $X_i$ (temperature, pressure, magnetic field, etc.) will be varied until the system begins to exhibit large fluctuations. On a theoretical level, the variation of the control parameters determines the initial values of the coupling constants of the model (as they functionally depend on the $X_i$s through their connection to the microscopic Hamiltonian). For microscopic parameters corresponding to a point above or below the critical manifold, the system asymptotically (i.e. when looked at at sufficiently large scales) falls into either the "high-" or the "low-temperature" regime. 
+Imagine, then, an experimentalist exploring a system that is known to exhibit a phase transition. Motivated by the critical phenomena that accompany phase transitions, the available control parameters $X_i$ (temperature, pressure, magnetic field, etc.) will be varied until the system begins to exhibit large fluctuations. On a theoretical level, the variation of the control parameters determines the initial values of the coupling constants of the model (as they functionally depend on the $X_i$s through their connection to the microscopic Hamiltonian). For microscopic parameters corresponding to a point above or below the critical manifold, the system asymptotically (i.e. when looked at at sufficiently large scales) falls into either the ``high-'' or the ``low-temperature'' regime. 
 However, eventually the trajectory through parameter space will intersect the critical surface. For this particular set of coupling constants, the system is critical. As we look at it on larger and larger length scales, it will be attracted by the fixed point at S, i.e. it will display the universal behaviour characteristic of this particular point. 
 This is the origin of universality: variation of the system parameters in a different manner (or for that matter considering a second system with different material constants) will generate a different trajectory. 
 However, as long as this trajectory intersects with S, it is guaranteed that the critical behaviour will exhibit the same universal characteristics (controlled by the unique fixed point).
@@ -479,7 +479,7 @@ with
 The functional integral above is not derived from a concrete Hamiltonian. The path integral should be understood rather as a statistical averaging over different configurations of the order parameter $\phi(x)$. 
 \\
 The reason why it it possible to neglect both higher powers and gradients of the field $\phi$ that are surely present in the exact reformulation of the Ising problem in terms of $\phi$-variables can be formulated by dimensional analysis.
-Anticipating that the "real" dimensions carried by the operators in the action will be not too far from their
+Anticipating that the ``real'' dimensions carried by the operators in the action will be not too far from their
 engineering dimensions, we begin by exploring the latter. 
 It is straightforward to attribute engineering dimensions to all operators:
 \[\left[\phi^2 \right] = L^2 \quad \left[\phi^4 \right] = L^{4-d} \quad \left[\phi^{2n} \right] = L^{d + (2-d)n/2} \quad  \left[(\nabla^m \phi)^2 \right] = L^{2(1-m)}\]
@@ -488,8 +488,8 @@ These relations convey much about the potential significance of all structurally
 \item The engineering dimension of the non-gradient operator $\sim \phi^2$ is positive in all dimensions, indicating general relevance.
 \item The $\phi^4$ operator is relevant (irrelevant) in dimensions $d < 4 (d > 4)$. This suggests that for $d > 4$ a harmonic approximation $(\lambda = 0)$ of the model should be reasonable. 
 It also gives us a preliminary clue as to how we might want to approach the $\phi^4$-model on a technical level: 
-while for dimensions "much" smaller than $d = 4$ the interaction operator $\sim \phi^4$ is strongly relevant, the dimension $d = 4$ itself is borderline. 
-This suggests that we analyze the model at $d = 4$, or maybe "close"  to $d = 4$ where the $\phi^4$ operator is not yet that virulent, and then try to extrapolate to infer what happens at the "physical dimensions" of $d = 2$ and $3$.
+while for dimensions ``much'' smaller than $d = 4$ the interaction operator $\sim \phi^4$ is strongly relevant, the dimension $d = 4$ itself is borderline. 
+This suggests that we analyze the model at $d = 4$, or maybe ``close''  to $d = 4$ where the $\phi^4$ operator is not yet that virulent, and then try to extrapolate to infer what happens at the ``physical dimensions'' of $d = 2$ and $3$.
 \item Operators $\phi^{n > 4}$ become relevant only in dimensions $d < \frac{2}{1-2/n} < 4$. 
 However, even below these threshold dimensions, operators of high powers in the field variable are much less relevant than the dominant non-harmonic operator $\phi^4$. This is the a posteriori justification for the neglect of $\phi^{n>4}$ operators in the derivation of the model.
 \item Similarly, operators with more than two gradients are generally irrelevant and can be neglected in all dimensions
@@ -505,7 +505,7 @@ On the other hand we have in the canonical ensemble
 \[Z = e^{-\beta F}\]
 Thus we can identify the free energy of statistical mechanics with $S[\phi_0]$ of our field theory
 \[F = \frac{1}{\beta} S(\phi_0)\]
-Landau mean-field theory can be seen as the "classical limit" or saddle point approximation of full path integral.
+Landau mean-field theory can be seen as the ``classical limit'' or saddle point approximation of full path integral.
 
 \subsection{Gaussian model}
 As a first improvement on the mean-field approximation, let us explore the effect of quadratic fluctuations around the constant field configuration $\bar{\phi}$ Approaching the transition point from above, we set $\bar{\phi} = 0$ and approximate the action through its quadratic expansion
