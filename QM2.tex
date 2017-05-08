@@ -801,18 +801,193 @@ From the anti-commutation relations, we have
 Such a state indeed describes identical fermions. And we can get the same Schrödinger equation as in the case for bosons.
 
 \chapter{Scattering theory}
+\section{Scattering in one dimension}
+The object that we want to understand is some potential $V(x)$. Importantly, the potential is localised to some
+region of space which means that $V (x) \to 0$ as $x \to \pm \infty$.
+A quantum particle moving along the line is governed by the Schrödinger equation,
+\[-\frac{1}{2m}\frac{d^2\psi}{dx^2} + V(x)\psi = E\psi\]
+For any potential, there are essentially two different kinds of states.
+\begin{itemize}
+\item Bound States are states that are localised in some region of space. The wave functions are normalisable and have profiles that drop off exponentially far from the
+potential 
+\[\psi(x) \to e^{-\lambda|x|} \mbox{ as } |x| \to \infty\]
+Because the potential vanishes in the asymptotic region, the Schrödinger equation relates the asymptotic fall-off to the energy of the state
+\[E = -\frac{\lambda^2}{2m}\]
+In particular, bound states have $E < 0$. Indeed, it is this property which ensures that the particle is trapped within the potential and cannot escape to infinity.
+\\
+Bound states are rather special. In the absence of a potential, a solution which decays exponentially to the left will grow exponentially to the far right. 
+But, for the state to be normalisable, the potential has to turn this behaviour around, so the the wave function decreases at both $x \to -\infty$ and $x \to +\infty$. 
+This will only happen for specific values of $\lambda$. Ultimately, this is why the spectrum of bound states is discrete.
+\item Scattering States are not localised in space and the wave functions are not normalisable. 
+Instead, asymptotically, far from the potential, scattering states take the form of plane waves. In one dimension, there are two possibilities
+\[\mbox{Right moving:} \quad \psi \sim e^{ikx}\]
+\[\mbox{Left moving:} \quad \psi \sim e^{-ikx}\]
+where $k > 0$. Solving the Schrödinger equation in the asymptotic region gives the energy
+\[E = \frac{k^2}{2m}\]
+Scattering states have $E > 0$. Note that nothing special has to happen to find scattering solutions. We expect to find solutions for any choice of $k$.
+\end{itemize}
+
+\subsection{Reflection and transmission amplitudes}
+When solving the Schrd\''{o}inger equation for the scattering states, we expect that there are two independent solutions for each value of $k$.
+\\
+If we throw the particle in from the left. When it hits the potential, it can bounce back, or it can pass straight through. 
+Mathematically, this means that we are looking for a solution which asymptotically takes the form
+\[\psi_{\rm R}(x) \sim \begin{cases} e^{ikx} + re^{-ikx} \quad x \to \infty \\ te^{ikx} \quad x \to \infty \end{cases}\]
+The coefficient $r$ is called the reflection amplitude. The coefficient $t$ is called the transmission coefficient. The probability for reflection $R$ and transmission $T$ are given by the usual quantum mechanics rule:
+\[R = |r|^2 \quad T = |t|^2\]
+Given a solution $\psi(x)$ to the Schrödinger equation, we can construct a conserved probability current
+\[J(x) = -i\frac{1}{2m}\left( \psi^*\frac{d\psi}{dx} - \psi\frac{d\psi^*}{dx}\right)\]
+which obeys $dJ/dx = 0$. This means that $J(x)$ is constant. For our scattering solution $\psi_{\rm R}$, the probability current as $x\to-\infty$ is given by
+\[J(x) = \frac{k}{m}(1-|r|^2)\]
+Meanwhile, as $x \to +\infty$, we have
+\[J(x) = \frac{k}{m} |t|^2\]
+Equating the two gives $R + T =1$.
+\\ \\
+If we throw the particle in from the right. We're now looking for solutions which take the asymptotic form
+\[\psi_{\rm L}(x) \sim \begin{cases} t'e^{ikx}  \quad x \to \infty \\ e^{ikx} + r'e^{-ikx} \quad x \to \infty \end{cases}\]
+Because the potential $V (x) $ is a real function, so if $\psi_{\rm R}$ is a solution then so is $\psi^*_{\rm R}$. And, by linearity, so is $(\psi^*_{\rm R} - r^*\psi_{\rm R}) / t^* $ which is given by
+\[\frac{\psi^*_{\rm R}(x) - r^*\psi_{\rm R}(x)}{t^*} \sim \begin{cases} \frac{1-|r|^2}{t^*} e^{ikx}  \quad x \to \infty \\ e^{ikx} - \frac{r^* t}{t^*}e^{-ikx} \quad x \to \infty \end{cases}\]
+So we have
+\[t' = t \quad r' = -\frac{r^* t}{t^*}\]
+
+\begin{example}
+If
+\[V(x) = \begin{cases} -V_0  \quad -a/2 < x < a/2 \\ 0 \quad |x| > a/2 \end{cases}\]
+we have the right moving solution
+\[r = \frac{(k^2-q^2)\sin(qa)e^{-ika}}{(q^2+k^2)\sin(qa) + 2iqk\cos(qa)}\]
+\[t = \frac{2iqke^{-ika}}{(q^2+k^2)\sin(qa) + 2iqk\cos(qa)}\]
+where $q^2 = 2mV_0 + k^2$. At the limit $k \to 0$, where $r \to -1$ and $t \to 0$. This means that if you throw the particle very softly, it doesn't make it through the potential; it's guaranteed to bounce back. Conversely, in the limit $k \to \infty$, we have $r = 0$. By unitarity we must have $|t| = 1$ and the particle is guaranteed to pass through. This is what you might expect; if you throw the particle hard enough, it barely notices that the potential is there.
+\\
+We can repeat the calculation above for scattering from the right. In fact, for our pothole potential, the result is exactly the same and we have $r = r'$. This arises because $V (x) = V (−x)$ so it's no surprise that scattering from the left and right are the same.
+\end{example}
+
+\subsection{S-matrix}
+We have two ingoing asymptotic wave functions, one from the left and one from the right
+\[\mathcal{I}_{\rm R}(x) = e^{ikx} \quad x \to -\infty \quad \mathcal{I}_{\rm L}(x) = e^{-ikx} \quad x \to \infty\]
+Similarly, there are two outgoing asymptotic wave functions
+\[\mathcal{O}_{\rm R}(x) = e^{ikx} \quad x \to \infty \quad \mathcal{O}_{\rm L}(x) = e^{-ikx} \quad x \to -\infty\]
+The two asymptotic solutions $\psi_{\rm R}$ and $\psi_{\rm L}$ can then be written as
+\[\begin{pmatrix} \psi_{\rm R} \\ \psi_{\rm L} \end{pmatrix} =  
+\begin{pmatrix} \mathcal{I}_{\rm R} \\ \mathcal{I}_{\rm L} \end{pmatrix} + 
+\mathcal{S} \begin{pmatrix} \mathcal{O}_{\rm R} \\ \mathcal{O}_{\rm L} \end{pmatrix}\]
+where
+\[\mathcal{S} \equiv \begin{pmatrix}
+t & r \\ r' & t'
+\end{pmatrix} \]
+This is the S-matrix. We can show that $\mathcal{S}\mathcal{S}^{\dagger} = I$.
+\\ \\
+For symmetric potentials, with $V (x) = V (-x)$, we have $[P, H] = 0$ which means that eigenstates of the Hamiltonian can be chosen so that they are also eigenstates of $P$. Eigenstates of the Hamiltonian can
+be chosen to be either even functions or odd functions.
+Scattering eigenstates $\psi_{\rm R}$ and $\psi_{\rm L}$. These are neither odd nor even. Instead, for a symmetric potential, they are related by $\psi_{\rm L} (x) = \psi_{\rm R} (-x)$. If we want to work with the parity
+eigenstates, we take
+\[\psi_{+}(x) = \psi_{\rm R}(x) + \psi_{\rm L}(x)\]
+\[\psi_{-}(x) = \psi_{\rm R}(x) - \psi_{\rm L}(x)\]
+which obey $P\psi_{\pm}(x) = \pm \psi_{\pm}(x)$.
+\\
+We can also think about the S-matrix using our new basis of states. The asymptotic ingoing modes are even and odd functions, given at $|x| \to \infty$ by
+\[\mathcal{I}_{+}(x) = e^{-ik|x|} \quad \mathcal{I}_{-}(x) = \mathrm{sign}(x) e^{-ik|x|}\]
+The two asymptotic outgoing modes are
+\[\mathcal{O}_{+}(x) = e^{ik|x|} \quad \mathcal{O}_{-}(x) = -\mathrm{sign}(x) e^{ik|x|}\]
+These are related to our earlier modes by a simple change of basis
+\[\begin{pmatrix}
+\mathcal{I}_{+} \\ \mathcal{I}_{-}
+\end{pmatrix} = \mathcal{M}\begin{pmatrix}
+\mathcal{I}_{\rm R} \\ \mathcal{I}_{\rm L}
+\end{pmatrix} \quad \begin{pmatrix}
+\mathcal{O}_{+} \\ \mathcal{O}_{-}
+\end{pmatrix} = \mathcal{M}\begin{pmatrix}
+\mathcal{O}_{\rm R} \\ \mathcal{O}_{\rm L}
+\end{pmatrix} \quad \mathcal{M} = \begin{pmatrix}
+1 & 1 \\ -1 & 1
+\end{pmatrix} \]
+We can define an S-matrix with respect to this parity basis.
+\[\begin{pmatrix} \psi_{+} \\ \psi_{-} \end{pmatrix} =  
+\begin{pmatrix} \mathcal{I}_{+} \\ \mathcal{I}_{-} \end{pmatrix} + 
+\mathcal{S}^{\rm P} \begin{pmatrix} \mathcal{O}_{+} \\ \mathcal{O}_{-} \end{pmatrix}\]
+We can show that
+\[\mathcal{S}^{\rm P} = \begin{pmatrix}
+t + r & 0 \\ 0 & t - r
+\end{pmatrix}  \equiv  \begin{pmatrix}
+e^{2i\delta_+(k)} & 0 \\ 0 & e^{2i\delta_{-}(k)}
+\end{pmatrix}\]
+if the potential is symmetric. For scattering off a symmetric potential, all the information is encoded in two momentum-dependent phase shifts, which tell us how the phases of the outgoing waves are changed with respect to the ingoing waves.
+
+\subsection{Bound states}
+We now look at the bound states, which have energy $E < 0$ and are localised near inside the potential.
+It turns out that the information about these bound states can be extracted from the S-matrix, which we constructed purely from knowledge of the scattering states. 
+We take our scattering solutions, which depend on momentum $k \in  \mathbb{R}$, and extend them to the complex momentum plane. 
+First note that the solutions with $k \in  \mathbb{C}$ still obey our original Schrödinger equation since, at no point in any of our derivation did we assume that $k \in  \mathbb{R}$. 
+The only difficulty comes when we look at how the wave functions behave asymptotically.
+In particular, any putative solution will, in general, diverge exponentially as $x \to +\infty$ or $x \to -\infty$, rendering the wave function non-normalisable. However, there are certain solutions that survive.
+\\ \\
+For simplicity, let's assume that we have a symmetric potential. This means that there's no mixing between the parity-even and parity-odd wave functions. We start by looking at the parity-even states. The general solution takes the form
+\[\psi_+(x) = \mathcal{I}_+(x) + S_{++}\mathcal{O}_+(x)  = \begin{cases} e^{ikx} + S_{++}e^{-ikx} \quad x\to -\infty \\  e^{-ikx} + S_{++}e^{ikx} \quad x\to \infty \end{cases} \]
+Suppose that we make $k$ pure imaginary and write $k = i\kappa$ with $\kappa > 0$. Then we get
+\[\psi_+(x) = \begin{cases} e^{-\kappa x} + S_{++}e^{\kappa x} \quad x\to -\infty \\  e^{\kappa x} + S_{++}e^{-\kappa x} \quad x\to \infty \end{cases}\]
+Both terms proportional to $S_{++}$ decay asymptotically, but the other terms diverge.
+The wave function above is normalisable whenever we can find a $\kappa$ such that
+\[S_{++}(\kappa) \to \infty \quad k \to i\kappa\]
+Poles in the complex momentum plane that lie on the positive imaginary axis correspond to bound states.
+This information also tells us the energy of the bound state,
+\[E = -\frac{\kappa^2}{2m}\]
+We could also have set $k = -i\kappa$, with $\kappa > 0$. In this case, it is the terms proportional to $S_{++}$ which diverge and the wave function is normalisable only if $S_{++}(k = -i\kappa) = 0$. 
+However, since $S_{++}$ is a phase, this is guaranteed to be true whenever $S_{++}(k = i\kappa)$ has a pole, and simply gives us back the solution above.
+\\
+Finally, note that exactly the same arguments hold for parity-odd wave functions.
+There is a bound state whenever $S_{--}(k)$ has a pole at $k = i\kappa$ with $\kappa > 0$.
+\begin{example}
+We can illustrate this with example of the square well, of depth $-V_0$ and width $a$.
+We have,
+\[S_{++} = r + t = -e^{ika} \frac{q\tan(qa/2)-ik}{q\tan(qa/2)+ik} \]
+where $q^2 = 2mV_0 + k^2$. Setting $k = i\kappa$, we see that this has a pole when
+\[\kappa = q\tan(\frac{qa}{2}) \quad \kappa^2 + q^2 = 2mV_0\] 
+Similarly, if we look at the parity-odd wave functions, we have
+\[S_{--} = t - r = -e^{ika} \frac{q+ik\tan(qa/2)}{q-ik\tan(qa/2)} \]
+which has a pole at $k = i\kappa$ when
+\[\kappa = -q\cot(\frac{qa}{2}) \quad \kappa^2 + q^2 = 2mV_0\]
+\end{example}
+
+\subsection{Resonances}
+Let's think the $V(x)$ example shown below.
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.2]{QM/resonance0.png}
+\caption{Example}
+\end{figure} 
+One the one hand, we know that there can be no bound states in such a trap because they will have $E > 0$. 
+Any particle that we place in the trap will ultimately tunnel out. 
+On the other hand, if the walls of the trap are very large then we might expect that the particle stays there for a long time before it eventually escapes. 
+In this situation, we talk of a resonance. These are also referred to as unstable or metastable states.
+\\ \\
+Suppose that the S-matrix $S_{++}$ has a pole that lies on the complex momentum plane at position $k = k_0 - i\gamma$. We note that the energy is also imaginary
+\[E = E_0 - i\frac{\Gamma}{2} \quad E_0 \equiv \frac{k_0^2-\gamma^2}{2m} \quad \Gamma \equiv \frac{2\gamma k_0}{m}\]
+Recall that the time dependence of the wave function is given by
+\[e^{-iEt} = e^{-iE_0t}e^{-\Gamma t/2}\]
+For $\gamma > 0$, the overall form of the wave function decays exponentially with time. This is the characteristic behaviour of unstable states. 
+A wave function that is initially supported inside the trap will be very small there at time much larger than $\tau = \frac{1}{\Gamma}$. Here $\tau$ is called the half-life of the state, while $\Gamma$ is usually referred to as the width of the state.
+\\
+Including the time dependence, when $S_{++}\ to \infty$, the solution takes the asymptotic form
+\[\psi_+(x,t) = \begin{cases} e^{-iE_0t}e^{-ik_0x}e^{-\gamma x - \Gamma t/2} \quad x\to -\infty \\  e^{-iE_0t}e^{ik_0x}e^{\gamma x - \Gamma t/2} \quad x\to \infty \end{cases}\]
+The final factor varies as
+\[e^{\pm\gamma(x\mp vt)} \quad v = \frac{\Gamma}{2\gamma} = \frac{k_0}{m}\]
+This has the interpretation of a particle moving with momentum $-k_0$. This, of course, is the particle which has escaped the trap.
+\\
+The upshot of this discussion is that poles of the S-matrix in the lower-half complex plane correspond to resonances. It is often useful to write $S_{++}$ as a function of energy rather than momentum. Since $S_{++}$ is a phase, close to a resonance it necessarily takes the form
+\[S_{++} = \frac{E-E_0-i\Gamma/2}{E-E_0+i\Gamma/2}\]
+
+
 \section{Lippmann–Schwinger equation}
 Imagine a particle coming in and getting scattered by a short-ranged potential $V(x)$ located around the origin $x \sim 0$. The time-independent Schr\"{o}dinger equation is simply
 \[(H_0 + V)|\psi\rangle = E |\psi\rangle\]
-Here, $H_0 = \frac{p^2}{2m}$ is the free-particle Hamiltonian operator. We can write the solution as
+where $H_0 \equiv \frac{p^2}{2m}$ is the free-particle Hamiltonian operator. We can write the solution as
 \[|\psi^{(\pm)}\rangle = \frac{1}{E-H_0 \pm i\epsilon}V|\psi^{(\pm)}\rangle + |\phi\rangle\]
-Here, $H_0 |\phi\rangle = E |\phi\rangle$. In coordinate representation,
+where $H_0 |\phi\rangle = E |\phi\rangle$. In coordinate representation,
 \[\psi^{(\pm)}(\mathbf{x}) = \phi(\mathbf{x}) + \int d^3x' \langle \bm{x} | \frac{1}{E-H_0 \pm i\epsilon} | \bm{x}' \rangle V(\bm{x}') \psi^{(\pm)}(\bm{x}')\]
-Here, $\phi(\bm{x}) = \frac{e^{i\bm{k}\cdot\bm{x}}}{(2\pi)^{\frac{3}{2}}}$. Define the Green function as
+where $\phi(\bm{x}) = e^{i\bm{k}\cdot\bm{x}} / (2\pi)^{\frac{3}{2}}$. Define the Green function as
 \[G_{\pm}(\bm{x},\bm{x}') \equiv \frac{1}{2m} \langle \bm{x} | \frac{1}{E-H_0 \pm i\epsilon} | \bm{x}' \rangle\]
 We can derive that
 \[G_{\pm}(\bm{x},\bm{x}') = -\frac{1}{4\pi} \frac{e^{\pm ik|\bm{x}-\bm{x}'|}}{|\bm{x}-\bm{x}'|}\]
-where $k = \sqrt{2mE}$. And it is easy to show that
+where $k \equiv \sqrt{2mE}$. And it is easy to show that
 \[(\nabla^2 + k^2)G_{\pm}(\bm{x},\bm{x}') = \delta(\bm{x}-\bm{x}')\]
 So, we have
 \[\psi^{(\pm)}(\bm{x}) = \frac{e^{i\bm{k}\cdot\bm{x}}}{(2\pi)^{\frac{3}{2}}} - 2m \int d^3x' \frac{1}{4\pi} \frac{e^{\pm ik|\bm{x}-\bm{x}'|}}{|\bm{x}-\bm{x}'|} V(\bm{x}') \psi^{(\pm)}(\bm{x}')\]
@@ -822,9 +997,9 @@ The experiment is done typically by placing the detector far away from the scatt
 \[|\bm{x}-\bm{x}'| \approx |\bm{x}| - \frac{\bm{x}' \cdot \bm{x}}{|\bm{x}|}\]
 Under this limit,
 \[\psi(\bm{x}) = \frac{e^{i\bm{k}\cdot\bm{x}}}{(2\pi)^{\frac{3}{2}}} - 2m \frac{e^{ikr}}{4\pi r} \int d^3x' e^{-i\bm{k}' \cdot \bm{x}'} V(\bm{x}') \psi(\bm{x}')\]
-Here, $r = |\bm{x}|$ and $\bm{k}' = k \frac{\bm{x}}{r}$. It is customary to write this equation in the form
+where $r \equiv |\bm{x}|$ and $\bm{k}' \equiv k \frac{\bm{x}}{r}$. It is customary to write this equation in the form
 \[\psi(\bm{x}) = \frac{1}{(2\pi)^{\frac{3}{2}}}\left( e^{i\bm{k}\cdot\bm{x}} +  f(\bm{k},\bm{k}') \frac{e^{ikr}}{r} \right) \]
-Here,
+where
 \[f(\bm{k},\bm{k}') \equiv - \frac{m}{2\pi} (2\pi)^3  \langle \bm{k}'| V | \psi\rangle \]
 Recall the definition of cross section
 \[\sigma \equiv \frac{\mbox{Number of Events}}{\mbox{Time} \times \mbox{Incident Flux}}\]
@@ -879,8 +1054,8 @@ If the source of Coulomb potential has an distribution $\rho_N(\bm{x})$, then
 \[V(\bm{x}) = \int d^3x \frac{\alpha}{|\bm{x}-\bm{x}'|} \rho(\bm{x}')\]
 Note that the potential is mathematically a convolution of the Coulomb potential and the probability density. Since the first Born amplitude is nothing but the Fourier transform of the potential, the convolution becomes a product of Fourier transforms, one for the Coulomb potential and the other for the probability density. So
 \[f(\theta) = f(\theta)_{\mathrm{pointlike}} F(q)\]
-Here,
-\[F(q) \equiv \int d^3x \rho_N(\bm{x}) e^{i \bm{q} \cdot \bm{x}},\]
+where
+\[F(q) \equiv \int d^3x \rho(\bm{x}) e^{i \bm{q} \cdot \bm{x}},\]
 being called form factor.
 
 \subsubsection{Born expansion}
@@ -999,7 +1174,7 @@ It can have a pole if
 \[1 - i \frac{k}{\sqrt{k^2+K^2}} \tan\sqrt{k^2+K^2}a = 0\]
 This equation appears impossible to satisfy, but it can be on the complex plane of $k$. For a pure imaginary $k = i\kappa$, the equation becomes
 \[\kappa = - \frac{\sqrt{K^2-\kappa^2}}{\tan \sqrt{K^2-\kappa^2}a}\]
-This is the condition for bound states (the scattering wave $e^{ike}$ becomes $e^{-\kappa r}$, which is trapped by scatter). By decreasing $K$ from a sufficiently large value with bound states, the bound state energies $E = -\frac{\kappa^2}{2m}$ move up. When $Ka = (n + \frac{1}{2})\pi$, $\tan Ka \to \infty$, and we find a bound state approaching $\kappa = k = 0$. 
+This is the condition for bound states (the scattering wave $e^{ikr}$ becomes $e^{-\kappa r}$, which is trapped by scatter). By decreasing $K$ from a sufficiently large value with bound states, the bound state energies $E = -\frac{\kappa^2}{2m}$ move up. When $Ka = (n + \frac{1}{2})\pi$, $\tan Ka \to \infty$, and we find a bound state approaching $\kappa = k = 0$. 
 This is when the scattering length diverges. In other words, the infinite scattering cross section at $k = 0$ happens because there is a bound state exactly at $ k = 0$.\\
 This can also be seen on the complex $k$ plane in the following manner. The lower half plane is unphysical as it corresponds to an exponentially growing wave function at the infinity for the scattered wave. 
 When there are bound states, we see poles along the positive imaginary axis. By decreasing $K$, the poles along the positive imaginary axis go down, and a pole reaches the origin. 
@@ -1011,7 +1186,7 @@ As for delta shell scattering
 \[V = \gamma\delta(r-a)\]
 the phase shift for S-wave is
 \[e^{2i\delta_0} = e^{-2ika}\frac{\sin ka + \frac{k}{2m\gamma}e^{ika}}{\sin ka + \frac{k}{2m\gamma}e^{-ika}}\]
-The poles satisfies that
+The pole satisfies that
 \[e^{2ika} = 1 - 2i\frac{k}{2m\gamma}\]
 When $\gamma$ is large, we can get
 \[k \approx \frac{n\pi}{a + \frac{1}{2m\gamma}} -i \left(\frac{1}{2m\gamma} \right)^2 \frac{n^2\pi^2}{a^3} + O(\gamma^{-2})\]
@@ -1064,7 +1239,7 @@ The corresponding momentum operators are
 \[\bm{P} = \bm{p}_1 + \bm{p}_2 \quad \bm{p} = \frac{m_1\bm{p}_1-m_2\bm{p}_2}{m_1 + m_2}\]
 Then the Hamiltonian becomes
 \[H = \frac{P^2}{2M} + \frac{p^2}{2\mu} + V(|\bm{x}|)\]
-Then the problem reduces to the potential scattering problem for a particle of mass $\mu = \frac{m_1m_2}{m_1+m_2}$.
+Then the problem reduces to the potential scattering problem for a particle of mass $\mu = m_1m_2/(m_1+m_2)$.
 \\ \\
 If two particles that scatter are identical particles, such as electron-electron scattering or scattering of two identical atoms, symmetry of the wave function needs to be considered.
 Under the interchange of two particles, the center of mass motion is not affected, but the relative coordinates change their signs. If they have spins, their spins need to be interchanged at the same time.
@@ -1074,12 +1249,12 @@ Because they are bosons, the wave function should not change under the interchan
 Therefore the asymptotic form of the wave function must be changed to
 \[\psi(\bm{x}) \to e^{ikz} + e^{-ikz} + [f(\theta) + f(\pi - \theta)] \frac{e^{ikr}}{r}\]
 The differential cross section is then found to be
-\[\frac{d\sigma}{d\Omega} = |f(\theta)+f(\pi-\theta)^2|\]
+\[\frac{d\sigma}{d\Omega} = |f(\theta)+f(\pi-\theta)|^2\]
 Note that one should not integrate over the entire solid angle to obtain the total cross section because $(\theta,\phi)$ and $(\pi - \theta,\phi+\pi)$ correspond to an identical state.
 \\
 For two spin $\frac{1}{2}$ fermions, there are two possible spin wave functions, symmetric $S = 1$ and anti-symmetric $S = 0$.
 Therefore depending on the spin wave function, we either have a anti-symmetric or symmetric spatial wave function, respectively. In particular, the differential cross section is the same as the spinless bosons for the anti-symmetric spin wave function $S= 0 $ while it is
-\[\frac{d\sigma}{d\Omega} = |f(\theta) - f(\pi-\theta)^2|\]
+\[\frac{d\sigma}{d\Omega} = |f(\theta) - f(\pi-\theta)|^2\]
 for the symmetric spin wave function $S = 1$.
 
 \section{Time-dependent formulation}
