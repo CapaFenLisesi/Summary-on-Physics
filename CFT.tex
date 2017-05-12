@@ -672,7 +672,7 @@ where the subscripts refer to three different bases of the space of Jones vector
 
 \section{The field of moving charges}
 \subsection{Retarded potential}
-This time we impose Lorenz Gauge $\partial_{\mu} A^{\mu} = 0$. Maxwell equations would become
+This time we impose Lorenz gauge $\partial_{\mu} A^{\mu} = 0$. Maxwell equations would become
 \[-\partial^2 A^{\mu} = j^{\mu}\]
 We can rewrite it in three dimension form,
 \[\nabla^2 \bm{A} - \frac{\partial^2 \bm{A}}{\partial t^2} = -\bm{J} \quad \nabla^2 \phi - \frac{\partial^2\phi}{\partial t^2} = -\rho\]
@@ -722,7 +722,7 @@ For electric and magnetic field, we have
 
 \section{Radiation}
 \subsection{Far field approximation}
-We consider the field produced by a system of moving charges at distances large compared with the dimensions of the system. We choose the origin of coordinates $O$ anywhere in the interior of the system of charges. The radius vector from $O$ to the point $P$, where we determine the field, we denote by $\bm{R_0}$, and the unit vector in this direction by $\bm{n}$. Let the radius vector of the charge element be $\bm{r}$, and the radius vector from de to the point $P$ be $\bm{R}$. At large distances from the system of charges,$R_0 \gg r$, and we have approximately,
+We consider the field produced by a system of moving charges at distances large compared with the dimensions of the system. We choose the origin of coordinates $O$ anywhere in the interior of the system of charges. The radius vector from $O$ to the point $P$, where we determine the field, we denote by $\bm{R_0}$, and the unit vector in this direction by $\bm{n}$. Let the radius vector of the charge element be $\bm{r}$, and the radius vector from charge to the point $P$ be $\bm{R}$. At large distances from the system of charges,$R_0 \gg r$, and we have approximately,
 \[R \approx R_0 - \bm{n}\cdot\bm{r}\]
 We substitute this for the retarded potentials. In the denominator of the integrands we can neglect $\bm{n}\cdot\bm{r}$ compared with $R_0$. In $t-R$, whether it is possible to neglect these terms is determined by how much the quantities $e$ and $\bm{j}$ change during the time $\bm{n}\cdot\bm{r}$. The potentials of the field at large distances from the system of charges are
 \[\phi(\bm{R}_0,t) = \frac{1}{4\pi R_0} \int \rho(\bm{r},t-R_0+\bm{n}\cdot\bm{r}) dV\]
@@ -799,16 +799,16 @@ dipole, quadrupole, and magnetic dipole radiation. The details of the derivation
 Firstly, consider the reference system in which the particle is at rest at a given moment; in this system of reference we can apply low velocity approximation. Here, we have
 \[d\mathcal{E} = \frac{e^2 w^2}{6\pi}dt \quad d\bm{P} = 0\]
 So, in an arbitrary reference, we have
-\[dP^{\mu} = -\frac{e^2}{6\pi} \frac{du^{\nu}}{d\tau} \frac{du_{\nu}}{d\tau} u^{\mu}d\tau\]
+\[dP^{\mu} = \frac{e^2}{6\pi} \frac{du^{\nu}}{d\tau} \frac{du_{\nu}}{d\tau} u^{\mu}d\tau\]
 Recall the Lorentz equation, the total four-momentum radiated during the time of passage of the particle through a given electromagnetic field is equal to
-\[\Delta P^{\mu} = -\frac{e^4}{6\pi m^2} \int F_{\nu\rho}u^{\rho} F^{\nu\sigma}u_{\sigma} dx^{\mu}\]
+\[\Delta P^{\mu} = \frac{e^4}{6\pi m^2} \int F_{\nu\rho}u^{\rho} F^{\nu\sigma}u_{\sigma} dx^{\mu}\]
 Particularly, we have
 \[\Delta \mathcal{E} = \frac{e^2}{6\pi} \int \frac{w^2 - (\bm{v} \times \bm{w})^2}{(1-v^2)^3} dt = \frac{e^4}{6\pi m^2} \int \frac{(\bm{E} + \bm{v} \times \bm{B})^2-(\bm{E} \cdot \bm{v})^2}{1-v^2} dt\]
 It is clear from formula above that for velocity close to that of light, the total energy radiated per unit time is proportionally to the square of the energy of the moving particle. The only exception is motion in an electric field, along the direction of the field. In this case the factor $(1-v^2)$ standing in the denominator is cancelled by an identical factor in the numerator, and the radiation does not depend on the energy of the particle.
 \\ \\
 Now we discuss the angular distribution of the radiation from a rapidly moving charge. The radiation field is
 \[\bm{E} = \frac{e}{4\pi R} \frac{\bm{n} \times \left[(\bm{n} - \bm{v}) \times \bm{w} \right]}{(1 - \bm{n} \cdot \bm{v})^3}  \quad \bm{B} = \bm{n} \times \bm{E}\]
-where all the quantities on the right sides of the equations refer to the retarded time $t' = t - \frac{R}{c}$. \\
+where all the quantities on the right sides of the equations refer to the retarded time $t' = t - R$. \\
 The intensity radiated into the solid angle $do$ is
 \[dI = \frac{e^2}{16\pi^2} \left\{ \frac{2(\bm{n}\cdot\bm{w})(\bm{v}\cdot\bm{w})}{(1-\bm{v}\cdot\bm{n})^5} + \frac{\bm{w}^2}{(1-\bm{v}\cdot\bm{n})^4} - \frac{(1-v^2)(\bm{n}\cdot\bm{w})^2}{(1-\bm{v}\cdot\bm{n})^6}\right\}do\]
 If we want to determine the angular distribution of the total radiation throughout the whole motion of the particle, we must integrate the intensity over the time. In doing this, it
@@ -820,11 +820,11 @@ which the vector $\bm{n}-\bm{v}$ is parallel to the vector $\bm{w}$.\\ \\
 If the velocity and acceleration of the particle are parallel,
 \[\bm{B} = \frac{e}{4\pi R} \frac{\bm{w} \times \bm{n}}{(1-\bm{v}\cdot\bm{n})^3}\]
 and the intensity is
-\[dI = \frac{e^2}{16\pi^2} \frac{w^2 \sin^2 \theta}{(1-v\cos\theta)^6}\]
+\[dI = \frac{e^2}{16\pi^2} \frac{w^2 \sin^2 \theta}{(1-v\cos\theta)^6} do\]
 It is naturally, symmetric around the common direction of $\bm{v}$ and $\bm{w}$, and vanishes along ($\theta=0$) and opposite to ($\theta = \pi$) the direction of the velocity. In the ultrarelativistic case, the intensity as a function of $\theta$ has a sharp double maximum near $\bm{v}$ , with a steep drop to zero for $\theta = 0$.
 \\ \\
 If the velocity and acceleration are perpendicular to one another,
-\[dI = \frac{e^2 w^2}{16\pi^2} \left[ \frac{1}{(1-v\cos\theta)^4} - \frac{(1-v^2)\sin^2\theta \cos^2\phi}{(1-v\cos\theta)^6} \right]\]
+\[dI = \frac{e^2 w^2}{16\pi^2} \left[ \frac{1}{(1-v\cos\theta)^4} - \frac{(1-v^2)\sin^2\theta \cos^2\phi}{(1-v\cos\theta)^6} \right]do\]
 where $\theta$ is again the angle between $\bm{v}$ and $\bm{n}$, and $\phi$ is the azimuthal angle of the vector $\bm{n}$ relative to the plane passing through $\bm{v}$ and $\bm{w}$.\\ \\
 The discussion of synchrotron radiation (magnetic bremsstrahlung) can be found in section 74 of \emph{The classical theory of fields (L.D.Landau \& E.M.Lifshitz)}.
 
