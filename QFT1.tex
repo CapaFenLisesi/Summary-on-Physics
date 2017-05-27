@@ -1,9 +1,9 @@
 \chapter{From classical field to quantum field}
 \section{Motivation}
 \noindent
-The state of the field is described by an element $|\psi\rangle$ in Hilbert space. The measurement of the field is described by an operator field $\phi_a(\bm{x})$. The mean value of the measurement of the field is described by Erenfest's theorem
+The state of a field is described by an element $|\psi\rangle$ in Hilbert space. The measurement of the field is realised by an operator field $\phi_a(\bm{x})$. The mean value of the measurement of the field satisfies Erenfest's theorem
 \[\frac{d\langle \psi| \phi_a(\bm{x}) | \psi \rangle}{dt} = -i \langle \psi | [\phi_a(\bm{x}),H_S] | \psi \rangle\]
-If $[\phi_a(\bm{x}),H_S]_Q = i[\phi_a(\bm{x}),H_S]_C$, we can reproduce the classical field theory as an average effect of quantum field theory. We also note that the commutation relation here $[A,B] = AB - BA$ obeys the same operation laws as the Poisson bracket in classical field theory. So, what we need here is
+If $[\phi_a(\bm{x}),H_S]_Q = i[\phi_a(\bm{x}),H_S]_C$, classical field theory will be an average effect of quantum field theory. We also note that the commutation relation here $[A,B] = AB - BA$ obeys the same operation laws as the Poisson bracket in classical field theory. So, what we need here is
 \begin{enumerate}
 \item the canonical quantization
 \[[\phi_a(\bm{x}),\phi_b(\bm{y})] = 0 \quad [\pi^a(\bm{x}),\pi^b(\bm{y})] = 0 \quad [\phi_a(\bm{x}),\pi^b(\bm{y})] = i \delta_a^b \delta(\bm{x}-\bm{y}) \]
@@ -11,11 +11,12 @@ If $[\phi_a(\bm{x}),H_S]_Q = i[\phi_a(\bm{x}),H_S]_C$, we can reproduce the clas
 \end{enumerate}
 In Heisenberg picture, we define
 \[A_H \equiv U^{-1}(t,t_0) A_S U(t,t_0)\]
-Especially,
+Especially, we have
 \[\phi_a(x) \equiv U^{-1}(t,t_0) \phi_a(\bm{x}) U(t,t_0)\]
 \[\pi^a(x) \equiv U^{-1}(t,t_0) \pi^a(\bm{x}) U(t,t_0)\]
-If $A = f(\phi_a(\bm{x}),\pi^a(\bm{x}),t)$, then we have $A_H = f(\phi_a(x),\pi^a(x),t)$. \\
-The canonical quantization can be generalized to the field operator in any time
+If $A = f(\phi_a(\bm{x}),\pi^a(\bm{x}),t)$, then $A_H = f(\phi_a(x),\pi^a(x),t)$. 
+\\
+So the canonical quantization can be generalized to the field operator in any time
 \[[\phi_a(\bm{x},t),\phi_b(\bm{y},t)] = 0 \quad [\pi^a(\bm{x},t),\pi^b(\bm{y},t)] = 0 \quad [\phi_a(\bm{x},t),\pi^b(\bm{y},t)] = i \delta_a^b \delta(\bm{x}-\bm{y}) \]
 The dynamics of the field can be describe by Heisenberg equation
 \[\frac{d\phi_a(x)}{dt} = -i[\phi_a(x),H_H]\]
@@ -34,11 +35,11 @@ Lorentz invariance means Lagrangian must be a scalar, or more loosely, action mu
 
 \section{Momentum}
 \noindent
-The definition of momentum is the same as that in classical theory:
+The definition and conservation of momentum is the same as that in classical theory:
 \[T^{\mu \nu} \equiv -\frac{\partial \mathcal{L}}{\partial(\partial_{\mu}\phi_a)} \partial^{\nu} \phi_a + \eta^{\mu \nu} \mathcal{L} \quad \partial_{\mu} T^{\mu \nu} = 0\]
+\[P^{\mu} \equiv \int T^{0 \mu} d^3 x \left(P^{0} = H, P^{i} = \int -\pi^a \partial^i \phi_a d^3 x \right)\]
 and
-\[P^{\mu} \equiv \int T^{0 \mu} d^3 x \quad \frac{d P^{\mu}}{dt} = 0\]
-\[P^{0} = H, \quad P^{i} = \int -\pi^a \partial^i \phi_a d^3 x\]
+\[\frac{d P^{\mu}}{dt} = 0\]
 We can get the commutation relation
 \begin{eqnarray}
 \left[\phi_a,P^{\mu}\right] &=& -i\partial^{\mu} \phi_a \nonumber \\
@@ -53,20 +54,20 @@ then we can derive that
 
 \section{Angular Momentum}
 \noindent
-The definition of angular momentum is the same as that in classical theory:
+The definition and conservation of angular momentum is the same as that in classical theory:
 \[M^{\mu \nu \rho} \equiv x^{\nu}T^{\mu \rho} - x^{\rho} T^{\mu \nu} - \frac{\partial \mathcal{L}}{\partial (\partial_{\mu}\phi_a)}(\Sigma^{\nu \rho})_{a}^{\phantom{a}b}\phi_b\]
-and 
-\[M^{\nu \rho} \equiv \int M^{0 \nu \rho} d^3 x \quad \frac{dM^{\nu \rho}}{dt} = 0\]
-\[M^{\mu \nu} = \int (x^{\mu}T^{0\nu}-x^{\nu}T^{0\mu}-\pi^a(\Sigma^{\mu \nu})_{a}^{\phantom{a}b}\phi_b) d^3 x\]
+\[M^{\nu \rho} \equiv \int M^{0 \nu \rho} d^3 x = \int (x^{\mu}T^{0\nu}-x^{\nu}T^{0\mu}-\pi^a(\Sigma^{\mu \nu})_{a}^{\phantom{a}b}\phi_b) d^3 x\]
+and
+\[\frac{dM^{\nu \rho}}{dt} = 0\]
 We also define that
 \[M_{L}^{\mu \nu} \equiv \int (x^{\mu}T^{0\nu}-x^{\nu}T^{0\mu}) d^3 x \quad M_S^{\mu \nu} \equiv\int (-\pi^a(\Sigma^{\mu \nu})_{a}^{\phantom{a}b}\phi_b) d^3 x\]
-\[(L^{\mu \nu})_a^{\phantom{a}b} \equiv -i(x^{\mu}\partial^{\nu}-x^{\nu}\partial^{\mu})\delta_a^{\phantom{a}b} \quad (S^{\mu \nu})_a^{\phantom{a}b} \equiv -i(\Sigma^{\mu \nu})_a^{\phantom{a}b}\]
+\[(\mathcal{L}^{\mu \nu})_a^{\phantom{a}b} \equiv -i(x^{\mu}\partial^{\nu}-x^{\nu}\partial^{\mu})\delta_a^{\phantom{a}b} \quad (\mathcal{S}^{\mu \nu})_a^{\phantom{a}b} \equiv -i(\Sigma^{\mu \nu})_a^{\phantom{a}b}\]
 We can get the commutation relation
 \[M^{\mu \nu} = M_L^{\mu \nu} + M_S^{\mu \nu}\]
-\[[\phi_a,M_L^{\mu \nu}] = (L^{\mu \nu})_a^{\phantom{a}b} \phi_b \quad [\phi_a,M_S^{\mu \nu}] = (S^{\mu \nu})_a^{\phantom{a}b} \phi_b\]
-\[[\pi^a,M_L^{\mu \nu}] = (L^{\mu \nu})_b^{\phantom{b}a}\pi^{b}  \quad [\pi^a,M_S^{\mu \nu}] = - (S^{\mu \nu})_b^{\phantom{b}a} \pi^b \]
+\[[\phi_a,M_L^{\mu \nu}] = (\mathcal{L}^{\mu \nu})_a^{\phantom{a}b} \phi_b \quad [\phi_a,M_S^{\mu \nu}] = (\mathcal{S}^{\mu \nu})_a^{\phantom{a}b} \phi_b\]
+\[[\pi^a,M_L^{\mu \nu}] = (\mathcal{L}^{\mu \nu})_b^{\phantom{b}a}\pi^{b}  \quad [\pi^a,M_S^{\mu \nu}] = - (\mathcal{S}^{\mu \nu})_b^{\phantom{b}a} \pi^b \]
 \[[M^{\mu \nu},M^{\rho \sigma}] = i(-\eta^{\nu \rho}M^{\mu \sigma} + \eta^{\sigma \mu}M^{\rho \nu} + \eta^{\mu \rho}M^{\nu \sigma} - \eta^{\sigma \nu}M^{\rho \mu})\] \\
-We again define $J_i \equiv \frac{1}{2} \epsilon_{ijk} M^{jk}$ and $K_i \equiv M^{i0}$, the communication relation can be written as
+We again define $J_i \equiv \frac{1}{2} \epsilon_{ijk} M^{jk}$ and $K_i \equiv M^{i0}$, the commutation relation can be rewritten as
 \begin{eqnarray}
 \left[J_i,J_j\right] &=& i\epsilon_{ijk}J_k \nonumber \\
 \left[J_i,K_j\right] &=& i\epsilon_{ijk}K_k \nonumber \\
@@ -87,9 +88,9 @@ At last, we also define $L_i \equiv \frac{1}{2} \epsilon_{ijk} M_L^{jk}$ and $S_
 \left[L_i,P_j\right] &=& i\epsilon_{ijk}P_k \nonumber
 \end{eqnarray}
 We define the rotation operator $U(\Lambda)$ by
-\[U^{-1}(\Lambda) \phi_a(x) U(\Lambda) = \mathcal{S}_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
+\[U^{-1}(\Lambda) \phi_a(x) U(\Lambda) = \mathscr{S}_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
 where
-\[\mathcal{S}_{a}^{\phantom{a}b} = \delta_{a}^{\phantom{a}b}+\frac{i}{2} \delta \omega_{\alpha \beta} (S^{\alpha \beta})_{a}^{\phantom{a}b} \]
+\[\mathscr{S}_{a}^{\phantom{a}b} = \delta_{a}^{\phantom{a}b}+\frac{i}{2} \delta \omega_{\alpha \beta} (\mathcal{S}^{\alpha \beta})_{a}^{\phantom{a}b} \]
 We can derive that
 \[U(1+\delta \omega) = 1 + \frac{i}{2} \delta \omega_{\mu \nu} M^{\mu \nu} \quad U(\Lambda) = e^{\frac{i}{2} \theta_{\mu \nu} M^{\mu \nu}}\]
 \[U^{-1}(\Lambda) P^{\mu} U(\Lambda) = \Lambda^{\mu}_{\phantom{\mu}\nu} P^{\nu}\]
