@@ -63,7 +63,6 @@ We also define that
 \[M_{L}^{\mu \nu} \equiv \int (x^{\mu}T^{0\nu}-x^{\nu}T^{0\mu}) d^3 x \quad M_S^{\mu \nu} \equiv\int (-\pi^a(\Sigma^{\mu \nu})_{a}^{\phantom{a}b}\phi_b) d^3 x\]
 \[(\mathcal{L}^{\mu \nu})_a^{\phantom{a}b} \equiv -i(x^{\mu}\partial^{\nu}-x^{\nu}\partial^{\mu})\delta_a^{\phantom{a}b} \quad (\mathcal{S}^{\mu \nu})_a^{\phantom{a}b} \equiv -i(\Sigma^{\mu \nu})_a^{\phantom{a}b}\]
 We can get the commutation relation
-\[M^{\mu \nu} = M_L^{\mu \nu} + M_S^{\mu \nu}\]
 \[[\phi_a,M_L^{\mu \nu}] = (\mathcal{L}^{\mu \nu})_a^{\phantom{a}b} \phi_b \quad [\phi_a,M_S^{\mu \nu}] = (\mathcal{S}^{\mu \nu})_a^{\phantom{a}b} \phi_b\]
 \[[\pi^a,M_L^{\mu \nu}] = (\mathcal{L}^{\mu \nu})_b^{\phantom{b}a}\pi^{b}  \quad [\pi^a,M_S^{\mu \nu}] = - (\mathcal{S}^{\mu \nu})_b^{\phantom{b}a} \pi^b \]
 \[[M^{\mu \nu},M^{\rho \sigma}] = i(-\eta^{\nu \rho}M^{\mu \sigma} + \eta^{\sigma \mu}M^{\rho \nu} + \eta^{\mu \rho}M^{\nu \sigma} - \eta^{\sigma \nu}M^{\rho \mu})\] \\
@@ -73,7 +72,7 @@ We again define $J_i \equiv \frac{1}{2} \epsilon_{ijk} M^{jk}$ and $K_i \equiv M
 \left[J_i,K_j\right] &=& i\epsilon_{ijk}K_k \nonumber \\
 \left[K_i,K_j\right] &=& -i\epsilon_{ijk}J_k \nonumber
 \end{eqnarray} \\
-Further more,
+Further more, we have
 \[[P^{\mu},M^{\rho \sigma}] = i(\eta^{\mu \sigma}P^{\mu} - \eta^{\mu \rho}P^{\sigma})\]
 \begin{eqnarray}
 \left[J_i,H\right] &=& 0 \nonumber \\
@@ -106,16 +105,19 @@ If the operator $A$ composes of the terms like $\pi^a \mathcal{E}_a^{\phantom{a}
 \section{Klein-Gordon field}
 \subsubsection{Lagrangian}
 \[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi \partial_{\mu} \phi -\frac{1}{2}m^2 \phi^2 + \Omega_0\]
+
 \subsubsection{Field equation}
 \[(\partial^{\mu} \partial_{\mu} - m^2) \phi = 0\]
+
 \subsubsection{Hamiltonian}
 \[\pi = \dot{\phi}\]
 \[\mathcal{H} = \frac{1}{2} \pi^2 + \frac{1}{2} (\nabla \phi)^2 + \frac{1}{2} m^2 \phi^2-\Omega_0\]
 \[H = \int \mathcal{H} d^3 x\]
+
 \subsubsection{Momentum and angular momentum}
 \[T^{\mu \nu} = \partial^{\mu} \phi \partial^{\nu} \phi - \eta^{\mu \nu}(\frac{1}{2}\partial^{\mu}\phi \partial_{\mu} \phi + \frac{1}{2}m^2 \phi^2 -\Omega_0)\]
 \[P^0 = H \quad P^i = \int -\pi \nabla^i \phi d^3 x\]
-\[J_k = \int - \pi \epsilon_{ijk} x^{j} \nabla^{k} \phi d^3 x\]
+\[J_i = \int  \epsilon_{ijk} x^{j} \left(- \pi \nabla^{k} \phi\right) d^3 x\]
 
 \section{Canonical quantization Formulation}
 \subsubsection{Canonical quantization}
@@ -124,60 +126,72 @@ If the operator $A$ composes of the terms like $\pi^a \mathcal{E}_a^{\phantom{a}
 \left[\pi(\bm{x},t),\pi(\bm{y},t)\right] &=& 0 \nonumber \\
 \left[\phi(\bm{x},t),\pi(\bm{y},t)\right] &=& i \delta(\bm{x}-\bm{y}) \nonumber
 \end{eqnarray}
+
 \subsubsection{Fourier expansion}
 \[\phi(\bm{x},t) = \int \widetilde{dk} \left[ a(\bm{k})e^{ikx} + a^{\dagger}(\bm{k})e^{-ikx} \right]\]
 \[\pi(\bm{x},t) = -i \int  \widetilde{dk} \omega \left[ a(\bm{k})e^{ikx} - a^{\dagger}(\bm{k})e^{-ikx} \right]\]
-Here, $k^2 = \bm{k}^2 - \omega^2 = -m^2$, $kx = \bm{k}\cdot \bm{x} - \omega t$, $\widetilde{dk} = \frac{d^3k}{(2\pi)^3 2\omega}$
+where $k^2 \equiv \bm{k}^2 - \omega^2 = -m^2$, $kx \equiv \bm{k}\cdot \bm{x} - \omega t$, $\widetilde{dk} \equiv \frac{d^3k}{(2\pi)^3 2\omega}$. 
+So, we can derive that
 \[a(\bm{k}) = \int d^3 x e^{-ikx}(i\pi+\omega \phi)\]
 \[a^{\dagger}(\bm{k}) = \int d^3 x e^{ikx}(-i\pi+\omega \phi)\]
+We can also get the commutation relations in terms of $a$ and $a^{\dagger}$,
 \begin{eqnarray}
 \left[a(\bm{p}),a(\bm{q})\right] &=& 0 \nonumber \\
 \left[a^{\dagger}(\bm{p}),a^{\dagger}(\bm{q})\right] &=& 0 \nonumber \\
 \left[a(\bm{p}),a^{\dagger}(\bm{q})\right] &=& (2\pi)^3 2\omega \delta(\bm{p}-\bm{q}) \nonumber
 \end{eqnarray}
+
 \subsubsection{Operator represented by $a$ and $a^{\dagger}$}
 \[H=\int \widetilde{dk}\, \omega\, a^{\dagger}(\bm{k})a(\bm{k}) + (\mathcal{E}_0 - \Omega_0)V \quad \mathcal{E}_0 = \frac{1}{2}(2\pi)^{-3}\int d^3 k \,\omega\]
 \[P^{i}=\int \widetilde{dk}\, k^{i}\, a^{\dagger}(\bm{k})a(\bm{k}) \]
+
 \subsubsection{Particles}
 \[[H,a(\bm{k})] = -\omega a(\bm{k}) \quad [H,a^{\dagger}(\bm{k})] = \omega a^{\dagger}(\bm{k})\]
 \[[P^i,a(\bm{k})] = -k^i a(\bm{k}) \quad [P^i,a^{\dagger}(\bm{k})] = k^i a^{\dagger}(\bm{k})\]
-Let $|p\rangle = a^{\dagger}(\bm{p})|0\rangle $,so
+Let $|p\rangle = a^{\dagger}(\bm{p})|0\rangle $,we have
 \[H |p\rangle = \omega_p|p\rangle \quad P^i |p\rangle = p^i|p\rangle\]
 So, we interpret the state $|\bm{p}\rangle$ as the momentum eigenstate of a single particle of mass $m$. We can also show that 
 $J_i|\bm{p} = 0\rangle = 0$, so the particle carries no internal angular momentum.
+
 \subsubsection{Causality}
 \noindent
 The amplitude for a particle to propagate from $y$ to $x$ is $\langle 0 | \phi(x) \phi(y) | 0 \rangle$, denoted by $D(x-y)$.
+We can show that
 \[D(x-y) = \int \widetilde{dk} e^{ik(x-y)}\]
 \[[\phi(x),\phi(y)] = D(x-y) -D(y-x)\]
 If $x-y$ is space-like, a continuous Lorentz transformation can take $(x-y)$ to $-(x-y)$. So $[\phi(x),\phi(y)] =0$ for space-like $x-y$. A measurement performed at one point can not affect a measurement at another point whose separation is space-like.
 \subsubsection{The Klein-Gordon propagator}
 \[D_R(x-y) \equiv \theta(x^0-y^0) \langle 0 | [\phi(x) \phi(y)] | 0 \rangle = \int \frac{d^4 p}{(2\pi)^4} \frac{-i}{p^2+m^2} e^{ip(x-y)}\]
+
+\[(\partial^2-m^2) D_R(x-y) = i \delta(x-y)\]
+
 \begin{figure}[!h]
 \centering
-\includegraphics[height=2.55cm ,width=11.88cm]{QFT1/Green1.png}
+\includegraphics[scale=0.35]{QFT1/Green1.png}
 \caption{Retarded Green Function}
 \end{figure}
-\[(\partial^2-m^2) D_R(x-y) = i \delta(x-y)\]
+
 \[D_F(x-y) \equiv \langle 0 | T\phi(x) \phi(y) | 0 \rangle = \int \frac{d^4 p}{(2\pi)^4} \frac{-i}{p^2+m^2-i\epsilon} e^{ip(x-y)}\]
 Here, $T$ stands for time ordering, placing all operators evaluated at later times to the left.
 \begin{figure}[!h]
 \centering
-\includegraphics[height=2.38cm ,width=12.24cm]{QFT1/Green2.png}
+\includegraphics[scale=0.35]{QFT1/Green2.png}
 \caption{Feynman Green Function}
 \end{figure}
 
 \section{Perturbation theory for canonical quantization}
 \[\mathcal{L} = -\frac{1}{2}\partial_{\mu} \phi \partial^{\mu} \phi -\frac{1}{2}m_0^2 \phi^2 -\frac{\lambda_0}{4!}\phi^4\]
 \[H = H_0 + H_{int} \quad H_{int} = \int d^3 x \frac{\lambda_0^4}{4!} \phi^4 (\bm{x})\]
+
 \subsection{Perturbation expansion of correlation functions}
 \begin{note}
 The ground state of the interaction field theory is denoted by $| \Omega \rangle$, the ground state of the free field theory is denoted by $| 0 \rangle$. The zero of energy is defined by $H_0 | 0 \rangle =0$ and $E_0 = \langle \Omega | H | \Omega \rangle$.
 \end{note}
-\[\phi(t_0,\bm{x}) = \int \frac{d^3p}{(2\pi)^3}( a(\bm{p})e^{i\bm{p}\cdot\bm{x}} + a^{\dagger}(\bm{p})e^{-i\bm{p}\cdot\bm{x}})\]
-\[\phi(t,\bm{x}) = e^{iH(t-t_0)} \phi(t_0,\bm{x}) e^{-iH(t-t_0)}\]
-\[\phi_I(t,\bm{x}) \equiv e^{iH_0(t-t_0)} \phi(t_0,\bm{x}) e^{-iH_0(t-t_0)}\]
-\[H_I(x) = \int d^3x \frac{\lambda_0^4}{4!} \phi_I^4\]
+Define
+\[\phi(\bm{x}) \equiv \phi(t_0,\bm{x}) = \int \frac{d^3p}{(2\pi)^3}( a(\bm{p})e^{i\bm{p}\cdot\bm{x}} + a^{\dagger}(\bm{p})e^{-i\bm{p}\cdot\bm{x}})\]
+\[\phi(t,\bm{x}) = e^{iH(t-t_0)} \phi(\bm{x}) e^{-iH(t-t_0)}\]
+\[\phi_I(t,\bm{x}) \equiv e^{iH_0(t-t_0)} \phi(\bm{x}) e^{-iH_0(t-t_0)}\]
+\[H_I(x) \equiv \int d^3x \frac{\lambda_0^4}{4!} \phi_I^4\]
 The perturbation expansion of correlation functions is
 \[\langle \Omega | T \{ \phi(x) \phi(y) \} | \Omega \rangle = \lim_{T \to \infty(1-i\epsilon)} \frac{\langle 0 | T \left\{ \phi_I(x) \phi_I(y) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle}{\langle 0 | T \left\{ \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle}\]
 The proof can be found in chapter 4.2 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}
@@ -198,7 +212,7 @@ The proof can be found in chapter 4.3 of \emph{An introduction to quantum field 
 \end{example}
 
 \subsection{Feynman diagram}
-Expand $\langle 0 | T \left\{ \phi_I(x) \phi_I(y) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle$ to the first order of $\lambda_0$
+Expand $\langle 0 | T \left\{ \phi_I(x) \phi_I(y) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle$ to the first order of $\lambda_0$,
 \begin{eqnarray}
 & &\langle 0 | T \left\{ \phi_I(x) \phi_I(y) \frac{-i\lambda_0}{4!} \int dz^4 \phi_I(z) \phi_I(z) \phi_I(z) \phi_I(z) \right\} | 0 \rangle \nonumber \\
 &=& 3 \cdot (\frac{-i\lambda_0}{4!}) D_F(x-y) \int d^4 z D_F(z-z) D_F(z-z) \nonumber \\
@@ -207,12 +221,10 @@ Expand $\langle 0 | T \left\{ \phi_I(x) \phi_I(y) \mathrm{exp} \left[ -i \int_{-
 It can be represented by the so called Feynman diagram.
 \begin{figure}[!h]
 \centering
-\includegraphics[height=1.98cm ,width=10.68cm]{QFT1/FD1.png}
-\caption{Feynman diagram representation of perturbation expansion}
+\includegraphics[scale=0.35]{QFT1/FD1.png}
+\caption{Feynman diagram representation of perturbation expansion. The symmetry factor of the first diagram is $S = 4!/3 = 8$. The symmetry factor of the second diagram is $S = 4!/12 = 2$.}
 \end{figure}
 \\
-The symmetry factor of the first diagram is $S = \frac{4!}{3} = 8$.
-The symmetry factor of the second diagram is $S = \frac{4!}{12} = 2$.
 The Feynman rules for $\phi^4$ theory are:
 \begin{enumerate}
 \item For each propagator, $P = D_F(x-y)$
@@ -222,7 +234,7 @@ The Feynman rules for $\phi^4$ theory are:
 \end{enumerate}
 At last, we can prove that
 \[\langle \Omega | T \{ \phi_I(x_1) \phi_I(x_2) \cdots \phi_I(x_n) \} | \Omega \rangle = \mbox{ sum of all E-connected diagrams with n external points}\]
-Here, the ``E-disconnected'' means disconnected from all external points'', being called ``vacuum bubbles''. They vacuum bubbles in $\langle 0 | T \left\{ \phi_I(x_1) \phi_I(x_2) \cdots \phi_I(x_n) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle$ are all cancelled by the $\langle 0 | T \left\{ \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle$.
+Here, the ``E-disconnected'' means disconnected from all external points, being called ``vacuum bubbles''. They vacuum bubbles in $\langle 0 | T \left\{ \phi_I(x_1) \phi_I(x_2) \cdots \phi_I(x_n) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle$ are all cancelled by the $\langle 0 | T \left\{ \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle$.
 
 \section{Path integral formulation}
 \subsection{Basic formulation}
@@ -260,16 +272,17 @@ Recall that $(\partial^2-m^2)D_F(x-y) = i\delta(x-y)$, we can derive that
 After integration, we can know that
 \[Z[J] = Z[0] \mathrm{exp} [-\frac{1}{2} \int d^4x d^4y J(x)D_F(x-y)J(y)]\]
 So,
-\[\langle 0 | T \phi_H(x_1) \phi_H(x_2) | 0 \rangle =  \frac{1}{Z[0]}- \frac{\delta}{\delta J(x_1)} \frac{\delta}{\delta J(x_2)} \mathrm{exp} \left. \left[-\frac{1}{2} \int d^4x d^4y J(x)D_F(x-y)J(y)\right] \right |_{J=0} = D_F(x_1-x_2)\]
+\[\langle 0 | T \phi_H(x_1) \phi_H(x_2) | 0 \rangle =  \frac{1}{Z[0]}- \frac{\delta}{\delta J(x_1)} \frac{\delta}{\delta J(x_2)} \mathrm{exp} \left. \left[-\frac{1}{2} \int d^4x d^4y JD_FJ\right] \right |_{J=0} = D_F(x_1-x_2)\]
 
-\section{Perturbation theory for path integral quantization}
+\subsection{Perturbation theory for path integral quantization}
+The Lagrangian and generating functional of the $\phi^4$ theory is
 \begin{eqnarray}
 \mathcal{L} &=& -\frac{1}{2}\partial_{\mu} \phi \partial^{\mu} \phi -\frac{1}{2}m_0^2 \phi^2 -\frac{\lambda_0}{4!}\phi^4 \nonumber \\
 \mathcal{L} &=& \mathcal{L}_0 + \mathcal{L}_1 \quad \mathcal{L}_1 =- \frac{\lambda_0}{4!} \phi^4 (\bm{x}) \nonumber \\
 Z[J] &=& \int \mathcal{D}\phi e^{i\int d^4x [\mathcal{L}_0 + \mathcal{L}_1 + J\phi]} \nonumber \\
 &=& e^{i\int d^4y \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(y)})} \int \mathcal{D}\phi e^{i\int d^4x [\mathcal{L}_0 + J\phi]} \nonumber \\
-& = & Z_0[0]e^{i\int d^4x \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(x)})} \mathrm{exp} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)] \nonumber \\
-& =& Z_0[0]\sum_{V=0}^{\infty} \frac{1}{V!} [ \frac{-i\lambda_0}{4!} \int d^4x (\frac{1}{i} \frac{\delta}{\delta J(x)})^4]^V \times \sum_{P=0}^{\infty} \frac{1}{P!} [-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)]^P \nonumber
+& = & Z_0[0]e^{i\int d^4x \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(x)})} \mathrm{exp} \left[-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)\right] \nonumber \\
+& =& Z_0[0]\sum_{V=0}^{\infty} \frac{1}{V!} \left[ \frac{-i\lambda_0}{4!} \int d^4x \left(\frac{1}{i} \frac{\delta}{\delta J(x)}\right)^4\right]^V \times \sum_{P=0}^{\infty} \frac{1}{P!} \left[-\frac{1}{2} \int d^4y d^4z J(y)D_F(y-z)J(z)\right]^P \nonumber
 \end{eqnarray}
 If we focus on a term with particular values of V and P, then
 the number of surviving sources (after we take all the functional derivatives) is $E = 2P-4V$. The $4V$ functional derivatives can act on the 2P sources in $\frac{(2P)!}{(2P-4V)!}$ different combinations. However, many of the resulting expressions are algebraically identical.\\ \\
@@ -284,7 +297,7 @@ As, $W[0]=0$, we know
 The notation $I\neq \{0\}$ means that the vacuum diagrams are omitted from the sum.\\
 The detailed discussion can be found in chapter 9 of \emph{Quantum field theory (M. Srednicki)}.
 
-\section{Symmetries in the functional formalism}
+\subsection{Symmetries in the functional formalism}
 \subsubsection{Equations of motion}
 \noindent
 The correlation function of the field theory is given by
@@ -300,12 +313,13 @@ so
 \[\langle \frac{\delta S}{\delta \phi(x)} \phi(x_1)\cdots\phi(x_n) \rangle  = \sum_{i=1}^{n} \langle \phi(x_1) \cdots (i\delta(x-x_i)) \cdots \phi(x_n) \rangle\]
 \begin{example}
 For Klein-Gordon field,
-\[\mathcal{L} = -\frac{1}{2}\phi^{\mu}\phi \partial_{\mu}\phi - \frac{1}{2}m\phi^2\]
+\[\mathcal{L} = -\frac{1}{2}\phi^{\mu}\phi \partial_{\mu}\phi - \frac{1}{2}m^2\phi^2\]
 The variation of $S$ gives
 \[\frac{\delta S}{\delta \phi(x)} = (\partial^2-m^2)\phi(x)\]
 So, we can get
 \[(\partial^2-m^2) \langle 0 | T \phi(x)\phi(x_1)| 0 \rangle = i\delta(x-x_1)\]
 \end{example}
+
 \subsubsection{Conservation law}
 Consider a local field theory of a set of fields $\phi_a(x)$, governed by a Lagrangian $\mathcal{L}(\phi)$. An infinitesimal symmetry transformation on the fields $\phi_a$ will be of the general form 
 \[\phi_a(x) \to \phi_a(x) + \epsilon \Delta \phi_a(x)\]
@@ -335,7 +349,7 @@ Recall that
 \[\delta^{(3)}(0) = \frac{V}{(2\pi)^3} \quad \delta^{(4)}(0) = \frac{VT}{(2\pi)^4} \quad \langle p | p \rangle = (2\pi)^3 2\omega \delta^{(3)}(0)\]
 and write the scattering amplitude in the form of
 \[\langle i | S | f \rangle = i\mathcal{M}(2\pi)^4\delta(\sum p_f-\sum p_i)\]
-We can calculate that
+We can get that
 \[|\langle i | S | f \rangle|^2 = |\mathcal{M}|^2 VT (2\pi)^4 \delta(\sum p_j - p_1 - p_2) \quad \langle i | i \rangle = (2E_1V) (2E_2V) \quad \langle f | f \rangle = \prod_j (2E_jV)\]
 At last, putting everything together, we have
 \[d\sigma = \frac{1}{(2E_1)(2E_2)|\bm{v}_1-\bm{v}_2|} |\mathcal{M}|^2 d\Pi_{\mathrm{LIPS}}\]
@@ -356,14 +370,14 @@ We can derive the decay rates by the similar method,
 \subsubsection{Special cases}
 \noindent
 For $2 \to 2$ scattering in the center-of-mass frame
-\[p_1 + p_2 \to p_3 + p_4\]
-Then
+$p_1 + p_2 \to p_3 + p_4$,
+the LIPS is
 \[d\Pi_{\mathrm{LIPS}} = \frac{d^3p_3}{(2\pi)^3} \frac{1}{2E_3 } \frac{d^3p_4}{(2\pi)^3} \frac{1}{2E_4} (2\pi)^4 \delta(p_3+p_4-p_1-p_2)\]
 We can now integrate over $\bm{p}_4$ to give
 \[d\Pi_{\mathrm{LIPS}} = \frac{1}{16\pi^2} d\Omega \int dp_f \frac{p_f^2}{E_3 E_4} \delta(E_3+E_4 -E_{CM})\]
-where $p_f = |\bm{p}_3| = |\bm{p}_4|$, $E_3 = \sqrt{p_f^2 + m_3^2}$ ,$E_4 = \sqrt{p_f^2 + m_4^2}$ and $E_{CM} = E_1 + E_2$. 
+where $p_f \equiv |\bm{p}_3| = |\bm{p}_4|$ and $E_{CM} \equiv E_1 + E_2$.
 Define $x(p_f) \equiv E_3 + E_4 - E_{CM}$, we can get
-\[\frac{dx}{dp_f} = \frac{E_3+E_4}{E_3 E_4}p_f\]
+$dx/dp_f = (E_3+E_4)p_f/E_3E_4$.
 So,
 \[d\Pi_{\mathrm{LIPS}} = \frac{1}{16\pi^2} d\Omega \frac{p_f}{E_{CM}}\theta (E_{CM} - m_3 -m_4)\]
 Plugging this into the general equation for cross section, we can get
