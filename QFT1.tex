@@ -389,12 +389,13 @@ If all the masses are equal then this formula simplifies further
 \section{LSZ reduction formula}
 \subsection{Field strength renormalization}
 \noindent
-The completeness relation:
+We have the completeness relation:
 \[\bm{1} = |\Omega\rangle\langle\Omega| +  \sum_{\lambda} \int \frac{d^3p}{(2\pi)^3} \frac{1}{2E_{\bm{p}}} |\lambda_{\bm{p}}\rangle\langle\lambda_{\bm{p}}|\]
-Here, $E_{\bm{p}} = \sqrt{m_{\lambda}^2 + \bm{p}^2}$\\
+where $E_{\bm{p}} \equiv \sqrt{m_{\lambda}^2 + \bm{p}^2}$.
+\\
 \begin{figure}[!h]
 \centering
-\includegraphics[height=8.10cm ,width=12.02cm]{QFT1/FSR1.png}
+\includegraphics[scale = 0.3]{QFT1/FSR1.png}
 \caption{Particle's energy-momentum relation}
 \end{figure}
 \\
@@ -406,13 +407,14 @@ So,
 \[\langle \Omega | \phi(x) \phi(y) | \Omega \rangle_C = \sum_{\lambda} \int \frac{d^4p}{(2\pi)^4} \frac{-i}{p^2 + m_{\lambda}^2 -i\epsilon} e^{ip(x-y)} |\langle \Omega | \phi(0) | \lambda_0 \rangle|^2\]
 Analogous expressions hold for the case $y^0 > x^0$, and both cases can be summarized as
 \[\langle \Omega | T \phi(x) \phi(y) | \Omega \rangle_C = \int_0^{\infty} \frac{dM^2}{2\pi} \rho(M^2) D_F(x-y;M^2)\]
-and 
-\[\rho(M^2) = \sum_{\lambda} (2\pi) \delta(M^2-m^2)|\langle \Omega | \phi(0) | \lambda_0 \rangle|^2 \]
+where 
+\[\rho(M^2) \equiv \sum_{\lambda} (2\pi) \delta(M^2-m_{\lambda}^2)|\langle \Omega | \phi(0) | \lambda_0 \rangle|^2 \]
 \begin{figure}[!h]
 \centering
-\includegraphics[height=5.33cm ,width=13.26cm]{QFT1/FSR2.png}
+\includegraphics[scale=0.3]{QFT1/FSR2.png}
 \caption{The structure of the spectral density function $\rho(M^2)$}
-\end{figure}\\
+\end{figure}
+\\
 The one-particle state contribute an isolated delta function to the spectral density function, so
 \[\rho(M^2) = 2\pi \delta (M^2 -m^2) \cdot Z + \mbox{ (nothing else until $M^2 > \sim (2m)^2$) }\]
 $Z = |\langle \Omega | \phi(0) | \lambda_0 \rangle|^2$ is called field-strength renormalization. $m$ is the physical mass of a single particle of the $\phi$ boson. The Fourier transformation of the two point function is
@@ -422,7 +424,7 @@ $Z = |\langle \Omega | \phi(0) | \lambda_0 \rangle|^2$ is called field-strength 
 \end{eqnarray}
 \begin{figure}[!h]
 \centering
-\includegraphics[height=4.73cm ,width=11.22cm]{QFT1/FSR3.png}
+\includegraphics[scale=0.3]{QFT1/FSR3.png}
 \caption{The structure of the two point function in Fourier space}
 \end{figure}
 \vspace{80pt}
@@ -442,24 +444,23 @@ To express the formula above in the language of Feynman diagrams, we consider th
 has the general form showed as below.
 \begin{figure}[!h]
 \centering
-\includegraphics[height=5.26cm ,width=7.07cm]{QFT1/LSZ1.png}
+\includegraphics[scale=0.3]{QFT1/LSZ1.png}
 \caption{Amputated Feynman diagram}
 \end{figure}\\
 We can sum up the corrections to each external leg. Let $-iM^2(p^2)$ denote the sum of all 1PI insertions into the scalar propagator:
 \begin{figure}[!h]
 \centering
-\includegraphics[height=1.61cm ,width=13.24cm]{QFT1/LSZ2.png}
+\includegraphics[scale=0.25]{QFT1/LSZ2.png}
 \caption{Diagram representation of 1PI propagator}
 \end{figure}
 \begin{note}
 One-particle-irreducible, or 1PI for short, refers to diagrams that is still connected after one line is cut
 \end{note}
 \noindent
-Then the exact propagator can be written as a geometric series in
-Figure 21.9.
+Then the exact propagator can be written as a geometric series as below.
 \begin{figure}[!h]
 \centering
-\includegraphics[height=1.17cm ,width=12.44cm]{QFT1/LSZ3.png}
+\includegraphics[scale=0.25]{QFT1/LSZ3.png}
 \caption{Diagram representation of exact propagator}
 \end{figure}\\
 The result is $\frac{-i}{p^2 + m_0^2 + M^2}$. If we expand each resummed propagator about the physical particle pole, we see that each external leg of the four-point amplitude contributes
@@ -469,9 +470,10 @@ Thus, the sum of diagrams contains a product of four point poles:
 So, the S matrix element can be represented by 
 \begin{figure}[!h]
 \centering
-\includegraphics[height=2.04cm ,width=8.75cm]{QFT1/LSZ4.png}
+\includegraphics[scale=0.3]{QFT1/LSZ4.png}
 \caption{Feynman diagram representation of LSZ reduction formula}
-\end{figure}\\
+\end{figure}
+\\
 It is easy to be generalized to the more complicated scattering cases. After Fourier transforming the n-point function to momentum space and cutting off the external legs, the Feynman rules for S-matrix element can be stated as follows:
 \begin{enumerate}
 \item For each propagator, $P = \frac{-i}{p^2 + m_0^2 -i\epsilon}$;
@@ -485,16 +487,14 @@ It is easy to be generalized to the more complicated scattering cases. After Fou
 We can write $\langle f | S | i \rangle = (Z_1)^{\frac{n_s}{2}} i \mathcal{M} (2\pi)^4 \delta(\sum p_f - \sum p_i)$ for convenience.
 
 \section{Renormalization}
-\noindent
 Renormalization, the procedure in quantum field theory by which divergent parts of a calculation, leading to nonsensical infinite results, are absorbed by redefinition into a few measurable quantities, so yielding finite answers.
 
 \subsection{Counting of ultraviolet divergence}
-\noindent
 Consider a pure scalar theory in $d$ dimensions with a $\phi^n$ interaction term
 \[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi \partial_{\mu} \phi -\frac{1}{2}m^2 \phi^2 - \frac{\lambda}{n!}\phi^n\]
 Let $N$ be the number of external lines in the diagram, $P$ the number of propagators, $V$ the number of vertices. The number of the loops in the diagram is $L=P-V+1$.  There are $n$ lines meeting at each vertex, so $nV = 2P+N$. Loosely speaking, each loop has an integral $d^d p$, each propagator has a factor $p^{-2}$, so the superficial degrees of divergence is
 \[D = dL - 2P = d + [n(\frac{d-2}{2})-d)]V - (\frac{d-2}{2})N\]
-According the superficial degrees of divergence of the diagram. These three possible types of ultraviolet behaviour of quantum field theories. We will refer to them as follows
+According the superficial degrees of divergence of the diagram. There are three possible types of ultraviolet behaviour of quantum field theories. We will refer to them as follows.
 
 \begin{enumerate}
 \item Super-renormalizable theory: Only a finite number of Feynman diagrams superficially diverge.
@@ -504,7 +504,8 @@ occur at all orders in perturbation theory.
 theory.
 \end{enumerate}
 \noindent
-So, for $\phi^4$ theory in four dimension, $D = 4 - N$. It is a renormalizable theory. For $\phi^3$ theory in four dimension, $D = 4 - V -N$. It is a super-renormalizable theory. For $\phi^6$ theory in four dimension, $D = 4 + 2V -N$. It is a Non-renormalizable theory. \\ \\
+So, for $\phi^4$ theory in four dimension, $D = 4 - N$. It is a renormalizable theory. For $\phi^3$ theory in four dimension, $D = 4 - V -N$. It is a super-renormalizable theory. For $\phi^6$ theory in four dimension, $D = 4 + 2V -N$. It is a Non-renormalizable theory. 
+\\ \\
 The superficial degrees of freedom can also be derived from dimensional analysis. The dimension of $\lambda$ is $d - \frac{n(d-2)}{2}$. Now consider an arbitrary diagram with $N$ external lines. One way that such a diagram could arise is from an interaction term $\eta \phi^N$ in the Lagrangian. The dimension of $\eta$ would then be $d - \frac{N(d-2)}{2}$, and therefore we conclude that any (amputated) diagram with $N$ external lines has dimension $d - \frac{N(d-2)}{2}$. In our theory with only the $\lambda \phi^n$ vertex, if the diagram has $V$ vertices, its divergent part is proportional to $\lambda^V \Lambda^D$, where $\Lambda$ is a high momentum cut-off and $D$ is the superficial degree of divergence.  Applying dimensional analysis, we find
 \[d - \frac{N(d-2)}{2} = V[d - \frac{n(d-2)}{2}] + D\]
 Note that the quantity that multiplies $V$ in this expression is just the dimension of the coupling constant $\lambda$. Thus we can characterize the three degrees of renormalizability in a second way:
@@ -523,10 +524,10 @@ We write $m_0$ and $\lambda_0$, to emphasize that these are the bare values of t
 Since the theory is invariant under $\phi \to -\phi$, all amplitudes with an odd number of external legs vanish. The only divergent amplitudes are therefore
 \begin{figure}[!h]
 \centering
-\includegraphics[height=4cm ,width=8.89cm]{QFT1/RG1.png}
+\includegraphics[scale=0.35]{QFT1/RG1.png}
 \caption{Divergence of $\phi^4$ theory}
 \end{figure}
-\noindent
+\\
 Ignoring the vacuum diagram, these amplitudes contain three infinite constants. Our goal is to absorb these constants into the three unobservable parameters of the theory: the bare mass, the bare coupling constant, and the field strength. To accomplish this goal, it is convenient to reformulate the perturbation expansion so that these unobservable quantities do not appear
 explicitly in the Feynman rules. Recall that the exact two-point function has the form
 \[\int d^4x \langle \Omega | \phi(x) \phi(0) | \Omega \rangle e^{-ipx} = \frac{-iZ}{p^2+m^2} + \mbox{ terms regular at } p^2 = m^2\]
@@ -536,25 +537,20 @@ We also define
 \[\delta_Z = Z -1 \quad \delta_m = Zm_0^2 - m^2 \quad \delta_{\lambda} = \lambda_0 Z^2 - \lambda\]
 Then the Lagrangian becomes
 \[\mathcal{L} = -\frac{1}{2} \partial^{\mu} \phi_r \partial_{\mu} \phi_r -\frac{1}{2}m^2 \phi_r^2 - \frac{\lambda}{4!}\phi_r^4 -\frac{1}{2} \delta_Z \partial^{\mu} \phi_r \partial_{\mu} \phi_r -\frac{1}{2}\delta_m \phi_r^2 - \frac{\delta \lambda}{4!}\phi_r^4\]
-The last three terms, known as counter-terms, have absorbed the infinite but unobservable shifts between the bare parameters and the physical parameters.We give precise definitions of the physical mass and coupling constant as Figure 21.12.\\
+The last three terms, known as counter-terms, have absorbed the infinite but unobservable shifts between the bare parameters and the physical parameters.We give precise definitions of the physical mass and coupling constant as renormalization conditions below.
+\\
 \begin{figure}[!h]
 \centering
-\includegraphics[height=3cm ,width=11.25cm]{QFT1/RG2.png}
-\caption{Renormalization condition}
+\includegraphics[scale=0.35]{QFT1/RG2.png}
+\caption{On-shell (OS) renormalization conditions}
 \end{figure}
-
-\noindent
-The renormalization scheme here is called on-shell (OS) scheme. Other renormalization scheme would be introduced later.
-These equations are called renormalization conditions.
-Our new Lagrangian gives a new set of Feynman rules as Figure 21.13.
 \begin{figure}[!h]
 \centering
-\includegraphics[height=6cm ,width=9cm]{QFT1/RG3.png}
+\includegraphics[scale=0.35]{QFT1/RG3.png}
 \caption{Feynman rules for renormalized perturbation theory}
 \end{figure}
-
-\noindent
-We can use these new Feynman rules to compute any amplitude in $\phi^4$ theory. The procedure is as follows. Compute the desired amplitude as the sum of all possible diagrams created from the propagator and vertices shown above. The loop integrals in the diagrams will often diverge, so one must introduce a regulator. The result of this computation will be a function of the three unknown parameters $\delta_Z$, $\delta_m$, and $\delta_{\lambda}$. Adjust ( or ``renormalise'') these three parameters as necessary to maintain the renormalization conditions. After this adjustment, the expression for the amplitude should be finite and independent of the regulator.
+\\
+We can use Feynman rules to compute any amplitude in $\phi^4$ theory. The procedure is as follows. Compute the desired amplitude as the sum of all possible diagrams created from the propagator and vertices shown above. The loop integrals in the diagrams will often diverge, so one must introduce a regulator. The result of this computation will be a function of the three unknown parameters $\delta_Z$, $\delta_m$, and $\delta_{\lambda}$. Adjust ( or ``renormalise'') these three parameters as necessary to maintain the renormalization conditions. After this adjustment, the expression for the amplitude should be finite and independent of the regulator.
 \\
 This procedure, using Feynman rules with counter-terms, is known as renormalized perturbation theory. 
 
@@ -585,7 +581,7 @@ A generalization of Feynman's formula is
 \end{newthem}
 \begin{figure}[!h]
 \centering
-\includegraphics[height=4.41cm ,width=5.77cm]{QFT1/RG5.png}
+\includegraphics[scale=0.35]{QFT1/RG5.png}
 \caption{Wick rotation}
 \end{figure}
 
@@ -599,31 +595,29 @@ Also, $d^dq = id^d \bar{q}$.Therefore, in general,
 Dimensional regularization is a method for regularizing integrals in the evaluation of Feynman diagrams. For example, if one wishes to evaluate a loop integral which is logarithmically divergent in four dimensions, like
 \[\int {\frac {d^{d}p}{(2\pi )^{d}}}{\frac {1}{\left(p^{2}+m^{2}\right)^{2}}}\]
 \\
-One first rewrites the integral in some way so that the number of variables integrated over does not depend on d, and then we formally vary the parameter $d$, to include non-integral values like $d=4-\epsilon$.
+One first rewrites the integral in some way so that the number of variables integrated over does not depend on $d$, and then we formally vary the parameter $d$, to include non-integral values like $d=4-\epsilon$.
 \[\int _{0}^{\infty }{\frac {dp}{(2\pi )^{4-\varepsilon }}}{\frac {2\pi ^{(4-\varepsilon )/2}}{\Gamma \left({\frac {4-\varepsilon }{2}}\right)}}{\frac {p^{3-\varepsilon }}{\left(p^{2}+m^{2}\right)^{2}}}={\frac {2^{\varepsilon -4}\pi ^{{\frac {\varepsilon }{2}}-1}}{\sin({\frac {\pi \varepsilon }{2}})\Gamma (1-{\frac {\varepsilon }{2}})}}m^{-\varepsilon }={\frac {1}{8\pi ^{2}\varepsilon }}-{\frac {1}{16\pi ^{2}}}\left(\ln {\frac {m^{2}}{4\pi }}+\gamma \right)+{\mathcal {O}}(\varepsilon )\]
-There is a useful formula for calculating the integral
+There is a general formula for calculating the integral
 \[\int \frac{d^d \bar{q}}{(2\pi)^{d}} \frac{(\bar{q}^2)^a}{(\bar{q}^2+D)^b} = \frac{\Gamma(b-a-\frac{1}{2}d) \Gamma(a+\frac{1}{2}d)}{(4\pi)^{d/2} \Gamma(b) \Gamma(\frac{1}{2}d)} D^{-(b-a-d/2)}\]
 If $a=0$, then the formula will be
 \[\int \frac{d^d \bar{q}}{(2\pi)^{d}} \frac{1}{(\bar{q}^2+D)^b} = \frac{\Gamma(b-\frac{1}{2}d)}{(4\pi)^{d/2} \Gamma(b)} D^{-(b-d/2)}\]
 
 \subsection{One loop structure of $\phi^4$ theory}
-First consider the basic two-particle scattering amplitude,
+First consider the basic two-particle scattering amplitude.
 \begin{figure}[!h]
 \centering
-\includegraphics[height=3.71cm ,width=12.65cm]{QFT1/RG4.png}
+\includegraphics[scale=0.3]{QFT1/RG4.png}
 \caption{Feynman diagram representation of two-particle scattering to one loop}
 \end{figure}
-If we define $p = p_1 + p_2$, then the second diagram of Figure 21.15 is
+If we define $p = p_1 + p_2$, then the second diagram of is
 \[\frac{(-i\lambda)^2}{2} \int \frac{d^4k}{(2\pi)^4} \frac{-i}{k^2+m^2} \frac{-i}{(k+p)^2+m^2} \equiv (-i\lambda)^2 iV(-p^2)\]
 So the entire amplitude is therefore
 \[i\mathcal{M} = -i\lambda + (-i\lambda)^2 [iV(s) + iV(t) + iV(u)] -i\delta_{\lambda} + \mathcal{O}(\lambda^3)\] 
-To keep $\lambda$ dimensionless in dimensional regularization, we can make the transformation $\lambda \to \lambda \tilde{\mu}^{\epsilon}$. Here, $\tilde{\mu}$ is an arbitrary number with mass dimension 1 and $\epsilon \equiv 4-d$. 
-\\
-We can calculate that
+To keep $\lambda$ dimensionless in dimensional regularization, we can make the transformation $\lambda \to \lambda \tilde{\mu}^{\epsilon}$. Here, $\tilde{\mu}$ is an arbitrary number with mass dimension 1 and $\epsilon \equiv 4-d$. We have
 \[V(-p^2) = -\frac{1}{32\pi^2} \int_0^1 (\frac{2}{\epsilon} + \ln(\frac{\mu^2}{D(-p^2)}))\]
-where $\mu \equiv  \sqrt{4\pi} e^{-\gamma/2} \tilde{\mu}$, $D(-p^2) = x(1-x)p^2+m^2$
+where $\mu \equiv  \sqrt{4\pi} e^{-\gamma/2} \tilde{\mu}$, $D(-p^2) = x(1-x)p^2+m^2$.
 \\
-The renormalization condition implies that
+The OS renormalization conditions imply that
 \[\delta_{\lambda} = -\lambda^2[V(4m^2)+2V(0)] + \mathcal{O}(\lambda^3)\]
 So,
 \[i\mathcal{M} = -i\lambda -\frac{i\lambda^2}{32\pi^2} \int_0^1 dx \left[\ln(\frac{D(s)}{D(4m^2)}) +\ln(\frac{D(t)}{D(0)})+\ln(\frac{D(u)}{D(0)})\right] + \mathcal{O}(\lambda^3)\]
@@ -640,10 +634,10 @@ The detailed calculation can be found in chapter 10.2 of \emph{An introduction t
 
 \subsubsection{Perturbation theory to all orders}
 We begin by summing all one-particle irreducible diagrams with two external lines; this gives us the self-energy $M^2$. We next sum all amputated diagrams with four external lines; this gives us the four-point vertex function $V_4(k_1, k_2, k_3, k_4)$. (We can prove that amputated diagrams with four external lines must be one-particle irreducible). Order by order in $\lambda$, we must adjust the value of the lagrangian coefficients $\delta_Z$, $\delta_m$, and $\delta_{\lambda}$ to maintain the conditions $M^2(-m^2) = 0$, $\frac{dM^2}{dp^2}(-m^2) = 0$, and $V_4(s=4m^2) =0$. 
-\\
-Next we will construct the n-point vertex functions $V_n$ with $4 < n \leq E$, where $E$ is the number of external lines in the process of interest. We compute these using a skeleton expansion. This means that we draw all the contributing 1PI diagrams, but omit diagrams that include either propagator or three-point vertex corrections. That is, we include only diagrams that are not only 1PI, but also 2PI and 4PI: they remain connected when any one, two, or four lines are cut. (Cutting four lines may isolate a single tree-level vertex, but nothing more complicated.) Then we take the propagators and vertices in these diagrams to be given by the exact propagator $\frac{-i}{p^2+m^2+M^2(p^2)}$ and vertex $V_4(k_1,k_2,k_3,k_4)$, rather than by the tree-level propagator and vertex. We then sum these skeleton diagrams to get $V_n$ for $4 < n \leq E$. Order by order in $\lambda$, this procedure is
+\\ \\
+Next we will construct the $n$-point vertex functions $V_n$ with $4 < n \leq E$, where $E$ is the number of external lines in the process of interest. We compute these using a skeleton expansion. This means that we draw all the contributing 1PI diagrams, but omit diagrams that include either propagator or four-point vertex corrections. That is, we include only diagrams that are not only 1PI, but also 2PI and 4PI: they remain connected when any one, two, or four lines are cut. (Cutting four lines may isolate a single tree-level vertex, but nothing more complicated.) Then we take the propagators and vertices in these diagrams to be given by the exact propagator $\frac{-i}{p^2+m^2+M^2(p^2)}$ and vertex $V_4(k_1,k_2,k_3,k_4)$, rather than by the tree-level propagator and vertex. We then sum these skeleton diagrams to get $V_n$ for $4 < n \leq E$. Order by order in $\lambda$, this procedure is
 equivalent to computing $V_n$ by summing the usual set of contributing 1PI diagrams.
-\\
+\\ \\
 Next we draw all tree-level diagrams that contribute to the process of interest (which has $E$ external lines), including not only four-point vertices, but also n-point vertices. Then we evaluate these diagrams using the exact propagator for internal lines, and the exact 1PI vertices $V_n$; external lines are assigned a factor of one. We sum these tree diagrams to get the scattering amplitude. Order by order in $\lambda$, this procedure is equivalent to computing the scattering amplitude by summing the usual set of contributing diagrams.
 \\
 Thus we now know how to compute an arbitrary scattering amplitude
@@ -653,25 +647,25 @@ to arbitrarily high order. The procedure is the same in any quantum field theory
 Recall some of the major results and methods of renormalization theory:
 \begin{enumerate}
 \item In perturbation theory, bare and physical quantities are related by ultraviolet-divergent expressions
-\[m_{phys} = m_0 + \Delta_m\]
-where $m_{phys}$ is finite, $\Delta_m$ is ultraviolet-divergent, and so $m_0$ is necessarily ultraviolet-divergent.
+\[m_{\rm phys} = m_0 + \Delta_m\]
+where $m_{\rm phys}$ is finite, $\Delta_m$ is ultraviolet-divergent, and so $m_0$ is necessarily ultraviolet-divergent.
 \item We express the Lagrangian in terms of physical quantites, and separate it into
-\[\mathcal{L} = \mathcal{L}_0 + \mathcal{L}_I + \mathcal{L}_{CT}\]
-where $\mathcal{L}_0$ is the canonically normalized free Lagrangian for physical fields and masses, $\mathcal{L}_I$ contains the interaction, again in terms of physical parameters, and $\mathcal{L}_{CT}$ contains the counterterms with ultraviolet divergent coefficients. From $\mathcal{L}_0$, we obtain the propagators of the physical fields. $\mathcal{L}_I$ and $\mathcal{L}_{CT}$ give
+\[\mathcal{L} = \mathcal{L}_0 + \mathcal{L}_{\rm I} + \mathcal{L}_{\rm CT}\]
+where $\mathcal{L}_0$ is the canonically normalized free Lagrangian for physical fields and masses, $\mathcal{L}_{\rm I}$ contains the interaction, again in terms of physical parameters, and $\mathcal{L}_{\rm CT}$ contains the counterterms with ultraviolet divergent coefficients. From $\mathcal{L}_0$, we obtain the propagators of the physical fields. $\mathcal{L}_{\rm I}$ and $\mathcal{L}_{\rm CT}$ give
 interaction vertices.
 \item At the one-loop level, the self-energy is given by the effective two-point vertices: the 1PI two-point vertex of the interaction and the counter-term two-point vertex. The counterterms absorb ultraviolet divergences, and the finite parts of the counterterms are determined by renormalization conditions,
-which ensure the quantities in $\mathcal{L}_0 + \mathcal{L}_I$ are physical. The conditions constrain the self-energy and the effective vertices, and give a finite, uniquely-determined value for the counterterms.
+which ensure the quantities in $\mathcal{L}_0 + \mathcal{L}_{\rm I}$ are physical. The conditions constrain the self-energy and the effective vertices, and give a finite, uniquely-determined value for the counterterms.
 \end{enumerate}
 \subsubsection{Degrees of divergences}
 Now, for a general theory in $d$ spacetime dimensions, the field content is given by $\phi_f$, $f=1,2,\cdots$, where $f$ labels
-the field type. $[\phi_f]=\Delta f$ and $\Delta f$ in all physical theories. We have interaction vertices of type $i$, $i = 1,2,\cdots$
+the field type. $[\phi_f]=\Delta f$ and $\Delta f > 0$ in all physical theories. We have interaction vertices of type $i$, $i = 1,2,\cdots$
 contributing a term of the form
 \[\lambda_i \partial^{n_i} \prod_f \phi_f^{n_{if}}\]
 Here, $\lambda_i$ is the coupling constant, with dimension
 \[[\lambda_i] = \kappa_i = d - n_i - \sum_f n_{if}\Delta f \]
 Now consider a 1PI diagram in such a theory:
 \[E_f \equiv \mbox{ number of external lines of } \phi_f\]
-\[V_i \equiv \mbox{ number of vertices of type i }.\]
+\[V_i \equiv \mbox{ number of vertices of type } i.\]
 Then $M \sim \Lambda^D \prod_i \lambda_i ^{V_i}$ and so $D = [M] - \sum_i V_i \kappa_i$. Again
 \[[M] - d = -\sum E_f \Delta f\]
 and so the general expression for the superficial degree of divergence is given by
@@ -716,12 +710,11 @@ we say that $\delta_Z$, $\delta_m$ and $\delta_{\lambda}$ have no finite parts. 
 \\
 For loop corrections to propagator,
 \[\delta_Z=\mathcal{O}(\lambda^2) \quad \delta_m = \left[ \frac{\lambda}{16\pi^2} + \mathcal{O}(\lambda^2) \right]\frac{1}{\epsilon}m^2 \quad M^2(p^2) = \frac{\lambda}{32\pi^2}( \ln(\frac{m^2}{\mu^2})-1)m^2 + \mathcal{O}(\lambda^2)\]
-\\
-Firstly, in the $\mathrm{\overline{MS}}$ scheme, the propagator will no longer have a pole at $k^2=-m^2$. The pole will be somewhere else. However, by definition, the actual physical mass $m_{ph}$ of the particle is determined by the location of this pole: $k^2 = -m_{ph}^2$. Thus, the Lagrangian parameter $m$ is no longer the same as $m_{ph}$. The relation of $m$ and $m_{ph}$ is 
-\[m_{ph}^2 = M^2(-m_{ph}^2) + m^2\]
+Firstly, in the $\mathrm{\overline{MS}}$ scheme, the propagator will no longer have a pole at $k^2=-m^2$. The pole will be somewhere else. However, by definition, the actual physical mass $m_{\rm ph}$ of the particle is determined by the location of this pole: $k^2 = -m_{\rm ph}^2$. Thus, the Lagrangian parameter $m$ is no longer the same as $m_{\rm ph}$. The relation of $m$ and $m_{\rm ph}$ is 
+\[m_{\rm ph}^2 = M^2(-m_{\rm ph}^2) + m^2\]
 To the lowest order, 
-\[m_{ph}^2 = \left[1+\frac{\lambda}{32\pi^2}( \ln(\frac{m^2}{\mu^2})-1)\right] m^2\]
-Because $m_{ph}$ is a independent of $\mu$, according to $\frac{d}{d\mu} m_{ph} = 0$, it can be derived that
+\[m_{\rm ph}^2 = \left[1+\frac{\lambda}{32\pi^2}( \ln(\frac{m^2}{\mu^2})-1)\right] m^2\]
+Because $m_{\rm ph}$ is a independent of $\mu$, according to $\frac{d}{d\mu} m_{\rm ph} = 0$, it can be derived that
 \[\frac{dm}{d\ln \mu} = \left[\frac{\lambda}{32\pi^2}+\mathcal{O}(\lambda^2)\right] m\]
 Furthermore, the residue of this pole is no longer one. Let us call the residue $R$. So, in the LSZ formula, we get a net factor of $\sqrt{R}$ for each external line when using the $\mathrm{\overline{MS}}$ scheme. And in $\phi^4$ theory,
 \[R = 1 + \mathcal{O}(\lambda^2)\]
@@ -733,7 +726,7 @@ For a process with $p^2 \gg m^2$, we have
 In OS renormalization scheme, the one-loop correction to propagator or vertex generally includes a factor
 \[\ln \left( \frac{D}{D_0}\right ) \sim \ln \frac{p^2}{m^2}\]
 so perturbation theory is no longer a good approximation when $p^2 \gg m^2$.
-In $\overline{MS}$ renormalization scheme, introducing $\mu$ allows us to address this problem: if we choose $\mu \sim p$, no such logarithm arises. If we choose $\mu$ appropriately, that is, to be comparable to the momentum scale of the physical process, we can
+In $\overline{\rm MS}$ renormalization scheme, introducing $\mu$ allows us to address this problem: if we choose $\mu \sim p$, no such logarithm arises. If we choose $\mu$ appropriately, that is, to be comparable to the momentum scale of the physical process, we can
 improve our perturbation expansion. 
 So $\lambda(\mu)$ and $m(\mu)$ can be considered as the scale-dependent coupling constants.
 And the reason we get large logarithmic terms in the on-shell scheme is that we are trying to use coupling defined at one scale to describe physics at very different scales.
@@ -746,7 +739,7 @@ It can be written as
 \[\mathcal{L} = -\frac{1}{2}Z_{\phi} \partial^{\mu} \phi \partial_{\mu} \phi -\frac{1}{2}Z_{m}m^2 \phi^2 - Z_{\lambda} \tilde{\mu}^{\epsilon}\frac{\lambda}{4!}\phi^4\]
 So, 
 \[\phi_0 = Z_{\phi}^{1/2}\phi \quad m_0 = Z_{\phi}^{-1/2} Z_{m}^{1/2}m \quad \lambda_0 = Z_{\phi}^{-2} Z_{\lambda} \lambda \tilde{\mu}^{\epsilon}\]
-After using dimensional regularization, the infinities coming from loop integrals take the form of inverse powers of $\epsilon$. In the  $\mathrm{\overline{MS}}$ renormalization scheme, we choose the Zs to cancel off these powers of $1/\epsilon$, and nothing more. Therefore the Zs can be written as
+After using dimensional regularization, the infinities coming from loop integrals take the form of inverse powers of $\epsilon$. In the  $\mathrm{\overline{MS}}$ renormalization scheme, we choose the $Z$s to cancel off these powers of $1/\epsilon$, and nothing more. Therefore the $Z$s can be written as
 \begin{eqnarray}
 Z_{\phi} = 1 + \sum_{n=1}^{\infty} \frac{a_n(\lambda)}{\epsilon^n} \nonumber \\
 Z_{m} = 1 + \sum_{n=1}^{\infty} \frac{b_n(\lambda)}{\epsilon^n} \nonumber \\
@@ -792,12 +785,12 @@ From now on, we will focus on the $\phi^4$ theory in massless limit. Firstly, co
 \[G^{(2)} = \frac{-i}{p^2} g(-p^2/\mu^2,\lambda(\mu))\]
 Then the C-S equation can be written as
 \[\left[ p \frac{\partial}{\partial p} - \beta(\lambda)  \frac{\partial}{\partial \lambda} +2 - 2\gamma_{\phi}\right ] G^{(2)}(p,\lambda(\mu),\mu) = 0 \]
-Here, $p \equiv (-p^2)^{1/2}$
+where $p \equiv (-p^2)^{1/2}$.
 In the free theory, $\beta$ and $\gamma$ vanish and we recover the trivial result
 \[G^{(2)}(p) = \frac{-i}{p^2}\]
 In an interacting theory, the solution to the C-S equation can be expressed as
 \[G^{(2)}(p,\lambda_0,\mu_0) = G^{(2)}(\mu_0,\lambda_p,\mu_0)\exp \left (-\int_{p'=\mu_0}^{p'=p} d \ln(p'/\mu_0) \cdot 2[1-\gamma_{\phi}(\lambda_{p'})] \right )\]
-Here, $\lambda_0 = \lambda(\mu_0)$, $\lambda_p$ satisfy the following equation
+where $\lambda_0 = \lambda(\mu_0)$, $\lambda_p$ satisfy the following equation
 \[\frac{\partial}{\partial \ln p} \lambda_p(p,\lambda_0) = \beta(\lambda_p) \quad \lambda_p(\mu_0,\lambda_0) = \lambda_0\]
 The solution can be checked directly by noticing that
 \[\left ( p \frac{\partial}{\partial p} - \beta(\lambda_0) \frac{\partial}{\partial \lambda_0} \right ) \lambda_p(p,\lambda_0) = 0\]
@@ -983,7 +976,7 @@ Now differentiate with respect to $\phi^b$, and set $\phi = \phi_{\mathrm{cl}}$
 The first term vanishes since $\phi_{\mathrm{cl}}$ is a minimum of $V_{\mathrm{eff}}$, so the second term must also vanish. If the transformation leaves $\phi_{\mathrm{cl}}$ unchanged (i.e., if the symmetry is respected by the ground state), then $\Delta^a(\phi_{\mathrm{cl}})=0$ and this relation is trivial. A spontaneously broken symmetry is precisely one for which $\Delta^a(\phi_{\mathrm{cl}}) \neq 0$; in this
 case $\Delta^a(\phi_{\mathrm{cl}})$ is the vector with eigenvalue zero.
 We now argue that the presence of such a zero eigenvalue implies the existence of a massless scalar particle. Effective action's second functional derivative is the inverse propagator
-\[i\tilde{D}_{ij}^{-1}(p^2) = \int d^4x e^{-ip(x-y)} \left. \frac{\delta \Gamma}{\delta \phi^i \delta \phi^j}(x,y) \right|_{\phi = \phi_{\mathcal{cl}}}\]
+\[i\tilde{D}_{ij}^{-1}(p^2) = \int d^4x e^{-ip(x-y)} \left. \frac{\delta \Gamma}{\delta \phi^i \delta \phi^j}(x,y) \right|_{\phi = \phi_{\rm cl}}\]
 A particle of mass $0$ corresponds to a zero eigenvalue of this matrix equation at $p^2 = 0$. Now set $p=0$. This implies $\frac{\delta \Gamma}{\delta \phi^i \delta \phi^j}(x,y)$ has a zero eigenvalue. This is equivalent to 
 \[\frac{\partial^2}{\partial \phi^i_{\mathrm{cl}} \partial \phi^j_{\mathrm{cl}}}V_{\mathrm{eff}}\]
 has a zero eigenvalue. This completes the proof of Goldstone's theorem.
@@ -994,7 +987,7 @@ has a zero eigenvalue. This completes the proof of Goldstone's theorem.
 \[\mathcal{L} = -\frac{1}{2} \partial_{\mu} \phi^i \partial^{\mu}\phi^i + \frac{1}{2} \mu^2 (\phi^i)^2 - \frac{\lambda}{4} [(\phi^i)^2]^2\]
 The Lagrangian is invariant under the symmetry
 \[\phi^i \to R^{ij} \phi^j\]
-for any $N \times N$ orthogonal group in $N$ dimensions, also called the N-dimensional orthogonal group or simply $O(N)$. In classical theory, the lowest-energy classical configuration is a constant field $\phi_0^i$, whose value is chosen to minimize the potential
+for any $N \times N$ orthogonal group in $N$ dimensions, also called the $N$-dimensional orthogonal group or simply $O(N)$. In classical theory, the lowest-energy classical configuration is a constant field $\phi_0^i$, whose value is chosen to minimize the potential
 \[V = -\frac{1}{2}\mu^2 (\phi^i)^2 + \frac{\lambda}{4}[(\phi^i)^2]^2\]
 This potential is minimized for any $\phi_0^i$ that satisfies
 \[(\phi^i)^2 = \frac{\mu^2}{\lambda} \]
@@ -1008,28 +1001,27 @@ It is now straightforward to rewrite the Lagrangian in terms of the $\pi$ and $\
 \mathcal{L} &=& -\frac{1}{2}(\partial_{\mu}\pi^k)^2 - \frac{1}{2}(\partial_{\mu}\sigma)^2 - \frac{1}{2}(2\mu^2)\sigma^2 \nonumber \\
 &-& \sqrt{\lambda}\mu \sigma^3 - -\sqrt{\lambda}\mu (\pi^k)^2\sigma - \frac{\lambda}{4}\sigma^4 - \frac{\lambda}{2}(\pi^k)^2\sigma^2 - \frac{\lambda}{4}[(\pi^k)^2]^2 \nonumber
 \end{eqnarray}
-We obtain a massive $\sigma$ field and also a set of $N-1$ massless $\pi$ fields. The original $O(N)$ symmetry is hidden when we choose a specific $\phi_0^i$ for vacuum state, leaving only the subgroup $O(N-1)$, which rotates the $\pi$ fields among themselves. Given the theory in the previous section, our discussion here will remain valid when quantum correction is considered.
+We obtain a massive $\sigma$ field and also a set of $N-1$ massless $\pi$ fields. The original $O(N)$ symmetry is hidden when we choose a specific $\phi_0^i$ for vacuum state, leaving only the subgroup $O(N-1)$, which rotates the $\pi$ fields among themselves. Given the Goldstone's theorem, our discussion here will remain valid when quantum correction is considered.
 
 \subsection{Renormalization}
-From this expression of the Lagrangian written in terms of shifted fields, we can read off the Feynman rules:
+From this expression of the Lagrangian written in terms of shifted fields, we can read off the Feynman rules for the linear sigma model. Then we can compute tree-level amplitudes without difficulty.
+\\
 \begin{figure}[!h]
 \centering
-\includegraphics[height=6cm ,width=6.43cm]{QFT1/Li_sigma1.png}
+\includegraphics[scale=0.2]{QFT1/Li_sigma1.png}
 \caption{Feynman rules for the linear sigma model}
 \end{figure}
-
-\noindent
-Using these Feynman rules, we can compute tree-level amplitudes without difficulty. 
+\\
 Diagrams with loops, however, will often diverge. For the amplitude with $N_e$ external legs, the superficial degree of divergence is
 \[D = 4 - N_e\]
-The linear sigma model has eight different superficially divergent amplitudes and several of these have $D > 0$ and therefore can contain more than one in nite constant.
+The linear sigma model has eight different superficially divergent amplitudes and several of these have $D > 0$ and therefore can contain more than one infinite constant.
+\\
 \begin{figure}[!h]
 \centering
-\includegraphics[height=4cm ,width=7.73cm]{QFT1/Li_sigma2.png}
+\includegraphics[scale=0.2]{QFT1/Li_sigma2.png}
 \caption{Divergent amplitudes in the linear sigma model}
 \end{figure}
-
-\noindent
+\\
 Yet we have only three counterterms:
 \[\mathcal{L}_{ct} = -\frac{1}{2} \delta_Z \partial_{\mu} \phi^i \partial^{\mu}\phi^i - \frac{1}{2} \delta_{\mu} (\phi^i)^2 - \frac{\delta_{\lambda}}{4} [(\phi^i)^2]^2 \]
 Written in terms of $\sigma$ and $\pi$ fields, we have
@@ -1038,20 +1030,21 @@ Written in terms of $\sigma$ and $\pi$ fields, we have
 &-& (\delta_{\mu}v + \delta_{\lambda}v^3)\sigma - \delta_{\lambda}v\sigma(\pi^k)^2 - \delta_{\lambda}v\sigma^3 - \frac{\delta_{\lambda}}{4}[(\pi^k)^2]^2 - \frac{\delta_{\lambda}}{2}\sigma^2 (\pi^k)^2 - \frac{\delta_{\lambda}}{4}\sigma^4 \nonumber
 \end{eqnarray}
 We can get the Feynman rules associated with these counterterms.
+\\
 \begin{figure}[!h]
 \centering
 \includegraphics[height=5cm ,width=11.46cm]{QFT1/Li_sigma3.png}
 \caption{Feynman rules for counterterm vertices in the linear sigma model}
 \end{figure}
-
+\\
+We can also set renormalization conditions for linear sigma model.
 \begin{figure}[!h]
 \centering
 \includegraphics[height=3cm ,width=7.2cm]{QFT1/Li_sigma4.png}
 \caption{Renormalization conditions ($m^2 = 2\mu^2$)}
 \end{figure}
-
-\noindent
-Following the renormalization conditions above, the one-loop corrections for linear sigma model has been calculated in section 11.2 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}. There are two important results.
+\\
+One-loop corrections for linear sigma model has been calculated in section 11.2 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}. There are two important results.
 \begin{itemize}
 \item All the divergence up to one loop will be cancelled by adjusting three counterterms. Apparently, the divergent part of the diagram is unaffected by the symmetry breaking.
 \item The propagator of $\pi\pi$ has a pole at $p^2 = 0$ after one loop correction, i.e. $\pi$ particles remain massless after one loop correction.
@@ -1079,7 +1072,7 @@ It is the same result as that in previous section.
 
 \subsection{Functional determinants}
 \[Z_0[0] \equiv \prod_{i=1}^{N} Z_i  = \prod_{i=1}^{N} \int \mathcal{D}\eta e^{ \frac{i}{2}\int \eta \left( \partial^2-m_i^2\right) \eta }\]
-Here, $m_i$ is a function of $\phi_{cl}$. We want to get $\log Z_0[0]$ as a function of $\phi_{cl}$ and the constant infinite shift of $\log Z_0[0]$ will be dropped in our calculation. We treat $-\frac{1}{2}m_i^2\eta^2$ as a perturbation, so we have
+Here, $m_i$ is a function of $\phi_{cl}$. We want to get $\log Z_0[0]$ as a function of $\phi_{cl}$ and the  infinite constant shift of $\log Z_0[0]$ will be dropped . We treat $-\frac{1}{2}m_i^2\eta^2$ as a perturbation, so we have
 \[Z_i \propto e^{-\frac{im_i^2}{2}(\frac{1}{i} \frac{\delta}{\delta I})^2} \left. \int \mathcal{D}\eta e^{i\int \left(-\frac{1}{2} I D_F I \right)} \right|_{I=0}\] 
 where
 \[D_F(x-y) = \int \frac{d^4p}{(2\pi)^4} \frac{-i}{p^2}e^{ip(x-y)}\]
@@ -1091,19 +1084,18 @@ Now we can have the following Feynamn rules.
 So we have
 \[\log Z_i = \sum_{I}C_I\]
 where $C_I$ represents connected diagram without external source.
-A connected diagram without external source must have the following form
-
+\\
 \begin{figure}[!h]
 \centering
-\includegraphics[height=5cm ,width=5.26cm]{QFT1/effective.png}
+\includegraphics[scale=0.15]{QFT1/effective.png}
 \caption{Connected Feymann diagram without external source}
 \end{figure}
-
-\noindent
+\\
 So, we have
-\[C_n = \frac{1}{2n}\int \prod_{k=1}^{n} \frac{d^4p_k d^4x_k}{(2\pi)^4} \frac{-m_i^2}{p_k^2} \exp(ip_k(x_k-x_{k+1})) = \int d^4p \delta(0) \left(-\frac{m_i^2}{p^2} \right)^n\]
+\[C_n = \frac{1}{2n}\int \prod_{k=1}^{n} \frac{d^4p_k d^4x_k}{(2\pi)^4} \frac{-m_i^2}{p_k^2} \exp(ip_k(x_k-x_{k+1})) = \frac{1}{2n} \int d^4p \delta(0) \left(-\frac{m_i^2}{p^2} \right)^n\] 
 \[\log Z_i = -\frac{1}{2}VT \int \frac{d^4p}{(2\pi)^4} \sum -\frac{1}{n} \left(-\frac{m_i^2}{p^2} \right)^n = -\frac{1}{2}VT\int  \frac{d^4p}{(2\pi)^4} \log(1+\frac{m_i^2}{p^2})\]
-The following calculation needs tricks of wick rotation and dimension regularization and you can refer to the equation 11.72 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}.\\ \\
+The following calculation needs tricks of wick rotation and dimension regularization and you can refer to the equation 11.72 of \emph{An introduction to quantum field theory (M.E.Peskin \& D.V.Schroeder)}.
+\\ \\
 However, recall the Gaussian integral
 \[\int _{-\infty }^{\infty }e^{\left(-{\frac {i}{2}}\sum \limits _{i,j=1}^{n}A_{ij}x_{i}x_{j}\right)}\,d^{n}x
 = {\sqrt {\frac {(-2\pi i)^{n}}{\det A}}} \]
@@ -1114,11 +1106,11 @@ Define
 We can verify that
 \[M(x,z) = \int d^4y M_0(x-y)M_1(y-z)\]
 So, 
-\[\log \det M = \log \det M_0 + \log \det M_1 \approx \log \det M_1\]
-We drop out $\log \det M_0$ because it do not contain $m(\phi_{\mathrm{cl}})$. Furthermore, we have $M_1 = I - G$, where $I = \delta(x-y)$ is the identity matrix and $G = -im_i^2D_F$. So
-\[\log \det M_1 =  \mathrm{Tr} \log M_1 = \mathrm{Tr} \log(I-G) = -\frac{1}{n}\sum_{n=1}^{\infty} \mathrm{Tr} G_n\]
+\[\log \det M = \log \det M_0 + \log \det M_1 \to \log \det M_1\]
+We drop out $\log \det M_0$ because it does not contain $m(\phi_{\mathrm{cl}})$. Furthermore, we have $M_1 = I - G$, where $I = \delta(x-y)$ is the identity matrix and $G = -im_i^2D_F$. So
+\[\log \det M_1 =  \mathrm{Tr} \log M_1 = \mathrm{Tr} \log(I-G) = -\frac{1}{n}\sum_{n=1}^{\infty} \mathrm{Tr} G^n\]
 We can verify that
-\[C_n = \frac{1}{2n} \mathrm{Tr} G_n\]
+\[C_n = \frac{1}{2n} \mathrm{Tr} G^n\]
 So, the function determinant method is valid.
 
 \section{Optical theorem and unstable particles}
@@ -1132,23 +1124,21 @@ We have
 So, we have
 \[-i[\mathcal{M}(i \to f) - \mathcal{M}^{*}(f \to i)] =  \sum_n \prod_{k=1}^n \int \frac{d^3q_k}{(2\pi)^3 2E_k} \mathcal{M}(i \to \{\bm{q}_k\}) \mathcal{M}^{*}(f \to \{\bm{q}_k\}) (2\pi)^4 \delta(\sum p_f- \sum_k q_k)\]
 Let us abbreviate this identity as
-\[-i[\mathcal{M}(i \to f) - \mathcal{M}^{*}(f \to i)] = \sum_m \int d\Pi_{m} \mathcal{M}(i \to m\}) \mathcal{M}^{*}(f \to m)\]
-where the sum runs over all possible sets of particles and $i$ and $f$ are could be one-particle or multi-particle asymptotic states.
+\[-i[\mathcal{M}(i \to f) - \mathcal{M}^{*}(f \to i)] = \sum_m \int d\Pi_{m} \mathcal{M}(i \to m) \mathcal{M}^{*}(f \to m)\]
+where the sum runs over all possible sets of particles and $i$ and $f$ could be one-particle or multi-particle asymptotic states.
 \\
 If $i$ and $f$ are the same state, we have
 \[\mathrm{Im} \mathcal{M}(i \to i) = \sum_m \int d\Pi_{m} |\mathcal{M}(i \to \mbox{ anything })|^2\]
-Particularly, if $i$ is two particle state, we have
+Particularly, if $i$ is a two particle state, we have
 \[\mathrm{Im} \mathcal{M}(k_1k_2 \to k_1k_2) = 2E_{\mathrm{cm}}p_{\mathrm{cm}}\sigma_{\mathrm{tot}}(k_1k_2 \to \mbox{ anything })\]
-If $i$ is one particle state, we have
+If $i$ is a one particle state, we have
 \[\mathrm{Im} \mathcal{M}(k \to k) = 2E_{k}\Gamma_{\mathrm{tot}}(k \to \mbox{ anything })\]
-It can be represented in terms of propagator as
+It can be represented in terms of 1PI propagator as
 \[\mathrm{Im} M^2(k^2) = -2E_{k}\Gamma_{\mathrm{tot}}(k \to \mbox{ anything })\]
-where $M^2(k^2)$ is defined as
-\[G(k) = \frac{-i}{k^2+m^2+M^2(k^2)}\]
-\\ \\
+\\
 Consider a theory of two real scalar fields, $\phi$ and $\chi$, with Lagrangian
 \[\mathcal{L} = -\frac{1}{2}\partial_{\mu}\phi \partial^{\mu}\phi - \frac{1}{2}m_{\phi}^2\phi^2 -\frac{1}{2}\partial_{\mu}\chi \partial^{\mu}\chi - \frac{1}{2}m_{\chi}^2\chi^2 + \frac{1}{2}g\phi\chi^2 + \frac{1}{6}h\phi^3\]
-This theory is renormalizable in six dimensions, where g and h are dimensionless coupling constants. Let us assume that $m_{\phi} > 2m_{\chi}$ . Then it is kinematically possible for a $\phi$ particle at rest to decay into two $\chi$ particles.
+This theory is renormalizable in six dimensions, where $g$ and $h$ are dimensionless coupling constants. Let us assume that $m_{\phi} > 2m_{\chi}$ . Then it is kinematically possible for a $\phi$ particle at rest to decay into two $\chi$ particles.
 The amplitude for this process is given at one loop level as
 \[\Gamma = \frac{1}{2} \frac{1}{2m_{\phi}} \int d\Pi_m |\mathcal{M}|^2 = \frac{1}{12} \pi \alpha (1 - 4m_{\chi}^2/m_{\phi}^2)^{3/2}m_{\phi}\]
 where $\alpha = g^2/(4\pi)^3$.
@@ -1157,7 +1147,7 @@ Note that the extra factor $1/2$ is due to the presence of two identical particl
 Let us, then, compute the correction to the $\phi$ propagator from a loop of $\chi$ particles. (There is also a contribution from a loop of $\phi$ particles, but we can ignore it if we assume that $h \ll g$.) We have
 \[M^2(k^2) = -\frac{1}{2}\alpha \int_0^1 dx D\ln D + A'k^2 + B'm_{\phi}^2\]
 where
-\[D = x(1-x)k^2 - m_{\phi}^2 - i\epsilon\]
+\[D = x(1-x)k^2 + m_{\chi}^2 - i\epsilon\]
 and $A'$ and $B'$ are the finite counterterm coefficients that remain after the infinities have been absorbed. 
 We now try to fix $A'$ and $B'$ by imposing the usual on-shell conditions $M^2(-m_{\phi}^2) = 0$ and $d M^2 / d(k^2)|_{k^2=-m_{\phi}^2} = 0$.
 \\
@@ -1172,8 +1162,7 @@ This arises from the integration range $x_- < x < x_+$, where $x_{\pm}$ are the 
 In this range, $\mathrm{Im} \ln D = -i \pi$; the minus sign
 arises because $D$ has a small negative imaginary part. Finally, we have
 \[\mathrm{Im} M^2(-m_{\phi}^2) = -m_{\phi} \Gamma\]
-\\ \\
-To get a more physical understanding of this result, recall that in non-relativistic quantum mechanics, a metastable state with energy $E_0$ and angular momentum quantum number shows up as a resonance in the partial-wave scattering amplitude,
+To get a more physical understanding of this result, recall that in non-relativistic quantum mechanics, a metastable state with energy $E_0$ and angular momentum quantum number $l$ shows up as a resonance in the partial-wave scattering amplitude,
 \[f_l \sim \frac{1}{E - E_0 + i\Gamma/2}\]
 If we imagine convolving this amplitude with a wave packet $\tilde{\psi}(E)e^{-iEt}$ will find a time dependence
 \[\psi(t) \sim \int dE \frac{1}{E-E_0+i\Gamma/2} \tilde{\psi}(E)e^{-iEt} \sim e^{-iE_0 t - \Gamma t /2}\]
@@ -1193,15 +1182,16 @@ we have the Fourier expansion
 \[\Phi = \int \widetilde{dp} [b(\bm{p})e^{ipx} + c^{\dagger}(\bm{p})e^{-ipx}] \quad \Phi^{\dagger} = \int \widetilde{dp} [b^{\dagger}(\bm{p})e^{-ipx} + c(\bm{p})e^{ipx}]\]
 We can get the commutation relations for creation and annihilation operators
 \[[b(\bm{p}), b^{\dagger}(\bm{q})] = (2\pi)^3 2\omega \delta(\bm{p}-\bm{q}) \quad [c(\bm{p}), c^{\dagger}(\bm{q})] = (2\pi)^3 2\omega \delta(\bm{p}-\bm{q})\]
-After work out the commutation relations between $H,P$ and $b,b^{\dagger},c,c^{\dagger}$, we can conclude that $b^{\dagger}(\bm{p})(c^{\dagger}(\bm{p}))$ creates a b(c) particle with momentum $\bm{p}$, and $b(\bm{p})(c(\bm{p}))$ annihilates a b(c) particle with momentum $\bm{p}$. They share the same mass $m$.\\
+After work out the commutation relations between $H,P$ and $b,b^{\dagger},c,c^{\dagger}$, we can conclude that $b^{\dagger}(\bm{p})(c^{\dagger}(\bm{p}))$ creates a $b(c)$ particle with momentum $\bm{p}$, and $b(\bm{p})(c(\bm{p}))$ annihilates a $b(c)$ particle with momentum $\bm{p}$. They share the same mass $m$.
+\\
 We notice that $\mathcal{L}$ is invariant under change $\Phi \to \Phi e^{i\alpha}$. Noether theorem implies that complex Klein-Gordon field has a conserve charge
 \[Q = i\int d^3x (\dot{\Phi}^{\dagger}\Phi - \Phi^{\dagger}\dot{\Phi}) = \int \widetilde{dp} (c^{\dagger}(\bm{p})c(\bm{p}) - b^{\dagger}(\bm{p})b(\bm{p})) = N_c - N_b\]
-Now we can interpret c-particle as the antiparticle of b-particle. And The number of anti-particles minus the number of particles is a conserved quantity, i.e. particles and anti-particles must be created in pair.
+Now we can interpret $c$-particle as the antiparticle of $b$-particle. And The number of anti-particles minus the number of particles is a conserved quantity, i.e. particles and anti-particles must be created in pair.
 
 \subsection{Non-relativistic limit}
-We decompose the complex Klein-Gordon equation as
+We decompose the complex Klein-Gordon field as
 \[\Phi(x) = \frac{1}{\sqrt{2m}} e^{-imt}\psi(x)\]
-The The non-relativistic limit of a particle is $|\bm{p}| \ll m$. After a Fourier transform, this is equivalent to saying that $\dot{\psi} \ll m\psi $. In this limit, we have
+The non-relativistic limit of a particle is $|\bm{p}| \ll m$. After a Fourier transform, this is equivalent to saying that $\dot{\psi} \ll m\psi $. In this limit, we have
 \[\frac{\partial \phi^{\dagger}}{\partial t} \frac{\partial \phi}{\partial t} - m^2 \phi^{\dagger}\phi \approx \frac{i}{2} \left( \phi^{\dagger}\frac{\partial \phi}{\partial t} - \frac{\partial \phi^{\dagger}}{\partial t} \phi\right)\]
 After integration by parts, the Lagrangian of the complex Klein-Gordon can be written as
 \[\mathcal{L} = i\phi^{\dagger}\left(\partial_t + \frac{\nabla^2}{2m} \right)\phi\]

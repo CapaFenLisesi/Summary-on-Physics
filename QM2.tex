@@ -283,7 +283,7 @@ Let us denote the unperturbed time-evolution operator by $U_0(t)$ and the exact 
 These operators satisfy the evolution equations
 \[i\frac{\partial U_0(t)}{\partial t} = H_0U_0(t) \quad i\frac{\partial U(t)}{\partial t} = HU(t)\]
 Since $H_0$ is independent of time, we have $U_0 = e^{-iH_0 t}$.\\ \\
-Suppose the state in Schrödinger picture is $|\psi_S(t)\rangle$, then we define the state in interaction picture as
+Suppose the state in Schr\"{o}dinger picture is $|\psi_S(t)\rangle$, then we define the state in interaction picture as
 \[|\psi_{\mathrm{I}}(t)\rangle \equiv U^{\dagger}_0(t) |\psi_{\mathrm{S}}(t)\rangle\]
 Similarly, we define the operator in interaction picture as
 \[A_{\mathrm{I}}(t) \equiv U^{\dagger}_0(t) A_{\mathrm{S}}(t) U_0(t)\]
@@ -298,11 +298,11 @@ The formal solution is
 Let us assume for simplicity that $H_0$ has a discrete spectrum $H_0|n\rangle = E_n|n\rangle$. 
 We assume that the system is initially in an eigenstate of the unperturbed system, what we will call the ``initial'' state $|i\rangle$ with energy $E_{\mathrm{i}}$. Then 
 \[|\psi_{\mathrm{I}}(t)\rangle = W(t)|i\rangle\]
-Let us expand the exact solution of the Schrödinger equation in the interaction picture in the unperturbed eigenstates
+Let us expand the exact solution of the Schr\"{o}dinger equation in the interaction picture in the unperturbed eigenstates
 \[|\psi_{\mathrm{I}}(t)\rangle = \sum_n c_n(t) |n\rangle\]
 We then have
 \[c_n(t) = \langle n | W(t) | i\rangle = \langle n | U^{\dagger}_0U(t) | i\rangle = e^{iE_nt} \langle n | U(t) | i\rangle \]
-So the transition amplitudes in the interaction picture and those in the Schrödinger picture are related by a simple phase factor.The transition probabilities are the squares of the amplitudes and are the same in either case. The perturbation expansion of the transition amplitude $c_n(t)$ is
+So the transition amplitudes in the interaction picture and those in the Schr\"{o}dinger picture are related by a simple phase factor.The transition probabilities are the squares of the amplitudes and are the same in either case. The perturbation expansion of the transition amplitude $c_n(t)$ is
 \[c_n(t) = \delta_{ni} + c^{(1)}_n(t) + \cdots\]
 where
 \[c^{(1)}_n(t) = \frac{1}{i} \int_0^t dt' \langle n | H_{1\mathrm{I}}(t')|i\rangle = \frac{1}{i} \int_0^t dt' e^{i(E_n-E_{\mathrm{i}})t'} \langle n | H_{1}(t')|i\rangle\]
@@ -419,7 +419,7 @@ Consider the one-dimensional time independent Schrödinger equation
 \[-\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} + V(x)\psi = E\psi\]
 We will look for solutions of the form
 \[\psi(x) = e^{iW(x)/\hbar}\]
-Plugging this ansatz into the Schrödinger equation leaves us with the differential equation
+Plugging this ansatz into the Schr\"{o}dinger equation leaves us with the differential equation
 \[i\hbar \frac{d^2W}{dx^2} - \left( \frac{dW}{dx} \right)^2 + p(x)^2 = 0\]
 where $p(x)^2 = 2m(E-V(x))$.
 Here we'll look for solutions where the second derivative is merely small, meaning
@@ -453,13 +453,13 @@ The key idea that makes the WKB approximation work is matching. This means that 
 \\
 In the vicinity of $x_0$, we expand the potential energy, keeping only the linear term
 \[V(x) \approx E + C(x-x_0) + \cdots\]
-The Schrödinger equation is then
+The Schr\"{o}dinger equation is then
 \[-\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} + Cx\psi = Cx_0 \psi\]
 
 \subsection{A linear potential and the Airy function}
 To solve the equation above, we define the dimensionless position
 \[u \equiv (\frac{2mC}{\hbar^2})^{\frac{1}{3}} (x - x_0) \approx  (\frac{2m}{\hbar^2 C^2})^{\frac{1}{3}} (V - E)\]
-Then the Schrödinger equation becomes
+Then the Schr\"{o}dinger equation becomes
 \[\frac{d^2\psi}{du^2} - u\psi = 0\]
 This is known as the \href{http://mathworld.wolfram.com/AiryDifferentialEquation.html}{Airy equation}. The solution is the \href{http://mathworld.wolfram.com/AiryFunctions.html} {Airy function}, $\psi(u) = \mathrm{Ai}(u)$,
 which is defined by integral
@@ -505,7 +505,7 @@ Matching to the Airy function across the turning point $x = b$, we have
 We're left with two expressions for the wave function in Region 2.
 Clearly these must agree. Equating the two tells us that $|A| = |A'|$, but they may differ by a sign, since this can be compensated by the cos function. Insisting that the two cos functions agree, up to sign, gives us the condition
 \[\int_a^b dx' \sqrt{2m(E-V(x'))} = \left( n + \frac{1}{2} \right) \hbar \pi\]
-The WKB approximation underlies an important piece of history from the pre-Schrödinger era of quantum mechanics. 
+The WKB approximation underlies an important piece of history from the pre-Schr\"{o}dinger era of quantum mechanics. 
 We can rewrite the quantisation condition as
 \[\oint dx \; p(x) = \left( n + \frac{1}{2} \right) h \quad h \equiv 2\pi \hbar \]
 where $\oint$ means that we take a closed path in phase space which, in this one-dimensional example, is from $x_{\mathrm{min}}$ to $x_{\mathrm{max}}$ and back again.
@@ -521,14 +521,14 @@ For simplicity, we will assume that $H$ has a discrete spectrum. We write these 
 \[H|n(\lambda)\rangle = E_n(\lambda) |n(\lambda)\rangle\]
 Let's place ourselves in one of these energy eigenstates. Now vary the parameters $\lambda_i$.
 The adiabatic theorem states that if $\lambda^i$ are changed suitably slowly, then the system will cling to the energy eigenstate $|n(\lambda(t))\rangle$ that we started off in.
-To see this, we want to solve the time-dependent Schrödinger equation
+To see this, we want to solve the time-dependent Schr\"{o}dinger equation
 \[i\frac{\partial |\psi(t)\rangle}{\partial t} = H |\psi(t)\rangle\]
 We expand the solution in a basis of instantaneous energy eigenstates
 \[|\psi(t)\rangle = \sum_m a_m(t) e^{i\xi_m(t)} |m(\lambda(t))\rangle\]
 Here $a_m(t)$ are coefficients that we wish to determine, while $\xi_m(t)$ is the usual energy-
 dependent phase factor
 \[\xi_m(t) = - \int_0^t dt' E_m(t')\]
-To proceed, we substitute our ansatz into the Schrödinger equation to find
+To proceed, we substitute our ansatz into the Schr\"{o}dinger equation to find
 \[\sum_m \left[\dot{a}_m e^{i\xi_m}|m(\lambda)\rangle + a_m e^{i\xi_m} \frac{\partial }{\partial \lambda^i} |m(\lambda)\rangle\dot{\lambda}^i \right] = 0\]
 Taking the inner product with $\langle n(\lambda)|$ gives
 \[\dot{a}_n = ia_n\mathcal{A}_i(\lambda) \dot{\lambda}^i - \sum_{m \neq n} a_m e^{i(\xi_m - \xi_n)} \langle n(\lambda) | \frac{\partial}{\partial \lambda^i} | m(\lambda)\rangle\dot{\lambda}^i\]
@@ -665,13 +665,13 @@ In other words, the path integral sums over all possible paths allowing the posi
 
 \section{Non-relativistic quantum field theory}
 \subsection{Motivation and formulation of quantum field theory}
-There are some limitations of of multi-body Schrödinger wave function. Firstly, when the number of particles is large, multi-body Schrödinger wave function would be cumbersome. Secondly, it is incapable of describing processes where the number of particles changes.\\
-The aim of the quantum field theory is to come up with a formalism which is completely equivalent to multi-body Schrödinger equations but just better:
+There are some limitations of of multi-body Schr\"{o}dinger wave function. Firstly, when the number of particles is large, multi-body Schr\"{o}dinger wave function would be cumbersome. Secondly, it is incapable of describing processes where the number of particles changes.\\
+The aim of the quantum field theory is to come up with a formalism which is completely equivalent to multi-body Schr\"{o}dinger equations but just better:
 it allows you to consider a variable number of particles all within the same framework and can even describe the change in the number of particles. 
 It also gives totally symmetric or anti-symmetric multi-body wave function automatically. 
 It also allows a systematic way of organizing perturbation theory in terms of Feynman diagrams.
 It is particularly suited to multi-body problems.\\
-In quantum mechanics, you start with classical particle Hamiltonian mechanics, with no concept of wave or interference. After quantizing it, we introduce Schrödinger wave function and there emerges concepts of wave and its interference. 
+In quantum mechanics, you start with classical particle Hamiltonian mechanics, with no concept of wave or interference. After quantizing it, we introduce Schr\"{o}dinger wave function and there emerges concepts of wave and its interference. 
 In quantum field theory, you start with classical wave equation, with no concept of particle. After quantizing it, we find particle interpretation of excitations in the system.\\ \\
 Let us consider a classical field equation
 \[\left (i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m}\right ) \psi(\bm{x},t) = 0\]
@@ -683,7 +683,7 @@ We can even add a non-linear term in the action, for instance
 \[\mathcal{L} = \psi^{*}\left (i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m}\right )\psi - \frac{1}{2}\lambda \psi^{*2}\psi^2\]
 Variation method gives a non-linear field equation
 \[\left (i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m} -\lambda \psi^*\psi\right) \psi(\bm{x},t) = 0\]\\
-Now we quantize the Schrödinger field by canonical quantization method. A more formal discussion on the motivation and validity of canonical quantization will be discussed in relativistic quantum field theory.\\
+Now we quantize the Schr\"{o}dinger field by canonical quantization method. A more formal discussion on the motivation and validity of canonical quantization will be discussed in relativistic quantum field theory.\\
 The canonically conjugate momenta is
 \[\pi(\bm{x}) = \frac{\partial \mathcal{L}}{\partial \dot{\psi}(\bm{x})} = i\psi^{\dagger}(\bm{x})\] 
 We now introduce canonical commutation relation
@@ -710,7 +710,7 @@ We can derive that
 Therefore, this state is normalized in the same way as the one-particle position eigenstate in quantum mechanics.
 We define a general one-particle state in the quantum field theory as
 \[|\Psi(t)\rangle \equiv \int d\bm{x} \Psi(\bm{x},t)\psi^{\dagger}(\bm{x})|0\rangle\]
-$\psi(\bm{x})$ corresponds to the Schrödinger wave function in the particle quantum mechanics. The Schrödinger equation in quantum field theory is
+$\psi(\bm{x})$ corresponds to the Schr\"{o}dinger wave function in the particle quantum mechanics. The Schr\"{o}dinger equation in quantum field theory is
 \[i\frac{\partial |\Psi(t)\rangle}{\partial t} = H|\psi(t)\rangle\]
 Since we can derive that
 \begin{eqnarray}
@@ -720,7 +720,7 @@ H|\Psi(t)\rangle &=& \int d\bm{x} \Psi(\bm{x},t) H\psi^{\dagger}(\bm{x})|0\rangl
 \end{eqnarray}
 So we have
 \[i\frac{\partial \Psi(\bm{x},t)}{\partial t} = -\frac{\nabla^2\Psi(\bm{x},t)}{2m}\]
-This is exactly the Schrödinger equation in coordinate representation of quantum mechanics for one isolate particle.\\ \\
+This is exactly the Schr\"{o}dinger equation in coordinate representation of quantum mechanics for one isolate particle.\\ \\
 Let us next study the two-particle state
 \[|\bm{x}_1\bm{x}_2\rangle = \frac{1}{\sqrt{2}} \psi^{\dagger}(\bm{x}_1)\psi^{\dagger}(\bm{x}_2)|0\rangle\]
 We can derive that
@@ -739,7 +739,7 @@ H|\Psi(t)\rangle &=& \frac{1}{\sqrt{2}} \int d\bm{x}_1 d\bm{x}_2 \Psi(\bm{x}_1,\
 \end{eqnarray}
 So we have
 \[i\frac{\partial \Psi(\bm{x}_1,\bm{x}_2,t)}{\partial t} = \left( -\frac{\nabla^2_1}{2m}  -\frac{\nabla^2_2}{2m} + \lambda\delta(\bm{x}_1-\bm{x}_2)\right)\Psi(\bm{x}_1,\bm{x}_2,t)\]
-It is a Schrödinger equation for two-particle wave function with a delta function potential as an interaction between them.
+It is a Schr\"{o}dinger equation for two-particle wave function with a delta function potential as an interaction between them.
 Therefore, the Fock space with two creation operators correctly describes the two-particle quantum mechanics.\\
 If we want a general interaction potential between them, the action must be modified to
 \[S = \int dt \left[ \int d\bm{x} \psi^{\dagger}(\bm{x})\left( i\frac{\partial }{\partial t} + \frac{\nabla^2}{2m} \right)\psi(\bm{x}) - \frac{1}{2}\int d\bm{x} d\bm{y} \psi^{\dagger}(\bm{x}) \psi^{\dagger}(\bm{y}) V(\bm{x} - \bm{y}) \psi(\bm{x})\psi(\bm{y})\right]\]
@@ -773,8 +773,8 @@ So we can derive the commutation relation
 We can rewrite the Hamiltonian in the momentum space. The
 free part of the Hamiltonian is
 \[H_0 = \int d\bm{x} \psi^{\dagger} \frac{-\nabla^2}{2m} \psi = \int d\bm{p} \frac{p^2}{2m} a^{\dagger}(\bm{p})a(\bm{p})\]
-The free Hamltonian simply countes the number of particles in a given momentum state and assigns the energy $\frac{p^2}{2m}$ accordingly. \\
-The interaction Hamltonian is
+The free Hamiltonian simply counts the number of particles in a given momentum state and assigns the energy $\frac{p^2}{2m}$ accordingly. \\
+The interaction Hamiltonian is
 \begin{eqnarray}
 \Delta H &=& \frac{1}{2}\int d\bm{x} d\bm{y} \psi^{\dagger}(\bm{x}) \psi^{\dagger}(\bm{y}) V(\bm{x} - \bm{y}) \psi(\bm{x})\psi(\bm{y})  \nonumber \\
 &=& \frac{1}{2} \int d\bm{p}d\bm{q}d\bm{p}'d\bm{q}' V(\bm{p}-\bm{q}) a^{\dagger}(\bm{p}) a^{\dagger}(\bm{p}') a(\bm{q}) a(\bm{q}') \delta(\bm{p}+\bm{p}'-\bm{q}-\bm{q}')\nonumber
@@ -785,7 +785,7 @@ The delta function represents the momentum conservation in the scattering proces
 $V(\bm{p}-\bm{q})$.
 
 \subsection{Fermions}
-We have seen that the quantized Schrödinger field gives multi-body states of identical bosons. For fermions, we should use anti-commutation relations rather than commutation relations.
+We have seen that the quantized Schr\"{o}dinger field gives multi-body states of identical bosons. For fermions, we should use anti-commutation relations rather than commutation relations.
 \[\{\psi(\bm{x}),\psi^{\dagger}(\bm{y})\} = \delta(\bm{x}-\bm{y}) \quad \{\psi(\bm{x}),\psi(\bm{y})\} = \{\psi^{\dagger}(\bm{x}),\psi^{\dagger}(\bm{y})\} = 0\]
 One noteworthy point is that $\psi^{\dagger}(\bm{x}) = \frac{1}{2}\{\psi^{\dagger}(\bm{x}),\psi^{\dagger}(\bm{x})\} = 0$. 
 What this means is that one cannot create two particles at the same position, an expression of Pauli's exclusion principle for fermions.\\
@@ -798,20 +798,20 @@ Consider a two-particle state
 \[|\Psi(t)\rangle = \frac{1}{\sqrt{2}} \int d\bm{x}_1 d\bm{x}_2 \Psi(\bm{x}_1,\bm{x}_2,t) \psi^{\dagger}(\bm{x}_1)\psi^{\dagger}(\bm{x}_2) |0\rangle\]
 From the anti-commutation relations, we have
 \[\Psi(\bm{x}_1,\bm{x}_2) = - \Psi(\bm{x}_2,\bm{x}_1)\]
-Such a state indeed describes identical fermions. And we can get the same Schrödinger equation as in the case for bosons.
+Such a state indeed describes identical fermions. And we can get the same Schr\"{o}dinger equation as in the case for bosons.
 
 \chapter{Scattering theory}
 \section{Scattering in one dimension}
 The object that we want to understand is some potential $V(x)$. Importantly, the potential is localised to some
 region of space which means that $V (x) \to 0$ as $x \to \pm \infty$.
-A quantum particle moving along the line is governed by the Schrödinger equation,
+A quantum particle moving along the line is governed by the Schr\"{o}dinger equation,
 \[-\frac{1}{2m}\frac{d^2\psi}{dx^2} + V(x)\psi = E\psi\]
 For any potential, there are essentially two different kinds of states.
 \begin{itemize}
 \item Bound States are states that are localised in some region of space. The wave functions are normalisable and have profiles that drop off exponentially far from the
 potential 
 \[\psi(x) \to e^{-\lambda|x|} \mbox{ as } |x| \to \infty\]
-Because the potential vanishes in the asymptotic region, the Schrödinger equation relates the asymptotic fall-off to the energy of the state
+Because the potential vanishes in the asymptotic region, the Schr\"{o}dinger equation relates the asymptotic fall-off to the energy of the state
 \[E = -\frac{\lambda^2}{2m}\]
 In particular, bound states have $E < 0$. Indeed, it is this property which ensures that the particle is trapped within the potential and cannot escape to infinity.
 \\
@@ -822,20 +822,20 @@ This will only happen for specific values of $\lambda$. Ultimately, this is why 
 Instead, asymptotically, far from the potential, scattering states take the form of plane waves. In one dimension, there are two possibilities
 \[\mbox{Right moving:} \quad \psi \sim e^{ikx}\]
 \[\mbox{Left moving:} \quad \psi \sim e^{-ikx}\]
-where $k > 0$. Solving the Schrödinger equation in the asymptotic region gives the energy
+where $k > 0$. Solving the Schr\"{o}dinger equation in the asymptotic region gives the energy
 \[E = \frac{k^2}{2m}\]
 Scattering states have $E > 0$. Note that nothing special has to happen to find scattering solutions. We expect to find solutions for any choice of $k$.
 \end{itemize}
 
 \subsection{Reflection and transmission amplitudes}
-When solving the Schrd\''{o}inger equation for the scattering states, we expect that there are two independent solutions for each value of $k$.
+When solving the Schrd\"{o}inger equation for the scattering states, we expect that there are two independent solutions for each value of $k$.
 \\
 If we throw the particle in from the left. When it hits the potential, it can bounce back, or it can pass straight through. 
 Mathematically, this means that we are looking for a solution which asymptotically takes the form
-\[\psi_{\rm R}(x) \sim \begin{cases} e^{ikx} + re^{-ikx} \quad x \to \infty \\ te^{ikx} \quad x \to \infty \end{cases}\]
+\[\psi_{\rm R}(x) \sim \begin{cases} e^{ikx} + re^{-ikx} \quad x \to -\infty \\ te^{ikx} \quad x \to +\infty \end{cases}\]
 The coefficient $r$ is called the reflection amplitude. The coefficient $t$ is called the transmission coefficient. The probability for reflection $R$ and transmission $T$ are given by the usual quantum mechanics rule:
 \[R = |r|^2 \quad T = |t|^2\]
-Given a solution $\psi(x)$ to the Schrödinger equation, we can construct a conserved probability current
+Given a solution $\psi(x)$ to the Schr\"{o}dinger equation, we can construct a conserved probability current
 \[J(x) = -i\frac{1}{2m}\left( \psi^*\frac{d\psi}{dx} - \psi\frac{d\psi^*}{dx}\right)\]
 which obeys $dJ/dx = 0$. This means that $J(x)$ is constant. For our scattering solution $\psi_{\rm R}$, the probability current as $x\to-\infty$ is given by
 \[J(x) = \frac{k}{m}(1-|r|^2)\]
@@ -844,9 +844,9 @@ Meanwhile, as $x \to +\infty$, we have
 Equating the two gives $R + T =1$.
 \\ \\
 If we throw the particle in from the right. We're now looking for solutions which take the asymptotic form
-\[\psi_{\rm L}(x) \sim \begin{cases} t'e^{ikx}  \quad x \to \infty \\ e^{ikx} + r'e^{-ikx} \quad x \to \infty \end{cases}\]
+\[\psi_{\rm L}(x) \sim \begin{cases} t'e^{-ikx}  \quad x \to -\infty \\ e^{-ikx} + r'e^{ikx} \quad x \to +\infty \end{cases}\]
 Because the potential $V (x) $ is a real function, so if $\psi_{\rm R}$ is a solution then so is $\psi^*_{\rm R}$. And, by linearity, so is $(\psi^*_{\rm R} - r^*\psi_{\rm R}) / t^* $ which is given by
-\[\frac{\psi^*_{\rm R}(x) - r^*\psi_{\rm R}(x)}{t^*} \sim \begin{cases} \frac{1-|r|^2}{t^*} e^{ikx}  \quad x \to \infty \\ e^{ikx} - \frac{r^* t}{t^*}e^{-ikx} \quad x \to \infty \end{cases}\]
+\[\frac{\psi^*_{\rm R}(x) - r^*\psi_{\rm R}(x)}{t^*} \sim \begin{cases} \frac{1-|r|^2}{t^*} e^{-ikx}  \quad x \to -\infty \\ e^{-ikx} - \frac{r^* t}{t^*}e^{ikx} \quad x \to +\infty \end{cases}\]
 So we have
 \[t' = t \quad r' = -\frac{r^* t}{t^*}\]
 
@@ -858,7 +858,7 @@ we have the right moving solution
 \[t = \frac{2iqke^{-ika}}{(q^2+k^2)\sin(qa) + 2iqk\cos(qa)}\]
 where $q^2 = 2mV_0 + k^2$. At the limit $k \to 0$, where $r \to -1$ and $t \to 0$. This means that if you throw the particle very softly, it doesn't make it through the potential; it's guaranteed to bounce back. Conversely, in the limit $k \to \infty$, we have $r = 0$. By unitarity we must have $|t| = 1$ and the particle is guaranteed to pass through. This is what you might expect; if you throw the particle hard enough, it barely notices that the potential is there.
 \\
-We can repeat the calculation above for scattering from the right. In fact, for our pothole potential, the result is exactly the same and we have $r = r'$. This arises because $V (x) = V (−x)$ so it's no surprise that scattering from the left and right are the same.
+We can repeat the calculation above for scattering from the right. In fact, for our pothole potential, the result is exactly the same and we have $r = r'$. This arises because $V (x) = V (-x)$ so it's no surprise that scattering from the left and right are the same.
 \end{example}
 
 \subsection{S-matrix}
@@ -916,7 +916,7 @@ if the potential is symmetric. For scattering off a symmetric potential, all the
 We now look at the bound states, which have energy $E < 0$ and are localised near inside the potential.
 It turns out that the information about these bound states can be extracted from the S-matrix, which we constructed purely from knowledge of the scattering states. 
 We take our scattering solutions, which depend on momentum $k \in  \mathbb{R}$, and extend them to the complex momentum plane. 
-First note that the solutions with $k \in  \mathbb{C}$ still obey our original Schrödinger equation since, at no point in any of our derivation did we assume that $k \in  \mathbb{R}$. 
+First note that the solutions with $k \in  \mathbb{C}$ still obey our original Schr\"{o}dinger equation since, at no point in any of our derivation did we assume that $k \in  \mathbb{R}$. 
 The only difficulty comes when we look at how the wave functions behave asymptotically.
 In particular, any putative solution will, in general, diverge exponentially as $x \to +\infty$ or $x \to -\infty$, rendering the wave function non-normalisable. However, there are certain solutions that survive.
 \\ \\
@@ -966,7 +966,7 @@ Recall that the time dependence of the wave function is given by
 For $\gamma > 0$, the overall form of the wave function decays exponentially with time. This is the characteristic behaviour of unstable states. 
 A wave function that is initially supported inside the trap will be very small there at time much larger than $\tau = \frac{1}{\Gamma}$. Here $\tau$ is called the half-life of the state, while $\Gamma$ is usually referred to as the width of the state.
 \\
-Including the time dependence, when $S_{++}\ to \infty$, the solution takes the asymptotic form
+Including the time dependence, when $S_{++}\ \to \infty$, the solution takes the asymptotic form
 \[\psi_+(x,t) = \begin{cases} e^{-iE_0t}e^{-ik_0x}e^{-\gamma x - \Gamma t/2} \quad x\to -\infty \\  e^{-iE_0t}e^{ik_0x}e^{\gamma x - \Gamma t/2} \quad x\to \infty \end{cases}\]
 The final factor varies as
 \[e^{\pm\gamma(x\mp vt)} \quad v = \frac{\Gamma}{2\gamma} = \frac{k_0}{m}\]
@@ -1121,7 +1121,7 @@ After solving the equation, we take the asymptotic limit $r \to \infty$, and wri
 \subsubsection{Hard sphere scattering}
 The potential for hard sphere scattering is
 \[V = \begin{cases} 0 \quad (r > a) \\ \infty \quad (r < a)\end{cases}\]
-The infinite potential corresponds to the boundary condition $R_l(a) = 0$. We first analyze the S-wave ($l = 0$). The Schrödinger equation is simply 
+The infinite potential corresponds to the boundary condition $R_l(a) = 0$. We first analyze the S-wave ($l = 0$). The Schr\"{o}dinger equation is simply 
 \[-\frac{d^2 rR_0(r)}{dr^2} = k^2 rR_0(r)\]
 The solution is
 \[rR_0(r) = c\sin(k(r-a)) = \frac{ce^{ika}}{2i} \left[ e^{i(kr-2ka)} - e^{-ikr} \right]\]
@@ -1195,7 +1195,7 @@ In the limit of $\gamma \to \infty$, or in other words in the limit of no coupli
 They are the discrete states inside the shell in this limit. 
 By making $\gamma$ finite, we introduce coupling between the discrete states inside the shell to the continuum states outside the shell.
 \\ \\
-It is instructive to solve Schrödinger equation for the values of $k$ which correspond to the location of poles. Because the outgoing wave $e^{ikr}$ is enhanced relative to the incoming wave $e^{-ikr}$ by an infinite amount due to the pole, the boundary condition is that the solution is ``purely outgoing'', i.e.
+It is instructive to solve Schr\"{o}dinger equation for the values of $k$ which correspond to the location of poles. Because the outgoing wave $e^{ikr}$ is enhanced relative to the incoming wave $e^{-ikr}$ by an infinite amount due to the pole, the boundary condition is that the solution is ``purely outgoing'', i.e.
 \[rR_0 = \begin{cases} \sin kr \quad (r<a) \\ \sin ka e^{ik(r-a)} \quad (r>a)  \end{cases} \quad \mathrm{Re}(k) > 0\]
 Because the factor $e^{ik(r-a)}$ grows exponentially at large $r$ due to the negative imaginary part in $k$, the solution is not a regular normalizable solution.
 In the large $\gamma$ limit, $\sin ka \sim O(\gamma^{-1})$ is small. Therefore the wave function almost vanishes at the shell.

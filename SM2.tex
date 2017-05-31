@@ -167,7 +167,7 @@ An example of a first order transition is when a solid melts
 to a liquid. The density of the system, which can be taken as the order parameter, changes discontinuously. A phase transition is a striking example of an emergent phenomenon. Starting off with only short-range interactions between its microscopic magnetic moments, the system realizes long-range correlations below $T_c$.
 \\ \\
 We start with a model for a ferromagnet. We regard a ferromagnetic solid as being made out of a finite number of elementary magnets placed at locations throughout the solid.
-We simplify our model by assuming that each of these elementary magnets m can either point up $m = 1$ or down $m = -1$. Finally each elementary magnet interacts only with its nearest neighbour. A Hamiltonian for this model could be
+We simplify our model by assuming that each of these elementary magnets $m$ can either point up $m = 1$ or down $m = -1$. Finally each elementary magnet interacts only with its nearest neighbour. A Hamiltonian for this model could be
 \[H = -g\sum_{n,i}m_im_{i+n} - B\sum_i m_i\]
 where the first sum is over $i$ as well as the nearest neighbours of $i$. Note $H$ decreases if $m_i$, $m_{i+n}$ have the same sign for $g > 0$. There are altogether a large but finite number of magnets in a ferromagnet. Then we can prove that in the model of a ferromagnet proposed the susceptibility cannot diverge. 
 \\
@@ -190,15 +190,15 @@ Thus $\chi(0)$ will diverge if $a(T)$ diverges, that is, if correlations in the 
 
 \section{Landau theory of phase transitions}
 Recall that for any change of a system in which the temperature is kept fixed and no work is done by the system, the change of free energy, $\Delta F$, is always negative so that a state of equilibrium must be a minimum of $F$. Landau utilized this property of the free energy in his theory of phase transitions.
-\\
+\\ \\
 Let us examine this approach for the case of a ferromagnet. The basic idea is to make a model for the free energy $F$ near the Curie temperature $T_c$ when the system is still a ferromagnet. We know that for $T < T_c$ long-range correlations are present, that is, the spin at lattice site $\bm{x}$ must point in the same direction as that at site $\bm{y}$ even when $\bm{x}$ and $\bm{y}$ are not adjacent. Otherwise the observed macroscopic magnetic properties of the system would not exist.
-\\
+\\ \\
 The basic assumption underlying Landau's theory is that, near the critical temperature $T_c$, the properties of a ferromagnet can be described in terms of a magnetization density function $M(\bm{x})$. 
 The function $M(\bm{x})$ can be defined by considering a volume element $\Delta V$, large compared to the lattice cell volume, but small compared to the volume of correlated spins centred around the point $\bm{x}$. 
 The magnetization of the volume element $\Delta V$ is defined to be $M(\bm{x}) \Delta V$. For this definition of $M(\bm{x})$ to be useful it is important that $M(\bm{x})$ should not be a rapidly varying function of position. Near the Curie temperature $T_c$ we also expect $M(\bm{x})$ to be small in amplitude. 
 Since we are implicitly assuming in this approach that a spin-spin type of interaction is responsible for the phenomenon of ferromagnetism it seems reasonable to expect the free energy density to be a function of $M(\bm{x})\cdot M(\bm{x})$. On the basis of arguments of this kind Landau proposed to introduce a functional $F_L[T,\bm{B},\bm{M}]$ of the magnetization density $\bm{M}(\bm{x})$, temperature $T$, and external magnetic field $\bm{B}(\bm{x})$ of the form
 \[F_L[T,\bm{B},\bm{M}] = F_L(T,\bm{B},0) + \int d^3x \left[ a(T)|M|^2 + b(T)|M|^4 + \cdots + c(T)\sum_{ij} (\nabla_jM_i)^2 + \cdots - \bm{B}\cdot\bm{M} \right]\]
-The free energy $F_L(T,\bm{B})$ is then obtained by minimizing $F_L[T,\bm{B},\bm{M}]$ with respect to $\bm{M}$. Note that the temperature dependent coefficients $a(T), b(T), c(T) \cdots$ are assumed to be smooth functions of temperature. We will simplify the model function by assuming  acts along the $z$-direction and that $\bm{M}(x)$ only has components in the $z$-direction. Then we have
+The free energy $F_L(T,\bm{B})$ is then obtained by minimizing $F_L[T,\bm{B},\bm{M}]$ with respect to $\bm{M}$. Note that the temperature dependent coefficients $a(T), b(T), c(T) \cdots$ are assumed to be smooth functions of temperature. We will simplify the model function by assuming  magnetic field along the $z$-direction and that $\bm{M}(x)$ only has components in the $z$-direction. Then we have
 \[F_L[T,B_z,M_z] = F_L(T,B_z,0) + \int d^3x \left[ a(T)M_z^2 + b(T)M_z^4 + \cdots + c(T)|\bm{\nabla}M_z|^2 + \cdots - B_z M_z \right]\]
 The expression for the Landau free energy $F_L$ is expected to be useful when $T$ is close to the Curie temperature $T_c$ . In this region $M_z(\bm{x})$ is expected to be small and we also expect $|\bm{\nabla}M_z|^2$ to be small. 
 Because of these reasons we will from now on ignore the effect of the higher powers of $M_z$ and higher gradient terms. 
@@ -251,7 +251,7 @@ where $\xi^2 = c_0/a(T)$ for $T > T_c$ and $\xi^2 = -c_0/2a(T)$ for $T < T_c$.
 We notice that $\xi \to \infty$ as $T \to T_c$. Thus Landau's theory is in qualitative agreement with the intuitive idea that long-range correlations are generated in a ferromagnet as $T \to T_c$.
 \\
 Another point to note is that if $\delta B_z$ were $\bm{x}$ independent, then as we saw before
-\[\chi(0) = \frac{\delta M(0)}{\delta B} = \int d^3x C_T(|\bm{x}|) \sim \chi^2 \to \infty \quad \mbox{ as } T \to T_c\]
+\[\chi(0) = \frac{\delta M(0)}{\delta B} = \int d^3x C_T(|\bm{x}|) \sim \xi^2 \to \infty \quad \mbox{ as } T \to T_c\]
 \\ \\
 Let us summarize the results obtained from Landau's approach. The approach focused on long-range correlations and suggested that the singular behaviour of the susceptibility was due to such correlations when $T \to T_c$. 
 The approach also predicts that the relation between different macroscopic parameters involves power laws,
