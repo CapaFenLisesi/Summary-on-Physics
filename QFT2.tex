@@ -1,41 +1,40 @@
 \chapter{Spin 1/2 Field}
 \section{Representation of the Lorentz group}
 \noindent
-Recall the rotation of the field
-\[U^{-1}(\Lambda) \phi_a(x) U(\Lambda) = \mathcal{S}_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
+Recall that
+\[U^{-1}(\Lambda) \phi_a(x) U(\Lambda) = \mathscr{S}_{a}^{\phantom{a}b}\phi_b(\Lambda^{-1}x)\]
 For infinitesimal rotation,
-\[\mathcal{S}_{a}^{\phantom{a}b} = \delta_{a}^{\phantom{a}b}+\frac{i}{2} \delta \omega_{\alpha \beta} (S^{\alpha \beta})_{a}^{\phantom{a}b} \]
-The matrix $S^{\alpha \beta}$ satisfy the following commutation relation
-\[[S^{\mu \nu},S^{\rho \sigma}]= -\eta^{\nu \rho}S^{\mu \sigma} + \eta^{\sigma \mu}S^{\rho \nu} + \eta^{\mu \rho}S^{\nu \sigma} - \eta^{\sigma \nu}S^{\rho \mu}\]
-Define $C_i \equiv \frac{1}{2}\epsilon_{ijk}S^{jk}$,$D_i \equiv S^{i0}$, so we can get
-\[[C_i,C_j] = i\epsilon_{ijk}C_k \quad [C_i,D_j] = i\epsilon_{ijk}D_k \quad [D_i,D_j] = -i\epsilon_{ijk}C_k\]
-We further define $N_i \equiv \frac{1}{2}(C_i-iD_i)$ and $N^{\dagger}_i \equiv \frac{1}{2}(C_i + i D_i)$, then the commutation relation will be
-\[[N_i,N_j] = i\epsilon_{ijk}N_k \quad [N^{\dagger}_i,N^{\dagger}_j] = i\epsilon_{ijk}N^{\dagger}_k \quad [N_i,N^{\dagger}_j] = 0\]
-
+\[\mathscr{S}_{a}^{\phantom{a}b} = \delta_{a}^{\phantom{a}b}+\frac{i}{2} \delta \omega_{\alpha \beta} (\mathcal{S}^{\alpha \beta})_{a}^{\phantom{a}b} \]
+Matrices $\mathcal{S}^{\alpha \beta}$ satisfy the following commutation relation
+\[[\mathcal{S}^{\mu \nu},\mathcal{S}^{\rho \sigma}]= -\eta^{\nu \rho}\mathcal{S}^{\mu \sigma} + \eta^{\sigma \mu}\mathcal{S}^{\rho \nu} + \eta^{\mu \rho}\mathcal{S}^{\nu \sigma} - \eta^{\sigma \nu}\mathcal{S}^{\rho \mu}\]
+Define $\mathcal{C}_i \equiv \frac{1}{2}\epsilon_{ijk}\mathcal{S}^{jk}$,$\mathcal{D}_i \equiv \mathcal{S}^{i0}$, we have
+\[[\mathcal{C}_i,\mathcal{C}_j] = i\epsilon_{ijk}\mathcal{C}_k \quad [\mathcal{C}_i,\mathcal{D}_j] = i\epsilon_{ijk}\mathcal{D}_k \quad [\mathcal{D}_i,\mathcal{D}_j] = -i\epsilon_{ijk}\mathcal{C}_k\]
+We further define $\mathcal{N}_i \equiv \frac{1}{2}(\mathcal{C}_i-i\mathcal{D}_i)$ and $\mathcal{N}^{\dagger}_i \equiv \frac{1}{2}(\mathcal{C}_i + i \mathcal{D}_i)$, then the commutation relation will be
+\[[\mathcal{N}_i,\mathcal{N}_j] = i\epsilon_{ijk}\mathcal{N}_k \quad [\mathcal{N}^{\dagger}_i,\mathcal{N}^{\dagger}_j] = i\epsilon_{ijk}\mathcal{N}^{\dagger}_k \quad [\mathcal{N}_i,\mathcal{N}^{\dagger}_j] = 0\]
 We see that we have two different $SU(2)$ Lie algebras that are exchanged by hermitian conjugation. As we just discussed, a representation of the $SU(2)$ Lie algebra is specified by an integer or half integer; we therefore conclude that a representation of the Lie algebra of the Lorentz group in four spacetime dimensions is specified by two integers or half-integers $n$ and $n'$.
-
-We will label these representations as $(2n+1, 2n'+1)$; the number of components of a representation is then $(2n+1)(2n'+1)$. Different components within a representation can also be labeled by their angular momentum representations. We have $C_i = N_i + N^{\dagger}_i$. Thus, deducing the allowed values of $j$ given $n$ and $n'$ becomes a standard problem in the addition of angular momenta. The general result is that the allowed values of $j$ are $|n-n'|,|n-n'|+1,\cdots, n+n'$, and each of these values appears exactly once.
-
+\\
+We will label these representations as $(2n+1, 2n'+1)$; the number of components of a representation is then $(2n+1)(2n'+1)$. Different components within a representation can also be labeled by their angular momentum representations. We have $\mathcal{C}_i = \mathcal{N}_i + \mathcal{N}^{\dagger}_i$. Thus, deducing the allowed values of $j$ given $n$ and $n'$ becomes a standard problem in the addition of angular momenta. The general result is that the allowed values of $j$ are $|n-n'|,|n-n'|+1,\cdots, n+n'$, and each of these values appears exactly once.
 
 \section{Spin–statistics theorem}
 \begin{newthem}[Spin–statistics theorem]
 States with identical particles of integer spin are symmetric under the interchange of the particles, while states with identical particles of half-integer spin are antisymmetric under the interchange of the particles. \\
-This is equivalent to the statement that the creation and annihilation operators for integer spin particles satisfy canonical commutation relations, while creation and annihilation operators for halfinteger spin particles satisfy canonical anticommutation relations. \\
-Particles quantized with canonical commutation relations are called bosons, and satisfy Bose–Einstein statistics, and particles quantized with canonical anticommutation relations are called fermions, and satisfy Fermi–Dirac statistics.
+This is equivalent to the statement that the creation and annihilation operators for integer spin particles satisfy canonical commutation relations, while creation and annihilation operators for halfinteger spin particles satisfy canonical anti-commutation relations. \\
+Particles quantized with canonical commutation relations are called bosons, and satisfy Bose–Einstein statistics, and particles quantized with canonical anti-commutation relations are called fermions, and satisfy Fermi–Dirac statistics.
 \end{newthem}
-Roughly speaking,  one way to interchange two particles is to rotate them around their midpoint by $\pi$. For a particle of spin $s$, this rotation will introduce a phase factor of $e^{i\pi s}$. Thus, a two-particle state with identical particles both of spin $s$ will pick up a factor of $e^{i2\pi s}$. For s a half-integer, this will give a factor of $-1$; for $s$ an integer, it will give a factor of $+1$. So, the creation and annihilation operators for integer spin particles satisfy canonical commutation relations, while creation and annihilation operators for halfinteger spin particles satisfy canonical anticommutation relations. The detailed proof can be found in chapter 12.1 and 12.2 from \emph{Quantum Field Theory and the Standard Model (Matthew D. Schwartz)}.
+
+\noindent
+Roughly speaking,  one way to interchange two particles is to rotate them around their midpoint by $\pi$. For a particle of spin $s$, this rotation will introduce a phase factor of $e^{i\pi s}$. Thus, a two-particle state with identical particles both of spin $s$ will pick up a factor of $e^{i2\pi s}$. For $s$ a half-integer, this will give a factor of $-1$; for $s$ an integer, it will give a factor of $+1$. So, the creation and annihilation operators for integer spin particles satisfy canonical commutation relations, while creation and annihilation operators for half-integer spin particles satisfy canonical anti-commutation relations. The detailed proof can be found in chapter 12.1 and 12.2 from \emph{Quantum Field Theory and the Standard Model (Matthew D. Schwartz)}.
 
 \section{Spinor field}
-Consider a left-handed spinor field $\psi_a(x)$, also known as a left-handed Weyl field, which is in the $(2,1)$ representation of the Lie algebra of the Lorentz group. Here the index a is a left-handed spinor index that takes on two possible values. Under a Lorentz transformation, we have
+Consider a left-handed spinor field $\psi_a(x)$, also known as a left-handed Weyl field, which is in the $(2,1)$ representation of the Lie algebra of the Lorentz group. Here the index $a$ is a left-handed spinor index that takes on two possible values. Under a Lorentz transformation, we have
 \[U(\Lambda)^{-1} \psi_a(x) U(\Lambda) = L_a^{\phantom{a}b}(\Lambda) \psi_b(\Lambda^{-1}x)\]
 For an infinitesimal transformation, we can write
-\[L_a^{\phantom{a}b}(1+\delta \omega) = \delta_a^{\phantom{a}b} + \frac{i}{2} \delta \omega_{\mu \nu} (S_L^{\mu \nu})_a^{\phantom{a}b}\]
-$n=1, \quad n'=0$  implies that
-\[(S_L^{i j}) = \frac{1}{2}\epsilon^{ijk}\sigma_k \quad  (S_L^{k 0}) = \frac{1}{2}i\sigma_k\]
+\[L_a^{\phantom{a}b}(1+\delta \omega) = \delta_a^{\phantom{a}b} + \frac{i}{2} \delta \omega_{\mu \nu} (\mathcal{S}_{\rm L}^{\mu \nu})_a^{\phantom{a}b}\]
+$n=1,\, n'=0$  implies that
+\[(\mathcal{S}_{\rm L}^{i j}) = \frac{1}{2}\epsilon^{ijk}\sigma_k \quad  (\mathcal{S}_{\rm L}^{k 0}) = \frac{1}{2}i\sigma_k\]
 where $\sigma_k$ is Pauli matrix.
 Then the infinitesimal transformation can be written as
 \[L(1+\delta \omega) = I - \frac{i}{2} \theta_i \sigma_i -\frac{1}{2} \beta_i \sigma_i\]
-\\
 Recall that hermitian conjugation swaps the two $SU(2)$ Lie
 algebras that comprise the Lie algebra of the Lorentz group.
 Therefore, the hermitian conjugate of a field in the $(2,1)$ representation should be a field in the $(1,2)$ representation; such a field is called a right-handed spinor field or a right-handed Weyl field. We will distinguish the indices of the $(1,2)$ representation from those of the $(2,1)$ representation by putting dots over them. Thus, we write
@@ -43,9 +42,9 @@ Therefore, the hermitian conjugate of a field in the $(2,1)$ representation shou
 Under a Lorentz transformation, we have
 \[U(\Lambda)^{-1} \psi^{\dagger}_{\dot{a}}(x) U(\Lambda) = R_{\dot{a}}^{\phantom{a}\dot{b}}(\Lambda) \psi^{\dagger}_{\dot{b}}(x)(\Lambda^{-1}x)\]
 For an infinitesimal transformation, we can write
-\[R_{\dot{a}}^{\phantom{a}\dot{b}}(1+\delta \omega) = \delta_{\dot{a}}^{\phantom{a}\dot{b}} + \frac{i}{2} \delta \omega_{\mu \nu} (S_R^{\mu \nu})_{\dot{a}}^{\phantom{a}\dot{b}}\]
+\[R_{\dot{a}}^{\phantom{a}\dot{b}}(1+\delta \omega) = \delta_{\dot{a}}^{\phantom{a}\dot{b}} + \frac{i}{2} \delta \omega_{\mu \nu} (\mathcal{S}_{\rm R}^{\mu \nu})_{\dot{a}}^{\phantom{a}\dot{b}}\]
 We can prove that
-\[(S_R^{\mu \nu})_{\dot{a}}^{\phantom{a}\dot{b}} = -[(S_L^{\mu \nu})_a^{\phantom{a}b}]^*\]
+\[(\mathcal{S}_{\rm R}^{\mu \nu})_{\dot{a}}^{\phantom{a}\dot{b}} = -[(\mathcal{S}_{\rm L}^{\mu \nu})_a^{\phantom{a}b}]^*\]
 
 \noindent
 Define
@@ -67,7 +66,7 @@ And we can verify the following equations,
 \[L^a_{\phantom{a}c}(\Lambda) L^b_{\phantom{b}d}(\Lambda) \epsilon^{cd} = \epsilon
 ^{ab}\]
 \[U(\Lambda)^{-1} \psi^a(x) U(\Lambda) = -L^a_{\phantom{a}b}(\Lambda) \psi^b(\Lambda^{-1}x)\]
-In right handed representation; we can also deduce the existence of an invariant symbol $\epsilon_{\dot{a}\dot{b}}$. The value of $\epsilon_{\dot{a}\dot{b}}$ is the same as that of $\epsilon_{ab}$.\\
+In right handed representation, we can also deduce the existence of an invariant symbol $\epsilon_{\dot{a}\dot{b}}$. The value of $\epsilon_{\dot{a}\dot{b}}$ is the same as that of $\epsilon_{ab}$.\\
 Define
 \[\sigma^{\mu}_{a\dot{a}} \equiv (I,\vec{\sigma})\]
 It is an invariant symbol of the group $(2,1) \otimes (1,2) \otimes (2,2)$
@@ -79,16 +78,16 @@ The properties of invariance symbol can be used to derive the following equation
 \item 
 \[\sigma^{\mu}_{a\dot{a}} \sigma_{\mu b\dot{b}} = -2\epsilon_{ab} \epsilon_{\dot{a}\dot{b}}\]
 \[\epsilon^{ab}\epsilon^{\dot{a}\dot{b}} \sigma^{\mu}_{a\dot{a}} \sigma^{\nu}_{b\dot{b}} = -2\eta^{\mu\nu}\]
-\item \[(S_L^{\mu\nu})_{ab} = (S_L^{\mu\nu})_{ba}\]
-\[(S_R^{\mu\nu})_{\dot{a}\dot{b}} = (S_R^{\mu\nu})_{\dot{b}\dot{a}}\]
+\item \[(\mathcal{S}_{\rm L}^{\mu\nu})_{ab} = (\mathcal{S}_{\rm L}^{\mu\nu})_{ba}\]
+\[(\mathcal{S}_{\rm R}^{\mu\nu})_{\dot{a}\dot{b}} = (\mathcal{S}_{\rm R}^{\mu\nu})_{\dot{b}\dot{a}}\]
 \item Define
 \[\overline{\sigma}^{\mu \dot{a} a} \equiv \epsilon^{ab} \epsilon^{\dot{a}\dot{b}} \sigma^{\mu}_{b\dot{b}}\]
 Numerically,
 \[\overline{\sigma}^{\mu \dot{a} a} = (I , -\vec{\sigma})\]
 So,
 \begin{eqnarray}
-(S_L^{\mu\nu})_a^{\phantom{a}b} &=& + \frac{i}{4} (\sigma^{\mu} \overline{\sigma}^{\nu} - \sigma^{\nu} \overline{\sigma}^{\mu})_a^{\phantom{a}b} \nonumber \\
-(S_R^{\mu\nu})^{\dot{a}}_{\phantom{\dot{a}} \dot{b}} &=& - \frac{i}{4}(\overline{\sigma}^{\mu}\sigma^{\nu} - \overline{\sigma}^{\nu} \sigma^{\mu})^{\dot{a}}_{\phantom{\dot{a}} \dot{b}} \nonumber
+(\mathcal{S}_{\rm L}^{\mu\nu})_a^{\phantom{a}b} &=& + \frac{i}{4} (\sigma^{\mu} \overline{\sigma}^{\nu} - \sigma^{\nu} \overline{\sigma}^{\mu})_a^{\phantom{a}b} \nonumber \\
+(\mathcal{S}_{\rm R}^{\mu\nu})^{\dot{a}}_{\phantom{\dot{a}} \dot{b}} &=& - \frac{i}{4}(\overline{\sigma}^{\mu}\sigma^{\nu} - \overline{\sigma}^{\nu} \sigma^{\mu})^{\dot{a}}_{\phantom{\dot{a}} \dot{b}} \nonumber
 \end{eqnarray}
 \end{enumerate}
 \end{newprop}
@@ -162,7 +161,7 @@ The equation of motion is
 
 \subsubsection{Charge conjugation}
 \noindent
-Charge conjugation simply exchanges $\xi$ and $\chi$. We can define a unitary charge conjugation operator C that implements this,
+Charge conjugation simply exchanges $\xi$ and $\chi$. We can define a unitary charge conjugation operator $C$ that implements this,
 \[C^{-1}\xi_a(x)C = \chi_a(x)\]
 \[C^{-1}\chi_a(x)C = \xi_a(x)\]
 We then have $C^{-1}\mathcal{L}(x)C = \mathcal{L}(x)$.\\
@@ -196,47 +195,46 @@ The $\gamma^5$ has the following properties,
 \[(\gamma^5)^2 = 1\]
 \[\{\gamma^5,\gamma^{\mu}\} = 0\]
 
-\subsubsection{The behavior of a Dirac field under
-a Lorentz transformation}
+\subsubsection{The behaviour of Dirac field under Lorentz transformation}
 \noindent
 Define
-\[S^{\mu \nu} \equiv \left[ \begin{matrix} (S_L^{\mu\nu})_a^{\phantom{a}b}& 0\\ 0& -(S_R^{\mu\nu})^{\dot{a}}_{\phantom{\dot{a}} \dot{b}}\end{matrix} \right] = \frac{i}{4}[\gamma^{\mu},\gamma^{\nu}] \]
+\[\mathcal{S}^{\mu \nu} \equiv \left[ \begin{matrix} (\mathcal{S}_{\rm L}^{\mu\nu})_a^{\phantom{a}b}& 0\\ 0& -(\mathcal{S}_{\rm R}^{\mu\nu})^{\dot{a}}_{\phantom{\dot{a}} \dot{b}}\end{matrix} \right] = \frac{i}{4}[\gamma^{\mu},\gamma^{\nu}] \]
 Numerically, we have
-\[S^{i0} = \frac{i}{2} \left[ \begin{matrix} \sigma ^{i}& \\ & -\sigma ^{i}\end{matrix} \right] \quad S^{ij} = \frac{1}{2} \epsilon_{ijk} \left[ \begin{matrix} \sigma ^{k}& \\ & \sigma ^{k}\end{matrix} \right] \]
+\[\mathcal{S}^{i0} = \frac{i}{2} \left[ \begin{matrix} \sigma ^{i}& \\ & -\sigma ^{i}\end{matrix} \right] \quad \mathcal{S}^{ij} = \frac{1}{2} \epsilon_{ijk} \left[ \begin{matrix} \sigma ^{k}& \\ & \sigma ^{k}\end{matrix} \right] \]
 Then, for either a Dirac or Majorana field $\Psi$, we can write
 \[U(\Lambda)^{-1} \Psi(x) U(\Lambda) = D(\Lambda) \Psi(\Lambda^{-1}x)\]
 where, for an infinitesimal transformation,
-\[D(1+\delta \omega) = I + \frac{i}{2} \delta \omega_{\mu \nu} S^{\mu \nu}\]
-So the $D(\Lambda)$ can be written as
+\[D(1+\delta \omega) = I + \frac{i}{2} \delta \omega_{\mu \nu} \mathcal{S}^{\mu \nu}\]
+$D(\Lambda)$ can be written as
 \[D = \left[ \begin{matrix} L_a^{\phantom{a}b}& 0\\ 0& -R^{\dot{a}}_{\phantom{\dot{a}} \dot{b}}\end{matrix} \right]  \]
-We can verify that
+We can also verify that
 \[U(\Lambda)^{-1} \overline{\Psi}(x) U(\Lambda) = \overline{\Psi}(\Lambda^{-1}x)[D(\Lambda)]^{-1} \]
 From the identity
 \[\sigma^{\mu}_{a\dot{a}} = L_a^{\phantom{a}b} R_{\dot{a}}^{\phantom{\dot{a}} \dot{b}} \Lambda^{\mu}_{\phantom{\mu} \nu} \sigma^{\nu}_{b\dot{b}} \quad \overline{\sigma}^{\mu \dot{a} a} = L^a_{\phantom{a}b} R^{\dot{a}}_{\phantom{\dot{a}} \dot{b}} \Lambda^{\mu}_{\phantom{\mu} \nu} \overline{\sigma}^{\nu\dot{b}b}\]
-We have
+we have
 \[L^a_{\phantom{a}b} R^{\dot{a}}_{\phantom{\dot{a}} \dot{b}} \sigma^{\mu}_{a\dot{a}} =  \Lambda^{\mu}_{\phantom{\mu} \nu} \sigma^{\nu}_{b\dot{b}} \quad L_a^{\phantom{a}b} R_{\dot{a}}^{\phantom{\dot{a}} \dot{b}} \overline{\sigma}^{\mu \dot{a} a} =  \Lambda^{\mu}_{\phantom{\mu} \nu} \overline{\sigma}^{\nu\dot{b}b}\]
 So we can verify that
 \[D^{-1} \gamma^{\mu} D = \Lambda^{\mu}_{\phantom{\mu} \nu} \gamma^{\nu}\]
 Recall the commutation relation of $M^{\mu \nu}$ and $P^{\mu}$, we have
-\[[\gamma^{\mu},S^{\rho \sigma}] = i(\eta^{\mu \sigma}\gamma^{\mu} - \eta^{\mu \rho}\gamma^{\sigma})\]
+\[[\gamma^{\mu},\mathcal{S}^{\rho \sigma}] = i(\eta^{\mu \sigma}\gamma^{\mu} - \eta^{\mu \rho}\gamma^{\sigma})\]
 We also have
-\[[\gamma^5,S^{\mu \nu}] = 0\]
+\[[\gamma^5,\mathcal{S}^{\mu \nu}] = 0\]
 which means that
 \[D^{-1} \gamma^{5} D =  \gamma^{5}\]
 
 \section{Canonical quantization of Dirac field}
 \subsubsection{Canonical momentum and Hamiltonian}
 \[\Pi \equiv \frac{\partial \mathcal{L}}{\partial(\partial_0 \Psi)} = i \overline{\Psi}\gamma^0 = i \Psi^{\dagger} \quad (\overline{\Psi} = -i \Pi \gamma^0 \quad \Psi^{\dagger} = -i \Pi)\]
-\[\mathcal{H} = -\Pi (\vec{\alpha} \cdot \vec{\nabla} + i \beta m)\Psi \quad (\alpha_i = \gamma^0 \gamma^i \quad \beta = \gamma_0)\]
+\[\mathcal{H} = -\Pi (\vec{\alpha} \cdot \vec{\nabla} + i \beta m)\Psi \quad (\alpha_i = \gamma^0 \gamma^i \quad \beta = -\gamma^0)\]
 \[H = \int \mathcal{H} d^3x\]
 \subsubsection{Momentum and angular momentum}
 \[T^{\mu \nu} = i \overline{\Psi} \left[ \eta^{\mu \nu} \gamma^{\rho} \partial_{\rho} - \gamma^{\mu} \partial^{\nu} \right]\Psi -m \eta^{\mu \nu} \overline{\Psi}\Psi\]
 \[P^0 = H \quad P^i = -\int \Pi \nabla^i \Phi \: d^3x\]
-\[J_i = -\epsilon_{ijk} \int \Pi( x^j \nabla^k + \frac{i}{2} S^{jk}) \Psi  \: d^3x \]
-Define $\Sigma_i \equiv \frac{1}{2} \epsilon_{ijk} S^{jk}$, so
+\[J_i = -\epsilon_{ijk} \int \Pi( x^j \nabla^k + \frac{i}{2} \mathcal{S}^{jk}) \Psi  \: d^3x \]
+Define $\Sigma_i \equiv \frac{1}{2} \epsilon_{ijk} \mathcal{S}^{jk}$, so
 \[\Sigma_i = \frac{1}{2}\left[ \begin{matrix} \sigma^i & \\ & \sigma^i \end{matrix} \right] \]
-The above equation can be written as
-\[\vec{J} = - \int \Pi( \vec{x} \times \vec{\nabla} + i \vec{\Sigma}) \Psi \: d^3x \]
+The angular momentum can be expressed as
+\[\vec{J} = -i \int \Pi( \vec{x} \times -i\vec{\nabla} +  \vec{\Sigma}) \Psi \: d^3x \]
 \subsubsection{Canonical quantization}
 \[\{\Psi_a(\bm{x},t),\Psi_b(\bm{x},t)\} = 0\]
 \[\{\Psi_a(\bm{x},t),\Pi^b(\bm{y},t)\} = i\delta^b_a \delta(\bm{x}-\bm{y})\]
@@ -263,17 +261,17 @@ We get
 \[\overline{v}_{-}(\bm{0}) = \sqrt{m} (1,0,-1,0)\]
 We can now find the spinors corresponding to an arbitrary three-momentum $\bm{p}$ by applying to $u_s(\bm{0})$ and $v_s(\bm{0})$ the matrix $D(\Lambda)$ that corresponds to an
 appropriate boost. This is given by
-\[D(\Lambda) = \exp(i\eta \hat{\bm{p}} \cdot \bm{D})\]
-where $\hat{\bm{p}}$ is a unit vector in the $\bm{p}$ direction, $D^i = \frac{i}{4}[\gamma^i,\gamma^0] = \frac{i}{2} \gamma^i \gamma^0$ is the boost matrix, and $\eta$ is the rapidity. Thus we have
-\[u_s(\bm{p}) = \exp(i\eta \hat{\bm{p}} \cdot \bm{D}) u_s(\bm{0})\]
-\[v_s(\bm{p}) = \exp(i\eta \hat{\bm{p}} \cdot \bm{D}) v_s(\bm{0})\]
+\[D(\Lambda) = \exp(i\eta \hat{\bm{p}} \cdot \bm{\mathcal{D}})\]
+where $\hat{\bm{p}}$ is a unit vector in the $\bm{p}$ direction, $\mathcal{D}^i = \frac{i}{4}[\gamma^i,\gamma^0] = \frac{i}{2} \gamma^i \gamma^0$ is the boost matrix, and $\eta$ is the rapidity. Thus we have
+\[u_s(\bm{p}) = \exp(i\eta \hat{\bm{p}} \cdot \bm{\mathcal{D}}) u_s(\bm{0})\]
+\[v_s(\bm{p}) = \exp(i\eta \hat{\bm{p}} \cdot \bm{\mathcal{D}}) v_s(\bm{0})\]
 We also have
-\[\overline{u}_s(\bm{p}) = \overline{u}_s(\bm{0}) \exp(-i\eta \hat{\bm{p}} \cdot \bm{D}) \]
-\[\overline{v}_s(\bm{p}) = \overline{v}_s(\bm{0}) \exp(-i\eta \hat{\bm{p}} \cdot \bm{D}) \]
-This follows from $\overline{K}^j = K^j$, where, for any general combination of gamma matrices,
+\[\overline{u}_s(\bm{p}) = \overline{u}_s(\bm{0}) \exp(-i\eta \hat{\bm{p}} \cdot \bm{\mathcal{D}}) \]
+\[\overline{v}_s(\bm{p}) = \overline{v}_s(\bm{0}) \exp(-i\eta \hat{\bm{p}} \cdot \bm{\mathcal{D}}) \]
+This follows from $\overline{\mathcal{D}}^j = \mathcal{D}^j$, where, for any general combination of gamma matrices,
 \[\overline{A} \equiv \beta A^{\dagger} \beta\]
 In particular, it turns out that
-\[\gamma^{\mu} \quad S^{\mu \nu} \quad i\gamma^5  \quad \gamma^{\mu}\gamma^5 \quad i\gamma^5 S^{\mu \nu}\]
+\[\gamma^{\mu} \quad \mathcal{S}^{\mu \nu} \quad i\gamma^5  \quad \gamma^{\mu}\gamma^5 \quad i\gamma^5 \mathcal{S}^{\mu \nu}\]
 all satisfy $\overline{A} = A$.\\
 The barred spinors satisfy the equations
 \[\overline{u}_s(\bm{p})(\slashed{p}+m)=0 \quad \overline{v}_s(\bm{p})(-\slashed{p}+m)=0\]
@@ -285,8 +283,8 @@ The barred spinors satisfy the equations
 \[\overline{u}_{s'}(\bm{p}) v_s(\bm{p}) = 0\]
 \[\overline{v}_{s'}(\bm{p}) u_s(\bm{p}) = 0\]
 \item 
-\[2m \overline{u}_{s'}(\bm{p}') \gamma^{\mu} u_s(\bm{p}) =  \overline{u}_{s'}(\bm{p}') [(p'+p)^{\mu} -2i S^{\mu \nu}(p'-p)_{\nu}]u_s(\bm{p})\]
-\[-2m \overline{v}_{s'}(\bm{p}') \gamma^{\mu} v_s(\bm{p}) =  \overline{v}_{s'}(\bm{p}') [(p'+p)^{\mu} -2i S^{\mu \nu}(p'-p)_{\nu}]v_s(\bm{p})\]
+\[2m \overline{u}_{s'}(\bm{p}') \gamma^{\mu} u_s(\bm{p}) =  \overline{u}_{s'}(\bm{p}') [(p'+p)^{\mu} -2i \mathcal{S}^{\mu \nu}(p'-p)_{\nu}]u_s(\bm{p})\]
+\[-2m \overline{v}_{s'}(\bm{p}') \gamma^{\mu} v_s(\bm{p}) =  \overline{v}_{s'}(\bm{p}') [(p'+p)^{\mu} -2i \mathcal{S}^{\mu \nu}(p'-p)_{\nu}]v_s(\bm{p})\]
 \item   \[\overline{u}_{s'}(\bm{p}) \gamma^{\mu} u_s(\bm{p}) = 2p^{\mu} \delta_{ss'}\]
 \[\overline{v}_{s'}(\bm{p}) \gamma^{\mu} v_s(\bm{p}) = 2p^{\mu} \delta_{ss'}\]
 \[\overline{u}_{s'}(\bm{p}) \gamma^{0} v_s(-\bm{p}) = 0\]
@@ -301,22 +299,23 @@ The proof can be found in chapter 38 from \emph{Quantum field theory (Mark Sredn
 \end{newprop}
 
 \noindent
-It is interesting to consider the extreme relativistic limit of this formula. Let us take the three-momentum to be in the z direction, so that it is parallel to the spin-quantization axis. The component of the spin in the direction of the three-momentum is called the helicity. A fermion with helicity $+1/2$ is said to be right-handed, and a fermion with helicity $-1/2$ is said to be left-handed. Note that the direction of spin of $v_+$ is in $-z$.\\  
+It is interesting to consider the extreme relativistic limit of this formula. Let us take the three-momentum to be in the $z$ direction, so that it is parallel to the spin-quantization axis. The component of the spin angular momentum in the direction of the three-momentum is called the helicity. A fermion with helicity $+1/2$ is said to be right-handed, and a fermion with helicity $-1/2$ is said to be left-handed. \\  
 For rapidity $\eta$, we have
 \[\frac{p^{\mu}}{m} = (\cosh \eta, 0, 0, \sinh \eta) \quad z^{\mu} = (\sinh \eta, 0, 0, \cosh \eta)\]
 In the limit of large $\eta$,
 \[z^{\mu} = \frac{p^{\mu}}{m} + \mathcal{O}(e^{-\eta})\]
-Then the equations $3.3.5$ can be written as
 \[u_s(\bm{p}) \overline{u}_s(\bm{p})  \to \frac{1}{2}(1+s\gamma^5)(-\slashed{p})\]
 \[v_s(\bm{p}) \overline{v}_s(\bm{p})  \to \frac{1}{2}(1-s\gamma^5)(-\slashed{p})\]
-So, we can see the spinor corresponding to a right-handed fermion  is $u_+(\bm{p})$ for a b-type particle and $v_-({\bm{p}})$ for a d-type particle.  The spinor corresponding to a left-handed fermion  is $u_-(\bm{p})$ for a b-type particle and $v_+(\bm{p})$ for a d-type particle.\\ \\
-Note that $\beta u_s(\bm{0}) = + u_s(\bm{0})$ and $\beta v_s(\bm{0}) = -v_s(\bm{0})$. Also, $\beta D^j = - D^j \beta$. We then have
+So, we can see spinor with lower two components is $u_+(\bm{p})$ for a $b$-type particle and $v_-({\bm{p}})$ for a $d$-type particle.  
+Spinor with upper two components is $u_-(\bm{p})$ for a $b$-type particle and $v_+(\bm{p})$ for a $d$-type particle.
+\\ \\
+Note that $\beta u_s(\bm{0}) = + u_s(\bm{0})$ and $\beta v_s(\bm{0}) = -v_s(\bm{0})$. Also, $\beta \mathcal{D}^j = - \mathcal{D}^j \beta$. We then have
 \[u_s(-\bm{p}) = \beta u_s(\bm{p}) \quad v_s(-\bm{p}) = -\beta v_s(\bm{p})\]
-For charge conjugation matrix, note that that $\mathcal{C} \overline{u}^T_s(\bm{0}) = v_s(\bm{0})$, $\mathcal{C} \overline{v}^T_s(\bm{0}) = v_s(\bm{0})$, and $\mathcal{C}^{-1} D^j \mathcal{C} = - (D^j)^T$, we have
+For charge conjugation matrix, note that $\mathcal{C} \overline{u}^T_s(\bm{0}) = v_s(\bm{0})$, $\mathcal{C} \overline{v}^T_s(\bm{0}) = v_s(\bm{0})$, and $\mathcal{C}^{-1} \mathcal{D}^j \mathcal{C} = - (\mathcal{D}^j)^T$, we have
 \[\mathcal{C} \overline{u}^T_s(\bm{p}) = v_s(\bm{p}) \quad \mathcal{C} \overline{v}^T_s(\bm{p}) = u_s(\bm{p})\]
 Taking the complex conjugate of the above equation, we have
 \[u^*_s(\bm{p}) = \mathcal{C}\beta v_s(\bm{p}) \quad v^*_s(\bm{p}) = \mathcal{C}\beta u_s(\bm{p})\]
-Note that $\gamma^5 u_{s}(\bm{0}) = +s v_{-s}(\bm{0})$ and $\gamma^5 v_{s}(\bm{0}) = -s u_{-s}(\bm{0})$, and that $\gamma^5 D^j = D^j \gamma^5$, we have
+Note that $\gamma^5 u_{s}(\bm{0}) = +s v_{-s}(\bm{0})$ and $\gamma^5 v_{s}(\bm{0}) = -s u_{-s}(\bm{0})$, and that $\gamma^5 \mathcal{D}^j = \mathcal{D}^j \gamma^5$, we have
 \[\gamma^5 u_{s}(\bm{p}) = +s v_{-s}(\bm{p}) \quad \gamma^5 v_{s}(\bm{p}) = -s u_{-s}(\bm{p})\]
 Combine the above equations, we can derive
 \[u^*_{-s}(\bm{p}) = -s\mathcal{C}\gamma^5 u_s(\bm{p}) \quad v^*_{-s}(\bm{p}) = -s\mathcal{C}\gamma^5 v_s(\bm{p})\]
@@ -328,7 +327,7 @@ Combine the above equations, we can derive
 \[b^{\dagger}_s(\bm{p}) = \int d^3x e^{ipx} \overline{\Psi}(x) \gamma^0 u_s(\bm{p})\]
 \[d_s(\bm{p}) = \int d^3x e^{-ipx} \overline{\Psi}(x) \gamma^0 v_s(\bm{p})\]
 \[d^{\dagger}_s(\bm{p}) = \int d^3x e^{ipx} \overline{v}_s(\bm{p}) \gamma^0 \Psi(x)\]
-We can get the anticommutation relation in terms of $b,b^{\dagger},d,d^{\dagger}$. The only non-vanishing terms are
+We can get the anti-commutation relation in terms of $b,b^{\dagger},d,d^{\dagger}$. The only non-vanishing terms are
 \[\{b_s(\bm{p}),b^{\dagger}_{s'}(\bm{p}')\} = (2\pi)^3 \delta^3(\bm{p}-\bm{p}')2\omega \delta_{ss'}\]
 \[\{d_s(\bm{p}),d^{\dagger}_{s'}(\bm{p}')\} = (2\pi)^3 \delta^3(\bm{p}-\bm{p}')2\omega \delta_{ss'}\]
 
@@ -344,10 +343,10 @@ So we can derive
 
 \subsubsection{Causality}
 \noindent
-Firstly, we derive the anticommutation relation for field operators at any space-time.
+Firstly, we derive the anti-commutation relation for field operators at any space-time.
 \[\{\overline{\Psi}_{a}(x),\Psi_{b}(y)\} = (i\slashed{\partial}_x + m)_{ab} i\Delta(x-y)\]
-Here,
-\[i\Delta(x-y) = \int \widetilde{dp} \: [e^{ip(x-y)} - e^{-ip(x-y)}]\]
+where
+\[i\Delta(x-y) \equiv \int \widetilde{dp} \: [e^{ip(x-y)} - e^{-ip(x-y)}]\]
 For $(x-y)^2 > 0$ the anti-commutators vanish, because $\Delta(x-y)$ also vanishes. 
 We then can verify that
 \[[\overline{\Psi}_{a}(x)\Psi_{b}(x),\overline{\Psi}_{c}(y)\Psi_{d}(y)] = 0\]
@@ -362,7 +361,7 @@ Define retarded green function as
 It is easy to verify that
 \[S_{R}(x-y) = (i\slashed{\partial}_x+m) D_R(x-y) = \int \frac{d^4p}{(2\pi)^4} \frac{i(\slashed{p}-m)}{p^2+m^2} e^{ip(x-y)}\]
 and
-\[(i\slashed{\partial}_x-m) S_R(x-y) = i\delta(x-y) \cdot \bm{1}_{4\times 4}\]
+\[(i\slashed{\partial}_x-m) S_{R}(x-y) = i\delta(x-y) \cdot \bm{1}_{4\times 4}\]
 Now, we  define  the time ordered product for fermion fields
 \[T \eta(x) \eta(y) \equiv \theta(x^0-y^0)\eta(x)\eta(y) - \theta(y^0-x^0)\eta(y)\eta(x)\]
 So,
