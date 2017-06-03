@@ -365,9 +365,9 @@ and
 Now, we  define  the time ordered product for fermion fields
 \[T \eta(x) \eta(y) \equiv \theta(x^0-y^0)\eta(x)\eta(y) - \theta(y^0-x^0)\eta(y)\eta(x)\]
 So,
-\[S_F(x-y) \equiv \langle 0 | T \Psi(x)\overline{\Psi}(y)|0\rangle =  \int \frac{d^4p}{(2\pi)^4} \frac{i(\slashed{p}-m)}{p^2+m^2 - i\epsilon} e^{ip(x-y)}\]
+\[S_{\rm F}(x-y) \equiv \langle 0 | T \Psi(x)\overline{\Psi}(y)|0\rangle =  \int \frac{d^4p}{(2\pi)^4} \frac{i(\slashed{p}-m)}{p^2+m^2 - i\epsilon} e^{ip(x-y)}\]
 It is easy to verify that
-\[\langle 0 | T \overline{\Psi}_a(x) \Psi_b(y)|0\rangle = - \langle 0 | T \Psi_b(y) \overline{\Psi}_a(x)|0\rangle = -S_F(y-x)_{ba}\]
+\[\langle 0 | T \overline{\Psi}_a(x) \Psi_b(y)|0\rangle = - \langle 0 | T \Psi_b(y) \overline{\Psi}_a(x)|0\rangle = -S_{\rm F}(y-x)_{ba}\]
 
 \section{Parity,time reversal and charge conjugation}
 \subsubsection{Parity}
@@ -425,7 +425,7 @@ We use Yukawa theory as an example.
 \[\mathcal{L} = -\frac{1}{2}\partial_{\mu} \phi \partial^{\mu} \phi -\frac{1}{2}M_0^2 \phi^2 + i\overline{\Psi} \gamma^{\mu} \partial_{\mu} \Psi - m_0\overline{\Psi}\Psi -g_0 \overline{\Psi}\Psi\phi\]
 \[H = H_0 + H_{\rm int} \quad H_{\rm int} = \int d^3 x \: g_0 \overline{\Psi}\Psi\phi \]
 Similar to $\phi^4$ theory, the perturbation expansion of correlation functions is
-\[\langle \Omega | T \{\Psi(x) \overline{\Psi}(y) \phi(z) \} | \Omega \rangle = \lim_{T \to \infty(1-i\epsilon)} \frac{\langle 0 | T \left\{ \Psi_I(x) \overline{\Psi}_I(y) \phi_I(z) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle}{\langle 0 | T \left\{ \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle}\]
+\[\langle \Omega | T \{\Psi(x) \overline{\Psi}(y) \phi(z) \} | \Omega \rangle = \lim_{T \to \infty(1-i\epsilon)} \frac{\langle 0 | T \left\{ \Psi_{\rm I}(x) \overline{\Psi}_{\rm I}(y) \phi_{\rm I}(z) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_{\rm I} \right]\right\} | 0 \rangle}{\langle 0 | T \left\{ \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_{\rm I} \right]\right\} | 0 \rangle}\]
 Before we state the Wick's theorem, we must note the following conventions:
 \begin{enumerate}
 \item  The time-ordered product picks up one minus sign for each interchange of operators that is necessary to put the fields in time order.
@@ -433,23 +433,23 @@ Before we state the Wick's theorem, we must note the following conventions:
 \item Define contractions under the normal-ordering symbol to include minus signs for operator interchanges.
 \end{enumerate}
 With these conventions, Wick's theorem takes the same form as before:
-\[T \left\{ \Psi_I(x_1) \overline{\Psi}_I(x_2)  \Psi_I(x_3) \cdots \right\} = N \left\{\Psi_I(x_1) \overline{\Psi}_I(x_2)  \Psi_I(x_3) \cdots + \mbox{ all possible contractions }\right\} \]
+\[T \left\{ \Psi_{\rm I}(x_1) \overline{\Psi}_{\rm I}(x_2)  \Psi_{\rm I}(x_3) \cdots \right\} = N \left\{\Psi_{\rm I}(x_1) \overline{\Psi}_{\rm I}(x_2)  \Psi_{\rm I}(x_3) \cdots + \mbox{ all possible contractions }\right\} \]
 \begin{example}
 \begin{eqnarray}
-\langle 0 | T \left\{ \Psi_{Ia}(x_1) \overline{\Psi}_{Ib}(x_2) \Psi_{Ic}(x_3) \overline{\Psi}_{Id}(x_4)\right\}| 0 \rangle &=& S_F(x_1-x_2)_{ab}S_F(x_3-x_4)_{cd} \nonumber \\
-&-& S_F(x_1-x_4)_{ad}S_F(x_3-x_2)_{cb} \nonumber
+\langle 0 | T \left\{ \Psi_{{\rm I}a}(x_1) \overline{\Psi}_{{\rm I}b}(x_2) \Psi_{{\rm I}c}(x_3) \overline{\Psi}_{{\rm I}d}(x_4)\right\}| 0 \rangle &=& S_{\rm F}(x_1-x_2)_{ab}S_{\rm F}(x_3-x_4)_{cd} \nonumber \\
+&-& S_{\rm F}(x_1-x_4)_{ad}S_{\rm F}(x_3-x_2)_{cb} \nonumber
 \end{eqnarray}
 \end{example}
 
 \noindent
 Then we can derive the Feynman rule for Yukawa theory. 
 Expand
-\[\langle 0 | T \left\{ \Psi_{Ia}(x) \overline{\Psi}_{Ib}(y) \phi_I(z) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_I \right]\right\} | 0 \rangle\] 
+\[\langle 0 | T \left\{ \Psi_{{\rm I}a}(x) \overline{\Psi}_{{\rm I}b}(y) \phi_{\rm I}(z) \mathrm{exp} \left[ -i \int_{-T}^{T} dt H_{\rm I} \right]\right\} | 0 \rangle\] 
 to the first order of $g_0$
 \begin{eqnarray}
-& &\langle 0 | T \left\{ \Psi_{Ia}(x) \overline{\Psi}_{Ib}(y) \phi_I(z) (-i g_0) \int dw^4 \overline{\Psi}_I(w) \Psi_I(w) \phi_I(w) \right\} | 0 \rangle \nonumber \\
-&=& -(-ig_0) S_F(x-y)_{ab} \int d^4 w D_F(z-w) \mathrm{Tr}[S_F(w-w)] \nonumber \\
-&+&  (-ig_0) \int d^4 w  [S_F(x-w) S_F(w-y)]_{ab} D_F(w-z) \nonumber
+& &\langle 0 | T \left\{ \Psi_{{\rm I}a}(x) \overline{\Psi}_{{\rm I}b}(y) \phi_{\rm {\rm I}}(z) (-i g_0) \int dw^4 \overline{\Psi}_{\rm I}(w) \Psi_{\rm I}(w) \phi_{\rm I}(w) \right\} | 0 \rangle \nonumber \\
+&=& -(-ig_0) S_{\rm F}(x-y)_{ab} \int d^4 w D_{\rm F}(z-w) \mathrm{Tr}[S_{\rm F}(w-w)] \nonumber \\
+&+&  (-ig_0) \int d^4 w  [S_{\rm F}(x-w) S_{\rm F}(w-y)]_{ab} D_{\rm F}(w-z) \nonumber
 \end{eqnarray}
 It can be represented by the so called Feynman diagram.
 \begin{figure}[!h]
@@ -459,8 +459,8 @@ It can be represented by the so called Feynman diagram.
 \end{figure}\\
 The Feynman rules for Yukama theory are:
 \begin{enumerate}
-\item For each Fermion propagator from $y$ to $x$, $P = S_F(x-y)$
-\item For each scalar propagator, $P = D_F(x-y)$
+\item For each Fermion propagator from $y$ to $x$, $P = S_{\rm F}(x-y)$
+\item For each scalar propagator, $P = D_{\rm F}(x-y)$
 \item For each vertex, $V = (-ig_0)\int d^4w$
 \item For each external point, $E=1$
 \item Divided by the symmetry factor
@@ -515,26 +515,26 @@ Gaussian integral over multiple complex Grassmann numbers:
 
 \subsection{Path integral formulation for free Dirac field}
 A Grassmann field is a function of space-time whose values are Grassmann numbers. The classical Dirac field being used to evaluate path integral is a Grassmann field. The correlation function is given by
-\[\langle \Omega | T \Psi_H(x_1) \overline{\Psi}_H(x_2)| \Omega \rangle = \lim_{T \to \infty(1-i\epsilon)} \frac{\int \mathcal{D}\overline{\Psi} \mathcal{D}\Psi \; \mathrm{exp} \left[ i\int_{-T}^T d^4x \overline{\Psi}(i\slashed{\partial}-m)\Psi \right] \Psi(x_1) \overline{\Psi}(x_2)}{\int \mathcal{D}\overline{\Psi} \mathcal{D}\Psi \; \mathrm{exp} \left[ i\int_{-T}^T d^4x \overline{\Psi}(i\slashed{\partial}-m)\Psi \right]}\]
+\[\langle \Omega | T \Psi_{\rm H}(x_1) \overline{\Psi}_{\rm H}(x_2)| \Omega \rangle = \lim_{T \to \infty(1-i\epsilon)} \frac{\int \mathcal{D}\overline{\Psi} \mathcal{D}\Psi \; \mathrm{exp} \left[ i\int_{-T}^T d^4x \overline{\Psi}(i\slashed{\partial}-m)\Psi \right] \Psi(x_1) \overline{\Psi}(x_2)}{\int \mathcal{D}\overline{\Psi} \mathcal{D}\Psi \; \mathrm{exp} \left[ i\int_{-T}^T d^4x \overline{\Psi}(i\slashed{\partial}-m)\Psi \right]}\]
 The generating function is 
 \[Z[\overline{\eta},\eta] = \int \mathcal{D}\overline{\Psi} \mathcal{D}\Psi \; \mathrm{exp} \left[ i\int d^4x \overline{\Psi}(i\slashed{\partial}-m)\Psi + \overline{\eta}\Psi + \overline{\Psi}\eta \right]\]
 Here, $\eta(x)$ is a Grassmann-valued source field. 
 Define
-\[\Psi'(x) \equiv \Psi(x) - i \int d^4y S_F(x-y)\eta(y)\]
+\[\Psi'(x) \equiv \Psi(x) - i \int d^4y S_{\rm F}(x-y)\eta(y)\]
 Then we can derive that
-\[\overline{\Psi}'(x) \equiv \overline{\Psi}(x) - i \int d^4y \overline{\eta}(y)S_F(y-x)\]
+\[\overline{\Psi}'(x) \equiv \overline{\Psi}(x) - i \int d^4y \overline{\eta}(y)S_{\rm F}(y-x)\]
 Recall that
-\[(i\slashed{\partial}_x-m)S_F(x-y) = i\delta(x-y)\]
+\[(i\slashed{\partial}_x-m)S_{\rm F}(x-y) = i\delta(x-y)\]
 and
-\[S_F(y-x)(i \slashed{\partial}_x+m) = -i\delta(x-y)\]
+\[S_{\rm F}(y-x)(i \slashed{\partial}_x+m) = -i\delta(x-y)\]
 we can derive that
-\[\int d^4x \overline{\Psi}(i\slashed{\partial}-m)\Psi + \overline{\eta}\Psi + \overline{\Psi}\eta = \int d^4x \overline{\Psi}'(i\slashed{\partial}-m)\Psi' + i \int d^4x d^4y \overline{\eta}(x)S_F(x-y)\eta(y) \]
+\[\int d^4x \overline{\Psi}(i\slashed{\partial}-m)\Psi + \overline{\eta}\Psi + \overline{\Psi}\eta = \int d^4x \overline{\Psi}'(i\slashed{\partial}-m)\Psi' + i \int d^4x d^4y \overline{\eta}(x)S_{\rm F}(x-y)\eta(y) \]
 After integration, we have
-\[Z[\overline{\eta},\eta] = Z[0] \mathrm{exp} \left[ -\int d^4x d^4y \; \overline{\eta}(x)S_F(x-y)\eta(y) \right]\]
+\[Z[\overline{\eta},\eta] = Z[0] \mathrm{exp} \left[ -\int d^4x d^4y \; \overline{\eta}(x)S_{\rm F}(x-y)\eta(y) \right]\]
 If we adopt the convention that
 \[\frac{d}{d\eta} \theta \eta = - \frac{d}{d\eta} \eta \theta = - \theta\]
 the two point correlation functions are
-\[\langle 0 | T \Psi_H(x_1) \overline{\Psi}_H(x_2)| 0 \rangle = Z[0]^{-1} \left(-i \frac{\delta}{\delta \overline{\eta}(x_1)} \right) \left(i \frac{\delta}{\delta \eta(x_2)} \right) Z[\overline{\eta},\eta]|_{\overline{\eta},\eta=0} = S_F(x_1-x_2) \]
+\[\langle 0 | T \Psi_{\rm H}(x_1) \overline{\Psi}_{\rm H}(x_2)| 0 \rangle = Z[0]^{-1} \left(-i \frac{\delta}{\delta \overline{\eta}(x_1)} \right) \left(i \frac{\delta}{\delta \eta(x_2)} \right) Z[\overline{\eta},\eta]|_{\overline{\eta},\eta=0} = S_{\rm F}(x_1-x_2) \]
 
 \subsection{Perturbation theory for path integral quantization}
 \noindent
@@ -544,13 +544,13 @@ We use Yukawa theory as an example.
 \mathcal{L} &=& \mathcal{L}_0 + \mathcal{L}_1 \quad \mathcal{L}_1 =- g_0\overline{\Psi}\Psi\phi \nonumber \\
 Z[J] &=& \int \mathcal{D}\phi \mathcal{D}\overline{\Psi} \mathcal{D}\Psi e^{i\int d^4x [\mathcal{L}_0 + \mathcal{L}_1 + J\phi + \overline{\eta}\Psi +  \overline{\Psi}\eta]} \nonumber \\
 &=& e^{i\int d^4x \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(x)},\frac{1}{i}\frac{\delta}{\delta \overline{\eta}(x)},-\frac{1}{i}\frac{\delta}{\delta \eta(x)})} \int \mathcal{D}\phi \mathcal{D}\overline{\Psi} \mathcal{D}\Psi e^{i\int d^4y [\mathcal{L}_0 + J\phi + \overline{\eta}\Psi +  \overline{\Psi}\eta]} \nonumber \\
-&\propto & e^{i\int d^4x \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(x)},\frac{1}{i}\frac{\delta}{\delta \overline{\eta}(x)},-\frac{1}{i}\frac{\delta}{\delta \eta(x)})} \mathrm{exp} [- \int d^4y d^4z  \frac{1}{2} J(y)D_F(y-z)J(z) + \overline{\eta}(y)S_F(y-z)\eta(z)] \nonumber \\
+&\propto & e^{i\int d^4x \mathcal{L}_1(\frac{1}{i} \frac{\delta}{\delta J(x)},\frac{1}{i}\frac{\delta}{\delta \overline{\eta}(x)},-\frac{1}{i}\frac{\delta}{\delta \eta(x)})} \mathrm{exp} [- \int d^4y d^4z  \frac{1}{2} J(y)D_{\rm F}(y-z)J(z) + \overline{\eta}(y)S_{\rm F}(y-z)\eta(z)] \nonumber \\
 & =& \sum_{V=0}^{\infty} \frac{1}{V!} [-ig_0 \int d^4x (\frac{1}{i} \frac{\delta}{\delta J(x)}  \cdot -\frac{1}{i}\frac{\delta}{\delta \eta(x)} \cdot \frac{1}{i}\frac{\delta}{\delta \overline{\eta}(x)})]^V \nonumber \\
-&\times & \sum_{P_1=0}^{\infty} \frac{1}{P_1!} [-\frac{1}{2} \int d^4y_1 d^4z_1 J(y_1)D_F(y_1-z_1)J(z_1)]^{P_1} \nonumber \\
-&\times &  \sum_{P_2=0}^{\infty} \frac{1}{P_2!} [-\int d^4y_2 d^4z_2 \overline{\eta}(y_2)S_F(y_2-z_2)\eta(z_2)]^{P_2} \nonumber
+&\times & \sum_{P_1=0}^{\infty} \frac{1}{P_1!} [-\frac{1}{2} \int d^4y_1 d^4z_1 J(y_1)D_{\rm F}(y_1-z_1)J(z_1)]^{P_1} \nonumber \\
+&\times &  \sum_{P_2=0}^{\infty} \frac{1}{P_2!} [-\int d^4y_2 d^4z_2 \overline{\eta}(y_2)S_{\rm F}(y_2-z_2)\eta(z_2)]^{P_2} \nonumber
 \end{eqnarray}
 If we focus on a term with particular values of $V$, $P_1$ and $P_2$, then the number of surviving scalar sources is $E_1 = 2P_1-V$, the number of surviving fermion sources is $E_2 = 2P_2-2V$.
-We can introduce Feynman diagrams as in the $\phi^4$ theory. In these diagrams, a dashed line segment stands for a scalar propagator $D_F(x-y)$, a line with an arrow pointing from $y$ to $x$ for a fermion propagator $S_F(x-y)$, a filled circle at one end of a dashed line segment for a scalar source $i\int d^4x J(x)$, a filled circle at the start of a line with an arrow for a fermion source $i\int d^4x \eta(x)$, a filled circle at the end of a line with an arrow for a anti-fermion source $i\int d^4x \overline{\eta}(x)$, a vertex joining three line segments for $-ig_0\int d^4x$.
+We can introduce Feynman diagrams as in the $\phi^4$ theory. In these diagrams, a dashed line segment stands for a scalar propagator $D_{\rm F}(x-y)$, a line with an arrow pointing from $y$ to $x$ for a fermion propagator $S_{\rm F}(x-y)$, a filled circle at one end of a dashed line segment for a scalar source $i\int d^4x J(x)$, a filled circle at the start of a line with an arrow for a fermion source $i\int d^4x \eta(x)$, a filled circle at the end of a line with an arrow for a anti-fermion source $i\int d^4x \overline{\eta}(x)$, a vertex joining three line segments for $-ig_0\int d^4x$.
 
 \section{LSZ reduction formula}
 Similarly to the scalar field theory, we can derive the structure of the exact propagator of Dirac fermions in interaction theory.
@@ -592,7 +592,7 @@ The LSZ reduction formula for fermions would take the form as following.
 \noindent
 From this equation, we can see that the scattering amplitude would vanish unless $n+\overline{m} = \overline{n} + m$, which implies the conservation of $Q$. The term $e^{ipx}$ will impose the condition of momentum conservation, and the the term $\slashed{p}\pm m$ will remove the external legs.
 \\
-Finally, we list the Feymann rules of Yukawa theory in momentum space as follows:
+Finally, we list the Feynman rules of Yukawa theory in momentum space as follows:
 \begin{enumerate}
 \item For each incoming electron, draw a solid line with an arrow pointed towards the vertex, and label it with the electron's four-momentum, $k_i$.
 \item For each outgoing electron, draw a solid line with an arrow pointed away from the vertex, and label it with the electron's four-momentum, $p_i$.
@@ -631,15 +631,15 @@ In the case of the functional integral,the matrix $M$ becomes
 \[M_{\alpha\beta}(x,y) = (-i\slashed{\partial}_x + m + g\phi(x))_{\alpha\beta}\delta(x-y)\]
 We define
 \[M_{0\alpha\beta}(x,y) \equiv (-i\slashed{\partial}_x + m )_{\alpha\beta}\delta(x-y)\]
-\[M_{1\beta\gamma}(y,z) \equiv \delta_{\beta\gamma}\delta(y-z) + igS_{F}(y-z)_{\beta\gamma}\phi(z)\]
+\[M_{1\beta\gamma}(y,z) \equiv \delta_{\beta\gamma}\delta(y-z) + igS_{\rm F}(y-z)_{\beta\gamma}\phi(z)\]
 We can verify that
 \[M_{\alpha\gamma}(x,z) = \int d^4y M_{0\alpha\beta}(x,y)M_{1\beta\gamma}(y,z) \]
 Furthermore, we have $M_1 = I - G$, where $I$ is the identity matrix and
-\[G_{\alpha\beta}(x-y) = -igS_{F}(x-y)_{\alpha\beta}\phi(x)\]
+\[G_{\alpha\beta}(x-y) = -igS_{\rm F}(x-y)_{\alpha\beta}\phi(x)\]
 So, 
 \[\log Z[\phi] = \log \det M_1 = -\sum_{n=1}^{\infty} \frac{1}{n} \mathrm{Tr}G^n\]
 where now
-\[\mathrm{Tr}G^n = (-ig)^n \int d^4x_1 \cdots d^4x_n \mathrm{tr} S_F(x_1-x_2)\phi(x_2) \cdots S_F(x_n-x_1)\phi(x_1)\]
+\[\mathrm{Tr}G^n = (-ig)^n \int d^4x_1 \cdots d^4x_n \mathrm{tr} S_{\rm F}(x_1-x_2)\phi(x_2) \cdots S_{\rm F}(x_n-x_1)\phi(x_1)\]
 and ``tr'' denotes a trace over spinor indices.
 \\ \\
 To better understand what it means, we will rederive it in a different way. 
@@ -649,5 +649,5 @@ So, we have
 \[\log Z[\phi] = \sum_{I}C_I\]
 where $C_I$ represents connected diagram without external source. The only connected diagrams we can draw with these Feynman rules are fermion circles with $n$ vertices. 
 The has an $n$-fold cyclic symmetry, leading to a symmetry factor of $S= n$. The closed fermion loop implies a trace over the spinor indices. Thus the value of the $n$-vertex diagram is
-\[\frac{1}{n}(-ig)^n \int d^4x_1 \cdots d^4x_n \mathrm{tr} S_F(x_1-x_2)\phi(x_2) \cdots S_F(x_n-x_1)\phi(x_1)\]
+\[\frac{1}{n}(-ig)^n \int d^4x_1 \cdots d^4x_n \mathrm{tr} S_{\rm F}(x_1-x_2)\phi(x_2) \cdots S_{\rm F}(x_n-x_1)\phi(x_1)\]
 Summing up these diagrams, we find that we are missing the overall minus sign. The appropriate conclusion is that we must associate an extra minus sign with each closed fermion loop.
