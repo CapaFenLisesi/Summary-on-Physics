@@ -3,24 +3,24 @@
 \subsection{Nonabelian symmetries}
 Consider the theory of $N$ real scalar fields $\phi_i$
 \[\mathcal{L} = -\frac{1}{2}\partial_{\mu}\phi_i \partial^{\mu}\phi_i - \frac{1}{2}m^2\phi_i\phi_i - \frac{1}{16}\lambda(\phi_i\phi_i)^2\]
-This Lagrangian is clearly invariant under the $SO(N)$ transformation
+This Lagrangian is clearly invariant under the $\mathrm{SO}(N)$ transformation
 \[\phi_i(x) \to R_{ij}\phi_j(x)\]
 where $R$ is an orthogonal matrix with a positive determinant: $R^T = R^{-1}$ and $\det R = +1$.
 \\
-Consider an infinitesimal $SO(N)$ transformation
+Consider an infinitesimal $\mathrm{SO}(N)$ transformation
 \[R_{ij} = \delta_{ij} + \theta_{ij} + O(\theta^2)\]
-Orthogonality of $R_{ij}$ implies that $\theta_{ij}$ is real and antisymmetric. It is convenient to express $\theta_{ij}$ in terms of a basis set of hermitian matrices $T^a_{ij}$. The index a runs from $1$ to $\frac{1}{2}N(N-1)$, the number of linearly independent, hermitian, antisymmetric, $N \times N$ matrices. Commonly, for $SO(N)$ group, we demand these matrices obey the normalization condition
+Orthogonality of $R_{ij}$ implies that $\theta_{ij}$ is real and antisymmetric. It is convenient to express $\theta_{ij}$ in terms of a basis set of hermitian matrices $T^a_{ij}$. The index $a$ runs from $1$ to $\frac{1}{2}N(N-1)$, the number of linearly independent, hermitian, antisymmetric, $N \times N$ matrices. Commonly, for $\mathrm{SO}(N)$ group, we demand these matrices obey the normalization condition
 \[\mathrm{Tr}(T^a T^b) = 2\delta^{ab}\]
 In terms of them, we can write
 \[\theta_{ij} = -i\theta^a T^a_{ij}\]
-The $T^a$s are the generator matrices of $SO(N)$. The product of any two $SO(N)$ transformations is another $SO(N)$ transformation; this implies that the commutator of any two generator matrices must be a linear combination of generator matrices,
+The $T^a$s are the generator matrices of $\mathrm{SO}(N)$. The product of any two $\mathrm{SO}(N)$ transformations is another $\mathrm{SO}(N)$ transformation; this implies that the commutator of any two generator matrices must be a linear combination of generator matrices,
 \[[T^a,T^b] = if^{abc}T^c\]
 The numerical factors $f^{abc}$ are the structure coefficients of the group. If $f^{abc} = 0$, the group is abelian. Otherwise, it is nonabelian. Under our normalization condition, we have
 \[f^{abc} = -\frac{i}{2} \mathrm{Tr} \left([T^a,T^b]T^c \right)\]
 Using the cyclic property of the trace, we find that $f^{abc}$ must be completely antisymmetric. Taking the complex conjugate of equation above, we find that $f^{abc}$ must be real.
 
 \begin{example}
-The simplest nonabelian group is $SO(3)$. In this case, we can choose $T^a_{ij} = \epsilon^{aij}$. The commutation relations become
+The simplest nonabelian group is $\mathrm{SO}(3)$. In this case, we can choose $T^a_{ij} = \epsilon^{aij}$. The commutation relations become
 \[[T^a,T^b] = i\epsilon^{abc}T^c\]
 \end{example}
 
@@ -29,23 +29,23 @@ Consider now the theory of $N$ complex scalar fields $\phi_i$
 \[\mathcal{L} = -\partial_{\mu}\phi^{\dagger}_i \partial^{\mu}\phi_i - m^2\phi_i^{\dagger}\phi_i - \frac{1}{4}\lambda(\phi_i^{\dagger}\phi_i)^2\]
 This Lagrangian is clearly invariant under the $U(N)$ transformation
 \[\phi_i(x) \to U_{ij}\phi_j(x)\]
-where $U$ is a unitary matrix, $R^{\dagger} = R^{-1}$. We can write $U_{ij} = e^{-i\theta} \widetilde{U}_{ij}$, where $\theta$ is a real parameter and $\det \widetilde{U} = 1$.
+where $U$ is a unitary matrix, $U^{\dagger} = U^{-1}$. We can write $U_{ij} = e^{-i\theta} \widetilde{U}_{ij}$, where $\theta$ is a real parameter and $\det \widetilde{U} = 1$.
 $\widetilde{U}_{ij}$ is called a special unitary matrix.
-Clearly the product of two special unitary matrices is another special unitary matrix; the $N \times N$ special unitary matrices form the group $SU(N)$. 
-The group $U(N)$ is the direct product of the group $U(1)$ and the group $SU(N)$.\\
-Consider an infinitesimal $SU(N)$ transformation
+Clearly the product of two special unitary matrices is another special unitary matrix; the $N \times N$ special unitary matrices form the group $\mathrm{SU}(N)$. 
+The group $U(N)$ is the direct product of the group $U(1)$ and the group $\mathrm{SU}(N)$.\\
+Consider an infinitesimal $\mathrm{SU}(N)$ transformation
 \[\widetilde{U}_{ij} = \delta_{ij} - i\theta^aT^a_{ij} + O(\theta^2)\]
 where $\theta^a$ is a set of real, infinitesimal parameters. Unitarity of $\widetilde{U}$ implies that the generator matrices $T$ are hermitian, and $\det \widetilde{U} = 1$ implies that each $T$ is traceless.
-The index a runs from $1$ to $N^2 - 1$, the number of linearly independent, hermitian, traceless, $N \times N$ matrices. Commonly, for $SU(N)$ group, we demand these matrices obey the normalization condition
+The index a runs from $1$ to $N^2 - 1$, the number of linearly independent, hermitian, traceless, $N \times N$ matrices. Commonly, for $\mathrm{SU}(N)$ group, we demand these matrices obey the normalization condition
 \[\mathrm{Tr}(T^a T^b) =\frac{1}{2}\delta^{ab}\]
 
 \begin{example}
-For $SU(2)$, we can choose $T^a_{ij} = \frac{1}{2}\sigma^a_{ij}$. The commutation relations become
+For $\mathrm{SU}(2)$, we can choose $T^a_{ij} = \frac{1}{2}\sigma^a_{ij}$. The commutation relations become
 \[[T^a,T^b] = i\epsilon^{abc}T^c\]
 \end{example}
 
 \subsection{Nonabelian gauge theory}
-Consider a Lagrangian with $N$ scalar or spinor fields $\phi^i(x)$ that is invariant under a continuous $SU(N)$ symmetry,
+Consider a Lagrangian with $N$ scalar or spinor fields $\phi^i(x)$ that is invariant under a continuous $\mathrm{SU}(N)$ symmetry,
 \[\phi_i(x) = U_{ij}\phi_j(x)\]
 It is called a global symmetry transformation, because the matrix $U$ does not depend on the space-time label $x$.
 \\
@@ -56,7 +56,7 @@ So we must include a traceless hermitian $N \times N$ gauge field $A_{\mu}(x)$, 
 \[D_{\mu}\phi \to UD_{\mu}\phi\]
 As a result, the gauge field must transform as
 \[A_{\mu}(x) \to U(x)A_{\mu}(x)U^{\dagger}(x) + \frac{i}{g}U(x)\partial_{\mu}U^{\dagger}(x)\]
-Replacing all ordinary derivatives in $\mathcal{L}$ with covariant derivatives renders $\mathcal{L}$ gauge invariant (assuming, of course, that $\mathcal{L}$ originally had a global $SU(N)$ symmetry).\\
+Replacing all ordinary derivatives in $\mathcal{L}$ with covariant derivatives renders $\mathcal{L}$ gauge invariant (assuming, of course, that $\mathcal{L}$ originally had a global $\mathrm{SU}(N)$ symmetry).\\
 We can write $U(x)$ in terms of the generator matrices as
 $\exp[-ig\Gamma(x)T^a]$. If the structure constant $f^{abc} \neq 0$, we have a nonabelian gauge theory.
 \\ \\
@@ -74,42 +74,42 @@ We can get
 \[F^{c}_{\mu\nu} = \partial_{\mu}A^c_{\nu} - \partial_{\nu}A^c_{\mu} + gf^{abc}A^a_{\mu}A^b_{\nu}\]
 \[\mathcal{L}_{\mathrm{kin}} = -\frac{1}{4}F^{c\mu\nu}F_{c\mu\nu}\]
 \\
-Everything we have just said about $SU(N)$ also goes through for $SO(N)$, with unitary replaced by orthogonal, and traceless replaced by antisymmetric. There is also another class of compact nonabelian groups called $Sp(2N)$,
+Everything we have just said about $\mathrm{SU}(N)$ also goes through for $\mathrm{SO}(N)$, with unitary replaced by orthogonal, and traceless replaced by antisymmetric. There is also another class of compact nonabelian groups called $Sp(2N)$,
 and five exceptional compact groups: $G(2)$, $F(4)$, $E(6)$, $E(7)$ and $E(8)$. Compact means that $\mathrm{Tr}(T^aT^b)$ is a positive definite matrix. Nonabelian gauge theory must be based on a compact group, because otherwise some of the
 terms in $\mathcal{L}_{\mathrm{kin}}$ would have the wrong sign, leading to a Hamiltonian that is unbounded below.
 \\ \\
-As a specific example, let us consider quantum chromodynamics, or QCD, which is based on the gauge group $SU(3)$. There are several Dirac fields corresponding to quarks. Each quark comes in three colors; these are the
-values of the $SU(3)$ index. 
+As a specific example, let us consider quantum chromodynamics, or QCD, which is based on the gauge group $\mathrm{SU}(3)$. There are several Dirac fields corresponding to quarks. Each quark comes in three colors; these are the
+values of the $\mathrm{SU}(3)$ index. 
 There are also six flavours: up, down, strange, charm, bottom, and top. Thus we consider the Dirac field $\Psi_{iI}(x)$, where $i$ is the color index and $I$ is the flavour index. The Lagrangian is
 \[\mathcal{L} = i\overline{\Psi}_{iI}\slashed{D}_{ij}\Psi_{jI} - m_I\overline{\Psi}_{I}\Psi_{I} - \frac{1}{2}\mathrm{Tr}(F^{\mu\nu}F_{\mu\nu})\]
 The different quark flavours have different masses, ranging from a few MeV for the up and down quarks to $174$ GeV for the top quark. The covariant derivative is
 \[D_{\mu ij} = \delta_{ij}\partial_{\mu} - igA^a_{\mu}T^a_{ij}\]
 The index $a$ on $A^a_{\mu}$ runs from $1$ to $8$, and the corresponding massless spin-one particles are the eight gluons.
 \\ \\
-In a nonabelian gauge theory in general, we can consider scalar or spinor fields in different representations of the group. A representation of a compact nonabelian group is a set of finite-dimensional hermitian matrices $T^a_{R}$ that obey the same commutation relations as the original generator matrices $T^a$. 
+In a nonabelian gauge theory in general, we can consider scalar or spinor fields in different representations of the group. A representation of a compact nonabelian group is a set of finite-dimensional hermitian matrices $T^a_{\rm R}$ that obey the same commutation relations as the original generator matrices $T^a$. 
 Given such a set of $D(R)\times D(R)$ matrices, and
-a field $\phi(x)$ with $D(R)$ components, we can write its covariant derivative as $D_{\mu} = \partial_{\mu} -igA^a_{\mu}T^a_{R}$. 
-Under a gauge transformation, $\phi(x) \to U_R(x)\phi(x)$. The theory will be gauge invariant provided that
+a field $\phi(x)$ with $D(R)$ components, we can write its covariant derivative as $D_{\mu} = \partial_{\mu} -igA^a_{\mu}T^a_{\rm R}$. 
+Under a gauge transformation, $\phi(x) \to U_{\rm R}(x)\phi(x)$. The theory will be gauge invariant provided that
 \[A^c_{\mu} \to A^c_{\mu} + g\theta^aA^b_{\mu}f^{abc} - \partial_{\mu}\theta^c\]
 under infinitesimal transformation, which is independent of representation.
 
 \subsection{Group representations}
-Given the structure coefficients $f^{abc}$ of a compact nonabelian group, a representation of that group is specified by a set of $D(R)\times D(R)$ traceless hermitian matrices $T^a_R$ that obey the same commutation relations as the original generators matrices $T^a$.
+Given the structure coefficients $f^{abc}$ of a compact nonabelian group, a representation of that group is specified by a set of $D(R)\times D(R)$ traceless hermitian matrices $T^a_{\rm R}$ that obey the same commutation relations as the original generators matrices $T^a$.
 The number $D(R)$ is the dimension of the representation. The original $T^a$s correspond to the fundamental or defining representation.
 \\
-If $T^a_R$ is a representation of the group, then we can verify that  $-(T^a_R)^*$ is also a representation. 
+If $T^a_{\rm R}$ is a representation of the group, then we can verify that  $-(T^a_{\rm R})^*$ is also a representation. 
 \begin{itemize}
-\item If $T^a_R = -(T^a_R)$ , or if we can find a unitary transformation $T^a_R \to U^{-1}T^a_RU$ that makes $-(T^a_R)^* = T^a_R$ for every $a$, then the representation $R$ is real.
-\item If such a unitary transformation does not exist, but we can find a unitary matrix $V \neq I$ such that $V^{-1}T^a_RV = -(T^a_R)^*$ for every $a$, then the representation $R$ is pseudoreal.
+\item If $T^a_{\rm R} = -(T^a_{\rm R})^*$, or if we can find a unitary transformation $T^a_{\rm R} \to U^{-1}T^a_{\rm R}U$ that makes $-(T^a_{\rm R})^* = T^a_{\rm R}$ for every $a$, then the representation $R$ is real.
+\item If such a unitary transformation does not exist, but we can find a unitary matrix $V \neq I$ such that $V^{-1}T^a_{\rm R}V = -(T^a_{\rm R})^*$ for every $a$, then the representation $R$ is pseudoreal.
 \item If such a unitary matrix also does not exist, then the representation $R$ is complex.
-\item One way to prove that a representation is complex is to show that at least one generator matrix $T^a_R$ (or a real linear combination of them) has eigenvalues that do not come in plus-minus pairs.
+\item One way to prove that a representation is complex is to show that at least one generator matrix $T^a_{\rm R}$ (or a real linear combination of them) has eigenvalues that do not come in plus-minus pairs.
 \end{itemize}
 
 \begin{example}
 \begin{itemize}
-\item The fundamental representation of $SO(N)$ is real
-\item The fundamental representation for $SU(2)$ is pseudoreal
-\item The fundamental representation for $SU(N)$ with $N \geq 3$ is complex
+\item The fundamental representation of $\mathrm{SO}(N)$ is real
+\item The fundamental representation for $\mathrm{SU}(2)$ is pseudoreal
+\item The fundamental representation for $\mathrm{SU}(N)$ with $N \geq 3$ is complex
 \end{itemize}
 \end{example}
 
@@ -121,20 +121,20 @@ by which we can derive the Jacobian identity
 It can be rearranged as 
 \[(-if^{abd})(-if^{cde})-(-if^{cbd})(-if^{ade}) = if^{acd} (-if^{dbe})\]
 Define
-\[(T^a_{A})^{bc} \equiv -if^{abc}\]
+\[(T^a_{\rm A})^{bc} \equiv -if^{abc}\]
 we can get a new representation of the group. It is called adjoint representation. The dimension of adjoint representation is equal to the number of the generators. And it is easy to show that adjoint representation is real.
 \\ \\
 It can be demonstrated that once the fundamental representation is normalized so that $\mathrm{Tr}T^aT^b$ is proportion to the $\delta^{ab}$, so is it with any irreducible representation of the group. Then we can define the index of a representation $T(R)$ as
-\[Tr(T^a_R T^b_R) = T(R)\delta^{ab}\]
-We can verify that the matrix $T^a_R T^a_R$ commutes with
+\[\mathrm{Tr}(T^a_{\rm R} T^b_{\rm R}) = T(R)\delta^{ab}\]
+We can verify that the matrix $T^a_{\rm R} T^a_{\rm R}$ commutes with
 every generator, and so must be a number times the identity matrix. We define quadratic Casimir $C(R)$ by
-\[T^a_R T^a_R = C^(R)I\]
+\[T^a_{\rm R} T^a_{\rm R} = C(R)I\]
 It is easy to show that
 \[T(R)D(A) = C(R)D(R)\]
-For $SU(N)$, the standard normalization for fundamental representation is $T(N) = \frac{1}{2}$, so we have $C(N) = \frac{N^2-1}{2N}$. We will show later that $T(A) = C(A) = N$. \\
-For $SO(N)$, the standard normalization for fundamental representation is $T(N) = 2$, so we have $C(N) = N-1$. We will show later that $T(A) = C(A) = 2N-4$.
+For $\mathrm{SU}(N)$, the standard normalization for fundamental representation is $T(N) = \frac{1}{2}$, so we have $C(N) = \frac{N^2-1}{2N}$. We will show later that $T(A) = C(A) = N$. \\
+For $\mathrm{SO}(N)$, the standard normalization for fundamental representation is $T(N) = 2$, so we have $C(N) = N-1$. We will show later that $T(A) = C(A) = 2N-4$.
 \\ \\
-A representation $R$ is reducible if there is a unitary transformation $T^a_R \to U^{-1}T^a_RU$ that puts all the nonzero entries into the same diagonal blocks
+A representation $R$ is reducible if there is a unitary transformation $T^a_{\rm R} \to U^{-1}T^a_{\rm R}U$ that puts all the nonzero entries into the same diagonal blocks
 for each $a$; otherwise it is irreducible. 
 Consider a reducible representation $R$ whose generators can be put into two blocks, with the blocks forming the generators of the irreducible representations $R_1$ and $R_2$ . Then $R$ is the direct sum representation $R = R_1\oplus R_2$, and we have
 \[D(R_1\oplus R_2) = D(R_1) + D(R_2)\]
@@ -146,7 +146,7 @@ We define the $T(R)$ of reducible representation by taking the trace of the prod
 \noindent
 Suppose we have a field $\phi_{iI}$ that carries two group indices, one for the representation $R_1$ and one for the representation $R_2$, denoted by $i$ and $I$ respectively.
 This field is in the direct product representation $R_1 \otimes R_2$ . The corresponding generator matrix is
-\[(T^a_{R_1 \otimes R_2})_{iI,jJ} = (T^a_{R_1})\delta_{IJ} + \delta_{ij}(T^a_{R_2})_{IJ}\]
+\[(T^a_{\rm R_1 \otimes R_2})_{iI,jJ} = (T^a_{\rm R_1})\delta_{IJ} + \delta_{ij}(T^a_{\rm R_2})_{IJ}\]
 We then have
 \[D(R_1\otimes R_2) = D(R_1)D(R_2)\]
 \[T(R_1\otimes R_2) = T(R_1)D(R_2) + T(R_2)D(R_1)\]
@@ -155,93 +155,93 @@ Consider a field $\phi$ in the complex representation $R$. We will adopt the con
 down index: $\phi_i$, and its Hermitian conjugation carries a up index: $\phi^{\dagger i}$, where $i = 1,\cdots,D(R)$.
 \\ 
 Since
-\[\phi_i \to \phi_i - i\theta_a (T^a_R)_{i}^{\phantom{i}j}\phi_j \]
+\[\phi_i \to \phi_i - i\theta_a (T^a_{\rm R})_{i}^{\phantom{i}j}\phi_j \]
 we have
-\[\phi^{\dagger i} \to \phi^{\dagger j} - i\theta_a (-T^{a*}_R)_{i}^{\phantom{i}j}\phi^{\dagger j} = \phi^{\dagger j} - i\theta_a (-T^{a}_R)_{j}^{\phantom{i}i}\phi^{\dagger j} \equiv \phi^{\dagger j} - i\theta_a (T^{a}_{\overline{R}})^{i}_{\phantom{i}j}\phi^{\dagger j}\]
+\[\phi^{\dagger i} \to \phi^{\dagger j} - i\theta_a (-T^{a*}_{\rm R})_{i}^{\phantom{i}j}\phi^{\dagger j} = \phi^{\dagger j} - i\theta_a (-T^{a}_{\rm R})_{j}^{\phantom{i}i}\phi^{\dagger j} \equiv \phi^{\dagger j} - i\theta_a (T^{a}_{\rm \overline{R}})^{i}_{\phantom{i}j}\phi^{\dagger j}\]
 i.e.
-\[(T^{a}_{\overline{R}})^{i}_{\phantom{i}j} = (-T^{a}_R)_{j}^{\phantom{i}i}\]
+\[(T^{a}_{\rm \overline{R}})^{i}_{\phantom{i}j} = (-T^{a}_{\rm R})_{j}^{\phantom{i}i}\]
 Consider the Kronecker delta symbol with one index down and one up: $\delta_i^{\phantom{i}j}$ . Under a group transformation, we have
-\[\delta_i^{\phantom{i}j} \to (1+i\theta^a T^a_R)_{i}^{\phantom{i}k} (1+i\theta^a T^a_{\overline{R}})^{j}_{\phantom{i}l}\delta_k^{\phantom{i}l} = \delta_i^{\phantom{i}j} + O(\theta^2)\]
+\[\delta_i^{\phantom{i}j} \to (1+i\theta^a T^a_{\rm R})_{i}^{\phantom{i}k} (1+i\theta^a T^a_{\rm \overline{R}})^{j}_{\phantom{i}l}\delta_k^{\phantom{i}l} = \delta_i^{\phantom{i}j} + O(\theta^2)\]
 $\delta_i^{\phantom{i}j}$ is an invariant symbol of the group. This existence of this invariant symbol, which carries one index for $R$ and one for $\overline{R}$, tells us that the product of the representations $R$ and $\overline{R}$ must contain the singlet representation $1$, specified by $T_1^a = 0$. We therefore can write
 \[R \otimes \overline{R} = 1 \oplus \cdots\]
-We can further verify that the generator matrix $(T_R^a)_i^{\phantom{i}j}$, which carries one index for $R$, one for $\overline{R}$, and one for the adjoint representation $A$, is also an invariant symbol.
+We can further verify that the generator matrix $(T_{\rm R}^a)_i^{\phantom{i}j}$, which carries one index for $R$, one for $\overline{R}$, and one for the adjoint representation $A$, is also an invariant symbol.
 This implies that
-\[R \times \overline{R} \otimes A = 1 \oplus \cdots\]
+\[R \otimes \overline{R} \otimes A = 1 \oplus \cdots\]
 If we now multiply both sides by $A$, and use $A \otimes A = 1 \oplus \cdots$ (note $A$ is real), we find $R \times \overline{R} = A \oplus \cdots$. Finally, we have
 \[R \otimes \overline{R} = 1 \oplus A \oplus \cdots \]
-So the product of a representation with its complex conjugate is always reducible into a sum that includes at least the singlet and adjoint representations. For the fundamental representation of $SU(N)$, we have
+So the product of a representation with its complex conjugate is always reducible into a sum that includes at least the singlet and adjoint representations. For the fundamental representation of $\mathrm{SU}(N)$, we have
 \[N \otimes \overline{N} = 1 \oplus A \]
 by dimension analysis. We can derive $T(A) = N$ from this equation.
 \\ \\
 Consider now a real representation $R$, we have
-\[R \times R \otimes A = 1 \oplus \cdots\]
+\[R \otimes R \otimes A = 1 \oplus \cdots\]
 The singlet on the right-hand side implies the existence of an invariant symbol with two $R$ indices; this symbol is the Kronecker delta $\delta_{ij}$ . It is invariant because
-\[\delta_{ij} \to (1+i\theta^a T^a_R)_{i}^{\phantom{i}k} (1+i\theta^a T^a_{\overline{R}})_{j}^{\phantom{i}l}\delta_{kl} = \delta_{ij} - i\theta^a [(T^a_R)_{ij} + (T^a_R)_{ji}] + O(\theta^2)\]
-The term in square brackets vanishes by hermiticity and $(T^{a}_{\overline{R}})^{i}_{\phantom{i}j} = (-T^{a}_R)_{j}^{\phantom{i}i}$. 
+\[\delta_{ij} \to (1+i\theta^a T^a_{\rm R})_{i}^{\phantom{i}k} (1+i\theta^a T^a_{\rm R})_{j}^{\phantom{i}l}\delta_{kl} = \delta_{ij} - i\theta^a [(T^a_{\rm R})_{ij} + (T^a_{\rm R})_{ji}] + O(\theta^2)\]
+The term in square brackets vanishes by hermiticity and $(T^{a}_{\rm R})^{i}_{\phantom{i}j} = (-T^{a}_{\rm R})_{j}^{\phantom{i}i}$. 
 The fact that $\delta_{ij} = \delta_{ji}$ implies that the singlet on the right-hand side of the equation above appears in the symmetric part of this product of two identical representations.
 \\
-The fundamental representation of $SO(N)$ is real, and we have
-\[N \times N = 1_S \oplus A_A \oplus S_S\]
-The representation S corresponds to a field with a symmetric traceless pair of fundamental indices.
+The fundamental representation of $\mathrm{SO}(N)$ is real, and we have
+\[N \times N = 1_{\rm S} \oplus A_{\rm A} \oplus S_{\rm S}\]
+The representation $S$ corresponds to a field with a symmetric traceless pair of fundamental indices.
 \\ \\
 Consider now a pseudoreal representation $R$. Since $R$ is equivalent to its complex conjugate, up to a change of basis, $R \times R \otimes A = 1 \oplus \cdots$  still holds. However, we cannot identify $\delta_{ij}$ as the corresponding invariant symbol, because then $R$ would have to be real, rather than pseudoreal. 
 From the perspective of the direct product, the only alternative is to have the singlet appear in the antisymmetric part of the product, rather than the symmetric part. The corresponding invariant symbol must then be antisymmetric on exchange of its two $R$ indices.
-An example is the fundamental representation of $SU(2)$, which is discussed in spinor field theory.
+An example is the fundamental representation of $\mathrm{SU}(2)$, which is discussed in spinor field theory.
 \\ \\
 The structure constants $f^{abc}$ are another invariant symbol. This follows from $(T^a_A)^{bc} = -if^{abc}$, since we have seen that generator matrices are invariant.
 \\
 Alternatively, given the generator matrices in a representation $R$, we can write
-\[T(R)f^{abc} = -i \mathrm{Tr}(T^a_R[T^b_R,T^c_R])\]
+\[T(R)f^{abc} = -i \mathrm{Tr}(T^a_{\rm R}[T^b_{\rm R},T^c_{\rm R}])\]
 Since the right-hand side is invariant, the left-hand side must be as well.
 \\
 If we use an anticommutator in place of the commutator, we get another invariant symbol,
-\[A(R)d^{abc} = \frac{1}{2} \mathrm{Tr}(T^a_R\{T^b_R,T^c_R\})\]
-where $A(R)$ is the anomaly coefficient of the representation. The cyclic property of the trace implies that $d^{abc}$ is symmetric on exchange of any pair of indices. Using $(T^{a}_{\overline{R}})^{i}_{\phantom{i}j} = (-T^{a}_R)_{j}^{\phantom{i}i}$, we can see that
+\[A(R)d^{abc} = \frac{1}{2} \mathrm{Tr}(T^a_{\rm R}\{T^b_{\rm R},T^c_{\rm R}\})\]
+where $A(R)$ is the anomaly coefficient of the representation. The cyclic property of the trace implies that $d^{abc}$ is symmetric on exchange of any pair of indices. Using $(T^{a}_{\rm \overline{R}})^{i}_{\phantom{i}j} = (-T^{a}_{\rm R})_{j}^{\phantom{i}i}$, we can see that
 \[A(\overline{R}) = -A(R)\]
 Thus, if $R$ is real or pseudoreal, $A(R) = 0$. We also have
 \[A(R_1\oplus R_2) = A(R_1) + A(R_2)\]
 \[A(R_1\otimes R_2) = A(R_1)D(R_2) + A(R_2)D(R_1)\]
-We normalize the anomaly coefficient so that it equals one for the smallest complex representation. In particular, for $SU(3)$ with $N \geq 3$, the smallest complex representation is the fundamental, and $A(N) = 1$. For $SU(2)$, all representations are real or pseudoreal, and $A(R) = 0$ for all of them.
+We normalize the anomaly coefficient so that it equals one for the smallest complex representation. In particular, for $\mathrm{SU}(3)$ with $N \geq 3$, the smallest complex representation is the fundamental, and $A(N) = 1$. For $\mathrm{SU}(2)$, all representations are real or pseudoreal, and $A(R) = 0$ for all of them.
 
 \section{Quantization of nonabelian gauge theory}
 \subsection{The path integral for nonabelian gauge theory}
 We wish to evaluate the path integral for nonabelian gauge theory
-\[Z[0] = \int \mathcal{D}A e^{iS_{YM}}\]
-\[S_{YM} = \int d^4x \left[-\frac{1}{4}F^{a\mu\nu}F^{a}_{\mu\nu} \right]\]
+\[Z[0] = \int \mathcal{D}A e^{iS_{\rm YM}}\]
+\[S_{\rm YM} \equiv \int d^4x \left[-\frac{1}{4}F^{a\mu\nu}F^{a}_{\mu\nu} \right]\]
 Recall under an infinitesimal gauge transformation, we have
-\[A^{a}_{\mu} \to A^{a}_{\mu} -(\delta^{ac}\partial_{\mu}-igA^{b}_{\mu}(T_{A}^{b})^{ac})\theta^c\]
+\[A^{a}_{\mu} \to A^{a}_{\mu} -(\delta^{ac}\partial_{\mu}-igA^{b}_{\mu}(T_{\rm A}^{b})^{ac})\theta^c\]
 We can define a covariant derivative for adjoint representation
-\[D_{\mu}^{ac} \equiv \delta^{ac}\partial_{\mu}-igA^{b}_{\mu}(T_{A}^{b})^{ac}\]
+\[D_{\mu}^{ac} \equiv \delta^{ac}\partial_{\mu}-igA^{b}_{\mu}(T_{\rm A}^{b})^{ac}\]
 so we have
 \[A^{a}_{\mu} \to A^{a}_{\mu} - D_{\mu}^{ac}\theta^c\]
 Similar to the case in electromagnetic field, we introduce a gauge fixing function
 \[G^a(A(\theta)) \equiv \partial^{\mu}A^a_{\mu}(\theta)  - \omega^a(x)\]
 Now, we insert $1$ in the path integral
 \[1 = \int \mathcal{D}\theta \delta(G) \det\left( \frac{\delta G}{\delta \theta} \right)\]
-Here,
+where
 \[\frac{\delta G^a(x)}{\delta \theta^b(y)} = -\partial^{\mu}D_{\mu}^{ab}(\theta)\delta^4(x-y)\]
 A functional determinant can be written as a path integral over complex Grassmann variables. So let us introduce the complex Grassmann field $c^a(x)$, and its hermitian conjugate $\overline{c}^a(x)$. These fields are called Faddeev–Popov ghosts. Then we can write
-\[ \det\left( \frac{\delta G}{\delta \theta} \right) \propto \int \mathcal{D}c \mathcal{D}\overline{c} e^{iS_{gh}[A(\theta)]}\]
+\[ \det\left( \frac{\delta G}{\delta \theta} \right) \propto \int \mathcal{D}c \mathcal{D}\overline{c} e^{iS_{\rm gh}[A(\theta)]}\]
 where
-\[\mathcal{L}_{gh}[A(\theta)] = \overline{c}^a \partial^{\mu}D^{ab}_{\mu}(\theta)c^b = -\partial^{\mu}\overline{c}^a \partial_{\mu}c^a + gf^{abc}A^c_{\mu}(\theta)\partial^{\mu}\overline{c}^a c^b\]
+\[\mathcal{L}_{\rm gh}[A(\theta)] \equiv \overline{c}^a \partial^{\mu}D^{ab}_{\mu}(\theta)c^b = -\partial^{\mu}\overline{c}^a \partial_{\mu}c^a + gf^{abc}A^c_{\mu}(\theta)\partial^{\mu}\overline{c}^a c^b\]
 We see that $c^a(x)$ has the standard kinetic term for a complex scalar field.  The ghost field is also a Grassmann field, and so a closed loop of ghost lines in a Feynman diagram carries an extra factor of minus one. Since the particles associated with the ghost field do not in fact exist (and would violate the spin-statistics theorem if they did), it must be that the amplitude to produce them in any scattering process is zero.
-\\
-Now change variables from $A$ to $A(\theta)$. This is a simple shift, so $\mathcal{D}A = \mathcal{D}A(\theta)$. Also, by gauge invariance, $S_{YM}[A] = S_{YM}[A(\theta)]$. Since $A(\theta)$ is now just a dummy integration variable, we can rename it bake to $A$, so
-\[Z[0] \propto \left(\int \mathcal{D}\theta\right) \int \mathcal{D}c \mathcal{D}\overline{c} \mathcal{D}A e^{iS_YM + iS_{gh}} \delta(\partial^{\mu}A^a_{\mu}-\omega^a(x))\]
+\\ \\
+Now we can change variables from $A$ to $A(\theta)$. This is a simple shift, so $\mathcal{D}A = \mathcal{D}A(\theta)$. Also, by gauge invariance, $S_{\rm YM}[A] = S_{\rm YM}[A(\theta)]$. Since $A(\theta)$ is now just a dummy integration variable, we can rename it bake to $A$, so
+\[Z[0] \propto \left(\int \mathcal{D}\theta\right) \int \mathcal{D}c \mathcal{D}\overline{c} \mathcal{D}A e^{iS_{\rm YM} + iS_{\rm gh}} \delta(\partial^{\mu}A^a_{\mu}-\omega^a(x))\]
 Since the above equation is hold for any $\omega(x)$,so we have
 \begin{eqnarray}
-Z[0] &\propto& \int \mathcal{D}\omega \exp \left[-i\int d^4x \frac{\omega^a\omega^a}{2\xi} \right] \int \mathcal{D}c \mathcal{D}\overline{c} \mathcal{D}A e^{iS_YM + iS_{gh}} \delta(\partial^{\mu}A^a_{\mu}-\omega^a(x)) \nonumber \\
-&=&  \int \mathcal{D}c \mathcal{D}\overline{c} \mathcal{D}A e^{iS_YM + iS_{gh} + iS_{gf}}
+Z[0] &\propto& \int \mathcal{D}\omega \exp \left[-i\int d^4x \frac{\omega^a\omega^a}{2\xi} \right] \int \mathcal{D}c \mathcal{D}\overline{c} \mathcal{D}A e^{iS_{\rm YM} + iS_{\rm gh}} \delta(\partial^{\mu}A^a_{\mu}-\omega^a(x)) \nonumber \\
+&=&  \int \mathcal{D}c \mathcal{D}\overline{c} \mathcal{D}A e^{iS_{\rm YM} + iS_{\rm gh} + iS_{\rm gf}}
 \end{eqnarray}
 where
-\[\mathcal{L}_{gf} = -\frac{1}{2\xi}\partial^{\mu}A^a_{\mu} \partial^{\nu}A^a_{\nu}\]
+\[\mathcal{L}_{\rm gf} \equiv -\frac{1}{2\xi}\partial^{\mu}A^a_{\mu} \partial^{\nu}A^a_{\nu}\]
 
 \subsection{The Feynman rules for nonabelian gauge theory}
-\[\mathcal{L}_{YM} = -\frac{1}{2}\partial^{\mu}A^{a\nu} \partial_{\mu}A^a_{\nu} + \frac{1}{2}\partial^{\mu}A^{a\nu} \partial_{\nu}A^a_{\mu} -gf^{abe}A^{a\mu}A^{b\nu}\partial_{\mu}A^e_{\nu} - \frac{1}{4}g^2 f^{abe}f^{cde}A^{a\mu}A^{b\nu}A^c_{\mu}A^d_{\nu}\]
+\[\mathcal{L}_{\rm YM} = -\frac{1}{2}\partial^{\mu}A^{a\nu} \partial_{\mu}A^a_{\nu} + \frac{1}{2}\partial^{\mu}A^{a\nu} \partial_{\nu}A^a_{\mu} -gf^{abe}A^{a\mu}A^{b\nu}\partial_{\mu}A^e_{\nu} - \frac{1}{4}g^2 f^{abe}f^{cde}A^{a\mu}A^{b\nu}A^c_{\mu}A^d_{\nu}\]
 Add the gauge-fixing term for $R_{\xi}$ gauge, and do some integrations-by-parts in the quadratic terms, we find
-\[\mathcal{L}_{YM} + \mathcal{L}_{gf} = \frac{1}{2}A^{e\mu}(\eta_{\mu\nu}\partial^2 -(1-\frac{1}{\xi}) \partial_{\mu}\partial_{\nu})A^{e\nu} -gf^{abe}A^{a\mu}A^{b\nu}\partial_{\mu}A^e_{\nu} - \frac{1}{4}g^2 f^{abe}f^{cde}A^{a\mu}A^{b\nu}A^c_{\mu}A^d_{\nu}\]
+\[\mathcal{L}_{\rm YM} + \mathcal{L}_{\rm gf} = \frac{1}{2}A^{e\mu}(\eta_{\mu\nu}\partial^2 -(1-\frac{1}{\xi}) \partial_{\mu}\partial_{\nu})A^{e\nu} -gf^{abe}A^{a\mu}A^{b\nu}\partial_{\mu}A^e_{\nu} - \frac{1}{4}g^2 f^{abe}f^{cde}A^{a\mu}A^{b\nu}A^c_{\mu}A^d_{\nu}\]
 So, the gluon propagator in $R_{\xi}$ gauge is
-\[G_F(k)^{ab}_{\mu\nu} = \frac{-i\delta^{ab}}{k^2-i\epsilon} \left( \eta_{\mu\nu} - (1 - \frac{1}{\xi}) \frac{k_{\mu}k_{\nu}}{k^2} \right)\]
+\[G_{\rm F}(k)^{ab}_{\mu\nu} = \frac{-i\delta^{ab}}{k^2-i\epsilon} \left( \eta_{\mu\nu} - (1 - \frac{1}{\xi}) \frac{k_{\mu}k_{\nu}}{k^2} \right)\]
 The three-gluon vertex factor is
 \begin{eqnarray}
 iV^{abc}_{\mu\nu\rho}(p,q,r) &=& i (-gf^{abc})(-ir_{\mu}g_{\nu\rho}) + [5 \mbox{ permutations of } (a,\mu,p),(b,\nu,q),(c,\rho,r)] \nonumber \\
@@ -255,32 +255,32 @@ iV^{abcd}_{\mu\nu\rho\sigma} &=& -ig^2f^{abe} f^{cde} g_{\mu\rho}g_{\nu\sigma} +
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[height=4cm ,width=10.13cm]{QFT4/gluon_vertices.png}
+	\includegraphics[scale=0.2]{QFT4/gluon_vertices.png}
 	\caption{The three-gluon and four-gluon vertices in nonabelian gauge theory}
 \end{figure}
 
 \noindent
 For loop calculations, we need to include the ghosts. The ghost Lagrangian is
-\[\mathcal{L}_{gh} = -\partial^{\mu}\overline{c}^c \partial_{\mu}c^c + gf^{abc}A^a_{\mu}\partial^{\mu}\overline{c}^b c^c\]
+\[\mathcal{L}_{\rm gh} = -\partial^{\mu}\overline{c}^c \partial_{\mu}c^c + gf^{abc}A^a_{\mu}\partial^{\mu}\overline{c}^b c^c\]
 The ghost propagator is
-\[D_F(k) = \frac{-i\delta^{ab}}{k^2-i\epsilon}\]
+\[D_{\rm F}(k) = \frac{-i\delta^{ab}}{k^2-i\epsilon}\]
 Because the ghosts are complex scalars, their propagators carry a charge arrow. 
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[height=4cm ,width=7.81cm]{QFT4/ggg_vertex.png}
+	\includegraphics[scale=0.2]{QFT4/ggg_vertex.png}
 	\caption{The ghost-ghost-gluon vertex in nonabelian gauge theory}
 \end{figure}
 
 \noindent
 The ghost–ghost–gluon vertex factor is
-\[iV^{abc}_{\mu}(-iq_{\mu}) = gf^{abc}a_{\mu}\]
+\[iV^{abc}_{\mu}(q,r) = igf^{abc}(-iq_{\mu}) = gf^{abc}q_{\mu}\]
 If we include a quark coupled to the gluons, we have the quark Lagrangian
 \[\mathcal{L}_{q} = i\overline{\Psi}_{i}\slashed{D}_{ij}\Psi_{j} - m\overline{\Psi}_{i}\Psi_{i} = i\overline{\Psi}_{i}\slashed{\partial}\Psi_{i} - m\overline{\Psi}_{i}\Psi_{i} + gA^a_{\mu}\overline{\Psi}_{i} \gamma^{\mu} T^a_{ij} \Psi_j \]
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[height=3cm ,width=5.07cm]{QFT4/ffg_vertex.png}
+	\includegraphics[scale=0.2]{QFT4/ffg_vertex.png}
 	\caption{The quark-quark-gluon vertex in nonabelian gauge theory}
 \end{figure}
 
@@ -346,8 +346,8 @@ And we can get
 \[G_1(\alpha) = - \left[ \frac{11}{3}T(A) - \frac{4}{3} n_F T(R) \right] \frac{\alpha}{2\pi} + O(\alpha^2)\]
 Since the bare coefficients is independent of $\mu$, we then can get
 \[\beta(\alpha) = \alpha^2 G_1(\alpha) = - \left[ \frac{11}{3}T(A) - \frac{4}{3} n_F T(R) \right] \frac{\alpha^2}{2\pi} + O(\alpha^3)\]
-In quantum chromodynamics, the gauge group is $SU(3)$, and the quarks are in the fundamental representation. Thus $T(A) = 3$ and $T(R) = \frac{1}{2}$, and the factor in square brackets is $11 - \frac{2}{3} n_F$. So for $n_F \leq 16$, the beta function is negative: the gauge coupling in quantum chromodynamics gets weaker at high energies, and stronger at low energies.\\
-This has dramatic physical consequences. Perturbation theory cannot serve as a reliable guide to the low-energy physics. And indeed, in nature we do not see isolated quarks or gluons. (Quarks, in particular, have fractional electric charges and would be easy to discover.) The appropriate conclusion is that color is confined : all finite-energy states are invariant under a global $SU(3)$ transformation. This has not yet been rigorously proven, but it is the
+In quantum chromodynamics, the gauge group is $\mathrm{SU}(3)$, and the quarks are in the fundamental representation. Thus $T(A) = 3$ and $T(R) = \frac{1}{2}$, and the factor in square brackets is $11 - \frac{2}{3} n_F$. So for $n_F \leq 16$, the beta function is negative: the gauge coupling in quantum chromodynamics gets weaker at high energies, and stronger at low energies.\\
+This has dramatic physical consequences. Perturbation theory cannot serve as a reliable guide to the low-energy physics. And indeed, in nature we do not see isolated quarks or gluons. (Quarks, in particular, have fractional electric charges and would be easy to discover.) The appropriate conclusion is that color is confined : all finite-energy states are invariant under a global $\mathrm{SU}(3)$ transformation. This has not yet been rigorously proven, but it is the
 only hypothesis that is consistent with all of the available theoretical and experimental information.
 
 \section{Chiral gauge theories and anomalies}
@@ -358,9 +358,9 @@ Recall that a Dirac field $\Psi$ can be written in terms of two left-handed Weyl
 Now suppose that we have a single left-handed Weyl field $\psi$ in a complex representation $R$. Such a gauge theory is automatically parity violating (because the right-handed hermitian conjugate of the left-handed Weyl field is in an inequivalent representation of the gauge group), and is said to be chiral.
 The Lagrangian is
 \[\mathcal{L} = i\psi^{\dagger} \overline{\sigma}^{\mu} D_{\mu} \psi - \frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu}\]
-where $D_{\mu} = \partial_{\mu} - igA^{a}_{\mu} T^a_R$.
+where $D_{\mu} = \partial_{\mu} - igA^{a}_{\mu} T^a_{\rm R}$.
 \\
-Since $T^a_R$ is a hermitian matrix, $i\psi^{\dagger} \overline{\sigma}^{\mu} D_{\mu} \psi$ is hermitian (up to a total divergence). We cannot include a mass term for $\psi$, though, because $\psi\psi$ transforms as $R \otimes R$, and $R \otimes R$ does not contain a singlet if $R$ is complex. Thus, $\psi\psi$ is not gauge invariant. 
+Since $T^a_{\rm R}$ is a hermitian matrix, $i\psi^{\dagger} \overline{\sigma}^{\mu} D_{\mu} \psi$ is hermitian (up to a total divergence). We cannot include a mass term for $\psi$, though, because $\psi\psi$ transforms as $R \otimes R$, and $R \otimes R$ does not contain a singlet if $R$ is complex. Thus, $\psi\psi$ is not gauge invariant. 
 \\ \\
 Now we focus on the simplest possible example: a $U(1)$ theory with a single Weyl field $\psi$ with charge $+1$. The Lagrangian is
 \[\mathcal{L} = i\psi^{\dagger} \overline{\sigma}^{\mu} (\partial_{\mu} - igA_{\mu}) \psi - \frac{1}{4}F^{\mu\nu}F_{\mu\nu}\]
@@ -406,13 +406,13 @@ The simplest possibility is to have the $\psi$s come in
 pairs with equal and opposite charges. But there are other possibilities as well: for example, one field with charge $+2$ and eight with charge $-1$. Such a gauge theory is still chiral, but it is anomaly free.
 \\ \\
 All of this has a straightforward generalization to nonabelian gauge theories. 
-Suppose we have a single Weyl field in a (possibly reducible) representation $R$ of the gauge group. Then we must attach an extra factor of $\mathrm{Tr}(T^a_R T^b_R T^c_R)$ to the first diagram, and a factor of $\mathrm{Tr}(T^a_R T^c_R T^b_R)$ to the second; here the group indices $a,b,c$ go along with the momenta $p,q,r$, respectively.
-Repeating our analysis shows that the diagrams with $P_{\mathrm{L}} \to \frac{1}{2}$ come with an extra factor of $\frac{1}{2}\mathrm{Tr}([T^a_R, T^b_R] T^c_R)$; these contribute to the renormalization of the tree-level three-gluon vertex. Diagrams with $P_{\mathrm{L}} \to - \frac{1}{2}\gamma_5$ come with an extra factor of
-\[\frac{1}{2}\mathrm{Tr}(\{T^a_R, T^b_R\} T^c_R) = A(R)d^{abc}\]
+Suppose we have a single Weyl field in a (possibly reducible) representation $R$ of the gauge group. Then we must attach an extra factor of $\mathrm{Tr}(T^a_{\rm R} T^b_{\rm R} T^c_{\rm R})$ to the first diagram, and a factor of $\mathrm{Tr}(T^a_{\rm R} T^c_{\rm R} T^b_{\rm R})$ to the second; here the group indices $a,b,c$ go along with the momenta $p,q,r$, respectively.
+Repeating our analysis shows that the diagrams with $P_{\mathrm{L}} \to \frac{1}{2}$ come with an extra factor of $\frac{1}{2}\mathrm{Tr}([T^a_{\rm R}, T^b_{\rm R}] T^c_{\rm R})$; these contribute to the renormalization of the tree-level three-gluon vertex. Diagrams with $P_{\mathrm{L}} \to - \frac{1}{2}\gamma_5$ come with an extra factor of
+\[\frac{1}{2}\mathrm{Tr}(\{T^a_{\rm R}, T^b_{\rm R}\} T^c_{\rm R}) = A(R)d^{abc}\]
 Here $d^{abc}$ is a completely symmetric tensor that is independent of the representation, and $A(R)$ is the anomaly coefficient of $R$. In order for this theory to exist, we must have $A(R) = 0$. 
 Since $A(R) + A(\overline{R}) = 0$; thus a theory whose left-handed Weyl fields come in $R \oplus \overline{R}$ pairs is automatically anomaly free (as is one whose Weyl fields are all in real representations). Otherwise, we must arrange the cancellation by hand. 
 \\
-For $SU(2)$ and $SO(N)$, $N \neq 2,6$ all representations have $A(R) = 0$. For $SU(N)$ with $N \geq 3$, the fundamental representation has $A(N) = 1$, and most complex $SU(N)$ representations $R$ have $A(R) \neq 0$. So the cancellation is nontrivial.
+For $\mathrm{SU}(2)$ and $\mathrm{SO}(N)$, $N \neq 2,6$ all representations have $A(R) = 0$. For $\mathrm{SU}(N)$ with $N \geq 3$, the fundamental representation has $A(N) = 1$, and most complex $\mathrm{SU}(N)$ representations $R$ have $A(R) \neq 0$. So the cancellation is nontrivial.
 
 \subsection{Anomalies in global symmetries}
 Let us consider electrodynamics with a massless Dirac field. The Lagrangian is
@@ -510,40 +510,40 @@ This is the Higgs mechanism: the Goldstone boson disappears, and the gauge field
 one has three. The Goldstone boson has become the third or longitudinal state of the now-massive gauge field. A scalar field whose VEV breaks a gauge symmetry is generically called a Higgs field.
 \\ \\
 This generalizes in a straightforward way to a nonabelian gauge theory. Consider a complex scalar field $\phi$ in a representation $R$ of the gauge group.
-The kinetic term for φ is $-(D_{\mu}\phi)^{\dagger}D_{\mu}\phi$, where the covariant derivative is $D_{\mu}\phi_i = \partial_{\mu}\phi_i - igA^a_{\mu}(T^a_R)_{i}^{\phantom{i}j} \phi_j$ , and the indices $i$ and $j$ run from $1$ to $d(R)$.
+The kinetic term for φ is $-(D_{\mu}\phi)^{\dagger}D_{\mu}\phi$, where the covariant derivative is $D_{\mu}\phi_i = \partial_{\mu}\phi_i - igA^a_{\mu}(T^a_{\rm R})_{i}^{\phantom{i}j} \phi_j$ , and the indices $i$ and $j$ run from $1$ to $d(R)$.
 We assume that $\phi$ acquires a VEV
 \[\langle 0 | \phi_i(x) | 0 \rangle = \frac{1}{\sqrt{2}}v_i\]
 If we replace $\phi$ by its VEV in $-(D_{\mu}\phi)^{\dagger}D_{\mu}\phi$, we find a mass term for the gauge fields
 \[\mathcal{L}_{mass} = - \frac{1}{2}(M^2)^{ab}A^{a\mu}A^b_{\mu}\]
 where the mass-squared matrix is
-\[(M^2)^{ab} = g^2 v_i^* (T^a_R T^b_R)_{ij}v_j \]
+\[(M^2)^{ab} = g^2 v_i^* (T^a_{\rm R} T^b_{\rm R})_{ij}v_j \]
 If the field $\phi$ is real rather than complex (which is possible only if $R$ is a real representation), then we remove the factor of root-two from the right-hand side of vacuum expectation value of $\phi$, but this is compensated by an extra factor of one-half from the kinetic term for a real scalar field; thus the form of mass-squared matrix remains invariant.
 \\
-We say a generator $T^a$ is spontaneously broken if $(T^a_R)_{ij}v_j \neq 0$. We see that gauge fields corresponding to broken generators get a mass, while those corresponding to unbroken generators do not. The unbroken generators (if any) form a gauge group with massless gauge fields. The massive gauge fields (and all other fields) form
+We say a generator $T^a$ is spontaneously broken if $(T^a_{\rm R})_{ij}v_j \neq 0$. We see that gauge fields corresponding to broken generators get a mass, while those corresponding to unbroken generators do not. The unbroken generators (if any) form a gauge group with massless gauge fields. The massive gauge fields (and all other fields) form
 representations of this unbroken group.
 \\ \\
-Consider the gauge group $SU(N)$, with a complex scalar field $\phi$ in the fundamental representation. We can make a global $SU(N)$ transformation to bring the VEV entirely into the last component, and furthermore make it real. 
-Any generator $(T^a)_{i}^{\phantom{j}}$ that does not have a nonzero entry in the last column will remain unbroken. These generators form an unbroken $SU(N-1)$ gauge group. There are three classes of broken generators: those with $(T^a)_{i}^{\phantom{N}} = \frac{1}{2}$  for $i \neq N$ (there are $N-1$ of these); those with
+Consider the gauge group $\mathrm{SU}(N)$, with a complex scalar field $\phi$ in the fundamental representation. We can make a global $\mathrm{SU}(N)$ transformation to bring the VEV entirely into the last component, and furthermore make it real. 
+Any generator $(T^a)_{i}^{\phantom{j}}$ that does not have a nonzero entry in the last column will remain unbroken. These generators form an unbroken $\mathrm{SU}(N-1)$ gauge group. There are three classes of broken generators: those with $(T^a)_{i}^{\phantom{N}} = \frac{1}{2}$  for $i \neq N$ (there are $N-1$ of these); those with
 $(T^a)_{i}^{\phantom{N}} = -\frac{i}{2}$  for $i \neq N$ (there are also $N - 1$ of these), and finally the single
 generator $T^{N^2 - 1} = [2N(N-1)]^{-1/2} \mathrm{diag}(1,1,\cdots,-N-1)$. 
 \\
 The gauge fields corresponding to the generators in the first two classes get a mass $M = \frac{1}{2}gv$.
-we can group them into a complex vector field that transforms in the fundamental representation of the unbroken $SU(N-1)$ subgroup. The gauge field corresponding to $T^{N^2-1}$ gets a mass $M = [2N(N-1)]^{1/2}gv$; it is a singlet of $SU(N-1)$.
+we can group them into a complex vector field that transforms in the fundamental representation of the unbroken $\mathrm{SU}(N-1)$ subgroup. The gauge field corresponding to $T^{N^2-1}$ gets a mass $M = [2N(N-1)]^{1/2}gv$; it is a singlet of $\mathrm{SU}(N-1)$.
 \\ \\
-Consider the gauge group $SO(N)$, with a real scalar field in the fundamental representation. We can make a global $SO(N)$ transformation to bring the VEV entirely into the last component. Any generator $(T^a)_{i}^{\phantom{j}}$ that does not have a nonzero entry in the last column will remain unbroken. These generators form an unbroken $SO(N-1)$ subgroup. There are $N - 1$ broken generators, those with $(T^a)_{i}^{\phantom{N}} = -i$  for $i \neq N$. 
-The corresponding gauge fields get a mass $M = gv$; they form a fundamental representation of the unbroken $SO(N-1)$ subgroup.
+Consider the gauge group $\mathrm{SO}(N)$, with a real scalar field in the fundamental representation. We can make a global $\mathrm{SO}(N)$ transformation to bring the VEV entirely into the last component. Any generator $(T^a)_{i}^{\phantom{j}}$ that does not have a nonzero entry in the last column will remain unbroken. These generators form an unbroken $\mathrm{SO}(N-1)$ subgroup. There are $N - 1$ broken generators, those with $(T^a)_{i}^{\phantom{N}} = -i$  for $i \neq N$. 
+The corresponding gauge fields get a mass $M = gv$; they form a fundamental representation of the unbroken $\mathrm{SO}(N-1)$ subgroup.
 \\ \\
-Consider the gauge group $SU(N)$, with a real scalar field $\Phi$ a in the adjoint representation. It will prove more convenient to work with the $N \times N$ matrix-valued field $\Phi = \phi^a T^a$; the covariant derivative of $\Phi$ is $D_{\mu}\Phi = \partial_{\mu}\Phi - igA^a_{\mu}[T^a,\Phi]$,
+Consider the gauge group $\mathrm{SU}(N)$, with a real scalar field $\Phi$ a in the adjoint representation. It will prove more convenient to work with the $N \times N$ matrix-valued field $\Phi = \phi^a T^a$; the covariant derivative of $\Phi$ is $D_{\mu}\Phi = \partial_{\mu}\Phi - igA^a_{\mu}[T^a,\Phi]$,
 and the VEV of $\phi$ is a traceless hermitian $N \times N$ matrix $V$. Thus the mass squared matrix for the gauge fields is
 \[-2g^2 \mathrm{Tr}\left([T^a,V][T^b,V]\right)\]
-We can make a global $SU(N)$ transformation to bring $V$ into diagonal form. Suppose the diagonal entries consist of $N_1$ $v_1$s, followed by $N_2$ $v_2$s, etc.,
+We can make a global $\mathrm{SU}(N)$ transformation to bring $V$ into diagonal form. Suppose the diagonal entries consist of $N_1$ $v_1$s, followed by $N_2$ $v_2$s, etc.,
 where $v_1 < v_2 < \cdots$ and $\sum_i N_i v_i = 0$. 
 Then all generators whose nonzero entries lie entirely within the $i$th block commute with $V$, and hence form an
-unbroken $SU(N_i)$ subgroup. Furthermore, generators that is proportional to $V$ also commutes with $V$, and forms a
-$U(1)$ subgroup. Thus the unbroken gauge group is $SU(N_1)\times SU(N_2) \times \cdots \times U(1)$. The gauge coupling constants for the different groups are all the same, and equal to the original $SU(N)$ gauge coupling constant.
+unbroken $\mathrm{SU}(N_i)$ subgroup. Furthermore, generators that is proportional to $V$ also commutes with $V$, and forms a
+$U(1)$ subgroup. Thus the unbroken gauge group is $\mathrm{SU}(N_1)\times \mathrm{SU}(N_2) \times \cdots \times U(1)$. The gauge coupling constants for the different groups are all the same, and equal to the original $\mathrm{SU}(N)$ gauge coupling constant.
 \\ \\
 \begin{example}
-Consider the case of $SU(5)$, which has $24$ generators. Let the diagonal entries of $V$ be given by $(-\frac{1}{3},-\frac{1}{3},-\frac{1}{3}, \frac{1}{2}, \frac{1}{2})$. The unbroken subgroup is then $SU(3) \times SU(2) \times U(1)$. The number of broken generators is $24 - 8 - 3 - 1 = 12$.
+Consider the case of $\mathrm{SU}(5)$, which has $24$ generators. Let the diagonal entries of $V$ be given by $(-\frac{1}{3},-\frac{1}{3},-\frac{1}{3}, \frac{1}{2}, \frac{1}{2})$. The unbroken subgroup is then $\mathrm{SU}(3) \times \mathrm{SU}(2) \times U(1)$. The number of broken generators is $24 - 8 - 3 - 1 = 12$.
 \end{example}
 
 \section{Quantization of spontaneously broken gauge theory}
@@ -594,7 +594,7 @@ Since their masses depend on $\xi$, the ghosts, the $b$ field, and the longitudi
 \subsection{Spontaneously broken nonabelian gauge theory}
 It will be convenient to work with real scalar fields. We
 therefore decompose any complex scalar fields into pairs of real ones, and organize all the real scalar fields into a big list $\phi_i$, $i = 1,\cdots,N$. 
-These real scalar fields form a (possibly reducible) representation $R$ of the gauge group. Let $T^a$ be the gauge-group generator matrices; they are linear combinations of the generators of the $SO(N)$ group that rotates all components of $\phi_i$ into each other. Because these generators are hermitian and antisymmetric, so are the  $T^A$s. The Lagrangian for our theory can now be written as
+These real scalar fields form a (possibly reducible) representation $R$ of the gauge group. Let $T^a$ be the gauge-group generator matrices; they are linear combinations of the generators of the $\mathrm{SO}(N)$ group that rotates all components of $\phi_i$ into each other. Because these generators are hermitian and antisymmetric, so are the  $T^A$s. The Lagrangian for our theory can now be written as
 \[\mathcal{L} = -\frac{1}{2}D^{\mu}\phi D_{\mu}\phi - V(\phi) - \frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu}\]
 where
 \[(D_{\mu}\phi)_i = \partial_{\mu}\phi_i - ig_aA^a_{\mu}T^a_{ij}\phi_j\]
@@ -659,7 +659,7 @@ The ghost fields of definite mass are $\widetilde{c}^a = S^{ba}c^b$ and  $\widet
 
 \section{The Standard Model}
 \subsection{Gauge and Higgs sector}
-We begin with the electroweak part of the gauge group, $SU(2)\times U(1)$, and the complex scalar field $\phi$, known as the Higgs field, in the representation $(2,-\frac{1}{2})$. The Higgs field acquires a non-zero VEV that spontaneously breaks $SU(2)\times U(1)$ to $U(1)$; the unbroken $U(1)$ is identified as electromagnetism.
+We begin with the electroweak part of the gauge group, $\mathrm{SU}(2)\times U(1)$, and the complex scalar field $\phi$, known as the Higgs field, in the representation $(2,-\frac{1}{2})$. The Higgs field acquires a non-zero VEV that spontaneously breaks $\mathrm{SU}(2)\times U(1)$ to $U(1)$; the unbroken $U(1)$ is identified as electromagnetism.
 We begin with the covariant derivative of the Higgs field $\phi$,
 \[(D_{\mu}\phi)_i = \partial_{\mu}\phi_i - i[g_2 A^a_{\mu}T^a + g_1B_{\mu}Y]_{i}^{\phantom{i}j} \phi_j\] where $T^a = \frac{1}{2}\sigma^a$ and $Y = -\frac{1}{2}I$; $Y$ is the hypercharge generator. It will prove
 useful to write out $g_2 A^a_{\mu}T^a + g_1B_{\mu}Y$ in matrix form,
@@ -736,7 +736,7 @@ where
 \subsection{Lepton sector}
 Leptons are spin-one-half particles that are singlets of the color group. There are six different flavours of lepton. The six flavours are naturally grouped into three families or generations: $e$ and $\nu_e$, $\mu$ and $\nu_{\mu}$, $\tau$ and $\nu_{\tau}$.
 \\ \\
-Let us begin by describing a single lepton family, the electron and its neutrino. We introduce left-handed Weyl fields $l$ and $\bar{e}$ in the representations $(2,-\frac{1}{2})$ and $(1,+1)$ of $SU(2)\times U(1)$. 
+Let us begin by describing a single lepton family, the electron and its neutrino. We introduce left-handed Weyl fields $l$ and $\bar{e}$ in the representations $(2,-\frac{1}{2})$ and $(1,+1)$ of $\mathrm{SU}(2)\times U(1)$. 
 Here the bar over the $e$ in the field $\bar{e}$ is part of the name of the field, and does not denote any sort of conjugation. The covariant derivatives of these fields are
 \[(D_{\mu}l)_i = \partial_{\mu}l_i - ig_2A^a_{\mu}(T^a)_{i}^{\phantom{j}j}l_j - ig_1(-\frac{1}{2})B_{\mu}l_i\]
 \[D_{\mu}\bar{e} = \partial_{\mu}\bar{e} - ig_1(+1)B_{\mu}\bar{e}\]
@@ -750,7 +750,7 @@ where $\phi$ is the Higgs field in the $(2,-\frac{1}{2})$ representation, and $y
 \[(2,-\frac{1}{2}) \otimes (2,-\frac{1}{2}) \otimes (1,+1) = (1,0) \oplus (3,0)\]
 In unitary gauge, we replace $\phi_1$ with $\frac{1}{\sqrt{2}}(v+H)$, where $H$ is the real scalar field representing the physical Higgs boson, and $\phi_2$ with zero. The Yukawa term becomes
 \[\mathcal{L}_{\mathrm{Yuk}} = -\frac{1}{\sqrt{2}}y(v+H)(l_2\bar{e} + \mathrm{h.c.})\]
-It is now convenient to assign new names to the $SU(2)$ components of $l$,
+It is now convenient to assign new names to the $\mathrm{SU}(2)$ components of $l$,
 \[l = \begin{pmatrix}
 \nu \\ e
 \end{pmatrix} \]
@@ -810,7 +810,7 @@ The kinetic terms are unchanged, and the Yukawa matrix $y$ is replaced with $L^T
 Quarks are spin-one-half particles that are triplets of the color group. There are six different flavours of quark. The six flavours are naturally grouped into three families or generations: $u$ and $d$, $c$ and $s$, $t$ and $b$.
 \\ \\
 Let us begin by describing a single quark family, the up and down quarks. We introduce left-handed Weyl fields $q$, $\bar{u}$, and $\bar{d}$ in the representations
-$(3,2,+\frac{1}{6})$, $(\bar{3},1,-\frac{2}{3})$, and $(\bar{3},1,+\frac{1}{3})$ of $SU(3) \times SU(2) \times U(1)$. 
+$(3,2,+\frac{1}{6})$, $(\bar{3},1,-\frac{2}{3})$, and $(\bar{3},1,+\frac{1}{3})$ of $\mathrm{SU}(3) \times \mathrm{SU}(2) \times U(1)$. 
 Here the bar over the letter in the fields is part of the name of the field, and does not denote any sort of conjugation
 The covariant derivatives of these fields are
 \begin{eqnarray}
@@ -821,7 +821,7 @@ The covariant derivatives of these fields are
 (D_{\mu}\bar{d})^{\alpha} &=& \partial_{\mu}\bar{d}^{\alpha} -ig_3A^a_{\mu}(T^a_{\bar{3}})^{\alpha}_{\phantom{\alpha}\beta} \bar{d}^{\beta } - ig_1(+\frac{1}{3})B_{\mu}\bar{d}^{\alpha}
 \nonumber
 \end{eqnarray}
-We rely on context to distinguish the $SU(3)$ gauge fields from the $SU(2)$ gauge fields. The kinetic terms for $q$, $\bar{u}$, and $\bar{d}$ are
+We rely on context to distinguish the $\mathrm{SU}(3)$ gauge fields from the $\mathrm{SU}(2)$ gauge fields. The kinetic terms for $q$, $\bar{u}$, and $\bar{d}$ are
 \[\mathcal{L}_{\mathrm{kin}} = iq^{\dagger \alpha i} \overline{\sigma}^{\mu} (D_{\mu}q)_{\alpha i} + i\bar{u}^{\dagger}_{\alpha}\overline{\sigma}^{\mu}(D_{\mu}\bar{u})^{\alpha} + i\bar{d}^{\dagger}_{\alpha}\overline{\sigma}^{\mu}(D_{\mu}\bar{d})^{\alpha}\]
 We cannot write down a mass term involving $q$, $\bar{u}$, and/or $\bar{d}$ because there is no gauge-group singlet contained in any of the products of their representations. But we are able to write down Yukawa couplings of the form
 \[\mathcal{L}_{\mathrm{Yuk}} = -y'\epsilon^{ij}\phi_i q_{\alpha j} \bar{d}^{\alpha} - y'' \phi^{\dagger i}q_{\alpha i} \bar{u}^{\alpha} + \mathrm{h.c.}\]
@@ -830,7 +830,7 @@ where $\phi$ is the Higgs field in the $(1,2,-\frac{1}{2})$ representation, and 
 \[(1,2, \frac{1}{2}) \otimes (3, 2, +\frac{1}{6}) \otimes (\bar{3}, 1, -\frac{2}{3}) = (1,1,0) \oplus\]
 In unitary gauge, we replace $\phi_1$ with $\frac{1}{\sqrt{2}}(v+H)$, where $H$ is the real scalar field representing the physical Higgs boson, and $\phi_2$ with zero. The Yukawa term becomes
 \[\mathcal{L}_{\mathrm{Yuk}} = -\frac{1}{\sqrt{2}}y'(v+H)q_{\alpha 2}\bar{d}^{\alpha} - \frac{1}{\sqrt{2}}y''(v+H)q_{\alpha 1}\bar{u}^{\alpha} + \mathrm{h.c.}\]
-It is now convenient to assign new names to the $SU(2)$ components of $q$,
+It is now convenient to assign new names to the $\mathrm{SU}(2)$ components of $q$,
 \[q = \begin{pmatrix}
 u \\ d
 \end{pmatrix} \]
