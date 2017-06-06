@@ -293,7 +293,7 @@ The quark–quark–gluon vertex factor is
 \section{Renormalization of nonabelian gauge theory}
 We now rescale the fields to the renormalized field strengths by extracting the factors $Z_2$, $Z_3$ and $Z_2^c$ for the fermions, gauge bosons, and ghosts, and shift the coupling to the renormalized coupling $g$. The counterterm Lagrangian then takes the form
 \begin{eqnarray}
-\mathcal{L}_{ct} &=& -\frac{1}{4}\delta_3 F^{a\mu\nu}F^a_{\mu\nu} + \overline{\Psi}(i\delta_2\slashed{\partial}-\delta_m)\Psi + \delta_2^c \overline{c}^a \partial^2 c^a \nonumber \\
+\mathcal{L}_{\rm ct} &=& -\frac{1}{4}\delta_3 F^{a\mu\nu}F^a_{\mu\nu} + \overline{\Psi}(i\delta_2\slashed{\partial}-\delta_m)\Psi + \delta_2^c \overline{c}^a \partial^2 c^a \nonumber \\
 &+& g\delta_1 A^a_{\mu}\overline{\Psi}\gamma^{\mu}T^a\Psi -g\delta_{1}^{3g} f^{abe}A^{a\mu}A^{b\nu}\partial_{\mu}A^e_{\nu} - \frac{1}{4}g^2\delta_1^{4g} f^{abe}f^{cde}A^{a\mu}A^{b\nu}A^c_{\mu}A^d_{\nu} \nonumber \\
 &+& g\delta_1^c f^{abc}A^a_{\mu}\partial^{\mu}\overline{c}^b c^c \nonumber
 \end{eqnarray}
@@ -308,19 +308,19 @@ The rigorous proof will be omitted here.
 \subsubsection{Quark propagator}
 \begin{figure}[!h]
 	\centering
-	\includegraphics[height=2.96cm ,width=11cm]{QFT4/loop1.png}
+	\includegraphics[scale=0.2]{QFT4/loop1.png}
 	\caption{The one-loop and counterterm corrections to the quark propagator in quantum chromodynamics}
 \end{figure}
 
 \noindent
-In $\overline{MS}$ renormalization scheme and Feynman gauge, we have
+In $\overline{\rm MS}$ renormalization scheme and Feynman gauge, we have
 \[Z_2 = 1 - C(R)\frac{g^2}{8\pi^2}\frac{1}{\epsilon} + O(g^4)\]
 \[Z_m = 1 - C(R)\frac{g^2}{2\pi^2}\frac{1}{\epsilon} + O(g^4)\]
 
 \subsubsection{Quark-quark-gluon vertex}
 \begin{figure}[!h]
 	\centering
-	\includegraphics[height=4cm ,width=9.78cm]{QFT4/loop2.png}
+	\includegraphics[scale=0.2]{QFT4/loop2.png}
 	\caption{The one-loop corrections to the quark–quark–gluon vertex in quantum chromodynamics.}
 \end{figure}
 \[Z_1 = 1 - [C(R) + T(A)]\frac{g^2}{8\pi^2}\frac{1}{\epsilon} + O(g^4)\]
@@ -328,7 +328,7 @@ In $\overline{MS}$ renormalization scheme and Feynman gauge, we have
 \subsubsection{Gluon propagator}
 \begin{figure}[!h]
 	\centering
-	\includegraphics[height=6cm ,width=13.4cm]{QFT4/loop3.png}
+	\includegraphics[scale=0.2]{QFT4/loop3.png}
 	\caption{The one-loop and counterterm corrections to the gluon propagator in quantum chromodynamics.}
 \end{figure}
 \[Z_3 = 1 + \left[\frac{5}{3}T(A) - \frac{4}{3}n_F T(R)\right]\frac{g^2}{8\pi^2}\frac{1}{\epsilon} + O(g^4)\]
@@ -346,7 +346,7 @@ And we can get
 \[G_1(\alpha) = - \left[ \frac{11}{3}T(A) - \frac{4}{3} n_F T(R) \right] \frac{\alpha}{2\pi} + O(\alpha^2)\]
 Since the bare coefficients is independent of $\mu$, we then can get
 \[\beta(\alpha) = \alpha^2 G_1(\alpha) = - \left[ \frac{11}{3}T(A) - \frac{4}{3} n_F T(R) \right] \frac{\alpha^2}{2\pi} + O(\alpha^3)\]
-In quantum chromodynamics, the gauge group is $\mathrm{SU}(3)$, and the quarks are in the fundamental representation. Thus $T(A) = 3$ and $T(R) = \frac{1}{2}$, and the factor in square brackets is $11 - \frac{2}{3} n_F$. So for $n_F \leq 16$, the beta function is negative: the gauge coupling in quantum chromodynamics gets weaker at high energies, and stronger at low energies.\\
+In quantum chromodynamics, the gauge group is $\mathrm{SU}(3)$, and the quarks are in the fundamental representation. Thus $T(A) = 3$ and $T(R) = \frac{1}{2}$, and the factor in square brackets is $11 - \frac{2}{3} n_F$. So for $n_F \leq 16$, the beta function is negative: the gauge coupling in quantum chromodynamics gets weaker at high energies, and stronger at low energies.\\ \\
 This has dramatic physical consequences. Perturbation theory cannot serve as a reliable guide to the low-energy physics. And indeed, in nature we do not see isolated quarks or gluons. (Quarks, in particular, have fractional electric charges and would be easy to discover.) The appropriate conclusion is that color is confined : all finite-energy states are invariant under a global $\mathrm{SU}(3)$ transformation. This has not yet been rigorously proven, but it is the
 only hypothesis that is consistent with all of the available theoretical and experimental information.
 
@@ -354,12 +354,10 @@ only hypothesis that is consistent with all of the available theoretical and exp
 \subsection{Chiral gauge theories}
 Recall that a Dirac field $\Psi$ can be written in terms of two left-handed Weyl ields $\chi$ and $\xi$ as
 \[\Psi = \begin{pmatrix}\chi\\ \xi^{\dagger} \end{pmatrix}\] If $\Psi$ is in a representation $R$ of the gauge group, then $\chi$ and $\xi^{\dagger}$ must be as well. Equivalently, $\chi$ must be in the representation $R$, and $\xi$ must be in the complex conjugate representation $\overline{R}$.
-\\
 Now suppose that we have a single left-handed Weyl field $\psi$ in a complex representation $R$. Such a gauge theory is automatically parity violating (because the right-handed hermitian conjugate of the left-handed Weyl field is in an inequivalent representation of the gauge group), and is said to be chiral.
 The Lagrangian is
 \[\mathcal{L} = i\psi^{\dagger} \overline{\sigma}^{\mu} D_{\mu} \psi - \frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu}\]
 where $D_{\mu} = \partial_{\mu} - igA^{a}_{\mu} T^a_{\rm R}$.
-\\
 Since $T^a_{\rm R}$ is a hermitian matrix, $i\psi^{\dagger} \overline{\sigma}^{\mu} D_{\mu} \psi$ is hermitian (up to a total divergence). We cannot include a mass term for $\psi$, though, because $\psi\psi$ transforms as $R \otimes R$, and $R \otimes R$ does not contain a singlet if $R$ is complex. Thus, $\psi\psi$ is not gauge invariant. 
 \\ \\
 Now we focus on the simplest possible example: a $U(1)$ theory with a single Weyl field $\psi$ with charge $+1$. The Lagrangian is
@@ -378,11 +376,8 @@ We can easily read the Feynman rules from the Lagrangian. In particular, the fer
 \[\frac{iP_{\mathrm{L}}\slashed{p}}{p^2-i\epsilon}\]
 and the fermion-fermion-photon vertex is
 \[ig\gamma^{\mu} P_{\mathrm{L}}\]
-\\
 Now consider the correction to the photon propagator. Calculation shows that at the one-loop level, the contribution to $\Pi^{\mu\nu}(k)$ of a single charged Weyl field is half that of a Dirac field. This is physically reasonable, since a Dirac field is equivalent to two charged Weyl fields.
-\\
 Nothing interesting happens in the one-loop corrections to the fermion propagator, or the fermion-fermion-photon vertex. There is simply an extra factor of $P_{\mathrm{L}}$ along the fermion line, which can be moved to the far right. Except for this factor, the results exactly duplicate those of spinor electrodynamics.
-\\
 All of this implies that a single Weyl field makes half the contribution of a Dirac field to the leading term in the beta function for the gauge coupling.
 \\ \\
 Next we turn to diagrams with three external photons, and no external fermions. In spinor electrodynamics, the fact that the vector potential is odd under charge conjugation implies that the sum of these diagrams must vanish. For the present case of a single Weyl field, there is no charge-conjugation symmetry, and so we must evaluate these diagrams.
@@ -429,7 +424,7 @@ In terms of $\Psi$, this is
 \[\Psi(x) \to e^{-i\alpha\gamma_5}\Psi(x) \quad \overline{\Psi}(x) \to \overline{\Psi} e^{-i\alpha\gamma_5}\]
 This is called axial $U(1)$ symmetry, because the associated Noether current
 \[j^{\mu}_A = \overline{\Psi}(x) \gamma^{\mu} \gamma_5 \Psi(x)\]
-is an axial vector. Noether’s theorem leads us to expect that this current is conserved. However, we will show that the axial current actually has an anomalous divergence.
+is an axial vector. Noether's theorem leads us to expect that this current is conserved. However, we will show that the axial current actually has an anomalous divergence.
 \\ \\
 Consider the matrix element $\langle p,q | j^{\rho}_A(z) |  0 \rangle$, where $\langle p,q |$ is a state of two outgoing photons with four-momenta $p$ and $q$, and polarization vectors $\epsilon_{\mu}$ and $\epsilon'_{\nu}$, respectively. Using the LSZ formula for photons, we have
 \[\langle p,q | j^{\rho}_A(z) |  0 \rangle = (ig)^2 \epsilon_{\mu} \epsilon'_{\nu} \int d^4x d^4y e^{-i(px+qy)} \langle 0 | T j^{\mu}(x) j^{\nu}(y) j^{\rho}_A(z) | 0 \rangle \]
@@ -447,7 +442,7 @@ We could choose a regularization scheme that
 preserved $p_{\mu}C^{\mu\nu\rho}(p,q,r) = 0$ and $q_{\nu}C^{\mu\nu\rho}(p,q,r) = 0$ but not also $r_{\rho}C^{\mu\nu\rho}(p,q,r) = 0$. This results in
 \[r_{\rho}C^{\mu\nu\rho}(p,q,r) = -\frac{i}{2\pi^2} \epsilon^{\mu\nu\alpha\beta} p_{\alpha} q_{\beta} + O(g^2)\]
 So, we have
-\[\langle p,q | j^{\rho}_A(z) |  0 \rangle  = - \frac{g^2}{2\pi^2} \epsilon^{\mu\nu\alpha\beta} p_{\alpha} q_{\beta} \epsilon_{\mu} \epsilon'_{\nu} e^{-i(p+q)z} + O(g^4) \]
+\[\langle p,q | \partial_{\mu} j^{\rho}_A(z) |  0 \rangle  = - \frac{g^2}{2\pi^2} \epsilon^{\mu\nu\alpha\beta} p_{\alpha} q_{\beta} \epsilon_{\mu} \epsilon'_{\nu} e^{-i(p+q)z} + O(g^4) \]
 The right-hand side of the equation is exactly what we get in free-field theory for the matrix element of
 \[- \frac{g^2}{16\pi^2} \epsilon^{\mu\nu\rho\sigma}F_{\mu\nu}F_{\rho\sigma} + O(g^4) \]
 In the next section, we will see the relation is exact.
@@ -461,7 +456,7 @@ is the Dirac action, $i\slashed{D} = i\gamma^{\mu} D_{\mu}$
 is the Dirac operator, and
 \[D_{\mu} = \partial_{\mu} - igA_{\mu}\]
 is the covariant derivative. Here $A_{\mu}$ is either the $U(1)$ gauge field, or the matrix-valued nonabelian gauge field, depending on the theory under consideration.
-\\
+\\ \\
 Now consider an axial $U(1)$ transformation of the Dirac field, but with a space-time dependent parameter $\alpha(x)$
 \[\Psi(x) \to e^{-i\alpha(x)\gamma_5}\Psi(x) \quad \overline{\Psi}(x) \to \overline{\Psi} e^{-i\alpha(x)\gamma_5}\]
 The corresponding change in the action is
@@ -481,7 +476,7 @@ where the explicit trace is over spin and group indices. We regularize the delta
 The following calculation can be found in section 77 of \emph{Quantum Field Theory (Mark Srednichi)}. Here, we list the final result
 \[\mathrm{Tr} \delta(x-y)\gamma_5 \to - \frac{g^2}{32\pi^2} \epsilon^{\mu\nu\rho\sigma} \mathrm{Tr} F_{\mu\nu}F_{\rho\sigma}\]
 We then have
-\[Z(A) = \int \mathcal{D}\Psi \mathcal{D}\overline{\Psi} e^{iS(A)} e^{-i \int d^4x \alpha(x)[ \frac{g^2}{16\pi^2} \epsilon^{\mu\nu\rho\sigma} \mathrm{Tr} F_{\mu\nu}F_{\rho\sigma} \partial_{\mu}j^{\mu}_A(x)] }\]
+\[Z(A) = \int \mathcal{D}\Psi \mathcal{D}\overline{\Psi} e^{iS(A)} e^{-i \int d^4x \alpha(x)[ \frac{g^2}{16\pi^2} \epsilon^{\mu\nu\rho\sigma} \mathrm{Tr} F_{\mu\nu}F_{\rho\sigma} +  \partial_{\mu}j^{\mu}_A(x)] }\]
 So
 \[\partial_{\mu} j^{\mu}_A = -\frac{g^2}{16\pi^2} \epsilon^{\mu\nu\rho\sigma} \mathrm{Tr} F_{\mu\nu}F_{\rho\sigma}\]
 is exact. This result is known as the Adler–Bardeen theorem.
@@ -510,11 +505,11 @@ This is the Higgs mechanism: the Goldstone boson disappears, and the gauge field
 one has three. The Goldstone boson has become the third or longitudinal state of the now-massive gauge field. A scalar field whose VEV breaks a gauge symmetry is generically called a Higgs field.
 \\ \\
 This generalizes in a straightforward way to a nonabelian gauge theory. Consider a complex scalar field $\phi$ in a representation $R$ of the gauge group.
-The kinetic term for φ is $-(D_{\mu}\phi)^{\dagger}D_{\mu}\phi$, where the covariant derivative is $D_{\mu}\phi_i = \partial_{\mu}\phi_i - igA^a_{\mu}(T^a_{\rm R})_{i}^{\phantom{i}j} \phi_j$ , and the indices $i$ and $j$ run from $1$ to $d(R)$.
+The kinetic term for $\phi$ is $-(D_{\mu}\phi)^{\dagger}D_{\mu}\phi$, where the covariant derivative is $D_{\mu}\phi_i = \partial_{\mu}\phi_i - igA^a_{\mu}(T^a_{\rm R})_{i}^{\phantom{i}j} \phi_j$ , and the indices $i$ and $j$ run from $1$ to $d(R)$.
 We assume that $\phi$ acquires a VEV
 \[\langle 0 | \phi_i(x) | 0 \rangle = \frac{1}{\sqrt{2}}v_i\]
 If we replace $\phi$ by its VEV in $-(D_{\mu}\phi)^{\dagger}D_{\mu}\phi$, we find a mass term for the gauge fields
-\[\mathcal{L}_{mass} = - \frac{1}{2}(M^2)^{ab}A^{a\mu}A^b_{\mu}\]
+\[\mathcal{L}_{\rm mass} = - \frac{1}{2}(M^2)^{ab}A^{a\mu}A^b_{\mu}\]
 where the mass-squared matrix is
 \[(M^2)^{ab} = g^2 v_i^* (T^a_{\rm R} T^b_{\rm R})_{ij}v_j \]
 If the field $\phi$ is real rather than complex (which is possible only if $R$ is a real representation), then we remove the factor of root-two from the right-hand side of vacuum expectation value of $\phi$, but this is compensated by an extra factor of one-half from the kinetic term for a real scalar field; thus the form of mass-squared matrix remains invariant.
@@ -533,7 +528,7 @@ we can group them into a complex vector field that transforms in the fundamental
 Consider the gauge group $\mathrm{SO}(N)$, with a real scalar field in the fundamental representation. We can make a global $\mathrm{SO}(N)$ transformation to bring the VEV entirely into the last component. Any generator $(T^a)_{i}^{\phantom{j}}$ that does not have a nonzero entry in the last column will remain unbroken. These generators form an unbroken $\mathrm{SO}(N-1)$ subgroup. There are $N - 1$ broken generators, those with $(T^a)_{i}^{\phantom{N}} = -i$  for $i \neq N$. 
 The corresponding gauge fields get a mass $M = gv$; they form a fundamental representation of the unbroken $\mathrm{SO}(N-1)$ subgroup.
 \\ \\
-Consider the gauge group $\mathrm{SU}(N)$, with a real scalar field $\Phi$ a in the adjoint representation. It will prove more convenient to work with the $N \times N$ matrix-valued field $\Phi = \phi^a T^a$; the covariant derivative of $\Phi$ is $D_{\mu}\Phi = \partial_{\mu}\Phi - igA^a_{\mu}[T^a,\Phi]$,
+Consider the gauge group $\mathrm{SU}(N)$, with a real scalar field $\Phi$ in the adjoint representation. It will prove more convenient to work with the $N \times N$ matrix-valued field $\Phi = \phi^a T^a$; the covariant derivative of $\Phi$ is $D_{\mu}\Phi = \partial_{\mu}\Phi - igA^a_{\mu}[T^a,\Phi]$,
 and the VEV of $\phi$ is a traceless hermitian $N \times N$ matrix $V$. Thus the mass squared matrix for the gauge fields is
 \[-2g^2 \mathrm{Tr}\left([T^a,V][T^b,V]\right)\]
 We can make a global $\mathrm{SU}(N)$ transformation to bring $V$ into diagonal form. Suppose the diagonal entries consist of $N_1$ $v_1$s, followed by $N_2$ $v_2$s, etc.,
@@ -558,35 +553,35 @@ where $h$ and $b$ are real scalar fields. In terms of $h$ and $b$, the potential
 \[V = \frac{1}{4}\lambda v^2 h^2 + \frac{1}{4}\lambda vh(h^2+b^2) + \frac{1}{16}\lambda (h^2+b^2)^2\]
 The covariant derivative term can be expanded as
 \begin{eqnarray}
--(D_{\mu}\phi)^{\dagger}D_{\mu} = &-& \frac{1}{2}\partial_{\mu}h \partial^{\mu}h -  \frac{1}{2}\partial_{\mu}b \partial^{\mu}b - \frac{1}{2} g^2v^2A^{\mu}A_{\mu} + gv A^{\mu}\partial_{\mu}b \nonumber \\
+-(D_{\mu}\phi)^{\dagger}D_{\mu}\phi = &-& \frac{1}{2}\partial_{\mu}h \partial^{\mu}h -  \frac{1}{2}\partial_{\mu}b \partial^{\mu}b - \frac{1}{2} g^2v^2A^{\mu}A_{\mu} + gv A^{\mu}\partial_{\mu}b \nonumber \\
 &+& gA^{\mu} (h\partial_{\mu}b - b\partial_{\mu}h) - gvhA^{\mu}A_{\mu} - \frac{1}{2}g^2(h^2+b^2)A^{\mu}A_{\mu} \nonumber
 \end{eqnarray}
 The first line contains all the terms that are quadratic in the fields. The first two are the kinetic terms for the $h$ and $b$ fields. The third is the mass term for the vector field. The fourth is an annoying cross term between the vector field and the derivative of $b$.
 \\ \\
 In abelian gauge theory, in the absence of spontaneous symmetry breaking, we fix gauge by adding to $\mathcal{L}$ the gauge-fixing and ghost terms
-\[\mathcal{L}_{gf} + \mathcal{L}_{gh} = - \frac{G^2}{2\xi} - \overline{c}\frac{\delta G}{\delta \theta} c \]
-where $G = \partial^{\mu}A_{\mu}$, and $\theta(x)$ parameterizes an infinitesimal gauge transformation
+\[\mathcal{L}_{\rm gf} + \mathcal{L}_{\rm gh} = - \frac{G^2}{2\xi} - \overline{c}\frac{\delta G}{\delta \theta} c \]
+where $G = \partial^{\mu}A_{\mu}$, and $\theta(x)$ parametrizes an infinitesimal gauge transformation
 \[A_{\mu} \to A_{\mu} - \partial_{\mu}\theta \quad \phi \to ig\theta\phi\]
 Since $\delta G / \delta \theta = - \partial^2$, the ghost fields have no interactions, and can be ignored.
 \\ \\
 In the presence of spontaneous symmetry breaking, we choose instead
 \[G = \partial^{\mu}A_{\mu} - \xi g\nu b\]
 which reduces to $\partial^{\mu}A_{\mu}$ when $v = 0$. Multiplying out $G^2$ , we have
-\[\mathcal{L}_{gf} = -\frac{1}{2\xi} \partial^{\mu}A_{\mu} \partial^{\nu}A_{\nu} - gvA_{\mu}\partial^{\mu}b - \frac{1}{2}\xi g^2v^2b^2\]
+\[\mathcal{L}_{\rm gf} = -\frac{1}{2\xi} \partial^{\mu}A_{\mu} \partial^{\nu}A_{\nu} - gvA_{\mu}\partial^{\mu}b - \frac{1}{2}\xi g^2v^2b^2\]
 Note that the second term cancels the annoying cross term between the vector field and the derivative of $b$. Also, the last term on the gives a mass $\sqrt{\xi}M$ to the $b$ field ( $M = gv$).
 \\ \\
-We must still evaluate $\mathcal{L}_{gh}$. To do so, we note under gauge transformation,
+We must still evaluate $\mathcal{L}_{\rm gh}$. To do so, we note under gauge transformation,
 \[h \to h + g\theta b \quad b \to b - g\theta(v+h)\]
 Then we have
 \[\frac{\delta G}{\delta \theta} = -\partial^2 + \xi g^2 v(v+h)\]
 The ghost Lagrangian is
-\[\mathcal{L}_{gh} = -\partial^{\mu}\overline{c}\partial_{\mu}c - \xi g^2v^2\overline{c}c - \xi g^2 vh\overline{c}c\]
+\[\mathcal{L}_{\rm gh} = -\partial^{\mu}\overline{c}\partial_{\mu}c - \xi g^2v^2\overline{c}c - \xi g^2 vh\overline{c}c\]
 We see from the second term that the ghost has acquired the same mass as the $b$ field.
 \\ \\
-Now let us examine the vector field. Including $\mathcal{L}_{gh}$, the terms that are quadratic in the vector field can be written as
+Now let us examine the vector field. Including $\mathcal{L}_{\rm gh}$, the terms that are quadratic in the vector field can be written as
 \[\mathcal{L}_0 = - \frac{1}{2}A_{\mu} \left[ \eta^{\mu\nu}(-\partial^2 + M^2) + (1 - \xi)\partial^{\mu}\partial^{\nu} \right] A_{\nu}\]
 The propagator for vector field is
-\[S_F(k) = \frac{-iP^{\mu\nu}}{k^2+M^2-i\epsilon} + \frac{\xi k^{\mu}k^{\nu}/k^2}{k^2+ \xi M^2-i\epsilon}\]
+\[S_{\rm F}(k) = \frac{-iP^{\mu\nu}}{k^2+M^2-i\epsilon} + \frac{\xi k^{\mu}k^{\nu}/k^2}{k^2+ \xi M^2-i\epsilon}\]
 where $P^{\mu\nu} = g^{\mu\nu} - k^{\mu}k^{\nu}/k^2$ projects onto the transverse subspace. We see that the transverse components of the vector field propagate with mass $M$, while the longitudinal component propagates with the same mass as the $b$ and ghost fields, $\sqrt{\xi}M$.
 \\ \\
 Since their masses depend on $\xi$, the ghosts, the $b$ field, and the longitudinal component of the vector field must all represent unphysical particles that do not appear in incoming or outgoing states. When $\xi \to \infty$, we can recover the unitary gauge. The details can be found in section 76 of \emph{Quantum Field Theory (Mark Srednichi)}.
@@ -594,7 +589,7 @@ Since their masses depend on $\xi$, the ghosts, the $b$ field, and the longitudi
 \subsection{Spontaneously broken nonabelian gauge theory}
 It will be convenient to work with real scalar fields. We
 therefore decompose any complex scalar fields into pairs of real ones, and organize all the real scalar fields into a big list $\phi_i$, $i = 1,\cdots,N$. 
-These real scalar fields form a (possibly reducible) representation $R$ of the gauge group. Let $T^a$ be the gauge-group generator matrices; they are linear combinations of the generators of the $\mathrm{SO}(N)$ group that rotates all components of $\phi_i$ into each other. Because these generators are hermitian and antisymmetric, so are the  $T^A$s. The Lagrangian for our theory can now be written as
+These real scalar fields form a (possibly reducible) representation $R$ of the gauge group. Let $T^a$ be the gauge-group generator matrices; they are linear combinations of the generators of the $\mathrm{SO}(N)$ group that rotates all components of $\phi_i$ into each other. Because these generators are hermitian and antisymmetric, so are the  $T^a$s. The Lagrangian for our theory can now be written as
 \[\mathcal{L} = -\frac{1}{2}D^{\mu}\phi D_{\mu}\phi - V(\phi) - \frac{1}{4}F^{a\mu\nu}F^a_{\mu\nu}\]
 where
 \[(D_{\mu}\phi)_i = \partial_{\mu}\phi_i - ig_aA^a_{\mu}T^a_{ij}\phi_j\]
@@ -636,12 +631,12 @@ A theorem of linear algebra states that every real rectangular matrix can be wri
 where $S$ and $R$ are orthogonal matrices, and the diagonal entries $M^c$ are real and nonnegative. We see that these diagonal entries are the masses of the vector fields. The vector fields of definite mass are then given by $\widetilde{A}^{a}_{\mu} = S^{ba}A^b_{\mu}$.
 \\ \\
 Now we are ready to fix $R_{\xi}$ gauge. To do so, we add to $\mathcal{L}$ the gauge-fixing and ghost terms
-\[\mathcal{L}_{gf} + \mathcal{L}_{gh} = - \frac{G^aG^a}{2\xi} - \overline{c}^a\frac{\delta G^a}{\delta \theta^b} c^b \]
+\[\mathcal{L}_{\rm gf} + \mathcal{L}_{\rm gh} = - \frac{G^aG^a}{2\xi} - \overline{c}^a\frac{\delta G^a}{\delta \theta^b} c^b \]
 where we choose
 \[G^a = \partial^{\mu}A^a_{\mu} - \xi F^a_{\phantom{i}i} 
 \chi_i\]
 Then we have
-\[\mathcal{L}_{gf} = -\frac{1}{2\xi} \partial^{\mu}A^a_{\mu} \partial^{\nu}A^a_{\nu} - F^a_{\phantom{i}i} A^a_{\mu}\partial^{\mu}\chi_i - \frac{1}{2}\xi (F^a_{\phantom{i}i} F^a_{\phantom{i}j})\chi_i\chi_j\]
+\[\mathcal{L}_{\rm gf} = -\frac{1}{2\xi} \partial^{\mu}A^a_{\mu} \partial^{\nu}A^a_{\nu} - F^a_{\phantom{i}i} A^a_{\mu}\partial^{\mu}\chi_i - \frac{1}{2}\xi (F^a_{\phantom{i}i} F^a_{\phantom{i}j})\chi_i\chi_j\]
 The last term makes a contribution to the mass-squared matrix for the $\chi$ fields,
 \[\xi(M^2)_{ij} = \xi F^a_{\phantom{i}i} F^a_{\phantom{i}j} = \xi(F^TF)_{ij}\]
 The eigenvalues of this matrix are $\sqrt{\xi}M^a$ , where
@@ -649,12 +644,12 @@ $M^a$ are the vector-boson masses. The mass-squared matrix $\xi M^2$ should be a
 \[(m^2)_{ij}(\xi M^2)_{jk} = 0\]
 Thus these two contributions to the mass-squared matrix of the scalar fields live in orthogonal subspaces. The $m^2$ subspace consists of the physical, massive scalars, and the $\xi M^2$ subspace consists of the unphysical Goldstone bosons; these are the fields that would be set to zero in unitary gauge.
 \\ \\
-Finally, we must evaluate $\mathcal{L}_{gh}$. Under an infinitesimal gauge transformation, we have
+Finally, we must evaluate $\mathcal{L}_{\rm gh}$. Under an infinitesimal gauge transformation, we have
 \[ A^a_{\mu} \to A^a_{\mu} - D^{\mu}_{ab}\theta^b \quad \chi_i \to \chi_i - \theta^a \tau^a_{ij}(v+\chi)_j \]
 Thus we have
 \[\frac{\delta G^a}{\delta \theta^b} = - D^{\mu}_{ab} + \xi(M^2)^{ab} + \xi F^a_{\phantom{i}j} \tau^b_{jk}\chi_k \]
-and so the ghost lagrangian is
-\[\mathcal{L}_{gh} = -\partial^{\mu} \overline{c}^a D_{\mu}^{ab} c^b - \xi (M^2)^{ab}\overline{c}^a c^b - \xi F^a_{\phantom{i}j} \tau^b_{jk}\chi_k \overline{c}^a c^b\]
+and so the ghost Lagrangian is
+\[\mathcal{L}_{\rm gh} = -\partial^{\mu} \overline{c}^a D_{\mu}^{ab} c^b - \xi (M^2)^{ab}\overline{c}^a c^b - \xi F^a_{\phantom{i}j} \tau^b_{jk}\chi_k \overline{c}^a c^b\]
 The ghost fields of definite mass are $\widetilde{c}^a = S^{ba}c^b$ and  $\widetilde{\overline{c}}^a = S^{ba}\overline{c}^b$.
 
 \section{The Standard Model}
@@ -734,7 +729,7 @@ where
 \[D_{\mu} = \partial_{\mu} -ie(A_{\mu} + \cot\theta_{\mathrm{W}}Z_{\mu})\]
 
 \subsection{Lepton sector}
-Leptons are spin-one-half particles that are singlets of the color group. There are six different flavours of lepton. The six flavours are naturally grouped into three families or generations: $e$ and $\nu_e$, $\mu$ and $\nu_{\mu}$, $\tau$ and $\nu_{\tau}$.
+Leptons are spin-one-half particles that are singlets of the color group. There are six different flavours of lepton. The six flavours are naturally grouped into three families or generations: $e$ and $\nu_{\rm e}$, $\mu$ and $\nu_{\rm \mu}$, $\tau$ and $\nu_{\rm \tau}$.
 \\ \\
 Let us begin by describing a single lepton family, the electron and its neutrino. We introduce left-handed Weyl fields $l$ and $\bar{e}$ in the representations $(2,-\frac{1}{2})$ and $(1,+1)$ of $\mathrm{SU}(2)\times U(1)$. 
 Here the bar over the $e$ in the field $\bar{e}$ is part of the name of the field, and does not denote any sort of conjugation. The covariant derivatives of these fields are
@@ -760,12 +755,7 @@ where we have defined a Dirac field for the electron
 \[\mathcal{E} \equiv \begin{pmatrix}
 e \\ \bar{e}^{\dagger}
 \end{pmatrix} \]
-We see that the electron has acquired a mass $m_e \equiv \frac{yv}{\sqrt{2}}$, while neutrino has remained massless.
-We can describe the neutrino with a Majorana field
-\[\mathcal{N} \equiv \begin{pmatrix}
-\nu \\ \nu^{\dagger}
-\end{pmatrix}\]
-However, it is often more convenient to work with
+We see that the electron has acquired a mass $m_{\rm e} \equiv \frac{yv}{\sqrt{2}}$, while neutrino has remained massless. It is more convenient to work with
 \[\mathcal{N}_{\mathrm{L}} \equiv P_{\mathrm{L}} \mathcal{N} = \begin{pmatrix}
 \nu \\ 0
 \end{pmatrix}\]
@@ -794,7 +784,7 @@ J^{+\mu} &\equiv & \overline{\mathcal{E}}_{\mathrm{L}} \gamma^{\mu} \mathcal{N}_
 J^{-\mu} &\equiv & \overline{\mathcal{N}}_{\mathrm{L}} \gamma^{\mu} \mathcal{E}_{\mathrm{L}} \nonumber \\
 J_{\mathrm{Z}}^{\mu} &\equiv & J_3^{\mu} - s_{\mathrm{W}}^2 J^{\mu}_{\mathrm{EM}} \nonumber \\
 J_3^{\mu} &\equiv & \frac{1}{2}\overline{\mathcal{N}}_{\mathrm{L}} \gamma^{\mu} \mathcal{N}_{\mathrm{L}} - \frac{1}{2}\overline{\mathcal{E}}_{\mathrm{L}} \gamma^{\mu} \mathcal{E}_{\mathrm{L}} \nonumber \\
-J^{\mu}_{\mathrm{EM}} &\equiv &  -\overline{\mathcal{E}} \gamma^{\mu} \mathcal{E}_{\mathrm{L}} \nonumber
+J^{\mu}_{\mathrm{EM}} &\equiv &  -\overline{\mathcal{E}} \gamma^{\mu} \mathcal{E} \nonumber
 \end{eqnarray}
 \\ \\
 Having worked out the interactions of a single lepton generation, we now examine what happens when there is more than one of them. 
@@ -804,7 +794,7 @@ where the repeated generation index is summed. The most general Yukawa term we c
 \[\mathcal{L}_{\mathrm{Yuk}} = -\epsilon^{ij}\phi_i l_{jI}y_{IJ} \bar{e}_{J} + \mathrm{h.c.}\]
 where $y_{IJ}$ is a complex $3 \times 3$ matrix, and the generation indices are summed.
 We can make unitary transformations in generation space on the fields: $l_I \to L_{IJ} l_J$ and $\bar{e}_I \to \overline{E}_{IJ}\bar{e}_J$ , where $L$ and $\overline{E}$ are independent unitary matrices.
-The kinetic terms are unchanged, and the Yukawa matrix $y$ is replaced with $L^T y \overline{E} $. We can choose $L$ and $\overline{E}$ so that $L^T y \overline{E}$ is diagonal with positive real entries $y_I$. The charged leptons then have masses $m_{eI} = \frac{y_Iv}{\sqrt{2}}$, and the neutrinos remain massless. In the currents, we simply add a generation index $I$ to each field, and sum over it.
+The kinetic terms are unchanged, and the Yukawa matrix $y$ is replaced with $L^T y \overline{E} $. We can choose $L$ and $\overline{E}$ so that $L^T y \overline{E}$ is diagonal with positive real entries $y_I$. The charged leptons then have masses $m_{{\rm e}I} = \frac{y_Iv}{\sqrt{2}}$, and the neutrinos remain massless. In the currents, we simply add a generation index $I$ to each field, and sum over it.
 
 \subsection{Quark sector}
 Quarks are spin-one-half particles that are triplets of the color group. There are six different flavours of quark. The six flavours are naturally grouped into three families or generations: $u$ and $d$, $c$ and $s$, $t$ and $b$.
@@ -843,7 +833,7 @@ d_{\alpha} \\ \bar{d}^{\dagger}_{\alpha}
 u_{\alpha} \\ \bar{u}^{\dagger}_{\alpha}
 \end{pmatrix}\]
 We see  that the up and down quarks have acquired masses
-\[m_d \equiv \frac{y'v}{\sqrt{2}} \quad m_u \equiv \frac{y''v}{\sqrt{2}}\]
+\[m_{\rm d} \equiv \frac{y'v}{\sqrt{2}} \quad m_{\rm u} \equiv \frac{y''v}{\sqrt{2}}\]
 Now we express the covariant derivatives in terms of the $W_{\mu}^{\pm}$ , $Z_{\mu}$ , and $A_{\mu}$ fields. We have
 \[g_2 A^1_{\mu}T^1 + g_2 A^2_{\mu}T^2 = \frac{g_2}{\sqrt{2}} \begin{pmatrix}
 0 & W_{\mu}^+ \\ W^{-}_{\mu} & 0
@@ -864,7 +854,7 @@ J^{+\mu} &\equiv & \overline{\mathcal{D}}_{\mathrm{L}} \gamma^{\mu} \mathcal{U}_
 J^{-\mu} &\equiv & \overline{\mathcal{U}}_{\mathrm{L}} \gamma^{\mu} \mathcal{D}_{\mathrm{L}} \nonumber \\
 J_{\mathrm{Z}}^{\mu} &\equiv & J_3^{\mu} - s_{\mathrm{W}}^2 J^{\mu}_{\mathrm{EM}} \nonumber \\
 J_3^{\mu} &\equiv & \frac{1}{2}\overline{\mathcal{U}}_{\mathrm{L}} \gamma^{\mu} \mathcal{U}_{\mathrm{L}} - \frac{1}{2}\overline{\mathcal{D}}_{\mathrm{L}} \gamma^{\mu} \mathcal{D}_{\mathrm{L}} \nonumber \\
-J^{\mu}_{\mathrm{EM}} &\equiv &  +\frac{2}{3}\overline{\mathcal{U}} \gamma^{\mu} \mathcal{U}_{\mathrm{L}} - \frac{1}{3}\overline{\mathcal{D}} \gamma^{\mu} \mathcal{D}_{\mathrm{L}} \nonumber
+J^{\mu}_{\mathrm{EM}} &\equiv &  +\frac{2}{3}\overline{\mathcal{U}} \gamma^{\mu} \mathcal{U} - \frac{1}{3}\overline{\mathcal{D}} \gamma^{\mu} \mathcal{D} \nonumber
 \end{eqnarray}
 Having worked out the interactions of a single quark generation, we now examine what happens when there is more than one of them.
 Let us consider the fields $q_{\alpha iI}$, $\bar{u}_{I}$ and $\bar{d}_{I}$, where $I=1,2,3$ is a generation index. The kinetic term for all these fields is
@@ -875,8 +865,8 @@ $y'$ and $y''$ are complex $3 \times 3$ matrices. In unitary gauge, this becomes
 \[\mathcal{L}_{\mathrm{Yuk}} = -\frac{1}{\sqrt{2}}(v+H) d_{\alpha I}y'_{IJ} \bar{d}^{\alpha}_{J} -\frac{1}{\sqrt{2}}(v+H) u_{\alpha I}y''_{IJ} \bar{u}^{\alpha}_{J} + \mathrm{h.c.}\]
 We can make unitary transformations in generation space on the fields: $d_I \to D_{IJ}d_J $, $\bar{d}_I \to \overline{D}_{IJ}\bar{d}_J$, $u_I \to U_{IJ}u_J $ and $\bar{u}_I \to \overline{U}_{IJ}\bar{u}_J$, where $U$, $\overline{U}$, $D$, $\overline{D}$ are independent unitary matrices. 
 The kinetic terms are unchanged (except for the couplings to the $W^{\pm}$, as we will discuss momentarily), and the Yukawa matrices $y'$ and $y''$ are replaced with $D^T y' \overline{D}$  and $U^T y'' \overline{U}$ . We can choose
-$U$, $\overline{U}$, $D$, $\overline{D}$ so that $D^T y' \overline{D}$  and $U^T y'' \overline{U}$ are diagonal with positive real entries $y'_I$ and $y''_I$. The down quarks $D_I$ then have masses $m_{dI} = \frac{y'_I v}{\sqrt{2}}$,
-and the up quarks $u_I$ have masses $m_{uI} = \frac{y''_I v}{\sqrt{2}}$. In the neutral currents, we simply add a generation index $I$ to each field, and sum over it. 
+$U$, $\overline{U}$, $D$, $\overline{D}$ so that $D^T y' \overline{D}$  and $U^T y'' \overline{U}$ are diagonal with positive real entries $y'_I$ and $y''_I$. The down quarks $D_I$ then have masses $m_{{\rm d}I} = \frac{y'_I v}{\sqrt{2}}$,
+and the up quarks $u_I$ have masses $m_{{\rm u}I} = \frac{y''_I v}{\sqrt{2}}$. In the neutral currents, we simply add a generation index $I$ to each field, and sum over it. 
 The charged currents are more complicated, however; they become 
 \[J^{+\mu} = \overline{\mathcal{D}}_{\mathrm{L}I} (V^{\dagger})_{IJ} \gamma^{\mu} \mathcal{U}_{\mathrm{L}J}\]
 \[J^{-\mu} = \overline{\mathcal{U}}_{\mathrm{L}I} V_{IJ} \gamma^{\mu} \mathcal{D}_{\mathrm{L}J}\]
@@ -890,5 +880,5 @@ c_1 & +s_1c_3 & +s_1s_3 \\
 -s_1s_2 & c_1s_2c_3 + c_2s_3e^{i\delta} & c_1s_2s_3- c_2c_3 e^{i\delta}
 \end{pmatrix} \]
 and $c_i = \cos\theta_i$ and $s_i = \sin\theta_i$. The measured values of these angles are $s_1=0.224$, $s_2 = 0.041$, $s_3 = 0.016$ , and $\delta = 40^{\circ}$. Note that the charged currents now have some terms with a phase factor $e^{i\delta}$, and some without. 
-Since the time-reversal operator T is antiunitary, the charged currents do not transform in a simple way under time reversal. This implies that the charged current terms in $\mathcal{L}_{\mathrm{int}}$ are not time-reversal invariant; hence the electroweak interactions violate time-reversal symmetry.
+Since the time-reversal operator $T$ is antiunitary, the charged currents do not transform in a simple way under time reversal. This implies that the charged current terms in $\mathcal{L}_{\mathrm{int}}$ are not time-reversal invariant; hence the electroweak interactions violate time-reversal symmetry.
 Since $CPT$ is always a good symmetry, time-reversal violation is equivalent to $CP$ violation; $\delta$ is therefore sometimes called the $CP$ violating phase.
