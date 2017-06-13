@@ -1,18 +1,15 @@
 \chapter{Thermodynamics}
 \section{Introduction to thermodynamics}
 A thermodynamic system is a macroscopic system whose behaviour is identified thanks to a small and finite number of quantities - the thermodynamic properties.
-\\
 There is a certain degree of circularity in the definition of thermodynamic parameters, which is resolved by experiment. One considers only a restricted set of manipulations on thermodynamic systems. In practice, one allows them to be put in contact with one another, or one acts upon them by changing a few macroscopic properties such as their volume or the electric or magnetic field in which they are immersed. One then identifies a number of properties such that, if they are known before the manipulation, their values after the manipulation can be predicted. The smallest set of properties that allows one to successfully perform such a prediction can be selected as the basis for a thermodynamic description of the system.
 \\ \\
 If the state of a thermodynamic system can be fully characterized by the values of the thermodynamic variables, and if these values are invariant over time, one says that it is in a state of thermodynamic equilibrium. Thermodynamic equilibrium occurs when all fast processes have already occurred, while the slow ones have yet to take place. Clearly the distinction between fast and slow processes is dependent on the observation time $\tau$ that is being considered.
-\\ \\
 A system can be shown to be in equilibrium if the observation time is fairly short, while it is no longer possible to consider it in equilibrium for longer observation times. A more curious situation is that the same system can be considered in equilibrium, but with different properties, for different observation times.
 \\ \\
 Let us consider two thermodynamic systems, 1 and 2, that can be made to interact with one another. Variables like the volume $V$, the number of particles $N$, and the internal energy $U$, whose value (relative to the total system) is equal to the sum of the values they assume in the single systems, are called additive or extensive.
 Strictly speaking, internal energy is not extensive, unless the interaction between 1 and 2 can be neglected.
 \\ \\
 \textbf{The fundamental hypothesis of thermodynamics is that it should be possible to characterize the state of a thermodynamic system by specifying the values of a certain set $(X_0, X_1, \cdots, X_r)$ of extensive variables. For example, $X_0$ could be the internal energy $U$, $X_1$ the number of particles $N$, $X_2$ the volume $V$ of the system, and so on.}
-\\
 The central problem of thermodynamics is that \textbf{given the initial state of equilibrium of several thermodynamic systems that are allowed to interact, determine the final thermodynamic state of equilibrium}.
 \\ \\
 The interaction between thermodynamic systems is usually represented by idealized walls that allow the passage of one (or more) extensive quantities from one system to the other.
@@ -22,7 +19,6 @@ Among the various possibilities, the following are usually considered:
 \item \textbf{ Semipermeable walls} These allow the passage of particles belonging to a given chemical species (and consequently also of energy)
 \end{itemize}
 The space of possible states of equilibrium (compatible with constraints and initial conditions) is called the space of virtual states. The initial state is obviously a (specific) virtual state. The central problem of thermodynamics can obviously be restated as follows:
-\\
 \textbf{Characterize the actual state of equilibrium among all virtual states.}
 
 \section{Entropy formulation of thermodynamics}
@@ -118,13 +114,11 @@ is called the fundamental equation, and it represents a complete description of 
 \section{Thermodynamic potential}
 \subsection{Energy Scheme}
 We can also use a different (but equivalent) formulation of the fundamental principle of thermodynamics, in which entropy assumes the role of an independent variable, while energy becomes a dependent variable that satisfies a variational principle. This formalism is known as the energy scheme. In this formalism, the maximum entropy principle is replaced by the principle of minimum internal energy:
-\\ 
 \textbf{Among all states with a specific entropy value, the state of equilibrium is that in which internal energy is minimal.}
 \\ \\
 Let $\Delta X$ be a virtual variation of the extensive variables (excluding internal energy $U$) with respect to the equilibrium value $X_{\mathrm{eq}}$. Then
 \[\Delta S = S(U,X_{\mathrm{eq}} + \Delta X) - S(U,X_{\mathrm{eq}} ) \leq 0\]
 Since $S$ is a monotonically increasing function of $U$, there exists a value $U' > U$ such that $S(U',X_{\mathrm{eq}} + \Delta X) = S(U, X_{\mathrm{eq}})$. Therefore, if $S$ is kept constant, as the system moves out of equilibrium, $U$ cannot but increase. This is what we wanted to prove.
-\\
 Therefore, the fundamental equation in the energy scheme is
 \[U = U(S,X_1,\cdots,X_r)\]
 $U$'s differential assumes the form
@@ -137,14 +131,13 @@ which implies that the internal energy function is concave.
 The derivatives $f_i = \frac{\partial U}{\partial X_i}$ of the internal energy $U$ with respect to extensive quantities $S$, $\{X_i\}$ are called intensive quantities. For uniformity's sake, we define $f_0 \equiv \frac{\partial U}{\partial X_i} = T$. A given quantity $f_i$ is called the conjugate of the corresponding variable $X_i$, and vice versa. The temperature $T$ and entropy $S$ are therefore conjugates, as are the pressure (with the opposite sign) $-P$ and the volume $V$.
 \\ \\
 Since both $U$ and $X_i$ are extensive, in a homogeneous system, intensive variables are not dependent on system size. Moreover, if a system is composed of several subsystems that can exchange the extensive quantity $X_i$, the corresponding intensive variable $f_i$ assumes the same value in those subsystems that are in contact at equilibrium.
-\\
-We now want to identify the state of equilibrium among all states that exhibit a given value of an intensive variable $f_i$. Specifically, for $i = 0$, we are confronted with the case of system with a fixed temperature, i.e. heat reservoir.
+We now want to identify the state of equilibrium among all states that exhibit a given value of an intensive variable $f_i$. 
 \\ \\
+Specifically, for $i = 0$, we are confronted with the case of system with a fixed temperature, i.e. heat reservoir.
 Let us now define the Helmholtz free energy $F(T,X) $ by the relation
 \[F(T,X) = U(S(T,X),X) - TS(T,X)\]
 where $X = \{ X_1,\cdots,X_r\}$.
 We can then show that the thermodynamical equilibrium in these conditions is characterized by the following variational principle:
-\\
 \textbf{The value of the Helmholtz free energy is minimal for the equilibrium state among all virtual states at the given temperature $T$.}
 \\ \\
 Let us now consider more generally the Legendre transform of the internal energy $U$ with respect to the intensive variable $f_i$:
@@ -152,7 +145,6 @@ Let us now consider more generally the Legendre transform of the internal energy
 where $X_1(S,f_1,X_2,\cdots,X_r),X_2,\cdots,X_r)$ is determined by the condition
 \[f_1 =\left. \frac{\partial U}{\partial X_1} \right |_{S,X_2,\cdots,X_r}\]
 Then, the state of equilibrium is specified by the following criterion:
-\\
 \textbf{Among all the states that have the same value as $f_1$, the state of equilibrium is that which corresponds to the minimum value of $\Phi$.}
 \\ \\
 Let us observe that the partial derivative of $\Phi$, performed with respect to $f_1$, with the other extensive variables kept fixed, yields the value of the extensive variable $X_1$:
@@ -185,9 +177,8 @@ Transforming $F$ according to Legendre with respect to $V$, we obtain a new ther
 \[G(T,P,X_2,\cdots,X_r) = F + PV = U - TS - PV\]
 The variational principle satisfied by the Gibbs free
 energy is the following:
-\\
 \textbf{Among all states that have the same temperature and pressure values, the state of equilibrium is that in which the Gibbs free energy assumes the minimum value.}
-\\
+\\ \\
 $G$'s differential is expressed as follows:
 \[dG = -SdT + VdP + \sum_{i=2}^r f_i dX_i \]
 We can prove that if a system is brought toward equilibrium while temperature and pressure are kept constant, the maximum work that can be performed on its environment is given precisely by the difference between the initial and final values of $G$.
@@ -195,7 +186,6 @@ We can prove that if a system is brought toward equilibrium while temperature an
 If on the other hand, we Legendre transform the internal energy $U$ with respect to $V$, we obtain a new thermodynamic potential, usually denoted by H and called enthalpy:
 \[H(S,P,X_2,\cdots,X_r) = U + PV\]
 Enthalpy governs the equilibrium of adiabatic processes that occur while pressure is constant:
-\\
 \textbf{Among all states that have the same entropy and pressure values, the state of equilibrium is the one that corresponds to the minimum value of enthalpy.}
 \\ \\
 If a system relaxes toward equilibrium while the pressure is kept constant, the maximum heat that can be produced by the system is equal to its variation in enthalpy. For this reason, enthalpy it is also called free heat.
@@ -246,7 +236,7 @@ If, for example, we consider the Gibbs free energy for a simple fluid, we arrive
 from which we obtain
 \[v = \frac{V}{N} = v(P,T)\]
 where we have made use of the fact that $G$ is extensive, and therefore proportional to $N$.
-In the case of the simple fluid, we have another independent equation of state:
+In the case of the simple fluid, we have another  equation of state:
 \[s = \frac{S}{N} = -\frac{1}{N}  \left. \frac{\partial G}{\partial T} \right|_{P}\]
 which expresses the entropy per particle $s$ as a function of $P$ and $T$. In reality, the two equations of state are not completely independent, because of the Maxwell relations:
 \[\left. -\frac{\partial s}{\partial P} \right|_{T} = \left. \frac{\partial v}{\partial T} \right|_{P}\]
@@ -337,7 +327,7 @@ So the expectation value of the measurement on the system is
 We can verify that
 \[\mathrm{Tr}\rho = 1 ,\quad \rho^{\dagger} = \rho\]
 and any eigenvalue of $\rho$ must lie between $0$ and $1$. 
-Suppose $rho$ can be diagonalized as
+Suppose $\rho$ can be diagonalized as
 \[\rho = \sum_i p_i |i\rangle\langle i |\]
 We have
 \[\mathrm{Tr}[\rho O] = p_i \langle i | O | i \rangle\]
@@ -397,7 +387,7 @@ We have
 Since $U = \mathrm{Tr}[\rho H]$, we can derive that
 \[\left. \frac{\partial U}{\partial \beta} \right|_{N,V} = -\mathrm{Tr}[\rho H^2] + (\mathrm{Tr}[\rho H])^2 = -\langle E^2 \rangle + \langle E \rangle^2 = -\langle (\Delta E)^2 \rangle\]
 So, the relative fluctuation of energy in canonical ensemble is
-\[\frac{\sqrt{\langle (\Delta E)^2 \rangle}}{\langle E \rangle} = \frac{T}{U}\sqrt{\left. \frac{\partial U}{\partial T} \right|_{N,V}} = T \frac{\sqrt{C_V}}{T} \sim O(N^{-1/2})\]
+\[\frac{\sqrt{\langle (\Delta E)^2 \rangle}}{\langle E \rangle} = \frac{T}{U}\sqrt{\left. \frac{\partial U}{\partial T} \right|_{N,V}} = T \frac{\sqrt{C_V}}{U} \sim O(N^{-1/2})\]
 For large $N$ (which is true for every statistical system) the relative r.m.s. fluctuation in the values of $E$ is quite negligible.
 
 \subsection{Grand canonical ensemble}
@@ -511,7 +501,7 @@ When calculating the integral above, the following formula may by useful:
 The free energy of the system is
 \[F = -NT\ln(\frac{V}{\lambda^3}) + T\ln N! = -NT\ln(\frac{V}{N\lambda^3}) - NT\]
 Calculation of other thermodynamic quantities is straightforward.
-\[S = -\left. \frac{\partial F}{\partial T} \right|_{V,N} = N \ln \frac{V}{\lambda^3} + \frac{5}{2}N\]
+\[S = -\left. \frac{\partial F}{\partial T} \right|_{V,N} = N \ln \frac{V}{N\lambda^3} + \frac{5}{2}N\]
 \[U = F + TS = \frac{3}{2}NT\]
 \[P = -\left. \frac{\partial F}{\partial V} \right|_{T,N} = \frac{NT}{V}\]
 \[\mu = \left. \frac{\partial F}{\partial N} \right|_{T,V} = -T \ln \frac{V}{N\lambda^3}\]
@@ -562,8 +552,7 @@ and
 \[N =\sum_i \frac{1}{z^{-1}e^{\beta \epsilon_i}-1}\]
 In view of the fact that, for large $V$, the spectrum of the single-particle states is almost a continuous one, the summations may be replaced by integrations. 
 \\
-We note that by replacing summation by integration we are inadvertently giving a weight zero to the energy level $\epsilon = 0$. This is wrong because in a quantum mechanical treatment we must give a statistical weight unity to each non-degenerate single-particle state in the system. It is, therefore, advisable to take this particular state out of the sum in question before carrying out the integration; a rigorous justification of this unusual step can be found in Appendix F from \emph{Statistical Mechanics (R.K.Pathria \& Paul D.Beale)}
-\\
+We note that by replacing summation by integration we are inadvertently giving a weight zero to the energy level $\epsilon = 0$. This is wrong because in a quantum mechanical treatment we must give a statistical weight unity to each non-degenerate single-particle state in the system. It is, therefore, advisable to take this particular state out of the sum in question before carrying out the integration; a rigorous justification of this unusual step can be found in Appendix F from \emph{Statistical Mechanics (R.K.Pathria \& Paul D.Beale)}.
 We thus obtain
 \[\frac{P}{T} = -\frac{2\pi}{(2\pi)^3}(2m)^{3/2}\int_0^{\infty} \epsilon^{1/2} \ln (1 - ze^{-\beta \epsilon}) d\epsilon  - \frac{1}{V}\ln(1-z)\]
 and
@@ -599,7 +588,7 @@ Here, $T_c$ denotes a characteristic temperature that depends on the particle ma
 \end{itemize}
 
 \subsubsection{Pressure}
-Next, we examine the variation of $P$ with $T$, keeping $\nu$ fixed. Now, for $T < T_c$, the pressure is given by
+Next, we examine the variation of $P$ with $T$, keeping $v$ fixed. Now, for $T < T_c$, the pressure is given by
 \[P = \frac{T}{\lambda^3}\zeta(5/2)\]
 which is proportional to $T^{5/2}$ and is independent of $v$ - implying infinite compressibility.
 At the transition point the value of the pressure is
@@ -627,7 +616,7 @@ Its derivative is, however, discontinuous, the magnitude of the discontinuity be
 \subsubsection{Entropy}
 Finally, we examine the adiabats of the ideal Bose gas. For this, we need an expression for the entropy of the system. Making use of the thermodynamic formula $U - TS + PV = N\mu$, we get
 \[s = \begin{cases}\frac{5}{2}\frac{g_{5/2}(z)}{g_{3/2}(z)} -\ln z \quad T>T_c \\\frac{5}{2} \frac{v}{\lambda^3}\zeta(5/2) \quad T < T_c  \end{cases}\]
-Now, a reversible adiabatic process implies the constancy of $s$. For $T > T_c$ , this implies the constancy of $z$ as well and in turn the constancy of $v/lambda^3$. For $T \leq T_c$ , it again implies the same. We thus obtain, quite generally, the following relationship between the volume and the temperature of the system when it undergoes a reversible adiabatic process:
+Now, a reversible adiabatic process implies the constancy of $s$. For $T > T_c$ , this implies the constancy of $z$ as well and in turn the constancy of $v/\lambda^3$. For $T \leq T_c$ , it again implies the same. We thus obtain, quite generally, the following relationship between the volume and the temperature of the system when it undergoes a reversible adiabatic process:
 \[vT^{3/2} = \mbox{ const. }\]
 The corresponding relationship between the pressure and the temperature is
 \[P/T^{5/2} = \mbox{ const. }\]
@@ -668,16 +657,12 @@ For the Helmholtz free energy of the gas, we get
 and for the entropy
 \[S = \frac{U-F}{T} = N \left\{ \frac{5}{2} \frac{f_{5/2}(z)}{f_{3/2}(z)} - \ln z \right\}\]
 In order to determine the various properties of the Fermi gas in terms of the particle density $n$ and the temperature $T$, we need to know the functional dependence of the parameter $z$ on $n$ and $T$; this information is formally contained in the implicit relationship $g f_{3/2}(z) = n\lambda^3$. 
-\\
+\\ \\
 Now, if the density of the gas is very low and/or its temperature very high, then the situation might correspond to $f_{3/2}(z) \ll 1$; we then speak of the gas as being non-degenerate and, therefore, equivalent to a classical ideal gas.
-\\
 If the parameter $z$ is small in comparison with unity but not very small, then we should obtain an expansion for $z$ in powers of $n\lambda^3/g$ and then substitute this expansion into the
 \[\frac{PV}{NT} = \frac{f_{5/2}(z)}{f_{3/2}(z)}\]
-\\
 If the density and the temperature are such that the parameter $(n\lambda^3/g)$ is of order unity, the foregoing expansions cannot be of much use. In that case, one may have to make recourse to numerical calculation.
-\\
 If $(n\lambda^3/g) \gg 1$, the functions involved can be expressed as asymptotic expansions in powers of $(\ln z)^{-1}$; we then speak of the gas as being degenerate.
-\\
 As $(n\lambda^3/g) \to \infty$, our functions assume a closed form, with the result that the expressions for the various thermodynamic quantities pertaining to the system become highly simplified; we then speak of the gas as being completely degenerate.
 
 \subsubsection{Completely degenerate case}
@@ -687,7 +672,7 @@ where $\mu_0$ is the chemical potential of the system at $T = 0$.
 \\
 Thus, at $T = 0$, all single-particle states up to $\mu_0$ are ``completely'' filled, with one particle per state, while all single-particle states with $\epsilon_i > \mu_0$ are empty. 
 The limiting energy $\mu_0$ is generally referred to as the Fermi energy of the system and is denoted by the symbol $\epsilon_F$ ; the corresponding value of the single-particle momentum is referred to as the Fermi momentum and is denoted by the symbol $p_F$. The defining equation for these parameters is
-\[\int_0^{\epsilon_F} = a(\epsilon)d\epsilon\]
+\[N = \int_0^{\epsilon_F} a(\epsilon)d\epsilon\]
 where $a(\epsilon)$ denotes the density of states of the system and is given by the general expression
 \[a(\epsilon) = \frac{gV}{(2\pi)^3} 4\pi p^2 \frac{dp}{d\epsilon}\]
 We readily obtain
