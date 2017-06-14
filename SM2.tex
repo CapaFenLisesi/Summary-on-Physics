@@ -21,7 +21,7 @@ The excitation spectrum of helium II can be measured experimentally through elas
 \[E(\bm{p}) = c|\bm{p}| \quad \mbox{ when } |\bm{p}| \ll |\bm{p}_0|\]
 and the roton region
 \[E(\bm{p}) = \Delta + \frac{1}{2\mu} |\bm{p} - \bm{p}_0|^2 \quad \mbox{ when } |\bm{p}| \sim |\bm{p}_0|\]
-where $c = 226 \mathrm{m/s}$ is the velocity of sound, $\Delta/k_B = 9\mathrm{K}$ are the roton parameters, and $\mu = 0.25m_{He}$. 
+where $c = 226 \mathrm{m/s}$ is the velocity of sound, $\Delta/k_B = 9\mathrm{K}$ are the roton parameters, and $\mu = 0.25m_{\rm He}$. 
 There is another velocity parameter known as the critical velocity $v_0$. It is only when helium II moves with velocity greater than $v_0$ that viscous effects arise. At low temperature the roton excitations are damped by the Boltzmann factor $\exp(-\beta \Delta)$.
 
 \subsection{Quantum field theory formulation}
@@ -51,26 +51,26 @@ For large $N_0$ we can approximate $N_0 + 1$ by $N_0$ so that on the state $|C;N
 For $|C;N,N_0\rangle$, the particle number operator $\hat{N}$ can be written as
 \[\hat{N} = N_0 + \sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \]
 Neglecting terms of order $O(N_0^0)$, we have
-\[N^2 \approx N_0^2 + 2N_0\sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \]
+\[\hat{N}^2 \approx N_0^2 + 2N_0\sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \]
 We next examine the interaction part of $H$ when restricted to $|C\rangle$. When all four operators in H I have zero momentum, we have the term
-\[H_I^0 = \frac{1}{2V} \tilde{V}(0) a^{\dagger}_{0} a^{\dagger}_{0} a_{0} a_{0} = \frac{1}{2V}\tilde{V}(0)N_0^2 \approx  \frac{1}{2V}\tilde{V}(0) \left[\hat{N}^2-2N_0\sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \right]\]
-The next term is of order $N_0$ and is the part of $H_I$ containing two operators (carrying zero momentum). There are six ways in which this can happen. If we make an additional assumption that, for $|\bm{k}|$ small, $\tilde{V}(\bm{k}) = \tilde{V}(0)$. 
-Since at low temperature we expect only small momenta excitations to be important we replace $\tilde{V}(\bm{k})$ by $\tilde{V}(0)$ in $H_I$. Therefore, on the state , the interacting Hamiltonian, keeping terms of $O(N_0)$ is given by
-\[H_I \approx \tilde{V}(0) \left\{ \frac{1}{2V}\left[N^2-2N_0\sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \right]  +\frac{N_0}{2V}\sum_{\bm{k}\neq 0} [a^{\dagger}_{\bm{k}} a^{\dagger}_{-\bm{k}} + a_{\bm{k}} a_{-\bm{k}}] +\frac{2N_0}{V} \sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \right\} \equiv H_I^B \] 
+\[H_{\rm I}^0 = \frac{1}{2V} \tilde{V}(0) a^{\dagger}_{0} a^{\dagger}_{0} a_{0} a_{0} = \frac{1}{2V}\tilde{V}(0)N_0^2 \approx  \frac{1}{2V}\tilde{V}(0) \left[\hat{N}^2-2N_0\sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \right]\]
+The next term is of order $N_0$ and is the part of $H_{\rm I}$ containing two operators (carrying zero momentum). There are six ways in which this can happen. If we make an additional assumption that, for $|\bm{k}|$ small, $\tilde{V}(\bm{k}) = \tilde{V}(0)$. 
+Since at low temperature we expect only small momenta excitations to be important we replace $\tilde{V}(\bm{k})$ by $\tilde{V}(0)$ in $H_{\rm I}$. Therefore, on the state , the interacting Hamiltonian, keeping terms of $O(N_0)$ is given by
+\[H_{\rm I} \approx \tilde{V}(0) \left\{ \frac{1}{2V}\left[N^2-2N_0\sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \right]  +\frac{N_0}{2V}\sum_{\bm{k}\neq 0} [a^{\dagger}_{\bm{k}} a^{\dagger}_{-\bm{k}} + a_{\bm{k}} a_{-\bm{k}}] +\frac{2N_0}{V} \sum_{\bm{k}\neq 0}a_{\bm{k}}^{\dagger} a_{\bm{k}} \right\} \equiv H_{\rm I}^{\rm B} \] 
 and the total Hamiltonian can be approximated by the Bogoliubov Hamiltonian $H_B$ given by
-\[H^B = \sum_{\bm{k}} \frac{|\bm{k}|^2}{2m} a_{\bm{k}}^{\dagger} a_{\bm{k}} + H_I^B = \sum_{\bm{k}\neq 0} \left(\frac{|\bm{k}|^2}{2m} + \frac{\tilde{V(0)}}{V}N_0 \right)a_{\bm{k}}^{\dagger} a_{\bm{k}}  + \frac{\tilde{V}(0)N_0}{2V} \sum_{\bm{k}\neq 0} [a^{\dagger}_{\bm{k}} a^{\dagger}_{-\bm{k}} + a_{\bm{k}} a_{-\bm{k}}]\]
+\[H^{\rm B} = \sum_{\bm{k}} \frac{|\bm{k}|^2}{2m} a_{\bm{k}}^{\dagger} a_{\bm{k}} + H_{\rm I}^{\rm B} = \sum_{\bm{k}\neq 0} \left(\frac{|\bm{k}|^2}{2m} + \frac{\tilde{V(0)}}{V}N_0 \right)a_{\bm{k}}^{\dagger} a_{\bm{k}}  + \frac{\tilde{V}(0)N_0}{2V} \sum_{\bm{k}\neq 0} [a^{\dagger}_{\bm{k}} a^{\dagger}_{-\bm{k}} + a_{\bm{k}} a_{-\bm{k}}]\]
 \\
 We turn next to the problem of determining the energy eigenvalues of this Hamiltonian. This we do by using the method of the Bogoliubov–Valatin transform. 
-The idea is this: $H_B$ is a quadratic function of the operators $a_{\bm{k}}$ and $a^{\dagger}_{\bm{k}}$. 
-By taking appropriate linear combinations of these operators we can form new operators $b_{\bm{k}}$ and $b^{\dagger}_{\bm{k}}$ which ``diagonalize'' $H^B$, i.e. which lead to
-\[H^B = \sum_{\bm{q} \neq 0} \mathcal{E}(\bm{k})b^{\dagger}_{\bm{k}} b_{\bm{k}} \]
+The idea is this: $H^{\rm B}$ is a quadratic function of the operators $a_{\bm{k}}$ and $a^{\dagger}_{\bm{k}}$. 
+By taking appropriate linear combinations of these operators we can form new operators $b_{\bm{k}}$ and $b^{\dagger}_{\bm{k}}$ which ``diagonalize'' $H^{\rm B}$, i.e. which lead to
+\[H^{\rm B} = \sum_{\bm{q} \neq 0} \mathcal{E}(\bm{k})b^{\dagger}_{\bm{k}} b_{\bm{k}} \]
 The function $\mathcal{E}(\bm{k})$  will then determine the different excitations of the system while $b_{\bm{k}}$ and $b^{\dagger}_{\bm{k}}$ will be destruction and creation operators for these excitations or ``quasi-particles'', provided they satisfy the commutation rules
 \[[b_{\bm{p}},b_{\bm{q}}^{\dagger}] = \delta_{\bm{p},\bm{q}}\]
 We write
 \[b_{\bm{k}} = \alpha(\bm{k})a_{\bm{k}} - \beta(\bm{k})a^{\dagger}_{-\bm{k}} \quad b^{\dagger}_{\bm{k}} = \alpha(\bm{k})a^{\dagger}_{\bm{k}} - \beta(\bm{k})a_{-\bm{k}} \]
 And we have the constraint
 \[\alpha(\bm{k})^2 - \beta(\bm{k})^2 = 1\]
-Substituting $a$ and $a^{\dagger}$ with $b$ and $b^{\dagger}$ in $H^B$ and comparing it with the $\sum_{\bm{q} \neq 0} \mathcal{E}(\bm{k})b^{\dagger}_{\bm{k}} b_{\bm{k}}$, we can can a set of equations of $\alpha(\bm{k})$ and $\beta(\bm{k})$. Finally, we have
+Substituting $a$ and $a^{\dagger}$ with $b$ and $b^{\dagger}$ in $H^{\rm B}$ and comparing it with the $\sum_{\bm{q} \neq 0} \mathcal{E}(\bm{k})b^{\dagger}_{\bm{k}} b_{\bm{k}}$, we can can a set of equations of $\alpha(\bm{k})$ and $\beta(\bm{k})$. Finally, we have
 \[\mathcal{E}(\bm{k}) = \sqrt{\frac{\bm{k}^2}{2m} \left(\frac{\bm{k}^2}{2m} + \frac{2N_0\tilde{V}(0)}{V} \right) }\]
 The energy $\mathcal{E}(\bm{k})$ is called the quasi-particle energy and the operators $b_{\bm{k}}$ and $b^{\dagger}_{\bm{k}}$ are quasi-particle destruction and creation operators. 
 For small values of $\bm{k}$ we have
@@ -80,19 +80,19 @@ Observe that for $\mathcal{E}(\bm{k})$ to be real we must have $\tilde{V}(0) > 0
 \\
 We now show that a system with such an energy spectrum represents a superfluid, i.e. a system with no friction.
 Friction in a system represents dissipation of energy.
-Consider a molecule of mass $M_A$ moving in a medium. If this molecule can change its energy through collisions with the excitations of the medium, then the system has friction. 
-We will find that a molecule of mass $M_A$ and velocity $\bm{V}_A$ moving through a system consisting of quasi-particles of energy $\mathcal{E}(\bm{k})$ cannot change its energy by scattering off quasi-particles if $|\bm{V}_A| < |\bm{v}_0|$ where $|\bm{v}_0|$ is a critical velocity determined by $\tilde{V}(0)$ and $\rho$. 
-Thus for $|\bm{V}_A| < |\bm{v}_0|$ the system of quasi-particles behaves as a frictionless superfluid.
+Consider a molecule of mass $M_{\rm A}$ moving in a medium. If this molecule can change its energy through collisions with the excitations of the medium, then the system has friction. 
+We will find that a molecule of mass $M_{\rm A}$ and velocity $\bm{V}_{\rm A}$ moving through a system consisting of quasi-particles of energy $\mathcal{E}(\bm{k})$ cannot change its energy by scattering off quasi-particles if $|\bm{V}_{\rm A}| < |\bm{v}_0|$ where $|\bm{v}_0|$ is a critical velocity determined by $\tilde{V}(0)$ and $\rho$. 
+Thus for $|\bm{V}_{\rm A}| < |\bm{v}_0|$ the system of quasi-particles behaves as a frictionless superfluid.
 \\
-To see this, let us consider the collision of a molecule of mass $M_A$ and velocity $\bm{V}_A$ with a quasi-particle at rest. If the final momentum of the molecule is $\bm{Q}_A$ and that of the quasi-particle is $\bm{k}$, we have, from momentum conservation,
-\[|\bm{Q}_A|^2 = |\bm{P}_A|^2 + |\bm{k}|^2 - 2|\bm{P}_A||\bm{k}|\cos\theta\]
+To see this, let us consider the collision of a molecule of mass $M_{\rm A}$ and velocity $\bm{V}_{\rm A}$ with a quasi-particle at rest. If the final momentum of the molecule is $\bm{Q}_{\rm A}$ and that of the quasi-particle is $\bm{k}$, we have, from momentum conservation,
+\[|\bm{Q}_{\rm A}|^2 = |\bm{P}_{\rm A}|^2 + |\bm{k}|^2 - 2|\bm{P}_{\rm A}||\bm{k}|\cos\theta\]
 We then have
-\[\frac{|\bm{P}_A|^2-|\bm{Q}_A|^2}{2|\bm{P}_A| |\bm{k}|} \leq \frac{|\bm{P}_A|^2-|\bm{Q}_A|^2 + |\bm{k}|^2}{2|\bm{P}_A| |\bm{k}|} = \cos\theta \leq 1\]
+\[\frac{|\bm{P}_{\rm A}|^2-|\bm{Q}_{\rm A}|^2}{2|\bm{P}_{\rm A}| |\bm{k}|} \leq \frac{|\bm{P}_{\rm A}|^2-|\bm{Q}_{\rm A}|^2 + |\bm{k}|^2}{2|\bm{P}_{\rm A}| |\bm{k}|} = \cos\theta \leq 1\]
 Combining this with the energy conservation condition
-\[\frac{|\bm{Q}_A|^2}{2M_A} = \frac{|\bm{P}_A|^2}{2M_A} + \mathcal{E}(\bm{p})\]
+\[\frac{|\bm{Q}_{\rm A}|^2}{2M_{\rm A}} = \frac{|\bm{P}_{\rm A}|^2}{2M_{\rm A}} + \mathcal{E}(\bm{p})\]
 we end up with
-\[\frac{M_A\mathcal{E}(\bm{k})}{|\bm{P}_A| |\bm{k}|} = \frac{1}{m}\sqrt{\frac{\tilde{V}(0)N_0m}{V}} \frac{1}{V_A} \leq 1\]
-Thus the process of changing energy for the molecule is not allowed if $V_A \leq v_0 = \frac{1}{m}\sqrt{\frac{\tilde{V}(0)N_0m}{V}} $ and the system of quasi-particles behaves like a superfluid.
+\[\frac{M_{\rm A}\mathcal{E}(\bm{k})}{|\bm{P}_{\rm A}| |\bm{k}|} = \frac{\sqrt{\rho \tilde{V}(0)}}{mV_{\rm A}} \leq 1\]
+Thus the process of changing energy for the molecule is not allowed if $V_{\rm A} \leq v_0 = \sqrt{\rho \tilde{V}(0)} / m $ and the system of quasi-particles behaves like a superfluid.
 
 \section{Finite temperature perturbation theory}
 In this section we develop a perturbative formalism for the computation of the grand canonical partition function. This proceeds in close analogy with the perturbative evaluation of the evolution operator. The grand canonical partition sum 
@@ -102,11 +102,11 @@ where
 Define
 \[U(\beta) \equiv \exp(-\beta K) \quad U_0(\beta) \equiv \exp(-\beta K_0) \quad W(\beta) = U_0^{\dagger}(\beta)U(\beta)\]
 Similar to the time-dependent perturbation theory in quantum mechanics, we can get
-\[\frac{\partial W}{\partial \beta} = -H_I(\beta)W(\beta)\]
+\[\frac{\partial W}{\partial \beta} = -H_{\rm I}(\beta)W(\beta)\]
 where
-\[H_I(\beta) = U_0^{\dagger}(\beta)H_{\mathrm{int}}U_0(\beta)\]
+\[H_{\rm I}(\beta) \equiv U_0^{\dagger}(\beta)H_{\mathrm{int}}U_0(\beta)\]
 The solution of the equation above can be represented by Dyson series
-\[W(\beta) = \sum_{n \geq 0} \frac{(-1)^n}{n!} \int_0^{\beta}d\tau_1 \cdots \int_0^{\beta} d\tau_n T[H_I(\tau_1)\cdots H_I(\tau_n)]\]
+\[W(\beta) = \sum_{n \geq 0} \frac{(-1)^n}{n!} \int_0^{\beta}d\tau_1 \cdots \int_0^{\beta} d\tau_n T[H_{\rm I}(\tau_1)\cdots H_{\rm I}(\tau_n)]\]
 Note that $T$ is now the ordering with respect to $\tau$ (or imaginary time). Finally, upon substitution of this last expression into the grand canonical partition sum
 \[Z_{\Omega} = \mathrm{Tr} e^{-\beta K_0}W(\beta)\]
 we obtain a perturbative expansion of the partition sum in analogy with that of the evolution operator. Before we can apply this formalism to the computation of $Z_{\Omega}$ we need to analyze the finite temperature versions of the time-ordered Green functions and Wick's theorem. The detailed discussion can be found in section 9.8 from \emph{Elements Of Statistical Mechanics (ivo Sachs, Siddhartha Sen, James Sexton)}.
@@ -127,32 +127,32 @@ At this point we are still working with operators, but we can now insert a compl
 &=& \lim_{n \to \infty} \int [\frac{dpdq}{2\pi}]^n e^{\sum_{i=0}^{n-1}ip_i(x_{i+1}-x_i) - \epsilon H(q_i,p_i)} \nonumber
 \end{eqnarray}
 where $q_{n} = q_0$. 
-Generally, we have $T(p) = \frac{p^2}{2m}$. The $p_k$ integral is just a Gaussian integral. The path integral can then be simplified to
+Generally, we have $T(p) = p^2/2m$. The $p_k$ integral is just a Gaussian integral. The path integral can then be simplified to
 \[\mathrm{Tr}e^{-\beta H} = \lim_{n \to \infty} \left( \frac{m}{2\pi \epsilon} \right)^{\frac{n}{2}} \int [dq]^n e^{\epsilon \sum_{i=0}^{n-1}  -\frac{m}{2\epsilon^2}(q_{i+1}-q_i)^2 -  V(q_i)} \]
 Similar to path integral formulation in quantum mechanics, the equation above can be written formally as
-\[\mathrm{Tr}e^{-\beta H} = \int \mathcal{D}q(\tau) e^{S_E(q(\tau))}\]
+\[\mathrm{Tr}e^{-\beta H} = \int \mathcal{D}q(\tau) e^{-S_E(q(\tau))}\]
 with constraint $q(0) = q(\tau)$
 where
-\[S_E[q(\tau)] = \int_0^{\beta} -\frac{m}{2}\dot{q}^2 - V(q)\]
+\[S_E[q(\tau)] = \int_0^{\beta} d\tau \left(\frac{m}{2}\dot{q}^2 + V(q) \right)\]
 In quantum mechanics, we have
 \[\langle b | e^{-iHT} | a \rangle = \int \mathcal{D}q(t) e^{iS(q(t))}\]
 with constraint $q(0) = a$ ans $q(\tau) = b$
 where
-\[S[q(t)] = \int_0^{T} \frac{m}{2}\dot{q}^2 - V(q)\]
+\[S[q(t)] = \int_0^{T} dt \left(\frac{m}{2}\dot{q}^2 - V(q) \right)\]
 Actually, path integral of quantum mechanics can be obtained directly if we replace $\beta$ with $iT$ and change the integral variable from $\tau$ to $t$ by $\tau = it$ in the path integral  of statistical mechanics.
 \\ \\
 The path integral formulation can be generalize to the case of quantum field directly. For the system of bosons, we have
-\[\mathrm{Tr}e^{-\beta H} = \int \mathcal{D}\psi \mathcal{D}\psi^{\dagger} e^{S_E}\]
+\[\mathrm{Tr}e^{-\beta H} = \int \mathcal{D}\psi \mathcal{D}\psi^{\dagger} e^{-S_E}\]
 with constraint $\psi(\bm{x},0) = \psi(\bm{x},\beta)$
 where
 \begin{eqnarray}
-S_E &=& \int_0^{\beta}d\tau \left[ \int d^3x \psi^{\dagger}(\bm{x},\tau) \left( -\frac{\partial}{\partial \tau} + \frac{\nabla^2}{2m} \right) \psi(\bm{x},\tau) \right. \nonumber \\
-&-& \left. \frac{1}{2}\int d^3x d^3y\psi^{\dagger}(\bm{x},\tau)\psi^{\dagger}(\bm{y},\tau)V(\bm{x}-\bm{y})\psi(\bm{x},\tau)\psi(\bm{y},\tau) \right] \nonumber
+S_E &=& \int_0^{\beta}d\tau \left[ \int d^3x \psi^{\dagger}(\bm{x},\tau) \left( \frac{\partial}{\partial \tau} - \frac{\nabla^2}{2m} \right) \psi(\bm{x},\tau) \right. \nonumber \\
+&+& \left. \frac{1}{2}\int d^3x d^3y\psi^{\dagger}(\bm{x},\tau)\psi^{\dagger}(\bm{y},\tau)V(\bm{x}-\bm{y})\psi(\bm{x},\tau)\psi(\bm{y},\tau) \right] \nonumber
 \end{eqnarray}
 As for Fermions, we have
-\[\mathrm{Tr}e^{-\beta H} = \int \mathcal{D}\psi \mathcal{D}\psi^{\dagger} e^{S_E}\]
+\[\mathrm{Tr}e^{-\beta H} = \int \mathcal{D}\psi \mathcal{D}\psi^{\dagger} e^{-S_E}\]
 with constraint $\psi(\bm{x},0) = -\psi(\bm{x},\beta)$. 
-And the value of $\psi(\bm{x},t)$ is Grassman number rather than $c$ number, which has been discussed in the path integral formulation of Dirac field.
+And the value of $\psi(\bm{x},t)$ is Grassmann number rather than $c$ number, which has been discussed in the path integral formulation of Dirac field.
 
 \chapter{Phase Transitions and the Renormalization Group}
 \section{Basic problem}
