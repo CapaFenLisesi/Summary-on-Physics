@@ -14,17 +14,17 @@ Typically, the cotangent space is defined as the dual space of the tangent space
 \begin{newdef}[Submanifold]
 \href{https://en.wikipedia.org/wiki/Submanifold}{\textbf{Submanifold}}\\
 \textbf{Immersed submanifolds} An immersed submanifold of a manifold $M$ is the image $S$ of an immersion map $f:N \to M$; in general this image will not be a submanifold as a subset, and an immersion map need not even be injective (one-to-one) – it can have self-intersections.\\
-\textbf{Injective immersion submanifolds} More narrowly, one can require that the map $f:N \to M$ be an inclusion (one-to-one), in which we call it an injective immersion, and define an immersed submanifold to be the image subset S together with a topology and differential structure such that S is a manifold and the inclusion f is a diffeomorphism: this is just the topology on N, which in general will not agree with the subset topology: in general the subset S is not a submanifold of M, in the subset topology.\\
+\textbf{Invective immersed submanifolds} More narrowly, one can require that the map $f:N \to M$ be an inclusion (one-to-one), in which we call it an injective immersion, and define an immersed submanifold to be the image subset S together with a topology and differential structure such that S is a manifold and the inclusion f is a diffeomorphism: this is just the topology on N, which in general will not agree with the subset topology: in general the subset S is not a submanifold of M, in the subset topology.\\
 \textbf{Open submanifolds}\\
 \textbf{Closed submanifolds}\\
 \end{newdef}
 
-\begin{newdef}[Embedded Submanifold]
+\begin{newdef}[Embedded submanifold]
 An embedded submanifold (also called a regular submanifold), is an immersed submanifold for which the inclusion map is a topological embedding. That is, the submanifold topology on $S$ is the same as the subspace topology. Given any embedding $f:N \to M$ of a manifold $N$ in $M$ the image $f(N)$ naturally has the structure of an embedded submanifold. That is, embedded submanifolds are precisely the images of embeddings.
 \end{newdef}
 
 \begin{newprop}[]
-If an n dimensional injective immersed submanifold $N$ of a $m$ dimensional manifold $M$ is a closed submanifold of an open submanifold of $M$, then for every point $p \in f(N)$ there exists a chart ($U \subset M$,$\phi:U \to R_n $) containing $p$ such that $\phi(f(N) \cap U)$ is the intersection of a $n$-dimensional plane with $\phi(U)$.\\
+If an n dimensional injective immersed submanifold $N$ of a $m$ dimensional manifold $M$ is a closed submanifold of an open submanifold of $M$, then for every point $p \in f(N)$ there exists a chart ($U \subset M$, $\phi:U \to \mathbb{R}^n $) containing $p$ such that $\phi(f(N) \cap U)$ is the intersection of a $n$-dimensional plane with $\phi(U)$.\\
 Closed submanifolds of an open submanifold are equal to embedded submanifolds.
 \end{newprop}
 
@@ -51,11 +51,11 @@ x^{i_1 \cdots i_{r_1}}_{\phantom{i_1 \cdots i_{r_1}}k_1 \cdots k_{s_1}} \cdot y^
 \textbf{Symmetric contra-variant tensor}
 \[\sigma x =x\]
 \textbf{Antisymmetric contra-variant tensor}
-\[\sigma x =\mbox{ sgn }\sigma \cdot x\]
+\[\sigma x ={\rm sgn } \cdot \sigma x\]
 \textbf{Symmetrization operator}
 \[S_r(x) = \frac{1}{r!} \sum_{\sigma \in \mathcal{P}(x)} \sigma x\]
 \textbf{Antisymmetrization operator}
-\[A_r(x) = \frac{1}{r!} \sum_{\sigma \in \mathcal{P}(x)} \mbox{ sgn }\cdot \sigma x\]
+\[A_r(x) = \frac{1}{r!} \sum_{\sigma \in \mathcal{P}(x)} {\rm sgn }\cdot \sigma x\]
 \end{newdef}
 
 \begin{newdef}[Exterior vector space]
@@ -80,7 +80,7 @@ $f:V \to W$ is a linear mapping, we define $f^*:\Lambda^r(W^*) \to \Lambda^r(V^*
 \begin{newprop}[Properties of exterior space]
 \[e_{i_1} \wedge \cdots \wedge e_{i_r}(v^{*1},\cdots,v^{*r}) = \det \langle e_{i_{\alpha}},v^{*\beta} \rangle\]
 \[e_{i_1} \wedge \cdots \wedge e_{i_r}(e^{*j_1},\cdots,e^{*j_r}) = \det \langle e_{i_{\alpha}},e^{*j_{\beta}} \rangle = \delta^{j_1 \cdots j_r}_{i_1 \cdots i_r}\]
-\[\Lambda^r(V) = \mbox{ Span }\{e_{i_1} \wedge \cdots \wedge e_{i_r},1\leq i_1 < \cdots < i_r \leq n  \}\]
+\[\Lambda^r(V) = {\rm Span }\{e_{i_1} \wedge \cdots \wedge e_{i_r},1\leq i_1 < \cdots < i_r \leq n  \}\]
 \[(\Lambda^r(V))^* = \Lambda^r(V^*)\]
 \end{newprop}
 
@@ -126,9 +126,9 @@ $\forall X,Y \in \mathcal{H}(M),[X,Y]=X \circ Y -Y \circ X \in \mathcal{H}(M)$.
 \end{newprop}
 
 \begin{newdef}[One parameter differentiable transformation group]
-Let $M$ be a smooth manifold and $\phi:\bm{R} \times M \to M$ a smooth mapping, and $\forall (t,p) \in \bm{R} \times M$,denote $\phi_{t}(p) = \phi(t,p)$. If $\phi$ satisfy that\\
+Let $M$ be a smooth manifold and $\phi:\mathbb{R} \times M \to M$ a smooth mapping, and $\forall (t,p) \in \mathbb{R} \times M$,denote $\phi_{t}(p) = \phi(t,p)$. If $\phi$ satisfy that\\
 (1) $\phi_0 = \mathrm{id}:M \to M$;\\
-(2) $\forall s,t \in \bm{R}, \phi_s \circ \phi_t = \phi_{s+t}$;\\
+(2) $\forall s,t \in \mathbb{R}, \phi_s \circ \phi_t = \phi_{s+t}$;\\
 then $\phi$ is called a one parameter differentiable transformation group acting on $M$.\\
 Trajectory of $\phi$ through $p$ on $M$:$\gamma_p(t) = \phi(t,p)$.\\
 Vector field induced by $\phi$: $X_p(f) = \langle \gamma_p , f \rangle$.
@@ -260,7 +260,7 @@ d\omega(X_1,\cdots,X_{r+1}) &=& \sum_{i=1}^{r+1}(-1)^{i+1} X_{i}(\langle X_1 \we
 \begin{newlemma}[Poincare Lemma]
 \begin{enumerate}
 \item $d^2=0$
-\item Let $U=B_0(r)$ be a spherical neighbourhood with center origin $O$ and radius $r$ in $R^n$. $\forall \omega \in A^r(U)$ and $d\omega =0$, $\exists \tau \in A^{r-1}(U)$,satisfy that $\omega = d\tau$.
+\item Let $U=B_0(r)$ be a spherical neighbourhood with center origin $O$ and radius $r$ in $\mathbb{R}^n$. $\forall \omega \in A^r(U)$ and $d\omega =0$, $\exists \tau \in A^{r-1}(U)$,satisfy that $\omega = d\tau$.
 \end{enumerate}
 \end{newlemma}
 
@@ -334,8 +334,8 @@ A topological manifold with boundary is a Hausdorff space in which every point h
 
 
 \begin{newdef}[Boundary and interior]
-Let M be a manifold with boundary. The interior of $M$, denoted $Int \ M$, is the set of points in $M$ which have neighbourhoods homeomorphic to an open subset of $\mathbb {R} ^{n}$. The boundary of $M$, denoted $\partial M$, is the complement of $Int \ M$ in $M$. The boundary points can be characterized as those points which land on the boundary hyperplane ($x^n=0$) of $ \mathbb {R} _{+}^{n}$ under some coordinate chart.\\
-If $M$ is a manifold with boundary of dimension $n$, then $Int \ M$ is a manifold (without boundary) of dimension $n$ and $\partial M$ is a manifold (without boundary) of dimension $n-1$.
+Let M be a manifold with boundary. The interior of $M$, denoted ${\rm Int} \, M$, is the set of points in $M$ which have neighbourhoods homeomorphic to an open subset of $\mathbb {R} ^{n}$. The boundary of $M$, denoted $\partial M$, is the complement of ${\rm Int} \, M$ in $M$. The boundary points can be characterized as those points which land on the boundary hyperplane ($x^n=0$) of $ \mathbb {R} _{+}^{n}$ under some coordinate chart.\\
+If $M$ is a manifold with boundary of dimension $n$, then ${\rm Int} \, M$ is a manifold (without boundary) of dimension $n$ and $\partial M$ is a manifold (without boundary) of dimension $n-1$.
 \end{newdef}
 
 \begin{newthem}
@@ -350,23 +350,26 @@ assign a local coordinate system $((-1)^m \cdot x^1,x^2,\ldots,x^{m-1})$ on $\ti
 
 \begin{newdef}[Support set] 
 Let $M$ be a $m$ dimensional orientable smooth manifold. $\omega \in A^r(M)$, the support set of $\omega$ can be defined as
-\[Supp \ \omega = \overline {\{ p \in M :\omega(p) \neq 0\}}\]\\
+\[{\rm Supp} \, \omega = \overline {\{ p \in M :\omega(p) \neq 0\}}\]\\
 All the $r$-form with compact support set is denoted as $A^r_0(M)$.
 \end{newdef}
 
 \begin{newdef}[Partition of unity]
 Let $\Sigma$ be an open cover of $M$. Then there is a family of smooth function $g_{\alpha}$ on $M$ that
 \begin{enumerate}
-\item $\forall \alpha$,$0 \leq g_{\alpha} \leq 1$,$\mathrm{supp} \ g_{\alpha}$ is compact and there is an open set $W_i \in  \Sigma$ that $\mathrm{supp} \  g_{\alpha} \subset W_i$.
-\item $\forall p \in M$, it has a neighbourhood $U$ which intersect finite $\mathrm{supp} \ g_{\alpha}$.
-\item $\sum_{\alpha} g_{\alpha} = 1$
+\item $\forall \alpha$, $0 \leq g_{\alpha} \leq 1$, ${\rm Supp} \, g_{\alpha}$ is compact and there is an open set $W_{\alpha} \in  \Sigma$ that ${\rm Supp} \,  g_{\alpha} \subset W_{\alpha}$.
+\item $\forall p \in M$, it has a neighbourhood $U$ which intersect finite ${\rm Supp} \, g_{\alpha}$.
+\item $\sum_{\alpha} g_{\alpha} = 1$.
 \end{enumerate}
 \end{newdef}
 
 
 \begin{newdef}[Integral of differential form with compact support]
 \[\phi = (\sum_{\alpha} g_{\alpha})\cdot \phi = \sum_{\alpha} (g_{\alpha} \cdot \phi)\]
-\[\int_{M} g_{\alpha} \cdot \phi = \int_{W_i} g_{\alpha} \cdot \phi = \int_{W_i} f(u^1,\cdots,u^m) du^1 \wedge \cdots \wedge du^m = \int_{W_i} f(u^1,\cdots,u^m) du^1 \cdots du^m\]
+\begin{eqnarray}
+\int_{M} g_{\alpha} \cdot \phi = \int_{W_{\alpha}} g_{\alpha} \cdot \phi &=& \int_{W_{\alpha}} f(u^1,\cdots,u^m) du^1 \wedge \cdots \wedge du^m \nonumber \\
+&=& \int_{W_{\alpha}} f(u^1,\cdots,u^m) du^1 \cdots du^m \nonumber
+\end{eqnarray}
 \[\int_{M} \phi = \sum_{\alpha} \int_{M} g_{\alpha} \cdot \phi\]
 \end{newdef}
 
@@ -593,7 +596,7 @@ Let $M$ be a $m$-dimensional connected Riemann manifold that is isotropic every 
 We choose Euclidean coordinates for our absolute space and an absolute time $t$, than the equation of motion can be written as
 \[\frac{d^2 t}{d\lambda^2} = 0\]
 \[\frac{d^2 x^i}{d\lambda^2} + \frac{\partial \Phi}{\partial x^i} (\frac{d\lambda}{dt})^2=0\]
-It is convenient to define that $\Gamma^i_{00} = \frac{\partial \Phi}{\partial x^i}$,and all other $\Gamma^{\alpha}_{\beta \gamma}$ vanish.Then we can write the equation of motion as
+It is convenient to define that $\Gamma^i_{00} = \frac{\partial \Phi}{\partial x^i}$, and all other $\Gamma^{\alpha}_{\beta \gamma}$ vanish. Then we can write the equation of motion as
 \[\frac{d^2 x^{\alpha}}{d\lambda^2} + \Gamma^{\alpha}_{\beta \gamma} \frac{dx^{\beta}}{d \lambda} \frac{dx^{\gamma}}{d \lambda}=0\]
 Next, we can get the Riemann tensor given the connection above\[
 R^i_{0j0} = -R^i_{00j} = \frac{\partial \Phi}{\partial x^i \partial x^j},
@@ -604,10 +607,11 @@ So, newton gravity law can be written as
 
 \section{Geometry structure of Newtonian Space-time}
 \subsubsection{Stratification of space-time}
-Regard absolute time $t$ as a scalar field defined once and for all in Newtonian space-time $t=t(\mathcal{P})$.The layers of space-time are the slices of constant $t$-the ``space slices'' - each of which has an identical geometric structure: the old ``absolute space''.
+Regard absolute time $t$ as a scalar field defined once and for all in Newtonian space-time $t=t(\mathcal{P})$. The layers of space-time are the slices of constant $t$ -- the ``space slices'' -- each of which has an identical geometric structure: the old ``absolute space''.
 
 \subsubsection{Flat Euclidean space}
-A given space slice is endowed with basis vectors $\bm{e}_i = \frac{\partial}{\partial x^i}$; and this basis has vanishing connection coefficients,$\Gamma^i_{jk} = 0$. Consequently,the geometry of each space slice is completely flat. Absolute space is Euclidean in its geometry.Each space slice is endowed with a three-dimensional metric, and its Galilean coordinate basis is orthonormal,$\bm{e}_i \cdot \bm{e}_j = \delta_{ij}$.
+A given space slice is endowed with basis vectors $\bm{e}_i = \frac{\partial}{\partial x^i}$; and this basis has vanishing connection coefficients, $\Gamma^i_{jk} = 0$. Consequently,the geometry of each space slice is completely flat. Absolute space is Euclidean in its geometry. 
+Each space slice is endowed with a three-dimensional metric, and its Galilean coordinate basis is orthonormal,$\bm{e}_i \cdot \bm{e}_j = \delta_{ij}$.
 
 \subsubsection{Curvature of space-time}
 Parallel transport a vector around a closed curve lying entirely in a space slice; it will return to its starting point unchanged.
@@ -661,16 +665,16 @@ The features of Galilean coordinate systems are
 \[\frac{\partial}{\partial x^i} \cdot \frac{\partial}{\partial x^j} = \delta_{ij}\]
 \[\Gamma^j_{00} = \Phi_{,j} \mbox{ for some scalar field }\Phi,\mbox{ and all other } \Gamma^{\alpha}_{\beta \gamma} \mbox{vanish.}\]
 Consider following coordinate transformation:\\
-(1)$x^{0'}=x^0=t$,both time coordinates must be universal time.\\
-(2)at fixed $t$,both sets of space coordinates must be Euclidean, so they must be related by a rotation and a translation:
+(1)$x^{0'}=x^0=t$, both time coordinates must be universal time.\\
+(2)at fixed $t$, both sets of space coordinates must be Euclidean, so they must be related by a rotation and a translation:
 \[\bar{x}^{i'}(t) = A_{i'j}(t)x^j + \bar{a}^{i'}(t)\]
 We can get
 \[\bar{\Gamma}^{i'}_{0j'} = \bar{\Gamma}^{i'}_{j'0} = A_{i'l}\dot{A}_{j'l}\]
 \[\bar{\Gamma}^{i'}_{00} = \Phi_{,i'} + A_{i'j}(\ddot{A}_{l'j}\bar{x}^{l'}-\ddot{a^{j}}), \mbox{   here, }a^{j} = \bar{a}^{l'}A_{l'j}\]
 and all other terms vanish.So, new coordinates have the standard Galilean form  if and only if
 \[\dot{A}_{i'j}=0,\ \ \Phi'=\Phi-\ddot{\bar{a}}^{i'}x^{i'}+C\]
-Were all the matter in the universe concentrated in a finite region of space and surrounded by emptiness (``island universe''), then one could impose the global boundary condition $\Phi \to 0$ as $r \equiv (x^ix^i)^{\frac{1}{2}} \to \infty$. This would single out a subclass of Galilean coordinates (``absolute'' Galilean coordinates), with a unique, common Newtonian potential. The transformation from one
-absolute Galilean coordinate system to any other is called Galilean transformation.
+Were all the matter in the universe concentrated in a finite region of space and surrounded by emptiness (``island universe''), then one could impose the global boundary condition $\Phi \to 0$ as $r \equiv (x^ix^i)^{\frac{1}{2}} \to \infty$. This would single out a subclass of Galilean coordinates (``absolute'' Galilean coordinates), with a unique, common Newtonian potential. 
+The transformation from one absolute Galilean coordinate system to any other is called Galilean transformation.
 
 \section{Coordinate transformation in space}
 \noindent
@@ -711,11 +715,11 @@ where $(i_{1},i_{2},\cdots ,i_{n})$ is an even permutation of $\{1,2,\cdots,n\}$
 where $\epsilon$ is Levi-Civita symbol.
 \end{newdef} 
 \begin{newprop}
-\[\epsilon^{i_1,\cdots,i_n} = g^{i_1j_1} \cdots g^{i_nj_n} \epsilon_{j_1,\cdots,j_n} = \frac{|g|^{\frac{1}{2}}}{g} \tilde{\epsilon}^{i_1,\cdots,i_n} = sgn(g) \frac{1}{|g|^{\frac{1}{2}}} \tilde{\epsilon}^{i_1,\cdots,i_n}\]
+\[\epsilon^{i_1,\cdots,i_n} = g^{i_1j_1} \cdots g^{i_nj_n} \epsilon_{j_1,\cdots,j_n} = \frac{|g|^{\frac{1}{2}}}{g} \tilde{\epsilon}^{i_1,\cdots,i_n} = {\rm sgn}(g) \frac{1}{|g|^{\frac{1}{2}}} \tilde{\epsilon}^{i_1,\cdots,i_n}\]
 \end{newprop}
 
 \noindent
-Using tensor index notation, the Hodge dual is obtained by contracting the indices of a k-form with the n-dimensional completely antisymmetric Levi-Civita tensor.
+Using tensor index notation, the Hodge dual is obtained by contracting the indices of a k-form with the n-dimensional completely antisymmetric Levi-Civita tensor.\\
 
 \begin{newprop}
 \[(\star \eta )_{i_{1},i_{2},\ldots ,i_{n-k}}={\frac {1}{(n-k)!}}\eta ^{j_{1},\ldots ,j_{k}} \epsilon _{j_{1},\ldots ,j_{k},i_{1},\ldots ,i_{n-k}},\]
@@ -784,11 +788,12 @@ are a natural way of identifying the event $\mathcal{P}$. These are the coordina
 \noindent
 Along the world line of observer:
 \[\frac{\partial}{\partial x^{\hat{\alpha}}} = \bm{e}_{\hat{\alpha}}, \ \ g_{\hat{\alpha} \hat{\beta}} = \bm{e}_{\hat{\alpha}} \cdot \bm{e}_{\hat{\beta}} = \eta_{\hat{\alpha}\hat{\beta}}\]
-\[\Gamma^{\hat{\beta}}_{\hat{\alpha} \hat{0}} = - \Omega^{\hat{\beta}}_{\hat{\alpha}}, \ \ \Gamma^{\hat{0}}_{\hat{0} \hat{0}} =0\]
-\[\Gamma^{\hat{0}}_{\hat{j} \hat{0}} = \Gamma^{\hat{j}}_{\hat{0} \hat{0}} = a^{\hat{j}}, \ \ \Gamma^{\hat{j}}_{\hat{k} \hat{0}} = -\omega^{\hat{i}} \epsilon_{0 \hat{i} \hat{j} \hat{k}} \]
-\[\Gamma^{\hat{\alpha}}_{\hat{j} \hat{k}} = 0 \]
-\[g_{\hat{\alpha} \hat{\beta},\hat{0}} = 0, \ \ g_{\hat{j} \hat{k},\hat{l}} = 0\]
-\[g_{\hat{0} \hat{0},\hat{j}} = -2 a^{\hat{j}}, \ \ g_{\hat{0} \hat{j},\hat{k}} = -\epsilon_{0 \hat{j} \hat{k} \hat{l}} \omega^{\hat{l}}\]
+\[\Gamma^{\hat{0}}_{\hat{j} \hat{0}} = \Gamma^{\hat{j}}_{\hat{0} \hat{0}} = a^{\hat{j}}, 
+\quad \Gamma^{\hat{j}}_{\hat{k} \hat{0}} = -\omega^{\hat{i}} \epsilon_{0 \hat{i} \hat{j} \hat{k}}, \quad \Gamma^{\hat{\alpha}}_{\hat{j} \hat{k}} = 0 \]
+\[g_{\hat{\alpha} \hat{\beta},\hat{0}} = 0, \quad g_{\hat{j} \hat{k},\hat{l}} = 0, \quad
+g_{\hat{0} \hat{0},\hat{j}} = -2 a^{\hat{j}}, \quad 
+g_{\hat{0} \hat{j},\hat{k}} = -\epsilon_{0 \hat{j} \hat{k} \hat{l}} \omega^{\hat{l}}
+\]
 
 \section{Hypersurfaces}
 \subsection{Description of hypersurfaces}
@@ -848,7 +853,7 @@ and so on. We can demonstrate that
 
 \subsubsection{Gauss-Stokes theorem}
 Linear algebra theory tells us that
-\[\frac{\partial \det A}{\partial A_{ab}} = (\det A) A^{-1}_{ab}\]
+\[\frac{\partial \det A}{\partial A_{ab}} = (\det A) \left(A^{-1}\right)_{ab}\]
 Then we can deduce that
 \[\frac{\partial g}{\partial x^{\mu}} = gg^{\alpha\beta} g_{\alpha\beta,\mu}\]
 If $A^{\mu}$ is a vector, we have
@@ -863,7 +868,6 @@ we can derive the following theorem,\\
 \begin{enumerate} 
 \item \[\int_{\mathcal{V}} A^{\alpha}_{;\alpha} \sqrt{-g} dx^4 = \oint_{\partial \mathcal{V}} A^{\alpha} d\Sigma_{\alpha} = \oint_{\partial \mathcal{V}} \epsilon A^{\alpha} n_{\alpha} \sqrt{h} dy^3\]
 \item \[\int_{\Sigma} B^{\alpha \beta}_{\phantom{\alpha \beta};\beta} d\Sigma_{\alpha} = \frac{1}{2}\oint_{\partial \Sigma} B^{\alpha \beta} dS_{\alpha \beta} = \oint_{\partial \Sigma} \epsilon_n \epsilon_r B^{\alpha \beta} n_{\alpha} r_{\beta} \sqrt{\sigma} d\theta^2\]
-where $B_{\alpha \beta}$ is an antisymmetric tensor
 \end{enumerate}
 \end{newthem}
 
@@ -899,20 +903,21 @@ is called a Killing vector field; it keeps the metric invariant and therefore co
 \[\xi_{\mu;\nu} + \xi_{\nu;\mu} = 0\]
 Derivatives of killing vectors can be related to Riemann tensor by
 \[\nabla_{\mu} \nabla_{\sigma}\xi^{\rho} = R^{\rho}_{\sigma\mu\nu}\xi^{\nu}\]
-This shows that from the value of $\xi^{\mu}$ and $\xi^{\mu}_{;\nu}$ at a given point one can determine the Killing vector field uniquely. One should then specify $N$ values for $\xi^{\nu}$ and $\frac{N(N-1)}{2}$ values for $\xi^{\mu}_{;\nu}$, so that there are at most $N(N+1)/2$ linearly independent Killing vector fields. For $N=4$,
+This shows that from the value of $\xi^{\mu}$ and $\xi^{\mu}_{;\nu}$ at a given point one can determine the Killing vector field uniquely. One should then specify $N$ values for $\xi^{\nu}$ and $N(N-1)/2$ values for $\xi^{\mu}_{;\nu}$, so that there are at most $N(N+1)/2$ linearly independent Killing vector fields. For $N=4$,
 this is at most $10$ Killing vectors, which is precisely the dimension of the Poincare group of Minkowski space.
-\\
+\\ \\
 A space-time enjoying the maximum number of Killing vector fields is called a maximally symmetric space-time. It can be shown from the Killing equations the Riemann tensor must then satisfy
 \[R^{\rho}_{\sigma\nu\nu} = \frac{R}{N(N-1)} (\delta^{\rho}_{\mu}g_{\sigma\nu} - \delta^{\rho}_{\nu}g_{\sigma\mu})\]
 After contraction, we have
 \[R_{\sigma\nu} = \frac{R}{N}g_{\sigma\nu}\]
-Also, the Ricci scalar must be a constant. Maximally symmetric spaces are thus spaces of constant curvature. For $N =4$, there are three maximally symmetric space-times:
+Also, the Ricci scalar must be a constant. Maximally symmetric spaces are thus spaces of constant curvature. 
+For $N =4$, there are three maximally symmetric space-times:
 Minkowski , de Sitter and anti-de Sitter.
-\\
+\\ \\
 Now, consider a geodesic with tangent vector $u^{\mu}$. We have
 \[u^{\nu}(u^{\mu}\xi_{\mu})_{;\nu} = 0\]
 So, the quantity $u^{\mu}\xi_{\mu}$ is constant along the trajectory.
-Similarly, if $T^{\mu\nu}_{;\nu} = 0$ and $T^{\mu\nu}=T^{\nu\mu}$, we have
+Similarly, if $T^{\mu\nu}_{\phantom{xx} ;\nu} = 0$ and $T^{\mu\nu}=T^{\nu\mu}$, we have
 \[(T^{\mu\nu}\xi_{\nu})_{;\mu} = 0\]
 This relation has an important implication. Define $I^{\mu} \equiv T^{\mu\nu}\xi_{\nu}$. Gauss-Stokes theorem implies that
 \[\oint_{\partial V} I^{\mu}n_{\mu} \sqrt{h}d^3y = 0\]
@@ -971,20 +976,20 @@ Define
 \[T_{\alpha \beta} = F_{\mu \alpha} F^{\mu}_{\phantom{\mu} \beta} - \frac{1}{4} F^{\mu \nu} F_{\mu \nu} g_{\alpha \beta}\]
 \end{example}
 \subsubsection{Nondynamical term}
-$K_0 = $ extrinsic curvature of $\partial \mathcal{L}$ embedded in flat space-time.
+$K_0 = $ extrinsic curvature of $\partial \mathcal{V}$ embedded in flat space-time.
 
 \section{Hamiltonian formulation}
 \subsection{3+1 decomposition}
 \begin{figure}[!h]
 \begin{minipage}[t]{0.5\linewidth}
 \centering
-\includegraphics[width=3.5in]{GR/Foliation1.png}
+\includegraphics[scale=0.3]{GR/Foliation1.png}
 \caption{Foliation of space-time by spacelike hypersurfaces}
 \label{fig:side:a}
 \end{minipage}%
 \begin{minipage}[t]{0.5\linewidth}
 \centering
-\includegraphics[width=3.5in]{GR/Foliation2.png}
+\includegraphics[scale=0.3]{GR/Foliation2.png}
 \caption{Decomposition of $t^{\alpha}$ into lapse and shift}
 \label{fig:side:b}
 \end{minipage}
@@ -1013,10 +1018,12 @@ ds^2 &=& g_{\alpha \beta} dx^{\alpha} dx^{\beta} \nonumber \\
 \[S = \int_{t_1}^{t_2} dt \int_{\Sigma_t} (p \dot{q} - \mathcal{H} ) d^3 y\]
 \[\delta S = 0 \Rightarrow \dot{p} = -\frac{\partial \mathcal{H}}{\partial q} + \left(\frac{\partial \mathcal{H}}{\partial q_{,a}}\right)_{,a}, \ \ \ \ \dot{q} = \frac{\partial \mathcal{H}}{\partial p}\]
 \begin{example}
-For electromagnetic field in 3+1 decomposition form, we define the electrical field as $E_a = F_{\alpha \beta} n^{\beta} e_a^{\alpha}$, the magnetic field as $\epsilon_{abc} B^c = F_{\alpha \beta} e_a^{\alpha} e_b^{\beta}$. In this definition, the equation of motion of particles in electromagnetic field can be written as
+For electromagnetic field in 3+1 decomposition form, we define the electrical field by $E_a = F_{\alpha \beta} n^{\beta} e_a^{\alpha}$, the magnetic field by $\epsilon_{abc} B^c = F_{\alpha \beta} e_a^{\alpha} e_b^{\beta}$. 
+In this definition, the equation of motion of particles in electromagnetic field can be written as
 \[m A_a = \gamma e (E_a + \epsilon_{abc} v^b B^c)\]
-Here, $A_a = u_{\alpha;\beta} u^{\beta} e_a^{\alpha}$, $\gamma = \frac{1}{\sqrt{1-v^2}}$. So, the three force
-\[\bm {f}=\frac{d\bm {p}}{dt} = e(\bm {E} + \bm {v} \times \bm {B})\]
+where $A_a \equiv u_{\alpha;\beta} u^{\beta} e_a^{\alpha}$, $u^{\nu} = \gamma (n^{\nu} + v^b e_{b}^{\nu})$. 
+It can be written in the form of three vector as
+\[\frac{d\bm {p}}{dt} = e(\bm {E} + \bm {v} \times \bm {B})\]
 If we adopt the coordinates $(t,y^a)$, it is easy to verify that
 \[E^a = N F^{0a}, \ \ \ \ B^a = \frac{1}{2} \epsilon^{abc} F_{bc}\]
 We further define
@@ -1081,5 +1088,3 @@ s_a &=& \epsilon_{abc} E^b B^c \nonumber
 \[\dot{h}_{ab} = \mathcal{H}_{ab}, \ \ \ \ \dot{p}^{ab} = -\mathcal{P}^{ab}+\frac{1}{2}N\sqrt{h}\mathcal{I}^{ab}\]
 \[\phantom{R}^3R + K^2 - K^{ab}K_{ab} = 16 \pi \rho\]
 \[(K_a^{\phantom{a}b} - K \delta_a^{\phantom{a}b})_{|b} = -8\pi s_a\]
-
-
