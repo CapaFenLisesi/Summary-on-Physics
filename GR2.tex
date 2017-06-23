@@ -580,3 +580,65 @@ close to the black hole in the case of rotating black holes.
 The quantity $(m − E)/m$ represents the fraction of the rest energy that can be released when a particle falls from the innermost stable circular orbit into the black hole. 
 In the extreme case of $a = M$, this fraction is $1 - 1 / \sqrt{3}$ which is about $42$ percent, while the corresponding value for orbits in the Schwarzschild metric is only about $5.7$ percent. 
 This higher efficiency could be of use in certain astrophysical scenarios.
+
+\chapter{Geometry of the Universe}
+\section{Friedmann–Lemaître–Robertson–Walker metric}
+The metric in standard model of cosmology is
+\[ds^2 = -dt^2 + a(t)^2 \left(\frac{dr^2}{1-Kr^2} + r^2 d\Omega^2 \right).\]
+If we define
+\[\chi \equiv \begin{cases} 
+\sin^{-1}(\sqrt{K}r)/\sqrt{K}, K > 0 \\
+r, K = 0 \\
+\sinh^{-1}(\sqrt{-K}r)/\sqrt{-K}, K < 0
+\end{cases}\]
+and
+\[\eta \equiv \int \frac{dt}{a(t)},\]
+the metric can then be written as
+\[ds^2 =  a(\eta)^2 \left(-d\eta^2 + d\chi^2 + r(\chi)^2 d\Omega^2 \right).\]
+In coordinates $(t,r,\theta,\phi)$, we have
+\[G_{tt} = \frac{3(\dot{a}^2+K)}{a^2}, \quad G^{\mu}_{\mu} = -\frac{6(\dot{a}^2+a\ddot{a}+K)}{a^2}.\]  
+Suppose that the matter in the universe can be modelled as idealized fluid. So the corresponding energy-momentum tensor is $T^{\mu\nu} = (\rho + p) u^{\mu} u^{\nu} + pg^{\mu\nu}$. Contraction of the energy-momentum tensor gives $T^{\mu}_{\mu} = -\rho + 3p$. 
+If the matter is comoving with the coordinates, we have $T_{tt} = \rho$. Einstein equations now takes the from as
+\[\left(\frac{\dot{a}}{a} \right)^2 = \frac{8\pi}{3}\rho - \frac{K}{a^2}, \quad \frac{\ddot{a}}{a} = - \frac{4\pi}{3}(\rho + 3p),\]
+called Friedmann equations. If we take the derivative of the first equation, we can get
+\[\frac{\ddot{a}}{a} = -\frac{4\pi}{3}\left( - \frac{d\rho}{d \ln a} -2\rho \right).\]
+By comparing with the second equation, we have
+\[\frac{d\rho}{d \ln a} = -3(p+\rho).\]
+If we have the equation of state $p = k\rho$, then it is easy to verify that $\rho \propto a^{-3(k+1)}$.
+As for radiation (photon), we have $p_{\rm R} = 1/3 \rho_{\rm R}$, so $\rho_{\rm R} \propto a^{-4}$. As for cold matters (baryon, cold dark matter), we have $p_{\rm CM} = 0$, so $\rho_{\rm CM} \propto a^{-3}$. As for dark energy, we have $p_{\rm DE} = - \rho_{\rm DE}$, so $\rho_{\rm DE} = $ constant. Our universe is mainly composed of dark energy, cold dark matters, baryons and radiations. 
+The Friedmann equations can be now written as
+\[\frac{H^2}{H_0^2} = \Omega_{\rm R0}a^{-4} + \Omega_{\rm CM0} a^{-3} + \Omega_{\rm DE0} + \Omega_{\rm K0}a^{-2}.\]
+In equation above, the subscript $0$ denotes today's value of some parameters and we scale the coordinates to make $a_0 = 1$. 
+$H \equiv \dot{a} / a$ and $H_0$ is called Hubble's constant. $\Omega_0$ is the ratio between density $\rho_0$ of some substance and critical density $\rho_{\rm c0} \equiv \frac{3H_0^2}{8\pi}$. Particularly, $\rho_{\rm K0} = 3K/8\pi$ is called the density of curvature energy and we can note that $\Omega_{\rm K0} = 1 - \Omega_{\rm DE0} - \Omega_{\rm CM0} - \Omega_{\rm R0}$.
+
+\section{Observable quantities}
+\subsubsection{Redshift}
+Suppose there is a photon emitted from $r=0$ at time $t$, then the world line of the photon will satisfy that
+\[\left(\frac{dt}{dr}\right)^2 = \frac{a^2}{1-Kr^2}, \quad \theta = \mbox{ Constant}, \quad \phi = \mbox{ Constant}.\]
+In terms of four-momentum, we have
+\[\left(\frac{p^t}{p^r}\right)^2 = \frac{a^2}{1-Kr^2}\]
+On the other hand, we have the geodesic equation that
+\[\frac{dp^{t}}{d\lambda} + \Gamma^{t}_{\phantom{*}\alpha \beta} p^{\alpha}p^{\beta} = \frac{dp^{t}}{d\lambda} + \frac{a\dot{a}}{1-Kr^2}(p^r)^2 = 0.\]
+It can be simplified to
+\[\frac{dp^t}{p^t} + \frac{da}{a} = 0.\]
+Note that $a_0 = 1$, so we have $p^t_0 = ap^t$. Define cosmological redshift by $p_0^t = p^t/(1+z)$. We have the relation
+\[a = \frac{1}{1+z}.\]
+
+\subsubsection{Luminosity}
+Suppose there is an object with intrinsic luminosity $L$ at $r = 0$ and time $t$. Suppose at time $t_0$, the photon propagate to $r = r_0$(our position) at time $t_0$ (now). In coordinates $(\eta,\chi)$, we have $\eta_0 = \chi_0$. So
+\[\chi_0(z) = \int_{t}^{t_0} \frac{dt'}{a} = \int_{0}^{z} \frac{dz'}{H(z')},\]
+where $z$ is the redshift of the object and 
+\[r_0 \equiv \begin{cases} 
+\sin(\sqrt{K}\chi_0)/\sqrt{K}, K > 0 \\
+\chi_0, K = 0 \\
+\sinh(\sqrt{-K}\chi_0)/\sqrt{-K}, K < 0.
+\end{cases}\]
+The area size of the two surface $t=t_0$, $r=r_0$ is $4\pi r_0^2$. In time interval $\Delta t$, the object emitted $\Delta N$ photons, then we have $L = \epsilon \Delta N / \Delta t$. $\epsilon$ is the energy of the photon.
+The interval for receiver is $\Delta t_0 = \Delta t / a$ (It is easy to verify in coordinates $(\eta,\chi)$ that $\Delta \eta = \Delta \eta'$). Take into account the redshift of the photon, the flux we measured is
+\[f = \frac{\epsilon \Delta N}{(1+z)\Delta t_0 4\pi r_0^2} = \frac{L}{4\pi d_{\rm L}^2},\]
+where $d_{\rm L} = (1+z)r_0$.
+
+\subsubsection{Size}
+Suppose there is an object with intrinsic size $\Delta l$ at time $t$. Now we put ourselves at $r = 0$, so the object will be at the two surface with metric $d\sigma^2 = a(t)^2 r_0^2 d\Omega^2$. The angle it extends relative to us satisfy that $ar_0\Delta\theta = \Delta l$, i.e.
+\[\Delta \theta = \frac{\Delta l}{d_{\rm A}},\]
+where $d_{\rm A} = r_0/(1+z)$.
