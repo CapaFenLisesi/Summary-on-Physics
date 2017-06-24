@@ -10,7 +10,7 @@ where
 \[h \equiv \eta_{\mu\nu}h^{\mu\nu}.\]
 After a further contraction to form $R \equiv g^{\mu\nu}R_{\mu\nu} \approx \eta^{\mu\nu}R_{\mu\nu}$,
 one finds the Einstein equations read
-\[h_{\mu\alpha,\nu}^{\phantom{***}\alpha} + h_{\nu\alpha,\mu}^{\phantom{***}\alpha} - h_{\mu\nu,\alpha}^{\phantom{***}\alpha} - h_{,\mu\nu} - \eta_{\mu\nu}(h^{\alpha\beta}_{\phantom{**},\alpha\beta} - h_{,\alpha}^{\phantom{*}\alpha}) = 16\pi T_{\mu\nu}.\]
+\[h_{\mu\alpha,\nu}^{\phantom{****}\alpha} + h_{\nu\alpha,\mu}^{\phantom{****}\alpha} - h_{\mu\nu,\alpha}^{\phantom{****}\alpha} - h_{,\mu\nu} - \eta_{\mu\nu}(h^{\alpha\beta}_{\phantom{**},\alpha\beta} - h_{,\alpha}^{\phantom{*}\alpha}) = 16\pi T_{\mu\nu}.\]
 Define
 \[\overline{h}_{\mu\nu} \equiv h_{\mu\nu} - \frac{1}{2}\eta_{\mu\nu}h.\]
 The linearized field equations become
@@ -22,7 +22,7 @@ Two different types of coordinate transformations connect nearly globally Lorent
 transformations.
 \\
 Global Lorentz Transformations:
-s\\
+\\
 \[x^{\mu} = \Lambda^{\mu}_{\phantom{*}\alpha'}x^{\alpha'} , \quad \Lambda^{\mu}_{\phantom{*}\alpha'} \Lambda^{\nu}_{\phantom{*}\beta'} \eta_{\mu\nu} = \eta_{\alpha'\beta'} .\]
 We can verify that $h_{\mu\nu}$ and $\bar{h}_{\mu\nu}$
 transform like components of a tensor in flat spacetime
@@ -56,6 +56,115 @@ The corresponding metric is
 For a test particle whose velocity $v \ll 1$, the geodesic equation can be written as
 \[\frac{d^2 v^i}{dt^2} + \Gamma^{i}_{00} = \frac{d^2 v^i}{dt^2} + \Phi_{,i} = 0.\]
 So, we reproduce the classical Newtonian gravitation theory.
+\\ \\
+Now let us consider the path of a photon through
+this geometry; in other words, solve the perturbed geodesic equation for a null trajectory $x^{\mu}(\lambda)$. (We parametrize the trajectory with $\lambda$ to ensure that $p^{\mu} = dx^{\mu}/d\lambda$.)
+Recall that our philosophy is to consider the metric perturbation as a field defined on a flat background spacetime. 
+Similarly, we can decompose the geodesic into a background path plus a perturbation,
+\[x^{\mu}(\lambda) = x^{(0)\mu}(\lambda) + x^{(1)\mu}(\lambda),\]
+where $x^{(0)\mu}(\lambda)$ solves the geodesic equation in the background. 
+We then evaluate all quantities along the background path, to solve for $x^{(1)\mu}(\lambda)$. 
+For this procedure to make sense, we need to assume that the potential $\Phi$ is not appreciably different along the background and true geodesies;
+this condition amounts to requiring that $x^{(1)i}\partial_{i}\Phi \ll \Phi$. 
+For convenience we denote the wave vector of the background path as $k^{\mu}$ and the derivative of the deviation vector as $l^{\mu}$. The condition that a path be null is of course
+\[(\eta_{\mu\nu} + h_{\mu\nu})(l^{\mu}+k^{\mu})(l_{\nu} + k_{\nu}) = 0.\]
+At zeroth order we simply have
+\[\eta_{\mu\nu} k^{\mu} k^{\nu} = 0.\]
+i.e.
+\[k^2 \equiv (k^0)^2 = \vec{k}\cdot\vec{k}.\]
+At first order we obtain
+\[2\eta_{\mu\nu}k^{\mu}l^{\nu} + h_{\mu\nu}k^{\mu}k^{\nu} = 0,\]
+i.e.
+\[-k l^0 + \vec{l}\cdot\vec{k} = 2k^2\Phi.\]
+We now turn to the perturbed geodesic equation. The zeroth-order geodesic equation simply tells us that $x^{(0)\mu}(\lambda)$ is a straight  trajectory, while at first order we have
+\[\frac{dl^{\mu}}{d\lambda} = -\Gamma^{\mu}_{\rho\sigma}k^{\rho}k^{\sigma},\]
+i.e.
+\[\frac{dl^0}{d\lambda} = -2k(\vec{k}\cdot\vec{\nabla}\Phi), \quad \frac{d\vec{l}}{d\lambda} = -2k^2\vec{\nabla}_{\bot}\Phi,\]
+where $\vec{\nabla}_{\bot} \equiv k^{-2}\vec{k}(\vec{\nabla} - \vec{k}\cdot\vec{\nabla})$.
+Putting all equations together, we have
+\[l^0 = -2k \Phi, \quad \vec{l} \cdot \vec{k} = 0, \quad \vec{l} = -2k^2 \int \vec{\nabla}_{\bot}\Phi d\lambda.\] 
+The redshift due to gravitation is
+\[z \equiv \frac{l^0}{k} = -2\Phi.\]
+The deflection angle due to gravitation is
+\[\vec{\alpha} = -\frac{\vec{l}}{k} = 2k\int \vec{\nabla}_{\bot}\Phi d\lambda.\]
+Particularly, if $\Phi = -M/r$, we can get
+\[z = \frac{2M}{r}, \quad \alpha = \frac{4M}{b},\]
+where $b$ is the distance between mass point and light ray.
+
+\section{Gravitational wave}
+Let us decompose $h_{\mu\nu}$ as
+\[h_{00} = -2A , \quad h_{0i} = \partial_i B + \bar{B}_i , \quad h_{ij} = 2C\delta_{ij} + 2\partial_i\partial_j E + \partial _i\bar{E}_j + \partial_j\bar{E}_i + \tilde{E}_{ij} \]
+with
+\[\partial_i \bar{B}_i = 0 , \quad \partial_i \bar{E}_i = 0 , \quad \partial_i \tilde{E}_{ij} = 0 , \quad \tilde{E}^i_i = 0.\]
+Then we decompose the displacement vector for gauge transformation as
+\[\xi^0 = -T , \quad \xi^i = -\partial^i L - \bar{L}^i \]
+with $\partial_i \bar{L}^i = 0$. 
+Under such coordinate transformation , the metric transform as
+\[A \to A + \dot{T} , \quad B \to B + \dot{L} - T , \quad C \to C , \quad E \to E  + L \]
+for the scalar modes,
+\[\bar{B}_i \to \bar{B}_i + \dot{\bar{L}}_i , \quad \bar{E}_i \to \bar{E}_i + \bar{L}_i \]
+for the vector modes, and the tensor modes remain unchanged
+\[\tilde{E}_{ij} \to \tilde{E}_{ij}.\]
+The tensor modes are therefore gauge invariant since they do not depend on the choice of the coordinate system. This is not the case for the vector and scalar modes. 
+However, we can define a combination of these modes that are gauge invariant. For the scalar modes, we define
+\[\Phi = A + \dot{B} - \ddot{E} , \quad \Psi = -C, \]
+and for the vector modes
+\[\bar{\Phi}_i = \dot{\bar{E}}_i - \bar{B}_i.\]
+We therefore have defined 2 scalar quantities and 1 vector quantity (2 degrees of freedom) which are gauge invariant. All together , we therefore have $6$ degrees of freedom, once the $4$ arbitrary degrees of freedom related to the gauge choice have been absorbed.
+\\ \\
+In terms of gauge invariant quantities, the Einstein tensor can be written as
+\begin{eqnarray}
+G_{00} &=& 2\nabla^2 \Psi, \nonumber \\
+G_{0i} &=& 2\nabla_{i} \dot{\Psi} + \frac{1}{2}\nabla^2 \bar{\Psi}_{i}, \nonumber \\
+G_{ij} &=& (\delta_{ij}\nabla^2-\nabla_{i} \nabla_{j})(\Phi-\Psi) + \frac{1}{2}\left( \nabla_{i} \dot{\bar{\Psi}}_{j} + \nabla_{j} \dot{\bar{\Psi}}_{i}\right) + 2\delta_{ij}\ddot{\Psi} - \frac{1}{2}\Box \tilde{E}_{ij}. \nonumber
+\end{eqnarray}
+So we note again that Einstein tensor (Ricci tensor) is gauge invariant.
+\\ \\
+Now we consider the solution of linearised Einstein equation in vacuum.
+For the scalar modes, the Einstein equation $G_{\mu\nu} = 0$ imply that
+\[\nabla^2 \Psi = 0 , \quad \nabla^2(\Phi-\Psi) = 0.\]
+The only regular solutions are
+\[\Phi = \Psi = 0,\]
+which means that no scalar mode can propagate.
+\\ \\
+For the vector modes, we have
+\[\nabla^2 \bar{\Phi}_i = 0.\]
+The only regular solution is $\bar{\Phi}_i = 0$. Just as for scalar modes, no vector modes can propagate.
+\\ \\
+For tensor modes, we have
+\[\Box \tilde{E}_{ij} = 0.\]
+So, the only perturbations that can propagate in a Minkowski space-time are the gravitational waves and they satisfy
+\[\Box \tilde{E}_{ij} = 0 , \quad \partial_i \tilde{E}_{ij} = 0 , \quad \tilde{E}^i_i = 0.\]
+The three conditions $\Phi = \Psi = \bar{\Phi}_i = 0$ define a gauge equivalence class. We can choose a gauge in this family by imposing some conditions on the perturbations. For instance, setting $E = B = 0$ and $\bar{E}_i = 0$, we define what is called a transverse and traceless (TT) gauge in which the metric is completely determined. In this case, the only non-vanishing component of $h_{\mu\nu}^{\mathrm{TT}}$ is $\tilde{E}_{ij}$.
+A particularly useful set of solutions to this wave 
+equation are the plane waves, given by
+\[h^{\rm TT}_{\mu\nu} C_{\mu\nu}e^{ik^{\sigma}x_{\sigma}},\]
+where $C_{\mu\nu}$ is a constant, symmetric, traceless
+and purely spatial tensor. The Einstein equation  now becomes
+\[k^{\sigma}k_{\sigma} = 0, \quad k^{\mu} C_{\mu\nu} = 0.\]
+Our solution can be made more explicit by choosing spatial coordinates such that the wave is travelling in the $z$ direction. A little algebra can show that
+\[h_{ij}^{\rm TT} = \left( C_{+}\epsilon^+_{ij} + C_{\times} \epsilon^{\times}_{ij} \right) e^{-i\omega(t-z)},\]
+with the two polarization tensors being defined by
+\[\epsilon^+ \equiv \begin{pmatrix}
+1 & 0 & 0\\ 0 & -1 & 0 \\ 0 & 0 & 0
+\end{pmatrix} , \quad \epsilon_{\times} \equiv \begin{pmatrix}
+0 & 1 & 0\\ 1 & 0 & 0 \\ 0 & 0 & 0
+\end{pmatrix} .\]
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.4]{./GR/GW.jpg}
+\caption{Effects of a gravitational plane wave propagating along the axis $z$ on a ring of particles located in the plane $xy$, depending on the wave polarization.}
+\end{figure}
+\noindent
+Consider the geodesic equation of a test particle in the gravitational field of a gravitational wave in the TT gauge. Since to leading order in perturbation we have $\Gamma^i_{00} = 0$, a particle initially at rest will remain at rest.
+Of course, this does not mean that nothing happens , but rather that the frame of reference is co moving with the test particle. To see if anything happens , we should look at the relative motion of two neighbouring particles, which can be done using the geodesic deviation equation. The relative acceleration is given by
+\[\nabla_{\bm{u}} \nabla_{\bm{u}} \bm{n} = -R(\bm{n},\bm{u}) \bm{u}.\]
+To leading order in $v$, we have $u^{\mu} = (1,0)$ and $n^{\mu} = (0,n^i)$, $R{i00j} = \frac{1}{2}\ddot{h}_{ij}^{\mathrm{TT}}$. So that
+\[\frac{d^2n^i}{dt^2} = \frac{1}{2} \ddot{h}_{ij} ^{\mathrm{TT}} n^j.\]
+For $+$ modes, we have
+\[\frac{d^2n^x}{dt^2} = - \frac{1}{2}\omega^2 C_{+}n^x e^{-i\omega(t-z)}, \quad \frac{d^2n^y}{dt^2} = \frac{1}{2}\omega^2 C_{+}n^y e^{-i\omega(t-z)}.\]
+For $\times$ modes, we have
+\[\frac{d^2n^x}{dt^2} = - \frac{1}{2}\omega^2 C_{\times}n^y e^{-i\omega(t-z)}, \quad \frac{d^2n^y}{dt^2} = - \frac{1}{2}\omega^2 C_{\times}n^x e^{-i\omega(t-z)}.\]
 
 \section{External field of a gravitating source}
 Consider an isolated system with gravity so weak that in calculating its structure and motion one can completely ignore self-gravitational effects. Calculate the weak gravitational field
@@ -154,65 +263,7 @@ Only those portions of $t^{\mu\nu}_{\mathrm{L-L}}$ that die out as $\frac{1}{r^2
 \[T^{\mu\nu}_{\mathrm{eff}} = T^{\mu\nu} + T^{\mu\nu}_{\mathrm{GW}}.\]
 So, the rate of loss of 4-momentum and angular momentum from the system, as measured gravitationally, is precisely equal to the rate at which matter, fields, and gravitational waves carry off 4-momentum and angular momentum.
 
-\section{Gravitational wave}
-Let us decompose $h_{\mu\nu}$ as
-\[h_{00} = -2A , \quad h_{0i} = \partial_i B + \bar{B}_i , \quad h_{ij} = 2C\delta_{ij} + 2\partial_i\partial_j E + \partial _i\bar{E}_j + \partial_j\bar{E}_i + \tilde{E}_{ij} \]
-with
-\[\partial_i \bar{B}_i = 0 , \quad \partial_i \bar{E}_i = 0 , \quad \partial_i \tilde{E}_{ij} = 0 , \quad \tilde{E}^i_i = 0.\]
-Then we decompose the displacement vector for gauge transformation as
-\[\xi^0 = -T , \quad \xi^i = -\partial^i L - \bar{L}^i \]
-with
-\[\partial_i \bar{L}^i = 0.\]
-Under such coordinate transformation , the metric transform as
-\[A \to A + \dot{T} , \quad B \to B + \dot{L} - T , \quad C \to C , \quad E \to E  + L \]
-for the scalar modes,
-\[\bar{B}_i \to \bar{B}_i + \dot{\bar{L}}_i , \quad \bar{E}_i \to \bar{E}_i + \bar{L}_i \]
-for the vector modes, and the tensor modes remain unchanged
-\[\tilde{E}_{ij} \to \tilde{E}_{ij}.\]
-The tensor modes are therefore gauge invariant since they do not depend on the choice of the coordinate system. This is not the case for the vector and scalar modes. However, we can define a combination of these modes that are gauge invariant. For the scalar modes, we define
-\[\Phi = A + \dot{B} - \ddot{E} , \quad \Psi = -C, \]
-and for the vector modes
-\[\bar{\Phi}_i = \dot{\bar{E}}_i - \bar{B}_i.\]
-We therefore have defined 2 scalar quantities and 1 vector quantity (2 degrees of freedom) which are gauge invariant. All together , we therefore have $6$ degrees of freedom, once the $4$ arbitrary degrees of freedom related to the gauge choice have been absorbed.
-\\ \\
-For the scalar modes, the Einstein equation $G_{\mu\nu} = 0$ imply that
-\[\nabla^2 \Psi = 0 , \quad \partial_i \dot{\Psi} =0 , \quad \Phi-\Psi = 0.\]
-The only regular solutions are
-\[\Phi = \Psi = 0,\]
-which means that no scalar mode can propagate.
-\\ \\
-For the vector modes, we have
-\[\nabla^2 \bar{\Phi}_i = 0.\]
-The only regular solution is $\bar{\Phi}_i = 0$. Just as for scalar modes, no vector modes can propagate.
-\\ \\
-For tensor modes, we have
-\[\Box \tilde{E}_{ij} = 0.\]
-So, the only perturbations that can propagate in a Minkowski space-time are the gravitational waves and they satisfy
-\[\Box \tilde{E}_{ij} = 0 , \quad \partial_i \tilde{E}_{ij} = 0 , \quad \tilde{E}^i_i = 0.\]
-The three conditions $\Phi = \Psi = \bar{\Phi}_i = 0$ define a gauge equivalence class. We can choose a gauge in this family by imposing some conditions on the perturbations. For instance, setting $E = B = 0$ and $\bar{E}_i = 0$, we define what is called a transverse and traceless (TT) gauge in which the metric is completely determined. In this case, the only non-vanishing component of $h_{\mu\nu}^{\mathrm{TT}}$ is $\tilde{E}_{ij}$.
-\\ \\
-Let us consider a plane wave propagating along the axis $z$ in the TT gauge. Since the wave is transverse and traceless, it satisfies $h_{xz}^{\mathrm{TT}} = h_{yz}^{\mathrm{TT}} = h_{zz}^{\mathrm{TT}} = 0$. Therefore, it has only two degrees of freedom (two polarizations) that should satisfy $h_{xx}^{\mathrm{TT}} = - h_{yy}^{\mathrm{TT}}$ ans $h_{xy}^{\mathrm{TT}} = h_{yx}^{\mathrm{TT}}$. We hence can decompose it as following
-\[h_{ij}^{\mathrm{TT}} = E_+(t-z)\epsilon^+_{ij} + E_{\times}(t-z)\epsilon^{\times}_{ij},\]
-with the two polarization tensors being defined by
-\[\epsilon^+ \equiv \begin{pmatrix}
-1 & 0 & 0\\ 0 & -1 & 0 \\ 0 & 0 & 0
-\end{pmatrix} , \quad \epsilon_{\times} \equiv \begin{pmatrix}
-0 & 1 & 0\\ 1 & 0 & 0 \\ 0 & 0 & 0
-\end{pmatrix} .\]
-The solution of the propagation equation is $E_{+ / \times} = A_{+ / \times}\cos(k(z-t)+ \phi)$.
-\\ \\
-Consider the geodesic equation of a test particle in the gravitational field of a gravitational wave in the TT gauge. Since to leading order in perturbation we have $\Gamma^i_{00} = 0$, a particle initially at rest will remain at rest.
-Of course, this does not mean that nothing happens , but rather that the frame of reference is co moving with the test particle. To see if anything happens , we should look at the relative motion of two neighbouring particles, which can be done using the geodesic deviation equation. The relative acceleration is given by
-\[\nabla_{\bm{u}} \nabla_{\bm{u}} \bm{n} = -R(\bm{n},\bm{u}) \bm{u}.\]
-To leading order in $v$, we have $u^{\mu} = (1,0)$ and $n^{\mu} = (0,n^i)$, $R^0_{i0j} = -\frac{1}{2}\ddot{h}_{ij}^{\mathrm{TT}}$. So that
-\[\frac{d^2n^i}{dt^2} = -\frac{1}{2} \ddot{h}_{ij} ^{\mathrm{TT}} n^j.\]
-Following figure illustrates the deformation of a ring of particles under the influence of a gravitational plane wave propagating along the axis $z$ for each polarization.
 
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.4]{./GR/GW.jpg}
-\caption{Effects of a gravitational plane wave propagating along the axis $z$ on a ring of particles located in the plane $xy$, depending on the wave polarization.}
-\end{figure}
 
 \chapter{Black Holes}
 \section{Schwarzschild black hole}
@@ -281,6 +332,35 @@ For large $L$ there will be two circular orbits, one stable and one unstable. In
 In this limit the stable circular orbit becomes farther away, while the unstable one approaches $3M$, behaviour that parallels the massless case. As we decrease $L$,
 the two circular orbits come closer together; they coincide when $L = \sqrt{12}M$ for which $r_{\rm c} = 6M$. We have therefore found that the Schwarzschild solution possesses stable circular orbits for $r > 6M$ and unstable circular orbits for $3M < r < 6M$. 
 It's important to remember that these are only the geodesies; there is nothing to stop an accelerating particle from dipping below $r = 3M$ and emerging, as long as it stays beyond $r = 2M$.
+\\ \\
+As for a general non-circular orbit, we have the equation for orbit
+\[\left(\frac{dr}{d\phi}\right)^2 + \frac{1}{L^2}r^4 - \frac{2M}{L^2}r^3 + r^2 - 2Mr = \frac{2E}{L^2}r^4. \] 
+Define $x \equiv L^2/Mr$, we can get
+\[\left(\frac{dx}{d\phi}\right)^2 + \frac{L^2}{M^2} - 2x + x^2 - \frac{2M^2}{L^2}x^3 = \frac{2EL^2}{M^2}. \]
+Then we differentiate equation above with respect to $\phi$ to get
+\[\frac{d^2x}{d\phi^2} - 1 + x = \frac{3M^2}{L^2}x^2.\]
+In a Newtonian calculation, the last term would be absent, and we could solve for $x$ exactly; here, we suppose the orbit is far from horizon and treat it as a perturbation.
+We expand $x$ into a Newtonian solution plus a small deviation, $x = x_0 + x_1$. The solution for the zeroth-order equation can be written as
+\[x_0 = 1 + e\cos\phi.\]
+So the first-order equation will be
+\[\frac{d^2x_1}{d\phi^2} + x_1 = \frac{3M^2}{L^2}(1+e\cos\phi)^2.\]
+After some approximation, we can get
+\[x = 1 + e\cos((1-\alpha)\phi),\]
+where $\alpha = 3M^2/L^2$. During each orbit, perihelion 
+advances by an angle
+\[\Delta \phi = 2\pi \alpha = \frac{6\pi M^2}{L^2}.\]
+An ordinary ellipse satisfies
+\[r = \frac{(1-e^2)a}{1+e\cos\phi},\]
+where $a$ is the semi-major axis. Comparing to our zeroth-order solution and the definition of $x$, we see that
+\[L^2 \approx M(1-e^2)a.\]
+Finally, we have
+\[\Delta \phi = \frac{6\pi M}{(1-e^2)a}.\]
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.35]{GR/perihelion.png}
+\caption{Perihelion of Mercury.}
+\end{figure}
 
 \subsection{Penrose diagram and event horizon}
 In theoretical physics, a Penrose diagram is a two-dimensional diagram capturing the causal relations between different points in spacetime. 
@@ -297,9 +377,9 @@ The metric can be written as
 \[ds^2 = \frac{-dT^2+dR^2}{4\cos^2\frac{T+R}{2} \cos^2 \frac{T-R}{2}} + r^2(T,R) d\Omega^2.\]
 The range of the new coordinates are $0 \leq R < \pi$ and  $|T| + R < \pi$.
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.2]{GR/Penrose1.png}
+\includegraphics[scale=0.15]{GR/Penrose1.png}
 \caption{Penrose diagram of Minkowski spacetime}
 \end{figure}
 
@@ -320,10 +400,9 @@ Thus, their most important feature is actually not the singularity at the center
 An event horizon is a hypersurface separating those spacetime points that are connected to infinity by a timelike path from those that are not. 
 In general relativity, the global structure of spacetime can take many different forms, with correspondingly  different notions of infinity. 
 But to think about black holes in the real universe, we use infinity as a proxy for ``well outside the black hole,'' and imagine that spacetime sufficiently far away from the hole can be approximated by Minkowski space.
-
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.3]{GR/Penrose2.eps}
+\includegraphics[scale=0.25]{GR/Penrose2.eps}
 \caption{Penrose diagram of event horizon}
 \end{figure}
 
@@ -373,6 +452,7 @@ the entire manifold described by this solution.
 \end{figure}
 
 \noindent
+\\
 Finally, we can further transform the coordinates to bring them into a finite range and get the Penrose diagram of Schwarzschild spacetime.
 
 \begin{figure}[!htb]
@@ -421,7 +501,7 @@ Null geodesies can reach the singularity, as can nongeodesic timelike curves.
 As $r \to \infty$ the solution approaches flat spacetime, and as we have just seen the causal structure seems normal everywhere. 
 The conformal diagram will therefore be just like that of Minkowski space, except that now $r = 0$ is a singularity.
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.4]{GR/BH5.png}
 \caption{Penrose diagram of RN spacetime}
@@ -476,13 +556,13 @@ For the Kerr metric, the equation $g_{tt}$ also has two solutions, $r = r_{\pm}$
 Physically, this corresponds to a surface of infinite redshift usually called an ergosurface.
 The region between outer ergosurface and horizon is called the ergosphere.
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.15]{GR/BH6.png}
 \caption{Schematic picture showing the geometrical structure of the Kerr spacetime.}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.2]{GR/BH7.png}
 \caption{The Penrose-Carter diagram for the Kerr spacetime for the case $M > a$.}
