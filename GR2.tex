@@ -46,11 +46,11 @@ This viewpoint allows one to use curvilinear coordinates, if one wishes. But in 
 
 \section{Nearly Newtonian gravitational fields}
 The general solution to the linearized field equations in Lorentz gauge lends itself to expression as a retarded integral of the form familiar from electromagnetic theory:
-\[\overline{h}_{\mu\nu}(t,\bm{x}) = \int \frac{4T_{\mu\nu}(t-R,\bm{x}')}{R} d^3x' , \quad R = |\bm{x}-\bm{x}'|.\]
+\[\overline{h}_{\mu\nu}(t,\bm{x}) = \int \frac{4T_{\mu\nu}(t-r,\bm{x}')}{r} d^3x' , \quad r = |\bm{x}-\bm{x}'|.\]
 Here focus attention on a nearly Newtonian source: $T_{00} \gg |T_{0i}|$ and $T_{00} \gg |T_{ij}|$, and velocities
 slow enough that retardation is negligible. In this case, we have
 \[\overline{h}_{00} = -4\Phi , \quad \overline{h}_{0i} = \overline{h}_{ij} = 0.\]
-\[\Phi(t,\bm{x}) = -\int \frac{T_{00}(t,\bm{x}')}{R} d^3x' = \mbox{ Newtonian potential }.\]
+\[\Phi(t,\bm{x}) = -\int \frac{T_{00}(t,\bm{x}')}{r} d^3x' = \mbox{ Newtonian potential }.\]
 The corresponding metric is
 \[ds^2 = -(1+2\Phi)dt^2 + (1-2\Phi)(dx^2 + dy^2 + dz^2) \approx -(1-\frac{2M}{r})dt^2 + (1+\frac{2M}{r})(dx^2 + dy^2 + dz^2).\]
 For a test particle whose velocity $v \ll 1$, the geodesic equation can be written as
@@ -166,17 +166,49 @@ For $+$ modes, we have
 For $\times$ modes, we have
 \[\frac{d^2n^x}{dt^2} = - \frac{1}{2}\omega^2 C_{\times}n^y e^{-i\omega(t-z)}, \quad \frac{d^2n^y}{dt^2} = - \frac{1}{2}\omega^2 C_{\times}n^x e^{-i\omega(t-z)}.\]
 
+\section{Production of gravitational wave}
+Define the Fourier transform of metric perturbation, by
+\[\widetilde{\bar{h}}_{\mu\nu}(\omega, \bm{x}) \equiv \int dt e^{i\omega t} \bar{h}_{\mu\nu}(t,x).\]
+In Lorentz gauge, we have
+\[\widetilde{\bar{h}}_{\mu\nu}(\omega, \bm{x}) = \int d^3x' e^{i\omega R} \frac{\widetilde{T}_{\mu\nu}(\omega,\bm{x}')}{r},\]
+where $r = |\bm{x} - \bm{x}'|$.
+We now make the approximations that our source is isolated, far away, and slowly moving. This leaves us with
+\[\widetilde{\bar{h}}_{\mu\nu}(\omega, \bm{x}) = \frac{4e^{i\omega r}}{r} \int d^3x' \tilde{T}_{\mu\nu}(\omega, \bm{x}').\]
+The Lorenz gauge condition $\partial_{\mu}\bar{h}^{\mu\nu}(t,\bm{x}) = 0$ in Fourier space implies $i\omega \widetilde{\bar{h}}^{0\nu} = \partial_{i} \widetilde{\bar{h}}^{i\nu}$. 
+We therefore only need to concern ourselves with the spacelike components of $\widetilde{\bar{h}}$.
+We therefore want to take the integral of the spacelike components $\widetilde{T}^{\mu\nu}$. After some simplification, we can get
+\[\int d^3y \widetilde{T}^{ij}(\omega,\bm{y}) = - \frac{\omega^2}{2} \int  d^3y \, y^i y^j \widetilde{T}^{00}.\]
+It is conventional to define the quadrupole moment tensor of the energy density of the source,
+\[I^{ij} \equiv \int d^3y \, T^{00} y^i y^j.\]
+Transform back to $t$ and we can obtain the quadrupole formula,
+\[\bar{h}_{ij}(t,\bm{x}) = \frac{2}{r} \frac{d^2 I_{ij}}{dt^2}(t-r).\]
+One case of special interest is the gravitational radiation emitted by a binary star. 
+For simplicity let us consider two stars of mass $M$ in a circular orbit in the $x-y$ plane, at distance $R$ from their common center of mass. 
+We will treat the motion of the stars in the Newtonian approximation. The angular frequency of the orbit is $\Omega = (M/4R^3)^{1/2}$. 
+The corresponding energy density is
+\[T^{00}(t,\bm{x}) = M\delta(\bm{x}) [\delta(x-R\cos\Omega t)\delta(y-R\sin\Omega) + \delta(x+R\cos\Omega t)\delta(y+R\sin\Omega)].\]
+The quadrupole moment in $x-y$ plane if the system is
+\[I = MR^2 \begin{pmatrix}
+1 + \cos 2\Omega t & \sin 2\Omega t \\
+\sin 2\Omega t & 1 - \cos 2\Omega t
+\end{pmatrix}. \]
+So the spacelike metric perturbation in $x-y$ plane is
+\[\bar{h} = \frac{8M\Omega^2R^2}{r} \begin{pmatrix}
+- \cos 2\Omega (t-r) & -\sin 2\Omega (t-r) \\
+-\sin 2\Omega (t-r) & + \cos 2\Omega (t-r)
+\end{pmatrix}. \]
+
 \section{External field of a gravitating source}
 Consider an isolated system with gravity so weak that in calculating its structure and motion one can completely ignore self-gravitational effects. Calculate the weak gravitational field
 \[\bar{\bar{h}}_{\mu\nu}(t,\bm{x}) \equiv h_{\mu\nu}(t,\bm{x}) = \int \frac{4\bar{T}_{\mu\nu}(t-R,\bm{x}')}{R} d^3x',\]
-produced by such a system. Restrict attention to the spacetime region far outside the system, and expand $h_{\mu\nu}$ in powers $\frac{\bm{x}'}{r} \equiv \frac{\bm{x}'}{r}$, we can get
+produced by such a system. Restrict attention to the spacetime region far outside the system, and expand $h_{\mu\nu}$ in powers of $\bm{x}' / {r}$, we can get
 \begin{eqnarray}
-ds^2 &=& -\left[1-\frac{2M}{r} + O(\frac{1}{r^3}) \right]dt^2 - \left[4\epsilon_{jkl}S^k \frac{x^l}{r^3} + O(\frac{1}{r^3})  \right] dtdx^i  \nonumber \\
-&+& \left[(1+\frac{2M}{r})\delta_{jk} + \mbox{ gravitational radiation terms that die out as } O(\frac{1}{r}) ) \right]dx^j dx^k , \nonumber
+ds^2 &=& -\left[1-\frac{2M}{r} + O({1}/{r^3}) \right]dt^2 - \left[4\epsilon_{jkl}S^k \frac{x^l}{r^3} + O({1}/{r^3})  \right] dtdx^i  \nonumber \\
+&+& \left[(1+\frac{2M}{r})\delta_{jk} + \mbox{ gravitational radiation terms that die out as } O(1/r) \right]dx^j dx^k , \nonumber
 \end{eqnarray}
 where
 \[M \equiv \int T^{00}d^3x , \quad S_k \equiv \int \epsilon_{klm}x^l T^{m0} d^3x .\]
-It is plausible to say the mass of the system is $M$ and the angular momentum $\bm{S}$. With an appropriate choice of gauge, $g_{00}$ far from any weak source are time-independent and are determined uniquely by the source's mass $M$; $g_{0j}$ is time-independent and is fixed by the source's intrinsic angular momentum $S^j$; but $g_{jk}$ has time-dependent terms (gravitational waves!) of $O(\frac{1}{r})$.
+It is plausible to say the mass of the system is $M$ and the angular momentum $\bm{S}$. With an appropriate choice of gauge, $g_{00}$ far from any weak source are time-independent and are determined uniquely by the source's mass $M$; $g_{0j}$ is time-independent and is fixed by the source's intrinsic angular momentum $S^j$; but $g_{jk}$ has time-dependent terms (gravitational waves) of $O(1/r)$.
 \\ \\
 The values of a system's mass and angular momentum can be measured by probing the imprint they leave in its external gravitational field. 
 Of all tools one might use to probe, the simplest is a test particle in a gravitationally bound orbit. 
@@ -193,11 +225,11 @@ The angular velocity of precession is
 One sometimes says that the source's rotation ``drags the inertial frames near the source,'' thereby forcing the gyroscope to precess.
 \\ \\
 Consider an isolated, gravitating system inside which spacetime may or may not be highly curved. We restrict attention to the weak gravitational field far from the source, and analyze it using linearized theory in vacuum.
-Expand $h_{\mu\nu}$ in multipole moments and powers of $\frac{1}{r}$; and adjust the gauge, the Lorentz frame, and the origin of coordinates to simplify the resulting metric.
+Expand $h_{\mu\nu}$ in multipole moments and powers of $1/r$; and adjust the gauge, the Lorentz frame, and the origin of coordinates to simplify the resulting metric.
 We have
 \begin{eqnarray}
-ds^2 &=& -\left[1-\frac{2M}{r} + \frac{2M^2}{r^2} + O(\frac{1}{r^3}) \right]dt^2 - \left[4\epsilon_{jkl}S^k \frac{x^l}{r^3} + O(\frac{1}{r^3})  \right] dtdx^i  \nonumber \\
-&+& \left[(1+\frac{2M}{r} + \frac{3M^2}{2r^2})\delta_{jk} + \mbox{ gravitational radiation terms that die out as } O(\frac{1}{r}) ) \right]dx^j dx^k. \nonumber
+ds^2 &=& -\left[1-\frac{2M}{r} + \frac{2M^2}{r^2} + O({1}/{r^3}) \right]dt^2 - \left[4\epsilon_{jkl}S^k \frac{x^l}{r^3} + O({1}/{r^3})  \right] dtdx^i  \nonumber \\
+&+& \left[(1+\frac{2M}{r} + \frac{3M^2}{2r^2})\delta_{jk} + \mbox{ gravitational radiation terms that die out as } O({1}/{r}) ) \right]dx^j dx^k. \nonumber
 \end{eqnarray}
 However, $M$ and $\bm{S}$ is not a simple integration of $T^{00}$ and $\epsilon_{klm} x^l T^{0m}$ of the system as in the case of weakly gravitating sources.
 However, since this integration is impossible to measure in practice. We always determine the mass of the star by studying the orbits of planets in its external gravitational field. So, one defines the ``total mass-energy'' $M$ of the sun or other body to be the constant that appears in the line element for its distant external spacetime geometry. Similarly, one defines the body's intrinsic angular momentum as the constant 3-vector $\bm{S}$ appearing in its line element.
@@ -241,8 +273,7 @@ for both strong or weak source.
 Define gravitation energy-momentum pseudotensor as
 \[16\pi t^{\mu\nu} \equiv H^{\mu\alpha\nu\beta}_{\phantom{****},\alpha
 \beta} - 2G^{\mu\nu},\]
-so we have
-\[T^{\mu\nu}_{\mathrm{eff}} = T^{\mu\nu} + t^{\mu\nu}.\]
+so we have $T^{\mu\nu}_{\mathrm{eff}} = T^{\mu\nu} + t^{\mu\nu}$. 
 All the quantities $H^{\alpha\mu\nu\beta}$, $t^{\mu\nu}$ and $T^{\mu\nu}_{\mathrm{eff}}$ depend for their definition and existence on the choice of coordinates.
 There is, nevertheless, adequate invariance under general coordinate transformations to give the values $P^{\mu}$ and $J^{\mu\nu}$ of the volume integrals geometric, coordinate-free significance in the asymptotically flat region far outside the source.
 Although this invariance is hard to see in the volume integrals themselves, it is clear from the surface-integral forms that no coordinate transformation which changes the coordinates only inside some spatially bounded region can influence the values of the integrals. 
@@ -257,13 +288,29 @@ For a system of gravitating bodies, we have
 \[\frac{dJ^{\mu\nu}}{dt} = -\oint(x^{\mu}T^{\nu j}_{\mathrm{eff}} - x^{\nu}T^{\mu j}_{\mathrm{eff}}) d^2 S_j.\]
 The flux is integrated over the surface in asymptomatic flat region. Although the pseudotensor $t^{\mu\nu}$ in the interbody region and outside the system, contributes negligibly to the total 4-momentum and angular momentum, its contribution via gravitational waves to the time derivatives can be important when added up over astronomical periods of time. Thus, one must not ignore it in the flux integrals.
 \\ \\
-In evaluating these flux integrals, it is especially convenient to use the Landau- Lifshitz form of $T^{\mu\nu}_{\mathrm{eff}}$, since that form contains no second derivatives of the metric. Thus set
-\[T^{\mu\nu}_{\mathrm{eff}} = (-g)(T^{\mu\nu} + t^{\mu\nu}_{\mathrm{L-L}}) \approx T^{\mu\nu} + t^{\mu\nu}_{\mathrm{L-L}}.\]
-Only those portions of $t^{\mu\nu}_{\mathrm{L-L}}$ that die out as $\frac{1}{r^2}$ at large $r$ can contribute to the flux integrals. For static solutions, $t^{\mu\nu}_{\mathrm{L-L}}$ dies out as $\frac{1}{r^4}$. Hence, the only contributions come from dynamic parts of the metric, which, at these large distances, are entirely in the form of gravitational waves. The study of gravitational waves will reveal that when $t^{\mu\nu}_{\mathrm{L-L}}$ is averaged over several wavelengths, it becomes a stress-energy tensor $T^{\mu\nu}_{\mathrm{GW}}$ for the waves, which has all the properties one ever requires of any stress-energy tensor. One can freely make in these integrals the replacement
-\[T^{\mu\nu}_{\mathrm{eff}} = T^{\mu\nu} + T^{\mu\nu}_{\mathrm{GW}}.\]
-So, the rate of loss of 4-momentum and angular momentum from the system, as measured gravitationally, is precisely equal to the rate at which matter, fields, and gravitational waves carry off 4-momentum and angular momentum.
-
-
+There are some limitations on our interpretation of $t_{\mu\nu}$ as an energy-momentum tensor. 
+It is not invariant  under gauge transformations. 
+One way of circumventing this difficulty is to average the energy-momentum tensor over several wavelengths, an operation we denote by angle brackets $\langle \cdots \rangle$.
+Since any terms that are derivatives (as opposed to products of derivatives) will average to zero, we are therefore empowered to integrate by parts under the averaging brackets,
+\[\langle A(\partial_{\mu} B) \rangle = - \langle (\partial_{\mu} A)B \rangle.\]
+After a lot of messy intermediate steps, we will arrive at
+\[t_{\mu\mu} = \frac{1}{32\pi} \left\langle (\partial_{\mu}h_{\rho\sigma})(\partial_{\nu}h^{\rho\sigma}) - \frac{1}{2} \partial_{\mu} h \partial_{\nu} h - (\partial_{\rho}h^{\rho\sigma})(\partial_{\mu}h_{\nu\sigma}) - (\partial_{\rho}h^{\rho\sigma})(\partial_{\nu}h_{\mu\sigma})\right\rangle + O(h^3).\]
+Since we only care about $t_{\mu\nu}$ in vacuum far from the source, we can adopt TT gauge and neglect higher order terms. 
+For a ``monochromatic'' plane gravitational wave $h^{\rm TT}_{\mu\nu} = C_{\mu\nu} \sin(k^{\sigma}x_{\sigma})$, the energy- momentum tensor is
+\[t_{\mu\nu} = \frac{1}{64\pi} k_{\mu}k_{\nu} {\rm Tr}(C^2).\]
+It the wave is propagating along $z$ direction, we have
+\[t^{\mu\nu} = \frac{\pi}{8G} f^2(C_{+}^2 + C_{\times}^2) \begin{pmatrix}
+1 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 1 
+\end{pmatrix}, \]
+where $f = \omega / 2\pi$ is the frequency of gravitational wave.
+We now can use our formula for the gravitational-wave energy-momentum tensor to calculate the rate of energy loss from a system emitting gravitational radiation
+according to the quadrupole formula. We omit the derivation here and write down the final expression directly,
+\[P = -\frac{1}{5}\left\langle \frac{d^3 J_{ij}}{dt^3} \frac{d^3 J^{ij}}{dt^3}  \right\rangle,  \]
+where $J_{ij} \equiv I_{ij} - 1/3 \delta_{ij} {\rm Tr}I$, called reduced quadrupole moment. The power of gravitational wave generated by binary stars is
+\[P = \frac{2}{5} \frac{M^5}{R^5}.\]
 
 \chapter{Black Holes}
 \section{Schwarzschild black hole}
