@@ -36,18 +36,19 @@ In a special case where the new reference frame move along $\hat{1}$ direction w
 where $\gamma \equiv (1-\beta^2)^{-1/2}$.
 \\ \\
 Some physical quantity will behave like a tensor (vector,scalar) when transforming form one inertial frame to another. For example,
-\paragraph{scalar} proper time: $d \tau$, mass: $m$, electrical charge $e$
-\paragraph{vector} four velocity: $u^{\mu} \equiv \frac{dx^{\mu}}{d \tau}$, four momentum: $p^{\mu} \equiv m u^{\mu}$, four acceleration: $a^{\mu} \equiv \frac{du^{\mu}}{d \tau}$, four force: $f^{\mu} \equiv m a^{\mu}$.\\ \\
+\paragraph{scalar} proper time: $d \tau$, mass: $m$, electrical charge $e$.
+\paragraph{vector} four velocity: $u^{\mu} \equiv {dx^{\mu}}/{d \tau}$, four momentum: $p^{\mu} \equiv m u^{\mu}$, four acceleration: $a^{\mu} \equiv {du^{\mu}}/{d \tau}$, four force: $f^{\mu} \equiv m a^{\mu}$.
+\\ \\
 We can also define the corresponding three vector.
-\paragraph{three velocity}: $\hat{v}^{i} \equiv \frac{dx^i}{dt}$
+\paragraph{three velocity}: $\hat{v}^{i} \equiv {dx^i}/{dt}$.
 \[u^0 = \gamma_v, u^i = \gamma \hat{v}^i.\]
 If the new reference frame move along $\hat{1}$ direction with velocity $\beta$, we have
 \[\overline{\hat{v}}^1 = \frac{\hat{v}^1 - \beta}{1-\hat{v}^1 \beta};\]
 \[\overline{\hat{v}}^2 = \frac{\hat{v}^2}{\gamma(1-\hat{v}^2 \beta)};\]
 \[\overline{\hat{v}}^3 = \frac{\hat{v}^3}{\gamma(1-\hat{v}^3 \beta)}.\]
 \paragraph{three momentum}: $\hat{p}^{i} \equiv p^i$
-\paragraph{three acceleration}: $\hat{a}^{i} \equiv \frac{dv^i}{dt}$
-\paragraph{three force}: $\hat{f}^i \equiv \frac{d\hat{p}^i}{dt}$
+\paragraph{three acceleration}: $\hat{a}^{i} \equiv {dv^i}/{dt}$
+\paragraph{three force}: $\hat{f}^i \equiv {d\hat{p}^i}/{dt}$
 \[f^i = \gamma_v \hat{f}^i.\]
 
 \section{Relativistic Mechanics}
@@ -91,7 +92,7 @@ The number of particles in the region $\bm{r}+d\bm{r}$ and $\bm{p} + d\bm{p}$ is
 We first determine the properties of the ``volume element'' $dp_x dp_y dp_z$, with respect to Lorentz transformations. If we introduce a four-dimensional coordinate system, on whose axes are marked the components of the four-momentum of a particle, then $dp_x dp_y dp_z$, can be considered as the zeroth component of an element of the hypersurface defined by the equation $p^{\mu}p_{\mu} + m^2 = 0$. The element of hypersurface is a four-vector directed along the normal to the hypersurface; in our case the direction of the normal obviously coincides with the direction of the four-vector $p^{\mu}$. From this it follows that the ratio $dp_x dp_y dp_z / E$
 is an invariant quantity, since it is the ratio of corresponding components of two parallel four-vectors.
 \\ \\
-Then, we notice that $dVdt$ is invariant under Lorentz transformation and $dt = \frac{E}{m} d\tau $. Thus we can infer that $dx dv dz E$
+Then, we notice that $dVdt$ is invariant under Lorentz transformation and $dt = {E d\tau}/{m}  $. Thus we can infer that $dx dv dz E$
 is an invariant quantity quantity. 
 Putting all together, we know the phase volume $dp_x dp_y dp_z dx dy dz$ is an invariant volume.
 Therefore, we have
@@ -282,7 +283,7 @@ We define that
 Therefore, we can get the Poisson bracket
 \[[\phi_a,M_{\rm L}^{\mu \nu}] = (\mathcal{L}^{\mu \nu})_a^{\phantom{a}b} \phi_b , \quad [\phi_a,M_{\rm S}^{\mu \nu}] = (\mathcal{S}^{\mu \nu})_a^{\phantom{a}b} \phi_b.\]
 \[[\pi^a,M_{\rm L}^{\mu \nu}] = (\mathcal{L}^{\mu \nu})_b^{\phantom{b}a}\pi^{b}  , \quad [\pi^a,M_{\rm S}^{\mu \nu}] = - (\mathcal{S}^{\mu \nu})_b^{\phantom{b}a} \pi^b .\]
-Because $\frac{d M^{\mu \nu}}{dt} = 0$, $M^{\mu \nu}$ can commutate with $\frac{d}{dt}$, so
+Because ${d M^{\mu \nu}}/{dt} = 0$, $M^{\mu \nu}$ can commutate with ${d}/{dt}$, so
 \[[[\phi(x),M^{\mu \nu}],M^{\rho \sigma}] = (\mathcal{L}^{\mu \nu}+\mathcal{S}^{\mu \nu})(\mathcal{L}^{\rho \sigma}+\mathcal{S}^{\rho \sigma})\phi(x).\]
 At last, we can get the Poisson bracket 
 \[[\phi(x),[M^{\mu \nu},M^{\rho \sigma}]] = (\mathcal{L}^{\mu \nu}\mathcal{L}^{\rho \sigma}-\mathcal{L}^{\rho \sigma}\mathcal{L}^{\mu \nu} + \mathcal{S}^{\mu \nu}\mathcal{S}^{\rho \sigma}-\mathcal{S}^{\rho \sigma}\mathcal{S}^{\mu \nu})\phi(x).\]
@@ -294,7 +295,7 @@ we will get get the Poisson bracket of the $M^{\mu \nu}$,
 \[[M^{\mu \nu},M^{\rho \sigma}] = -\eta^{\nu \rho}M^{\mu \sigma} + \eta^{\sigma \mu}M^{\rho \nu} + \eta^{\mu \rho}M^{\nu \sigma} - \eta^{\sigma \nu}M^{\rho \mu},\]
 up to the possibility of a term on the right-hand side that commutes with $\phi(x)$ and its derivatives.
 \\ \\
-We now define $J_i \equiv \frac{1}{2} \epsilon_{ijk} M^{jk}$ and $K_i \equiv M^{i0}$, so we have
+We now define $J_i \equiv 1/2 \; \epsilon_{ijk} M^{jk}$ and $K_i \equiv M^{i0}$, so we have
 \[M^{\mu \nu} = \left[ 
 \begin{matrix} 
 0   & -K_1 & -K_2 & -K_3 \\ 
@@ -326,7 +327,7 @@ It can also be written as
 	\left[K_i,H\right] &=& P_i ,\nonumber \\
 	\left[K_i,P_j\right] &=& \delta_{ij}H .\nonumber
 \end{eqnarray}
-At last, we define $L_i \equiv \frac{1}{2} \epsilon_{ijk} M_{\rm L}^{jk}$ and $S_i \equiv \frac{1}{2} \epsilon_{ijk} M_{\rm S}^{jk}$
+At last, we define $L_i \equiv 1/2 \; \epsilon_{ijk} M_{\rm L}^{jk}$ and $S_i \equiv 1/2 \; \epsilon_{ijk} M_{\rm S}^{jk}$
 we can demonstrate that
 \begin{eqnarray}
 	\left[L_i,S_j\right] &=& 0 ,\nonumber \\
@@ -468,7 +469,7 @@ The trajectory of the particle is
 \subsubsection{Motion in a uniform and constant magnetic field}
 Suppose the direction of magnetic field is $\hat{z}$. Note that particle's kinetic energy $\mathcal{E} = \gamma m$ is constant if there are no electric field, we can derive the equation of motion
 \[\dot{v}_x = \omega v_y , \quad \dot{v}_y = -\omega v_x , \quad \dot{v}_z = 0,\]
-where $\omega \equiv \frac{eB}{\gamma m}$. The final solution is
+where $\omega \equiv {eB}/{\gamma m}$. The final solution is
 \[x = x_0 + r\sin(\omega t + \alpha) , \quad y = y_0 + r\cos(\omega t + \alpha) , \quad z = z_0 + v_{0z}t.\]
 where $x_0,y_0,z_0,r,\alpha,v_{0z}$ should be determined by initial condition.
 
@@ -478,7 +479,7 @@ Suppose the direction of magnetic field is $\hat{z}$, the direction of electric 
 \[m\ddot{x} = eB\dot{y} , \quad m\ddot{y} =eE_y - eB\dot{x} , \quad m\ddot{z}=eE_z.\]
 The solution is
 \[\dot{x} = a \cos \omega t + \frac{E_y}{B} , \quad \dot{y} = -a\sin \omega t , \quad \dot{z} = v_{0z} + \frac{eE_z}{m}t.\]
-where $\omega = \frac{eB}{m}$ , $a,v_{z0}$ is determined by initial condition. As we suppose that $v \ll 1$ is satisfied,we must have that
+where $\omega = {eB}/{m}$ , $a,v_{z0}$ is determined by initial condition. As we suppose that $v \ll 1$ is satisfied,we must have that
 \[a \ll 1 , \quad v_{0z} \ll 1 , \quad \frac{eE_z t}{m} \ll 1 , \quad \frac{E_y}{B} \ll 1.\]
 
 \section{Constant electromagnetic field}
@@ -493,7 +494,7 @@ If $\rho_{\mathrm{e}}(\bm{r}') = Q \delta(\bm{r}')$, we have
 \[\phi(\bm{r}) =  \frac{Q}{4\pi|\bm{r}|} , \quad E(\bm{r}) = \frac{Q\bm{r}}{4\pi|\bm{r}|^3}.\]
 For a system of static charged particles, the total energy is
 \[U = \frac{1}{2}\int E^2 dV = \frac{1}{2} \int \rho \phi dV = \frac{1}{2} \sum e_a \phi_a + \frac{1}{2}\sum e_a \Phi_a.\]
-Here, $\phi_a$ is the electric potential at the point where $e_a$ is located, produced by $e_a$ itself, while  $\Phi_a$ is the potential produced by other charges. It is obvious that $U_{\mathrm{self}} = \frac{1}{2} e_a \phi_a$ is infinite, indicating that classical electrodynamics is no more valid in small distance. This problem will be solved in quantum electrodynamics: the mass of charged particle we measured is already renormalized to include the electromagnetic self energy. Therefore, actually, we have
+Here, $\phi_a$ is the electric potential at the point where $e_a$ is located, produced by $e_a$ itself, while  $\Phi_a$ is the potential produced by other charges. It is obvious that $U_{\mathrm{self}} =  e_a \phi_a/2$ is infinite, indicating that classical electrodynamics is no more valid in small distance. This problem will be solved in quantum electrodynamics: the mass of charged particle we measured is already renormalized to include the electromagnetic self energy. Therefore, actually, we have
 \[U = \frac{1}{2}\int E^2 dV - U_{\mathrm{self}} = \frac{1}{2}\sum_{a \ne b} \frac{e_a e_b}{4\pi R_{ab}}.\]
 If the charged particle is moving with a constant velocity, we can derive the electric field it produced by Lorentz transformation, the final result is that
 \[\bm{E} = \frac{e\bm{R}}{4\pi R^3} \frac{1-V^2}{(1-V^2\sin^2\theta)^{3/2}} , \quad \bm{B} = \bm{V} \times \bm{E},\]
@@ -602,8 +603,9 @@ The end of the vector $\bm{E}$ in $y-z$ plane will form an ellipse. The magnitud
 \[|\sqrt{A^2+B^2+2AB\sin\delta} \pm \sqrt{A^2+B^2-2AB\sin\delta}|.\]
 The angle $\theta$ between the major axis and $y$ axis satisfies the equation
 \[\tan 2\theta = \frac{2AB\cos\delta}{A^2-B^2}.\]
-If $-\frac{\pi}{2} < \delta < \frac{\pi}{2}$, major axis is in the second and forth quadrant. If $\delta > \frac{\pi}{2}$ or $\delta < -\frac{\pi}{2}$, major axis is in the first and third quadrant. If $\delta = \pm \frac{\pi}{2}$ and $A>B$, the major axis is $y$ axis. If $\delta = \pm \frac{\pi}{2}$ and $A<B$, the major axis is $z$ axis. If $\delta = \pm \frac{\pi}{2}$ and $A=B$, the ellipse becomes a circle.
-If $0 < \delta < \pi$, the rotation is positive in the direction of $x$ axis (left handed). If $-\pi < \delta < 0$, the rotation is negative in the direction of $x$ axis(right handed). If $\delta = 0,\pi$, the ellipse becomes a line.\\ \\
+If $-{\pi}/{2} < \delta < {\pi}/{2}$, major axis is in the second and forth quadrant. If $\delta > {\pi}/{2}$ or $\delta < -{\pi}/{2}$, major axis is in the first and third quadrant. If $\delta = \pm {\pi}/{2}$ and $A>B$, the major axis is $y$ axis. If $\delta = \pm {\pi}/{2}$ and $A<B$, the major axis is $z$ axis. If $\delta = \pm {\pi}/{2}$ and $A=B$, the ellipse becomes a circle.
+If $0 < \delta < \pi$, the rotation is positive in the direction of $x$ axis (left handed). If $-\pi < \delta < 0$, the rotation is negative in the direction of $x$ axis(right handed). If $\delta = 0,\pi$, the ellipse becomes a line.
+\\ \\
 Any field is expandable in a Fourier integral containing a continuous or discrete distribution of different frequencies. Such an expansion has the form
 \[f(t) = \int_{-\infty}^{\infty} f_{\omega}e^{-i\omega t} \frac{d\omega}{2\pi},\]
 where the Fourier components are given in terms of the function $f(t)$ by the integrals
@@ -648,7 +650,7 @@ The $\rho$ can be expressed as
 \[\frac{1}{2} (1-P) I + \frac{1}{2} P(I + \bm{n} \cdot \bm{\sigma}),\]
 where
 \[P \equiv \sqrt{p_1^2 + p_2^2 + p_3^2} , \quad \bm{n} \equiv (\frac{p_1}{P},\frac{p_2}{P},\frac{p_3}{P}).\]
-For a totally polarized light with polarization state$ | E\rangle = (\cos \frac{\theta}{2} e^{-i\frac{\phi}{2}} , \sin \frac{\theta}{2} e^{i\frac{\phi}{2}})$, the polarization tensor $\rho = |E\rangle \langle E|$. We can verify that
+For a totally polarized light with polarization state$ | E\rangle = (\cos {\theta}/{2} e^{-i{\phi}/{2}} , \sin {\theta}/{2} e^{i{\phi}/{2}})$, the polarization tensor $\rho = |E\rangle \langle E|$. We can verify that
 \[P = 1 , \quad \bm{n} = (\sin\theta \cos\phi, \sin\theta \sin\phi, \cos \theta).\]
 Therefore, for an arbitrary light,
 \[\rho = (1-P)\rho_{\mathrm{n}} + P \rho_{\mathrm{p}} , \quad \rho_{\mathrm{n}} = \frac{1}{2}I , \quad \rho_{\mathrm{p}} = \frac{1}{2}(I + \bm{n} \cdot \bm{\sigma}).\]
@@ -702,7 +704,7 @@ We can derive that
 With the help of the equation above, we can calculate the electric and magnetic field intensity.
 \[\bm{E} = \frac{e}{4\pi(R^* - \bm{R}^* \cdot \bm{v}^*)^3} \left\{ (1-v^{*2})(\bm{R}^* - R^*\bm{v}^*) + \bm{R}^* \times \left[(\bm{R}^* - R^*\bm{v}^*) \times \bm{a}^* \right] \right\};\]
 \[\bm{B} = \frac{\bm{R}^*}{R^*} \times \bm{E}.\]
-The electric field consists of two parts of different type. The first term depends only on the velocity of the particle (and not on its acceleration) and varies at large distances like $\frac{1}{R^2}$. The second term depends on the acceleration, and for large $R$ it varies like $\frac{1}{R}$. This latter term is related to the electromagnetic waves radiated by the particle.
+The electric field consists of two parts of different type. The first term depends only on the velocity of the particle (and not on its acceleration) and varies at large distances like ${1}/{R^2}$. The second term depends on the acceleration, and for large $R$ it varies like ${1}/{R}$. This latter term is related to the electromagnetic waves radiated by the particle.
 
 \subsection{Spectral resolution of the retarded potentials}
 Suppose
@@ -837,8 +839,8 @@ The discussion of synchrotron radiation (magnetic bremsstrahlung) can be found i
 If a charged particle accelerates, it radiates away energy. This means that if an external force is applied to a charge, not all of the energy transferred to the charge by the force is converted to the kinetic energy of the charge; some of the energy is radiated away in the form of electromagnetic waves.  From Newton's law $\bm{F}=m\bm{a}$, the net force on the charge must be less than the applied external force. In effect, the fields surrounding the charge exert a recoil or reaction force on the charge.
 The fields of a moving point charge are
 \[\bm{E} = \frac{e}{4\pi(\bm{R}^*\cdot\bm{u}^*)^3}\left\{(1-v^{*2})R^*\bm{u} + \bm{R}^* \times [R^*\bm{u}^* \times \bm{a}^*]\right\} , \quad \bm{B} = \frac{\bm{R}^*}{R^*}\times E,\]
-where $\bm{u}^* = \frac{\bm{R}^*}{R^*}-v^*$.
-It is only those terms that go as $\frac{1}{R}$ that contribute to radiation energy. The other term falls off as $\frac{1}{R^2}$ so contributes nothing to the integral of the Poynting vector over a large sphere. This term is called the velocity field and, although it doesn't contribute to the energy radiated away by the EM field, it does store energy, so some of the energy imparted by the force that gets the charge moving must be siphoned off to create these velocity fields. These velocity fields are curious beasts, however, for they contain energy that is never actually lost to the charge. If a charge is accelerated to some velocity, the velocity fields are constructed around the moving charge, but if the charge is then decelerated to rest again, the velocity fields disappear without having radiated away any energy. It would seem to be reabsorbed by the charge as it slows down. 
+where $\bm{u}^* = {\bm{R}^*}/{R^*}-v^*$.
+It is only those terms that go as ${1}/{R}$ that contribute to radiation energy. The other term falls off as ${1}/{R^2}$ so contributes nothing to the integral of the Poynting vector over a large sphere. This term is called the velocity field and, although it doesn't contribute to the energy radiated away by the EM field, it does store energy, so some of the energy imparted by the force that gets the charge moving must be siphoned off to create these velocity fields. These velocity fields are curious beasts, however, for they contain energy that is never actually lost to the charge. If a charge is accelerated to some velocity, the velocity fields are constructed around the moving charge, but if the charge is then decelerated to rest again, the velocity fields disappear without having radiated away any energy. It would seem to be reabsorbed by the charge as it slows down. 
 \\ \\
 If we look at a charged particle that starts off in some state, then goes through an acceleration followed by a deceleration, and finally ends up in the same state that it started from, what we can say is that the velocity fields are the same at the end as they were at the start, so over this period, the only energy that is truly lost from the particle is the energy that is radiated away. In non-relativistic case,
 \[\int_{t_{1}}^{t_{2}}\bm{F}_{\mathrm{rad}}\cdot\bm{v}dt = -\int_{t_{1}}^{t_{2}}Pdt = -\frac{e^{2}}{6\pi }\int_{t_{1}}^{t_{2}}a^{2}dt .\]
@@ -852,7 +854,8 @@ The details can be found in section 75 of \emph{The classical theory of fields (
 \\ \\
 We derive the relativistic expression for the radiation damping for a single charge, which is applicable also to motion with velocity comparable to that of light. This force is now a four-vector $g^{\mu}$, which must be included in the equation of motion of the charge, written in four-dimensional form:
 \[m\frac{du^{\mu}}{d\tau} = eF^{\mu\nu}u_{\nu} + g^{\mu}.\]
-To determine $g^{\mu}$ we note that for $v \ll 1$, its three space components must go over into the components of the vector $\frac{e^2}{6\pi}\dot{\bm{a}}$. It is easy to see that the vector $\frac{e^2}{6\pi} \frac{d^2u^{\mu}}{d\tau^2}$ has this property. However, it does not satisfy the identity $g^{\mu}u_{\mu} = 0$, which is valid for any force four-vector. 
+To determine $g^{\mu}$ we note that for $v \ll 1$, its three space components must go over into the components of the vector ${e^2 \dot{\bm{a}}}/{6\pi}$. 
+It is easy to see that the vector ${e^2}/{6\pi} \; {d^2u^{\mu}}/{d\tau^2}$ has this property. However, it does not satisfy the identity $g^{\mu}u_{\mu} = 0$, which is valid for any force four-vector. 
 In order to satisfy this condition, we must add to the expression given a certain auxiliary four-vector, made up from the four-velocity $u^{\mu}$ and its derivatives. 
 The three space components of this vector must become zero in the limiting case $v = 0$. As a result we find
 \[g^{\mu} = \frac{e^2}{6\pi} \left( \frac{d^2u^{\mu}}{d\tau^2} -u^{\mu}u^{\nu}\frac{d^2u^{\nu}}{d\tau^2} \right).\]
@@ -909,4 +912,4 @@ where
 \[\gamma \equiv \frac{e^2 \omega^2}{6\pi m}.\]
 We can show that
 \[\sigma = \sigma_0 \frac{\omega^4}{(\omega_0^2-\omega^2)^2 + \omega^2 \gamma^2}.\]
-where $\sigma_0$ is the total cross section when EM wave is scattered by free charges. When $\omega \gg \omega_0$, $\sigma$ is independent of $\omega$,i.e. $\sigma \approx \sigma_0$. When $\omega \ll \omega_0$, $\sigma_0$ is proportional to $\omega^4$, i.e. $\sigma = \sigma_0 \left(\frac{\omega}{\omega_0}\right)^4$, and it is called Rayleigh scattering.
+where $\sigma_0$ is the total cross section when EM wave is scattered by free charges. When $\omega \gg \omega_0$, $\sigma$ is independent of $\omega$,i.e. $\sigma \approx \sigma_0$. When $\omega \ll \omega_0$, $\sigma_0$ is proportional to $\omega^4$, i.e. $\sigma = \sigma_0 \left({\omega}/{\omega_0}\right)^4$, and it is called Rayleigh scattering.
